@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lxyuan/distilbert-base-multilingual-cased-sentiments-student",
+  "revision": "cf991100d706c13c0a080c097134c05b7f436c45",
+  "manifest": "blake3:dc250a9da6d0fe5772ebd67eb7ea48e213e4d3b775e5c006a9c1b9de320d2e6d",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lxyuan/distilbert-base-multilingual-cased-sentiments-student",
+    "readme": "file:README.md@sha256:4ede535dd77d87e5c35077ea861b8964accef2699c29d7dbe47a44026b5f7af3",
+    "config": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204"
+  },
+  "summary": {
+    "value": "This model is distilled from the zero-shot classification pipeline on the Multilingual Sentiment dataset using this script.",
+    "source": "file:README.md@sha256:4ede535dd77d87e5c35077ea861b8964accef2699c29d7dbe47a44026b5f7af3"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 135326979,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Distilbert",
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#model_type"
+    },
+    "architecture_id": {
+      "value": "distilbert",
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "ja",
+        "zh",
+        "id",
+        "hi",
+        "it",
+        "ms",
+        "pt"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-05-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 316,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 79760989,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#dim"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#n_heads"
+    },
+    "vocab": {
+      "value": 119547,
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:c4444692820027ddd8fcfc98238a994bf7296b41178bda11a2aa628686558204#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 23
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 23
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/1422",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "tyqiangz/multilingual-sentiments"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "yuvarajareddy001/youtube_comments_sentiment",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "cryptocalypse/sophia_ai_robot_prophet"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

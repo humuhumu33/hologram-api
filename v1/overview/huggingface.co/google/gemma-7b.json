@@ -1,0 +1,187 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/gemma-7b",
+  "revision": "ff6768d9368919a1f025a54f9f5aa0ee591730bb",
+  "addressed": false,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/gemma-7b",
+    "readme": "file:README.md@sha256:72c33d3f4ad2f0e6c0fcd76e145fff511ae9146a151248f5bb46959b4d3b7873"
+  },
+  "summary": {
+    "value": "This model card corresponds to the 7B base version of the Gemma model. You can also visit the model card of the 2B base model, 7B instruct model, and 2B instruct model.",
+    "source": "file:README.md@sha256:72c33d3f4ad2f0e6c0fcd76e145fff511ae9146a151248f5bb46959b4d3b7873"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8537680896,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "gemma",
+      "source": "api:config.model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "api:gguf.context_length"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-02-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-06-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3435,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3199674,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 33.73,
+        "date": "2026-06-30T12:51:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/b6/30/b6307ba8-c68e-418a-8c02-1e0d444422b1.json"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 9194,
+        "Merged": 1,
+        "Quantized": 22,
+        "Fine tuned": 367
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 9194,
+        "merge": 1,
+        "quantized": 22,
+        "finetune": 367
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2305.14314",
+        "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+        "first_author": "Tim Dettmers",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2312.11805",
+        "title": "Gemini: A Family of Highly Capable Multimodal Models",
+        "first_author": "Gemini Team",
+        "authors": 942,
+        "year": "2023"
+      },
+      {
+        "id": "2009.03300",
+        "title": "Measuring Massive Multitask Language Understanding",
+        "first_author": "Dan Hendrycks",
+        "authors": 7,
+        "year": "2020"
+      },
+      {
+        "id": "1905.07830",
+        "title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "first_author": "Rowan Zellers",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1911.11641",
+        "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "first_author": "Yonatan Bisk",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1904.09728",
+        "title": "SocialIQA: Commonsense Reasoning about Social Interactions",
+        "first_author": "Maarten Sap",
+        "authors": 5,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "EuroEval/euroeval_leaderboard",
+        "seawolf2357/LLM_Quantization",
+        "eduagarcia/open_pt_llm_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

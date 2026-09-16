@@ -1,0 +1,135 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "anton-l/wav2vec2-large-xlsr-53-estonian",
+  "revision": "71f1af393d576d4eedd4654e1edf27f3c0426609",
+  "manifest": "blake3:155e244f2b4de51281c92eb8c8a2ca2e66e5bf7bdeabbd84de20eed30a7f5546",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/anton-l/wav2vec2-large-xlsr-53-estonian",
+    "readme": "file:README.md@sha256:aae593b38c22fb841e6fdc05fcd63e00bea5827556104effa7be45165e82a1f5",
+    "config": "file:config.json@sha256:0d43f2f594468f97ac1d3286a000aa6ee35dc4c2b18522a8efffdcdc4c9ffa90"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Estonian using the Common Voice dataset. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:aae593b38c22fb841e6fdc05fcd63e00bea5827556104effa7be45165e82a1f5"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:0d43f2f594468f97ac1d3286a000aa6ee35dc4c2b18522a8efffdcdc4c9ffa90#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:0d43f2f594468f97ac1d3286a000aa6ee35dc4c2b18522a8efffdcdc4c9ffa90#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "et"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-07-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2934587,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:0d43f2f594468f97ac1d3286a000aa6ee35dc4c2b18522a8efffdcdc4c9ffa90#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:0d43f2f594468f97ac1d3286a000aa6ee35dc4c2b18522a8efffdcdc4c9ffa90#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:0d43f2f594468f97ac1d3286a000aa6ee35dc4c2b18522a8efffdcdc4c9ffa90#num_attention_heads"
+    },
+    "vocab": {
+      "value": 36,
+      "source": "file:config.json@sha256:0d43f2f594468f97ac1d3286a000aa6ee35dc4c2b18522a8efffdcdc4c9ffa90#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice et",
+        "task": "Test WER",
+        "value": 30.74,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Daniel9046/SoniTranslate",
+        "RO-Rtechs/Translate_Video_language",
+        "r3gm/SoniTranslate_translate_audio_of_a_video_content"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "OrionLLM/OxCoder-9B",
+  "revision": "07ba04e2149bace1b43c66448471a70378a7a708",
+  "manifest": "blake3:9e2f13219d72552a5f93d3cd1a802a0a29ce5ffb2c9df45b6c613f076932c987",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/OrionLLM/OxCoder-9B",
+    "readme": "file:README.md@sha256:c26991b9b7b6efcda0d067f75c7ebb4322384b66745b936a3808b8bebddc6246",
+    "config": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498"
+  },
+  "summary": {
+    "value": "We are proud to introduce OxCoder-9B, our lightweight coding model for long-horizon tasks, agentic coding, and agentic reasoning.",
+    "source": "file:README.md@sha256:c26991b9b7b6efcda0d067f75c7ebb4322384b66745b936a3808b8bebddc6246"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 60,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2330,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:8ac5528af54ba07e7d7855d0b0f0e7297d0f5b228fe774261b6ed88bfba06498#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 86.9,
+        "date": "2026-09-07T23:02:34.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/OrionLLM/OxCoder-9B"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 32.8,
+        "date": "2026-09-07T23:03:45.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/OrionLLM/OxCoder-9B",
+        "notes": "With tools."
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 21.2,
+        "date": "2026-09-07T23:06:14.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/OrionLLM/OxCoder-9B",
+        "notes": "No tools."
+      },
+      {
+        "dataset": "ScaleAI/SWE-bench_Pro",
+        "task": "SWE_Bench_Pro",
+        "value": 49.1,
+        "date": "2026-09-07T23:01:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/OrionLLM/OxCoder-9B"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 73.5,
+        "date": "2026-09-07T23:01:06.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/OrionLLM/OxCoder-9B"
+      },
+      {
+        "dataset": "harborframework/terminal-bench-2.1",
+        "task": "terminalbench_2_1",
+        "value": 50.8,
+        "date": "2026-09-07T22:58:54.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/OrionLLM/OxCoder-9B",
+        "notes": "Harness: Claude Code"
+      },
+      {
+        "dataset": "harborframework/terminal-bench-2.1",
+        "task": "terminalbench_2_1",
+        "value": 49.6,
+        "date": "2026-09-07T22:59:30.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/OrionLLM/OxCoder-9B",
+        "notes": "Harness: Terminus-2"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "localellm/WebGPU-oxcoder-9b-i1-gguf"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

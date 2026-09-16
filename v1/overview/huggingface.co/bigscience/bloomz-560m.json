@@ -1,0 +1,588 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "bigscience/bloomz-560m",
+  "revision": "a2845d7e13dd12efae154a9f1c63fcc2e0cc4b05",
+  "manifest": "blake3:55f1e56dbf80c6b040eee95828788bfc95975f9c804e6c50fed2b786c0dca9c0",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/bigscience/bloomz-560m",
+    "readme": "file:README.md@sha256:79fce2f148cbfaf3413cfac60507b74a232ef19b59ae86ace32e19b9771693b5",
+    "config": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb"
+  },
+  "summary": {
+    "value": "We recommend using the model to perform tasks expressed in natural language. For example, given the prompt \"Translate to English: Je t’aime.\", the model will most likely answer \"I love you.\".",
+    "source": "file:README.md@sha256:79fce2f148cbfaf3413cfac60507b74a232ef19b59ae86ace32e19b9771693b5"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 559214592,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Bloom",
+      "source": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb#model_type"
+    },
+    "architecture_id": {
+      "value": "bloom",
+      "source": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb#seq_length"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "bigscience-bloom-rail-1.0",
+        "name": "bigscience-bloom-rail-1.0"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ak",
+        "ar",
+        "as",
+        "bm",
+        "bn",
+        "ca",
+        "code",
+        "en",
+        "es",
+        "eu",
+        "fon",
+        "fr",
+        "gu",
+        "hi",
+        "id",
+        "ig",
+        "ki",
+        "kn",
+        "lg",
+        "ln",
+        "ml",
+        "mr",
+        "ne",
+        "nso",
+        "ny",
+        "or",
+        "pa",
+        "pt",
+        "rn",
+        "rw",
+        "sn",
+        "st",
+        "sw",
+        "ta",
+        "te",
+        "tn",
+        "ts",
+        "tum",
+        "tw",
+        "ur",
+        "vi",
+        "wo",
+        "xh",
+        "yo",
+        "zh",
+        "zu"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-10-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-05-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 138,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 61415280,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb#n_layer"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250880,
+      "source": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:ee4ce2e30325d9b0e2969748bc9945081be52e68a10f2aa66ce9bb33759c70bb#seq_length"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Winogrande XL (xl)",
+        "task": "Accuracy",
+        "value": 52.41,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XWinograd (en)",
+        "task": "Accuracy",
+        "value": 51.01,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XWinograd (fr)",
+        "task": "Accuracy",
+        "value": 51.81,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XWinograd (jp)",
+        "task": "Accuracy",
+        "value": 52.03,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XWinograd (pt)",
+        "task": "Accuracy",
+        "value": 53.99,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XWinograd (ru)",
+        "task": "Accuracy",
+        "value": 53.97,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XWinograd (zh)",
+        "task": "Accuracy",
+        "value": 54.76,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ANLI (r1)",
+        "task": "Accuracy",
+        "value": 33.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ANLI (r2)",
+        "task": "Accuracy",
+        "value": 33.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ANLI (r3)",
+        "task": "Accuracy",
+        "value": 33.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SuperGLUE (cb)",
+        "task": "Accuracy",
+        "value": 53.57,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SuperGLUE (rte)",
+        "task": "Accuracy",
+        "value": 67.15,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (ar)",
+        "task": "Accuracy",
+        "value": 44.46,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (bg)",
+        "task": "Accuracy",
+        "value": 39.76,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (de)",
+        "task": "Accuracy",
+        "value": 39.36,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (el)",
+        "task": "Accuracy",
+        "value": 40.96,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (en)",
+        "task": "Accuracy",
+        "value": 46.43,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (es)",
+        "task": "Accuracy",
+        "value": 44.98,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (fr)",
+        "task": "Accuracy",
+        "value": 45.54,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (hi)",
+        "task": "Accuracy",
+        "value": 41.81,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (ru)",
+        "task": "Accuracy",
+        "value": 39.64,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (sw)",
+        "task": "Accuracy",
+        "value": 38.35,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (th)",
+        "task": "Accuracy",
+        "value": 35.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (tr)",
+        "task": "Accuracy",
+        "value": 37.31,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (ur)",
+        "task": "Accuracy",
+        "value": 38.96,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (vi)",
+        "task": "Accuracy",
+        "value": 44.74,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XNLI (zh)",
+        "task": "Accuracy",
+        "value": 44.66,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HumanEval",
+        "task": "Pass@1",
+        "value": 2.18,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HumanEval",
+        "task": "Pass@10",
+        "value": 4.11,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HumanEval",
+        "task": "Pass@100",
+        "value": 9,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "StoryCloze (2016)",
+        "task": "Accuracy",
+        "value": 60.29,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SuperGLUE (copa)",
+        "task": "Accuracy",
+        "value": 52,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (et)",
+        "task": "Accuracy",
+        "value": 53,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (ht)",
+        "task": "Accuracy",
+        "value": 49,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (id)",
+        "task": "Accuracy",
+        "value": 57,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (it)",
+        "task": "Accuracy",
+        "value": 52,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (qu)",
+        "task": "Accuracy",
+        "value": 55,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (sw)",
+        "task": "Accuracy",
+        "value": 56,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (ta)",
+        "task": "Accuracy",
+        "value": 58,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (th)",
+        "task": "Accuracy",
+        "value": 58,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (tr)",
+        "task": "Accuracy",
+        "value": 61,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (vi)",
+        "task": "Accuracy",
+        "value": 61,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XCOPA (zh)",
+        "task": "Accuracy",
+        "value": 61,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (ar)",
+        "task": "Accuracy",
+        "value": 54.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (es)",
+        "task": "Accuracy",
+        "value": 56.45,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (eu)",
+        "task": "Accuracy",
+        "value": 50.56,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (hi)",
+        "task": "Accuracy",
+        "value": 55.79,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (id)",
+        "task": "Accuracy",
+        "value": 57.84,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (my)",
+        "task": "Accuracy",
+        "value": 47.05,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (ru)",
+        "task": "Accuracy",
+        "value": 53.14,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (sw)",
+        "task": "Accuracy",
+        "value": 51.36,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (te)",
+        "task": "Accuracy",
+        "value": 54.86,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XStoryCloze (zh)",
+        "task": "Accuracy",
+        "value": 56.52,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 280,
+        "Quantized": 7,
+        "Fine tuned": 33
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 280,
+        "quantized": 7,
+        "finetune": 33
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2211.01786",
+        "title": "Crosslingual Generalization through Multitask Finetuning",
+        "first_author": "Niklas Muennighoff",
+        "authors": 19,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "bigscience/xP3"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "VIDraft/global-llm-leaderboard",
+        "seawolf2357/LLM_Quantization",
+        "Intel/low_bit_open_llm_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

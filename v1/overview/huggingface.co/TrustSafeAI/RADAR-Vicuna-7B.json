@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "TrustSafeAI/RADAR-Vicuna-7B",
+  "revision": "4ff1f23a69a36aa1df47b0933be6279f1b896c9b",
+  "manifest": "blake3:f23708ec3ad31378683fd939fb44445c85810062e2e1b20c409050f5d13ab023",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/TrustSafeAI/RADAR-Vicuna-7B",
+    "readme": "file:README.md@sha256:37ef71defa9ce6be9ec16f21ca021748e82ca517de3d91a67d640de86475dd97",
+    "config": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1"
+  },
+  "summary": {
+    "value": "RADAR-Vicuna-7B is an AI-text detector trained via adversarial learning between the detector and a paraphraser on human-text corpus (OpenWebText) and AI-text corpus generated based on OpenWebText.",
+    "source": "file:README.md@sha256:37ef71defa9ce6be9ec16f21ca021748e82ca517de3d91a67d640de86475dd97"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2023-06-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-11-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9094715,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:b0c3b797790df0d4e7cb9482091b77daa362d7f8f52929b43c651c94f76384e1#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1907.11692",
+        "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+        "first_author": "Yinhan Liu",
+        "authors": 10,
+        "year": "2019"
+      },
+      {
+        "id": "2307.03838",
+        "title": "RADAR: Robust AI-Text Detection via Adversarial Learning",
+        "first_author": "Xiaomeng Hu",
+        "authors": 3,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "TrustSafeAI/RADAR-AI-Text-Detector",
+        "Rooc/RADAR-AI-Text-Detector",
+        "jinyin3/RADAR-AI-Text-Detector"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

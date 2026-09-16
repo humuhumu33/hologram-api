@@ -1,0 +1,133 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Yanun/Swift-Qwen3.8-27b-oQ4e-fp16-mtp",
+  "revision": "949fba8330f22134b257f18eb3442a8b303130a8",
+  "addressed": false,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Yanun/Swift-Qwen3.8-27b-oQ4e-fp16-mtp",
+    "readme": "file:README.md@sha256:865693a2df73fe7792b5d5ee338703508e2aa9bbd10ce009d5006553852dc5c3",
+    "config": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e"
+  },
+  "summary": {
+    "value": "A 27B-class dense multimodal model stored in MLX format. It contains a text backbone, a vision encoder, and one multi-token prediction (MTP) layer.",
+    "source": "file:README.md@sha256:865693a2df73fe7792b5d5ee338703508e2aa9bbd10ce009d5006553852dc5c3"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781427952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT32 98%, FP32 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mlx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "ukisai/Swift-Qwen3.8-27b"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 663,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "4 bit",
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:ecb587cd68d334f317b71ba4a9dcce5873a169c2570fe693c1ce9368fd10fd6e#vision_config"
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen3.5-2B",
+  "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "manifest": "blake3:2f14bb17827b20749e3e4884df3e3b7c995b739f519304d1d618d4a8802444a1",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen3.5-2B",
+    "readme": "file:README.md@sha256:c0e83a849c776e6fa843d011f023132d942a0f0140d903205bf1c363adad2275",
+    "config": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4"
+  },
+  "summary": {
+    "value": "Over recent months, we have intensified our focus on developing foundation models that deliver exceptional utility and performance.",
+    "source": "file:README.md@sha256:c0e83a849c776e6fa843d011f023132d942a0f0140d903205bf1c363adad2275"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2274069824,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-2B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-02-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-03-02",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 397,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16554204,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "mean",
+        "value": 63.4,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "short",
+        "value": 71.22,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "medium",
+        "value": 50.93,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "long",
+        "value": 25.93,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "LiquidAI/ifstruct-v1.0",
+        "task": "ifstruct_v1",
+        "value": 33.15,
+        "date": "2026-06-30",
+        "verified": false,
+        "source": "https://www.liquid.ai/blog/ifstruct-v1.0"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 44.9494949495,
+        "date": "2026-04-20",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/9a/b3/9ab3daf6-462a-47bc-8061-1e2222bffa3d.json",
+        "notes": "GPQA Diamond"
+      },
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_vision",
+        "value": 50.3,
+        "date": "2026-04-28",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.5-2B",
+        "notes": "Thinking"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 27.3,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 87.2,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 31.1,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 18.3,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 0.1,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 0,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3_5_2b_vllm_layout"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "overall",
+        "value": 54.5,
+        "date": "2026-03-18T11:15:55.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.5-2B"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 55.3,
+        "date": "2026-03-02T13:37:52.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.5-2B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 207,
+        "Quantized": 201,
+        "Fine tuned": 379
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 207,
+        "quantized": 201,
+        "finetune": 379
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "pliny-the-prompter/obliteratus",
+        "EuroEval/euroeval_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

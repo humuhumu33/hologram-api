@@ -1,0 +1,131 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "infinitejoy/wav2vec2-large-xls-r-300m-welsh",
+  "revision": "4b3fdfbdeba3a747cffa3a1c873b0c0d6975d040",
+  "manifest": "blake3:c920ada1aae87a70b13e2b797f89bea4c11ad41da9746d390f982a5bdfcfcecf",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/infinitejoy/wav2vec2-large-xls-r-300m-welsh",
+    "readme": "file:README.md@sha256:c42e1e439c6f32b027df245ea7825129ee7a9ac94a70f1da0f6118cb2778cc6c",
+    "config": "file:config.json@sha256:930a1ae0d5a39f19f48af6e671db107d0c1256148970be2667c199d8ba9b952e"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on the MOZILLA-FOUNDATION/COMMONVOICE70 - CY dataset. It achieves the following results on the evaluation set: - Loss: 0.2650 - Wer: 0.2702",
+    "source": "file:README.md@sha256:c42e1e439c6f32b027df245ea7825129ee7a9ac94a70f1da0f6118cb2778cc6c"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:930a1ae0d5a39f19f48af6e671db107d0c1256148970be2667c199d8ba9b952e#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:930a1ae0d5a39f19f48af6e671db107d0c1256148970be2667c199d8ba9b952e#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "cy"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-03-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2858731,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:930a1ae0d5a39f19f48af6e671db107d0c1256148970be2667c199d8ba9b952e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:930a1ae0d5a39f19f48af6e671db107d0c1256148970be2667c199d8ba9b952e#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:930a1ae0d5a39f19f48af6e671db107d0c1256148970be2667c199d8ba9b952e#num_attention_heads"
+    },
+    "vocab": {
+      "value": 49,
+      "source": "file:config.json@sha256:930a1ae0d5a39f19f48af6e671db107d0c1256148970be2667c199d8ba9b952e#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice 7",
+        "task": "Test WER",
+        "value": 31.003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 7",
+        "task": "Test CER",
+        "value": 7.775,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "mozilla-foundation/common_voice_7_0"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

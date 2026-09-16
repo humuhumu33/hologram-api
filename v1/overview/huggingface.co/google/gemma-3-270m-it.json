@@ -1,0 +1,192 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/gemma-3-270m-it",
+  "revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+  "addressed": false,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/gemma-3-270m-it",
+    "readme": "file:README.md@sha256:9568b09f2a80d09746687bc077aefe9a070948c68d5f1af07007b2da9a70a065"
+  },
+  "summary": {
+    "value": "These models were trained on a dataset of text data that includes a wide variety of sources. The 27B model was trained with 14 trillion tokens, the 12B model was trained with 12 trillion tokens, 4B model was trained with 4 trillion tokens, the 1B with 2 trillion tokens, and the 270M with 6 trillion tokens.",
+    "source": "file:README.md@sha256:9568b09f2a80d09746687bc077aefe9a070948c68d5f1af07007b2da9a70a065"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 268098176,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 3 Text",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3_text",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-3-270m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-07-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-08-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 631,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3075424,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LiquidAI/ifstruct-v1.0",
+        "task": "ifstruct_v1",
+        "value": 0.5,
+        "date": "2026-06-30",
+        "verified": false,
+        "source": "https://www.liquid.ai/blog/ifstruct-v1.0"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 74,
+        "Merged": 3,
+        "Quantized": 348,
+        "Fine tuned": 1151
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 74,
+        "merge": 3,
+        "quantized": 348,
+        "finetune": 1151
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2503.19786",
+        "title": "Gemma 3 Technical Report",
+        "first_author": "Gemma Team",
+        "authors": 216,
+        "year": "2025"
+      },
+      {
+        "id": "1905.07830",
+        "title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "first_author": "Rowan Zellers",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1905.10044",
+        "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "first_author": "Christopher Clark",
+        "authors": 6,
+        "year": "2019"
+      },
+      {
+        "id": "1911.11641",
+        "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "first_author": "Yonatan Bisk",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1705.03551",
+        "title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "first_author": "Mandar Joshi",
+        "authors": 4,
+        "year": "2017"
+      },
+      {
+        "id": "1911.01547",
+        "title": "On the Measure of Intelligence",
+        "first_author": "François Chollet",
+        "authors": 1,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "EuroEval/euroeval_leaderboard",
+        "anakin87/gemma-3-270m-it",
+        "qimma/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

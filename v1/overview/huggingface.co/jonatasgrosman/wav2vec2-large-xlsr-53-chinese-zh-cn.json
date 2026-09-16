@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn",
+  "revision": "99ccb2737be22b8bb50dcfcc39ad4d567fb90cfd",
+  "manifest": "blake3:a74e4f8c5ae3d392810f7a77163cb1844f762bb84d79ffc7e9154267ee15b0ab",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn",
+    "readme": "file:README.md@sha256:9b14283ce428f729bfbf8a82313f61e76d83c760b5a72f2fadf516523ff412b7",
+    "config": "file:config.json@sha256:9af98614e322a5300c75605227d93c98af0c8f78754aba1dfc279166688afddd"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Chinese using the train and validation splits of Common Voice 6.1, CSS10 and ST-CMDS. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:9b14283ce428f729bfbf8a82313f61e76d83c760b5a72f2fadf516523ff412b7"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:9af98614e322a5300c75605227d93c98af0c8f78754aba1dfc279166688afddd#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:9af98614e322a5300c75605227d93c98af0c8f78754aba1dfc279166688afddd#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-12-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 135,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 112773612,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:9af98614e322a5300c75605227d93c98af0c8f78754aba1dfc279166688afddd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:9af98614e322a5300c75605227d93c98af0c8f78754aba1dfc279166688afddd#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9af98614e322a5300c75605227d93c98af0c8f78754aba1dfc279166688afddd#num_attention_heads"
+    },
+    "vocab": {
+      "value": 3503,
+      "source": "file:config.json@sha256:9af98614e322a5300c75605227d93c98af0c8f78754aba1dfc279166688afddd#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice zh-CN",
+        "task": "Test WER",
+        "value": 82.37,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice zh-CN",
+        "task": "Test CER",
+        "value": 19.03,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 2,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 2,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3570",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Daniel9046/SoniTranslate",
+        "RO-Rtechs/Translate_Video_language",
+        "r3gm/SoniTranslate_translate_audio_of_a_video_content"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

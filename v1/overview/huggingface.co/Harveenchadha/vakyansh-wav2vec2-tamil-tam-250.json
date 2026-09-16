@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Harveenchadha/vakyansh-wav2vec2-tamil-tam-250",
+  "revision": "0bd7c7d87da18a71b246ce3e543244bdba983e36",
+  "manifest": "blake3:f6a45cef11f03cf39dc359db893361b77345d72081e769e7a86a552a8e6200c1",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Harveenchadha/vakyansh-wav2vec2-tamil-tam-250",
+    "readme": "file:README.md@sha256:4be5c6f3b1d9670deb20f95b02652a7258d632ee19d107a1858440f865be6919",
+    "config": "file:config.json@sha256:295f0829fcd487b11e6441f61f3eb4650ce464675fe7e2ea4edf47635c6043c0"
+  },
+  "summary": {
+    "value": "Fine-tuned on Multilingual Pretrained Model CLSRIL-23. The original fairseq checkpoint is present here.",
+    "source": "file:README.md@sha256:4be5c6f3b1d9670deb20f95b02652a7258d632ee19d107a1858440f865be6919"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:295f0829fcd487b11e6441f61f3eb4650ce464675fe7e2ea4edf47635c6043c0#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:295f0829fcd487b11e6441f61f3eb4650ce464675fe7e2ea4edf47635c6043c0#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ta"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-09-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7835678,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:295f0829fcd487b11e6441f61f3eb4650ce464675fe7e2ea4edf47635c6043c0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:295f0829fcd487b11e6441f61f3eb4650ce464675fe7e2ea4edf47635c6043c0#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:295f0829fcd487b11e6441f61f3eb4650ce464675fe7e2ea4edf47635c6043c0#num_attention_heads"
+    },
+    "vocab": {
+      "value": 53,
+      "source": "file:config.json@sha256:295f0829fcd487b11e6441f61f3eb4650ce464675fe7e2ea4edf47635c6043c0#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice ta",
+        "task": "Test WER",
+        "value": 53.64,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2107.07402",
+        "title": "CLSRIL-23: Cross Lingual Speech Representations for Indic Languages",
+        "first_author": "Anirudh Gupta",
+        "authors": 7,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "tensorgirl/Farmers_Helper_Bot",
+        "Bishan/Vakyansh-STT",
+        "Agents-MCP-Hackathon/voicepulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

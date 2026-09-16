@@ -1,0 +1,155 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Salesforce/blip-vqa-base",
+  "revision": "787b3d35d57e49572baabd22884b3d5a05acf072",
+  "manifest": "blake3:68196fca9c51464dc3c2425f300c39e6e978227e91eef63f4f82c4dcd8e9dc91",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Salesforce/blip-vqa-base",
+    "readme": "file:README.md@sha256:03e051ff0a0461a06892f90ac0e10bd2eebc2dd47c3ffa65092b31576aa37e4c",
+    "config": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098"
+  },
+  "summary": {
+    "value": "Model card for BLIP trained on visual question answering- base architecture (with ViT base backbone).",
+    "source": "file:README.md@sha256:03e051ff0a0461a06892f90ac0e10bd2eebc2dd47c3ffa65092b31576aa37e4c"
+  },
+  "glance": {
+    "task": {
+      "value": "visual-question-answering",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 384673596,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Blip",
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#model_type"
+    },
+    "architecture_id": {
+      "value": "blip",
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "bsd-3-clause",
+        "name": "BSD 3 Clause",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-12-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-02-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 195,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 14306626,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30524,
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "blip_vision_model",
+      "source": "file:config.json@sha256:689a09e2a9980b7fcad329271c032254fde23b1ee7a90c67b003e1867dc9c098#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 19,
+        "Fine tuned": 17
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 19,
+        "finetune": 17
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForVisualQuestionAnswering",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2201.12086",
+        "title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+        "first_author": "JunnanLi",
+        "authors": 4,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "mteb/leaderboard",
+        "idkWhatToUse/Vision-Language-Chatbot",
+        "microsoft/visual_chatgpt"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

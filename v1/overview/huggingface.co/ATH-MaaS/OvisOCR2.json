@@ -1,0 +1,234 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ATH-MaaS/OvisOCR2",
+  "revision": "1fc9221b7823a371d6e97f92d527cc847e24e107",
+  "manifest": "blake3:9095bec723f4cd1484da2f00bc74faef3c239e08c1f77dab4557bf41bb05bf46",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ATH-MaaS/OvisOCR2",
+    "readme": "file:README.md@sha256:03c876522bb7be5e8410eed758854dbb933204935afa898758d929c10725945d",
+    "config": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204"
+  },
+  "summary": {
+    "value": "We are pleased to announce the release of OvisOCR2, a compact 0.8B end-to-end model for page-level document parsing. Given a document page image, OvisOCR2 generates a Markdown representation in natural reading order, covering text, formulas, tables, and visual regions.",
+    "source": "file:README.md@sha256:03c876522bb7be5e8410eed758854dbb933204935afa898758d929c10725945d"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 852985920,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 460,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 256200,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "overall",
+        "value": 92.29,
+        "date": "2026-08-28T08:46:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "scanning",
+        "value": 93.77,
+        "date": "2026-08-28T08:46:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "warping",
+        "value": 91.4,
+        "date": "2026-08-28T08:46:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "screen_photography",
+        "value": 93.09,
+        "date": "2026-08-28T08:46:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "illumination",
+        "value": 92.88,
+        "date": "2026-08-28T08:46:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "skew",
+        "value": 90.33,
+        "date": "2026-08-28T08:46:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 24,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 24,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2607.13639",
+        "title": "OvisOCR2 Technical Report",
+        "first_author": "Shiyin Lu",
+        "authors": 13,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 12,
+      "top": [
+        "embedl/hfviewer",
+        "finebooks/bhl-ocr-leaderboard",
+        "ATH-MaaS/OvisOCR2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen3-Embedding-4B",
+  "revision": "5cf2132abc99cad020ac570b19d031efec650f2b",
+  "manifest": "blake3:533acc6f64adbed5316c3188aa99c4af3322a0921ea93b7fb39d9cdb06490149",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen3-Embedding-4B",
+    "readme": "file:README.md@sha256:3c8dafc1e6529491fa8918cd96c62b90229b317fd83f2794cea20cda100d6122",
+    "config": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5"
+  },
+  "summary": {
+    "value": "The Qwen3 Embedding model series is the latest proprietary model of the Qwen family, specifically designed for text embedding and ranking tasks. Building upon the dense foundational models of the Qwen3 series, it provides a comprehensive range of text embeddings and reranking models in various sizes (0.6B, 4B, and 8B).",
+    "source": "file:README.md@sha256:3c8dafc1e6529491fa8918cd96c62b90229b317fd83f2794cea20cda100d6122"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4021774336,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#model_type"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-4B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-06-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-06-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 320,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 20559076,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151665,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:78d2861cbbfd80eee05839200c5a3b7ed64c789f6c1cab4fbb84cc4eae33eaf5#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 38,
+        "Quantized": 46,
+        "Fine tuned": 69
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 38,
+        "quantized": 46,
+        "finetune": 69
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2506.05176",
+        "title": "Qwen3 Embedding: Advancing Text Embedding and Reranking Through Foundation Models",
+        "first_author": "Yanzhao Zhang",
+        "authors": 12,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 34,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "hakari-bench/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

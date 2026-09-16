@@ -1,0 +1,163 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "naver/splade-cocondenser-selfdistil",
+  "revision": "31f3eb4b5aae648cde974db3b7b44bf2d095106b",
+  "manifest": "blake3:b6cf1bd74b99cdf45e482e74bc5d670b6d794aeb47445166a2d289dcfbbaeafd",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/naver/splade-cocondenser-selfdistil",
+    "readme": "file:README.md@sha256:96d6f24e2158f8be6d0e7463877bfc5006958eee799b97bdb59b45dac8711a6b",
+    "config": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e"
+  },
+  "summary": {
+    "value": "SPLADE model for passage retrieval. For additional details, please visit: paper: https://arxiv.org/abs/2205.04733 code: https://github.com/naver/splade",
+    "source": "file:README.md@sha256:96d6f24e2158f8be6d0e7463877bfc5006958eee799b97bdb59b45dac8711a6b"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#max_position_embeddings"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-sa-4.0",
+        "name": "CC BY NC SA 4.0",
+        "commercial": "no",
+        "note": "Non commercial, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-05-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-06-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6390446,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:ea9c9cfb25535f76cd62c298eb14899f1dc08c467e8db5f146d79d1cf9b5728e#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Merged": 1,
+        "Quantized": 2,
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "merge": 1,
+        "quantized": 2,
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2205.04733",
+        "title": "From Distillation to Hard Negative Sampling: Making Sparse Neural IR Models More Effective",
+        "first_author": "Thibault Formal",
+        "authors": 4,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "ms_marco"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "SiddharthAK/TextLSRDemo",
+        "castorini/ONNX-Demo",
+        "YogPandya/personal-rag-backend"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

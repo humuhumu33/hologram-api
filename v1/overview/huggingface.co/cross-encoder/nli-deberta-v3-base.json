@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cross-encoder/nli-deberta-v3-base",
+  "revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+  "manifest": "blake3:3a9223dc32d9d4bf11856621172ddf1320dea915896e35fdddb01ae1214a2cc1",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cross-encoder/nli-deberta-v3-base",
+    "readme": "file:README.md@sha256:b6a6dd82d5fee7036e3b815ce1d28458df294d8525fc234fb7e7277b6b79d878",
+    "config": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47"
+  },
+  "summary": {
+    "value": "nli-deberta-v3-base is a 184M Deberta V2 model for zero shot classification by cross-encoder, released Mar 2022, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 184424963,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Deberta V2",
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#model_type"
+    },
+    "architecture_id": {
+      "value": "deberta-v2",
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "microsoft/deberta-v3-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 49,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6180626,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#num_attention_heads"
+    },
+    "vocab": {
+      "value": 128100,
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 13
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 13
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nyu-mll/multi_nli",
+      "stanfordnlp/snli"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 70,
+      "top": [
+        "hashan-7/h7-chat-backend",
+        "onkar-waghmode/neural-humanizer",
+        "nutrientdocs/grounding-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

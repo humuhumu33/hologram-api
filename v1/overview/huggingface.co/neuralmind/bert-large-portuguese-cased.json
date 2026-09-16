@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "neuralmind/bert-large-portuguese-cased",
+  "revision": "aa302f6ea73b759f7df9cad58bd272127b67ec28",
+  "manifest": "blake3:e4087d19ad54708b42f2bc56c14621c04546448a3b6cf302daea2343a32f2130",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/neuralmind/bert-large-portuguese-cased",
+    "readme": "file:README.md@sha256:4bd7c7d876ff7663a01163662d7750b564a96244b3b874ee4c651de6c525b461",
+    "config": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328"
+  },
+  "summary": {
+    "value": "BERTimbau Large is a pretrained BERT model for Brazilian Portuguese that achieves state-of-the-art performances on three downstream NLP tasks: Named Entity Recognition, Sentence Textual Similarity and Recognizing Textual Entailment. It is available in two sizes: Base and Large.",
+    "source": "file:README.md@sha256:4bd7c7d876ff7663a01163662d7750b564a96244b3b874ee4c651de6c525b461"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "pt"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-05-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 74,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 23031578,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#num_attention_heads"
+    },
+    "vocab": {
+      "value": 29794,
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:670aecb8e7db8f75e68a880b157bfad0118c017a1f2592bab7fbe1a4ce379328#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Fine tuned": 63
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "finetune": 63
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "brWaC"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 9,
+      "top": [
+        "MTEB-BR/leaderboard",
+        "ruanchaves/portuguese-offensive-language-detection",
+        "tclopess/MultiLabel-Classificando-Sinopses"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

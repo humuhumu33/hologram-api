@@ -1,0 +1,139 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "TimKond/S-PubMedBert-MedQuAD",
+  "revision": "b73d84decb1da6bd4c1cf084a1b6c6602157d267",
+  "manifest": "blake3:3516001248b760ca7615a221bdfaafb83095740933717a67f7f19222d88b964e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/TimKond/S-PubMedBert-MedQuAD",
+    "readme": "file:README.md@sha256:91170e5783067aee928316adbafd55e8a6115a0da487571204060b8ebeae6800",
+    "config": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+    "source": "file:README.md@sha256:91170e5783067aee928316adbafd55e8a6115a0da487571204060b8ebeae6800"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109482752,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-06-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 8,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2595333,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f29209c2c85f6eeff0a9d028b2c290a8bae83fbf50094e88bc1931bd2d48afb9#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "pablorocg/MedicalRAG"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

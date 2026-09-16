@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "pysentimiento/robertuito-sentiment-analysis",
+  "revision": "a2cc0f67ebd705c55191e25a05ba23d885fcc09b",
+  "manifest": "blake3:c659a95e668a3f2f3b8876cb49a3da1c286a9a8e86b9f2805a46297304465c2d",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/pysentimiento/robertuito-sentiment-analysis",
+    "readme": "file:README.md@sha256:8006c6741e17c47a339653cc34cecdf261d5eebb615c08a4284d65f1b96e0b74",
+    "config": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae"
+  },
+  "summary": {
+    "value": "Model trained with TASS 2020 corpus (around 5k tweets) of several dialects of Spanish. Base model is RoBERTuito, a RoBERTa model trained in Spanish tweets.",
+    "source": "file:README.md@sha256:8006c6741e17c47a339653cc34cecdf261d5eebb615c08a4284d65f1b96e0b74"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 108791173,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#model_type"
+    },
+    "context": {
+      "value": 130,
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "pysentimiento",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "es"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-07-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 104,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 273885495,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30002,
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#vocab_size"
+    },
+    "context": {
+      "value": 130,
+      "source": "file:config.json@sha256:ad429d8f11a61d01ae929d8f8b47497cea4b1ff1fc30b77575e9c55c0e1c42ae#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 9
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 9
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2106.09462",
+        "title": "pysentimiento: A Python Toolkit for Sentiment Analysis and SocialNLP tasks",
+        "first_author": "Juan Manuel Pérez",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "jeraldflowers/Sentiment-Analysis",
+        "Ichcanziho/espacio_multi_modelo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

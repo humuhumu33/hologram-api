@@ -1,0 +1,190 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "distilbert/distilroberta-base",
+  "revision": "fb53ab8802853c8e4fbdbcd0529f21fc6f459b2b",
+  "manifest": "blake3:7acffed74fd21fc7e8002d965c46ef7106ce1a3c7e5a4bcb4a5e3d3403b16272",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/distilbert/distilroberta-base",
+    "readme": "file:README.md@sha256:a4a8b2530f6a4db8c76049c25a2104b90782395085aea17ea86b31348de8ca94",
+    "config": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa"
+  },
+  "summary": {
+    "value": "This model is a distilled version of the RoBERTa-base model. It follows the same training procedure as DistilBERT.",
+    "source": "file:README.md@sha256:a4a8b2530f6a4db8c76049c25a2104b90782395085aea17ea86b31348de8ca94"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 82760793,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 182,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 136309152,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:c89c71e1352d0d95f0cc3da0b4d1d22b64c2be0bbdaa36cd9be451d6c781b4fa#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 5,
+        "Quantized": 15,
+        "Fine tuned": 783
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 5,
+        "quantized": 15,
+        "finetune": 783
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.01108",
+        "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+        "first_author": "Victor Sanh",
+        "authors": 4,
+        "year": "2019"
+      },
+      {
+        "id": "1910.09700",
+        "title": "Quantifying the Carbon Emissions of Machine Learning",
+        "first_author": "Alexandre Lacoste",
+        "authors": 4,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "openwebtext"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "exbert-project/exbert",
+        "EuroEval/euroeval_leaderboard",
+        "society-ethics/model-card-regulatory-check"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "datasocietyco/bge-base-en-v1.5-course-recommender-v5",
+  "revision": "2b069eed51ce7bc2beeaa7e3eea1a01c48ef3d29",
+  "manifest": "blake3:bceca1ed2488c426a03827a1a616f8dc7b28905c308b2d486b8247eda9e5ecbb",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/datasocietyco/bge-base-en-v1.5-course-recommender-v5",
+    "readme": "file:README.md@sha256:b626dd5531d166a2dcdd46356a3408604ef5f574bd681976b0c3871163e85be8",
+    "config": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model finetuned from BAAI/bge-base-en-v1.5. It maps sentences & paragraphs to a 768-dimensional dense vector space and can be used for semantic textual similarity, semantic search, paraphrase mining, text classification, clustering, and more.",
+    "source": "file:README.md@sha256:b626dd5531d166a2dcdd46356a3408604ef5f574bd681976b0c3871163e85be8"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109482240,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "BAAI/bge-base-en-v1.5"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-01-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12619663,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:193906c4354eaf2e8d8f01fb097d5794e67eb1825a29a540c5d729607b91d3bd#max_position_embeddings"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1908.10084",
+        "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+        "first_author": "Nils Reimers",
+        "authors": 2,
+        "year": "2019"
+      },
+      {
+        "id": "1705.00652",
+        "title": "Efficient Natural Language Response Suggestion for Smart Reply",
+        "first_author": "Matthew Henderson",
+        "authors": 9,
+        "year": "2017"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

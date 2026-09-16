@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "laion/clap-htsat-unfused",
+  "revision": "8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+  "manifest": "blake3:7089f4313ae8236437701439c8b1576f0822bd2d9ac5aa83357c279f4c024f3a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/laion/clap-htsat-unfused",
+    "readme": "file:README.md@sha256:3542c5c4ce25e7868f2c9c97c16229d876bd8d02049e1e0f4d7675da0e5b5db6",
+    "config": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288"
+  },
+  "summary": {
+    "value": "You can use this model for zero shot audio classification or extracting audio and/or textual features.",
+    "source": "file:README.md@sha256:3542c5c4ce25e7868f2c9c97c16229d876bd8d02049e1e0f4d7675da0e5b5db6"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Clap",
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#model_type"
+    },
+    "architecture_id": {
+      "value": "clap",
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2023-02-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-04-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 80,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7934470,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#tie_word_embeddings"
+    },
+    "audio_encoder": {
+      "value": "clap_audio_model",
+      "source": "file:config.json@sha256:9efb9557bc804f2ca6e394486af2e45dfed0b18554909735a99c6220b84e4288#audio_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 4,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 4,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2211.06687",
+        "title": "Large-scale Contrastive Language-Audio Pretraining with Feature Fusion and Keyword-to-Caption Augmentation",
+        "first_author": "Yusong Wu",
+        "authors": 6,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 84,
+      "top": [
+        "mteb/leaderboard",
+        "M2UGen/M2UGen-Demo",
+        "kxic/EscherNet"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

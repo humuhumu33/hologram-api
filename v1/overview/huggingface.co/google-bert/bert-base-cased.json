@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google-bert/bert-base-cased",
+  "revision": "cd5ef92a9fb2f889e972770a36d4ed042daf221e",
+  "manifest": "blake3:97242d19921b8912d1300e43b54413ef73fa3b7899f6c7bbc8b461f0665afb80",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google-bert/bert-base-cased",
+    "readme": "file:README.md@sha256:cc8e037bc719c4776a0f78b146b315df062f8172343bbde9af25792683059080",
+    "config": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74"
+  },
+  "summary": {
+    "value": "Pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in this paper and first released in this repository.",
+    "source": "file:README.md@sha256:cc8e037bc719c4776a0f78b146b315df062f8172343bbde9af25792683059080"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 108932934,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 373,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 328027432,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#num_attention_heads"
+    },
+    "vocab": {
+      "value": 28996,
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:8b73abed2d67075fd3ec0f840aa53d9cccdc9169c04a7da135c07e721910ed74#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 46,
+        "Quantized": 5,
+        "Fine tuned": 2935
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 46,
+        "quantized": 5,
+        "finetune": 2935
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1810.04805",
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "first_author": "Jacob Devlin",
+        "authors": 4,
+        "year": "2018"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "bookcorpus",
+      "wikipedia"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "exbert-project/exbert",
+        "hf-accelerate/model-memory-usage"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

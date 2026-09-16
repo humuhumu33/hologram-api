@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cross-encoder/nli-deberta-v3-small",
+  "revision": "fa2804872c3b4bd748f38c0185cc85775361e735",
+  "manifest": "blake3:c14bb06801c48d3a2fd33406417d302ddaa0f29b979f253189cb1f075379d375",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cross-encoder/nli-deberta-v3-small",
+    "readme": "file:README.md@sha256:a9aa108025ad1984374c5e80365406bafe331aea5abc30239e1796ec0a7c267d",
+    "config": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712"
+  },
+  "summary": {
+    "value": "nli-deberta-v3-small is a 142M Deberta V2 model for zero shot classification by cross-encoder, released Mar 2022, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 141897731,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Deberta V2",
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#model_type"
+    },
+    "architecture_id": {
+      "value": "deberta-v2",
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "microsoft/deberta-v3-small"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3678541,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#num_attention_heads"
+    },
+    "vocab": {
+      "value": 128100,
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:885d0dceae8fa5c136da9209121ec9eb11160488e840de3bc1f29353674e5712#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nyu-mll/multi_nli",
+      "stanfordnlp/snli"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 76,
+      "top": [
+        "SamSankar/hallucination-guard-env",
+        "Satyam810/lexai",
+        "aryaa-05/llm-hallucination"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

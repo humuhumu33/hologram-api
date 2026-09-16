@@ -1,0 +1,172 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "webAI-Official/TwIL-LM3",
+  "revision": "e4f94da572d9857a91ca0dca857cebb0cbe6755a",
+  "manifest": "blake3:eff6a8229658407e1f734e78db08d5a6abebb7229a3b719d3e895f52930adde3",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/webAI-Official/TwIL-LM3",
+    "readme": "file:README.md@sha256:c9a88288d5c2ed310f4c5d51d2aab4d337c21c9c3162dda73fc4b1c644edce24",
+    "config": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97"
+  },
+  "summary": {
+    "value": "A 3B reasoning model for formal logic tasks, built from HuggingFaceTB/SmolLM3-3B through LoRA supervised fine-tuning, checkpoint fusion, WiSE-FT weight interpolation, and entropy-weighted GRPO reinforcement learning.",
+    "source": "file:README.md@sha256:c9a88288d5c2ed310f4c5d51d2aab4d337c21c9c3162dda73fc4b1c644edce24"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3075098624,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "SmolLM 3",
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#model_type"
+    },
+    "architecture_id": {
+      "value": "smollm3",
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#model_type"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "HuggingFaceTB/SmolLM3-3B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 89,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 460670,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128256,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#vocab_size"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 5000000.0,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:5e6d72cb7acbd4bff92af720750b1333511eb65d8974115ffcdf8290c779ce97#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 5,
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 5,
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "embedl/hfviewer",
+        "VIDraft/global-llm-leaderboard",
+        "mrfakename/twil-lm3"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

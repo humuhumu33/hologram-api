@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "VoVanPhuc/sup-SimCSE-VietNamese-phobert-base",
+  "revision": "608779b86741a8acd8c8d38132974ff04086b138",
+  "manifest": "blake3:e48e13b6ea0e2c3c655fbd73c1a0efe2303af32871a66480344e24494d1e5c1b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/VoVanPhuc/sup-SimCSE-VietNamese-phobert-base",
+    "readme": "file:README.md@sha256:5fcd68b6508c1b4ee23ca7ea990770c6b497df65e9c401c1c3f91923a959fa23",
+    "config": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608"
+  },
+  "summary": {
+    "value": "Pre-trained SimeCSEVietnamese models are the state-of-the-art of Sentence Embeddings with Vietnamese :",
+    "source": "file:README.md@sha256:5fcd68b6508c1b4ee23ca7ea990770c6b497df65e9c401c1c3f91923a959fa23"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 135589122,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#model_type"
+    },
+    "context": {
+      "value": 258,
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-04-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 30,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7516582,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#num_attention_heads"
+    },
+    "vocab": {
+      "value": 64001,
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#vocab_size"
+    },
+    "context": {
+      "value": 258,
+      "source": "file:config.json@sha256:4bc82a39c36f328f3fbcbfd83c26d00621b396ac7e9ff1a38cfa7c70d88fa608#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 6
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 6
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "RobertaForCL",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2104.08821",
+        "title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+        "first_author": "Tianyu Gao",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 31,
+      "top": [
+        "mteb/leaderboard",
+        "nnngoc/chatbot_bk1",
+        "GreenFroggo/priceChatbot"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

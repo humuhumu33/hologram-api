@@ -1,0 +1,327 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/gemma-4-E4B-it",
+  "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+  "manifest": "blake3:59f95f31de4e8680cbbc56b0ef1729b33b56e3381f78ce0cb16279ceb439464d",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/gemma-4-E4B-it",
+    "readme": "file:README.md@sha256:b21e4f69614ccd77baa2f3797d05311040dee07b989cb9f0d25111aa4b605b2c",
+    "config": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4"
+  },
+  "summary": {
+    "value": "Gemma is a family of open models built by Google DeepMind. Gemma 4 models are multimodal, handling text and image input (with audio supported on E2B, E4B, and 12B) and generating text output.",
+    "source": "file:README.md@sha256:b21e4f69614ccd77baa2f3797d05311040dee07b989cb9f0d25111aa4b605b2c"
+  },
+  "glance": {
+    "task": {
+      "value": "Any to any",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7996156490,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-4-E4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1563,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 31292067,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 42,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#vision_config"
+    },
+    "audio_encoder": {
+      "value": "gemma4_audio",
+      "source": "file:config.json@sha256:33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4#audio_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "mean",
+        "value": 69.64,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "short",
+        "value": 81.1,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "medium",
+        "value": 48.93,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "long",
+        "value": 26.82,
+        "date": "2026-08-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "LiquidAI/ifstruct-v1.0",
+        "task": "ifstruct_v1",
+        "value": 76.65,
+        "date": "2026-06-30",
+        "verified": false,
+        "source": "https://www.liquid.ai/blog/ifstruct-v1.0"
+      },
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_vision",
+        "value": 52.6,
+        "date": "2026-05-12",
+        "verified": false,
+        "source": "https://huggingface.co/google/gemma-4-E4B-it"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 40.5,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_with_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 81.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_with_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 52.5,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_with_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 35.8,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_with_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 7.7,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_with_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 25,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: gemma4_e4b_vllm_with_layout"
+      },
+      {
+        "dataset": "MathArena/aime_2026",
+        "task": "MathArena/aime_2026",
+        "value": 42.5,
+        "date": "2026-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/google/gemma-4-E4B-it"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 58.6,
+        "date": "2026-04-02",
+        "verified": false,
+        "source": "https://huggingface.co/google/gemma-4-E4B-it"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 69.4,
+        "date": "2026-04-02",
+        "verified": false,
+        "source": "https://huggingface.co/google/gemma-4-E4B-it"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 348,
+        "Merged": 1,
+        "Quantized": 350,
+        "Fine tuned": 366
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 348,
+        "merge": 1,
+        "quantized": 350,
+        "finetune": 366
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2607.02770",
+        "title": "Gemma 4 Technical Report",
+        "first_author": "Gemma Team",
+        "authors": 301,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "hf-audio/open_asr_leaderboard",
+        "elmresearchcenter/open_universal_arabic_asr_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

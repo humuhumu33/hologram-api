@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "BAAI/bge-reranker-v2-m3",
+  "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+  "manifest": "blake3:385a92ca3fc9a7b95856a25a92d9bb4877d21a27c7b4da9d04810a91cda70148",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3",
+    "readme": "file:README.md@sha256:c887aa6dd2598f908bf0582ca7068cc816585c7a1b6a07df305b631ede0cb174",
+    "config": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a"
+  },
+  "summary": {
+    "value": "Different from embedding model, reranker uses question and document as input and directly output similarity instead of embedding. You can get a relevance score by inputting query and passage to the reranker.",
+    "source": "file:README.md@sha256:c887aa6dd2598f908bf0582ca7068cc816585c7a1b6a07df305b631ede0cb174"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 567755777,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#model_type"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-03-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-06-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1196,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 138323157,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#vocab_size"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:13dcd6c31d9fec9d1d8e158702072f62d7fa7d312a64b9fe057bec9a08cfe41a#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 5,
+        "Quantized": 62,
+        "Fine tuned": 105
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 5,
+        "quantized": 62,
+        "finetune": 105
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2312.15503",
+        "title": "Making Large Language Models A Better Foundation For Dense Retrieval",
+        "first_author": "Chaofan Li",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2402.03216",
+        "title": "BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",
+        "first_author": "Jianlv Chen",
+        "authors": 6,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "hakari-bench/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

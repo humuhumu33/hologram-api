@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openai/clip-vit-large-patch14",
+  "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "manifest": "blake3:75420b73a6c9243d134d5a96bf0dad1b766b8b844a5dacadf08210af301725a0",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openai/clip-vit-large-patch14",
+    "readme": "file:README.md@sha256:de4274ec48590ab3aa1c239720ff55e99a37f4165c117ba3ad7af2b7df72687c",
+    "config": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a"
+  },
+  "summary": {
+    "value": "Disclaimer: The model card is taken and modified from the official CLIP repository, it can be found here.",
+    "source": "file:README.md@sha256:de4274ec48590ab3aa1c239720ff55e99a37f4165c117ba3ad7af2b7df72687c"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 427616846,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "CLIP",
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#model_type"
+    },
+    "architecture_id": {
+      "value": "clip",
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#model_type"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2099,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1190395980,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#num_attention_heads"
+    },
+    "vocab": {
+      "value": 49408,
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#vocab_size"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "clip_vision_model",
+      "source": "file:config.json@sha256:8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 5,
+        "Quantized": 8,
+        "Fine tuned": 142
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 5,
+        "quantized": 8,
+        "finetune": 142
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForZeroShotImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2103.00020",
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "first_author": "Alec Radford",
+        "authors": 12,
+        "year": "2021"
+      },
+      {
+        "id": "1908.04913",
+        "title": "FairFace: Face Attribute Dataset for Balanced Race, Gender, and Age",
+        "first_author": "Kimmo Kärkkäinen",
+        "authors": 2,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "multimodalart/flux-fill-outpaint"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

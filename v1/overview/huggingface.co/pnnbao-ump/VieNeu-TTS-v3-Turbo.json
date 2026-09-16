@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "pnnbao-ump/VieNeu-TTS-v3-Turbo",
+  "revision": "5f2a3e93092efaba9153253ff5f2e6a8e810e4f2",
+  "manifest": "blake3:ab65b6e083446c9bb90e0c4cf4eede4c242b4bc1c46774c9a0fe4eb284af9604",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/pnnbao-ump/VieNeu-TTS-v3-Turbo",
+    "readme": "file:README.md@sha256:5d5bb2de661fabc0e073b3b844dc131696fac3dddd5ea882d10fd9a849108eb7",
+    "config": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae"
+  },
+  "summary": {
+    "value": "VieNeu-TTS v3 Turbo is the next generation of Vietnamese TTS — 48 kHz high-fidelity speech, 23 built-in preset voices across three regions (North / Central / South), instant voice cloning, real-time streaming with an OpenAI-compatible API (16 concurrent streams on one RTX 3060), inline emotion cues, and seamless…",
+    "source": "file:README.md@sha256:5d5bb2de661fabc0e073b3b844dc131696fac3dddd5ea882d10fd9a849108eb7"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to speech",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 130907520,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Vieneu V3 Turbo",
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#model_type"
+    },
+    "architecture_id": {
+      "value": "vieneu_v3_turbo",
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#model_type"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "vi",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-06-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 60,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1280952,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#num_key_value_heads"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:eee8e032cb936a60312f594a8156c086173a9c0255a545bd11a448f22a7c77ae#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 2,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 2,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "pnnbao-ump/VieNeu-TTS-10k-ENVI"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 15,
+      "top": [
+        "pnnbao-ump/VieNeu-TTS-v3-Turbo",
+        "sonlovinbot/coachio-tts-free",
+        "trangmin11101996/VieNeu-TTS-v3-Turbo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

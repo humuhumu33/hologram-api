@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "comodoro/wav2vec2-xls-r-300m-sk-cv8",
+  "revision": "caba6c9c8800778823ce75d96bed9ee2eb56ea3a",
+  "manifest": "blake3:02514ba5155a4bc51a97d1203cf417f129c9370a52e3a3f5f8f9e1085f9e9bb5",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/comodoro/wav2vec2-xls-r-300m-sk-cv8",
+    "readme": "file:README.md@sha256:c5edb9fdd871affe2121e77068b6d8590980b893bdffdebf8384d5d90e124ed5",
+    "config": "file:config.json@sha256:fcbc6ec5f42c5f2687adf9b88b0cfeecb65a6c735842ca69105c68faa7a37892"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on the commonvoice 8.0 dataset. It achieves the following results on the evaluation set:",
+    "source": "file:README.md@sha256:c5edb9fdd871affe2121e77068b6d8590980b893bdffdebf8384d5d90e124ed5"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:fcbc6ec5f42c5f2687adf9b88b0cfeecb65a6c735842ca69105c68faa7a37892#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:fcbc6ec5f42c5f2687adf9b88b0cfeecb65a6c735842ca69105c68faa7a37892#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "sk"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-03-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4222634,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:fcbc6ec5f42c5f2687adf9b88b0cfeecb65a6c735842ca69105c68faa7a37892#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:fcbc6ec5f42c5f2687adf9b88b0cfeecb65a6c735842ca69105c68faa7a37892#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:fcbc6ec5f42c5f2687adf9b88b0cfeecb65a6c735842ca69105c68faa7a37892#num_attention_heads"
+    },
+    "vocab": {
+      "value": 49,
+      "source": "file:config.json@sha256:fcbc6ec5f42c5f2687adf9b88b0cfeecb65a6c735842ca69105c68faa7a37892#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice 8",
+        "task": "Test WER",
+        "value": 49.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 8",
+        "task": "Test CER",
+        "value": 13.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Dev Data",
+        "task": "Test WER",
+        "value": 81.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Test Data",
+        "task": "Test WER",
+        "value": 80.26,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "Sven33/SATEv1.5"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

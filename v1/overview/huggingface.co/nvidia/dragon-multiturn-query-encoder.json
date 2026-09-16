@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/dragon-multiturn-query-encoder",
+  "revision": "b4dfda0f262c3441c610e33258b798749e54ed7e",
+  "manifest": "blake3:b0a00fa1582b1f5e40d19a12440723ac8823b1305ec0bf59ff038c174b6d3d34",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/dragon-multiturn-query-encoder",
+    "readme": "file:README.md@sha256:b73ba8099d09a943dae64b6194dc800329c091980e1ed229e743464d718bcbd4",
+    "config": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d"
+  },
+  "summary": {
+    "value": "dragon-multiturn-query-encoder is a BERT model for embeddings by nvidia, released Apr 2024.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": [
+          "other"
+        ],
+        "name": [
+          "other"
+        ]
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-04-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-05-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 61,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 5863905,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:64ee5a4da4c3eb44d0008051c8a96a8d90dcbe9fde3e4b74d762a32af4493f9d#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2401.10225",
+        "title": "ChatQA: Building GPT-4 Level Conversational QA Models",
+        "first_author": "Zihan Liu",
+        "authors": 6,
+        "year": "2024"
+      },
+      {
+        "id": "2302.07452",
+        "title": "How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval",
+        "first_author": "Sheng-Chieh Lin",
+        "authors": 8,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

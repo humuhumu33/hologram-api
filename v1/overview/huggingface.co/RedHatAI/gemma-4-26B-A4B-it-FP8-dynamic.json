@@ -1,0 +1,185 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "RedHatAI/gemma-4-26B-A4B-it-FP8-dynamic",
+  "revision": "ed35d7abe5d940da41b4ff06eb482feb0be8cb44",
+  "manifest": "blake3:c63bfeadcb7c4ae2d81f0890f38e0e575be1679acbd42ff745e012425884edd9",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/RedHatAI/gemma-4-26B-A4B-it-FP8-dynamic",
+    "readme": "file:README.md@sha256:8ae1b13343b1e329c54aa905fa6cf86b14b5c4a395893b5b8a1f7fe10a1d06e6",
+    "config": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42"
+  },
+  "summary": {
+    "value": "This model is a quantized version of google/gemma-4-26B-A4B-it. It was evaluated on several tasks to assess its quality in comparison to the unquantized model.",
+    "source": "file:README.md@sha256:8ae1b13343b1e329c54aa905fa6cf86b14b5c4a395893b5b8a1f7fe10a1d06e6"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 26544133710,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#top_k_experts"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 92%, BF16 8%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/gemma-4-26B-A4B-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 41,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 5104869,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2816,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#top_k_experts"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:9781d0d5918127cc95a0a9f76040ea11c6dfd356e18a2db8ab1fdc2e2941dd42#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "ksg-dfci/MatchMiner-AI-Patient-Centric"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

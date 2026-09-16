@@ -1,0 +1,407 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "zai-org/GLM-5.3-Flash",
+  "revision": "eb9eb208eb0d988989d07a6a12d0fdeb5f52574a",
+  "manifest": "blake3:755a270dd7d86e0429937fefaa00f6ee4037da687c5b6a8781e347874dd71176",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/zai-org/GLM-5.3-Flash",
+    "readme": "file:README.md@sha256:e6c5d41400e28f5a89418a0d15b09b9c113314a7553d40d7d4a8a72fcdb87d02",
+    "config": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f"
+  },
+  "summary": {
+    "value": "We introduce GLM-5.3-Flash, the first natively multimodal model in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks.",
+    "source": "file:README.md@sha256:e6c5d41400e28f5a89418a0d15b09b9c113314a7553d40d7d4a8a72fcdb87d02"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 321323031390,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 288,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "GLM 5 Next",
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#model_type"
+    },
+    "architecture_id": {
+      "value": "glm5_next",
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 98%, BF16 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-08-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2387,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2244085,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 45,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 154880,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#max_position_embeddings"
+    },
+    "experts": {
+      "value": 288,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "glm5_next_vision",
+      "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "harborframework/terminal-bench-2.1",
+        "task": "terminalbench_2_1",
+        "value": 84.3,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+      },
+      {
+        "dataset": "datacurve/deep-swe",
+        "task": "deep_swe",
+        "value": 63.4,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+        "notes": "Reported as DeepSWE v1.1 on the model card, run via the mini-swe-agent harness with 400K context."
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 55.3,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+        "notes": "HLE with tools (full set) and a 300K-context management strategy, not the no-tools default; judged by GPT-5.6-luna (medium)."
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "overall",
+        "value": 90.76,
+        "date": "2026-09-12T04:11:41.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "scanning",
+        "value": 91.43,
+        "date": "2026-09-12T04:11:41.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "warping",
+        "value": 89.84,
+        "date": "2026-09-12T04:11:41.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "screen_photography",
+        "value": 90.36,
+        "date": "2026-09-12T04:11:41.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "illumination",
+        "value": 91.4,
+        "date": "2026-09-12T04:11:41.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "skew",
+        "value": 90.76,
+        "date": "2026-09-12T04:11:41.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "mean",
+        "value": 80.75,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: glm_5_3_flash_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "short",
+        "value": 96.3,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: glm_5_3_flash_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "medium",
+        "value": 51.56,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: glm_5_3_flash_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "long",
+        "value": 27.83,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: glm_5_3_flash_extract_oneshot_structured_output_file"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 70.75,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: glm_5_3_flash_parse_with_layout_file"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 88.34,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: glm_5_3_flash_parse_with_layout_file"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 79.49,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: glm_5_3_flash_parse_with_layout_file"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 41.78,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: glm_5_3_flash_parse_with_layout_file"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 54.96,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: glm_5_3_flash_parse_with_layout_file"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 89.18,
+        "date": "2026-08-26",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: glm_5_3_flash_parse_with_layout_file"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Merged": 2,
+        "Quantized": 109,
+        "Fine tuned": 16
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "merge": 2,
+        "quantized": 109,
+        "finetune": 16
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "baseten",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "fireworks-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "together",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "zai-org",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2602.15763",
+        "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+        "first_author": "GLM-5 Team",
+        "authors": 186,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 22,
+      "top": [
+        "embedl/hfviewer",
+        "TTS-AGI/voice-acting-arena",
+        "ginigen-ai/open-router-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

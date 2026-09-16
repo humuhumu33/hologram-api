@@ -1,0 +1,208 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4",
+  "revision": "16993199e436da4ba75ddc410855f87e0d996ee6",
+  "manifest": "blake3:f9455c8e37b93895d863f03c809223f8239f39c870fb4c69a57fc65e83b7233c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4",
+    "readme": "file:README.md@sha256:57e90233a9efb3c482ece1fc91fe71038dcec388ed9f8f2417c2d8354a3a76fd",
+    "config": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311"
+  },
+  "summary": {
+    "value": "This model was improved using Qwen3-VL-30B-A3B-Instruct, Qwen3.5-122B-A10B, Qwen3.5-397B-A17B, Qwen2.5-VL-72B-Instruct, and gpt-oss-120b. For more information, please see the Training Dataset section below.",
+    "source": "file:README.md@sha256:57e90233a9efb3c482ece1fc91fe71038dcec388ed9f8f2417c2d8354a3a76fd"
+  },
+  "glance": {
+    "task": {
+      "value": "Any to any",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 18326275008,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "NemotronH Nano Omni Reasoning V3",
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#model_type"
+    },
+    "architecture_id": {
+      "value": "NemotronH_Nano_Omni_Reasoning_V3",
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 80%, BF16 12%, FP8 8%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 190,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6856894,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 52,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2688,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:59d8f791406c35ca36f44b4558ad2cb8ce8d737470fb2b05ab9d3d26b0f7c311#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Merged": 1,
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "merge": 1,
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2604.24954",
+        "title": "Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence",
+        "first_author": "NVIDIA",
+        "authors": 217,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Nemotron-Image-Training-v3"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "embedl/hfviewer",
+        "build-small-hackathon/figment",
+        "Armacam/agente-h-brido-nvidia-edge-ai-orchestrator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "imvladikon/wav2vec2-xls-r-300m-hebrew",
+  "revision": "b2e683004903f1b11bee2c6092a7c323ed858d82",
+  "manifest": "blake3:2f46047d159275767505688043f588f30b2b672f6fecca6269ae73b2f6c21e6c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/imvladikon/wav2vec2-xls-r-300m-hebrew",
+    "readme": "file:README.md@sha256:f454473146195ec85f1258f355759e4495078e7fe0e1eb0374dc46b49b164646",
+    "config": "file:config.json@sha256:7f6fb18feda97b96c8c7a11dd4c613b27a195367ab4ba837a4ed43b25b133ada"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on the private datasets in 2 stages - firstly was fine-tuned on a small dataset with good samples Then the obtained model was fine-tuned on a large dataset with the small good dataset, with various samples from different sources, and with an…",
+    "source": "file:README.md@sha256:f454473146195ec85f1258f355759e4495078e7fe0e1eb0374dc46b49b164646"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315471520,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:7f6fb18feda97b96c8c7a11dd4c613b27a195367ab4ba837a4ed43b25b133ada#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:7f6fb18feda97b96c8c7a11dd4c613b27a195367ab4ba837a4ed43b25b133ada#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "he"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-xls-r-300m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 6,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 14376617,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:7f6fb18feda97b96c8c7a11dd4c613b27a195367ab4ba837a4ed43b25b133ada#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:7f6fb18feda97b96c8c7a11dd4c613b27a195367ab4ba837a4ed43b25b133ada#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:7f6fb18feda97b96c8c7a11dd4c613b27a195367ab4ba837a4ed43b25b133ada#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32,
+      "source": "file:config.json@sha256:7f6fb18feda97b96c8c7a11dd4c613b27a195367ab4ba837a4ed43b25b133ada#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Custom Dataset",
+        "task": "Test WER",
+        "value": 23.18,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "amirza/draw_me_a_sheep_heb",
+        "benalonso/imvladikon-wav2vec2-xls-r-300m-hebrew",
+        "Sven33/SATEv1.5"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

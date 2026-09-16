@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "emrecan/bert-base-turkish-cased-mean-nli-stsb-tr",
+  "revision": "7e10e2fbd7627fd0228eb2dbdc9e9da264442bbe",
+  "manifest": "blake3:9c928e1a8d77d2752b059a1d55dab0b5b5404c0aaf60142c7deaff21db5b7f2c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/emrecan/bert-base-turkish-cased-mean-nli-stsb-tr",
+    "readme": "file:README.md@sha256:999a264c4f04df4956d2b4999298dc4cb9f5d874a7ac2f4ea9ede2504bde44da",
+    "config": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+    "source": "file:README.md@sha256:999a264c4f04df4956d2b4999298dc4cb9f5d874a7ac2f4ea9ede2504bde44da"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 110617856,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "tr"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 52,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8048719,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:b70a35e14e8e0564510367e17ed7854924e78f6eb578a8a8bc2de8e6063121ec#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nli_tr",
+      "emrecan/stsb-mt-turkish"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "Abdulvahap/My-Precious-Chatbot",
+        "furkanunluturk/atasozu-onerici"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

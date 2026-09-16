@@ -1,0 +1,226 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+  "revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f",
+  "manifest": "blake3:7db3ecc7de74248dbd4a812fd527e9e5e34135224848c23c9e46d25e5c9f0291",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+    "readme": "file:README.md@sha256:06f349f02b364c5ff6d92562be82ddd190e00b7e161a749c297766d372068c18",
+    "config": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219"
+  },
+  "summary": {
+    "value": "NVIDIA-Nemotron-3-Nano-4B-BF16 is a small language model (SLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response.",
+    "source": "file:README.md@sha256:06f349f02b364c5ff6d92562be82ddd190e00b7e161a749c297766d372068c18"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3973556832,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron H",
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron_h",
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/NVIDIA-Nemotron-Nano-9B-v2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-03-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-03-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 119,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6862927,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 42,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3136,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:fde9241f66cd414458df444a80eb535f53aef2b4b240a91f092e651fa6f27219#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 14,
+        "Quantized": 49,
+        "Fine tuned": 19
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 14,
+        "quantized": 49,
+        "finetune": 19
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2511.16664",
+        "title": "Nemotron Elastic: Towards Efficient Many-in-One Reasoning LLMs",
+        "first_author": "Ali Taghibakhshi",
+        "authors": 16,
+        "year": "2025"
+      },
+      {
+        "id": "2504.03624",
+        "title": "Nemotron-H: A Family of Accurate and Efficient Hybrid Mamba-Transformer Models",
+        "first_author": "NVIDIA",
+        "authors": 200,
+        "year": "2025"
+      },
+      {
+        "id": "2512.20856",
+        "title": "NVIDIA Nemotron 3: Efficient and Open Intelligence",
+        "first_author": "NVIDIA",
+        "authors": 358,
+        "year": "2025"
+      },
+      {
+        "id": "2512.20848",
+        "title": "Nemotron 3 Nano: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
+        "first_author": "NVIDIA",
+        "authors": 313,
+        "year": "2025"
+      },
+      {
+        "id": "2412.02595",
+        "title": "Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset",
+        "first_author": "Dan Su",
+        "authors": 9,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Nemotron-CC-v2",
+      "nvidia/Nemotron-Post-Training-Dataset-v2",
+      "nvidia/Nemotron-Science-v1",
+      "nvidia/Nemotron-Instruction-Following-Chat-v1",
+      "nvidia/Nemotron-Agentic-v1",
+      "nvidia/Nemotron-Competitive-Programming-v1",
+      "nvidia/Nemotron-Math-Proofs-v1",
+      "nvidia/Nemotron-RL-Agentic-Conversational-Tool-Use-Pivot-v1",
+      "nvidia/Nemotron-RL-instruction_following",
+      "nvidia/Nemotron-RL-agent-calendar_scheduling",
+      "nvidia/Nemotron-RL-instruction_following-structured_outputs"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 50,
+      "top": [
+        "embedl/hfviewer",
+        "VIDraft/global-llm-leaderboard",
+        "EuroEval/euroeval_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

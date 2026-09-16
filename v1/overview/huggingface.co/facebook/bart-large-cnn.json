@@ -1,0 +1,226 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/bart-large-cnn",
+  "revision": "37f520fa929c961707657b28798b30c003dd100b",
+  "manifest": "blake3:a1849c8717f8f082a5a2bc9378cf0be70103f7223e2765a612ff22665cd41a62",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/bart-large-cnn",
+    "readme": "file:README.md@sha256:a49b4b7fa5e64a05277d57cb767d9b8e8d4789a09cab9647beadceaaed86e170",
+    "config": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed"
+  },
+  "summary": {
+    "value": "BART model pre-trained on English language, and fine-tuned on CNN Daily Mail.",
+    "source": "file:README.md@sha256:a49b4b7fa5e64a05277d57cb767d9b8e8d4789a09cab9647beadceaaed86e170"
+  },
+  "glance": {
+    "task": {
+      "value": "Summarization",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 406290432,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Bart",
+      "source": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed#model_type"
+    },
+    "architecture_id": {
+      "value": "bart",
+      "source": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed#model_type"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1619,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 148360114,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed#d_model"
+    },
+    "vocab": {
+      "value": 50264,
+      "source": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed#vocab_size"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:c6cb642aec929b65f514ee0ec7c04f9de19f705c143491577ecd8b7cc923c6ed#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "cnn_dailymail",
+        "task": "ROUGE-1",
+        "value": 42.9486,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "cnn_dailymail",
+        "task": "ROUGE-2",
+        "value": 20.8149,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "cnn_dailymail",
+        "task": "ROUGE-L",
+        "value": 30.6186,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "cnn_dailymail",
+        "task": "ROUGE-LSUM",
+        "value": 40.0376,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "cnn_dailymail",
+        "task": "loss",
+        "value": 2.529000997543335,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "cnn_dailymail",
+        "task": "gen_len",
+        "value": 78.5866,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 33,
+        "Quantized": 7,
+        "Fine tuned": 443
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 33,
+        "quantized": 7,
+        "finetune": 443
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "summarization"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.13461",
+        "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+        "first_author": "Mike Lewis",
+        "authors": 8,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "cnn_dailymail"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "Shouryahere/infy",
+        "Uthar/BodyPaint"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

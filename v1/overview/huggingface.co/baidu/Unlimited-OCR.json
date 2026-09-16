@@ -1,0 +1,247 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "baidu/Unlimited-OCR",
+  "revision": "07dea832e22aefee32ad281d4b80551282e1c168",
+  "manifest": "blake3:2001e719de8c69742bc07964e99fc315a09c23088bf88c79b7de277891900c5c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/baidu/Unlimited-OCR",
+    "readme": "file:README.md@sha256:4f573db255db5262bfe2ea92e459bfc11635a456f210e3a96289bb9605077a55",
+    "config": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9"
+  },
+  "summary": {
+    "value": "Set up the environment (uv-managed virtualenv). Install the local SGLang wheel first, then pin kernels==0.9.0 and install PyMuPDF for PDF-to-image conversion:",
+    "source": "file:README.md@sha256:4f573db255db5262bfe2ea92e459bfc11635a456f210e3a96289bb9605077a55"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3336106240,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Unlimited Ocr",
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#model_type"
+    },
+    "architecture_id": {
+      "value": "unlimited-ocr",
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-06-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4259,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7767377,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#hidden_size"
+    },
+    "heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#max_position_embeddings"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#num_experts_per_tok"
+    },
+    "vision_encoder": {
+      "value": "vision",
+      "source": "file:config.json@sha256:27246d03fd670904ec9601b1cb0861fbb79ec076830771daa8d943d6229946f9#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 46.17,
+        "date": "2026-06-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: unlimitedocr"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 86.81,
+        "date": "2026-06-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: unlimitedocr"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 0.97,
+        "date": "2026-06-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: unlimitedocr"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 71.52,
+        "date": "2026-06-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: unlimitedocr"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 1.34,
+        "date": "2026-06-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: unlimitedocr"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 70.21,
+        "date": "2026-06-24",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: unlimitedocr"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 34,
+        "Fine tuned": 15
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 34,
+        "finetune": 15
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2606.23050",
+        "title": "Unlimited OCR Works",
+        "first_author": "Youyang Yin",
+        "authors": 17,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 68,
+      "top": [
+        "embedl/hfviewer",
+        "baidu/Unlimited-OCR",
+        "finebooks/bhl-ocr-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

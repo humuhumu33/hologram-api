@@ -1,0 +1,207 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "swiss-ai/Apertus-8B-Instruct-2509",
+  "revision": "b946d40447b2b597999b9c86d44bee0b452c919f",
+  "manifest": "blake3:efe269ba6c823dd5d19a6a8ef0fab9f0c2e86228e6110e7af321cfe9b734ba26",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/swiss-ai/Apertus-8B-Instruct-2509",
+    "readme": "file:README.md@sha256:b1ff27fcfa05aecba7808a3ae4eb70f2df95a0bb1490fdbb2368ab021dfc160b",
+    "config": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25"
+  },
+  "summary": {
+    "value": "Apertus is a 70B and 8B parameter language model designed to push the boundaries of fully-open multilingual and transparent models. The model supports over 1000 languages and long context, it uses only fully compliant and open training data, and achieves comparable performance to models trained behind closed doors.",
+    "source": "file:README.md@sha256:b1ff27fcfa05aecba7808a3ae4eb70f2df95a0bb1490fdbb2368ab021dfc160b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8053338176,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Apertus",
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#model_type"
+    },
+    "architecture_id": {
+      "value": "apertus",
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#model_type"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "swiss-ai/Apertus-8B-2509"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-08-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 491,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3773038,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#vocab_size"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 12000000,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:9a2f0f01aa684c30097fbf0469ed002b5af2797231a6e3288622de16d2055d25#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "open_question",
+        "value": 22.44,
+        "date": "2026-06-20T21:42:13.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 120,
+        "Merged": 2,
+        "Quantized": 37,
+        "Fine tuned": 17
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 120,
+        "merge": 2,
+        "quantized": 37,
+        "finetune": 17
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "publicai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2509.14233",
+        "title": "Apertus: Democratizing Open and Compliant LLMs for Global Language Environments",
+        "first_author": "Alejandro Hernández-Cano",
+        "authors": 101,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 27,
+      "top": [
+        "VIDraft/global-llm-leaderboard",
+        "EuroEval/euroeval_leaderboard",
+        "akhaliq/Apertus-8B-Instruct-2509"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

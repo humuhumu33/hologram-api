@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jonatasgrosman/wav2vec2-large-xlsr-53-greek",
+  "revision": "489b34fb35fc5876af6193d419772cb9d6d1d531",
+  "manifest": "blake3:86e5fd9f35285a3e78627914bc602973cda341c7845259dd539635f5e8a59a67",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jonatasgrosman/wav2vec2-large-xlsr-53-greek",
+    "readme": "file:README.md@sha256:ed441363eee3491060ad1d2ed2758b908bb3bbcfa451c52a8bae20cb67e0a891",
+    "config": "file:config.json@sha256:e7176181819df26877beeeba8b1abe9dd7ff5cea4b0562ae8031bd09e8939e12"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Greek using the train and validation splits of Common Voice 6.1 and CSS10. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:ed441363eee3491060ad1d2ed2758b908bb3bbcfa451c52a8bae20cb67e0a891"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:e7176181819df26877beeeba8b1abe9dd7ff5cea4b0562ae8031bd09e8939e12#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:e7176181819df26877beeeba8b1abe9dd7ff5cea4b0562ae8031bd09e8939e12#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "el"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-12-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 5,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 19647759,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:e7176181819df26877beeeba8b1abe9dd7ff5cea4b0562ae8031bd09e8939e12#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:e7176181819df26877beeeba8b1abe9dd7ff5cea4b0562ae8031bd09e8939e12#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:e7176181819df26877beeeba8b1abe9dd7ff5cea4b0562ae8031bd09e8939e12#num_attention_heads"
+    },
+    "vocab": {
+      "value": 41,
+      "source": "file:config.json@sha256:e7176181819df26877beeeba8b1abe9dd7ff5cea4b0562ae8031bd09e8939e12#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice el",
+        "task": "Test WER",
+        "value": 11.62,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice el",
+        "task": "Test CER",
+        "value": 3.36,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3579",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 8,
+      "top": [
+        "embedl/hfviewer",
+        "qanastek/Alexa-NLU-Clone",
+        "Gradio-Blocks/Alexa-NLU-Clone"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "inclusionAI/Ling-3.0-flash-VL-fp4",
+  "revision": "8dca6a0d4dde1ddc79cfe79506173bbf375393ac",
+  "manifest": "blake3:5580d548ce034b8535c80425d0214358303bde74268bbe5c08e4bbb77ae3f502",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/inclusionAI/Ling-3.0-flash-VL-fp4",
+    "readme": "file:README.md@sha256:c4f91ac3ed9fc92764121cb608c673ef86cc8380445f21caba6cc7a71edd10ad",
+    "config": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442"
+  },
+  "summary": {
+    "value": "The architecture of Ling-3.0-flash-VL is designed to integrate visual information into real-world reasoning and agentic workflows.",
+    "source": "file:README.md@sha256:c4f91ac3ed9fc92764121cb608c673ef86cc8380445f21caba6cc7a71edd10ad"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 64450482896,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Bailing MoE V3 VL",
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#model_type"
+    },
+    "architecture_id": {
+      "value": "bailing_moe_v3_vl",
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT8 94%, FP8 4%, BF16 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 19,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1423,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 42,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 157184,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 6000000,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_moe_vit",
+      "source": "file:config.json@sha256:90d68db4f70f48401f3b6ca4755a180000a915a1ce2872c14d8559be123bb442#vision_config"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "osolmaz/ling-dgx-spark"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

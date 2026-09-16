@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "arijitx/wav2vec2-xls-r-300m-bengali",
+  "revision": "45ed7c704f276acb9ed6ef234b66e67a1a2cb864",
+  "manifest": "blake3:cf62e7369853b5bacaf67bbc96a9328400806813b771153d50f994be3ba45719",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/arijitx/wav2vec2-xls-r-300m-bengali",
+    "readme": "file:README.md@sha256:708b4980967e994bac28d72a184550c317eebef6d6d7cc6d3f4f26ea49ac78de",
+    "config": "file:config.json@sha256:2cd41a9be72757ae2b2eda2bff409b684511e1d30dace21b307b3829c3c63469"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on the OPENSLRSLR53 - bengali dataset. It achieves the following results on the evaluation set.",
+    "source": "file:README.md@sha256:708b4980967e994bac28d72a184550c317eebef6d6d7cc6d3f4f26ea49ac78de"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:2cd41a9be72757ae2b2eda2bff409b684511e1d30dace21b307b3829c3c63469#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:2cd41a9be72757ae2b2eda2bff409b684511e1d30dace21b307b3829c3c63469#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "bn"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-03-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 5263530,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:2cd41a9be72757ae2b2eda2bff409b684511e1d30dace21b307b3829c3c63469#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:2cd41a9be72757ae2b2eda2bff409b684511e1d30dace21b307b3829c3c63469#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:2cd41a9be72757ae2b2eda2bff409b684511e1d30dace21b307b3829c3c63469#num_attention_heads"
+    },
+    "vocab": {
+      "value": 112,
+      "source": "file:config.json@sha256:2cd41a9be72757ae2b2eda2bff409b684511e1d30dace21b307b3829c3c63469#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Open SLR",
+        "task": "Test WER",
+        "value": 0.21726385291857586,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Open SLR",
+        "task": "Test CER",
+        "value": 0.04725010353701041,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Open SLR",
+        "task": "Test WER with lm",
+        "value": 0.15322879016421437,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Open SLR",
+        "task": "Test CER with lm",
+        "value": 0.03413696666806267,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "openslr",
+      "SLR53",
+      "AI4Bharat/IndicCorp"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "monirsso/arijitx-wav2vec2-xls-r-300m-bengali"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

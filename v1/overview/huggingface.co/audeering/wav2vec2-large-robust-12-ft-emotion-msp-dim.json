@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+  "revision": "6eba34a2485ea31cb03600241787c3a5edab8626",
+  "manifest": "blake3:332dae3f0b89d7e9647fb0f830d67f7e512d01ba527a915561f16dde0521b1a9",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+    "readme": "file:README.md@sha256:5fe5eb9afb24ab938fb3facf0eebe64a0f8a8628eb93fd772ba5c7120a45365d",
+    "config": "file:config.json@sha256:c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb"
+  },
+  "summary": {
+    "value": "Please note that this model is for research purpose only. A commercial license for a model that has been trained on much more data can be acquired with audEERING.",
+    "source": "file:README.md@sha256:5fe5eb9afb24ab938fb3facf0eebe64a0f8a8628eb93fd772ba5c7120a45365d"
+  },
+  "glance": {
+    "task": {
+      "value": "Audio classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 165336707,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-sa-4.0",
+        "name": "CC BY NC SA 4.0",
+        "commercial": "no",
+        "note": "Non commercial, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-04-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-09-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 173,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16623789,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:c0962c3d1f065972bbebbba0bbffb8016ef4e9aae4a9b07e5fec22f770d2cddb#num_attention_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "Wav2Vec2ForSpeechClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2203.07378",
+        "title": "Dawn of the transformer era in speech emotion recognition: closing the valence gap",
+        "first_author": "Johannes Wagner",
+        "authors": 7,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "msp-podcast"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 53,
+      "top": [
+        "innnky/nene-emotion",
+        "MZhaovo/AI_TalkingFlower",
+        "Mahiruoshi/MyGO_VIts-bert"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

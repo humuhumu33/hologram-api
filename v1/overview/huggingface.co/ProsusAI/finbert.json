@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ProsusAI/finbert",
+  "revision": "4556d13015211d73dccd3fdd39d39232506f3e43",
+  "manifest": "blake3:92bea0f9d2bd319cc7b1f9854ad42bb18e5fbbd4f05d6840c83ecfaeeb0877ce",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ProsusAI/finbert",
+    "readme": "file:README.md@sha256:23bf85400efe1e88cbe2bf79cec8c5ff81fe9806c599f3ca85e18288ab871008",
+    "config": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe"
+  },
+  "summary": {
+    "value": "FinBERT is a pre-trained NLP model to analyze sentiment of financial text. It is built by further training the BERT language model in the finance domain, using a large financial corpus and thereby fine-tuning it for financial sentiment classification.",
+    "source": "file:README.md@sha256:23bf85400efe1e88cbe2bf79cec8c5ff81fe9806c599f3ca85e18288ab871008"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-05-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1244,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 120003215,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f6449ddda85eb726207a40be59c0cd3bd4b142ccb27298d5e45f9ae3396b1abe#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 9,
+        "Quantized": 8,
+        "Fine tuned": 111
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 9,
+        "quantized": 8,
+        "finetune": 111
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1908.10063",
+        "title": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models",
+        "first_author": "Dogu Araci",
+        "authors": 1,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "IoannisTr/Tech_Stocks_Trading_Assistant",
+        "RobertCastagna/Fin_Research"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

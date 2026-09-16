@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "yikuan8/Clinical-Longformer",
+  "revision": "5e2ebe8f6e98d4751eaf71a8514e0edbe73989a2",
+  "manifest": "blake3:c9292070290517e000a682dba14aedd5154287a585fa0725e6e05885abb6c833",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/yikuan8/Clinical-Longformer",
+    "readme": "file:README.md@sha256:c218743aab55c14f9b788743ab97429936897f47b241d4101d91a82af16fdb90",
+    "config": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec"
+  },
+  "summary": {
+    "value": "Clinical-Longformer is a Longformer model for fill mask by yikuan8, released Mar 2022.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Longformer",
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#model_type"
+    },
+    "architecture_id": {
+      "value": "longformer",
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#model_type"
+    },
+    "context": {
+      "value": 4098,
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-01-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 69,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 21640648,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#vocab_size"
+    },
+    "context": {
+      "value": 4098,
+      "source": "file:config.json@sha256:c10104d6d8e5e4824b4088f22fdf88eadbd13d081517b790ee724ffd9eba79ec#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 27
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 27
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2201.11838",
+        "title": "Clinical-Longformer and Clinical-BigBird: Transformers for long clinical sequences",
+        "first_author": "Yikuan Li",
+        "authors": 5,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "danielhajialigol/DRGCoder",
+        "joaopimenta/tackling-hospital-readmissions-ai",
+        "meghanaraok/LongLAT"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "FacebookAI/roberta-large",
+  "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+  "manifest": "blake3:c685054d4ac4b029d33de6033364ac501f3018cce042396717520d12768b8725",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/FacebookAI/roberta-large",
+    "readme": "file:README.md@sha256:169bcb945dc37375faef8b0e4a327c3e80a107fb64a85dd2c6b7651519eeaba0",
+    "config": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3"
+  },
+  "summary": {
+    "value": "Pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in this paper and first released in this repository.",
+    "source": "file:README.md@sha256:169bcb945dc37375faef8b0e4a327c3e80a107fb64a85dd2c6b7651519eeaba0"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 355412571,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 320,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 657124781,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 77,
+        "Quantized": 3,
+        "Fine tuned": 425
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 77,
+        "quantized": 3,
+        "finetune": 425
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1907.11692",
+        "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+        "first_author": "Yinhan Liu",
+        "authors": 10,
+        "year": "2019"
+      },
+      {
+        "id": "1806.02847",
+        "title": "A Simple Method for Commonsense Reasoning",
+        "first_author": "Trieu H. Trinh",
+        "authors": 2,
+        "year": "2018"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "bookcorpus",
+      "wikipedia"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "exbert-project/exbert",
+        "EuroEval/euroeval_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

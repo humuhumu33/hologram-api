@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "rizvandwiki/gender-classification",
+  "revision": "380b17658cc037b246aab0b62a20deb7dd607e65",
+  "manifest": "blake3:ddbc9f588ccfcf03a1ef5504a96209b576cd10540360d059a360cdd3f48a003e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/rizvandwiki/gender-classification",
+    "readme": "file:README.md@sha256:dac3892141c948b54662fb160a4aaabe0bef125666cc32eba287c8265d4fc381",
+    "config": "file:config.json@sha256:bef8fc364da0c23a3027140d0c2773b60d12793d774abc8e59583e5bb6516c78"
+  },
+  "summary": {
+    "value": "Create your own image classifier for anything by running the demo on Google Colab.",
+    "source": "file:README.md@sha256:dac3892141c948b54662fb160a4aaabe0bef125666cc32eba287c8265d4fc381"
+  },
+  "glance": {
+    "task": {
+      "value": "Image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 85800194,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "ViT",
+      "source": "file:config.json@sha256:bef8fc364da0c23a3027140d0c2773b60d12793d774abc8e59583e5bb6516c78#model_type"
+    },
+    "architecture_id": {
+      "value": "vit",
+      "source": "file:config.json@sha256:bef8fc364da0c23a3027140d0c2773b60d12793d774abc8e59583e5bb6516c78#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2022-12-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-05-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 64,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 41042027,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:bef8fc364da0c23a3027140d0c2773b60d12793d774abc8e59583e5bb6516c78#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:bef8fc364da0c23a3027140d0c2773b60d12793d774abc8e59583e5bb6516c78#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:bef8fc364da0c23a3027140d0c2773b60d12793d774abc8e59583e5bb6516c78#num_attention_heads"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "task": "Accuracy",
+        "value": 0.9244444370269775,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 29,
+      "top": [
+        "Nuno-Tome/simple_image_classifier",
+        "Paresh/Facial-feature-detector",
+        "Nuno-Tome/compared_image_classifier"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

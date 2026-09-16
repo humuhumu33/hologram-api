@@ -1,0 +1,7103 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jinaai/jina-embeddings-v2-small-en",
+  "revision": "44e7d1d6caec8c883c2d4b207588504d519788d0",
+  "manifest": "blake3:4d2ecf789b336c10a89e13b92f0e49d8df0ab53357b02bfa1a1ad936e74a1fe0",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jinaai/jina-embeddings-v2-small-en",
+    "readme": "file:README.md@sha256:c0bcd337a0ae47078904dcd118edc17cb366722eef36bc3f37e50539aefc0c67",
+    "config": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace"
+  },
+  "summary": {
+    "value": "The easiest way to starting using jina-embeddings-v2-small-en is to use Jina AI's Embedding API.",
+    "source": "file:README.md@sha256:c0bcd337a0ae47078904dcd118edc17cb366722eef36bc3f37e50539aefc0c67"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 32690688,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-09-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 143,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 19717256,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 4,
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30528,
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:940582c6d428408d92d628b94541092e7ca9cbee6c3f147de54e9d4ddfe30ace#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MTEB AmazonCounterfactualClassification (en)",
+        "task": "accuracy",
+        "value": 71.35820895522387,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AmazonCounterfactualClassification (en)",
+        "task": "ap",
+        "value": 33.99931933598115,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AmazonCounterfactualClassification (en)",
+        "task": "f1",
+        "value": 65.3853685535555,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AmazonPolarityClassification",
+        "task": "accuracy",
+        "value": 82.90140000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AmazonPolarityClassification",
+        "task": "ap",
+        "value": 78.01434597815617,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AmazonPolarityClassification",
+        "task": "f1",
+        "value": 82.83357802722676,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AmazonReviewsClassification (en)",
+        "task": "accuracy",
+        "value": 40.88999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AmazonReviewsClassification (en)",
+        "task": "f1",
+        "value": 39.209432767163456,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "map_at_1",
+        "value": 23.257,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "map_at_10",
+        "value": 37.946000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "map_at_100",
+        "value": 39.17,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "map_at_1000",
+        "value": 39.181,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "map_at_3",
+        "value": 32.99,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "map_at_5",
+        "value": 35.467999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "mrr_at_1",
+        "value": 23.541999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "mrr_at_10",
+        "value": 38.057,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "mrr_at_100",
+        "value": 39.289,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "mrr_at_1000",
+        "value": 39.299,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "mrr_at_3",
+        "value": 33.096,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "mrr_at_5",
+        "value": 35.628,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "ndcg_at_1",
+        "value": 23.257,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "ndcg_at_10",
+        "value": 46.729,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "ndcg_at_100",
+        "value": 51.900999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "ndcg_at_1000",
+        "value": 52.16,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "ndcg_at_3",
+        "value": 36.323,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "ndcg_at_5",
+        "value": 40.766999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "precision_at_1",
+        "value": 23.257,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "precision_at_10",
+        "value": 7.510999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "precision_at_100",
+        "value": 0.976,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "precision_at_1000",
+        "value": 0.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "precision_at_3",
+        "value": 15.339,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "precision_at_5",
+        "value": 11.350999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "recall_at_1",
+        "value": 23.257,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "recall_at_10",
+        "value": 75.107,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "recall_at_100",
+        "value": 97.58200000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "recall_at_1000",
+        "value": 99.57300000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "recall_at_3",
+        "value": 46.017,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArguAna",
+        "task": "recall_at_5",
+        "value": 56.757000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArxivClusteringP2P",
+        "task": "v_measure",
+        "value": 44.02420878391967,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ArxivClusteringS2S",
+        "task": "v_measure",
+        "value": 35.16136856000258,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AskUbuntuDupQuestions",
+        "task": "map",
+        "value": 59.61809790513646,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB AskUbuntuDupQuestions",
+        "task": "mrr",
+        "value": 73.07215406938397,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BIOSSES",
+        "task": "cos_sim_pearson",
+        "value": 82.0167350090749,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BIOSSES",
+        "task": "cos_sim_spearman",
+        "value": 80.51569002630401,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BIOSSES",
+        "task": "euclidean_pearson",
+        "value": 81.46820525099726,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BIOSSES",
+        "task": "euclidean_spearman",
+        "value": 80.51569002630401,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BIOSSES",
+        "task": "manhattan_pearson",
+        "value": 81.35596555056757,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BIOSSES",
+        "task": "manhattan_spearman",
+        "value": 80.12592210903303,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Banking77Classification",
+        "task": "accuracy",
+        "value": 78.25,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Banking77Classification",
+        "task": "f1",
+        "value": 77.34950913540605,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BiorxivClusteringP2P",
+        "task": "v_measure",
+        "value": 35.57238596005698,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB BiorxivClusteringS2S",
+        "task": "v_measure",
+        "value": 29.066444306196683,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "map_at_1",
+        "value": 31.891000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "map_at_10",
+        "value": 42.772,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "map_at_100",
+        "value": 44.108999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "map_at_1000",
+        "value": 44.236,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "map_at_3",
+        "value": 39.289,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "map_at_5",
+        "value": 41.113,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "mrr_at_1",
+        "value": 39.342,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "mrr_at_10",
+        "value": 48.852000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "mrr_at_100",
+        "value": 49.534,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "mrr_at_1000",
+        "value": 49.582,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "mrr_at_3",
+        "value": 46.089999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "mrr_at_5",
+        "value": 47.685,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "ndcg_at_1",
+        "value": 39.342,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "ndcg_at_10",
+        "value": 48.988,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "ndcg_at_100",
+        "value": 53.854,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 55.955,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "ndcg_at_3",
+        "value": 43.877,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "ndcg_at_5",
+        "value": 46.027,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "precision_at_1",
+        "value": 39.342,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "precision_at_10",
+        "value": 9.285,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "precision_at_100",
+        "value": 1.488,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.194,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "precision_at_3",
+        "value": 20.696,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "precision_at_5",
+        "value": 14.878,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "recall_at_1",
+        "value": 31.891000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "recall_at_10",
+        "value": 60.608,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "recall_at_100",
+        "value": 81.025,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "recall_at_1000",
+        "value": 94.883,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "recall_at_3",
+        "value": 45.694,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackAndroidRetrieval",
+        "task": "recall_at_5",
+        "value": 51.684,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "map_at_1",
+        "value": 28.778,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "map_at_10",
+        "value": 37.632,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "map_at_100",
+        "value": 38.800000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "map_at_1000",
+        "value": 38.934999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "map_at_3",
+        "value": 35.293,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "map_at_5",
+        "value": 36.547000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "mrr_at_1",
+        "value": 35.35,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "mrr_at_10",
+        "value": 42.936,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "mrr_at_100",
+        "value": 43.69,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "mrr_at_1000",
+        "value": 43.739,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "mrr_at_3",
+        "value": 41.062,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "mrr_at_5",
+        "value": 42.097,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "ndcg_at_1",
+        "value": 35.35,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "ndcg_at_10",
+        "value": 42.528,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "ndcg_at_100",
+        "value": 46.983000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 49.187999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "ndcg_at_3",
+        "value": 39.271,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "ndcg_at_5",
+        "value": 40.654,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "precision_at_1",
+        "value": 35.35,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "precision_at_10",
+        "value": 7.828,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "precision_at_100",
+        "value": 1.3010000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.17700000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "precision_at_3",
+        "value": 18.96,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "precision_at_5",
+        "value": 13.120999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "recall_at_1",
+        "value": 28.778,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "recall_at_10",
+        "value": 50.775000000000006,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "recall_at_100",
+        "value": 69.66799999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "recall_at_1000",
+        "value": 83.638,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "recall_at_3",
+        "value": 40.757,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackEnglishRetrieval",
+        "task": "recall_at_5",
+        "value": 44.86,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "map_at_1",
+        "value": 37.584,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "map_at_10",
+        "value": 49.69,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "map_at_100",
+        "value": 50.639,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "map_at_1000",
+        "value": 50.702999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "map_at_3",
+        "value": 46.61,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "map_at_5",
+        "value": 48.486000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "mrr_at_1",
+        "value": 43.009,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "mrr_at_10",
+        "value": 52.949999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "mrr_at_100",
+        "value": 53.618,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "mrr_at_1000",
+        "value": 53.65299999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "mrr_at_3",
+        "value": 50.605999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "mrr_at_5",
+        "value": 52.095,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "ndcg_at_1",
+        "value": 43.009,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "ndcg_at_10",
+        "value": 55.278000000000006,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "ndcg_at_100",
+        "value": 59.134,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 60.528999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "ndcg_at_3",
+        "value": 50.184,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "ndcg_at_5",
+        "value": 52.919000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "precision_at_1",
+        "value": 43.009,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "precision_at_10",
+        "value": 8.821,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "precision_at_100",
+        "value": 1.161,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.133,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "precision_at_3",
+        "value": 22.424,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "precision_at_5",
+        "value": 15.436,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "recall_at_1",
+        "value": 37.584,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "recall_at_10",
+        "value": 68.514,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "recall_at_100",
+        "value": 85.099,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "recall_at_1000",
+        "value": 95.123,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "recall_at_3",
+        "value": 55.007,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGamingRetrieval",
+        "task": "recall_at_5",
+        "value": 61.714999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "map_at_1",
+        "value": 24.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "map_at_10",
+        "value": 32.804,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "map_at_100",
+        "value": 33.738,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "map_at_1000",
+        "value": 33.825,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "map_at_3",
+        "value": 30.639,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "map_at_5",
+        "value": 31.781,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "mrr_at_1",
+        "value": 26.328000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "mrr_at_10",
+        "value": 34.679,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "mrr_at_100",
+        "value": 35.510000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "mrr_at_1000",
+        "value": 35.577999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "mrr_at_3",
+        "value": 32.58,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "mrr_at_5",
+        "value": 33.687,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "ndcg_at_1",
+        "value": 26.328000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "ndcg_at_10",
+        "value": 37.313,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "ndcg_at_100",
+        "value": 42.004000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 44.232,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "ndcg_at_3",
+        "value": 33.076,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "ndcg_at_5",
+        "value": 34.966,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "precision_at_1",
+        "value": 26.328000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "precision_at_10",
+        "value": 5.627,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "precision_at_100",
+        "value": 0.8410000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.106,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "precision_at_3",
+        "value": 14.011000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "precision_at_5",
+        "value": 9.582,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "recall_at_1",
+        "value": 24.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "recall_at_10",
+        "value": 49.324,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "recall_at_100",
+        "value": 71.018,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "recall_at_1000",
+        "value": 87.905,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "recall_at_3",
+        "value": 37.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackGisRetrieval",
+        "task": "recall_at_5",
+        "value": 42.281,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "map_at_1",
+        "value": 14.350999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "map_at_10",
+        "value": 21.745,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "map_at_100",
+        "value": 22.731,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "map_at_1000",
+        "value": 22.852,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "map_at_3",
+        "value": 19.245,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "map_at_5",
+        "value": 20.788,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "mrr_at_1",
+        "value": 18.159,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "mrr_at_10",
+        "value": 25.833000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "mrr_at_100",
+        "value": 26.728,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "mrr_at_1000",
+        "value": 26.802,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "mrr_at_3",
+        "value": 23.383000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "mrr_at_5",
+        "value": 24.887999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "ndcg_at_1",
+        "value": 18.159,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "ndcg_at_10",
+        "value": 26.518000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "ndcg_at_100",
+        "value": 31.473000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 34.576,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "ndcg_at_3",
+        "value": 21.907,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "ndcg_at_5",
+        "value": 24.39,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "precision_at_1",
+        "value": 18.159,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "precision_at_10",
+        "value": 4.938,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "precision_at_100",
+        "value": 0.853,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.125,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "precision_at_3",
+        "value": 10.655000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "precision_at_5",
+        "value": 7.985,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "recall_at_1",
+        "value": 14.350999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "recall_at_10",
+        "value": 37.284,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "recall_at_100",
+        "value": 59.11300000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "recall_at_1000",
+        "value": 81.634,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "recall_at_3",
+        "value": 24.753,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackMathematicaRetrieval",
+        "task": "recall_at_5",
+        "value": 30.979,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "map_at_1",
+        "value": 26.978,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "map_at_10",
+        "value": 36.276,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "map_at_100",
+        "value": 37.547000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "map_at_1000",
+        "value": 37.678,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "map_at_3",
+        "value": 33.674,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "map_at_5",
+        "value": 35.119,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "mrr_at_1",
+        "value": 32.916000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "mrr_at_10",
+        "value": 41.798,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "mrr_at_100",
+        "value": 42.72,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "mrr_at_1000",
+        "value": 42.778,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "mrr_at_3",
+        "value": 39.493,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "mrr_at_5",
+        "value": 40.927,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "ndcg_at_1",
+        "value": 32.916000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "ndcg_at_10",
+        "value": 41.81,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "ndcg_at_100",
+        "value": 47.284,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 49.702,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "ndcg_at_3",
+        "value": 37.486999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "ndcg_at_5",
+        "value": 39.597,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "precision_at_1",
+        "value": 32.916000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "precision_at_10",
+        "value": 7.411,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "precision_at_100",
+        "value": 1.189,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.158,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "precision_at_3",
+        "value": 17.581,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "precision_at_5",
+        "value": 12.397,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "recall_at_1",
+        "value": 26.978,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "recall_at_10",
+        "value": 52.869,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "recall_at_100",
+        "value": 75.78399999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "recall_at_1000",
+        "value": 91.545,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "recall_at_3",
+        "value": 40.717,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackPhysicsRetrieval",
+        "task": "recall_at_5",
+        "value": 46.168,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "map_at_1",
+        "value": 24.641,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "map_at_10",
+        "value": 32.916000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "map_at_100",
+        "value": 34.165,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "map_at_1000",
+        "value": 34.286,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "map_at_3",
+        "value": 30.335,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "map_at_5",
+        "value": 31.569000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "mrr_at_1",
+        "value": 30.593999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "mrr_at_10",
+        "value": 38.448,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "mrr_at_100",
+        "value": 39.299,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "mrr_at_1000",
+        "value": 39.362,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "mrr_at_3",
+        "value": 36.244,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "mrr_at_5",
+        "value": 37.232,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "ndcg_at_1",
+        "value": 30.593999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "ndcg_at_10",
+        "value": 38.2,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "ndcg_at_100",
+        "value": 43.742,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 46.217000000000006,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "ndcg_at_3",
+        "value": 33.925,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "ndcg_at_5",
+        "value": 35.394,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "precision_at_1",
+        "value": 30.593999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "precision_at_10",
+        "value": 6.895,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "precision_at_100",
+        "value": 1.1320000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.153,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "precision_at_3",
+        "value": 16.096,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "precision_at_5",
+        "value": 11.05,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "recall_at_1",
+        "value": 24.641,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "recall_at_10",
+        "value": 48.588,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "recall_at_100",
+        "value": 72.841,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "recall_at_1000",
+        "value": 89.535,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "recall_at_3",
+        "value": 36.087,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackProgrammersRetrieval",
+        "task": "recall_at_5",
+        "value": 40.346,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "map_at_1",
+        "value": 24.79425,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "map_at_10",
+        "value": 33.12033333333333,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "map_at_100",
+        "value": 34.221333333333334,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "map_at_1000",
+        "value": 34.3435,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "map_at_3",
+        "value": 30.636583333333338,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "map_at_5",
+        "value": 31.974083333333326,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "mrr_at_1",
+        "value": 29.242416666666664,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "mrr_at_10",
+        "value": 37.11675,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "mrr_at_100",
+        "value": 37.93783333333334,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "mrr_at_1000",
+        "value": 38.003083333333336,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "mrr_at_3",
+        "value": 34.904666666666664,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "mrr_at_5",
+        "value": 36.12916666666667,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "ndcg_at_1",
+        "value": 29.242416666666664,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "ndcg_at_10",
+        "value": 38.03416666666667,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "ndcg_at_100",
+        "value": 42.86674999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 45.34550000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "ndcg_at_3",
+        "value": 33.76466666666666,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "ndcg_at_5",
+        "value": 35.668666666666674,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "precision_at_1",
+        "value": 29.242416666666664,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "precision_at_10",
+        "value": 6.589833333333334,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "precision_at_100",
+        "value": 1.0693333333333332,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.14641666666666667,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "precision_at_3",
+        "value": 15.430749999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "precision_at_5",
+        "value": 10.833833333333333,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "recall_at_1",
+        "value": 24.79425,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "recall_at_10",
+        "value": 48.582916666666655,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "recall_at_100",
+        "value": 69.88499999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "recall_at_1000",
+        "value": 87.211,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "recall_at_3",
+        "value": 36.625499999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackRetrieval",
+        "task": "recall_at_5",
+        "value": 41.553999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "map_at_1",
+        "value": 22.767,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "map_at_10",
+        "value": 28.450999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "map_at_100",
+        "value": 29.332,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "map_at_1000",
+        "value": 29.426000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "map_at_3",
+        "value": 26.379,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "map_at_5",
+        "value": 27.584999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "mrr_at_1",
+        "value": 25.46,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "mrr_at_10",
+        "value": 30.974,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "mrr_at_100",
+        "value": 31.784000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "mrr_at_1000",
+        "value": 31.857999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "mrr_at_3",
+        "value": 28.962,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "mrr_at_5",
+        "value": 30.066,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "ndcg_at_1",
+        "value": 25.46,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "ndcg_at_10",
+        "value": 32.041,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "ndcg_at_100",
+        "value": 36.522,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 39.101,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "ndcg_at_3",
+        "value": 28.152,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "ndcg_at_5",
+        "value": 30.03,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "precision_at_1",
+        "value": 25.46,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "precision_at_10",
+        "value": 4.893,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "precision_at_100",
+        "value": 0.77,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.107,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "precision_at_3",
+        "value": 11.605,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "precision_at_5",
+        "value": 8.19,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "recall_at_1",
+        "value": 22.767,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "recall_at_10",
+        "value": 40.71,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "recall_at_100",
+        "value": 61.334999999999994,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "recall_at_1000",
+        "value": 80.567,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "recall_at_3",
+        "value": 30.198000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackStatsRetrieval",
+        "task": "recall_at_5",
+        "value": 34.803,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "map_at_1",
+        "value": 16.722,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "map_at_10",
+        "value": 22.794,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "map_at_100",
+        "value": 23.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "map_at_1000",
+        "value": 23.822,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "map_at_3",
+        "value": 20.781,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "map_at_5",
+        "value": 22.024,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "mrr_at_1",
+        "value": 20.061999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "mrr_at_10",
+        "value": 26.346999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "mrr_at_100",
+        "value": 27.153,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "mrr_at_1000",
+        "value": 27.233,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "mrr_at_3",
+        "value": 24.375,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "mrr_at_5",
+        "value": 25.593,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "ndcg_at_1",
+        "value": 20.061999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "ndcg_at_10",
+        "value": 26.785999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "ndcg_at_100",
+        "value": 31.319999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 34.346,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "ndcg_at_3",
+        "value": 23.219,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "ndcg_at_5",
+        "value": 25.107000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "precision_at_1",
+        "value": 20.061999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "precision_at_10",
+        "value": 4.78,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "precision_at_100",
+        "value": 0.83,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.125,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "precision_at_3",
+        "value": 10.874,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "precision_at_5",
+        "value": 7.956,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "recall_at_1",
+        "value": 16.722,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "recall_at_10",
+        "value": 35.204,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "recall_at_100",
+        "value": 55.797,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "recall_at_1000",
+        "value": 77.689,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "recall_at_3",
+        "value": 25.245,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackTexRetrieval",
+        "task": "recall_at_5",
+        "value": 30.115,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "map_at_1",
+        "value": 24.842,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "map_at_10",
+        "value": 32.917,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "map_at_100",
+        "value": 33.961000000000006,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "map_at_1000",
+        "value": 34.069,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "map_at_3",
+        "value": 30.595,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "map_at_5",
+        "value": 31.837,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "mrr_at_1",
+        "value": 29.011,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "mrr_at_10",
+        "value": 36.977,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "mrr_at_100",
+        "value": 37.814,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "mrr_at_1000",
+        "value": 37.885999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "mrr_at_3",
+        "value": 34.966,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "mrr_at_5",
+        "value": 36.043,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "ndcg_at_1",
+        "value": 29.011,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "ndcg_at_10",
+        "value": 37.735,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "ndcg_at_100",
+        "value": 42.683,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 45.198,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "ndcg_at_3",
+        "value": 33.650000000000006,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "ndcg_at_5",
+        "value": 35.386,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "precision_at_1",
+        "value": 29.011,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "precision_at_10",
+        "value": 6.259,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "precision_at_100",
+        "value": 0.984,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.13,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "precision_at_3",
+        "value": 15.329999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "precision_at_5",
+        "value": 10.541,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "recall_at_1",
+        "value": 24.842,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "recall_at_10",
+        "value": 48.304,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "recall_at_100",
+        "value": 70.04899999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "recall_at_1000",
+        "value": 87.82600000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "recall_at_3",
+        "value": 36.922,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackUnixRetrieval",
+        "task": "recall_at_5",
+        "value": 41.449999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "map_at_1",
+        "value": 24.252000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "map_at_10",
+        "value": 32.293,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "map_at_100",
+        "value": 33.816,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "map_at_1000",
+        "value": 34.053,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "map_at_3",
+        "value": 29.781999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "map_at_5",
+        "value": 31.008000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "mrr_at_1",
+        "value": 29.051,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "mrr_at_10",
+        "value": 36.722,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "mrr_at_100",
+        "value": 37.663000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "mrr_at_1000",
+        "value": 37.734,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "mrr_at_3",
+        "value": 34.354,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "mrr_at_5",
+        "value": 35.609,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "ndcg_at_1",
+        "value": 29.051,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "ndcg_at_10",
+        "value": 37.775999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "ndcg_at_100",
+        "value": 43.221,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 46.116,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "ndcg_at_3",
+        "value": 33.403,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "ndcg_at_5",
+        "value": 35.118,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "precision_at_1",
+        "value": 29.051,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "precision_at_10",
+        "value": 7.332,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "precision_at_100",
+        "value": 1.49,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.23600000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "precision_at_3",
+        "value": 15.415000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "precision_at_5",
+        "value": 11.107,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "recall_at_1",
+        "value": 24.252000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "recall_at_10",
+        "value": 47.861,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "recall_at_100",
+        "value": 72.21600000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "recall_at_1000",
+        "value": 90.886,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "recall_at_3",
+        "value": 35.533,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWebmastersRetrieval",
+        "task": "recall_at_5",
+        "value": 39.959,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "map_at_1",
+        "value": 20.025000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "map_at_10",
+        "value": 27.154,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "map_at_100",
+        "value": 28.118,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "map_at_1000",
+        "value": 28.237000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "map_at_3",
+        "value": 25.017,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "map_at_5",
+        "value": 25.832,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "mrr_at_1",
+        "value": 21.627,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "mrr_at_10",
+        "value": 28.884999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "mrr_at_100",
+        "value": 29.741,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "mrr_at_1000",
+        "value": 29.831999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "mrr_at_3",
+        "value": 26.741,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "mrr_at_5",
+        "value": 27.628000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "ndcg_at_1",
+        "value": 21.627,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "ndcg_at_10",
+        "value": 31.436999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "ndcg_at_100",
+        "value": 36.181000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 38.986,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "ndcg_at_3",
+        "value": 27.025,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "ndcg_at_5",
+        "value": 28.436,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "precision_at_1",
+        "value": 21.627,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "precision_at_10",
+        "value": 5.009,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "precision_at_100",
+        "value": 0.7929999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.11299999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "precision_at_3",
+        "value": 11.522,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "precision_at_5",
+        "value": 7.763000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "recall_at_1",
+        "value": 20.025000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "recall_at_10",
+        "value": 42.954,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "recall_at_100",
+        "value": 64.67500000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "recall_at_1000",
+        "value": 85.301,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "recall_at_3",
+        "value": 30.892999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CQADupstackWordpressRetrieval",
+        "task": "recall_at_5",
+        "value": 34.288000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "map_at_1",
+        "value": 10.079,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "map_at_10",
+        "value": 16.930999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "map_at_100",
+        "value": 18.398999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "map_at_1000",
+        "value": 18.561,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "map_at_3",
+        "value": 14.294,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "map_at_5",
+        "value": 15.579,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "mrr_at_1",
+        "value": 22.606,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "mrr_at_10",
+        "value": 32.513,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "mrr_at_100",
+        "value": 33.463,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "mrr_at_1000",
+        "value": 33.513999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "mrr_at_3",
+        "value": 29.479,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "mrr_at_5",
+        "value": 31.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "ndcg_at_1",
+        "value": 22.606,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "ndcg_at_10",
+        "value": 24.053,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "ndcg_at_100",
+        "value": 30.258000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "ndcg_at_1000",
+        "value": 33.516,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "ndcg_at_3",
+        "value": 19.721,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "ndcg_at_5",
+        "value": 21.144,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "precision_at_1",
+        "value": 22.606,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "precision_at_10",
+        "value": 7.55,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "precision_at_100",
+        "value": 1.399,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "precision_at_1000",
+        "value": 0.2,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "precision_at_3",
+        "value": 14.701,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "precision_at_5",
+        "value": 11.192,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "recall_at_1",
+        "value": 10.079,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "recall_at_10",
+        "value": 28.970000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "recall_at_100",
+        "value": 50.805,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "recall_at_1000",
+        "value": 69.378,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "recall_at_3",
+        "value": 18.199,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ClimateFEVER",
+        "task": "recall_at_5",
+        "value": 22.442,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "map_at_1",
+        "value": 7.794,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "map_at_10",
+        "value": 15.165999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "map_at_100",
+        "value": 20.508000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "map_at_1000",
+        "value": 21.809,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "map_at_3",
+        "value": 11.568000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "map_at_5",
+        "value": 13.059000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "mrr_at_1",
+        "value": 56.49999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "mrr_at_10",
+        "value": 65.90899999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "mrr_at_100",
+        "value": 66.352,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "mrr_at_1000",
+        "value": 66.369,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "mrr_at_3",
+        "value": 64,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "mrr_at_5",
+        "value": 65.10000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "ndcg_at_1",
+        "value": 44.25,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "ndcg_at_10",
+        "value": 32.649,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "ndcg_at_100",
+        "value": 36.668,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "ndcg_at_1000",
+        "value": 43.918,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "ndcg_at_3",
+        "value": 37.096000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "ndcg_at_5",
+        "value": 34.048,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "precision_at_1",
+        "value": 56.49999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "precision_at_10",
+        "value": 25.45,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "precision_at_100",
+        "value": 8.055,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "precision_at_1000",
+        "value": 1.7489999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "precision_at_3",
+        "value": 41,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "precision_at_5",
+        "value": 32.85,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "recall_at_1",
+        "value": 7.794,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "recall_at_10",
+        "value": 20.101,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "recall_at_100",
+        "value": 42.448,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "recall_at_1000",
+        "value": 65.88000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "recall_at_3",
+        "value": 12.753,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB DBPedia",
+        "task": "recall_at_5",
+        "value": 15.307,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB EmotionClassification",
+        "task": "accuracy",
+        "value": 44.01,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB EmotionClassification",
+        "task": "f1",
+        "value": 38.659680951114964,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "map_at_1",
+        "value": 49.713,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "map_at_10",
+        "value": 61.79,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "map_at_100",
+        "value": 62.28,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "map_at_1000",
+        "value": 62.297000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "map_at_3",
+        "value": 59.361,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "map_at_5",
+        "value": 60.92100000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "mrr_at_1",
+        "value": 53.405,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "mrr_at_10",
+        "value": 65.79899999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "mrr_at_100",
+        "value": 66.219,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "mrr_at_1000",
+        "value": 66.227,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "mrr_at_3",
+        "value": 63.431000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "mrr_at_5",
+        "value": 64.98,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "ndcg_at_1",
+        "value": 53.405,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "ndcg_at_10",
+        "value": 68.01899999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "ndcg_at_100",
+        "value": 70.197,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "ndcg_at_1000",
+        "value": 70.571,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "ndcg_at_3",
+        "value": 63.352,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "ndcg_at_5",
+        "value": 66.018,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "precision_at_1",
+        "value": 53.405,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "precision_at_10",
+        "value": 9.119,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "precision_at_100",
+        "value": 1.03,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "precision_at_1000",
+        "value": 0.107,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "precision_at_3",
+        "value": 25.602999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "precision_at_5",
+        "value": 16.835,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "recall_at_1",
+        "value": 49.713,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "recall_at_10",
+        "value": 83.306,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "recall_at_100",
+        "value": 92.92,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "recall_at_1000",
+        "value": 95.577,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "recall_at_3",
+        "value": 70.798,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FEVER",
+        "task": "recall_at_5",
+        "value": 77.254,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "map_at_1",
+        "value": 15.310000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "map_at_10",
+        "value": 26.204,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "map_at_100",
+        "value": 27.932000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "map_at_1000",
+        "value": 28.121000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "map_at_3",
+        "value": 22.481,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "map_at_5",
+        "value": 24.678,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "mrr_at_1",
+        "value": 29.784,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "mrr_at_10",
+        "value": 39.582,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "mrr_at_100",
+        "value": 40.52,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "mrr_at_1000",
+        "value": 40.568,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "mrr_at_3",
+        "value": 37.114000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "mrr_at_5",
+        "value": 38.596000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "ndcg_at_1",
+        "value": 29.784,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "ndcg_at_10",
+        "value": 33.432,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "ndcg_at_100",
+        "value": 40.281,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "ndcg_at_1000",
+        "value": 43.653999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "ndcg_at_3",
+        "value": 29.612,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "ndcg_at_5",
+        "value": 31.223,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "precision_at_1",
+        "value": 29.784,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "precision_at_10",
+        "value": 9.645,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "precision_at_100",
+        "value": 1.645,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "precision_at_1000",
+        "value": 0.22499999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "precision_at_3",
+        "value": 20.165,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "precision_at_5",
+        "value": 15.401000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "recall_at_1",
+        "value": 15.310000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "recall_at_10",
+        "value": 40.499,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "recall_at_100",
+        "value": 66.643,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "recall_at_1000",
+        "value": 87.059,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "recall_at_3",
+        "value": 27.492,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB FiQA2018",
+        "task": "recall_at_5",
+        "value": 33.748,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "map_at_1",
+        "value": 33.599000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "map_at_10",
+        "value": 47.347,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "map_at_100",
+        "value": 48.191,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "map_at_1000",
+        "value": 48.263,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "map_at_3",
+        "value": 44.698,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "map_at_5",
+        "value": 46.278999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "mrr_at_1",
+        "value": 67.19800000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "mrr_at_10",
+        "value": 74.054,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "mrr_at_100",
+        "value": 74.376,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "mrr_at_1000",
+        "value": 74.392,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "mrr_at_3",
+        "value": 72.849,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "mrr_at_5",
+        "value": 73.643,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "ndcg_at_1",
+        "value": 67.19800000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "ndcg_at_10",
+        "value": 56.482,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "ndcg_at_100",
+        "value": 59.694,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "ndcg_at_1000",
+        "value": 61.204,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "ndcg_at_3",
+        "value": 52.43299999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "ndcg_at_5",
+        "value": 54.608000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "precision_at_1",
+        "value": 67.19800000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "precision_at_10",
+        "value": 11.613999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "precision_at_100",
+        "value": 1.415,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "precision_at_1000",
+        "value": 0.16199999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "precision_at_3",
+        "value": 32.726,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "precision_at_5",
+        "value": 21.349999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "recall_at_1",
+        "value": 33.599000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "recall_at_10",
+        "value": 58.069,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "recall_at_100",
+        "value": 70.736,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "recall_at_1000",
+        "value": 80.804,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "recall_at_3",
+        "value": 49.088,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB HotpotQA",
+        "task": "recall_at_5",
+        "value": 53.376000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ImdbClassification",
+        "task": "accuracy",
+        "value": 73.64359999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ImdbClassification",
+        "task": "ap",
+        "value": 67.54685976014599,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ImdbClassification",
+        "task": "f1",
+        "value": 73.55148707559482,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "map_at_1",
+        "value": 19.502,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "map_at_10",
+        "value": 30.816,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "map_at_100",
+        "value": 32.007999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "map_at_1000",
+        "value": 32.067,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "map_at_3",
+        "value": 27.215,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "map_at_5",
+        "value": 29.304000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "mrr_at_1",
+        "value": 20.072000000000003,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "mrr_at_10",
+        "value": 31.406,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "mrr_at_100",
+        "value": 32.549,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "mrr_at_1000",
+        "value": 32.602,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "mrr_at_3",
+        "value": 27.839000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "mrr_at_5",
+        "value": 29.926000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "ndcg_at_1",
+        "value": 20.086000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "ndcg_at_10",
+        "value": 37.282,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "ndcg_at_100",
+        "value": 43.206,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "ndcg_at_1000",
+        "value": 44.690000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "ndcg_at_3",
+        "value": 29.932,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "ndcg_at_5",
+        "value": 33.668,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "precision_at_1",
+        "value": 20.086000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "precision_at_10",
+        "value": 5.961,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "precision_at_100",
+        "value": 0.898,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "precision_at_1000",
+        "value": 0.10200000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "precision_at_3",
+        "value": 12.856000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "precision_at_5",
+        "value": 9.596,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "recall_at_1",
+        "value": 19.502,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "recall_at_10",
+        "value": 57.182,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "recall_at_100",
+        "value": 84.952,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "recall_at_1000",
+        "value": 96.34700000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "recall_at_3",
+        "value": 37.193,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MSMARCO",
+        "task": "recall_at_5",
+        "value": 46.157,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MTOPDomainClassification (en)",
+        "task": "accuracy",
+        "value": 93.96488828089375,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MTOPDomainClassification (en)",
+        "task": "f1",
+        "value": 93.32119260543482,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MTOPIntentClassification (en)",
+        "task": "accuracy",
+        "value": 72.4965800273598,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MTOPIntentClassification (en)",
+        "task": "f1",
+        "value": 49.34896217536082,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MassiveIntentClassification (en)",
+        "task": "accuracy",
+        "value": 67.60928043039678,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MassiveIntentClassification (en)",
+        "task": "f1",
+        "value": 64.34244712074538,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MassiveScenarioClassification (en)",
+        "task": "accuracy",
+        "value": 69.75453934095493,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MassiveScenarioClassification (en)",
+        "task": "f1",
+        "value": 68.39224867489249,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MedrxivClusteringP2P",
+        "task": "v_measure",
+        "value": 31.862573504920082,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MedrxivClusteringS2S",
+        "task": "v_measure",
+        "value": 27.511123551196803,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MindSmallReranking",
+        "task": "map",
+        "value": 30.99145104942086,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MindSmallReranking",
+        "task": "mrr",
+        "value": 32.03606480418627,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "map_at_1",
+        "value": 5.015,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "map_at_10",
+        "value": 11.054,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "map_at_100",
+        "value": 13.773,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "map_at_1000",
+        "value": 15.082999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "map_at_3",
+        "value": 8.253,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "map_at_5",
+        "value": 9.508999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "mrr_at_1",
+        "value": 42.105,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "mrr_at_10",
+        "value": 50.44499999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "mrr_at_100",
+        "value": 51.080000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "mrr_at_1000",
+        "value": 51.129999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "mrr_at_3",
+        "value": 48.555,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "mrr_at_5",
+        "value": 49.84,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "ndcg_at_1",
+        "value": 40.402,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "ndcg_at_10",
+        "value": 30.403000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "ndcg_at_100",
+        "value": 28.216,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "ndcg_at_1000",
+        "value": 37.021,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "ndcg_at_3",
+        "value": 35.53,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "ndcg_at_5",
+        "value": 33.202999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "precision_at_1",
+        "value": 42.105,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "precision_at_10",
+        "value": 22.353,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "precision_at_100",
+        "value": 7.266,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "precision_at_1000",
+        "value": 2.011,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "precision_at_3",
+        "value": 32.921,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "precision_at_5",
+        "value": 28.297,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "recall_at_1",
+        "value": 5.015,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "recall_at_10",
+        "value": 14.393,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "recall_at_100",
+        "value": 28.893,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "recall_at_1000",
+        "value": 60.18,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "recall_at_3",
+        "value": 9.184000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NFCorpus",
+        "task": "recall_at_5",
+        "value": 11.39,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "map_at_1",
+        "value": 29.524,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "map_at_10",
+        "value": 44.182,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "map_at_100",
+        "value": 45.228,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "map_at_1000",
+        "value": 45.265,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "map_at_3",
+        "value": 39.978,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "map_at_5",
+        "value": 42.482,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "mrr_at_1",
+        "value": 33.256,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "mrr_at_10",
+        "value": 46.661,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "mrr_at_100",
+        "value": 47.47,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "mrr_at_1000",
+        "value": 47.496,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "mrr_at_3",
+        "value": 43.187999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "mrr_at_5",
+        "value": 45.330999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "ndcg_at_1",
+        "value": 33.227000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "ndcg_at_10",
+        "value": 51.589,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "ndcg_at_100",
+        "value": 56.043,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "ndcg_at_1000",
+        "value": 56.937000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "ndcg_at_3",
+        "value": 43.751,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "ndcg_at_5",
+        "value": 47.937000000000005,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "precision_at_1",
+        "value": 33.227000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "precision_at_10",
+        "value": 8.556999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "precision_at_100",
+        "value": 1.103,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "precision_at_1000",
+        "value": 0.11900000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "precision_at_3",
+        "value": 19.921,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "precision_at_5",
+        "value": 14.396999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "recall_at_1",
+        "value": 29.524,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "recall_at_10",
+        "value": 71.615,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "recall_at_100",
+        "value": 91.056,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "recall_at_1000",
+        "value": 97.72800000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "recall_at_3",
+        "value": 51.451,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB NQ",
+        "task": "recall_at_5",
+        "value": 61.119,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "map_at_1",
+        "value": 69.596,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "map_at_10",
+        "value": 83.281,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "map_at_100",
+        "value": 83.952,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "map_at_1000",
+        "value": 83.97200000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "map_at_3",
+        "value": 80.315,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "map_at_5",
+        "value": 82.223,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "mrr_at_1",
+        "value": 80.17,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "mrr_at_10",
+        "value": 86.522,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "mrr_at_100",
+        "value": 86.644,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "mrr_at_1000",
+        "value": 86.64500000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "mrr_at_3",
+        "value": 85.438,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "mrr_at_5",
+        "value": 86.21799999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "ndcg_at_1",
+        "value": 80.19,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "ndcg_at_10",
+        "value": 87.19,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "ndcg_at_100",
+        "value": 88.567,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "ndcg_at_1000",
+        "value": 88.70400000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "ndcg_at_3",
+        "value": 84.17999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "ndcg_at_5",
+        "value": 85.931,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "precision_at_1",
+        "value": 80.19,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "precision_at_10",
+        "value": 13.209000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "precision_at_100",
+        "value": 1.518,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "precision_at_1000",
+        "value": 0.157,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "precision_at_3",
+        "value": 36.717,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "precision_at_5",
+        "value": 24.248,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "recall_at_1",
+        "value": 69.596,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "recall_at_10",
+        "value": 94.533,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "recall_at_100",
+        "value": 99.322,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "recall_at_1000",
+        "value": 99.965,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "recall_at_3",
+        "value": 85.911,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB QuoraRetrieval",
+        "task": "recall_at_5",
+        "value": 90.809,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB RedditClustering",
+        "task": "v_measure",
+        "value": 49.27650627571912,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB RedditClusteringP2P",
+        "task": "v_measure",
+        "value": 57.08550946534183,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "map_at_1",
+        "value": 4.568,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "map_at_10",
+        "value": 10.862,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "map_at_100",
+        "value": 12.757,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "map_at_1000",
+        "value": 13.031,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "map_at_3",
+        "value": 7.960000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "map_at_5",
+        "value": 9.337,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "mrr_at_1",
+        "value": 22.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "mrr_at_10",
+        "value": 32.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "mrr_at_100",
+        "value": 33.603,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "mrr_at_1000",
+        "value": 33.672000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "mrr_at_3",
+        "value": 29.299999999999997,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "mrr_at_5",
+        "value": 31.25,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "ndcg_at_1",
+        "value": 22.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "ndcg_at_10",
+        "value": 18.605,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "ndcg_at_100",
+        "value": 26.029999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "ndcg_at_1000",
+        "value": 31.256,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "ndcg_at_3",
+        "value": 17.873,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "ndcg_at_5",
+        "value": 15.511,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "precision_at_1",
+        "value": 22.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "precision_at_10",
+        "value": 9.58,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "precision_at_100",
+        "value": 2.033,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "precision_at_1000",
+        "value": 0.33,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "precision_at_3",
+        "value": 16.633,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "precision_at_5",
+        "value": 13.54,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "recall_at_1",
+        "value": 4.568,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "recall_at_10",
+        "value": 19.402,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "recall_at_100",
+        "value": 41.277,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "recall_at_1000",
+        "value": 66.963,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "recall_at_3",
+        "value": 10.112,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SCIDOCS",
+        "task": "recall_at_5",
+        "value": 13.712,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SICK-R",
+        "task": "cos_sim_pearson",
+        "value": 83.31992291680787,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SICK-R",
+        "task": "cos_sim_spearman",
+        "value": 76.7212346922664,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SICK-R",
+        "task": "euclidean_pearson",
+        "value": 80.42189271706478,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SICK-R",
+        "task": "euclidean_spearman",
+        "value": 76.7212342532493,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SICK-R",
+        "task": "manhattan_pearson",
+        "value": 80.33171093031578,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SICK-R",
+        "task": "manhattan_spearman",
+        "value": 76.63192883074694,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS12",
+        "task": "cos_sim_pearson",
+        "value": 83.16654278886763,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS12",
+        "task": "cos_sim_spearman",
+        "value": 73.66390263429565,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS12",
+        "task": "euclidean_pearson",
+        "value": 79.7485360086639,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS12",
+        "task": "euclidean_spearman",
+        "value": 73.66389870373436,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS12",
+        "task": "manhattan_pearson",
+        "value": 79.73652237443706,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS12",
+        "task": "manhattan_spearman",
+        "value": 73.65296117151647,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS13",
+        "task": "cos_sim_pearson",
+        "value": 82.40389689929246,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS13",
+        "task": "cos_sim_spearman",
+        "value": 83.29727595993955,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS13",
+        "task": "euclidean_pearson",
+        "value": 82.23970587854079,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS13",
+        "task": "euclidean_spearman",
+        "value": 83.29727595993955,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS13",
+        "task": "manhattan_pearson",
+        "value": 82.18823600831897,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS13",
+        "task": "manhattan_spearman",
+        "value": 83.20746192209594,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS14",
+        "task": "cos_sim_pearson",
+        "value": 81.73505246913413,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS14",
+        "task": "cos_sim_spearman",
+        "value": 79.1686548248754,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS14",
+        "task": "euclidean_pearson",
+        "value": 80.48889135993412,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS14",
+        "task": "euclidean_spearman",
+        "value": 79.16864112930354,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS14",
+        "task": "manhattan_pearson",
+        "value": 80.40720651057302,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS14",
+        "task": "manhattan_spearman",
+        "value": 79.0640155089286,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS15",
+        "task": "cos_sim_pearson",
+        "value": 86.3953512879065,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS15",
+        "task": "cos_sim_spearman",
+        "value": 87.29947322714338,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS15",
+        "task": "euclidean_pearson",
+        "value": 86.59759438529645,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS15",
+        "task": "euclidean_spearman",
+        "value": 87.29947511092824,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS15",
+        "task": "manhattan_pearson",
+        "value": 86.52097806169155,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS15",
+        "task": "manhattan_spearman",
+        "value": 87.22987242146534,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS16",
+        "task": "cos_sim_pearson",
+        "value": 82.48565753792056,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS16",
+        "task": "cos_sim_spearman",
+        "value": 83.6049720319893,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS16",
+        "task": "euclidean_pearson",
+        "value": 82.56452023172913,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS16",
+        "task": "euclidean_spearman",
+        "value": 83.60490168191697,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS16",
+        "task": "manhattan_pearson",
+        "value": 82.58079941137872,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS16",
+        "task": "manhattan_spearman",
+        "value": 83.60975807374051,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS17 (en-en)",
+        "task": "cos_sim_pearson",
+        "value": 88.18239976618212,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS17 (en-en)",
+        "task": "cos_sim_spearman",
+        "value": 88.23061724730616,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS17 (en-en)",
+        "task": "euclidean_pearson",
+        "value": 87.78482472776658,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS17 (en-en)",
+        "task": "euclidean_spearman",
+        "value": 88.23061724730616,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS17 (en-en)",
+        "task": "manhattan_pearson",
+        "value": 87.75059641730239,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS17 (en-en)",
+        "task": "manhattan_spearman",
+        "value": 88.22527413524622,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS22 (en)",
+        "task": "cos_sim_pearson",
+        "value": 63.42816418706765,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS22 (en)",
+        "task": "cos_sim_spearman",
+        "value": 63.4569864520124,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS22 (en)",
+        "task": "euclidean_pearson",
+        "value": 64.35405409953853,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS22 (en)",
+        "task": "euclidean_spearman",
+        "value": 63.4569864520124,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS22 (en)",
+        "task": "manhattan_pearson",
+        "value": 63.96649236073056,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STS22 (en)",
+        "task": "manhattan_spearman",
+        "value": 63.01448583722708,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STSBenchmark",
+        "task": "cos_sim_pearson",
+        "value": 83.41659638047614,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STSBenchmark",
+        "task": "cos_sim_spearman",
+        "value": 84.03893866106175,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STSBenchmark",
+        "task": "euclidean_pearson",
+        "value": 84.2251203953798,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STSBenchmark",
+        "task": "euclidean_spearman",
+        "value": 84.03893866106175,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STSBenchmark",
+        "task": "manhattan_pearson",
+        "value": 84.22733643205514,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB STSBenchmark",
+        "task": "manhattan_spearman",
+        "value": 84.06504411263612,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciDocsRR",
+        "task": "map",
+        "value": 79.75608022582414,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciDocsRR",
+        "task": "mrr",
+        "value": 94.0947732369301,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "map_at_1",
+        "value": 50.161,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "map_at_10",
+        "value": 59.458999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "map_at_100",
+        "value": 60.156,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "map_at_1000",
+        "value": 60.194,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "map_at_3",
+        "value": 56.45400000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "map_at_5",
+        "value": 58.165,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "mrr_at_1",
+        "value": 53.333,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "mrr_at_10",
+        "value": 61.050000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "mrr_at_100",
+        "value": 61.586,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "mrr_at_1000",
+        "value": 61.624,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "mrr_at_3",
+        "value": 58.889,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "mrr_at_5",
+        "value": 60.122,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "ndcg_at_1",
+        "value": 53.333,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "ndcg_at_10",
+        "value": 63.888999999999996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "ndcg_at_100",
+        "value": 66.963,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "ndcg_at_1000",
+        "value": 68.062,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "ndcg_at_3",
+        "value": 59.01,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "ndcg_at_5",
+        "value": 61.373999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "precision_at_1",
+        "value": 53.333,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "precision_at_10",
+        "value": 8.633000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "precision_at_100",
+        "value": 1.027,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "precision_at_1000",
+        "value": 0.11199999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "precision_at_3",
+        "value": 23.111,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "precision_at_5",
+        "value": 15.467,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "recall_at_1",
+        "value": 50.161,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "recall_at_10",
+        "value": 75.922,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "recall_at_100",
+        "value": 90,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "recall_at_1000",
+        "value": 98.667,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "recall_at_3",
+        "value": 62.90599999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SciFact",
+        "task": "recall_at_5",
+        "value": 68.828,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "cos_sim_accuracy",
+        "value": 99.81188118811882,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "cos_sim_ap",
+        "value": 95.11619225962413,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "cos_sim_f1",
+        "value": 90.35840484603736,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "cos_sim_precision",
+        "value": 91.23343527013252,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "cos_sim_recall",
+        "value": 89.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "dot_accuracy",
+        "value": 99.81188118811882,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "dot_ap",
+        "value": 95.11619225962413,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "dot_f1",
+        "value": 90.35840484603736,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "dot_precision",
+        "value": 91.23343527013252,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "dot_recall",
+        "value": 89.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "euclidean_accuracy",
+        "value": 99.81188118811882,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "euclidean_ap",
+        "value": 95.11619225962413,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "euclidean_f1",
+        "value": 90.35840484603736,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "euclidean_precision",
+        "value": 91.23343527013252,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "euclidean_recall",
+        "value": 89.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "manhattan_accuracy",
+        "value": 99.80891089108911,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "manhattan_ap",
+        "value": 95.07294266220966,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "manhattan_f1",
+        "value": 90.21794221996959,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "manhattan_precision",
+        "value": 91.46968139773895,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "manhattan_recall",
+        "value": 89,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "max_accuracy",
+        "value": 99.81188118811882,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "max_ap",
+        "value": 95.11619225962413,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SprintDuplicateQuestions",
+        "task": "max_f1",
+        "value": 90.35840484603736,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB StackExchangeClustering",
+        "task": "v_measure",
+        "value": 55.3481874105239,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB StackExchangeClusteringP2P",
+        "task": "v_measure",
+        "value": 34.421291695525,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB StackOverflowDupQuestions",
+        "task": "map",
+        "value": 49.98746633276634,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB StackOverflowDupQuestions",
+        "task": "mrr",
+        "value": 50.63143249724133,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SummEval",
+        "task": "cos_sim_pearson",
+        "value": 31.009961979844036,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SummEval",
+        "task": "cos_sim_spearman",
+        "value": 30.558416108881044,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SummEval",
+        "task": "dot_pearson",
+        "value": 31.009964941134253,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB SummEval",
+        "task": "dot_spearman",
+        "value": 30.545760761761393,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "map_at_1",
+        "value": 0.207,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "map_at_10",
+        "value": 1.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "map_at_100",
+        "value": 8.594,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "map_at_1000",
+        "value": 20.213,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "map_at_3",
+        "value": 0.585,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "map_at_5",
+        "value": 0.9039999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "mrr_at_1",
+        "value": 78,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "mrr_at_10",
+        "value": 87.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "mrr_at_100",
+        "value": 87.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "mrr_at_1000",
+        "value": 87.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "mrr_at_3",
+        "value": 86.667,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "mrr_at_5",
+        "value": 87.06700000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "ndcg_at_1",
+        "value": 73,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "ndcg_at_10",
+        "value": 65.18,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "ndcg_at_100",
+        "value": 49.631,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "ndcg_at_1000",
+        "value": 43.498999999999995,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "ndcg_at_3",
+        "value": 71.83800000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "ndcg_at_5",
+        "value": 69.271,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "precision_at_1",
+        "value": 78,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "precision_at_10",
+        "value": 69.19999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "precision_at_100",
+        "value": 50.980000000000004,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "precision_at_1000",
+        "value": 19.426,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "precision_at_3",
+        "value": 77.333,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "precision_at_5",
+        "value": 74,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "recall_at_1",
+        "value": 0.207,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "recall_at_10",
+        "value": 1.822,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "recall_at_100",
+        "value": 11.849,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "recall_at_1000",
+        "value": 40.492,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "recall_at_3",
+        "value": 0.622,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TRECCOVID",
+        "task": "recall_at_5",
+        "value": 0.9809999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "map_at_1",
+        "value": 2.001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "map_at_10",
+        "value": 10.376000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "map_at_100",
+        "value": 16.936999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "map_at_1000",
+        "value": 18.615000000000002,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "map_at_3",
+        "value": 5.335999999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "map_at_5",
+        "value": 7.374,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "mrr_at_1",
+        "value": 20.408,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "mrr_at_10",
+        "value": 38.29,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "mrr_at_100",
+        "value": 39.33,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "mrr_at_1000",
+        "value": 39.347,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "mrr_at_3",
+        "value": 32.993,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "mrr_at_5",
+        "value": 36.973,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "ndcg_at_1",
+        "value": 17.347,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "ndcg_at_10",
+        "value": 23.515,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "ndcg_at_100",
+        "value": 37.457,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "ndcg_at_1000",
+        "value": 49.439,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "ndcg_at_3",
+        "value": 22.762999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "ndcg_at_5",
+        "value": 22.622,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "precision_at_1",
+        "value": 20.408,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "precision_at_10",
+        "value": 22.448999999999998,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "precision_at_100",
+        "value": 8.184,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "precision_at_1000",
+        "value": 1.608,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "precision_at_3",
+        "value": 25.85,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "precision_at_5",
+        "value": 25.306,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "recall_at_1",
+        "value": 2.001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "recall_at_10",
+        "value": 17.422,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "recall_at_100",
+        "value": 51.532999999999994,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "recall_at_1000",
+        "value": 87.466,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "recall_at_3",
+        "value": 6.861000000000001,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB Touche2020",
+        "task": "recall_at_5",
+        "value": 10.502,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ToxicConversationsClassification",
+        "task": "accuracy",
+        "value": 71.54419999999999,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ToxicConversationsClassification",
+        "task": "ap",
+        "value": 14.372170450843907,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB ToxicConversationsClassification",
+        "task": "f1",
+        "value": 54.94420257390529,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TweetSentimentExtractionClassification",
+        "task": "accuracy",
+        "value": 59.402942840973395,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TweetSentimentExtractionClassification",
+        "task": "f1",
+        "value": 59.4166538875571,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwentyNewsgroupsClustering",
+        "task": "v_measure",
+        "value": 41.569064336457906,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "cos_sim_accuracy",
+        "value": 85.31322644096085,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "cos_sim_ap",
+        "value": 72.14518894837381,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "cos_sim_f1",
+        "value": 66.67489813557229,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "cos_sim_precision",
+        "value": 62.65954977953121,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "cos_sim_recall",
+        "value": 71.2401055408971,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "dot_accuracy",
+        "value": 85.31322644096085,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "dot_ap",
+        "value": 72.14521480685293,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "dot_f1",
+        "value": 66.67489813557229,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "dot_precision",
+        "value": 62.65954977953121,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "dot_recall",
+        "value": 71.2401055408971,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "euclidean_accuracy",
+        "value": 85.31322644096085,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "euclidean_ap",
+        "value": 72.14520820485349,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "euclidean_f1",
+        "value": 66.67489813557229,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "euclidean_precision",
+        "value": 62.65954977953121,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "euclidean_recall",
+        "value": 71.2401055408971,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "manhattan_accuracy",
+        "value": 85.21785778148656,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "manhattan_ap",
+        "value": 72.01177147657364,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "manhattan_f1",
+        "value": 66.62594673833374,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "manhattan_precision",
+        "value": 62.0336669699727,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "manhattan_recall",
+        "value": 71.95250659630607,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "max_accuracy",
+        "value": 85.31322644096085,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "max_ap",
+        "value": 72.14521480685293,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterSemEval2015",
+        "task": "max_f1",
+        "value": 66.67489813557229,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "cos_sim_accuracy",
+        "value": 89.12756626693057,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "cos_sim_ap",
+        "value": 86.05430786440826,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "cos_sim_f1",
+        "value": 78.27759692216631,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "cos_sim_precision",
+        "value": 75.33466248931929,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "cos_sim_recall",
+        "value": 81.45980905451185,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "dot_accuracy",
+        "value": 89.12950673341872,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "dot_ap",
+        "value": 86.05431161145492,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "dot_f1",
+        "value": 78.27759692216631,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "dot_precision",
+        "value": 75.33466248931929,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "dot_recall",
+        "value": 81.45980905451185,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "euclidean_accuracy",
+        "value": 89.12756626693057,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "euclidean_ap",
+        "value": 86.05431303247397,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "euclidean_f1",
+        "value": 78.27759692216631,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "euclidean_precision",
+        "value": 75.33466248931929,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "euclidean_recall",
+        "value": 81.45980905451185,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "manhattan_accuracy",
+        "value": 89.04994760740482,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "manhattan_ap",
+        "value": 86.00860610892074,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "manhattan_f1",
+        "value": 78.1846776005392,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "manhattan_precision",
+        "value": 76.10438839480975,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "manhattan_recall",
+        "value": 80.3818909762858,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "max_accuracy",
+        "value": 89.12950673341872,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "max_ap",
+        "value": 86.05431303247397,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB TwitterURLCorpus",
+        "task": "max_f1",
+        "value": 78.27759692216631,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 8,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 8,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2108.12409",
+        "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+        "first_author": "Ofir Press",
+        "authors": 3,
+        "year": "2021"
+      },
+      {
+        "id": "2310.19923",
+        "title": "Jina Embeddings 2: 8192-Token General-Purpose Text Embeddings for Long Documents",
+        "first_author": "Michael Günther",
+        "authors": 13,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "jinaai/negation-dataset"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 35,
+      "top": [
+        "mteb/leaderboard",
+        "mteb/leaderboard_legacy",
+        "govtech/off-topic-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+  "revision": "cf031e020336460d15a417eba710bbc5bb43be9a",
+  "manifest": "blake3:51d18ab7b6e1969bd7ec67de87eaa4624c6b2487cc18e4a9ed83851295aff91f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+    "readme": "file:README.md@sha256:5b903915e4edb98bf7a5a7f6be42792458272c73cbff07f5c2f8f33765f8f070",
+    "config": "file:config.json@sha256:552b8c8c85c54a761899eb94b5eb3d58166e769df8e26cf515ab9da695772cd7"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Japanese using the train and validation splits of Common Voice 6.1, CSS10 and JSUT. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:5b903915e4edb98bf7a5a7f6be42792458272c73cbff07f5c2f8f33765f8f070"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:552b8c8c85c54a761899eb94b5eb3d58166e769df8e26cf515ab9da695772cd7#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:552b8c8c85c54a761899eb94b5eb3d58166e769df8e26cf515ab9da695772cd7#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-12-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 86,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 97521982,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:552b8c8c85c54a761899eb94b5eb3d58166e769df8e26cf515ab9da695772cd7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:552b8c8c85c54a761899eb94b5eb3d58166e769df8e26cf515ab9da695772cd7#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:552b8c8c85c54a761899eb94b5eb3d58166e769df8e26cf515ab9da695772cd7#num_attention_heads"
+    },
+    "vocab": {
+      "value": 2341,
+      "source": "file:config.json@sha256:552b8c8c85c54a761899eb94b5eb3d58166e769df8e26cf515ab9da695772cd7#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice ja",
+        "task": "Test WER",
+        "value": 81.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice ja",
+        "task": "Test CER",
+        "value": 20.16,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3568",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 18,
+      "top": [
+        "embedl/hfviewer",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "qanastek/Alexa-NLU-Clone"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

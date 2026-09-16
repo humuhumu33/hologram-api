@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "allenai/specter2_base",
+  "revision": "3447645e1def9117997203454fa4495937bfbd83",
+  "manifest": "blake3:d909e7270383e44023f2847dd072a3186a5e87b68335723677ed4ced788fcd41",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/allenai/specter2_base",
+    "readme": "file:README.md@sha256:8ad7f51d9584a399c4b6c322e8dcb186c7776fb81950f5314ba797d64fab4c77",
+    "config": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802"
+  },
+  "summary": {
+    "value": "SPECTER2 is the successor to SPECTER and is capable of generating task specific embeddings for scientific tasks when paired with adapters. This is the base model to be used along with the adapters.",
+    "source": "file:README.md@sha256:8ad7f51d9584a399c4b6c322e8dcb186c7776fb81950f5314ba797d64fab4c77"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-02-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 48,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10999147,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#num_attention_heads"
+    },
+    "vocab": {
+      "value": 31090,
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:6d9d68ca2bfeca756fd807e7c81e8e9d3203d8a002dff19cc42b29edd48e8802#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Merged": 1,
+        "Quantized": 2,
+        "Fine tuned": 33
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "merge": 1,
+        "quantized": 2,
+        "finetune": 33
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "allenai/scirepeval"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 56,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "gwf-uwaterloo/acl-spectrum",
+        "ArneBinder/ScientificArgumentRecommender"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

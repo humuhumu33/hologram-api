@@ -1,0 +1,166 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "m-a-p/YuE2-3B",
+  "revision": "14fc6c6f146441b1dd6363fcb2e01e82a6914cb7",
+  "manifest": "blake3:bb5e024ca478d485d89963767c3f5b483953cf8826a2a096a650f7ca29cffcac",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/m-a-p/YuE2-3B",
+    "readme": "file:README.md@sha256:45f8cd7eb39744dc447c481b18c755229bc72d99329a47f6a3d04862f9183c7a",
+    "config": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329"
+  },
+  "summary": {
+    "value": "YuE2 is an open music generation model with frontier song quality competitive with Suno v5/v6. Turn lyrics and a style prompt into a complete song with vocals and accompaniment, then shape its melody and chords through an editable score.",
+    "source": "file:README.md@sha256:45f8cd7eb39744dc447c481b18c755229bc72d99329a47f6a3d04862f9183c7a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to audio",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3630684224,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Yue2",
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#model_type"
+    },
+    "architecture_id": {
+      "value": "yue2",
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#model_type"
+    },
+    "context": {
+      "value": 24576,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 612,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9391,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 184704,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#vocab_size"
+    },
+    "context": {
+      "value": 24576,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:ad3477bbef890bf98ae196c1e4b44779494a6231c4ab66f32708eabadf265329#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 9,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 9,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2503.08638",
+        "title": "YuE: Scaling Open Foundation Models for Long-Form Music Generation",
+        "first_author": "Ruibin Yuan",
+        "authors": 57,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 22,
+      "top": [
+        "mrfakename/yue2-3b",
+        "embedl/hfviewer",
+        "directedbykobyperez/YuE2-Create"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

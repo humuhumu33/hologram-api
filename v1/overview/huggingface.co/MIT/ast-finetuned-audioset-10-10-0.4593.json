@@ -1,0 +1,147 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MIT/ast-finetuned-audioset-10-10-0.4593",
+  "revision": "f826b80d28226b62986cc218e5cec390b1096902",
+  "manifest": "blake3:c6c2a039e0c6fff3f42874036a2e96f623e2945bf10b3d0c27b52e46693fc1e2",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MIT/ast-finetuned-audioset-10-10-0.4593",
+    "readme": "file:README.md@sha256:dbc8ce1fc5abd1635d073640d8cb032901bfe264a5e06507f363f10a6112cfc8",
+    "config": "file:config.json@sha256:a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff"
+  },
+  "summary": {
+    "value": "Audio Spectrogram Transformer (AST) model fine-tuned on AudioSet. It was introduced in the paper AST: Audio Spectrogram Transformer by Gong et al. and first released in this repository.",
+    "source": "file:README.md@sha256:dbc8ce1fc5abd1635d073640d8cb032901bfe264a5e06507f363f10a6112cfc8"
+  },
+  "glance": {
+    "task": {
+      "value": "Audio classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 86594063,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Audio Spectrogram Transformer",
+      "source": "file:config.json@sha256:a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff#model_type"
+    },
+    "architecture_id": {
+      "value": "audio-spectrogram-transformer",
+      "source": "file:config.json@sha256:a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "bsd-3-clause",
+        "name": "BSD 3 Clause",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-11-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 371,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2186154479,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:a93d525511d77e8ecc933d09674b85099815bbbb417c228a4edd655e252fb9ff#num_attention_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 7,
+        "Fine tuned": 201
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 7,
+        "finetune": 201
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForAudioClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoFeatureExtractor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2104.01778",
+        "title": "AST: Audio Spectrogram Transformer",
+        "first_author": "Yuan Gong",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "mteb/leaderboard",
+        "BHW/Streaming-AST",
+        "Shangkhonil/Audio_classification"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

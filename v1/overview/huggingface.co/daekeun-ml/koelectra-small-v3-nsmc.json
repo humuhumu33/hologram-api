@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "daekeun-ml/koelectra-small-v3-nsmc",
+  "revision": "d1c0233fc013ae8bd879d7b61f2bec69aa3af4c9",
+  "manifest": "blake3:3ab73eb408847a5b298c79d1d185bddc20ccaf904f1882cb9b8e55d2b6df7394",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/daekeun-ml/koelectra-small-v3-nsmc",
+    "readme": "file:README.md@sha256:6438dcd28b9c530207e93d1fba7851308bbb1ea0d0e4d4aecc76e9abe0fee288",
+    "config": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6"
+  },
+  "summary": {
+    "value": "koelectra-small-v3-nsmc is a 14.1M Electra model for text classification by daekeun-ml, released Mar 2022, under MIT.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 14123010,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Electra",
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#model_type"
+    },
+    "architecture_id": {
+      "value": "electra",
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13092928,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 256,
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#hidden_size"
+    },
+    "heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#num_attention_heads"
+    },
+    "vocab": {
+      "value": 35000,
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:74faecc0ab34bbbc21746005b9c30a17c0c6882fb5d1f9bfe8001cdca6866cd6#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nsmc"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "Deokwoo/automation-and-huggingface",
+        "msh3907/test1"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

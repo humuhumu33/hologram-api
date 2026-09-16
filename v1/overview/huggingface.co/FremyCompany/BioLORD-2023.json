@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "manifest": "blake3:618b7d8b961d8aca66505ea598066161cb76a7be2f2a576136e8912fdc59307a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/FremyCompany/BioLORD-2023",
+    "readme": "file:README.md@sha256:7df07717419520693bcd24c7f03e5438c25054095b2d129746049719cea14e06",
+    "config": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c"
+  },
+  "summary": {
+    "value": "State-of-the-art methodologies operate by maximizing the similarity in representation of names referring to the same concept, and preventing collapse through contrastive learning. However, because biomedical names are not always self-explanatory, it sometimes results in non-semantic representations.",
+    "source": "file:README.md@sha256:7df07717419520693bcd24c7f03e5438c25054095b2d129746049719cea14e06"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109486978,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Mpnet",
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#model_type"
+    },
+    "architecture_id": {
+      "value": "mpnet",
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-11-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 57,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3029785,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30527,
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 6
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 6
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2311.16075",
+        "title": "BioLORD-2023: Semantic Textual Representations Fusing LLM and Clinical Knowledge Graph Insights",
+        "first_author": "François Remy",
+        "authors": 3,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "FremyCompany/BioLORD-Dataset",
+      "FremyCompany/AGCT-Dataset"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 6,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "Aswin92/raredx",
+        "lvwerra/bio-retrieval-resources"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

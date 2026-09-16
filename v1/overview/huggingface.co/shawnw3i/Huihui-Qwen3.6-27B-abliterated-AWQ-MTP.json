@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "shawnw3i/Huihui-Qwen3.6-27B-abliterated-AWQ-MTP",
+  "revision": "ed099273cf30ad72a88116d759856f147b7bcbff",
+  "manifest": "blake3:02752ffd3e5069c0d25d51728861234faa4905c0148e3239f96bf2c5d02dcc14",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/shawnw3i/Huihui-Qwen3.6-27B-abliterated-AWQ-MTP",
+    "readme": "file:README.md@sha256:8761000c8be6ab2fe7bf3c429882d28be58a19f1b5ecc4b89457e204d2f7257c",
+    "config": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5"
+  },
+  "summary": {
+    "value": "This is an uncensored version of Qwen/Qwen3.6-27B created with abliteration (see remove-refusals-with-transformers to know more about it). This is a crude, proof-of-concept implementation to remove refusals from an LLM model without using TransformerLens.",
+    "source": "file:README.md@sha256:8761000c8be6ab2fe7bf3c429882d28be58a19f1b5ecc4b89457e204d2f7257c"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 6284446960,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 387%, BF16 55%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.6-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-05-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1450823,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "awq 4 bit",
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:d620e9b2c74d22cd1c78a19b46569fd1b2e6fb50b171614490b250adb68fb8e5#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

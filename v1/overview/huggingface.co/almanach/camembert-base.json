@@ -1,0 +1,183 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "almanach/camembert-base",
+  "revision": "a75967561c78f2aa81cc41045378d3b4ee25af9e",
+  "manifest": "blake3:44359f64d20c2ede79408f32b2bdc8fb432fb0dd03f28b84c2d60c2338f97255",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/almanach/camembert-base",
+    "readme": "file:README.md@sha256:d0126876421264e4e29a12a3591e6df21ed1e9b5cc2ccbd7a27976e852684cad",
+    "config": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba"
+  },
+  "summary": {
+    "value": "CamemBERT is a state-of-the-art language model for French based on the RoBERTa model.",
+    "source": "file:README.md@sha256:d0126876421264e4e29a12a3591e6df21ed1e9b5cc2ccbd7a27976e852684cad"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 111246085,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Camembert",
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#model_type"
+    },
+    "architecture_id": {
+      "value": "camembert",
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "fr"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-06-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 104,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 97976230,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32005,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 5,
+        "Fine tuned": 177
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 5,
+        "finetune": 177
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1911.03894",
+        "title": "CamemBERT: a Tasty French Language Model",
+        "first_author": "Louis Martin",
+        "authors": 8,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "oscar"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 66,
+      "top": [
+        "EuroEval/euroeval_leaderboard",
+        "doctolib-lab/doctobert-fill-mask-demo",
+        "mteb/leaderboard_legacy"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

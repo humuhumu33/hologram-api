@@ -1,0 +1,149 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "theainerd/Wav2Vec2-large-xlsr-hindi",
+  "revision": "062f7f566e2671336992b011dcb9387cd3cffe5e",
+  "manifest": "blake3:9a52a36e522401addedca70e2bd1c5264050f0114cb55aaa6449d63eed3a5c9a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/theainerd/Wav2Vec2-large-xlsr-hindi",
+    "readme": "file:README.md@sha256:e7a69e7fa5527202791d4c8f4f9bc8a29ed52e0d2db2afec581f4749876e6e8d",
+    "config": "file:config.json@sha256:fb5bc87f291c930687bab0d0cd35013beff2269892bc05a5ea4fd77dc0833865"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 hindi using the Multilingual and code-switching ASR challenges for low resource Indian languages. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:e7a69e7fa5527202791d4c8f4f9bc8a29ed52e0d2db2afec581f4749876e6e8d"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315504320,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:fb5bc87f291c930687bab0d0cd35013beff2269892bc05a5ea4fd77dc0833865#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:fb5bc87f291c930687bab0d0cd35013beff2269892bc05a5ea4fd77dc0833865#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "hi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-large-xlsr-53"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-01",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 31885646,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:fb5bc87f291c930687bab0d0cd35013beff2269892bc05a5ea4fd77dc0833865#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:fb5bc87f291c930687bab0d0cd35013beff2269892bc05a5ea4fd77dc0833865#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:fb5bc87f291c930687bab0d0cd35013beff2269892bc05a5ea4fd77dc0833865#num_attention_heads"
+    },
+    "vocab": {
+      "value": 64,
+      "source": "file:config.json@sha256:fb5bc87f291c930687bab0d0cd35013beff2269892bc05a5ea4fd77dc0833865#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/8134",
+    "source": "api:tags(doi)"
+  },
+  "spaces": {
+    "value": {
+      "count": 12,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "tensorgirl/Farmers_Helper_Bot",
+        "zedt/hindi_speech_to_text"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

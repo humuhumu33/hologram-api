@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "patrickjohncyh/fashion-clip",
+  "revision": "7e3ba62ce16b379a1ab479346b66f192e76f51b7",
+  "manifest": "blake3:bed75e2a3965d6b73d234201390ae99ee6095820e68596e3425e1193c7b86ec4",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/patrickjohncyh/fashion-clip",
+    "readme": "file:README.md@sha256:7991e5d764cbff735a1c7c6f4ca7aac04e2533251c9ec5017ce994b51b0d3873",
+    "config": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471"
+  },
+  "summary": {
+    "value": "UPDATE (10/03/23): We have updated the model! We found that laion/CLIP-ViT-B-32-laion2B-s34B-b79K checkpoint (thanks Bin!) worked better than original OpenAI CLIP on Fashion.",
+    "source": "file:README.md@sha256:7991e5d764cbff735a1c7c6f4ca7aac04e2533251c9ec5017ce994b51b0d3873"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 151277439,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "CLIP",
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#model_type"
+    },
+    "architecture_id": {
+      "value": "clip",
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#model_type"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-02-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-09-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 292,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 120906569,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#num_attention_heads"
+    },
+    "vocab": {
+      "value": 49408,
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#vocab_size"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "clip_vision_model",
+      "source": "file:config.json@sha256:79595b5c6be8867e3ba42c34b1e6b9a0f957e549c1e7f43b5c6945f4f6f59471#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForZeroShotImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "vinid/fashion-clip-app",
+        "eduagarcia/multilingual-tokenizer-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

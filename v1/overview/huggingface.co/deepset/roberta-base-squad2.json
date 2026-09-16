@@ -1,0 +1,304 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepset/roberta-base-squad2",
+  "revision": "adc3b06f79f797d1c575d5479d6f5efe54a9e3b4",
+  "manifest": "blake3:64a4f80d5441d908fa2b8062a751cce9097f642241303ceceeb4cce9455cfc07",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepset/roberta-base-squad2",
+    "readme": "file:README.md@sha256:04834cd9007b2cdd1b1bdd501b571579577331e467be6e24e47d40f060558a29",
+    "config": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060"
+  },
+  "summary": {
+    "value": "This is the roberta-base model, fine-tuned using the SQuAD2.0 dataset. It's been trained on question-answer pairs, including unanswerable questions, for the task of Extractive Question Answering.",
+    "source": "file:README.md@sha256:04834cd9007b2cdd1b1bdd501b571579577331e467be6e24e47d40f060558a29"
+  },
+  "glance": {
+    "task": {
+      "value": "Question answering",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 124057092,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-4.0",
+        "name": "CC BY 4.0",
+        "commercial": "yes",
+        "note": "Attribution required"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "FacebookAI/roberta-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 957,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 92059307,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "squad_v2",
+        "task": "Exact Match",
+        "value": 79.9309,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "squad_v2",
+        "task": "F1",
+        "value": 82.9501,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "squad_v2",
+        "task": "total",
+        "value": 11869,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "squad",
+        "task": "Exact Match",
+        "value": 85.289,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squad",
+        "task": "F1",
+        "value": 91.841,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "adversarial_qa",
+        "task": "Exact Match",
+        "value": 29.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "adversarial_qa",
+        "task": "F1",
+        "value": 40.367,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squad_adversarial",
+        "task": "Exact Match",
+        "value": 78.567,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squad_adversarial",
+        "task": "F1",
+        "value": 84.469,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts amazon",
+        "task": "Exact Match",
+        "value": 69.924,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts amazon",
+        "task": "F1",
+        "value": 83.284,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts new_wiki",
+        "task": "Exact Match",
+        "value": 81.204,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts new_wiki",
+        "task": "F1",
+        "value": 90.595,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts nyt",
+        "task": "Exact Match",
+        "value": 82.931,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts nyt",
+        "task": "F1",
+        "value": 90.756,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts reddit",
+        "task": "Exact Match",
+        "value": 71.55,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "squadshifts reddit",
+        "task": "F1",
+        "value": 82.939,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 4,
+        "Quantized": 2,
+        "Fine tuned": 222
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 4,
+        "quantized": 2,
+        "finetune": 222
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForQuestionAnswering",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "question-answering"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "squad_v2"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Shouryahere/infy",
+        "microsoft/HuggingGPT",
+        "yangheng/Super-Resolution-Anime-Diffusion"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

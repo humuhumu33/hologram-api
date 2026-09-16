@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "BAAI/bge-base-zh-v1.5",
+  "revision": "f03589ceff5aac7111bd60cfc7d497ca17ecac65",
+  "manifest": "blake3:4ff3d265c9bd4b02ebc3a02fa3d49cee178f2f92b1d2d2c81ffda2476df8a95b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/BAAI/bge-base-zh-v1.5",
+    "readme": "file:README.md@sha256:7f8d638125f442bc2409edf5958dbce3086d91133e79831eff760c6ea2398740",
+    "config": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1"
+  },
+  "summary": {
+    "value": "FlagEmbedding can map any text to a low-dimensional dense vector which can be used for tasks like retrieval, classification, clustering, or semantic search. And it also can be used in vector databases for LLMs.",
+    "source": "file:README.md@sha256:7f8d638125f442bc2409edf5958dbce3086d91133e79831eff760c6ea2398740"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#max_position_embeddings"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-09-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-10-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 110,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7880340,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#num_attention_heads"
+    },
+    "vocab": {
+      "value": 21128,
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:6675c035d945dffc89f77a04a254b87cc193a9185a098bb505fe4963b6ddbac1#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5,
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5,
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2310.07554",
+        "title": "Retrieve Anything To Augment Large Language Models",
+        "first_author": "Peitian Zhang",
+        "authors": 5,
+        "year": "2023"
+      },
+      {
+        "id": "2309.07597",
+        "title": "C-Pack: Packaged Resources To Advance General Chinese Embedding",
+        "first_author": "Shitao Xiao",
+        "authors": 4,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 47,
+      "top": [
+        "mteb/leaderboard",
+        "mteb/leaderboard_legacy",
+        "SmileXing/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

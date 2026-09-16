@@ -1,0 +1,358 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepseek-ai/DeepSeek-V4.1-Flash",
+  "revision": "dba1be0a40aa45a94ad051997016db3960a90277",
+  "manifest": "blake3:5b23822f58df4dee04af38e7ebd729937406fe45e40b77597f30c9a95e4e9557",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash",
+    "readme": "file:README.md@sha256:347c9db4e5506acb531cbc3b724407ab88e9af8781679152f0823d7bac16d251",
+    "config": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879"
+  },
+  "summary": {
+    "value": "We introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens. The model natively processes images and text, and generates text autoregressively.",
+    "source": "file:README.md@sha256:347c9db4e5506acb531cbc3b724407ab88e9af8781679152f0823d7bac16d251"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 763205315794,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek V41",
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_v41",
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT8 73%, FP8 27%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2810,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 366459,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#max_position_embeddings"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "deepseek_v41_vision",
+      "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "mean",
+        "value": 87.11,
+        "date": "2026-09-11",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_extract_oneshot_structured_output_file (served via the DeepSeek API, thinking disabled)"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "short",
+        "value": 94.44,
+        "date": "2026-09-11",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_extract_oneshot_structured_output_file (served via the DeepSeek API, thinking disabled)"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "medium",
+        "value": 81.49,
+        "date": "2026-09-11",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_extract_oneshot_structured_output_file (served via the DeepSeek API, thinking disabled)"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "long",
+        "value": 22.23,
+        "date": "2026-09-11",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_extract_oneshot_structured_output_file (served via the DeepSeek API, thinking disabled)"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 56.57,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_no_thinking_parse_with_layout (served via the DeepSeek API)"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 88.09,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_no_thinking_parse_with_layout (served via the DeepSeek API)"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 66.05,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_no_thinking_parse_with_layout (served via the DeepSeek API)"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 28.61,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_no_thinking_parse_with_layout (served via the DeepSeek API)"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 20.46,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_no_thinking_parse_with_layout (served via the DeepSeek API)"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 79.65,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: deepseek_v4_1_flash_no_thinking_parse_with_layout (served via the DeepSeek API)"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 90.9,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 36.8,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 63.9,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "notes": "With tools; harness not specified in the model card."
+      },
+      {
+        "dataset": "harborframework/terminal-bench-2.1",
+        "task": "terminalbench_2_1",
+        "value": 90.6,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "notes": "DeepSeek Harness, Minimal mode, 1M-token context."
+      },
+      {
+        "dataset": "harborframework/terminal-bench",
+        "task": "terminalbench_3",
+        "value": 30,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "notes": "DeepSeek Harness, Minimal mode, 1M-token context."
+      },
+      {
+        "dataset": "harborframework/terminal-bench",
+        "task": "terminalbench_4",
+        "value": 31.2,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "notes": "DeepSeek Harness, Minimal mode, 1M-token context."
+      },
+      {
+        "dataset": "datacurve/deep-swe",
+        "task": "deep_swe",
+        "value": 74.2,
+        "date": "2026-09-10",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "notes": "Reported as 'DeepSWE v1.1'; official mini-swe-agent harness."
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 65,
+        "Fine tuned": 13
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 65,
+        "finetune": 13
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "fireworks-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 18,
+      "top": [
+        "embedl/hfviewer",
+        "ginigen-ai/open-router-leaderboard",
+        "townbox/deepseek-profile-guide"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

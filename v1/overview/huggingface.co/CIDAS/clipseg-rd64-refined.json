@@ -1,0 +1,171 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "CIDAS/clipseg-rd64-refined",
+  "revision": "999e0328d9e10b484360c477313983f9afdd7050",
+  "manifest": "blake3:5d1ea20cf757bc9b6b2fdf4f6ec8fe064de289bd0122192d90fa8b230c292234",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/CIDAS/clipseg-rd64-refined",
+    "readme": "file:README.md@sha256:c1e26ac022542015a04d804460bdc1159d753c4349b628e086f127475d2fcf25",
+    "config": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd"
+  },
+  "summary": {
+    "value": "CLIPSeg model with reduce dimension 64, refined (using a more complex convolution). It was introduced in the paper Image Segmentation Using Text and Image Prompts by Lüddecke et al. and first released in this repository.",
+    "source": "file:README.md@sha256:c1e26ac022542015a04d804460bdc1159d753c4349b628e086f127475d2fcf25"
+  },
+  "glance": {
+    "task": {
+      "value": "Image segmentation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "mask"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 150748019,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Clipseg",
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#model_type"
+    },
+    "architecture_id": {
+      "value": "clipseg",
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#model_type"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-11-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 141,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 152151901,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#num_attention_heads"
+    },
+    "vocab": {
+      "value": 49408,
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#vocab_size"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "clipseg_vision_model",
+      "source": "file:config.json@sha256:c023375966d31b3b1392764f7bd91df47098ce19f62f11b0263d8eedcf708bcd#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Merged": 1,
+        "Quantized": 3,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "merge": 1,
+        "quantized": 3,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "CLIPSegForImageSegmentation",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2112.10003",
+        "title": "Image Segmentation Using Text and Image Prompts",
+        "first_author": "Timo Lüddecke",
+        "authors": 2,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "nielsr/text-based-inpainting",
+        "nvidia/addit",
+        "segments/panoptic-segment-anything"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
+  "revision": "1a25a446712ba5ee05982a381eed697ef9b435cf",
+  "manifest": "blake3:93c8ade44cd634eca740597e79db5866016874c0dcd4252a15fe7ae104805a25",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
+    "readme": "file:README.md@sha256:d0600101ba66849bd84eeae14e0b1ccd56cd962ea94aec5d60c415d9ce4e5f28",
+    "config": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c"
+  },
+  "summary": {
+    "value": "A CLIP ViT-B/32 model trained with the LAION-2B English subset of LAION-5B (https://laion.ai/blog/laion-5b/) using OpenCLIP (https://github.com/mlfoundations/openclip).",
+    "source": "file:README.md@sha256:d0600101ba66849bd84eeae14e0b1ccd56cd962ea94aec5d60c415d9ce4e5f28"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 151277439,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "CLIP",
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#model_type"
+    },
+    "architecture_id": {
+      "value": "clip",
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#model_type"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "open_clip",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-09-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 144,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 116377568,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 49408,
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#vocab_size"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "clip_vision_model",
+      "source": "file:config.json@sha256:1284cbff35169abb23a1c5525a8b0f543c7bd191d4b9aed63880c1571bc4191c#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5,
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5,
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.04867",
+        "title": "A Large-scale Study of Representation Learning with the Visual Task Adaptation Benchmark",
+        "first_author": "Xiaohua Zhai",
+        "authors": 17,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "yanze/PuLID-FLUX"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

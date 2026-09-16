@@ -1,0 +1,273 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "meta-llama/Llama-3.1-8B-Instruct",
+  "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "addressed": false,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/meta-llama/Llama-3.1-8B-Instruct",
+    "readme": "file:README.md@sha256:ed0e2e86f7a40c38b793b0a04dfd993b2c1dfb34906804f96b999f0bbd8d70e6"
+  },
+  "summary": {
+    "value": "The Meta Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models in 8B, 70B and 405B sizes (text in/text out).",
+    "source": "file:README.md@sha256:ed0e2e86f7a40c38b793b0a04dfd993b2c1dfb34906804f96b999f0bbd8d70e6"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8030261248,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "llama3.1",
+        "name": "Llama 3.1 Community",
+        "commercial": "conditions",
+        "note": "Conditions above 700M monthly users"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "de",
+        "fr",
+        "it",
+        "pt",
+        "hi",
+        "es",
+        "th"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "meta-llama/Llama-3.1-8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-07-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-09-25",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7655,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 184147076,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "src",
+        "value": 0.6333,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "SRC overall; deterministic action-based grader, no LLM judge; seed 0, n=75"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "time",
+        "value": 0.8333,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=time; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "access_deny",
+        "value": 0.5,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=access_deny; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "memory_label",
+        "value": 0.6667,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=memory_label; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "injection",
+        "value": 0.75,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=injection; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "bot_policy",
+        "value": 0.4167,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=bot_policy; n=12"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "open_question",
+        "value": 10,
+        "date": "2026-06-02T09:57:29.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "mcq_4_choices",
+        "value": 24.04,
+        "date": "2026-06-02T09:57:29.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 30.4,
+        "date": "2026-01-27",
+        "verified": false,
+        "source": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"
+      },
+      {
+        "dataset": "openai/gsm8k",
+        "task": "gsm8k",
+        "value": 84.5,
+        "date": "2026-03-23T10:38:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2898,
+        "Merged": 104,
+        "Quantized": 909,
+        "Fine tuned": 3191
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2898,
+        "merge": 104,
+        "quantized": 909,
+        "finetune": 3191
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "nscale",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2204.05149",
+        "title": "The Carbon Footprint of Machine Learning Training Will Plateau, Then Shrink",
+        "first_author": "David Patterson",
+        "authors": 10,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "xingyuanzhao/nocode-workflow",
+        "pliny-the-prompter/obliteratus"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

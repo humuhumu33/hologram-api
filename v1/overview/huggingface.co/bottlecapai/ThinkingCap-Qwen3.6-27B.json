@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "bottlecapai/ThinkingCap-Qwen3.6-27B",
+  "revision": "339f3b96a0af8e1cf6d0232c2b43ea68ea89f932",
+  "addressed": false,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/bottlecapai/ThinkingCap-Qwen3.6-27B",
+    "readme": "file:README.md@sha256:c4d86a2b54629b9c97f69e8da2c9f7f7c3a3939f4602a6ba41a9e91e412efd5d"
+  },
+  "summary": {
+    "value": "Capability of Qwen3.6-27B with 50% less thinking tokens on average, and over 90% less in best cases. Achieved via finetuning Qwen3.6-27B (Qwen Team, 2026) with state-of-the-art algorithms on a curated set of problems of various domains and difficulty.",
+    "source": "file:README.md@sha256:c4d86a2b54629b9c97f69e8da2c9f7f7c3a3939f4602a6ba41a9e91e412efd5d"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27356728560,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.6-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 692,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 43195,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 83.8,
+        "date": "2026-07-06T21:40:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B"
+      },
+      {
+        "dataset": "openai/gsm8k",
+        "task": "gsm8k",
+        "value": 96.5,
+        "date": "2026-07-06T21:40:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 85.4,
+        "date": "2026-07-06T21:40:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Merged": 7,
+        "Quantized": 51,
+        "Fine tuned": 8
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "merge": 7,
+        "quantized": 51,
+        "finetune": 8
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "lvwerra/agent-artifacts",
+        "akhaliq/ThinkingCap-Qwen3.6-27B"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

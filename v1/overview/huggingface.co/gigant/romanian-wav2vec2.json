@@ -1,0 +1,213 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "gigant/romanian-wav2vec2",
+  "revision": "79cf603aac59501d02bfeb37f615efc3ac4ce1b3",
+  "manifest": "blake3:4f53e388c2411775be8d0d7c6b401e995f928f9262ad0cdbdcc7b507ed4d349a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/gigant/romanian-wav2vec2",
+    "readme": "file:README.md@sha256:a6b95798d693f459a80daaa6aa68487a64a52a0acff36c018ed706211202b451",
+    "config": "file:config.json@sha256:73af70d212244b91c8158e78bc2630b2e71ebdb31f226647abf9a3a10bbd833d"
+  },
+  "summary": {
+    "value": "You can test this model online with the Space for Romanian Speech Recognition",
+    "source": "file:README.md@sha256:a6b95798d693f459a80daaa6aa68487a64a52a0acff36c018ed706211202b451"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315475620,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:73af70d212244b91c8158e78bc2630b2e71ebdb31f226647abf9a3a10bbd833d#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:73af70d212244b91c8158e78bc2630b2e71ebdb31f226647abf9a3a10bbd833d#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ro"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-xls-r-300m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 8,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12463581,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:73af70d212244b91c8158e78bc2630b2e71ebdb31f226647abf9a3a10bbd833d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:73af70d212244b91c8158e78bc2630b2e71ebdb31f226647abf9a3a10bbd833d#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:73af70d212244b91c8158e78bc2630b2e71ebdb31f226647abf9a3a10bbd833d#num_attention_heads"
+    },
+    "vocab": {
+      "value": 36,
+      "source": "file:config.json@sha256:73af70d212244b91c8158e78bc2630b2e71ebdb31f226647abf9a3a10bbd833d#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Robust Speech Event",
+        "task": "Dev WER (without LM)",
+        "value": 46.99,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event",
+        "task": "Dev CER (without LM)",
+        "value": 16.04,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event",
+        "task": "Dev WER (with LM)",
+        "value": 38.63,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event",
+        "task": "Dev CER (with LM)",
+        "value": 14.52,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice",
+        "task": "Test WER (without LM)",
+        "value": 11.73,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice",
+        "task": "Test CER (without LM)",
+        "value": 2.93,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice",
+        "task": "Test WER (with LM)",
+        "value": 7.31,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice",
+        "task": "Test CER (with LM)",
+        "value": 2.17,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Test Data",
+        "task": "Test WER",
+        "value": 43.23,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "mozilla-foundation/common_voice_8_0",
+      "gigant/romanian_speech_synthesis_0_8_1"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "embedl/hfviewer",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "TIMBOVILL/UltraSingerUI"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

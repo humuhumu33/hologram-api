@@ -1,0 +1,223 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "dslim/bert-base-NER",
+  "revision": "d1a3e8f13f8c3566299d95fcfc9a8d2382a9affc",
+  "manifest": "blake3:187042017d95fcd376a4680cb314c6a0b334c69f17e122f7a053587cc20f1061",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/dslim/bert-base-NER",
+    "readme": "file:README.md@sha256:f570efa74d5f40eeafa35af45bc20ed6bdf49a5e517782218a23467d3bae576f",
+    "config": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515"
+  },
+  "summary": {
+    "value": "If my open source models have been useful to you, please consider supporting me in building small, useful AI models for everyone (and help me afford med school / help out my parents financially). Thanks!",
+    "source": "file:README.md@sha256:f570efa74d5f40eeafa35af45bc20ed6bdf49a5e517782218a23467d3bae576f"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 108317193,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-10-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 734,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 96722363,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#num_attention_heads"
+    },
+    "vocab": {
+      "value": 28996,
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:a5dc77a0d60dadf5645103017f3c7b8ece4ef1b450bc1ea68e17da1d3ae7e515#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "conll2003",
+        "task": "Accuracy",
+        "value": 0.9118041001560013,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "conll2003",
+        "task": "Precision",
+        "value": 0.9211550382257732,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "conll2003",
+        "task": "Recall",
+        "value": 0.9306415698281261,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "conll2003",
+        "task": "F1",
+        "value": 0.9258740048459675,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "conll2003",
+        "task": "loss",
+        "value": 0.48325642943382263,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 4,
+        "Quantized": 7,
+        "Fine tuned": 39
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 4,
+        "quantized": 7,
+        "finetune": 39
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1810.04805",
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "first_author": "Jacob Devlin",
+        "authors": 4,
+        "year": "2018"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "conll2003"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "Shouryahere/infy",
+        "ashish-soni08/Named-Entity-Recognition"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

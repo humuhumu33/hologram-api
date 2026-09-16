@@ -1,0 +1,187 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+  "revision": "553ea250b9a5317231459279d5847d6cf955b9aa",
+  "manifest": "blake3:780de3cccef694d1c5e84bb321d194399333e4648f831091badcba726be8c2d6",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "readme": "file:README.md@sha256:fa8ef67207cb6cec248ef8dffbb7dbdd3845fed3a941a74a0d8d9782a46969bd",
+    "config": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7"
+  },
+  "summary": {
+    "value": "We introduce EXAONE 3.5, a collection of instruction-tuned bilingual (English and Korean) generative models ranging from 2.4B to 32B parameters, developed and released by LG AI Research.",
+    "source": "file:README.md@sha256:fa8ef67207cb6cec248ef8dffbb7dbdd3845fed3a941a74a0d8d9782a46969bd"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7818448896,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "EXAONE",
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#model_type"
+    },
+    "architecture_id": {
+      "value": "exaone",
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-12-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-02-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 159,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3739182,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#num_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 102400,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:1cd6f8794383793dce16d24a08eac048c07b08b25c42333da4eeea0a774131f7#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 46.24,
+        "date": "2026-06-30T12:37:55.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/c6/8f/c68fc694-d6dd-4b2a-a699-e5f737ae550f.json"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 105,
+        "Quantized": 27,
+        "Fine tuned": 131
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 105,
+        "quantized": 27,
+        "finetune": 131
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2412.04862",
+        "title": "EXAONE 3.5: Series of Large Language Models for Real-world Use Cases",
+        "first_author": "LG AI Research",
+        "authors": 33,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 26,
+      "top": [
+        "VIDraft/global-llm-leaderboard",
+        "seawolf2357/LLM_Quantization",
+        "KBaba7/Quant"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

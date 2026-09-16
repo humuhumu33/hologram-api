@@ -1,0 +1,203 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jonatasgrosman/wav2vec2-large-xlsr-53-polish",
+  "revision": "6b1cea36bd8bc5f65ec8081667cd9c0207d51970",
+  "manifest": "blake3:d002d6c3f284ef1939ec0f73fb80d7f81ec9f2466d30819a89e014ac18663327",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jonatasgrosman/wav2vec2-large-xlsr-53-polish",
+    "readme": "file:README.md@sha256:481e55df5f18b6c52806c07571cc110c059a4635ba666edd1d3187d23da71acd",
+    "config": "file:config.json@sha256:819dac7fa3ad7f4c11c15c2ede5f323effc5bcfaa311645a250392b65524c29c"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Polish using the train and validation splits of Common Voice 6.1. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:481e55df5f18b6c52806c07571cc110c059a4635ba666edd1d3187d23da71acd"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:819dac7fa3ad7f4c11c15c2ede5f323effc5bcfaa311645a250392b65524c29c#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:819dac7fa3ad7f4c11c15c2ede5f323effc5bcfaa311645a250392b65524c29c#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "pl"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-12-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 38022157,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:819dac7fa3ad7f4c11c15c2ede5f323effc5bcfaa311645a250392b65524c29c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:819dac7fa3ad7f4c11c15c2ede5f323effc5bcfaa311645a250392b65524c29c#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:819dac7fa3ad7f4c11c15c2ede5f323effc5bcfaa311645a250392b65524c29c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 40,
+      "source": "file:config.json@sha256:819dac7fa3ad7f4c11c15c2ede5f323effc5bcfaa311645a250392b65524c29c#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice pl",
+        "task": "Test WER",
+        "value": 14.21,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice pl",
+        "task": "Test CER",
+        "value": 3.49,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice pl",
+        "task": "Test WER (+LM)",
+        "value": 10.98,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice pl",
+        "task": "Test CER (+LM)",
+        "value": 2.93,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Dev Data",
+        "task": "Dev WER",
+        "value": 33.18,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Dev Data",
+        "task": "Dev CER",
+        "value": 15.92,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Dev Data",
+        "task": "Dev WER (+LM)",
+        "value": 29.31,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Dev Data",
+        "task": "Dev CER (+LM)",
+        "value": 15.17,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3574",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice",
+      "mozilla-foundation/common_voice_6_0"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 12,
+      "top": [
+        "embedl/hfviewer",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "qanastek/Alexa-NLU-Clone"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

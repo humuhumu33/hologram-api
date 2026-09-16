@@ -1,0 +1,225 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen3-VL-4B-Instruct",
+  "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "manifest": "blake3:150ad197c4689ba1f9687e42a88b47b082c1741160372ac4eae2400388c969a7",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen3-VL-4B-Instruct",
+    "readme": "file:README.md@sha256:a884e5e78f7d6f7bfe237f909dbc41a126542e259dc79d8ab33cc8980580ff79",
+    "config": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d"
+  },
+  "summary": {
+    "value": "Meet Qwen3-VL — the most powerful vision-language model in the Qwen series to date.",
+    "source": "file:README.md@sha256:a884e5e78f7d6f7bfe237f909dbc41a126542e259dc79d8ab33cc8980580ff79"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4437815808,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3 VL",
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_vl",
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-10-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 467,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 26875960,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 5000000,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_vl",
+      "source": "file:config.json@sha256:edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "tiiuae/PBench",
+        "task": "average",
+        "value": 49.2,
+        "date": "2026-05-11",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct",
+        "notes": "Detection-only model combined with SAM2 to convert boxes to segmentation masks."
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 179,
+        "Merged": 1,
+        "Quantized": 108,
+        "Fine tuned": 441
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 179,
+        "merge": 1,
+        "quantized": 108,
+        "finetune": 441
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2505.09388",
+        "title": "Qwen3 Technical Report",
+        "first_author": "An Yang",
+        "authors": 60,
+        "year": "2025"
+      },
+      {
+        "id": "2502.13923",
+        "title": "Qwen2.5-VL Technical Report",
+        "first_author": "Shuai Bai",
+        "authors": 27,
+        "year": "2025"
+      },
+      {
+        "id": "2409.12191",
+        "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+        "first_author": "Peng Wang",
+        "authors": 19,
+        "year": "2024"
+      },
+      {
+        "id": "2308.12966",
+        "title": "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities",
+        "first_author": "Jinze Bai",
+        "authors": 9,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 68,
+      "top": [
+        "embedl/hfviewer",
+        "hugging-apps/qwen-video-edit",
+        "EgoisticCoder/Qifu-v1"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "albucino/Qwen3.8-Flash-Next-W4A16-FP8PLE",
+  "revision": "79899a0ce76f569c755ae3691dd55f6ef24ff40a",
+  "manifest": "blake3:ec528f4350c1681e5d466d089efe3b77c347723a0e54ae095e850878a31d656d",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/albucino/Qwen3.8-Flash-Next-W4A16-FP8PLE",
+    "readme": "file:README.md@sha256:8e88c46e70edd375f4084cb650a6a3e3a74f90e4ceacfced10af56648398f19a",
+    "config": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172"
+  },
+  "summary": {
+    "value": "Run Qwen 3.8 Flash Next locally on two RTX 3090 24 GB GPUs and 128 GB RAM. Start with the GitHub quickstart and pinned runtime; the weights require its custom vLLM overlay.",
+    "source": "file:README.md@sha256:8e88c46e70edd375f4084cb650a6a3e3a74f90e4ceacfced10af56648398f19a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 72758053011,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 4 Exp",
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen4_exp",
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 70%, INT32 21%, BF16 7%, FP16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Intel/Qwen3.8-Flash-Next-W4A16-AutoRound"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 27,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1402,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "auto-round 4 bit",
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen4_exp",
+      "source": "file:config.json@sha256:2925a0d0989384e0ef7973a14c97ba9c8dfc82c4ca3684d2e83cf4f57db6c172#vision_config"
+    }
+  }
+}

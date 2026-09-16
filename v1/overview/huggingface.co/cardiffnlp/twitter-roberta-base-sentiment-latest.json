@@ -1,0 +1,171 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+  "revision": "3216a57f2a0d9c45a2e6c20157c20c49fb4bf9c7",
+  "manifest": "blake3:32b9581ec34e481ce1b75df9230154ef4a494c2015882176a145317830f29209",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cardiffnlp/twitter-roberta-base-sentiment-latest",
+    "readme": "file:README.md@sha256:05ad85143ed60f0abe631ab935485db046c24710d9bec50829b017cfc1e12bf7",
+    "config": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129"
+  },
+  "summary": {
+    "value": "This is a RoBERTa-base model trained on 124M tweets from January 2018 to December 2021, and finetuned for sentiment analysis with the TweetEval benchmark. The original Twitter-based RoBERTa model can be found here and the original reference paper is TweetEval.",
+    "source": "file:README.md@sha256:05ad85143ed60f0abe631ab935485db046c24710d9bec50829b017cfc1e12bf7"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-4.0",
+        "name": "CC BY 4.0",
+        "commercial": "yes",
+        "note": "Attribution required"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-08-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 831,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 327540373,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:d2fba19997da698157196ba16f5fcb30a97a7551cef6845a0f3d743ee19c6129#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 13,
+        "Quantized": 4,
+        "Fine tuned": 239
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 13,
+        "quantized": 4,
+        "finetune": 239
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2202.03829",
+        "title": "TimeLMs: Diachronic Language Models from Twitter",
+        "first_author": "Daniel Loureiro",
+        "authors": 5,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "tweet_eval"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "zama-fhe/encrypted_sentiment_analysis",
+        "Gresekxnol/clipyr"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

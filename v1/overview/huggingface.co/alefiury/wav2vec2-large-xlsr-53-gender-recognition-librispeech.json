@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "alefiury/wav2vec2-large-xlsr-53-gender-recognition-librispeech",
+  "revision": "7a28165f33e1dbb37adbce09c0a9afcd6095dd4d",
+  "manifest": "blake3:b95190c60562eec7b3153b92eca4f88f27024919a8a4952d8be6d089cc34b38a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/alefiury/wav2vec2-large-xlsr-53-gender-recognition-librispeech",
+    "readme": "file:README.md@sha256:68d129da09d9faae66521c364cd38fd9f18952c0237b0f3c11e7e93ea1e2aecf",
+    "config": "file:config.json@sha256:bc717b614402f31476111882a07ff64b40ebf09b32e64298258d809885599ecc"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on Librispeech-clean-100 for gender recognition. It achieves the following results on the evaluation set: - Loss: 0.0061 - F1: 0.9993",
+    "source": "file:README.md@sha256:68d129da09d9faae66521c364cd38fd9f18952c0237b0f3c11e7e93ea1e2aecf"
+  },
+  "glance": {
+    "task": {
+      "value": "Audio classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315701634,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:bc717b614402f31476111882a07ff64b40ebf09b32e64298258d809885599ecc#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:bc717b614402f31476111882a07ff64b40ebf09b32e64298258d809885599ecc#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-xls-r-300m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2023-04-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-03-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 48,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9134545,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:bc717b614402f31476111882a07ff64b40ebf09b32e64298258d809885599ecc#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:bc717b614402f31476111882a07ff64b40ebf09b32e64298258d809885599ecc#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bc717b614402f31476111882a07ff64b40ebf09b32e64298258d809885599ecc#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32,
+      "source": "file:config.json@sha256:bc717b614402f31476111882a07ff64b40ebf09b32e64298258d809885599ecc#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForAudioClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "librispeech_asr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 13,
+      "top": [
+        "deepufrk/gender_detection1",
+        "bestofaiml/audio-classification",
+        "Sliverboy/heal-her-backend"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

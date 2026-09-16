@@ -1,0 +1,173 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/vit-base-patch16-224",
+  "revision": "3f49326eb077187dfe1c2a2bb15fbd74e6ab91e3",
+  "manifest": "blake3:ef3432105425a8ac1fe48bd451dc7e65d8f002f9636c8ffe25c52af20a639bda",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/vit-base-patch16-224",
+    "readme": "file:README.md@sha256:edb38cc47675c7320f41d9c9760bb0cc88c5820b482d87e1b5b6b5cc5459938d",
+    "config": "file:config.json@sha256:abdf73cc4ce79495a83f32a8c9265daa7a1363f5a3efa4704c88a6e7f45ad19d"
+  },
+  "summary": {
+    "value": "Vision Transformer (ViT) model pre-trained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224, and fine-tuned on ImageNet 2012 (1 million images, 1,000 classes) at resolution 224x224.",
+    "source": "file:README.md@sha256:edb38cc47675c7320f41d9c9760bb0cc88c5820b482d87e1b5b6b5cc5459938d"
+  },
+  "glance": {
+    "task": {
+      "value": "Image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 86567656,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "ViT",
+      "source": "file:config.json@sha256:abdf73cc4ce79495a83f32a8c9265daa7a1363f5a3efa4704c88a6e7f45ad19d#model_type"
+    },
+    "architecture_id": {
+      "value": "vit",
+      "source": "file:config.json@sha256:abdf73cc4ce79495a83f32a8c9265daa7a1363f5a3efa4704c88a6e7f45ad19d#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 998,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 181886803,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:abdf73cc4ce79495a83f32a8c9265daa7a1363f5a3efa4704c88a6e7f45ad19d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:abdf73cc4ce79495a83f32a8c9265daa7a1363f5a3efa4704c88a6e7f45ad19d#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:abdf73cc4ce79495a83f32a8c9265daa7a1363f5a3efa4704c88a6e7f45ad19d#num_attention_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 23,
+        "Quantized": 18,
+        "Fine tuned": 2092
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 23,
+        "quantized": 18,
+        "finetune": 2092
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2010.11929",
+        "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+        "first_author": "Alexey Dosovitskiy",
+        "authors": 12,
+        "year": "2020"
+      },
+      {
+        "id": "2006.03677",
+        "title": "Visual Transformers: Token-based Image Representation and Processing for Computer Vision",
+        "first_author": "Bichen Wu",
+        "authors": 10,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "imagenet-1k",
+      "imagenet-21k"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "ysharma/Workflow1111",
+        "Uthar/BodyPaint"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

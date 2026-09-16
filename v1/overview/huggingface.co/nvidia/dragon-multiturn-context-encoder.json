@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/dragon-multiturn-context-encoder",
+  "revision": "14ba90bb7472741e2a12ac4c0455110966c3f69d",
+  "manifest": "blake3:ee96671dee8e83dba7a5f0bc268d5ebbeac82f53440e21623754d5ec073f0f97",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/dragon-multiturn-context-encoder",
+    "readme": "file:README.md@sha256:4550b685df45f4896e740c26f82c15c060e4822886e07b7ffcea7a1165a907e3",
+    "config": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf"
+  },
+  "summary": {
+    "value": "dragon-multiturn-context-encoder is a BERT model for embeddings by nvidia, released Apr 2024.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": [
+          "other"
+        ],
+        "name": [
+          "other"
+        ]
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-04-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-05-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 5949685,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:18a3835b2794efb5ef996b2732dcb9eae642cc8960e4e844c9da9c5d996fe4bf#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2401.10225",
+        "title": "ChatQA: Building GPT-4 Level Conversational QA Models",
+        "first_author": "Zihan Liu",
+        "authors": 6,
+        "year": "2024"
+      },
+      {
+        "id": "2302.07452",
+        "title": "How to Train Your DRAGON: Diverse Augmentation Towards Generalizable Dense Retrieval",
+        "first_author": "Sheng-Chieh Lin",
+        "authors": 8,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "redfernstech/nvidia-dragon-multiturn-context-encoder"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

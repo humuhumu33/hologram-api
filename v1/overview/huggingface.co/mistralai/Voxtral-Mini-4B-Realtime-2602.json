@@ -1,0 +1,275 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+  "revision": "2769294da9567371363522aac9bbcfdd19447add",
+  "manifest": "blake3:e0286278e4fc79d0529a2d3b57519491ce94a12b6245126e777c30337b0803c8",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mistralai/Voxtral-Mini-4B-Realtime-2602",
+    "readme": "file:README.md@sha256:a5f8e9f596b6d933f8ad0ef4f9654b43b1f61a22bf9a40b63571804e869b2bc5",
+    "config": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93"
+  },
+  "summary": {
+    "value": "Voxtral Mini 4B Realtime 2602 is a multilingual, realtime speech-transcription model and among the first open-source solutions to achieve accuracy comparable to offline systems with a delay of <500ms.",
+    "source": "file:README.md@sha256:a5f8e9f596b6d933f8ad0ef4f9654b43b1f61a22bf9a40b63571804e869b2bc5"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4429679360,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Voxtral Realtime",
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#model_type"
+    },
+    "architecture_id": {
+      "value": "voxtral_realtime",
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "vllm",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "es",
+        "de",
+        "ru",
+        "zh",
+        "ja",
+        "it",
+        "pt",
+        "nl",
+        "ar",
+        "hi",
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "mistralai/Ministral-3-3B-Base-2512"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-01-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-03-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 981,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 11349868,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 26,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3072,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#tie_word_embeddings"
+    },
+    "audio_encoder": {
+      "value": "voxtral_realtime_encoder",
+      "source": "file:config.json@sha256:96582f5809ad179531d47f9f89d76c696058fbdeff608d6611dcb7e076ea7e93#audio_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 7.68,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 93.32,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 17.07,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 11.84,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 10.38,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 2.08,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 5.52,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 2.42,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 3.79,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 8.34,
+        "date": "2026-01-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 4,
+        "Quantized": 32,
+        "Fine tuned": 18
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 4,
+        "quantized": 32,
+        "finetune": 18
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2602.11298",
+        "title": "Voxtral Realtime",
+        "first_author": "Alexander H. Liu",
+        "authors": 134,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 32,
+      "top": [
+        "mistralai/Voxtral-Realtime-WebGPU",
+        "Steveeeeeeen/SpeechLLM-Playbook",
+        "GenAISecurityProject/OWASP-AIBOM-Generator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

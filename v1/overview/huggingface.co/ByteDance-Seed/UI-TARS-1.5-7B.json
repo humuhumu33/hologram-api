@@ -1,0 +1,452 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ByteDance-Seed/UI-TARS-1.5-7B",
+  "revision": "683d002dd99d8f95104d31e70391a39348857f4e",
+  "manifest": "blake3:e152975d989989a6da7048b334f4b5a28d92083e86bee2929d1845b4c1c84c3c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ByteDance-Seed/UI-TARS-1.5-7B",
+    "readme": "file:README.md@sha256:fd6ebdc23c119b356e12876c964597d2920e3a2878424a6b5a5b8706e6bc23c4",
+    "config": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43"
+  },
+  "summary": {
+    "value": "--- license: apache-2.0 language: - en pipelinetag: image-text-to-text tags: - multimodal - gui libraryname: transformers ---",
+    "source": "file:README.md@sha256:fd6ebdc23c119b356e12876c964597d2920e3a2878424a6b5a5b8706e6bc23c4"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8292166656,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 2.5 VL",
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen2_5_vl",
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2025-04-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 604,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4220295,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3584,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#hidden_size"
+    },
+    "heads": {
+      "value": 28,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152064,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "overall",
+        "value": 61.6,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "android_studio_macos",
+        "value": 57.5,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "autocad_windows",
+        "value": 41.2,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "blender_windows",
+        "value": 59.2,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "davinci_macos",
+        "value": 54.5,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "eviews_windows",
+        "value": 96,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "excel_macos",
+        "value": 68.8,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "fruitloops_windows",
+        "value": 43.9,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "illustrator_windows",
+        "value": 22.6,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "inventor_windows",
+        "value": 58.6,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "linux_common_linux",
+        "value": 66,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "macos_common_macos",
+        "value": 56.9,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "matlab_macos",
+        "value": 81.7,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "origin_windows",
+        "value": 45.2,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "photoshop_windows",
+        "value": 56.9,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "powerpoint_windows",
+        "value": 79.3,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "premiere_windows",
+        "value": 42.3,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "pycharm_macos",
+        "value": 65.4,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "quartus_windows",
+        "value": 44.4,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "solidworks_windows",
+        "value": 53.2,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "stata_windows",
+        "value": 49,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "unreal_engine_windows",
+        "value": 65.7,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "vivado_windows",
+        "value": 70,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "vmware_macos",
+        "value": 82.9,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "vscode_macos",
+        "value": 72.7,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "windows_common_windows",
+        "value": 37,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "word_macos",
+        "value": 88.1,
+        "date": "2026-03-17T17:04:38.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Merged": 1,
+        "Quantized": 13,
+        "Fine tuned": 12
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "merge": 1,
+        "quantized": 13,
+        "finetune": 12
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2501.12326",
+        "title": "UI-TARS: Pioneering Automated GUI Interaction with Native Agents",
+        "first_author": "Yujia Qin",
+        "authors": 35,
+        "year": "2025"
+      },
+      {
+        "id": "2404.07972",
+        "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+        "first_author": "Tianbao Xie",
+        "authors": 17,
+        "year": "2024"
+      },
+      {
+        "id": "2409.08264",
+        "title": "Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale",
+        "first_author": "Rogerio Bonatti",
+        "authors": 11,
+        "year": "2024"
+      },
+      {
+        "id": "2401.13919",
+        "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
+        "first_author": "Hongliang He",
+        "authors": 8,
+        "year": "2024"
+      },
+      {
+        "id": "2504.01382",
+        "title": "An Illusion of Progress? Assessing the Current State of Web Agents",
+        "first_author": "Tianci Xue",
+        "authors": 8,
+        "year": "2025"
+      },
+      {
+        "id": "2405.14573",
+        "title": "AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents",
+        "first_author": "Christopher Rawles",
+        "authors": 15,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 13,
+      "top": [
+        "prithivMLmods/CUA-GUI-Operator",
+        "Mungert/UI-TARS-1.5-7B",
+        "Stremly/uitars"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

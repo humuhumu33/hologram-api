@@ -1,0 +1,225 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/phi-4",
+  "revision": "2db69c1c3e91a05d2c64a3185acfbaf36f744e25",
+  "manifest": "blake3:f8c7b9f3c407673e413ee21c1a40c9645beb5fce2a60fcbf84dba9d6a9991d7f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/phi-4",
+    "readme": "file:README.md@sha256:4cc56faa6a5bcbde6227789b2ef9aedfde481ca660c8a4b686703aae19b00011",
+    "config": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045"
+  },
+  "summary": {
+    "value": "Our training data is an extension of the data used for Phi-3 and includes a wide variety of sources from:",
+    "source": "file:README.md@sha256:4cc56faa6a5bcbde6227789b2ef9aedfde481ca660c8a4b686703aae19b00011"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 14659507200,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Phi 3",
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#model_type"
+    },
+    "architecture_id": {
+      "value": "phi3",
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-12-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2302,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 14335849,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 100352,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 250000,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:07eedad2c48798b6e3728e4a1b75e0e092019a375ba725a40e40c78d13664045#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 70.4,
+        "date": "2026-06-30T12:47:31.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/c2/37/c23724de-5d83-4794-abcb-9af3ce249886.json"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "open_question",
+        "value": 38.54,
+        "date": "2026-06-02T09:57:56.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "mcq_4_choices",
+        "value": 40.66,
+        "date": "2026-06-02T09:57:56.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 205,
+        "Merged": 2,
+        "Quantized": 164,
+        "Fine tuned": 115
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 205,
+        "merge": 2,
+        "quantized": 164,
+        "finetune": 115
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2412.08905",
+        "title": "Phi-4 Technical Report",
+        "first_author": "Marah Abdin",
+        "authors": 27,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "pliny-the-prompter/obliteratus",
+        "ginigen-ai/open-router-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

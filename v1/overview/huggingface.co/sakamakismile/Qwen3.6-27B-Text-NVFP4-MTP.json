@@ -1,0 +1,181 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sakamakismile/Qwen3.6-27B-Text-NVFP4-MTP",
+  "revision": "6f194695406a3bc88a00573187d5b2eecf984a99",
+  "manifest": "blake3:73db67a69e8bc4dc7d86a775d1b901781bf4d51527c3c5b2a851ac1cc9fc785a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sakamakismile/Qwen3.6-27B-Text-NVFP4-MTP",
+    "readme": "file:README.md@sha256:46f451c1f9be7e90e6ee57a61f5f657659e3be87af58b928e217a30bf708fb6d",
+    "config": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689"
+  },
+  "summary": {
+    "value": "NVFP4-quantized text-only sibling of Qwen/Qwen3.6-27B, with the MTP (Multi-Token Prediction) head restored in bf16 so speculative decoding actually works.",
+    "source": "file:README.md@sha256:46f451c1f9be7e90e6ee57a61f5f657659e3be87af58b928e217a30bf708fb6d"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 16667329536,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 73%, BF16 18%, FP8 9%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "ja",
+        "ko",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "ru",
+        "ar"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.6-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 81,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3331401,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:d8ddef429bfbe7e9d3fd58655730409b686c04aea3ad951aecd3a5be3d940689#quantization_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "embedl/hfviewer",
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

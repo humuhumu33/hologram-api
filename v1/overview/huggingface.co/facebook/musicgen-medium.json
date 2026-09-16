@@ -1,0 +1,123 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/musicgen-medium",
+  "revision": "d3bd7b00761b78ad7a8a05145ee31e7832e9916c",
+  "manifest": "blake3:d25126c38dfd6d2282ce9a959994b094a584d46032b172ad469018d2c297ec53",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/musicgen-medium",
+    "readme": "file:README.md@sha256:ab437e2412c0405c964bbb5d3ce18bfb3e8f35a30282561fa64f7a383a65d6f2",
+    "config": "file:config.json@sha256:5484e9b7f2789a77bcece6ed3b0d7c8a736e4ff4103e68724ae32e0e825eedfa"
+  },
+  "summary": {
+    "value": "MusicGen is a text-to-music model capable of genreating high-quality music samples conditioned on text descriptions or audio prompts. It is a single stage auto-regressive Transformer model trained over a 32kHz EnCodec tokenizer with 4 codebooks sampled at 50 Hz.",
+    "source": "file:README.md@sha256:ab437e2412c0405c964bbb5d3ce18bfb3e8f35a30282561fa64f7a383a65d6f2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to audio",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Musicgen",
+      "source": "file:config.json@sha256:5484e9b7f2789a77bcece6ed3b0d7c8a736e4ff4103e68724ae32e0e825eedfa#model_type"
+    },
+    "architecture_id": {
+      "value": "musicgen",
+      "source": "file:config.json@sha256:5484e9b7f2789a77bcece6ed3b0d7c8a736e4ff4103e68724ae32e0e825eedfa#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2023-06-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-11-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 168,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 31678626,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Quantized": 2,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "quantized": 2,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTextToWaveform",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2306.05284",
+        "title": "Simple and Controllable Music Generation",
+        "first_author": "Jade Copet",
+        "authors": 8,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "facebook/MusicGen",
+        "build-small-hackathon/LoFinity"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

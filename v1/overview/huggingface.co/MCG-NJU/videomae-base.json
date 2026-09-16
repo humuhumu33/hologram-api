@@ -1,0 +1,140 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MCG-NJU/videomae-base",
+  "revision": "dc740ceda42fce44faed2ea03c6d447db72f6af9",
+  "manifest": "blake3:d06a15514872a31a4d5dd15de5ecb5b9ae8ea2790dd3bcc36ec0015acd78d1fd",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MCG-NJU/videomae-base",
+    "readme": "file:README.md@sha256:1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376",
+    "config": "file:config.json@sha256:5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212"
+  },
+  "summary": {
+    "value": "VideoMAE model pre-trained on Kinetics-400 for 1600 epochs in a self-supervised way. It was introduced in the paper VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training by Tong et al. and first released in this repository.",
+    "source": "file:README.md@sha256:1cfd632ad35d864085baeb8cc55168ee1b59592a3a92221c3f7d405374bd0376"
+  },
+  "glance": {
+    "task": {
+      "value": "video-classification",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 94210944,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Videomae",
+      "source": "file:config.json@sha256:5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212#model_type"
+    },
+    "architecture_id": {
+      "value": "videomae",
+      "source": "file:config.json@sha256:5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-08-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-03-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 56,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4835171,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:5fbedfea3706bd9fe6c0dc706beeb501ae72e4954703e03bebe3406f046f8212#num_attention_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 699
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 699
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForPreTraining",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2203.12602",
+        "title": "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training",
+        "first_author": "Zhan Tong",
+        "authors": 4,
+        "year": "2022"
+      },
+      {
+        "id": "2111.06377",
+        "title": "Masked Autoencoders Are Scalable Vision Learners",
+        "first_author": "Kaiming He",
+        "authors": 6,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 36,
+      "top": [
+        "mteb/leaderboard",
+        "AtrriJi/deepfake-videomae",
+        "namnh2002/video-summarization_timesformer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

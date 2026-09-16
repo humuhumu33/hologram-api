@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cardiffnlp/twitter-xlm-roberta-base-sentiment",
+  "revision": "f2f1202b1bdeb07342385c3f807f9c07cd8f5cf8",
+  "manifest": "blake3:2e4175493d58f0196c1b2dd83bc10858306e0ba24a941512f65ab54d0b27aa9e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cardiffnlp/twitter-xlm-roberta-base-sentiment",
+    "readme": "file:README.md@sha256:e68315c0998946dc12ab17e7b54911871e5adf379f3169760961d2f4a75f9f42",
+    "config": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41"
+  },
+  "summary": {
+    "value": "This is a multilingual XLM-roBERTa-base model trained on 198M tweets and finetuned for sentiment analysis. The sentiment fine-tuning was done on 8 languages (Ar, En, Fr, De, Hi, It, Sp, Pt) but it can be used for more languages (see paper for details).",
+    "source": "file:README.md@sha256:e68315c0998946dc12ab17e7b54911871e5adf379f3169760961d2f4a75f9f42"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-07-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 276,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 55339633,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:daeb7bd985217b249d89aaaa3fd589b3846e003d8d29d75fb78f0bd892609b41#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 39
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 39
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2104.12250",
+        "title": "XLM-T: Multilingual Language Models in Twitter for Sentiment Analysis and Beyond",
+        "first_author": "Francesco Barbieri",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "g8a9/ferret",
+        "kyled/PhraseSentimentEmotionAnalysis",
+        "Yuvrajxms09/MedCall-AI"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

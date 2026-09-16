@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "shibing624/text2vec-base-chinese",
+  "revision": "183bb99aa7af74355fb58d16edf8c13ae7c5433e",
+  "manifest": "blake3:40e7ea1e63d3c314603aff63703642fb08215263ef5129ef8b8f21708dc4d985",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/shibing624/text2vec-base-chinese",
+    "readme": "file:README.md@sha256:a872929117b66405f669cb80dd778e860ae3e3146531a6deb294c5db2e587e33",
+    "config": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36"
+  },
+  "summary": {
+    "value": "It maps sentences to a 768 dimensional dense vector space and can be used for tasks like sentence embeddings, text matching or semantic search.",
+    "source": "file:README.md@sha256:a872929117b66405f669cb80dd778e860ae3e3146531a6deb294c5db2e587e33"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 102268160,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-11-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 801,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 36172210,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#num_attention_heads"
+    },
+    "vocab": {
+      "value": 21128,
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:fdf4d96b74a9e2dc8ae752d74bcfbbf8b3a754b3d97412477f8768ef65a7db36#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "shibing624/nli_zh"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "mteb/leaderboard",
+        "qingxu98/gpt-academic",
+        "mteb/leaderboard_legacy"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

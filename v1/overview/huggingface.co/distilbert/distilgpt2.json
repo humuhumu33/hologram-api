@@ -1,0 +1,215 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "distilbert/distilgpt2",
+  "revision": "2290a62682d06624634c1f46a6ad5be0f47f38aa",
+  "manifest": "blake3:29c5d133e0e756f743b962d75f86fe7581561de4a6f79c4351441dbfa682366c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/distilbert/distilgpt2",
+    "readme": "file:README.md@sha256:111f8d09ac565c745d91df88929147159eaa62b2e58e03943a2e03c1a1439ad7",
+    "config": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a"
+  },
+  "summary": {
+    "value": "DistilGPT2 (short for Distilled-GPT2) is an English-language model pre-trained with the supervision of the smallest version of Generative Pre-trained Transformer 2 (GPT-2). Like GPT-2, DistilGPT2 can be used to generate text.",
+    "source": "file:README.md@sha256:111f8d09ac565c745d91df88929147159eaa62b2e58e03943a2e03c1a1439ad7"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 88204032,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "GPT 2",
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#model_type"
+    },
+    "architecture_id": {
+      "value": "gpt2",
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#model_type"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#n_positions"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 643,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 255976408,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#n_layer"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#n_embd"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#n_head"
+    },
+    "vocab": {
+      "value": 50257,
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#vocab_size"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:4ec5947c1d59fee6212cdf3b0ec1a53eac02092554c5ff0a733488cbd2c64f3a#n_positions"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "WikiText-103",
+        "task": "Perplexity",
+        "value": 21.1,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 84,
+        "Merged": 2,
+        "Quantized": 24,
+        "Fine tuned": 1532
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 84,
+        "merge": 2,
+        "quantized": 24,
+        "finetune": 1532
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.01108",
+        "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+        "first_author": "Victor Sanh",
+        "authors": 4,
+        "year": "2019"
+      },
+      {
+        "id": "2201.08542",
+        "title": "Can Model Compression Improve NLP Fairness",
+        "first_author": "Guangxuan Xu",
+        "authors": 2,
+        "year": "2022"
+      },
+      {
+        "id": "2203.12574",
+        "title": "Mitigating Gender Bias in Distilled Language Models via Counterfactual Role Reversal",
+        "first_author": "Umang Gupta",
+        "authors": 10,
+        "year": "2022"
+      },
+      {
+        "id": "1910.09700",
+        "title": "Quantifying the Carbon Emissions of Machine Learning",
+        "first_author": "Alexandre Lacoste",
+        "authors": 4,
+        "year": "2019"
+      },
+      {
+        "id": "1503.02531",
+        "title": "Distilling the Knowledge in a Neural Network",
+        "first_author": "Geoffrey Hinton",
+        "authors": 3,
+        "year": "2015"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "openwebtext"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "pliny-the-prompter/obliteratus",
+        "exbert-project/exbert"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

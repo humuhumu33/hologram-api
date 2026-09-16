@@ -1,0 +1,189 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "indonesian-nlp/wav2vec2-indonesian-javanese-sundanese",
+  "revision": "e5e699fa5aa5bdce999276a90a29589587b58ac9",
+  "manifest": "blake3:9559e7a1823f79b644f35b0b921c003fc139b119f7288c14ba4f22660d67c099",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/indonesian-nlp/wav2vec2-indonesian-javanese-sundanese",
+    "readme": "file:README.md@sha256:c3a7d5bb925c9c3a5dfbc4c2a199e87920e6d6a06f4569eee6d060f395379827",
+    "config": "file:config.json@sha256:dd082fb86c6e9787eb4dceb48ceb14faa7ec904b78d607c641eac4201bfcd039"
+  },
+  "summary": {
+    "value": "This is the model built for the project Multilingual Speech Recognition for Indonesian Languages. It is a fine-tuned facebook/wav2vec2-large-xlsr-53 model on the Indonesian Common Voice dataset, High-quality TTS data for Javanese - SLR41, and High-quality TTS data for Sundanese - SLR44 datasets.",
+    "source": "file:README.md@sha256:c3a7d5bb925c9c3a5dfbc4c2a199e87920e6d6a06f4569eee6d060f395379827"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:dd082fb86c6e9787eb4dceb48ceb14faa7ec904b78d607c641eac4201bfcd039#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:dd082fb86c6e9787eb4dceb48ceb14faa7ec904b78d607c641eac4201bfcd039#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "id",
+        "jv",
+        "sun"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-08-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 18282963,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:dd082fb86c6e9787eb4dceb48ceb14faa7ec904b78d607c641eac4201bfcd039#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:dd082fb86c6e9787eb4dceb48ceb14faa7ec904b78d607c641eac4201bfcd039#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:dd082fb86c6e9787eb4dceb48ceb14faa7ec904b78d607c641eac4201bfcd039#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30,
+      "source": "file:config.json@sha256:dd082fb86c6e9787eb4dceb48ceb14faa7ec904b78d607c641eac4201bfcd039#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice 6.1",
+        "task": "Test WER",
+        "value": 4.056,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 6.1",
+        "task": "Test CER",
+        "value": 1.472,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 7",
+        "task": "Test WER",
+        "value": 4.492,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 7",
+        "task": "Test CER",
+        "value": 1.577,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Dev Data",
+        "task": "Test WER",
+        "value": 48.94,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Test Data",
+        "task": "Test WER",
+        "value": 68.95,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "mozilla-foundation/common_voice_7_0",
+      "openslr",
+      "magic_data",
+      "titml"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 7,
+      "top": [
+        "embedl/hfviewer",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "Gradio-Blocks/multilingual-asr"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

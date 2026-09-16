@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "zeroentropy/zerank-2-reranker",
+  "revision": "5eae30d5ee3c6b2df2ef6d723bde45172d761c4c",
+  "manifest": "blake3:88a4d7ab4e03a5909e0f705b2f0bf28b33aa0b26a849d7f0e0ee8749ab751d2b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/zeroentropy/zerank-2-reranker",
+    "readme": "file:README.md@sha256:a296c356d2484632efcefb3d4e447d609e81174b8c9a325ab6398d871d242013",
+    "config": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0"
+  },
+  "summary": {
+    "value": "In search engines, rerankers are crucial for improving the accuracy of your retrieval system.",
+    "source": "file:README.md@sha256:a296c356d2484632efcefb3d4e447d609e81174b8c9a325ab6398d871d242013"
+  },
+  "glance": {
+    "task": {
+      "value": "text-ranking",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4022468096,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#model_type"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-11-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 120,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1707453,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:85e199caee58ec6aeeefa1252bf61fbdbd783c29a0d3a2846ef2b6b441316ab0#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 13,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 13,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2509.12541",
+        "title": "zELO: ELO-inspired Training Method for Rerankers and Embedding Models",
+        "first_author": "Nicholas Pipitone",
+        "authors": 5,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 13,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "maxpar1/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sentence-transformers-testing/stsb-bert-tiny-safetensors",
+  "revision": "f3cb857cba53019a20df283396bcca179cf051a4",
+  "manifest": "blake3:8f883efcdf3d1dd23c60f702e9c1cd39acd5b9337d93882fac89de52d0a7867a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sentence-transformers-testing/stsb-bert-tiny-safetensors",
+    "readme": "file:README.md@sha256:f49058be92fbc0c3e25195868a316431087327cc5156938629f0bb3bb651d6b8",
+    "config": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model: It maps sentences & paragraphs to a 128 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+    "source": "file:README.md@sha256:f49058be92fbc0c3e25195868a316431087327cc5156938629f0bb3bb651d6b8"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4385920,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2023-11-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-01-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13876908,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 2,
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 128,
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#hidden_size"
+    },
+    "heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:959c2055d84f60a9d7fa989e1eb28921b739f313e2f76569a74adae6f1c06e08#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  }
+}

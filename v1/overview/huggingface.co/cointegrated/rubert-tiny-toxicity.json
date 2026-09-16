@@ -1,0 +1,182 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cointegrated/rubert-tiny-toxicity",
+  "revision": "5d37eff844868e243467e4c38898bad46c271af2",
+  "manifest": "blake3:22cfe1bfa95ba6d5cca1dd6affc081ee5d83134d736060eeef2346ee40974a2e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cointegrated/rubert-tiny-toxicity",
+    "readme": "file:README.md@sha256:8f5f99f1dd68da5eb957c75c9022ba61f91eb54f4ca5f0ae3aed723bcd6fe7b3",
+    "config": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c"
+  },
+  "summary": {
+    "value": "This is the cointegrated/rubert-tiny model fine-tuned for classification of toxicity and inappropriateness for short informal Russian texts, such as comments in social networks.",
+    "source": "file:README.md@sha256:8f5f99f1dd68da5eb957c75c9022ba61f91eb54f4ca5f0ae3aed723bcd6fe7b3"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 11786245,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ru"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "cointegrated/rubert-tiny"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 48,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1785860,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 3,
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 312,
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 29564,
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:fddebd6be551d422f8849cbf637011f152e4f0425f6bd0d1786d6518fab3e31c#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2103.05345",
+        "title": "Detecting Inappropriate Messages on Sensitive Topics that Could Harm a Company's Reputation",
+        "first_author": "Nikolay Babakov",
+        "authors": 5,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 31,
+      "top": [
+        "cointegrated/toxic-classifier-ru",
+        "AntNikYab/NaturalLanguageProcessing",
+        "AnastasiaMozhayskaya/nlp_lstm_project"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

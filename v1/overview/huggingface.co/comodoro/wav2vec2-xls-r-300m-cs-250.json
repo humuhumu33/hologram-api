@@ -1,0 +1,194 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "comodoro/wav2vec2-xls-r-300m-cs-250",
+  "revision": "73e2b9004f35d3ca79316a624e7edc3cdaa45d40",
+  "manifest": "blake3:f82f6a986f529219223577624b3c13bc0adbeadaabb5256f6356539836a5b5ec",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/comodoro/wav2vec2-xls-r-300m-cs-250",
+    "readme": "file:README.md@sha256:abe20a3f47cb1f93c16ecb5dc6643436ecacc8267b87bdc770acf4de2224d6c3",
+    "config": "file:config.json@sha256:35d09d7133b26340c9e701e84aca947ed27a8256b9b2988dfcf18a5bdab3440f"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on the commonvoice 8.0 dataset as well as other datasets listed below.",
+    "source": "file:README.md@sha256:abe20a3f47cb1f93c16ecb5dc6643436ecacc8267b87bdc770acf4de2224d6c3"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315485870,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:35d09d7133b26340c9e701e84aca947ed27a8256b9b2988dfcf18a5bdab3440f#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:35d09d7133b26340c9e701e84aca947ed27a8256b9b2988dfcf18a5bdab3440f#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "cs"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-xls-r-300m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-10-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 5,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13239784,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:35d09d7133b26340c9e701e84aca947ed27a8256b9b2988dfcf18a5bdab3440f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:35d09d7133b26340c9e701e84aca947ed27a8256b9b2988dfcf18a5bdab3440f#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:35d09d7133b26340c9e701e84aca947ed27a8256b9b2988dfcf18a5bdab3440f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 46,
+      "source": "file:config.json@sha256:35d09d7133b26340c9e701e84aca947ed27a8256b9b2988dfcf18a5bdab3440f#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice 8",
+        "task": "Test WER",
+        "value": 7.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 8",
+        "task": "Test CER",
+        "value": 2.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Dev Data",
+        "task": "Test WER",
+        "value": 43.44,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Robust Speech Event - Test Data",
+        "task": "Test WER",
+        "value": 38.5,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "mozilla-foundation/common_voice_8_0",
+      "ovm",
+      "pscr",
+      "vystadial2016"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "comodoro/Wav2Vec2-XLS-R-CS-customized",
+        "comodoro/Wav2Vec2-XLS-R-CS",
+        "Sven33/SATEv1.5"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

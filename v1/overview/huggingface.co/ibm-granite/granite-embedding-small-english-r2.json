@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ibm-granite/granite-embedding-small-english-r2",
+  "revision": "2ab6fa8ea2d674564defd37171ae19079b864b33",
+  "manifest": "blake3:115277743602f1a2d762e2b560b7d3d22969be88d7d01e88d803adbf0a794279",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ibm-granite/granite-embedding-small-english-r2",
+    "readme": "file:README.md@sha256:2cf921ebf63fc2421584205d1ad7c4eb2b3c6a0b3bfb964e84e3dfb82103e7fb",
+    "config": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198"
+  },
+  "summary": {
+    "value": "Model Summary: Granite-embedding-small-english-r2 is a 47M parameter dense biencoder embedding model from the Granite Embeddings collection that can be used to generate high quality text embeddings. This model produces embedding vectors of size 384 based on context length of upto 8192 tokens.",
+    "source": "file:README.md@sha256:2cf921ebf63fc2421584205d1ad7c4eb2b3c6a0b3bfb964e84e3dfb82103e7fb"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 47662464,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2025-07-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-01-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 80,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 23630311,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50368,
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:154518e6452854eb11123ce433d165f2773437aa0f36935d2204249b2c327198#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 11,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 11,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2508.21085",
+        "title": "Granite Embedding R2 Models",
+        "first_author": "Parul Awasthy",
+        "authors": 20,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 14,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "maxpar1/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

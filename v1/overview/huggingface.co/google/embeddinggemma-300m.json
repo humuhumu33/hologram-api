@@ -1,0 +1,158 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/embeddinggemma-300m",
+  "revision": "57c266a740f537b4dc058e1b0cda161fd15afa75",
+  "addressed": false,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/embeddinggemma-300m",
+    "readme": "file:README.md@sha256:e53702f564878ea87085742fe3f485872bef81317086e9ffe37125a81809772a"
+  },
+  "summary": {
+    "value": "EmbeddingGemma is a 300M parameter, state-of-the-art for its size, open embedding model from Google, built from Gemma 3 (with T5Gemma initialization) and the same research and technology used to create Gemini models.",
+    "source": "file:README.md@sha256:e53702f564878ea87085742fe3f485872bef81317086e9ffe37125a81809772a"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 302863104,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 3 Text",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3_text",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-07-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-09-25",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1917,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 18025117,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "mteb/arguana",
+        "task": "ArguAna_default_test",
+        "value": 71.535,
+        "date": "2026-03-05T13:56:28.000Z",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v1.34.7"
+      },
+      {
+        "dataset": "mteb/arguana",
+        "task": "ArguAna",
+        "value": 71.535,
+        "date": "2026-03-05T13:56:28.000Z",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v1.34.7"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 12,
+        "Quantized": 311,
+        "Fine tuned": 274
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 12,
+        "quantized": 311,
+        "finetune": 274
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2509.20354",
+        "title": "EmbeddingGemma: Powerful and Lightweight Text Representations",
+        "first_author": "Henrique Schechter Vera",
+        "authors": 88,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "hakari-bench/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

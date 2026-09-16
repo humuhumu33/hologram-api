@@ -1,0 +1,127 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
+  "revision": "8e5395bf66c3432cc53d2084dae48ecf5f68db0f",
+  "manifest": "blake3:f9251e830540e090ca63689117d54604cfc56818eea9b3fb4ca06aa5a378ea9f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
+    "readme": "file:README.md@sha256:12bca0684b3a71a8530bd06dc85d937339b56b572b557f8a411a7f89a057eb7f"
+  },
+  "summary": {
+    "value": "The training process fuses Trace Inversion data augmentation with a Three-Stage Curriculum Learning pipeline. The core engineering focuses on expanding context length gradually while training on reconstructed reasoning traces and real agent trajectories to keep the output format stable.",
+    "source": "file:README.md@sha256:12bca0684b3a71a8530bd06dc85d937339b56b572b557f8a411a7f89a057eb7f"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 460730096,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "CLIP",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "clip",
+      "source": "api:config.model_type"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "es",
+        "ru",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Jackrong/Qwopus3.6-27B-v2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-06-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 335,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 921092,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "datasets": {
+    "value": [
+      "Jackrong/Claude-opus-4.6-TraceInversion-9000x",
+      "Jackrong/Claude-opus-4.7-TraceInversion-5000x",
+      "lambda/hermes-agent-reasoning-traces"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

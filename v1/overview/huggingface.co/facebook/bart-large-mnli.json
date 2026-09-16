@@ -1,0 +1,180 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/bart-large-mnli",
+  "revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "manifest": "blake3:4ef253646f5b690f05d3d054a06235680a239acb1bc38b5d4573ce4f50884ca9",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/bart-large-mnli",
+    "readme": "file:README.md@sha256:d022b7cb54ca2f65fac41cf6c9601b4491b4ac22a301227288a38beef2a18aeb",
+    "config": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86"
+  },
+  "summary": {
+    "value": "This is the checkpoint for bart-large after being trained on the MultiNLI (MNLI) dataset.",
+    "source": "file:README.md@sha256:d022b7cb54ca2f65fac41cf6c9601b4491b4ac22a301227288a38beef2a18aeb"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 407344133,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Bart",
+      "source": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86#model_type"
+    },
+    "architecture_id": {
+      "value": "bart",
+      "source": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86#model_type"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1612,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 161974757,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86#d_model"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86#vocab_size"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:a0f9bcb245b680a96ccae0ad8d155f267ec3e3c971ef4a4937e52ea9ba368a86#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 5,
+        "Quantized": 4,
+        "Fine tuned": 35
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 5,
+        "quantized": 4,
+        "finetune": 35
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "zero-shot-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.13461",
+        "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+        "first_author": "Mike Lewis",
+        "authors": 8,
+        "year": "2019"
+      },
+      {
+        "id": "1909.00161",
+        "title": "Benchmarking Zero-shot Text Classification: Datasets, Evaluation and Entailment Approach",
+        "first_author": "Wenpeng Yin",
+        "authors": 3,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "multi_nli"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "OmarElgammal1/text-sentiment-analysis",
+        "Uthar/BodyPaint"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

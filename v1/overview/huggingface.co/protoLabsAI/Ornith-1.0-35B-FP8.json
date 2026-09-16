@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "protoLabsAI/Ornith-1.0-35B-FP8",
+  "revision": "eeecbda6ce16f5525bc0f19e253fd9933e1cccc1",
+  "manifest": "blake3:7cbe2dff722b19300b692d6a92af09ac8942a358fdc462453a4aec03d1a56914",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/protoLabsAI/Ornith-1.0-35B-FP8",
+    "readme": "file:README.md@sha256:76bb9be2fc648f38e928011938614c0f4034e4e741b924092bf1036d8d92f0a7",
+    "config": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c"
+  },
+  "summary": {
+    "value": "Block-wise FP8 (E4M3) quantization of deepreinforce-ai/Ornith-1.0-35B — DeepReinforce's self-scaffolding agentic-coding MoE (Qwen3.5-35B-A3B hybrid). Served size 35 GB; fits a single 80–96 GB GPU with full context.",
+    "source": "file:README.md@sha256:76bb9be2fc648f38e928011938614c0f4034e4e741b924092bf1036d8d92f0a7"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 35109172336,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 MoE",
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 93%, BF16 7%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "ornith-ai/Ornith-1.0-35B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-06-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 8,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1007835,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_moe_vision",
+      "source": "file:config.json@sha256:bb5176933fdf552d401d866d1e96beb59ba3b52f58df1dfcfbdbb6ff4173825c#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

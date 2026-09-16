@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "llava-hf/llava-v1.6-mistral-7b-hf",
+  "revision": "2424fdd47412fccc66d91719126b420e9fbd7065",
+  "manifest": "blake3:2a02335fa1916365f5ad00ece559bc35bf57413389e4a129a281a239f561da61",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/llava-hf/llava-v1.6-mistral-7b-hf",
+    "readme": "file:README.md@sha256:377ca53097a5e237941e8b81d3bee9de57a5a9ccd0757772444bcb53f3c7436b",
+    "config": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e"
+  },
+  "summary": {
+    "value": "The LLaVA-NeXT model was proposed in LLaVA-NeXT: Improved reasoning, OCR, and world knowledge by Haotian Liu, Chunyuan Li, Yuheng Li, Bo Li, Yuanhan Zhang, Sheng Shen, Yong Jae Lee.",
+    "source": "file:README.md@sha256:377ca53097a5e237941e8b81d3bee9de57a5a9ccd0757772444bcb53f3c7436b"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7566747648,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "LLaVA Next",
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#model_type"
+    },
+    "architecture_id": {
+      "value": "llava_next",
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-02-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-12-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 315,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 24237956,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32064,
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#rope_theta"
+    },
+    "vision_encoder": {
+      "value": "clip_vision_model",
+      "source": "file:config.json@sha256:ddf45e24cea7da06747d67a2f377b8fe65e672f61180c50adae7fd9c0392ab6e#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 12,
+        "Merged": 1,
+        "Quantized": 4,
+        "Fine tuned": 189
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 12,
+        "merge": 1,
+        "quantized": 4,
+        "finetune": 189
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2310.03744",
+        "title": "Improved Baselines with Visual Instruction Tuning",
+        "first_author": "Haotian Liu",
+        "authors": 4,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 65,
+      "top": [
+        "merve/vision_papers",
+        "merve/llava-next",
+        "TencentARC/BrushEdit"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "revision": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+  "manifest": "blake3:1a6a2c70c197e6e6bcf5df3ae16cc8ab3b5aa0cd0e685f0040aab6ece4a7df38",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+    "readme": "file:README.md@sha256:4ffce2b113463476777ccc8efd1f0ea0571510a96a2c84f2d2aab152951b13ca",
+    "config": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57"
+  },
+  "summary": {
+    "value": "mnli-m | mnli-mm | fever-nli | anli-all | anli-r3 ---------|----------|---------|----------|---------- 0.903 | 0.903 | 0.777 | 0.579 | 0.495",
+    "source": "file:README.md@sha256:4ffce2b113463476777ccc8efd1f0ea0571510a96a2c84f2d2aab152951b13ca"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 184424963,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Deberta V2",
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#model_type"
+    },
+    "architecture_id": {
+      "value": "deberta-v2",
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-04-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 225,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 86429619,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#num_attention_heads"
+    },
+    "vocab": {
+      "value": 128100,
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:a6c616d6dabeacf90fd0e776c741d3f0f30a05533ccf0bd3b5b62e94cfaa8d57#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "anli",
+        "task": "Accuracy",
+        "value": 0.495,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Macro",
+        "value": 0.4984740618243923,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Micro",
+        "value": 0.495,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Weighted",
+        "value": 0.4984357572868885,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Macro",
+        "value": 0.49461028192371476,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Micro",
+        "value": 0.495,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Weighted",
+        "value": 0.495,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Macro",
+        "value": 0.4942810999491704,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Micro",
+        "value": 0.495,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Weighted",
+        "value": 0.4944671868893595,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "loss",
+        "value": 1.8788293600082397,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Accuracy",
+        "value": 0.712,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Macro",
+        "value": 0.7134839439315348,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Micro",
+        "value": 0.712,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Weighted",
+        "value": 0.7134676028447461,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Macro",
+        "value": 0.7119814425203647,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Micro",
+        "value": 0.712,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Weighted",
+        "value": 0.712,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Macro",
+        "value": 0.7119226991285647,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Micro",
+        "value": 0.712,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Weighted",
+        "value": 0.7119242267218338,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "loss",
+        "value": 1.0105403661727905,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "Accuracy",
+        "value": 0.902766476810415,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "Precision Macro",
+        "value": 0.9023816542652491,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "Precision Micro",
+        "value": 0.902766476810415,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "Precision Weighted",
+        "value": 0.9034597464719761,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "Recall Macro",
+        "value": 0.9024304801555488,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "Recall Micro",
+        "value": 0.902766476810415,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "Recall Weighted",
+        "value": 0.902766476810415,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "F1 Macro",
+        "value": 0.9023086094638595,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "F1 Micro",
+        "value": 0.902766476810415,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "F1 Weighted",
+        "value": 0.9030161011457231,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "multi_nli",
+        "task": "loss",
+        "value": 0.3283354640007019,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Accuracy",
+        "value": 0.737,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Macro",
+        "value": 0.737681071614645,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Micro",
+        "value": 0.737,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Precision Weighted",
+        "value": 0.7376755842752241,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Macro",
+        "value": 0.7369675064285843,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Micro",
+        "value": 0.737,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "Recall Weighted",
+        "value": 0.737,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Macro",
+        "value": 0.7366853496239583,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Micro",
+        "value": 0.737,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "F1 Weighted",
+        "value": 0.7366990292378379,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "anli",
+        "task": "loss",
+        "value": 0.9349392056465149,
+        "verified": true,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 1,
+        "Fine tuned": 8
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 1,
+        "finetune": 8
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "zero-shot-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2006.03654",
+        "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
+        "first_author": "Pengcheng He",
+        "authors": 4,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "multi_nli",
+      "facebook/anli",
+      "fever"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 69,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "team-zero-shot-nli/zero-shot-nli",
+        "Agents-MCP-Hackathon/Dgaze"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

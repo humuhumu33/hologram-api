@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "prism-ml/Ternary-Bonsai-27B-mlx-2bit",
+  "revision": "70f75f3ad081ab840a42f3304c02c27e7f89bfb7",
+  "manifest": "blake3:d269eab1a249a68867b1588c762476f434a1e0708e3ef24b1ccedca549b0d28a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/prism-ml/Ternary-Bonsai-27B-mlx-2bit",
+    "readme": "file:README.md@sha256:586a5e46735260f62c55e187265baf288c5d97ec25c03b3f5de0dda1f8933ff6",
+    "config": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82"
+  },
+  "summary": {
+    "value": "Each weight takes a value from {−1, 0, +1}, with one shared FP16 scale factor for every group of 128 weights. A ternary value carries log₂3 ≈ 1.585 bits of information, so the effective storage cost is \\1.71 bits/weight (ternary code + 16-bit scale amortized over 128 weights) — an idealized \\9.4x reduction vs FP16.",
+    "source": "file:README.md@sha256:586a5e46735260f62c55e187265baf288c5d97ec25c03b3f5de0dda1f8933ff6"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27356728560,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT32 98%, FP16 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mlx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.6-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 190,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2724143,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:4204f24e0c84754a59c5fbbc9af2458916916bf9301dbf14be31ef6db41f0f82#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

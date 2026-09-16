@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mlabonne/LFM2.5-230M-Chess",
+  "revision": "341bfd2ea4b696cda7d2016d4a721f27eb9cf34d",
+  "addressed": false,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mlabonne/LFM2.5-230M-Chess",
+    "readme": "file:README.md@sha256:cf527d7285aaebaa6a30a92fcb208d6687af500ae5fbf2925c224ba5ee18800a",
+    "config": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33"
+  },
+  "summary": {
+    "value": "A 230M chess engine with a language model interface, fine-tuned from LFM2.5-230M-Base using Stockfish distillation.",
+    "source": "file:README.md@sha256:cf527d7285aaebaa6a30a92fcb208d6687af500ae5fbf2925c224ba5ee18800a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 230688512,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm2",
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm2",
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM2.5-230M-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 163,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 14,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 66508,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:5a0fe835d27648b7cd7a735be7bf9ab9e8bfb97ea46937e947f9f398d34f8f33#rope_theta"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "mlabonne/ChessLFM",
+        "hugging-apps/mlabonne-lfm2-5-230m-chess"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

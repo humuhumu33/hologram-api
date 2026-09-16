@@ -1,0 +1,177 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kingabzpro/wav2vec2-large-xls-r-300m-Urdu",
+  "revision": "18a6595fc0cc4d9c63fc8d0407b5596f09c49edb",
+  "manifest": "blake3:1796dc0a7cb05444b534c72b004a099f2e5b13e1a657e1f2e25750cd391a3888",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kingabzpro/wav2vec2-large-xls-r-300m-Urdu",
+    "readme": "file:README.md@sha256:a9a4ae04c9aa0fe9e8337f6b26bd28ae9c03b555892e0a18a0584e429dda1087",
+    "config": "file:config.json@sha256:fa0fc7d0d227999b107bd94e6493cbf974e1162644c9bff5c0a187cb078b9a4f"
+  },
+  "summary": {
+    "value": "A fine-tuned XLS-R 300M CTC model for Urdu automatic speech recognition. It transcribes 16 kHz mono audio and includes an optional 5-gram KenLM decoder.",
+    "source": "file:README.md@sha256:a9a4ae04c9aa0fe9e8337f6b26bd28ae9c03b555892e0a18a0584e429dda1087"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315497145,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:fa0fc7d0d227999b107bd94e6493cbf974e1162644c9bff5c0a187cb078b9a4f#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:fa0fc7d0d227999b107bd94e6493cbf974e1162644c9bff5c0a187cb078b9a4f#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ur"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-xls-r-300m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 15529863,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:fa0fc7d0d227999b107bd94e6493cbf974e1162644c9bff5c0a187cb078b9a4f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:fa0fc7d0d227999b107bd94e6493cbf974e1162644c9bff5c0a187cb078b9a4f#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:fa0fc7d0d227999b107bd94e6493cbf974e1162644c9bff5c0a187cb078b9a4f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 57,
+      "source": "file:config.json@sha256:fa0fc7d0d227999b107bd94e6493cbf974e1162644c9bff5c0a187cb078b9a4f#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice 8",
+        "task": "Test WER",
+        "value": 39.89,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 8",
+        "task": "Test CER",
+        "value": 16.7,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "mozilla-foundation/common_voice_8_0"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 9,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "kingabzpro/Urdu-ASR-SOTA",
+        "kingabzpro/real-time-Urdu-ASR"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

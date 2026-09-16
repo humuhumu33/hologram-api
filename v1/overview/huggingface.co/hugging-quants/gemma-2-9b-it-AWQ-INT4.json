@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "hugging-quants/gemma-2-9b-it-AWQ-INT4",
+  "revision": "6e62725da8e92309167814dad7aacc0ed8cb2484",
+  "manifest": "blake3:d8fc55ddee111be509e101842ce50d658a78ea1a36aeb077a136dae39965b78f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/hugging-quants/gemma-2-9b-it-AWQ-INT4",
+    "readme": "file:README.md@sha256:ca215f0c6b013a20f2a248ebe1a9486882696936910bdfed44da5e2136457d61",
+    "config": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113"
+  },
+  "summary": {
+    "value": "This repository contains google/gemma-2-9b-it quantized using AutoAWQ from FP16 down to INT4 using the GEMM kernels performing zero-point quantization with a group size of 128.",
+    "source": "file:README.md@sha256:ca215f0c6b013a20f2a248ebe1a9486882696936910bdfed44da5e2136457d61"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9241705984,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 2",
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma2",
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 90%, BF16 10%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/gemma-2-9b-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-10-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-10-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1219135,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 42,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3584,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 256000,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#rope_theta"
+    },
+    "quantization": {
+      "value": "awq 4 bit",
+      "source": "file:config.json@sha256:f469ba36ef2dbfeba0532dd902fde7590b6677282fc7ab84dabaed295a3f8113#quantization_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

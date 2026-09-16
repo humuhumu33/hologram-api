@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "TokenRhythm/NeoHorse-1-9B",
+  "revision": "ba5b6e40d88a6ddf4591e176738254a3bc715765",
+  "manifest": "blake3:597fddf3c29ea6dd66aa540ab643916a8351d5738d4ffd0341fc0e47a913ee6c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/TokenRhythm/NeoHorse-1-9B",
+    "readme": "file:README.md@sha256:510de79af3e000f9676f033e1691568a087a62500f65074748303fad984c1011",
+    "config": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854"
+  },
+  "summary": {
+    "value": "NeoHorse-1-9B is a 9B causal language model and an initial prototype on the path toward recursive self-improvement (RSI). It is post-trained from Qwen3.5-9B for text-based agent harnesses, tool use, coding, and instruction following.",
+    "source": "file:README.md@sha256:510de79af3e000f9676f033e1691568a087a62500f65074748303fad984c1011"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8953803264,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 717,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8736,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:932260c95fcdc3eebc9b30339f101e2d603427947c3f3f1f6b77969b7c6ad854#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 13,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 13,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.08183",
+        "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+        "first_author": "NeoHorse Team",
+        "authors": 37,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "TokenRhythm/NeoHorse-1-9B-Chat",
+        "localellm/WebGPU-neohorse-1-9b-i1-gguf"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

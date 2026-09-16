@@ -1,0 +1,171 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
+  "revision": "17997f24dca0df1a4fed68894fb0e1e133e60482",
+  "manifest": "blake3:bde155f87fd5e94e7e3f14e84a749f6cf69d9c8d747d8b87d78933518c1983c2",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sentence-transformers/multi-qa-mpnet-base-dot-v1",
+    "readme": "file:README.md@sha256:904a407141d81b13888f75322c9815bb82efa57d101494b5e914c562e0b6c017",
+    "config": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0"
+  },
+  "summary": {
+    "value": "Text Embeddings Inference (TEI) is a blazing fast inference solution for text embedding models.",
+    "source": "file:README.md@sha256:904a407141d81b13888f75322c9815bb82efa57d101494b5e914c562e0b6c017"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109486978,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Mpnet",
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#model_type"
+    },
+    "architecture_id": {
+      "value": "mpnet",
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-08-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 194,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 78824057,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30527,
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 19
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 19
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "flax-sentence-embeddings/stackexchange_xml",
+      "ms_marco",
+      "gooaq",
+      "yahoo_answers_topics",
+      "search_qa",
+      "eli5",
+      "natural_questions",
+      "trivia_qa",
+      "embedding-data/QQP",
+      "embedding-data/PAQ_pairs",
+      "embedding-data/Amazon-QA",
+      "embedding-data/WikiAnswers"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "free-apis-collection/markitdown"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

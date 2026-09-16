@@ -1,0 +1,575 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "BAAI/bge-large-en-v1.5",
+  "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+  "manifest": "blake3:28785e76eb6d642af49a7e60087a8ad5fd965420bbed5d9b48731415fdf004cb",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/BAAI/bge-large-en-v1.5",
+    "readme": "file:README.md@sha256:9ffeb4467f293416c1f7642e64ae0bd44778fa182ce1165196e8a0329a34fd80",
+    "config": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896"
+  },
+  "summary": {
+    "value": "If you are looking for a model that supports more languages, longer texts, and other retrieval methods, you can try using bge-m3.",
+    "source": "file:README.md@sha256:9ffeb4467f293416c1f7642e64ae0bd44778fa182ce1165196e8a0329a34fd80"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 335142400,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-09-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 740,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 162793726,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:446712fac367857b4b1302762fe1cd7bfa8b3c4b77b4dc5d77c4025407660896#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightAopsRetrieval_default_standard",
+        "value": 6,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightAopsRetrieval",
+        "value": 6,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyLongRetrieval_default_long",
+        "value": 16.424,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyLongRetrieval",
+        "value": 16.424,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyRetrieval_default_standard",
+        "value": 11.67,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyRetrieval",
+        "value": 11.67,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceLongRetrieval_default_long",
+        "value": 27.73,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceLongRetrieval",
+        "value": 27.73,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceRetrieval_default_standard",
+        "value": 24.558,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceRetrieval",
+        "value": 24.558,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsLongRetrieval_default_long",
+        "value": 20.874,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsLongRetrieval",
+        "value": 20.874,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsRetrieval_default_standard",
+        "value": 16.605,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsRetrieval",
+        "value": 16.605,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightLeetcodeRetrieval_default_standard",
+        "value": 26.681,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightLeetcodeRetrieval",
+        "value": 26.681,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyLongRetrieval_default_long",
+        "value": 0.36,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyLongRetrieval",
+        "value": 0.36,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyRetrieval_default_standard",
+        "value": 5.724,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyRetrieval",
+        "value": 5.724,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyLongRetrieval_default_long",
+        "value": 11.584,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyLongRetrieval",
+        "value": 11.584,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyRetrieval_default_standard",
+        "value": 17.464,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyRetrieval",
+        "value": 17.464,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsLongRetrieval_default_long",
+        "value": 10.891,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsLongRetrieval",
+        "value": 10.891,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsRetrieval_default_standard",
+        "value": 11.713,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsRetrieval",
+        "value": 11.713,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowLongRetrieval_default_long",
+        "value": 13.248,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowLongRetrieval",
+        "value": 13.248,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowRetrieval_default_standard",
+        "value": 10.83,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowRetrieval",
+        "value": 10.83,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingLongRetrieval_default_long",
+        "value": 16.898,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingLongRetrieval",
+        "value": 16.898,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingRetrieval_default_standard",
+        "value": 13.326,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingRetrieval",
+        "value": 13.326,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQAQuestionsRetrieval_default_standard",
+        "value": 13.004,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQAQuestionsRetrieval",
+        "value": 13.004,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQATheoremsRetrieval_default_standard",
+        "value": 6.9,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQATheoremsRetrieval",
+        "value": 6.9,
+        "date": "2026-03-26",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Quantized": 18,
+        "Fine tuned": 99
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "quantized": 18,
+        "finetune": 99
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "feature-extraction"
+        },
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2401.03462",
+        "title": "Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon",
+        "first_author": "Peitian Zhang",
+        "authors": 6,
+        "year": "2024"
+      },
+      {
+        "id": "2312.15503",
+        "title": "Making Large Language Models A Better Foundation For Dense Retrieval",
+        "first_author": "Chaofan Li",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2311.13534",
+        "title": "LM-Cocktail: Resilient Tuning of Language Models via Model Merging",
+        "first_author": "Shitao Xiao",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2310.07554",
+        "title": "Retrieve Anything To Augment Large Language Models",
+        "first_author": "Peitian Zhang",
+        "authors": 5,
+        "year": "2023"
+      },
+      {
+        "id": "2309.07597",
+        "title": "C-Pack: Packaged Resources To Advance General Chinese Embedding",
+        "first_author": "Shitao Xiao",
+        "authors": 4,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "bhumilshah/aegis-backend"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

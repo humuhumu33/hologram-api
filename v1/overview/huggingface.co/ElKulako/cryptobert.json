@@ -1,0 +1,167 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ElKulako/cryptobert",
+  "revision": "9e37c910fe87727cb842a9ac55c6388256fe0f15",
+  "manifest": "blake3:11b06a6292cbb0c7f5471e82c4cd780e34df6448b0e521361a4a96a482480683",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ElKulako/cryptobert",
+    "readme": "file:README.md@sha256:17510b55c5aba9034d4d71f338c31bbcd8185296a919c680ec01d2f2e8394c05",
+    "config": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb"
+  },
+  "summary": {
+    "value": "CryptoBERT's sentiment classification head was fine-tuned on a balanced dataset of 2M labelled StockTwits posts, sampled from ElKulako/stocktwits-crypto.",
+    "source": "file:README.md@sha256:17510b55c5aba9034d4d71f338c31bbcd8185296a919c680ec01d2f2e8394c05"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 124648453,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-06-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-05-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 191,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6139670,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:b8692615f3f78d0f074c82c9c0708fd5130caa9ce252bcfd448c25fb5b1eafcb#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ElKulako/stocktwits-crypto"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 28,
+      "top": [
+        "Really-amin/Datasourceforcryptocurrency-2",
+        "jlevin/ElKulako-cryptobert",
+        "Mrttbn/CryptoNews"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

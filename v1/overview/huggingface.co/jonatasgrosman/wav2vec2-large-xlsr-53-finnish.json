@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jonatasgrosman/wav2vec2-large-xlsr-53-finnish",
+  "revision": "a497f86c265cffe9f5d6f0162bc7862dc3e11c00",
+  "manifest": "blake3:4b81679676ea45f7267fa7dff7cc32be9030da37e4cd1ce0c49710674e2fdcbe",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jonatasgrosman/wav2vec2-large-xlsr-53-finnish",
+    "readme": "file:README.md@sha256:14742353a14b501e1b7eaee629366862bced12c8fdcaae34d9bce37e746b8b8d",
+    "config": "file:config.json@sha256:461be094840c2f2a895b192c77dd3fe55395f2fe960100d536a082edfb518b2d"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Finnish using the train and validation splits of Common Voice 6.1 and CSS10. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:14742353a14b501e1b7eaee629366862bced12c8fdcaae34d9bce37e746b8b8d"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:461be094840c2f2a895b192c77dd3fe55395f2fe960100d536a082edfb518b2d#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:461be094840c2f2a895b192c77dd3fe55395f2fe960100d536a082edfb518b2d#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "fi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-12-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9151611,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:461be094840c2f2a895b192c77dd3fe55395f2fe960100d536a082edfb518b2d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:461be094840c2f2a895b192c77dd3fe55395f2fe960100d536a082edfb518b2d#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:461be094840c2f2a895b192c77dd3fe55395f2fe960100d536a082edfb518b2d#num_attention_heads"
+    },
+    "vocab": {
+      "value": 34,
+      "source": "file:config.json@sha256:461be094840c2f2a895b192c77dd3fe55395f2fe960100d536a082edfb518b2d#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice fi",
+        "task": "Test WER",
+        "value": 41.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice fi",
+        "task": "Test CER",
+        "value": 8.23,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3578",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 7,
+      "top": [
+        "qanastek/Alexa-NLU-Clone",
+        "Gradio-Blocks/Alexa-NLU-Clone",
+        "awacke1/ASR-High-Accuracy-Test"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

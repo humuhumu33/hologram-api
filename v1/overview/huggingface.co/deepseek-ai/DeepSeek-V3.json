@@ -1,0 +1,296 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepseek-ai/DeepSeek-V3",
+  "revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+  "manifest": "blake3:914cd319258cfb0317fe61150df4cab559a3ac737fc8f19bc87c24ae038dc72e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V3",
+    "readme": "file:README.md@sha256:3739763a851074c810f1565f9823956f3a095231f8c591dd3c254581bdd3cf08",
+    "config": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9"
+  },
+  "summary": {
+    "value": "We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token.",
+    "source": "file:README.md@sha256:3739763a851074c810f1565f9823956f3a095231f8c591dd3c254581bdd3cf08"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 684531386000,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek V3",
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_v3",
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#model_type"
+    },
+    "context": {
+      "value": 163840,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 99%, BF16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2024-12-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4209,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 20797180,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 61,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 7168,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#hidden_size"
+    },
+    "heads": {
+      "value": 128,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 128,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#vocab_size"
+    },
+    "context": {
+      "value": 163840,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:cbf0b95dc614de208a109bb5fd4e7eed11385e9c68411d2c17db5319443035d9#quantization_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "src",
+        "value": 0.5667,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "SRC overall; deterministic action-based grader, no LLM judge; seed 0, n=75"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "time",
+        "value": 0.8333,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=time; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "access_deny",
+        "value": 0.5833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=access_deny; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "memory_label",
+        "value": 0.5833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=memory_label; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "injection",
+        "value": 0.5833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=injection; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "bot_policy",
+        "value": 0.25,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=bot_policy; n=12"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 58.2070707071,
+        "date": "2025-03-19",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/0a/db/0adbcd9f-38e6-414a-88b1-7bd928d4c72e.json",
+        "notes": "GPQA Diamond"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "open_question",
+        "value": 52.53,
+        "date": "2026-06-02T09:56:56.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "mcq_4_choices",
+        "value": 46.57,
+        "date": "2026-06-02T09:56:56.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "openai/gsm8k",
+        "task": "gsm8k",
+        "value": 89.3,
+        "date": "2024-12-25",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 64.4,
+        "date": "2026-01-28",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 36,
+        "Merged": 2,
+        "Quantized": 17,
+        "Fine tuned": 87
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 36,
+        "merge": 2,
+        "quantized": 17,
+        "finetune": 87
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2412.19437",
+        "title": "DeepSeek-V3 Technical Report",
+        "first_author": "DeepSeek-AI",
+        "authors": 200,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "pliny-the-prompter/obliteratus",
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

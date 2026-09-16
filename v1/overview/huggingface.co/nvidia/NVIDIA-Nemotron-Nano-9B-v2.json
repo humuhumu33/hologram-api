@@ -1,0 +1,210 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+  "revision": "6533e8de2c68e4536bf7c411d7a3ce5734111476",
+  "manifest": "blake3:6fffcb3694a57ff48aab51927eeb9a841ea70e1b585326d3cf6758a4b8c0185f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+    "readme": "file:README.md@sha256:626593b2bdc0f473e2870d0f5e478d63348e53137c4e22f3fca3557234541042",
+    "config": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3"
+  },
+  "summary": {
+    "value": "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response.",
+    "source": "file:README.md@sha256:626593b2bdc0f473e2870d0f5e478d63348e53137c4e22f3fca3557234541042"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8888227328,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron H",
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron_h",
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/NVIDIA-Nemotron-Nano-12B-v2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-08-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-03-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 519,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4253622,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 56,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4480,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:642dc554a725ea216be55c3018d0a6f3dc9963b24779c3cc97f5a0ea21e9dcc3#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 20,
+        "Fine tuned": 22
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 20,
+        "finetune": 22
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2504.03624",
+        "title": "Nemotron-H: A Family of Accurate and Efficient Hybrid Mamba-Transformer Models",
+        "first_author": "NVIDIA",
+        "authors": 200,
+        "year": "2025"
+      },
+      {
+        "id": "2508.14444",
+        "title": "NVIDIA Nemotron Nano 2: An Accurate and Efficient Hybrid Mamba-Transformer Reasoning Model",
+        "first_author": "NVIDIA",
+        "authors": 211,
+        "year": "2025"
+      },
+      {
+        "id": "2412.02595",
+        "title": "Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset",
+        "first_author": "Dan Su",
+        "authors": 9,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "nvidia/Nemotron-Post-Training-Dataset-v2",
+      "nvidia/Nemotron-Pretraining-Dataset-sample",
+      "nvidia/Nemotron-CC-v2",
+      "nvidia/Nemotron-CC-Math-v1",
+      "nvidia/Nemotron-Pretraining-SFT-v1"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 33,
+      "top": [
+        "embedl/hfviewer",
+        "VIDraft/global-llm-leaderboard",
+        "EuroEval/euroeval_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

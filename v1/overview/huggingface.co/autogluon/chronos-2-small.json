@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autogluon/chronos-2-small",
+  "revision": "ddec01313e50b6bc58ebaa92ede81bc24a3d9f9a",
+  "manifest": "blake3:bac100951058d1a58aa11162544ec49017bbf08e02552b91d5d7dcad7c36c991",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autogluon/chronos-2-small",
+    "readme": "file:README.md@sha256:c27a3415d8482238aef5c419a7e58ef2f3fd2a45247148f17e5237521059abf7",
+    "config": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722"
+  },
+  "summary": {
+    "value": "This is the small variant of the Chronos-2 model with 28M parameters. For usage and details on the Chronos-2 model, please refer to https://huggingface.co/autogluon/chronos-2.",
+    "source": "file:README.md@sha256:c27a3415d8482238aef5c419a7e58ef2f3fd2a45247148f17e5237521059abf7"
+  },
+  "glance": {
+    "task": {
+      "value": "Time series forecasting",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27934624,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "T5",
+      "source": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722#model_type"
+    },
+    "architecture_id": {
+      "value": "t5",
+      "source": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "chronos-forecasting",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-12-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-12-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 6,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 24687520,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722#num_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722#d_model"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722#num_heads"
+    },
+    "vocab": {
+      "value": 2,
+      "source": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722#vocab_size"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:f2780468adc8b16322aa0b6e28b26476c9401ecf64ab53292b6d2b0d3f423722#rope_theta"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2510.15821",
+        "title": "Chronos-2: From Univariate to Universal Forecasting",
+        "first_author": "Abdul Fatir Ansari",
+        "authors": 23,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "autogluon/chronos_datasets",
+      "Salesforce/GiftEvalPretrain"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 6,
+      "top": [
+        "embedl/hfviewer",
+        "vboussange/fitzhug_nagumo_chronos2_explorer",
+        "miguel-escribano/chronos-co2-forecast"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

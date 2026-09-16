@@ -1,0 +1,160 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jonatasgrosman/wav2vec2-large-xlsr-53-persian",
+  "revision": "234714078a1398a9db88194c5a40fefe6f376dc1",
+  "manifest": "blake3:9901d46eb3bf1c9437836955439ec8de6059f9f2b2c260b99f8fcd14af800c30",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jonatasgrosman/wav2vec2-large-xlsr-53-persian",
+    "readme": "file:README.md@sha256:b947d7933e6d0b5a94491cc555e80cea18378fba3b65516e83becb17a2235002",
+    "config": "file:config.json@sha256:a58a11ca6cd6387f97ba4f51ba5621ba5eec26b565c65dda080c573facae61c8"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Persian using the train and validation splits of Common Voice 6.1. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:b947d7933e6d0b5a94491cc555e80cea18378fba3b65516e83becb17a2235002"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:a58a11ca6cd6387f97ba4f51ba5621ba5eec26b565c65dda080c573facae61c8#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:a58a11ca6cd6387f97ba4f51ba5621ba5eec26b565c65dda080c573facae61c8#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "fa"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-12-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 30,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 19966570,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:a58a11ca6cd6387f97ba4f51ba5621ba5eec26b565c65dda080c573facae61c8#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:a58a11ca6cd6387f97ba4f51ba5621ba5eec26b565c65dda080c573facae61c8#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:a58a11ca6cd6387f97ba4f51ba5621ba5eec26b565c65dda080c573facae61c8#num_attention_heads"
+    },
+    "vocab": {
+      "value": 67,
+      "source": "file:config.json@sha256:a58a11ca6cd6387f97ba4f51ba5621ba5eec26b565c65dda080c573facae61c8#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice fa",
+        "task": "Test WER",
+        "value": 30.12,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice fa",
+        "task": "Test CER",
+        "value": 7.37,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3576",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 15,
+      "top": [
+        "embedl/hfviewer",
+        "navidved/open_persian_asr_leaderboard",
+        "eduagarcia/multilingual-tokenizer-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

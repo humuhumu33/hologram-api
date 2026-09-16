@@ -1,0 +1,200 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "EleutherAI/gpt-neox-20b",
+  "revision": "c292233c833e336628618a88a648727eb3dff0a7",
+  "manifest": "blake3:3e625bfd42e1d9d6afb02f4326dd1d6f8fced027a565c0c947674aaa26c0f52b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/EleutherAI/gpt-neox-20b",
+    "readme": "file:README.md@sha256:9e5fda833c4057c41a3449adb83b6e6ad933f13f548cd6ef4df84551dcce34c2",
+    "config": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be"
+  },
+  "summary": {
+    "value": "GPT-NeoX-20B is a 20 billion parameter autoregressive language model trained on the Pile using the GPT-NeoX library. Its architecture intentionally resembles that of GPT-3, and is almost identical to that of GPT-J- 6B.",
+    "source": "file:README.md@sha256:9e5fda833c4057c41a3449adb83b6e6ad933f13f548cd6ef4df84551dcce34c2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 20739117584,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "GPT Neox",
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#model_type"
+    },
+    "architecture_id": {
+      "value": "gpt_neox",
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16 99%, UINT8 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-04-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-01-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 586,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6190504,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 44,
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50432,
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:0c13687d6cfccbe23d0cc980a31605c180e3e93145bfc0192468f0e37cc418be#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 25,
+        "Merged": 1,
+        "Quantized": 8,
+        "Fine tuned": 9
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 25,
+        "merge": 1,
+        "quantized": 8,
+        "finetune": 9
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2204.06745",
+        "title": "GPT-NeoX-20B: An Open-Source Autoregressive Language Model",
+        "first_author": "Sid Black",
+        "authors": 17,
+        "year": "2022"
+      },
+      {
+        "id": "2101.00027",
+        "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+        "first_author": "Leo Gao",
+        "authors": 12,
+        "year": "2020"
+      },
+      {
+        "id": "2201.07311",
+        "title": "Datasheet for the Pile",
+        "first_author": "Stella Biderman",
+        "authors": 3,
+        "year": "2022"
+      },
+      {
+        "id": "2104.09864",
+        "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+        "first_author": "Jianlin Su",
+        "authors": 6,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "EleutherAI/pile"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "h2oai/h2ogpt-chatbot2",
+        "VIDraft/global-llm-leaderboard",
+        "Gradio-Blocks/zero-and-few-shot-reasoning"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google-t5/t5-base",
+  "revision": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+  "manifest": "blake3:be2fe64add0aea8da569f5be2c1bc5f667693569dbca9a1bf79e6231a9d8dd7b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google-t5/t5-base",
+    "readme": "file:README.md@sha256:c43c23f205b6839a6adb10f0757265f76c1c6f96b7793a4e53582d3a61cbfb23",
+    "config": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033"
+  },
+  "summary": {
+    "value": "The model is pre-trained on the Colossal Clean Crawled Corpus (C4), which was developed and released in the context of the same research paper as T5.",
+    "source": "file:README.md@sha256:c43c23f205b6839a6adb10f0757265f76c1c6f96b7793a4e53582d3a61cbfb23"
+  },
+  "glance": {
+    "task": {
+      "value": "Translation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 222903936,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "T5",
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#model_type"
+    },
+    "architecture_id": {
+      "value": "t5",
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#n_positions"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "ro",
+        "de"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 792,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 173484166,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#num_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#d_model"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#num_heads"
+    },
+    "vocab": {
+      "value": 32128,
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:46dd7cb62d29c81fb551e0ef1ea274c24a46ba441eeb948897706252933df033#n_positions"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 85,
+        "Merged": 1,
+        "Quantized": 13,
+        "Fine tuned": 703
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 85,
+        "merge": 1,
+        "quantized": 13,
+        "finetune": 703
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "translation"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1805.12471",
+        "title": "Neural Network Acceptability Judgments",
+        "first_author": "Alex Warstadt",
+        "authors": 3,
+        "year": "2018"
+      },
+      {
+        "id": "1708.00055",
+        "title": "SemEval-2017 Task 1: Semantic Textual Similarity - Multilingual and Cross-lingual Focused Evaluation",
+        "first_author": "Daniel Cer",
+        "authors": 5,
+        "year": "2017"
+      },
+      {
+        "id": "1704.05426",
+        "title": "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference",
+        "first_author": "Adina Williams",
+        "authors": 3,
+        "year": "2017"
+      },
+      {
+        "id": "1606.05250",
+        "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+        "first_author": "Pranav Rajpurkar",
+        "authors": 4,
+        "year": "2016"
+      },
+      {
+        "id": "1808.09121",
+        "title": "WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations",
+        "first_author": "Mohammad Taher Pilehvar",
+        "authors": 2,
+        "year": "2018"
+      },
+      {
+        "id": "1810.12885",
+        "title": "ReCoRD: Bridging the Gap between Human and Machine Commonsense Reading Comprehension",
+        "first_author": "Sheng Zhang",
+        "authors": 6,
+        "year": "2018"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "c4"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "facebook/MusicGen",
+        "DharavathSri/LLMFineTuningDeployment"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

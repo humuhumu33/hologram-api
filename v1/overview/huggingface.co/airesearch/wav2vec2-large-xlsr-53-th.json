@@ -1,0 +1,167 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "airesearch/wav2vec2-large-xlsr-53-th",
+  "revision": "3155938c549b23eee16b1d4b55dcb161b7fe4bcf",
+  "manifest": "blake3:218f0470466e96cca2db8f7ad0780a3604815c27ac368e46c648d51c189f72d9",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/airesearch/wav2vec2-large-xlsr-53-th",
+    "readme": "file:README.md@sha256:494011d71bc66736d012cb60be37ad0049cbaff237a1dc05d104f4359159d5fb",
+    "config": "file:config.json@sha256:a02e17b3052326e31a7519114b2ec969d7412559921191dcce9f304aef09c330"
+  },
+  "summary": {
+    "value": "We finetune wav2vec2-large-xlsr-53 based on Fine-tuning Wav2Vec2 for English ASR using Thai examples of Common Voice Corpus 7.0. The notebooks and scripts can be found in vistec-ai/wav2vec2-large-xlsr-53-th.",
+    "source": "file:README.md@sha256:494011d71bc66736d012cb60be37ad0049cbaff237a1dc05d104f4359159d5fb"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:a02e17b3052326e31a7519114b2ec969d7412559921191dcce9f304aef09c330#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:a02e17b3052326e31a7519114b2ec969d7412559921191dcce9f304aef09c330#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-sa-4.0",
+        "name": "CC BY SA 4.0",
+        "commercial": "yes",
+        "note": "Attribution, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "th"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-03-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 28,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13006620,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:a02e17b3052326e31a7519114b2ec969d7412559921191dcce9f304aef09c330#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:a02e17b3052326e31a7519114b2ec969d7412559921191dcce9f304aef09c330#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:a02e17b3052326e31a7519114b2ec969d7412559921191dcce9f304aef09c330#num_attention_heads"
+    },
+    "vocab": {
+      "value": 70,
+      "source": "file:config.json@sha256:a02e17b3052326e31a7519114b2ec969d7412559921191dcce9f304aef09c330#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice 7",
+        "task": "Test WER",
+        "value": 0.9524,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 7",
+        "task": "Test SER",
+        "value": 1.2346,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 7",
+        "task": "Test CER",
+        "value": 0.1623,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/0404",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 9,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "BALAKA/ProfanityGuard",
+        "springchill/airesearch-wav2vec2-large-xlsr-53-th"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

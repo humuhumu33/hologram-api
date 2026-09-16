@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "hexgrad/Kokoro-82M",
+  "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "manifest": "blake3:2d184ec4d22e1ccab14342f3020c2838788e42186877669ccb1c7d56749c7a4a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/hexgrad/Kokoro-82M",
+    "readme": "file:README.md@sha256:91dcabced89db6f109b8786642f50402d3ee87450e8189589b6f85520e7f4d78",
+    "config": "file:config.json@sha256:5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f"
+  },
+  "summary": {
+    "value": "Kokoro is an open-weight TTS model with 82 million parameters. Despite its lightweight architecture, it delivers comparable quality to larger models while being significantly faster and more cost-efficient.",
+    "source": "file:README.md@sha256:91dcabced89db6f109b8786642f50402d3ee87450e8189589b6f85520e7f4d78"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to speech",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "yl4579/StyleTTS2-LJSpeech"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-12-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 6937,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 120931610,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 3,
+      "source": "file:config.json@sha256:5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f#n_layer"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 10,
+        "Quantized": 71,
+        "Fine tuned": 53
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 10,
+        "quantized": 71,
+        "finetune": 53
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "text-to-speech"
+        },
+        {
+          "provider": "fal-ai",
+          "status": "live",
+          "task": "text-to-speech"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2306.07691",
+        "title": "StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models",
+        "first_author": "Yinghao Aaron Li",
+        "authors": 5,
+        "year": "2023"
+      },
+      {
+        "id": "2203.02395",
+        "title": "iSTFTNet: Fast and Lightweight Mel-Spectrogram Vocoder Incorporating Inverse Short-Time Fourier Transform",
+        "first_author": "Takuhiro Kaneko",
+        "authors": 4,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "doi": {
+    "value": "10.57967/hf/4329",
+    "source": "api:tags(doi)"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "hexgrad/Kokoro-TTS",
+        "oddadmix/Kokoro-7M-Distill-Demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

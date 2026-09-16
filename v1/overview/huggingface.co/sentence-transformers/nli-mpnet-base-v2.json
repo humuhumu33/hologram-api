@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sentence-transformers/nli-mpnet-base-v2",
+  "revision": "c2f4dd9a1dc4337c28cfbd650433f761bb304c50",
+  "manifest": "blake3:5a52c76905bea7f05eebb314c955aa4c867b22af571e0c33d3bf9fb5a1d02d1a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sentence-transformers/nli-mpnet-base-v2",
+    "readme": "file:README.md@sha256:f05a15200c69db4d3defa209a0aec8a74a58d3cba480edb57f229b64b0daa69b",
+    "config": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+    "source": "file:README.md@sha256:f05a15200c69db4d3defa209a0aec8a74a58d3cba480edb57f229b64b0daa69b"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109486978,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Mpnet",
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#model_type"
+    },
+    "architecture_id": {
+      "value": "mpnet",
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-08-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8682035,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30527,
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:6f9733e7e33366fedb45055d97ee7fc9b4c7f4918f344fdb24710e0a2829ffac#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1908.10084",
+        "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+        "first_author": "Nils Reimers",
+        "authors": 2,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "NeuML/txtai",
+        "NeuML/similarity",
+        "mohitmayank/law-finder-ipc"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "j-hartmann/emotion-english-distilroberta-base",
+  "revision": "0e1cd914e3d46199ed785853e12b57304e04178b",
+  "manifest": "blake3:16fc528825666f64bc7444d3437235936f3b50ed149eeac49b5023b09e27aace",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/j-hartmann/emotion-english-distilroberta-base",
+    "readme": "file:README.md@sha256:4747de6637a433ead0b140b77d316c32917b6ad1d4703919561eebcd7dbfa010",
+    "config": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c"
+  },
+  "summary": {
+    "value": "With this model, you can classify emotions in English text data. The model was trained on 6 diverse datasets (see Appendix below) and predicts Ekman's 6 basic emotions, plus a neutral class:",
+    "source": "file:README.md@sha256:4747de6637a433ead0b140b77d316c32917b6ad1d4703919561eebcd7dbfa010"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-01-02",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 503,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 45092495,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:ab16b3e561e9c9bda68a97a668bd3aa59978dcdc20b6257fdcae1bb0682b625c#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2210.00434",
+        "title": "Music-to-Text Synaesthesia: Generating Descriptive Text from Music Recordings",
+        "first_author": "Zhihuan Kuang",
+        "authors": 5,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "falakayaz/TriSense-EmotionAI",
+        "Automate-GPT/Empathy-Engine-AI-TTS-Generator",
+        "Gresekxnol/clipyr"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

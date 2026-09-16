@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepseek-ai/deepseek-coder-7b-instruct-v1.5",
+  "revision": "2a050a4c59d687a85324d32e147517992117ed30",
+  "manifest": "blake3:2ddec293e72a3ddd73e4d60b7c45d44d7313404386336c82fbf13e5c69795671",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepseek-ai/deepseek-coder-7b-instruct-v1.5",
+    "readme": "file:README.md@sha256:c1d0e806c450e2aa4fd1e4b9b8928fc9e75586c503466821d7cd88c132e5747b",
+    "config": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1"
+  },
+  "summary": {
+    "value": "Deepseek-Coder-7B-Instruct-v1.5 is continue pre-trained from Deepseek-LLM 7B on 2T tokens by employing a window size of 4K and next token prediction objective, and then fine-tuned on 2B tokens of instruction data.",
+    "source": "file:README.md@sha256:c1d0e806c450e2aa4fd1e4b9b8928fc9e75586c503466821d7cd88c132e5747b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 6910365696,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#model_type"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-01-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 163,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3448730,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 102400,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#vocab_size"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:b175cc978379b310371c8f4e16096595becfa0fda2ce3b45bf8931a1bcf03fd1#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 31,
+        "Merged": 39,
+        "Quantized": 12,
+        "Fine tuned": 51
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 31,
+        "merge": 39,
+        "quantized": 12,
+        "finetune": 51
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 29,
+      "top": [
+        "VIDraft/global-llm-leaderboard",
+        "seawolf2357/LLM_Quantization",
+        "KBaba7/Quant"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

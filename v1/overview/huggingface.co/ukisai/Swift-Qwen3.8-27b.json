@@ -1,0 +1,158 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ukisai/Swift-Qwen3.8-27b",
+  "revision": "1b30aaaf753fe5c1cb51ada2ea0367a53445359c",
+  "manifest": "blake3:7bd339030738ad593206fcc7735e6e1c6d62efcca1ae5cf6efde76049250b7b5",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ukisai/Swift-Qwen3.8-27b",
+    "readme": "file:README.md@sha256:22852f0f6a43b5f90c31f2b239dedac391382fb694fd1b66f263de3308c4fff3",
+    "config": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+  },
+  "summary": {
+    "value": "Swift-Qwen3.8-27B is UkisAI's reasoning-efficient derivative of Qwen3.8-27B, using 58.3% fewer thinking tokens while maintaining near-identical performance (&lt;1% loss) and as a result getting a x1.95 speed-up on several tasks.",
+    "source": "file:README.md@sha256:22852f0f6a43b5f90c31f2b239dedac391382fb694fd1b66f263de3308c4fff3"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781427952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 311,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2753,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 18,
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 18,
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "papluca/xlm-roberta-base-language-detection",
+  "revision": "9865598389ca9d95637462f743f683b51d75b87b",
+  "manifest": "blake3:98d362bc0f36c94e99936eaaa24fdd79c7ea2693e95dfd3bf718cb08ff647d55",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/papluca/xlm-roberta-base-language-detection",
+    "readme": "file:README.md@sha256:312753546a1e6fe30c9adb3ba51feed9163d00dca06f4d2042cc438f6dbf9cea",
+    "config": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of xlm-roberta-base on the Language Identification dataset.",
+    "source": "file:README.md@sha256:312753546a1e6fe30c9adb3ba51feed9163d00dca06f4d2042cc438f6dbf9cea"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 278059542,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual",
+        "ar",
+        "bg",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "hi",
+        "it",
+        "ja",
+        "nl",
+        "pl",
+        "pt",
+        "ru",
+        "sw",
+        "th",
+        "tr",
+        "ur",
+        "vi",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "FacebookAI/xlm-roberta-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-12-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 376,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 63994304,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:c853c935230721240f2fc06acb72fb086cecea3cec99b62d843ac4678b7daba9#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 9,
+        "Fine tuned": 21
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 9,
+        "finetune": 21
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1911.02116",
+        "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+        "first_author": "Alexis Conneau",
+        "authors": 10,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "doi": {
+    "value": "10.57967/hf/2064",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "papluca/language-identification"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "juancopi81/multilingual-stable-diffusion",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "shellypeng/Anime-Pack"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

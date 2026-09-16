@@ -43,6 +43,15 @@ jobs:
       - name: Sources — other places the same bytes live (SHA-256 must match, no weight bytes)
         run: python indexer/sources.py --workers 12
 
+      - name: Overview — model passports from verified README.md and config.json plus the Hugging Face API
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python -m pip install --quiet requests
+          curl -s "https://huggingface.co/api/models?sort=trendingScore&direction=-1&limit=500" | python -c "import json,sys; print('\n'.join(m['id'] for m in json.load(sys.stdin)))" > trending.txt
+          python indexer/overview.py --workers 6 --extra-list trending.txt
+          rm trending.txt
+
       - name: Verify every new manifest is named by its own BLAKE3
         run: |
           python - <<'PY'

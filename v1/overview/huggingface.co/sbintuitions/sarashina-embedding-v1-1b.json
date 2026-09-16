@@ -1,0 +1,187 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sbintuitions/sarashina-embedding-v1-1b",
+  "revision": "d060fcd8984075071e7fad81baff035cbb3b6c7e",
+  "manifest": "blake3:fb83fbc74a3c598e45265b20bb4f777efc0b3510cf13f02a3e593ddf6c3c3d68",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sbintuitions/sarashina-embedding-v1-1b",
+    "readme": "file:README.md@sha256:87109bce71fb1bdabf20b8959d2015f1d4a3e38e1ceed4af4db08bd3711a9cd2",
+    "config": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b"
+  },
+  "summary": {
+    "value": "\"Sarashina-Embedding-v1-1B\" is a Japanese text embedding model, based on the 1.2B-parameter Japanese LLM \"Sarashina2.1-1B\". We trained this model with multi-stage contrastive learning.",
+    "source": "file:README.md@sha256:87109bce71fb1bdabf20b8959d2015f1d4a3e38e1ceed4af4db08bd3711a9cd2"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1224038144,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "ja",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-11-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 38,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 548158,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1792,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 102400,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 500000,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:3d1c6c5d9b0feb85478990abab95aa49874af219ddf1d66a4024243fa6b24a4b#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 2,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 2,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2409.07737",
+        "title": "Ruri: Japanese General Text Embeddings",
+        "first_author": "Hayato Tsukagoshi",
+        "authors": 2,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "hpprc/emb",
+      "cl-nagoya/auto-wiki-qa",
+      "cl-nagoya/ruri-dataset-ft",
+      "hpprc/mqa-ja",
+      "izumi-lab/llm-japanese-dataset",
+      "sentence-transformers/NQ-retrieval",
+      "sbintuitions/JSQuAD",
+      "SkelterLabsInc/JaQuAD",
+      "wikimedia/wikipedia",
+      "cl-nagoya/nu-mnli",
+      "castorini/mr-tydi"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "mteb/leaderboard",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "kaisugi/NLP2025_title_search"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

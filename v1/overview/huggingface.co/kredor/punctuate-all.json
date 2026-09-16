@@ -1,0 +1,149 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kredor/punctuate-all",
+  "revision": "0fe37019de3f5e4fbd83289fd94e07fa588e47df",
+  "manifest": "blake3:cbf43c0f7daddd37f29f7a6a42ad2e06a44f62e06be59702f23b4552c6044b2a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kredor/punctuate-all",
+    "readme": "file:README.md@sha256:911258e46b4b6d748dae5fad4915b2b5c164f8a2d4adc931f1e53d61d77a6132",
+    "config": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f"
+  },
+  "summary": {
+    "value": "This is based on Oliver Guhr's work. The difference is that it is a finetuned xlm-roberta-base instead of an xlm-roberta-large and on twelve languages instead of four.",
+    "source": "file:README.md@sha256:911258e46b4b6d748dae5fad4915b2b5c164f8a2d4adc931f1e53d61d77a6132"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-04-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-04-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 29,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 23800052,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:c6f52a2027bbe0e5ac17a27f48c5ede918dabd3dd71faacc7098e08e59059a6f#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "wmt/europarl"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "johann22/d_transcript",
+        "Emmanuel08/cci-sermon-transcriber"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

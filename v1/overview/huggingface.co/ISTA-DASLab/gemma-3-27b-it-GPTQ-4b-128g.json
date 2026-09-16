@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ISTA-DASLab/gemma-3-27b-it-GPTQ-4b-128g",
+  "revision": "9c5f61a23e1ccf3921173c2b32f6ff0af1bffd1b",
+  "manifest": "blake3:936dfade306069b0d296c069a536678f87a52a3ecddb55c04dbe7948f416555b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ISTA-DASLab/gemma-3-27b-it-GPTQ-4b-128g",
+    "readme": "file:README.md@sha256:4039c03e2766a5cda869efaac94cde5e4f911482b565837f2d6793e2f75c3f5c",
+    "config": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada"
+  },
+  "summary": {
+    "value": "This model was obtained by quantizing the weights of gemma-3-27b-it to INT4 data type. This optimization reduces the number of bits per parameter from 16 to 4, reducing the disk size and GPU memory requirements by approximately 75%.",
+    "source": "file:README.md@sha256:4039c03e2766a5cda869efaac94cde5e4f911482b565837f2d6793e2f75c3f5c"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27632394708,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 3",
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3",
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 93%, BF16 7%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/gemma-3-27b-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-03-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 45,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2765699,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 62,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5376,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262208,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#rope_theta"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:d5f0216e950146a616c88938fb042cc79c9bd0ac2ed9ead6cb7ee10e33530ada#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

@@ -1,0 +1,439 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "manifest": "blake3:981c103b1ddd2d85f419b9c8f147d4f66ed599427a10f3422e6f69508150199d",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen2.5-VL-7B-Instruct",
+    "readme": "file:README.md@sha256:1fa65dbb08bc9ffe0b020409c8686f08b23008c5a68554353305fd2de6f2b81e",
+    "config": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43"
+  },
+  "summary": {
+    "value": "--- license: apache-2.0 language: - en pipelinetag: image-text-to-text tags: - multimodal libraryname: transformers ---",
+    "source": "file:README.md@sha256:1fa65dbb08bc9ffe0b020409c8686f08b23008c5a68554353305fd2de6f2b81e"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8292166656,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 2.5 VL",
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen2_5_vl",
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2025-01-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1708,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 99801382,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3584,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#hidden_size"
+    },
+    "heads": {
+      "value": 28,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152064,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_vision",
+        "value": 34.3,
+        "date": "2026-01-28",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "overall",
+        "value": 26.8,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "android_studio_macos",
+        "value": 17.5,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "autocad_windows",
+        "value": 0,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "blender_windows",
+        "value": 26.8,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "davinci_macos",
+        "value": 22.7,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "eviews_windows",
+        "value": 72,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "excel_macos",
+        "value": 20.3,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "fruitloops_windows",
+        "value": 7,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "illustrator_windows",
+        "value": 9.7,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "inventor_windows",
+        "value": 10,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "linux_common_linux",
+        "value": 20,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "macos_common_macos",
+        "value": 36.9,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "matlab_macos",
+        "value": 33.3,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "origin_windows",
+        "value": 9.7,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "photoshop_windows",
+        "value": 39.2,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "powerpoint_windows",
+        "value": 39,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "premiere_windows",
+        "value": 19.2,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "pycharm_macos",
+        "value": 19.2,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "quartus_windows",
+        "value": 15.6,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "solidworks_windows",
+        "value": 9.1,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "stata_windows",
+        "value": 12.2,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "unreal_engine_windows",
+        "value": 45.7,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "vivado_windows",
+        "value": 25,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "vmware_macos",
+        "value": 58.5,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "vscode_macos",
+        "value": 32.7,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "windows_common_windows",
+        "value": 14.8,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "word_macos",
+        "value": 70.2,
+        "date": "2026-03-17T17:06:34.000Z",
+        "verified": false,
+        "source": "https://gui-agent.github.io/grounding-leaderboard/"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 381,
+        "Merged": 5,
+        "Quantized": 152,
+        "Fine tuned": 1222
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 381,
+        "merge": 5,
+        "quantized": 152,
+        "finetune": 1222
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2309.00071",
+        "title": "YaRN: Efficient Context Window Extension of Large Language Models",
+        "first_author": "Bowen Peng",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2409.12191",
+        "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+        "first_author": "Peng Wang",
+        "authors": 19,
+        "year": "2024"
+      },
+      {
+        "id": "2308.12966",
+        "title": "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities",
+        "first_author": "Jinze Bai",
+        "authors": 9,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "kulkas2pintu/QWEN_EDIT_IMAGE",
+        "embedl/hfviewer",
+        "prithivMLmods/Qwen-Image-Edit-2511-LoRAs-Fast"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

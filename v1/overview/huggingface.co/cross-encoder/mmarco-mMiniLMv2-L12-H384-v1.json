@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+  "manifest": "blake3:f23e09a39f116d99602b1810474882cec181faff7883670203f48801b4d549c9",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    "readme": "file:README.md@sha256:474736a65d6393a060119a8dc304563af67af4d8d86ccfee4a05dd0df107fc11",
+    "config": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77"
+  },
+  "summary": {
+    "value": "This model was trained on the MMARCO dataset. It is a machine translated version of MS MARCO using Google Translate.",
+    "source": "file:README.md@sha256:474736a65d6393a060119a8dc304563af67af4d8d86ccfee4a05dd0df107fc11"
+  },
+  "glance": {
+    "task": {
+      "value": "text-ranking",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 117641603,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ar",
+        "zh",
+        "nl",
+        "fr",
+        "de",
+        "hi",
+        "in",
+        "it",
+        "ja",
+        "pt",
+        "ru",
+        "es",
+        "vi",
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "nreimers/mMiniLMv2-L12-H384-distilled-from-XLMR-Large"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-06-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 80,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13206474,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 17,
+        "Fine tuned": 19
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 17,
+        "finetune": 19
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "unicamp-dl/mmarco"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "hakari-bench/leaderboard",
+        "douaaelagrari/hr-chatbot-api"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+  "revision": "e94a930c8e9b8a7d3763e449289c261c9c7d3e5e",
+  "manifest": "blake3:1a7cf1a9e98a09df1db65fa141685540bbc522fab83504dced204d62fc4cb3cb",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+    "readme": "file:README.md@sha256:9e4501d2f1e3d32e0e327cbd035495e5e93d0ec3167b1f5f6a064bdf9471fb14",
+    "config": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8"
+  },
+  "summary": {
+    "value": "This is a preliminary version (and subject to change) of NVFP4 quantized Qwen/Qwen3.6-35B-A3B model. The model has both weights and activations quantized to NVFP4 format with vllm-project/llm-compressor.",
+    "source": "file:README.md@sha256:9e4501d2f1e3d32e0e327cbd035495e5e93d0ec3167b1f5f6a064bdf9471fb14"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 34660610688,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 MoE",
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 94%, BF16 6%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.6-35B-A3B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 173,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10167767,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:2af7513fb092e80e64480b8a9155c1347f6a742c958aa35448b0842f5fdaeac8#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "embedl/hfviewer",
+        "red-hat-emerging-technologies/coding-agent-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

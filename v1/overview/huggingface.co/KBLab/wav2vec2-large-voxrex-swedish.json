@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "KBLab/wav2vec2-large-voxrex-swedish",
+  "revision": "ca70e31c06a2617bf7fe3b4fb5d387d2b19b2983",
+  "manifest": "blake3:06ead63649a231567993b7ac323a1ff84eafeccf8512466dae035dec7c2b0971",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/KBLab/wav2vec2-large-voxrex-swedish",
+    "readme": "file:README.md@sha256:5a17b079172c43466bcf2d1bf940d43195fd6cca3b4599383ba0b7b9eb4c00cc",
+    "config": "file:config.json@sha256:a3442c57602ff6fbc003444eaea6d7592473c9c4216ed3b66538cf2610a5cb69"
+  },
+  "summary": {
+    "value": "Finetuned version of KBs VoxRex large model using Swedish radio broadcasts, NST and Common Voice data. Evalutation without a language model gives the following: WER for NST + Common Voice test set (2% of total sentences) is 2.5%.",
+    "source": "file:README.md@sha256:5a17b079172c43466bcf2d1bf940d43195fd6cca3b4599383ba0b7b9eb4c00cc"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315485870,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:a3442c57602ff6fbc003444eaea6d7592473c9c4216ed3b66538cf2610a5cb69#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:a3442c57602ff6fbc003444eaea6d7592473c9c4216ed3b66538cf2610a5cb69#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc0-1.0",
+        "name": "cc0-1.0"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "sv"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-05-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10448040,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:a3442c57602ff6fbc003444eaea6d7592473c9c4216ed3b66538cf2610a5cb69#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:a3442c57602ff6fbc003444eaea6d7592473c9c4216ed3b66538cf2610a5cb69#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:a3442c57602ff6fbc003444eaea6d7592473c9c4216ed3b66538cf2610a5cb69#num_attention_heads"
+    },
+    "vocab": {
+      "value": 46,
+      "source": "file:config.json@sha256:a3442c57602ff6fbc003444eaea6d7592473c9c4216ed3b66538cf2610a5cb69#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice",
+        "task": "Test WER",
+        "value": 8.49,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2205.03026",
+        "title": "Hearing voices at the National Library -- a speech corpus and acoustic model for the Swedish language",
+        "first_author": "Martin Malmsten",
+        "authors": 3,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "common_voice",
+      "NST_Swedish_ASR_Database",
+      "P4"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "Daniel9046/SoniTranslate",
+        "RO-Rtechs/Translate_Video_language"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

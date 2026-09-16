@@ -1,0 +1,250 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/wav2vec2-base-960h",
+  "revision": "22aad52d435eb6dbaf354bdad9b0da84ce7d6156",
+  "manifest": "blake3:7ac5fab308dbcffc43fcce079ad6aadf1c1674cfc61e9d4a3ba4c4a8d51c3c69",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/wav2vec2-base-960h",
+    "readme": "file:README.md@sha256:fc52a0adfa64e446800f9944c6cf9b90da3127aba548860ea5714516ec8c18c7",
+    "config": "file:config.json@sha256:d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3"
+  },
+  "summary": {
+    "value": "The base model pretrained and fine-tuned on 960 hours of Librispeech on 16kHz sampled speech audio. When using the model make sure that your speech input is also sampled at 16Khz.",
+    "source": "file:README.md@sha256:fc52a0adfa64e446800f9944c6cf9b90da3127aba548860ea5714516ec8c18c7"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 94395552,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-11-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 403,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 117613569,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32,
+      "source": "file:config.json@sha256:d3ec255c063d9f95057b553b19c20135b259875834a4fe9deb218a6be25b4cf3#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 29.4025,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 686.0029073,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 45.56,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 48.47,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 30.85,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 12.53,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 16.72,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 27.56,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 21.05,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 32.48,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 8,
+        "Fine tuned": 178
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 8,
+        "finetune": 178
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2006.11477",
+        "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+        "first_author": "Alexei Baevski",
+        "authors": 4,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "librispeech_asr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "mteb/leaderboard",
+        "alexnasa/Wan2.2-Animate-ZEROGPU",
+        "hf-audio/open_asr_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

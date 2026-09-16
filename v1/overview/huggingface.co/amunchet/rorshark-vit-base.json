@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "amunchet/rorshark-vit-base",
+  "revision": "85b973ba04fa78630ebffce57bb1b784128eb9fc",
+  "manifest": "blake3:5ce6085a27925b751c598be75cac948c803a960ddbc606372c4baf01042ad0db",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/amunchet/rorshark-vit-base",
+    "readme": "file:README.md@sha256:f6ef8f2f681b54f77acc5b79b5281499a9edbc4de7f784cb21c55b113766fad5",
+    "config": "file:config.json@sha256:885497813dd52636491c32fe8a8baef11a1a634ecf61dc465978f971c2fe142c"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of google/vit-base-patch16-224-in21k on the imagefolder dataset. It achieves the following results on the evaluation set: - Loss: 0.0393 - Accuracy: 0.9923",
+    "source": "file:README.md@sha256:f6ef8f2f681b54f77acc5b79b5281499a9edbc4de7f784cb21c55b113766fad5"
+  },
+  "glance": {
+    "task": {
+      "value": "Image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 85800194,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "ViT",
+      "source": "file:config.json@sha256:885497813dd52636491c32fe8a8baef11a1a634ecf61dc465978f971c2fe142c#model_type"
+    },
+    "architecture_id": {
+      "value": "vit",
+      "source": "file:config.json@sha256:885497813dd52636491c32fe8a8baef11a1a634ecf61dc465978f971c2fe142c#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/vit-base-patch16-224-in21k"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2023-11-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-11-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 21207643,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:885497813dd52636491c32fe8a8baef11a1a634ecf61dc465978f971c2fe142c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:885497813dd52636491c32fe8a8baef11a1a634ecf61dc465978f971c2fe142c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:885497813dd52636491c32fe8a8baef11a1a634ecf61dc465978f971c2fe142c#num_attention_heads"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "imagefolder",
+        "task": "Accuracy",
+        "value": 0.9922928709055877,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "imagefolder"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

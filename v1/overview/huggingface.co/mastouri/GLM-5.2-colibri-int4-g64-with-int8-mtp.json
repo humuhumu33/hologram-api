@@ -1,0 +1,131 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mastouri/GLM-5.2-colibri-int4-g64-with-int8-mtp",
+  "revision": "6bbb01ed3e515a8730b694dfae73aadfd6774581",
+  "manifest": "blake3:f5418fa677ba572c10378da681f0e5395969e9390d94375864c1faf0fb3ec4e2",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mastouri/GLM-5.2-colibri-int4-g64-with-int8-mtp",
+    "readme": "file:README.md@sha256:85fc4cf947276c376f09ad1226926ebc03eefbb99d184cd05f34412d32d8406b",
+    "config": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff"
+  },
+  "summary": {
+    "value": "GLM-5.2 (744B MoE) converted for the colibri streaming engine: fmt=4 grouped int4 (group size 64) expert weights with an int8 MTP head for speculative decoding.",
+    "source": "file:README.md@sha256:85fc4cf947276c376f09ad1226926ebc03eefbb99d184cd05f34412d32d8406b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "GLM MoE Dsa",
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#model_type"
+    },
+    "architecture_id": {
+      "value": "glm_moe_dsa",
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#max_position_embeddings"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "zai-org/GLM-5.2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 105,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 19800,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 78,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 154880,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:22e49334abf8562fecf70ca3292ba3f5b33f5602fb2bf10b52dd64a66cfe65ff#quantization_config"
+    }
+  }
+}

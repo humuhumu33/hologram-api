@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "emilyalsentzer/Bio_ClinicalBERT",
+  "revision": "d5892b39a4adaed74b92212a44081509db72f87b",
+  "manifest": "blake3:e8c055f6717aafb176b153060c09718fe18399e26c3e738cdfa5eee12ce47355",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/emilyalsentzer/Bio_ClinicalBERT",
+    "readme": "file:README.md@sha256:bf666c7d32897296d028b655fdc0a3f16d7309cc69af11e93d3473218c2b00f2",
+    "config": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444"
+  },
+  "summary": {
+    "value": "The Publicly Available Clinical BERT Embeddings paper contains four unique clinicalBERT models: initialized with BERT-Base (casedL-12H-768A-12) or BioBERT (BioBERT-Base v1.0 + PubMed 200K + PMC 270K) & trained on either all MIMIC notes or only discharge summaries.",
+    "source": "file:README.md@sha256:bf666c7d32897296d028b655fdc0a3f16d7309cc69af11e93d3473218c2b00f2"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 440,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 162462176,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#num_attention_heads"
+    },
+    "vocab": {
+      "value": 28996,
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:4a470c65801cab55fc1cc5854aa2bfebc18428ac1989777e9acefc5a9f0c1444#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 19,
+        "Quantized": 2,
+        "Fine tuned": 72
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 19,
+        "quantized": 2,
+        "finetune": 72
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1904.03323",
+        "title": "Publicly Available Clinical BERT Embeddings",
+        "first_author": "Emily Alsentzer",
+        "authors": 7,
+        "year": "2019"
+      },
+      {
+        "id": "1901.08746",
+        "title": "BioBERT: a pre-trained biomedical language representation model for biomedical text mining",
+        "first_author": "Jinhyuk Lee",
+        "authors": 7,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "AnimaLab/bias-test-gpt-pairs"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

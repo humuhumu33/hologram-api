@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "audeering/wav2vec2-large-robust-24-ft-age-gender",
+  "revision": "bad2737f529168bc3d3fcd97edfaba9583c7d36d",
+  "manifest": "blake3:dba4590da2b9008ed8183289a6abd1a8ab842205e84f98fd3a41fdf360848d22",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/audeering/wav2vec2-large-robust-24-ft-age-gender",
+    "readme": "file:README.md@sha256:5e6fdce50df2fa08b397463167f578f927ed479fa6bcf1e5cafb69d121aeeefe",
+    "config": "file:config.json@sha256:ba3723c2258e4d5531e0fb51956d7b64389cfebeadc311e96df10c312a1c08b2"
+  },
+  "summary": {
+    "value": "The model expects a raw audio signal as input and outputs predictions for age in a range of approximately 0...1 (0...100 years) and gender expressing the probababilty for being child, female, or male. In addition, it also provides the pooled states of the last transformer layer.",
+    "source": "file:README.md@sha256:5e6fdce50df2fa08b397463167f578f927ed479fa6bcf1e5cafb69d121aeeefe"
+  },
+  "glance": {
+    "task": {
+      "value": "Audio classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 317542020,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:ba3723c2258e4d5531e0fb51956d7b64389cfebeadc311e96df10c312a1c08b2#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:ba3723c2258e4d5531e0fb51956d7b64389cfebeadc311e96df10c312a1c08b2#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-sa-4.0",
+        "name": "CC BY NC SA 4.0",
+        "commercial": "no",
+        "note": "Non commercial, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-large-robust"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2023-09-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 61,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12081053,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:ba3723c2258e4d5531e0fb51956d7b64389cfebeadc311e96df10c312a1c08b2#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:ba3723c2258e4d5531e0fb51956d7b64389cfebeadc311e96df10c312a1c08b2#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ba3723c2258e4d5531e0fb51956d7b64389cfebeadc311e96df10c312a1c08b2#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32,
+      "source": "file:config.json@sha256:ba3723c2258e4d5531e0fb51956d7b64389cfebeadc311e96df10c312a1c08b2#vocab_size"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2306.16962",
+        "title": "Speech-based Age and Gender Prediction with Transformers",
+        "first_author": "Felix Burkhardt",
+        "authors": 5,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "agender",
+      "mozillacommonvoice",
+      "timit",
+      "voxceleb2"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 8,
+      "top": [
+        "embedl/hfviewer",
+        "intelli-zen/speech_age_and_gender",
+        "audeering/speech-analysis"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

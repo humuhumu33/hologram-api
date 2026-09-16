@@ -1,0 +1,149 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nm-testing/SmolLM-1.7B-Instruct-quantized.w4a16",
+  "revision": "e66aefd5fd7c1e4995223b86816643ced975af98",
+  "manifest": "blake3:a317098be02e42958fb4df9f5ce146e9f682229eb4ddfd34b1832a45aa2b8b8b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nm-testing/SmolLM-1.7B-Instruct-quantized.w4a16",
+    "readme": "file:README.md@sha256:bbd43747b93992a5b9b3079330cfd488984f449a813288600687962bec5a7724",
+    "config": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48"
+  },
+  "summary": {
+    "value": "Quantized version of SmolLM-135M-Instruct. It achieves an average score of 31.91 on the OpenLLM benchmark (version 1), whereas the unquantized model achieves 31.55.",
+    "source": "file:README.md@sha256:bbd43747b93992a5b9b3079330cfd488984f449a813288600687962bec5a7724"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1837205840,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 88%, FP32 12%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-08-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 5445761,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 49152,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:b1a9f2cd832ec5859ce5b386391fc780041e4700b1e4d6742c20f296dbd42d48#quantization_config"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2210.17323",
+        "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+        "first_author": "Elias Frantar",
+        "authors": 4,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sahilchachra/Unlimited-OCR-AWQ",
+  "revision": "0ad8e3cfd1fa10b87065309580f3ed9ea97777d9",
+  "manifest": "blake3:ea0dd9e7d359b14886e7c3484513b0c35f49d30ce3fa5cc0c35fa9934934f564",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sahilchachra/Unlimited-OCR-AWQ",
+    "readme": "file:README.md@sha256:2a29a1a2d42c4e0c25f69e84f4df75038ac8b94cd81c126c4c2e4ec760507f46",
+    "config": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3"
+  },
+  "summary": {
+    "value": "AWQ 4-bit (W4A16) quantization of baidu/Unlimited-OCR, a 3B vision-language OCR model that pushes DeepSeek-OCR one step further (one-shot, long-horizon document parsing).",
+    "source": "file:README.md@sha256:2a29a1a2d42c4e0c25f69e84f4df75038ac8b94cd81c126c4c2e4ec760507f46"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3356377127,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Unlimited Ocr",
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#model_type"
+    },
+    "architecture_id": {
+      "value": "unlimited-ocr",
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 77%, BF16 23%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "baidu/Unlimited-OCR"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-06-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2189189,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#hidden_size"
+    },
+    "heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#max_position_embeddings"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "vision",
+      "source": "file:config.json@sha256:b8a5860a6f72beaaf86fe3ff8fa5eebaf92b988eaa0877bc074146ca3d1049b3#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "gvs/wav2vec2-large-xlsr-malayalam",
+  "revision": "b073beb93616a83d26933e1aa98d9299a5f4af23",
+  "manifest": "blake3:934239fb81a011edad2a15eb43888c001cb7cb6d6bb878c8b8a61f09131c8abd",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/gvs/wav2vec2-large-xlsr-malayalam",
+    "readme": "file:README.md@sha256:29211a4ea51e77e73a31fcc87765136290cf3b9c5933d45ff85a4787695724f5",
+    "config": "file:config.json@sha256:687f585db409adf83cce596e990c4f316f397f462d3ddf96dd2e303dc259a324"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on ml (Malayalam) using the Indic TTS Malayalam Speech Corpus (via Kaggle), Openslr Malayalam Speech Corpus, SMC Malayalam Speech Corpus and IIIT-H Indic Speech Databases. The notebooks used to train model are available here.",
+    "source": "file:README.md@sha256:29211a4ea51e77e73a31fcc87765136290cf3b9c5933d45ff85a4787695724f5"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:687f585db409adf83cce596e990c4f316f397f462d3ddf96dd2e303dc259a324#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:687f585db409adf83cce596e990c4f316f397f462d3ddf96dd2e303dc259a324#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ml"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-07-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4884864,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:687f585db409adf83cce596e990c4f316f397f462d3ddf96dd2e303dc259a324#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:687f585db409adf83cce596e990c4f316f397f462d3ddf96dd2e303dc259a324#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:687f585db409adf83cce596e990c4f316f397f462d3ddf96dd2e303dc259a324#num_attention_heads"
+    },
+    "vocab": {
+      "value": 76,
+      "source": "file:config.json@sha256:687f585db409adf83cce596e990c4f316f397f462d3ddf96dd2e303dc259a324#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Test split of combined dataset using all datasets mentioned above",
+        "task": "Test WER",
+        "value": 28.43,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Daniel9046/SoniTranslate",
+        "RO-Rtechs/Translate_Video_language",
+        "r3gm/SoniTranslate_translate_audio_of_a_video_content"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

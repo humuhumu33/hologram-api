@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/Florence-2-large",
+  "revision": "21a599d414c4d928c9032694c424fb94458e3594",
+  "manifest": "blake3:4f7b471f397ac870802b8049fcb8c92f2955fb5c525228ef82dc76b65be4cae0",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/Florence-2-large",
+    "readme": "file:README.md@sha256:16212f1929e4992649d18b812e0ebf7ebbbaffd90a5ba23dfdc5c78df2f92ac2",
+    "config": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a"
+  },
+  "summary": {
+    "value": "This is a continued pretrained version of Florence-2-large model with 4k context length, only 0.1B samples are used for continue pretraining, thus it might not be trained well. In addition, OCR task has been updated with line separator ('\\n').",
+    "source": "file:README.md@sha256:16212f1929e4992649d18b812e0ebf7ebbbaffd90a5ba23dfdc5c78df2f92ac2"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 776721497,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Florence2",
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#model_type"
+    },
+    "architecture_id": {
+      "value": "florence2",
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#model_type"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-06-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-08-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1862,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 23599569,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#d_model"
+    },
+    "vocab": {
+      "value": 51289,
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#vocab_size"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#max_position_embeddings"
+    },
+    "vision_encoder": {
+      "value": "davit",
+      "source": "file:config.json@sha256:6f8a8f92a74ce18b5c1e5646b4a8222477dd1ac49f31b953e75d6fc3e0f8583a#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 10,
+        "Merged": 1,
+        "Quantized": 2,
+        "Fine tuned": 42
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 10,
+        "merge": 1,
+        "quantized": 2,
+        "finetune": 42
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2311.06242",
+        "title": "Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks",
+        "first_author": "Bin Xiao",
+        "authors": 9,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "speridlabs/eneas",
+        "gokaygokay/FLUX-Prompt-Generator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

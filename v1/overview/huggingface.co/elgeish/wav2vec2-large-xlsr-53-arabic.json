@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "elgeish/wav2vec2-large-xlsr-53-arabic",
+  "revision": "b5e6df14064b879671fd242c0366cbe2a68effc9",
+  "manifest": "blake3:66706ae6ab15f7b3ec7bbe26ae2a3359a04797f2fd896d7b0597a29986cfd81b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/elgeish/wav2vec2-large-xlsr-53-arabic",
+    "readme": "file:README.md@sha256:c2703bb3c0abbcd83413598d340468b5543c79ea6a5bd81781ad7c55d86bd04f",
+    "config": "file:config.json@sha256:11b56cf8b2170ea4ce9badc83d9a2e99dd806f76f0ae372e2e9c43cb89113d93"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Arabic using the train splits of Common Voice and Arabic Speech Corpus. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:c2703bb3c0abbcd83413598d340468b5543c79ea6a5bd81781ad7c55d86bd04f"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:11b56cf8b2170ea4ce9badc83d9a2e99dd806f76f0ae372e2e9c43cb89113d93#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:11b56cf8b2170ea4ce9badc83d9a2e99dd806f76f0ae372e2e9c43cb89113d93#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ar"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-06-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 18,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1143891,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:11b56cf8b2170ea4ce9badc83d9a2e99dd806f76f0ae372e2e9c43cb89113d93#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:11b56cf8b2170ea4ce9badc83d9a2e99dd806f76f0ae372e2e9c43cb89113d93#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:11b56cf8b2170ea4ce9badc83d9a2e99dd806f76f0ae372e2e9c43cb89113d93#num_attention_heads"
+    },
+    "vocab": {
+      "value": 56,
+      "source": "file:config.json@sha256:11b56cf8b2170ea4ce9badc83d9a2e99dd806f76f0ae372e2e9c43cb89113d93#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice 6.1 (Arabic)",
+        "task": "Test WER",
+        "value": 26.55,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice 6.1 (Arabic)",
+        "task": "Validation WER",
+        "value": 23.39,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "arabic_speech_corpus",
+      "mozilla-foundation/common_voice_6_1"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "Haitam03/arabic-pronunciation-checker",
+        "papasega/ASR-Arabe-MT-2-French"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "albert/albert-base-v2",
+  "revision": "8e2f239c5f8a2c0f253781ca60135db913e5c80c",
+  "manifest": "blake3:f8c44d23ff065fa119c56d711db90928985ec735531ca202604c22d729159ca5",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/albert/albert-base-v2",
+    "readme": "file:README.md@sha256:aa29d37125110a1dcec4a91f33efb33c5102bca6052ac70cfd9d63e056502772",
+    "config": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03"
+  },
+  "summary": {
+    "value": "Pretrained model on English language using a masked language modeling (MLM) objective. It was introduced in this paper and first released in this repository.",
+    "source": "file:README.md@sha256:aa29d37125110a1dcec4a91f33efb33c5102bca6052ac70cfd9d63e056502772"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 11842272,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Albert",
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#model_type"
+    },
+    "architecture_id": {
+      "value": "albert",
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 150,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 165457323,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30000,
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f5b7ef285a15ebbc7043b23284e60ac6f6de8d0a6051e282dfdf81da9351dc03#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 50,
+        "Quantized": 6,
+        "Fine tuned": 246
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 50,
+        "quantized": 6,
+        "finetune": 246
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1909.11942",
+        "title": "ALBERT: A Lite BERT for Self-supervised Learning of Language Representations",
+        "first_author": "Zhenzhong Lan",
+        "authors": 6,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "bookcorpus",
+      "wikipedia"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 54,
+      "top": [
+        "society-ethics/model-card-regulatory-check",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "ccolas/TastyPiano"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

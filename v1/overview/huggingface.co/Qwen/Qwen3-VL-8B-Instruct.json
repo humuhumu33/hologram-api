@@ -1,0 +1,455 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen3-VL-8B-Instruct",
+  "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "manifest": "blake3:90239f5b3a5140b786b6335b29b4884b5bcd51fb72feb3b949ad4a49733b3560",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen3-VL-8B-Instruct",
+    "readme": "file:README.md@sha256:6d5d06e0c3f069097002445d30dce9ee107db3afaf15563f09e6df49b8dcb4d7",
+    "config": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661"
+  },
+  "summary": {
+    "value": "Meet Qwen3-VL — the most powerful vision-language model in the Qwen series to date.",
+    "source": "file:README.md@sha256:6d5d06e0c3f069097002445d30dce9ee107db3afaf15563f09e6df49b8dcb4d7"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8767123696,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3 VL",
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_vl",
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-10-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1124,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 66346133,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 5000000,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_vl",
+      "source": "file:config.json@sha256:5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "tiiuae/PBench",
+        "task": "average",
+        "value": 49,
+        "date": "2026-05-11",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct",
+        "notes": "Detection-only model combined with SAM2 to convert boxes to segmentation masks."
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "overall",
+        "value": 68.3,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "digital",
+        "value": 78.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "photographed",
+        "value": 65,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "latin",
+        "value": 73.6,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "de",
+        "value": 73.7,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "en",
+        "value": 71.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "es",
+        "value": 69.3,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "fr",
+        "value": 66.2,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "id",
+        "value": 68.5,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "it",
+        "value": 79.1,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "nl",
+        "value": 78.3,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "pt",
+        "value": 82.2,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "vi",
+        "value": 73.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "non_latin",
+        "value": 62.5,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ar",
+        "value": 63.1,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "hi",
+        "value": 58.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "jp",
+        "value": 59.9,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ko",
+        "value": 61.9,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ru",
+        "value": 57.9,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "th",
+        "value": 62,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh",
+        "value": 62.6,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh_t",
+        "value": 73.8,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 46.8,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3vl_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 89.5,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3vl_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 66.8,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3vl_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 55.1,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3vl_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 1.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3vl_layout"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 21.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: qwen3vl_layout"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 218,
+        "Merged": 4,
+        "Quantized": 111,
+        "Fine tuned": 585
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 218,
+        "merge": 4,
+        "quantized": 111,
+        "finetune": 585
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2505.09388",
+        "title": "Qwen3 Technical Report",
+        "first_author": "An Yang",
+        "authors": 60,
+        "year": "2025"
+      },
+      {
+        "id": "2502.13923",
+        "title": "Qwen2.5-VL Technical Report",
+        "first_author": "Shuai Bai",
+        "authors": 27,
+        "year": "2025"
+      },
+      {
+        "id": "2409.12191",
+        "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+        "first_author": "Peng Wang",
+        "authors": 19,
+        "year": "2024"
+      },
+      {
+        "id": "2308.12966",
+        "title": "Qwen-VL: A Frontier Large Vision-Language Model with Versatile Abilities",
+        "first_author": "Jinze Bai",
+        "authors": 9,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "ginigen-ai/open-router-leaderboard",
+        "LPX55/Qwen-Image-Edit-2511-Turbo-Lightning"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

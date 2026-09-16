@@ -1,0 +1,214 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "bigscience/bloom-560m",
+  "revision": "ac2ae5fab2ce3f9f40dc79b5ca9f637430d24971",
+  "manifest": "blake3:af20d06d89e8fe71cf6767d5ec2b94b6b6c05cb7ca246fb059aa795e88513a4a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/bigscience/bloom-560m",
+    "readme": "file:README.md@sha256:cf3f160124b760e8f44d6ced405336c84970625109961d2e2715acdf7c3349bd",
+    "config": "file:config.json@sha256:5a255f97efaea3c0dabef5e743d2dd969cf1f733a9c5fd6ef41a42c1aae822e9"
+  },
+  "summary": {
+    "value": "This section addresses questions around how the model is intended to be used, discusses the foreseeable users of the model (including those affected by the model), and describes uses that are considered out of scope or misuse of the model.",
+    "source": "file:README.md@sha256:cf3f160124b760e8f44d6ced405336c84970625109961d2e2715acdf7c3349bd"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 559214592,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Bloom",
+      "source": "file:config.json@sha256:5a255f97efaea3c0dabef5e743d2dd969cf1f733a9c5fd6ef41a42c1aae822e9#model_type"
+    },
+    "architecture_id": {
+      "value": "bloom",
+      "source": "file:config.json@sha256:5a255f97efaea3c0dabef5e743d2dd969cf1f733a9c5fd6ef41a42c1aae822e9#model_type"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "bigscience-bloom-rail-1.0",
+        "name": "bigscience-bloom-rail-1.0"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ak",
+        "ar",
+        "as",
+        "bm",
+        "bn",
+        "ca",
+        "code",
+        "en",
+        "es",
+        "eu",
+        "fon",
+        "fr",
+        "gu",
+        "hi",
+        "id",
+        "ig",
+        "ki",
+        "kn",
+        "lg",
+        "ln",
+        "ml",
+        "mr",
+        "ne",
+        "nso",
+        "ny",
+        "or",
+        "pa",
+        "pt",
+        "rn",
+        "rw",
+        "sn",
+        "st",
+        "sw",
+        "ta",
+        "te",
+        "tn",
+        "ts",
+        "tum",
+        "tw",
+        "ur",
+        "vi",
+        "wo",
+        "xh",
+        "yo",
+        "zh",
+        "zhs",
+        "zht",
+        "zu"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-05-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 375,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 26285044,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:5a255f97efaea3c0dabef5e743d2dd969cf1f733a9c5fd6ef41a42c1aae822e9#n_layer"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:5a255f97efaea3c0dabef5e743d2dd969cf1f733a9c5fd6ef41a42c1aae822e9#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250880,
+      "source": "file:config.json@sha256:5a255f97efaea3c0dabef5e743d2dd969cf1f733a9c5fd6ef41a42c1aae822e9#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 128,
+        "Quantized": 14,
+        "Fine tuned": 35
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 128,
+        "quantized": 14,
+        "finetune": 35
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1909.08053",
+        "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+        "first_author": "Mohammad Shoeybi",
+        "authors": 6,
+        "year": "2019"
+      },
+      {
+        "id": "2110.02861",
+        "title": "8-bit Optimizers via Block-wise Quantization",
+        "first_author": "Tim Dettmers",
+        "authors": 4,
+        "year": "2021"
+      },
+      {
+        "id": "2108.12409",
+        "title": "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+        "first_author": "Ofir Press",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "VIDraft/global-llm-leaderboard",
+        "seawolf2357/LLM_Quantization",
+        "Manmay/tortoise-tts"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

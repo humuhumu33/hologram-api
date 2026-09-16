@@ -1,0 +1,177 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "AEON-7/Qwen3.6-35B-A3B-heretic-NVFP4",
+  "revision": "a483749169933e3fc5a4f48a5979effeba093192",
+  "manifest": "blake3:1a34a51bdbe99241f3178e11e30b7fddb20b091a4bf35fd98576aa5573b511bb",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/AEON-7/Qwen3.6-35B-A3B-heretic-NVFP4",
+    "readme": "file:README.md@sha256:feff590957ed933303f52b4ff2be50da51f00e494e472730ab96ce9082b10e00",
+    "config": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c"
+  },
+  "summary": {
+    "value": "v1 of this checkpoint had model.languagemodel.layers.X. keys remapped to model.layers.X. so vLLM's text-only Qwen35MoeForCausalLM loader would pick them up. That layout was unstable in production — intermittent NaN/crash in the prefix-strip codepath during real chat sessions.",
+    "source": "file:README.md@sha256:feff590957ed933303f52b4ff2be50da51f00e494e472730ab96ce9082b10e00"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 20840056496,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 MoE",
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 78%, BF16 12%, FP8 10%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "tvall43/Qwen3.6-35B-A3B-heretic"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 73,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1399837,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:77c1f9f1db3bb9f1ec9fcfb7fe96442b8e43d526dc25758c41457b08faa5aa2c#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "embedl/hfviewer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

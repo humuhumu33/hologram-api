@@ -1,0 +1,186 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "rinna/japanese-gpt-neox-small",
+  "revision": "84d18c0fa8c9940a61cfc4e25bd9a5686898bac1",
+  "manifest": "blake3:3c26cd605b6c4157b977f51427a23249c806c9f6af74c553a3969d5415302a31",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/rinna/japanese-gpt-neox-small",
+    "readme": "file:README.md@sha256:2aae2b4c813886e06123b7a95e5fa4c7886810aa1d1b82d943fdeba897a351f2",
+    "config": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b"
+  },
+  "summary": {
+    "value": "This repository provides a small-sized Japanese GPT-NeoX model. The model was trained using code based on EleutherAI/gpt-neox.",
+    "source": "file:README.md@sha256:2aae2b4c813886e06123b7a95e5fa4c7886810aa1d1b82d943fdeba897a351f2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 203611008,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "GPT Neox",
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#model_type"
+    },
+    "architecture_id": {
+      "value": "gpt_neox",
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 75%, UINT8 25%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-08-31",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4184654,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#num_attention_heads"
+    },
+    "vocab": {
+      "value": 44416,
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c4924736dfee47236d4245eb46ff33d879113801d0878992c095a8ee4b082c0b#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2101.00190",
+        "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+        "first_author": "Xiang Lisa Li",
+        "authors": 2,
+        "year": "2021"
+      },
+      {
+        "id": "2404.01657",
+        "title": "Release of Pre-Trained Models for the Japanese Language",
+        "first_author": "Kei Sawada",
+        "authors": 8,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "cc100",
+      "Wikipedia",
+      "mc4"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 20,
+      "top": [
+        "VIDraft/global-llm-leaderboard",
+        "seawolf2357/LLM_Quantization",
+        "KBaba7/Quant"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

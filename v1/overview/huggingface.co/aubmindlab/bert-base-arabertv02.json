@@ -1,0 +1,178 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "aubmindlab/bert-base-arabertv02",
+  "revision": "016fb9d6768f522a59c6e0d2d5d5d43a4e1bff60",
+  "manifest": "blake3:57af2b1cadf23f9bf4d76d178143ae4c58593578323dbe6fce30b2482380e968",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/aubmindlab/bert-base-arabertv02",
+    "readme": "file:README.md@sha256:97fe58fd1ddd1d63387a8bdbe710ff53e49c388164f6e9dffeb1a48923aabcb4",
+    "config": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914"
+  },
+  "summary": {
+    "value": "AraBERT is an Arabic pretrained language model based on Google's BERT architechture. AraBERT uses the same BERT-Base config.",
+    "source": "file:README.md@sha256:97fe58fd1ddd1d63387a8bdbe710ff53e49c388164f6e9dffeb1a48923aabcb4"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 135851522,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "ar"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-03-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 50,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16685875,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#num_attention_heads"
+    },
+    "vocab": {
+      "value": 64000,
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:206bb822488c75ff9449359b7841d3cfd0021082bdc18a5465f0fd37076c0914#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 5,
+        "Quantized": 4,
+        "Fine tuned": 4042
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 5,
+        "quantized": 4,
+        "finetune": 4042
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2003.00104",
+        "title": "AraBERT: Transformer-based Model for Arabic Language Understanding",
+        "first_author": "Wissam Antoun",
+        "authors": 3,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "wikipedia",
+      "Osian",
+      "1.5B-Arabic-Corpus",
+      "oscar-arabic-unshuffled",
+      "Assafir-private"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 52,
+      "top": [
+        "aubmindlab/Arabic-NLP",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "atlasia/Atlaset-Arena"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

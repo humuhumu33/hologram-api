@@ -1,0 +1,136 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nguyenvulebinh/wav2vec2-base-vi-vlsp2020",
+  "revision": "50a30dadb3ec98a0d4cdb1eb1ea315aff538f7c2",
+  "manifest": "blake3:5bc40a3d856a6ca5c1dff23e0af5fbd5b0a3d8a866a2bb4f7a4977d4cfe3d221",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nguyenvulebinh/wav2vec2-base-vi-vlsp2020",
+    "readme": "file:README.md@sha256:d295d555d81d5326bc1727f30b272be1b29502160f4a1c26fe611192ea6e4783",
+    "config": "file:config.json@sha256:7ad1f5a8de0c54c9df0510db80779a13a306b36307197f06c80bb08423b2d00d"
+  },
+  "summary": {
+    "value": "Our models use wav2vec2 architecture, pre-trained on 13k hours of Vietnamese youtube audio (un-label data) and fine-tuned on 250 hours labeled of VLSP ASR dataset on 16kHz sampled speech audio. You can find more description here",
+    "source": "file:README.md@sha256:d295d555d81d5326bc1727f30b272be1b29502160f4a1c26fe611192ea6e4783"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:7ad1f5a8de0c54c9df0510db80779a13a306b36307197f06c80bb08423b2d00d#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:7ad1f5a8de0c54c9df0510db80779a13a306b36307197f06c80bb08423b2d00d#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-11-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-02-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7479160,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:7ad1f5a8de0c54c9df0510db80779a13a306b36307197f06c80bb08423b2d00d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:7ad1f5a8de0c54c9df0510db80779a13a306b36307197f06c80bb08423b2d00d#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:7ad1f5a8de0c54c9df0510db80779a13a306b36307197f06c80bb08423b2d00d#num_attention_heads"
+    },
+    "vocab": {
+      "value": 98,
+      "source": "file:config.json@sha256:7ad1f5a8de0c54c9df0510db80779a13a306b36307197f06c80bb08423b2d00d#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "vlsp-asr-2020"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "cbmd98/wav2vec2-Vietnamese-STT",
+        "Thanh-Lam/vietnamese-speaker-profiling-v2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

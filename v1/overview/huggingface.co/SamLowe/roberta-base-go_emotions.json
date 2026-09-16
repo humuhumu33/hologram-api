@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "SamLowe/roberta-base-go_emotions",
+  "revision": "d75048347613a25d77de8cf6412eaae9fa7b26be",
+  "manifest": "blake3:5a1099503ef5d1f32f780aed8e63ab16b1d12ee258dc347c3884d2f1c907bee3",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/SamLowe/roberta-base-go_emotions",
+    "readme": "file:README.md@sha256:bc576d0d7a4390c61bc700fe127e314485b20205d847a5202dfe8e76bdb3343a",
+    "config": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c"
+  },
+  "summary": {
+    "value": "A version of this model in ONNX format (including an INT8 quantized ONNX version) is now available at https://huggingface.co/SamLowe/roberta-base-goemotions-onnx.",
+    "source": "file:README.md@sha256:bc576d0d7a4390c61bc700fe127e314485b20205d847a5202dfe8e76bdb3343a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 124667678,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-09-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-05-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 691,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 98575793,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:3d4ef8e1465958e169761e2eb09d6e2c8d8806216973691ac40e405c97339d5c#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 1,
+        "Fine tuned": 18
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 1,
+        "finetune": 18
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3548",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "go_emotions"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Pontonkid/Real-Time-Multilingual-sentiment-analysis",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "shrimantasatpati/streamlit_real_time_speech_emotion_recognition_bot"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

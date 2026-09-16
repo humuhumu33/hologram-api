@@ -1,0 +1,166 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/siglip2-giant-opt-patch16-384",
+  "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+  "manifest": "blake3:299182efc56aa472af195a8669913bbd718e914d14ce6705066cba8c38db8590",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/siglip2-giant-opt-patch16-384",
+    "readme": "file:README.md@sha256:48a8c5cd2873b1043f965b020f89da2d601e8213acb7713a1686d985a3c031e4",
+    "config": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663"
+  },
+  "summary": {
+    "value": "SigLIP 2 extends the pretraining objective of SigLIP with prior, independently developed techniques into a unified recipe, for improved semantic understanding, localization, and dense features.",
+    "source": "file:README.md@sha256:48a8c5cd2873b1043f965b020f89da2d601e8213acb7713a1686d985a3c031e4"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1871885426,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "SigLIP",
+      "source": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663#model_type"
+    },
+    "architecture_id": {
+      "value": "siglip",
+      "source": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-02-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-02-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 44,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8620273,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 27,
+      "source": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1152,
+      "source": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663#num_attention_heads"
+    },
+    "vocab": {
+      "value": 256000,
+      "source": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663#vocab_size"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 135,
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 135,
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2502.14786",
+        "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features",
+        "first_author": "Michael Tschannen",
+        "authors": 14,
+        "year": "2025"
+      },
+      {
+        "id": "2303.15343",
+        "title": "Sigmoid Loss for Language Image Pre-Training",
+        "first_author": "Xiaohua Zhai",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2209.06794",
+        "title": "PaLI: A Jointly-Scaled Multilingual Language-Image Model",
+        "first_author": "Xi Chen",
+        "authors": 29,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "mteb/leaderboard",
+        "hugging-apps/toolmerge-video-retrieval",
+        "hugging-apps/eovsam-open-vocab-segmentation"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

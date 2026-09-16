@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "incoai/Qwen3.8-27B-DFlash2",
+  "revision": "dedf8df68adfb1afeaf7b7480c0a0243108177b4",
+  "manifest": "blake3:4df5245d3fec9ecaf92f715588e83a3e8a722ca63b7b4a1e251b03c3b8d436f3",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/incoai/Qwen3.8-27B-DFlash2",
+    "readme": "file:README.md@sha256:be141ff737af8779959cb5ecaefb458ac3c214a5020aa40f69d4d1dc6f42494a",
+    "config": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980"
+  },
+  "summary": {
+    "value": "This repository contains the DFlash 2 draft model for Qwen/Qwen3.8-27B. It is not a standalone language model: it runs inside a speculative decoding server and drafts tokens for the target model to verify.",
+    "source": "file:README.md@sha256:be141ff737af8779959cb5ecaefb458ac3c214a5020aa40f69d4d1dc6f42494a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1924404480,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 235,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 409130,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 5,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:873e3556509b0da06e29654ba00d4944888d4b5e8a33afde25f7eb27d321e980#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 12
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 12
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "embedl/hfviewer",
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

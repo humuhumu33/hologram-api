@@ -1,0 +1,155 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "QuantTrio/Qwen3.6-27B-AWQ",
+  "revision": "9b507bdc9afafb87b7898700cc2a591aa6639461",
+  "manifest": "blake3:ae05831c3797480baeaf38324086c31db68132d2ab8d77cb052a967021ea55b4",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/QuantTrio/Qwen3.6-27B-AWQ",
+    "readme": "file:README.md@sha256:ef1983798b87677c11c8a02d2026fa06bff945c6b40c161a1283922af54a7231",
+    "config": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7"
+  },
+  "summary": {
+    "value": "As of 2026-04-22, make sure your system has cuda12.8 or cuda13.0 installed.",
+    "source": "file:README.md@sha256:ef1983798b87677c11c8a02d2026fa06bff945c6b40c161a1283922af54a7231"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781427952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 82%, BF16 18%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.6-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4150206,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "awq 4 bit",
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:2b0f0221c81e164372409f85410747ec5f060890a81d49d9f6cfaff3e74e42a7#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "aleada/pack-integrity-check"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

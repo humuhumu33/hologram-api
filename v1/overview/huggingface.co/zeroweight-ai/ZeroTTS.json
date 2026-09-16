@@ -1,0 +1,171 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "zeroweight-ai/ZeroTTS",
+  "revision": "c2bfbd67dc648cac455077333f7cf5c18a2e3bb4",
+  "manifest": "blake3:d2f1b9c7efd1222bcb138bc6c772d011af088536fd9fe52bf30446288b9325bf",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/zeroweight-ai/ZeroTTS",
+    "readme": "file:README.md@sha256:8a8422e8f47fa15f0009ea77e6b125ae7c233e45ae97a500bc63d37098f80a0e",
+    "config": "file:config.json@sha256:3676da6a9f4dba7a8f2d106d5c1fb02c491391dc19c91dae893133a7e219d666"
+  },
+  "summary": {
+    "value": "The most accurate open Vietnamese TTS we know of — 4× fewer word errors than the next best model, and it runs faster than real time on a laptop CPU.",
+    "source": "file:README.md@sha256:8a8422e8f47fa15f0009ea77e6b125ae7c233e45ae97a500bc63d37098f80a0e"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to speech",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "onnx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-08-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 37,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2333,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 9,
+      "source": "file:config.json@sha256:3676da6a9f4dba7a8f2d106d5c1fb02c491391dc19c91dae893133a7e219d666#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:3676da6a9f4dba7a8f2d106d5c1fb02c491391dc19c91dae893133a7e219d666#d_model"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:3676da6a9f4dba7a8f2d106d5c1fb02c491391dc19c91dae893133a7e219d666#n_heads"
+    },
+    "vocab": {
+      "value": 8192,
+      "source": "file:config.json@sha256:3676da6a9f4dba7a8f2d106d5c1fb02c491391dc19c91dae893133a7e219d666#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "ZeroBench-TTS",
+        "task": "WER (%) — raw text",
+        "value": 1.03,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ZeroBench-TTS",
+        "task": "UTMOSv2 naturalness MOS",
+        "value": 2.91,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ZeroBench-TTS",
+        "task": "Speaker similarity (WavLM-SV cosine)",
+        "value": 0.936,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ZeroBench-TTS",
+        "task": "Excess silence (s)",
+        "value": 0.029,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ZeroBench-TTS (vietnamese)",
+        "task": "WER (%) — raw text",
+        "value": 0.16,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ZeroBench-TTS (code_switch)",
+        "task": "WER (%) — raw text",
+        "value": 0.97,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ZeroBench-TTS (cross_lingual)",
+        "task": "WER (%) — raw text",
+        "value": 1.42,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ZeroBench-TTS (challenging)",
+        "task": "WER (%) — raw text",
+        "value": 1.75,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2602.10934",
+        "title": "MOSS-Audio-Tokenizer: Scaling Audio Tokenizers for Future Audio Foundation Models",
+        "first_author": "Yitian Gong",
+        "authors": 12,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "hugging-apps/zerotts-vietnamese-demo",
+        "LJKJHI/zerotts-vietnamese-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

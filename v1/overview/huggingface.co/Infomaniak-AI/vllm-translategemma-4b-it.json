@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Infomaniak-AI/vllm-translategemma-4b-it",
+  "revision": "cb3e0b2504f0db832982cca7fafd3ea4aaf777a0",
+  "manifest": "blake3:5793c0e3fd371421edcaa4bf9cc1d98c1b25b3d6571079b1c21f8393ed968785",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Infomaniak-AI/vllm-translategemma-4b-it",
+    "readme": "file:README.md@sha256:5611f4611ab4cd6b072722a28474764a00cbebea977af9c8ad3530ab266ded1c",
+    "config": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18"
+  },
+  "summary": {
+    "value": "This is a modified version of google/translategemma-4b-it optimized for deployment with vLLM.",
+    "source": "file:README.md@sha256:5611f4611ab4cd6b072722a28474764a00cbebea977af9c8ad3530ab266ded1c"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4971331952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 3",
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3",
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-01-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-01-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1038382,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 34,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262208,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#rope_theta"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:5e2619ca6f3bc75b2856f98458f0224f7364651805a9dc8710caf056bce97e18#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2601.09012",
+        "title": "TranslateGemma Technical Report",
+        "first_author": "Mara Finkelstein",
+        "authors": 20,
+        "year": "2026"
+      },
+      {
+        "id": "2503.19786",
+        "title": "Gemma 3 Technical Report",
+        "first_author": "Gemma Team",
+        "authors": 216,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

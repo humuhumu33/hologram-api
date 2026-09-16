@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+  "revision": "2c733782da5604684829819a5eb744c193fe9398",
+  "manifest": "blake3:667151f36b77964f3ddf21479b4dd7cee4350a833ee7a9c2c3324266bbecd60e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+    "readme": "file:README.md@sha256:32a058c9a338807e9e237fad17a9f400f67c64ee2e18d71750c912ffbfb9e22b",
+    "config": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13"
+  },
+  "summary": {
+    "value": "This checkpoint leverages the pretrained checkpoint wav2vec2-large-xlsr-53 and is fine-tuned on CommonVoice to recognize phonetic labels in multiple languages.",
+    "source": "file:README.md@sha256:32a058c9a338807e9e237fad17a9f400f67c64ee2e18d71750c912ffbfb9e22b"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-12-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 53,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12030435,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#num_attention_heads"
+    },
+    "vocab": {
+      "value": 392,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2109.11680",
+        "title": "Simple and Effective Zero-shot Cross-lingual Phoneme Recognition",
+        "first_author": "Qiantong Xu",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 35,
+      "top": [
+        "amphion/maskgct",
+        "cocktailpeanut/maskgct",
+        "KoelLabs/IPA-Transcription-EN"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

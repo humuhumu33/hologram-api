@@ -1,0 +1,174 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nlptown/bert-base-multilingual-uncased-sentiment",
+  "revision": "8f6f4e3a8f70be4b65d3a4a8762b6d781cda240d",
+  "manifest": "blake3:c6e361fa8305a229b95366d631c8cd9c38025925e3bd72308eaa39659863a566",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nlptown/bert-base-multilingual-uncased-sentiment",
+    "readme": "file:README.md@sha256:f2719fbf85d3bda03ecd11407429e4b1aa57aace5ddfa1edea668aad50503880",
+    "config": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74"
+  },
+  "summary": {
+    "value": "Visit the NLP Town website for an updated version of this model, with a 40% error reduction on product reviews.",
+    "source": "file:README.md@sha256:f2719fbf85d3bda03ecd11407429e4b1aa57aace5ddfa1edea668aad50503880"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 167360261,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "nl",
+        "de",
+        "fr",
+        "it",
+        "es"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-02",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 485,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 67445780,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#num_attention_heads"
+    },
+    "vocab": {
+      "value": 105879,
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:e5387cfa72d4b8f301b7df84365195d25711212b6c3d377cace2b18c3a911a74#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Quantized": 3,
+        "Fine tuned": 31
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "quantized": 3,
+        "finetune": 31
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/1515",
+    "source": "api:tags(doi)"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "CK42/sentiment-model-comparison",
+        "MHamdan/web-analyzer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

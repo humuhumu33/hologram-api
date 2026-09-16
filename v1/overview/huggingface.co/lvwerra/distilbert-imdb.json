@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lvwerra/distilbert-imdb",
+  "revision": "0fc02cd68445b599a9cb2da2368050e7fb31d29a",
+  "manifest": "blake3:2dbdf249f0f18c595288374996270d69d0b923bd9eafcb9e2b9ca34bb74669e0",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lvwerra/distilbert-imdb",
+    "readme": "file:README.md@sha256:9a440314bf40f0789dcea395f841fd88668a4db2ec59738cf937e6d631a61160",
+    "config": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of distilbert-base-uncased on the imdb dataset (training notebook is here). It achieves the following results on the evaluation set: - Loss: 0.1903 - Accuracy: 0.928",
+    "source": "file:README.md@sha256:9a440314bf40f0789dcea395f841fd88668a4db2ec59738cf937e6d631a61160"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Distilbert",
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#model_type"
+    },
+    "architecture_id": {
+      "value": "distilbert",
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-01-25",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3826707,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#dim"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#n_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:60b10704f12149b4001611a16b388d88b65d6b2f0566f55b5503d7185c9848ad#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "imdb",
+        "task": "Accuracy",
+        "value": 0.928,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "imdb"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "XS5217/text-classification",
+        "opioboo/lvwerra-distilbert-imdb",
+        "teachyourselfcoding/chatlawv1"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

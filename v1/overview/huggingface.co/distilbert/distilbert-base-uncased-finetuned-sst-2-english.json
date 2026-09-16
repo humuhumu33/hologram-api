@@ -1,0 +1,312 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+  "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+  "manifest": "blake3:e2c1124a69bb0fc22ae5390f5b8257c18fac8359c918899af5f6b063c23e593e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+    "readme": "file:README.md@sha256:75f17282923fea5b541df92640e2d8646c4ff5e8e3e16ed0a7e4e50ee7588851",
+    "config": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15"
+  },
+  "summary": {
+    "value": "This model can be used for topic classification. You can use the raw model for either masked language modeling or next sentence prediction, but it's mostly intended to be fine-tuned on a downstream task.",
+    "source": "file:README.md@sha256:75f17282923fea5b541df92640e2d8646c4ff5e8e3e16ed0a7e4e50ee7588851"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 66955010,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Distilbert",
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#model_type"
+    },
+    "architecture_id": {
+      "value": "distilbert",
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-12-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 953,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 401806316,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#dim"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#n_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "glue",
+        "task": "Accuracy",
+        "value": 0.9105504587155964,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "glue",
+        "task": "Precision",
+        "value": 0.8978260869565218,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "glue",
+        "task": "Recall",
+        "value": 0.9301801801801802,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "glue",
+        "task": "AUC",
+        "value": 0.9716626673402374,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "glue",
+        "task": "F1",
+        "value": 0.9137168141592922,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "glue",
+        "task": "loss",
+        "value": 0.39013850688934326,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "Accuracy",
+        "value": 0.9885521685548412,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "Precision Macro",
+        "value": 0.9881965062029833,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "Precision Micro",
+        "value": 0.9885521685548412,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "Precision Weighted",
+        "value": 0.9885639626373408,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "Recall Macro",
+        "value": 0.9886145346602994,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "Recall Micro",
+        "value": 0.9885521685548412,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "Recall Weighted",
+        "value": 0.9885521685548412,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "F1 Macro",
+        "value": 0.9884019815052447,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "F1 Micro",
+        "value": 0.9885521685548412,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "F1 Weighted",
+        "value": 0.9885546181087554,
+        "verified": true,
+        "source": "model card"
+      },
+      {
+        "dataset": "sst2",
+        "task": "loss",
+        "value": 0.040652573108673096,
+        "verified": true,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 4,
+        "Quantized": 6,
+        "Fine tuned": 141
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 4,
+        "quantized": 6,
+        "finetune": 141
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.01108",
+        "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+        "first_author": "Victor Sanh",
+        "authors": 4,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "doi": {
+    "value": "10.57967/hf/0181",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "sst2",
+      "glue"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "Shouryahere/infy",
+        "isayan58/ESG-CoPilot-Dashboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

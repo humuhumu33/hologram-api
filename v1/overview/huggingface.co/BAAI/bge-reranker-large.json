@@ -1,0 +1,265 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "BAAI/bge-reranker-large",
+  "revision": "55611d7bca2a7133960a6d3b71e083071bbfc312",
+  "manifest": "blake3:3372bef9608e0e39baf5515d85132be52aa8686c034d04afa971f4bcd90c0f75",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/BAAI/bge-reranker-large",
+    "readme": "file:README.md@sha256:21e23fa63b74a594ce5aa91f70c133ad2cd81baa21168362bbbc634c8c183066",
+    "config": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102"
+  },
+  "summary": {
+    "value": "We have updated the new reranker, supporting larger lengths, more languages, and achieving better performance.",
+    "source": "file:README.md@sha256:21e23fa63b74a594ce5aa91f70c133ad2cd81baa21168362bbbc634c8c183066"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 559891971,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-09-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-05-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 470,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 34350470,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MTEB CMedQAv1",
+        "task": "map",
+        "value": 81.27206722525007,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CMedQAv1",
+        "task": "mrr",
+        "value": 84.14238095238095,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CMedQAv2",
+        "task": "map",
+        "value": 84.10369934291236,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB CMedQAv2",
+        "task": "mrr",
+        "value": 86.79376984126984,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MMarcoReranking",
+        "task": "map",
+        "value": 35.4600511272538,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB MMarcoReranking",
+        "task": "mrr",
+        "value": 34.60238095238095,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB T2Reranking",
+        "task": "map",
+        "value": 67.27728847727172,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MTEB T2Reranking",
+        "task": "mrr",
+        "value": 77.1315192743764,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 22,
+        "Fine tuned": 9
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 22,
+        "finetune": 9
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2401.03462",
+        "title": "Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon",
+        "first_author": "Peitian Zhang",
+        "authors": 6,
+        "year": "2024"
+      },
+      {
+        "id": "2312.15503",
+        "title": "Making Large Language Models A Better Foundation For Dense Retrieval",
+        "first_author": "Chaofan Li",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2311.13534",
+        "title": "LM-Cocktail: Resilient Tuning of Language Models via Model Merging",
+        "first_author": "Shitao Xiao",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2310.07554",
+        "title": "Retrieve Anything To Augment Large Language Models",
+        "first_author": "Peitian Zhang",
+        "authors": 5,
+        "year": "2023"
+      },
+      {
+        "id": "2309.07597",
+        "title": "C-Pack: Packaged Resources To Advance General Chinese Embedding",
+        "first_author": "Shitao Xiao",
+        "authors": 4,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard_legacy",
+        "lightmate/llm-chatbot"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

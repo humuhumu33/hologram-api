@@ -1,0 +1,303 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen3.6-27B",
+  "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+  "manifest": "blake3:5ef887d090e0468af7f71a6d315d9e4ef7124a90944648ecf3cb2fef89f8b583",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen3.6-27B",
+    "readme": "file:README.md@sha256:bb936d6da51014f1edc9aa4cf9abf28d98695b7616ad56adfeeebfa752051d3d",
+    "config": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c"
+  },
+  "summary": {
+    "value": "Following the February release of the Qwen3.5 series, we're pleased to share the first open-weight variant of Qwen3.6. Built on direct feedback from the community, Qwen3.6 prioritizes stability and real-world utility, offering developers a more intuitive, responsive, and genuinely productive coding experience.",
+    "source": "file:README.md@sha256:bb936d6da51014f1edc9aa4cf9abf28d98695b7616ad56adfeeebfa752051d3d"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781427952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-04-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2297,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 26525652,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:69db4eb7196bc8190813231b3018ca05d8c2e3abc7b1af19d55c157af44a9d9c#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "benchflow/skillsbench",
+        "task": "skillsbench_v1_1",
+        "value": 48.2,
+        "date": "2026-04-21",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B",
+        "notes": "SkillsBench Avg5. Evaluated via OpenCode on 78 tasks (self-contained subset, excluding API-dependent tasks); avg of 5 runs. Mapped to the Hub's benchflow/skillsbench task skillsbench_v1_1."
+      },
+      {
+        "dataset": "harborframework/terminal-bench-2.0",
+        "task": "terminalbench_2",
+        "value": 59.3,
+        "date": "2026-06-23T12:08:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B",
+        "notes": "Harbor/Terminus-2 harness; 3h timeout, 32 CPU/48 GB RAM; temp=1.0, top_p=0.95, top_k=20, max_tokens=80K, 256K ctx; avg of 5 runs."
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "overall",
+        "value": 43.2,
+        "date": "2026-08-11",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "avg_time",
+        "value": 421,
+        "date": "2026-08-11",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "avg_cost",
+        "value": 20.91,
+        "date": "2026-08-11",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Multilingual",
+        "task": "swe_bench_multilingual_%_resolved",
+        "value": 71.3,
+        "date": "2026-08-10T19:50:32.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_vision",
+        "value": 75.8,
+        "date": "2026-05-15",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "MathArena/aime_2026",
+        "task": "MathArena/aime_2026",
+        "value": 94.1,
+        "date": "2026-04-22T14:14:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 87.8,
+        "date": "2026-04-22T14:14:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 24,
+        "date": "2026-04-22T14:14:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "MathArena/hmmt_feb_2026",
+        "task": "MathArena/hmmt_feb_2026",
+        "value": 84.3,
+        "date": "2026-04-22T14:14:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 86.2,
+        "date": "2026-04-22T14:14:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "ScaleAI/SWE-bench_Pro",
+        "task": "SWE_Bench_Pro",
+        "value": 53.5,
+        "date": "2026-04-22T14:14:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 77.2,
+        "date": "2026-04-22T14:14:53.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/Qwen/Qwen3.6-27B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 544,
+        "Merged": 22,
+        "Quantized": 738,
+        "Fine tuned": 389
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 544,
+        "merge": 22,
+        "quantized": 738,
+        "finetune": 389
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "ovhcloud",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "ginigen-ai/open-router-leaderboard",
+        "EuroEval/euroeval_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

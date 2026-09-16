@@ -1,0 +1,411 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openai/gpt-oss-20b",
+  "revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+  "manifest": "blake3:0ec32d88a4adce7ca9698fa3f9316fd3c75856036819797909561a9121964909",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openai/gpt-oss-20b",
+    "readme": "file:README.md@sha256:03c2fcf292549176757b85c911e7dcf527aef3e4241d64b6caec94af3ecf3ac2",
+    "config": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce"
+  },
+  "summary": {
+    "value": "Welcome to the gpt-oss series, OpenAI’s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases.",
+    "source": "file:README.md@sha256:03c2fcf292549176757b85c911e7dcf527aef3e4241d64b6caec94af3ecf3ac2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 20914757184,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 32,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "GPT Oss",
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#model_type"
+    },
+    "architecture_id": {
+      "value": "gpt_oss",
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 91%, BF16 9%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-08-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-08-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 5062,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 97616791,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2880,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 201088,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#max_position_embeddings"
+    },
+    "experts": {
+      "value": 32,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 150000,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "mxfp4",
+      "source": "file:config.json@sha256:3a2a26ded679375b7928ddeca59764df7cea83220c1961035f6d6e232659e9ce#quantization_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LiquidAI/ifstruct-v1.0",
+        "task": "ifstruct_v1",
+        "value": 91.95,
+        "date": "2026-06-30",
+        "verified": false,
+        "source": "https://www.liquid.ai/blog/ifstruct-v1.0"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 58.5858585859,
+        "date": "2026-04-19",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/6f/c3/6fc3630c-36f0-4ba9-9f34-3c9f73dec76a.json",
+        "notes": "GPQA Diamond"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 73.6,
+        "date": "2026-06-30T12:49:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/ca/ef/caef6dbc-0f07-4491-9009-2b0d26dc9724.json"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "open_question",
+        "value": 32.12,
+        "date": "2026-06-02T09:57:20.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "mcq_4_choices",
+        "value": 40.78,
+        "date": "2026-06-02T09:57:20.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 53.2,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: medium"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 37.4,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: low"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 60.7,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: high"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 8.8,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: medium, With tools"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 7,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: medium"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 6.3,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: low, With tools"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 4.2,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: low"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 17.3,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: high, With tools"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 10.9,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: high"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 67.1,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: medium, With tools"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 66,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: medium"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 58,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: low, With tools"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 56.8,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: low"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 74.2,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: high, With tools"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 71.5,
+        "date": "2025-08-05",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2508.10925",
+        "notes": "Reasoning: high"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 457,
+        "Merged": 7,
+        "Quantized": 237,
+        "Fine tuned": 554
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 457,
+        "merge": 7,
+        "quantized": 237,
+        "finetune": 554
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "groq",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "nscale",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "ovhcloud",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2508.10925",
+        "title": "gpt-oss-120b & gpt-oss-20b Model Card",
+        "first_author": "OpenAI",
+        "authors": 126,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "pliny-the-prompter/obliteratus",
+        "ginigen-ai/open-router-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "primeline/whisper-large-v3-turbo-german",
+  "revision": "9e7012dad9247f07553aac8a99c4d50ad7c3d36d",
+  "manifest": "blake3:67018ffffce360265f658d066de3fac063ad12677f4c25631513cc59f1cf6a64",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/primeline/whisper-large-v3-turbo-german",
+    "readme": "file:README.md@sha256:3488bbc1d9112b9df8b68f2021a49f08770a821a6343d9d3b981abd372fcb896",
+    "config": "file:config.json@sha256:e11686c9793b761c9634f8738892a7fc594e87ffb5d132bd025c8029ac263ca9"
+  },
+  "summary": {
+    "value": "Experience the powerful AI infrastructure that drives your ambitions in Deep Learning, Machine Learning & High-Performance Computing.",
+    "source": "file:README.md@sha256:3488bbc1d9112b9df8b68f2021a49f08770a821a6343d9d3b981abd372fcb896"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 808878080,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Whisper",
+      "source": "file:config.json@sha256:e11686c9793b761c9634f8738892a7fc594e87ffb5d132bd025c8029ac263ca9#model_type"
+    },
+    "architecture_id": {
+      "value": "whisper",
+      "source": "file:config.json@sha256:e11686c9793b761c9634f8738892a7fc594e87ffb5d132bd025c8029ac263ca9#model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "de"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "primeline/whisper-large-v3-german"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-10-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 66,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1320508,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:e11686c9793b761c9634f8738892a7fc594e87ffb5d132bd025c8029ac263ca9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:e11686c9793b761c9634f8738892a7fc594e87ffb5d132bd025c8029ac263ca9#d_model"
+    },
+    "vocab": {
+      "value": 51866,
+      "source": "file:config.json@sha256:e11686c9793b761c9634f8738892a7fc594e87ffb5d132bd025c8029ac263ca9#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "German ASR Data-Mix",
+        "task": "Test WER",
+        "value": "2.628 %",
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 10
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 10
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSpeechSeq2Seq",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2409.03137",
+        "title": "The AdEMAMix Optimizer: Better, Faster, Older",
+        "first_author": "Matteo Pagliardini",
+        "authors": 3,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "doi": {
+    "value": "10.57967/hf/3827",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "flozi00/asr-german-mixed",
+      "flozi00/asr-german-mixed-evals"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "MR-Eder/whisper-large-v3-turbo-german",
+        "flozi00/parakeet-primeline",
+        "MR-Eder/Realtime-whisper-large-v3-turbo-german"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

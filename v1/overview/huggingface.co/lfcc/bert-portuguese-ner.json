@@ -1,0 +1,118 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lfcc/bert-portuguese-ner",
+  "revision": "62e38bcb90c1b0e8e520aa73d73afe67cae67c7c",
+  "manifest": "blake3:dcb45bd1ab223b0cde15fc953b19dee2ee487e7fe3631ca1937eac3a9f0635aa",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lfcc/bert-portuguese-ner",
+    "readme": "file:README.md@sha256:7cfcf75d321d57a948178a0a6c9e7bf4f353a9b764f4c37511b7647d04836c1c",
+    "config": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of neuralmind/bert-base-portuguese-cased It achieves the following results on the evaluation set: - Loss: 0.1140 - Precision: 0.9147 - Recall: 0.9483 - F1: 0.9312 - Accuracy: 0.9700",
+    "source": "file:README.md@sha256:7cfcf75d321d57a948178a0a6c9e7bf4f353a9b764f4c37511b7647d04836c1c"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-10-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 9,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2254132,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#num_attention_heads"
+    },
+    "vocab": {
+      "value": 29794,
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:660bde1eb71bf506817307d7404fd60f5eba31195c9e6d4f32fd29c585dad36e#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  }
+}

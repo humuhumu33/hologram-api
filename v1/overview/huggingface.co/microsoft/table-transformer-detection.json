@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/table-transformer-detection",
+  "revision": "2357cbe2b5a5d1c03e54f32764f06058933b65ab",
+  "manifest": "blake3:b85dff31fe3e6f1d9b9b770ad0fc5213ab180ca151141c74855d379c0227bcaa",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/table-transformer-detection",
+    "readme": "file:README.md@sha256:c91e7f8199313c4d24b09e73a2f6df3141268666969346cb7b94ccb59900f5dd",
+    "config": "file:config.json@sha256:ed5b93df2c3a59d473ddea853553a6d545d52bd4e9f8f72bf40b8a974aba4c1d"
+  },
+  "summary": {
+    "value": "Table Transformer (DETR) model trained on PubTables1M. It was introduced in the paper PubTables-1M: Towards Comprehensive Table Extraction From Unstructured Documents by Smock et al. and first released in this repository.",
+    "source": "file:README.md@sha256:c91e7f8199313c4d24b09e73a2f6df3141268666969346cb7b94ccb59900f5dd"
+  },
+  "glance": {
+    "task": {
+      "value": "Object detection",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "boxes"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 28818631,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Table Transformer",
+      "source": "file:config.json@sha256:ed5b93df2c3a59d473ddea853553a6d545d52bd4e9f8f72bf40b8a974aba4c1d#model_type"
+    },
+    "architecture_id": {
+      "value": "table-transformer",
+      "source": "file:config.json@sha256:ed5b93df2c3a59d473ddea853553a6d545d52bd4e9f8f72bf40b8a974aba4c1d#model_type"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:ed5b93df2c3a59d473ddea853553a6d545d52bd4e9f8f72bf40b8a974aba4c1d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-10-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 428,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 75692864,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:ed5b93df2c3a59d473ddea853553a6d545d52bd4e9f8f72bf40b8a974aba4c1d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 256,
+      "source": "file:config.json@sha256:ed5b93df2c3a59d473ddea853553a6d545d52bd4e9f8f72bf40b8a974aba4c1d#d_model"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:ed5b93df2c3a59d473ddea853553a6d545d52bd4e9f8f72bf40b8a974aba4c1d#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 15
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 15
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForObjectDetection",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2110.00061",
+        "title": "PubTables-1M: Towards comprehensive table extraction from unstructured documents",
+        "first_author": "Brandon Smock",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Uthar/BodyPaint",
+        "gunship999/SexyImages",
+        "Yntec/ToyWorld"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

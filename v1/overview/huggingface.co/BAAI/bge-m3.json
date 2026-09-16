@@ -1,0 +1,564 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "BAAI/bge-m3",
+  "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "manifest": "blake3:3dba3c69368e47a8f7710954783515b46431dfe7495c98f5f3bb0f978c31a5cd",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/BAAI/bge-m3",
+    "readme": "file:README.md@sha256:0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450",
+    "config": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa"
+  },
+  "summary": {
+    "value": "In this project, we introduce BGE-M3, which is distinguished for its versatility in Multi-Functionality, Multi-Linguality, and Multi-Granularity. - Multi-Functionality: It can simultaneously perform the three common retrieval functionalities of embedding model: dense retrieval, multi-vector retrieval, and sparse…",
+    "source": "file:README.md@sha256:0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#model_type"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#max_position_embeddings"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-01-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-07-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3564,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 305302124,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#vocab_size"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightAopsRetrieval_default_standard",
+        "value": 4.562,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightAopsRetrieval",
+        "value": 4.562,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyLongRetrieval_default_long",
+        "value": 14.725,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyLongRetrieval",
+        "value": 14.725,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyRetrieval_default_standard",
+        "value": 9.484,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightBiologyRetrieval",
+        "value": 9.484,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceLongRetrieval_default_long",
+        "value": 20.833,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceLongRetrieval",
+        "value": 20.833,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceRetrieval_default_standard",
+        "value": 15.389,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEarthScienceRetrieval",
+        "value": 15.389,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsLongRetrieval_default_long",
+        "value": 13.107,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsLongRetrieval",
+        "value": 13.107,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsRetrieval_default_standard",
+        "value": 11.881,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightEconomicsRetrieval",
+        "value": 11.881,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightLeetcodeRetrieval_default_standard",
+        "value": 24.773,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightLeetcodeRetrieval",
+        "value": 24.773,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyLongRetrieval_default_long",
+        "value": 0.464,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyLongRetrieval",
+        "value": 0.464,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyRetrieval_default_standard",
+        "value": 15.171,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPonyRetrieval",
+        "value": 15.171,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyLongRetrieval_default_long",
+        "value": 19.307,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyLongRetrieval",
+        "value": 19.307,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyRetrieval_default_standard",
+        "value": 13.263,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightPsychologyRetrieval",
+        "value": 13.263,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsLongRetrieval_default_long",
+        "value": 12.376,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsLongRetrieval",
+        "value": 12.376,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsRetrieval_default_standard",
+        "value": 12.149,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightRoboticsRetrieval",
+        "value": 12.149,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowLongRetrieval_default_long",
+        "value": 8.974,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowLongRetrieval",
+        "value": 8.974,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowRetrieval_default_standard",
+        "value": 10.628,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightStackoverflowRetrieval",
+        "value": 10.628,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingLongRetrieval_default_long",
+        "value": 16.852,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingLongRetrieval",
+        "value": 16.852,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingRetrieval_default_standard",
+        "value": 10.168,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightSustainableLivingRetrieval",
+        "value": 10.168,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQAQuestionsRetrieval_default_standard",
+        "value": 12.618,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQAQuestionsRetrieval",
+        "value": 12.618,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQATheoremsRetrieval_default_standard",
+        "value": 4.342,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/BRIGHT",
+        "task": "BrightTheoremQATheoremsRetrieval",
+        "value": 4.342,
+        "date": "2026-04-01",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v2.10.12"
+      },
+      {
+        "dataset": "mteb/arguana",
+        "task": "ArguAna_default_test",
+        "value": 54.038,
+        "date": "2026-03-05T13:56:30.000Z",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v1.12.75"
+      },
+      {
+        "dataset": "mteb/arguana",
+        "task": "ArguAna",
+        "value": 54.038,
+        "date": "2026-03-05T13:56:30.000Z",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v1.12.75"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 34,
+        "Merged": 1,
+        "Quantized": 291,
+        "Fine tuned": 561
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 34,
+        "merge": 1,
+        "quantized": 291,
+        "finetune": 561
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2402.03216",
+        "title": "BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation",
+        "first_author": "Jianlv Chen",
+        "authors": 6,
+        "year": "2024"
+      },
+      {
+        "id": "2004.04906",
+        "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+        "first_author": "Vladimir Karpukhin",
+        "authors": 8,
+        "year": "2020"
+      },
+      {
+        "id": "2106.14807",
+        "title": "A Few Brief Notes on DeepImpact, COIL, and a Conceptual Framework for Information Retrieval Techniques",
+        "first_author": "Jimmy Lin",
+        "authors": 2,
+        "year": "2021"
+      },
+      {
+        "id": "2107.05720",
+        "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
+        "first_author": "Thibault Formal",
+        "authors": 3,
+        "year": "2021"
+      },
+      {
+        "id": "2004.12832",
+        "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+        "first_author": "Omar Khattab",
+        "authors": 2,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "SAkizuki/DanbooruSearch"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

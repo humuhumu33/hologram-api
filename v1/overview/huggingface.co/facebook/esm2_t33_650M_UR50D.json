@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/esm2_t33_650M_UR50D",
+  "revision": "08e4846e537177426273712802403f7ba8261b6c",
+  "manifest": "blake3:bfcce5045cb9c0b4b640da05a29f50bfbc4cb14aa62eea1455c66b7963cd2048",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/esm2_t33_650M_UR50D",
+    "readme": "file:README.md@sha256:462a2f24724e19c6be0efab926315c294a863c9a9770e2c8b3d859b2d81a07de",
+    "config": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b"
+  },
+  "summary": {
+    "value": "ESM-2 is a state-of-the-art protein model trained on a masked language modelling objective. It is suitable for fine-tuning on a wide range of tasks that take protein sequences as input.",
+    "source": "file:README.md@sha256:462a2f24724e19c6be0efab926315c294a863c9a9770e2c8b3d859b2d81a07de"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 652358616,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Esm",
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#model_type"
+    },
+    "architecture_id": {
+      "value": "esm",
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#model_type"
+    },
+    "context": {
+      "value": 1026,
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-09-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-03-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 90,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 50446542,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 33,
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#hidden_size"
+    },
+    "heads": {
+      "value": 20,
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#num_attention_heads"
+    },
+    "vocab": {
+      "value": 33,
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#vocab_size"
+    },
+    "context": {
+      "value": 1026,
+      "source": "file:config.json@sha256:539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 23,
+        "Quantized": 1,
+        "Fine tuned": 38
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 23,
+        "quantized": 1,
+        "finetune": 38
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 93,
+      "top": [
+        "ChatterjeeLab/PeptiVerse",
+        "thaidaev/zsp",
+        "eduagarcia/multilingual-tokenizer-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

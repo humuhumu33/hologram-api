@@ -1,0 +1,244 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/parakeet-ctc-1.1b",
+  "revision": "20e63a0fed6aedba145b74b826dbd41df0941730",
+  "manifest": "blake3:448a61a2a361d3a28feec5bd034609eb58ce387802698c49e7a4ad6329664ee9",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/parakeet-ctc-1.1b",
+    "readme": "file:README.md@sha256:1c0d57c1d2d0f0ec0cda6775f7c091c317493208d83f25f2b77d41093cffb33a",
+    "config": "file:config.json@sha256:c33a8ddbf447d68d31b2f1d1e4efa061548813b7647913e67560a9b198f06ae1"
+  },
+  "summary": {
+    "value": "parakeet-ctc-1.1b is an ASR model that transcribes speech in lower case English alphabet. This model is jointly developed by NVIDIA NeMo and Suno.ai teams.",
+    "source": "file:README.md@sha256:1c0d57c1d2d0f0ec0cda6775f7c091c317493208d83f25f2b77d41093cffb33a"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1062626305,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Parakeet Ctc",
+      "source": "file:config.json@sha256:c33a8ddbf447d68d31b2f1d1e4efa061548813b7647913e67560a9b198f06ae1#model_type"
+    },
+    "architecture_id": {
+      "value": "parakeet_ctc",
+      "source": "file:config.json@sha256:c33a8ddbf447d68d31b2f1d1e4efa061548813b7647913e67560a9b198f06ae1#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "nemo",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-4.0",
+        "name": "CC BY 4.0",
+        "commercial": "yes",
+        "note": "Attribution required"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-12-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 60,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9337673,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "vocab": {
+      "value": 1025,
+      "source": "file:config.json@sha256:c33a8ddbf447d68d31b2f1d1e4efa061548813b7647913e67560a9b198f06ae1#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 7.39875,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 2728.522295,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 15.67,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 13.75,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 10.28,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 1.83,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 3.51,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 4.02,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 3.57,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 6.56,
+        "date": "2023-12-28",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 13,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 13,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2305.05084",
+        "title": "Fast Conformer with Linearly Scalable Attention for Efficient Speech Recognition",
+        "first_author": "Dima Rekesh",
+        "authors": 8,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "librispeech_asr",
+      "fisher_corpus",
+      "Switchboard-1",
+      "WSJ-0",
+      "WSJ-1",
+      "National-Singapore-Corpus-Part-1",
+      "National-Singapore-Corpus-Part-6",
+      "vctk",
+      "voxpopuli",
+      "europarl",
+      "multilingual_librispeech",
+      "mozilla-foundation/common_voice_8_0",
+      "MLCommons/peoples_speech"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "fffiloni/tada-dual-alignment-tts-demo",
+        "build-small-hackathon/lightloom",
+        "mortimerme/pyvideotrans"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

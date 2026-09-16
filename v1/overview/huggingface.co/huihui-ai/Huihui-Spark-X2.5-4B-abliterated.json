@@ -1,0 +1,147 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "huihui-ai/Huihui-Spark-X2.5-4B-abliterated",
+  "revision": "2e7ab2831394c582f15d629e3c40d63e7d04bc75",
+  "manifest": "blake3:fbd07759fa305f1b4748b4b59fb23610a8b9547ae12683002e62d6f5cd8ba2fe",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/huihui-ai/Huihui-Spark-X2.5-4B-abliterated",
+    "readme": "file:README.md@sha256:6851ddfd4321cf0a749209fe2cf42722933f71dbddc9524f57794282bd088c91",
+    "config": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad"
+  },
+  "summary": {
+    "value": "This is an uncensored version of XHToken/Spark-X2.5-4B created with abliteration (see remove-refusals-with-transformers to know more about it). This is a crude, proof-of-concept implementation to remove refusals from an LLM model without using TransformerLens.",
+    "source": "file:README.md@sha256:6851ddfd4321cf0a749209fe2cf42722933f71dbddc9524f57794282bd088c91"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4112079360,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Spark2 5",
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#model_type"
+    },
+    "architecture_id": {
+      "value": "spark2_5",
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "XHToken/Spark-X2.5-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1038,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

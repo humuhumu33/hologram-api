@@ -1,0 +1,143 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autogluon/chronos-2",
+  "revision": "60088152a34e242427b44c3100014473a0157d53",
+  "manifest": "blake3:50b7402b3ab2069ee5aef4e689a9eadcdefe2b45458fc5748c937a64c1c27e49",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autogluon/chronos-2",
+    "readme": "file:README.md@sha256:bf2c0a3320652b8f3c31cd06953dad3e7891368de7307001d80882c3075ca244",
+    "config": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031"
+  },
+  "summary": {
+    "value": "Chronos-2 is a 120M-parameter, encoder-only time series foundation model for zero-shot forecasting. It supports univariate, multivariate, and covariate-informed tasks within a single architecture.",
+    "source": "file:README.md@sha256:bf2c0a3320652b8f3c31cd06953dad3e7891368de7307001d80882c3075ca244"
+  },
+  "glance": {
+    "task": {
+      "value": "Time series forecasting",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 119477664,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "T5",
+      "source": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031#model_type"
+    },
+    "architecture_id": {
+      "value": "t5",
+      "source": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "chronos-forecasting",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-10-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 71,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 70659684,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031#num_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031#d_model"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031#num_heads"
+    },
+    "vocab": {
+      "value": 2,
+      "source": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031#vocab_size"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:ef1143bfdc9c0376d9a056eefca46cb4b1ec3d0ffacd541ff56feb40fb708031#rope_theta"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2403.07815",
+        "title": "Chronos: Learning the Language of Time Series",
+        "first_author": "Abdul Fatir Ansari",
+        "authors": 17,
+        "year": "2024"
+      },
+      {
+        "id": "2510.15821",
+        "title": "Chronos-2: From Univariate to Universal Forecasting",
+        "first_author": "Abdul Fatir Ansari",
+        "authors": 23,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "autogluon/chronos_datasets",
+      "Salesforce/GiftEvalPretrain"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 6,
+      "top": [
+        "embedl/hfviewer",
+        "Blood-Glucose-Control/BGC",
+        "abhaypratapsingh111/chronos2-forecasting"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

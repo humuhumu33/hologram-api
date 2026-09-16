@@ -1,0 +1,227 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mistralai/Mistral-Nemo-Instruct-2407",
+  "revision": "04d8a90549d23fc6bd7f642064003592df51e9b3",
+  "manifest": "blake3:6270390a2ec4fc8134fe740e2076a1a777bd0a4fee3d93589b6816d90b679228",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mistralai/Mistral-Nemo-Instruct-2407",
+    "readme": "file:README.md@sha256:445377992e7404021555e689a5df79b90a3293c38829ec1dcaa9dfed5b7526b0",
+    "config": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe"
+  },
+  "summary": {
+    "value": "The Mistral-Nemo-Instruct-2407 Large Language Model (LLM) is an instruct fine-tuned version of the Mistral-Nemo-Base-2407. Trained jointly by Mistral AI and NVIDIA, it significantly outperforms existing models smaller or similar in size.",
+    "source": "file:README.md@sha256:445377992e7404021555e689a5df79b90a3293c38829ec1dcaa9dfed5b7526b0"
+  },
+  "glance": {
+    "parameters": {
+      "value": 12247782400,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Mistral",
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#model_type"
+    },
+    "architecture_id": {
+      "value": "mistral",
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "vllm",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "ru",
+        "zh",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "mistralai/Mistral-Nemo-Base-2407"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-07-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-07-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1705,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10365501,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:8a42669219f4caadedb891be88c34712572573d42b3d02d665d527f92d94ddfe#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "src",
+        "value": 0.3167,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "SRC overall; deterministic action-based grader, no LLM judge; seed 0, n=75"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "time",
+        "value": 0.5833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=time; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "access_deny",
+        "value": 0.0833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=access_deny; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "memory_label",
+        "value": 0.3333,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=memory_label; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "injection",
+        "value": 0.5,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=injection; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "bot_policy",
+        "value": 0.0833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=bot_policy; n=12"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 44.81,
+        "date": "2026-06-30T12:48:15.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/0d/72/0d7207b9-dd9a-4a3e-bb04-0f5a94e886dc.json"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 99,
+        "Merged": 85,
+        "Quantized": 176,
+        "Fine tuned": 231
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 99,
+        "merge": 85,
+        "quantized": 176,
+        "finetune": 231
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "pliny-the-prompter/obliteratus",
+        "KingNish/OpenGPT-4o"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

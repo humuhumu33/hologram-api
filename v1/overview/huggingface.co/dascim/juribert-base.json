@@ -1,0 +1,148 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "dascim/juribert-base",
+  "revision": "735b7d1dffc4bd93b78dac1aff6bff448e70c06c",
+  "manifest": "blake3:cbda90c388413d4a925b9c7d7f651636dad26a749306d6e3e575223e0f0df394",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/dascim/juribert-base",
+    "readme": "file:README.md@sha256:ed8136e915cdb80ddd2380256995f866c45f529a09f1a9f61ab7fb2fcf283596",
+    "config": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a"
+  },
+  "summary": {
+    "value": "JuriBERT is a set of BERT models (tiny, mini, small and base) pre-trained from scratch on French legal-domain specific corpora.",
+    "source": "file:README.md@sha256:ed8136e915cdb80ddd2380256995f866c45f529a09f1a9f61ab7fb2fcf283596"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 110650112,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "fr"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-10-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-10-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2868219,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:4bb8505fecf70ee19d7c7aea1b0fedacfddc82080bffdf4de9bfa11c33202e2a#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2110.01485",
+        "title": "JuriBERT: A Masked-Language Model Adaptation for French Legal Text",
+        "first_author": "Stella Douka",
+        "authors": 5,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "Sobroinc/SobroJuriBert",
+        "erwanastro/contrat-influence-verifieur"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

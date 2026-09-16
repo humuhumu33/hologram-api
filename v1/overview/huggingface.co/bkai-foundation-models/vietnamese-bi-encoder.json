@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "bkai-foundation-models/vietnamese-bi-encoder",
+  "revision": "84f9d9ada0d1a3c37557398b9ae9fcedcdf40be0",
+  "manifest": "blake3:bdbc933543eee2dacf01c099418ee6761b55c9ba903ce43d76ce2634eae9b979",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/bkai-foundation-models/vietnamese-bi-encoder",
+    "readme": "file:README.md@sha256:1433a6a36fb9b991999ce5eab31de89f6ebf31ef3c3a0c30c7b61685fa2ed878",
+    "config": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+    "source": "file:README.md@sha256:1433a6a36fb9b991999ce5eab31de89f6ebf31ef3c3a0c30c7b61685fa2ed878"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 134998272,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#model_type"
+    },
+    "context": {
+      "value": 258,
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "generic",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-09-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-03-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 80,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3660968,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 64001,
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#vocab_size"
+    },
+    "context": {
+      "value": 258,
+      "source": "file:config.json@sha256:5f28d12a2d641db00b6dfaff47517b9cf6175437ceb0e18ec0763938ab4b086f#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 63
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 63
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2403.01616",
+        "title": "Towards Comprehensive Vietnamese Retrieval-Augmented Generation and Large Language Models",
+        "first_author": "Nguyen Quang Duc",
+        "authors": 6,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 54,
+      "top": [
+        "mteb/leaderboard",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "NghiaUS/vietfactcheck-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

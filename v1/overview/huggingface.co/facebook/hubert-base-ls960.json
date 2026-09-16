@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/hubert-base-ls960",
+  "revision": "dba3bb02fda4248b6e082697eee756de8fe8aa8a",
+  "manifest": "blake3:fddcb5dddc2c7ebb037bbccde79b6db33fc2ea36bcc06626ceb5fbb0adce2c31",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/hubert-base-ls960",
+    "readme": "file:README.md@sha256:c59fb00d253ab5ae5d288f130c64dddf3b7af3d5ce35c96395ac7a3db5db88f5",
+    "config": "file:config.json@sha256:56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc"
+  },
+  "summary": {
+    "value": "The base model pretrained on 16kHz sampled speech audio. When using the model make sure that your speech input is also sampled at 16Khz.",
+    "source": "file:README.md@sha256:c59fb00d253ab5ae5d288f130c64dddf3b7af3d5ce35c96395ac7a3db5db88f5"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Hubert",
+      "source": "file:config.json@sha256:56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc#model_type"
+    },
+    "architecture_id": {
+      "value": "hubert",
+      "source": "file:config.json@sha256:56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 76,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16622774,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32,
+      "source": "file:config.json@sha256:56be398848bbd9cbc720172b0d45b2f01cac7652f2968f0f31f5faf9f2986acc#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Merged": 1,
+        "Quantized": 2,
+        "Fine tuned": 152
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "merge": 1,
+        "quantized": 2,
+        "finetune": 152
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2106.07447",
+        "title": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+        "first_author": "Wei-Ning Hsu",
+        "authors": 6,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "librispeech_asr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "mteb/leaderboard",
+        "Shanuka01/Voice_Cloning",
+        "smola/higgs_audio_v2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

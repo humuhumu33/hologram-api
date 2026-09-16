@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Salesforce/blip2-opt-2.7b",
+  "revision": "59a1ef6c1e5117b3f65523d1c6066825bcf315e3",
+  "manifest": "blake3:0bd64f3a4392eeb363e8ab3ed3f116ef49b81e083bb2139d59778d75f19be09b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Salesforce/blip2-opt-2.7b",
+    "readme": "file:README.md@sha256:441eced273ee86fe9ebb2eaaf269d3b2b665afecd180db6912977f3e32007dff",
+    "config": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b"
+  },
+  "summary": {
+    "value": "BLIP-2 model, leveraging OPT-2.7b (a large language model with 2.7 billion parameters). It was introduced in the paper BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models by Li et al. and first released in this repository.",
+    "source": "file:README.md@sha256:441eced273ee86fe9ebb2eaaf269d3b2b665afecd180db6912977f3e32007dff"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3744761856,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Blip 2",
+      "source": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b#model_type"
+    },
+    "architecture_id": {
+      "value": "blip-2",
+      "source": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-02-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-02-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 448,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 18347821,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50304,
+      "source": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b#vocab_size"
+    },
+    "vision_encoder": {
+      "value": "blip_2_vision_model",
+      "source": "file:config.json@sha256:7faf83ff4e7c25e282dcc614d018205ebcb6e832164018339b40bfe70beffa6b#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 52,
+        "Fine tuned": 12
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 52,
+        "finetune": 12
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2301.12597",
+        "title": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+        "first_author": "Junnan Li",
+        "authors": 4,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "mteb/leaderboard",
+        "jiawei011/dreamgaussian",
+        "microsoft/OmniParser-v2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

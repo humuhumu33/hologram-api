@@ -1,0 +1,234 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/Nemotron-3-Embed-1B-BF16",
+  "revision": "c0c9fea93ea424587517f2c59e20db9f1d6bf615",
+  "manifest": "blake3:6feba3862c04b90991543351b2601d7048da0adeb72ee619400140bbaeca7899",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/Nemotron-3-Embed-1B-BF16",
+    "readme": "file:README.md@sha256:6e811480c966ca54fca9a5cbd0e5ae60df15244bfc70bb9db155c2b92fa23f8e",
+    "config": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7"
+  },
+  "summary": {
+    "value": "The model generates dense vector embeddings from multilingual text inputs, enabling retrieval, semantic search, and (agentic) RAG workflows. As a core component of text retrieval systems, an embedding model transforms text, such as questions or passages, into dense vector representations.",
+    "source": "file:README.md@sha256:6e811480c966ca54fca9a5cbd0e5ae60df15244bfc70bb9db155c2b92fa23f8e"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1140918272,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Ministral3",
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#model_type"
+    },
+    "architecture_id": {
+      "value": "ministral3",
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual",
+        "en",
+        "ar",
+        "as",
+        "bn",
+        "bg",
+        "zh",
+        "da",
+        "nl",
+        "fi",
+        "fr",
+        "de",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "ko",
+        "ms",
+        "mr",
+        "ne",
+        "no",
+        "fa",
+        "pt",
+        "ro",
+        "ru",
+        "es",
+        "sw",
+        "sv",
+        "ta",
+        "te",
+        "th",
+        "uk",
+        "ur",
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "mistralai/Ministral-3-3B-Instruct-2512"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 150,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1178749,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 16,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:56964141409866da7ce7d2d88b5b20c44558f5e916b318ad3abd2c694b2cb5f7#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 20,
+        "Fine tuned": 9
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 20,
+        "finetune": 9
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2407.14679",
+        "title": "Compact Language Models via Pruning and Knowledge Distillation",
+        "first_author": "Saurav Muralidharan",
+        "authors": 9,
+        "year": "2024"
+      },
+      {
+        "id": "2502.13595",
+        "title": "MMTEB: Massive Multilingual Text Embedding Benchmark",
+        "first_author": "Kenneth Enevoldsen",
+        "authors": 86,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "hakari-bench/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

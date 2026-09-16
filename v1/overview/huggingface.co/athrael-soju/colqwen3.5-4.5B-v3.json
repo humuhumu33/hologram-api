@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "athrael-soju/colqwen3.5-4.5B-v3",
+  "revision": "c4ea4b92ff3322d68bfd6c65e492c69d0176f910",
+  "manifest": "blake3:aac8aa5229fb7ac1292328592bfa464f80a9aaf66815c7e5a2f33eff162a3dd0",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/athrael-soju/colqwen3.5-4.5B-v3",
+    "readme": "file:README.md@sha256:23155bdeb71b98f8164ac53c078ebe59ae9d07fd8a0c1dbd4f9fb67fd79505fd",
+    "config": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2"
+  },
+  "summary": {
+    "value": "V3 builds on V2 with automated hyperparameter search and evolutionary model soup merging. The search identified an optimal LoRA config (r=16, alpha=64) with cosine scheduling, and the final checkpoint is a per-layer evolutionary merge with V2.",
+    "source": "file:README.md@sha256:23155bdeb71b98f8164ac53c078ebe59ae9d07fd8a0c1dbd4f9fb67fd79505fd"
+  },
+  "glance": {
+    "task": {
+      "value": "visual-document-retrieval",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4540085056,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "colpali_engine",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Qwen/Qwen3.5-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-03-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 983957,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:3dfe8743e32defd98768c7777570dbc2d746e8a23295b43c8f9e974ff3f164d2#vision_config"
+    }
+  },
+  "datasets": {
+    "value": [
+      "vidore/colpali_train_set",
+      "openbmb/VisRAG-Ret-Train-Synthetic-data",
+      "openbmb/VisRAG-Ret-Train-In-domain-data",
+      "llamaindex/vdr-multilingual-train",
+      "vidore/tatdqa_train",
+      "Metric-AI/tabfquad_train_set"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "mteb/leaderboard",
+        "athrael-soju/colqwen3.5-4.5B",
+        "maxpar1/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "answerdotai/ModernBERT-base",
+  "revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+  "manifest": "blake3:7f9d2d88e50724a480e9abc3fce802f9327d080b80df88bb87125eca2d1aee85",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/answerdotai/ModernBERT-base",
+    "readme": "file:README.md@sha256:40539466fa1117be4693b8f1fdfdac81fac3c5db472ff57bc05d013d48eafa82",
+    "config": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f"
+  },
+  "summary": {
+    "value": "ModernBERT is a modernized bidirectional encoder-only Transformer model (BERT-style) pre-trained on 2 trillion tokens of English and code data with a native context length of up to 8,192 tokens. ModernBERT leverages recent architectural improvements such as:",
+    "source": "file:README.md@sha256:40539466fa1117be4693b8f1fdfdac81fac3c5db472ff57bc05d013d48eafa82"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 149655232,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-12-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1097,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 64919194,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50368,
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 41,
+        "Quantized": 67,
+        "Fine tuned": 1471
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 41,
+        "quantized": 67,
+        "finetune": 1471
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2412.13663",
+        "title": "Smarter, Better, Faster, Longer: A Modern Bidirectional Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference",
+        "first_author": "Benjamin Warner",
+        "authors": 14,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "EuroEval/euroeval_leaderboard",
+        "SzegedAI/AI_Detector"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

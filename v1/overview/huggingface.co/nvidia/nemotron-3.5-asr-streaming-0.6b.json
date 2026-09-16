@@ -1,0 +1,227 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+  "revision": "ea30d66debe3740a08b573244286791d423d6b3e",
+  "manifest": "blake3:b5d24d454b7d392459f56082501dcb0d709dbedfaec896ca3ccac96dbd300a7c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "readme": "file:README.md@sha256:a3344caadf796c084c6b90a9fa5978068fd45e3a019790bebe50489bb3c0f7b7",
+    "config": "file:config.json@sha256:62d186fd91f518e00e7867500f1f5819225e8ee95ea3e21b546514bf2048e845"
+  },
+  "summary": {
+    "value": "hr { border: none; border-top: 1px solid #e5e7eb; margin: 2rem 0; }",
+    "source": "file:README.md@sha256:a3344caadf796c084c6b90a9fa5978068fd45e3a019790bebe50489bb3c0f7b7"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 637997088,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron3 5 ASR",
+      "source": "file:config.json@sha256:62d186fd91f518e00e7867500f1f5819225e8ee95ea3e21b546514bf2048e845#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron3_5_asr",
+      "source": "file:config.json@sha256:62d186fd91f518e00e7867500f1f5819225e8ee95ea3e21b546514bf2048e845#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "nemo",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "es",
+        "de",
+        "fr",
+        "it",
+        "ar",
+        "ja",
+        "ko",
+        "pt",
+        "ru",
+        "hi",
+        "zh",
+        "vi",
+        "he",
+        "nl",
+        "cs",
+        "da",
+        "pl",
+        "no",
+        "sv",
+        "th",
+        "tr",
+        "bg",
+        "el",
+        "et",
+        "fi",
+        "hr",
+        "hu",
+        "lt",
+        "lv",
+        "ro",
+        "sk",
+        "uk",
+        "mt",
+        "sl"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-05-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1107,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2579913,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "vocab": {
+      "value": 13088,
+      "source": "file:config.json@sha256:62d186fd91f518e00e7867500f1f5819225e8ee95ea3e21b546514bf2048e845#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "ARTPARK-IISc/Vaani-Benchmark-V1.0",
+        "task": "Hindi_WER",
+        "value": 20.2,
+        "date": "2026-07-30",
+        "verified": false
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 53,
+        "Fine tuned": 46
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 53,
+        "finetune": 46
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "automatic-speech-recognition"
+        },
+        {
+          "provider": "fal-ai",
+          "status": "live",
+          "task": "automatic-speech-recognition"
+        },
+        {
+          "provider": "together",
+          "status": "live",
+          "task": "automatic-speech-recognition"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2312.17279",
+        "title": "Stateful Conformer with Cache-based Inference for Streaming Automatic Speech Recognition",
+        "first_author": "Vahid Noroozi",
+        "authors": 5,
+        "year": "2023"
+      },
+      {
+        "id": "2305.05084",
+        "title": "Fast Conformer with Linearly Scalable Attention for Efficient Speech Recognition",
+        "first_author": "Dima Rekesh",
+        "authors": 8,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Granary",
+      "multilingual_librispeech",
+      "fleurs",
+      "mozilla-foundation/common_voice_8_0",
+      "voxpopuli",
+      "europarl"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 32,
+      "top": [
+        "embedl/hfviewer",
+        "elmresearchcenter/open_universal_arabic_asr_leaderboard",
+        "victor/nemotron-3-5-asr-streaming"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

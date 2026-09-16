@@ -1,0 +1,220 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/LocateAnything-3B",
+  "revision": "c32291ca5e996f5a7a485845b4f57a233936bba0",
+  "manifest": "blake3:78b024dcf34c17af85450059836f6168882a71ec2a999535958fb2198578bd46",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/LocateAnything-3B",
+    "readme": "file:README.md@sha256:761d6cd50b579b7a178a6976222484769b049f91dd937cdde39e5ef9d7d3abb7",
+    "config": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007"
+  },
+  "summary": {
+    "value": "LocateAnything is a vision-language model for fast and high-quality visual grounding, enabling precise object localization, dense detection, and point-based localization across diverse domains in both Enterprise Intelligence and Physical AI.",
+    "source": "file:README.md@sha256:761d6cd50b579b7a178a6976222484769b049f91dd937cdde39e5ef9d7d3abb7"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3830665968,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Locateanything",
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#model_type"
+    },
+    "architecture_id": {
+      "value": "locateanything",
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen2.5-3B-Instruct"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3022,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2181058,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152681,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "moonvit",
+      "source": "file:config.json@sha256:59e6b5104f9d948db6a38f778e29f86d5c01e373f46d02008fc3070377917007#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 22,
+        "Fine tuned": 15
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 22,
+        "finetune": 15
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2605.27365",
+        "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
+        "first_author": "Shihao Wang",
+        "authors": 13,
+        "year": "2026"
+      },
+      {
+        "id": "2504.07491",
+        "title": "Kimi-VL Technical Report",
+        "first_author": "Kimi Team",
+        "authors": 92,
+        "year": "2025"
+      },
+      {
+        "id": "2109.10852",
+        "title": "Pix2seq: A Language Modeling Framework for Object Detection",
+        "first_author": "Ting Chen",
+        "authors": 5,
+        "year": "2022"
+      },
+      {
+        "id": "2510.12798",
+        "title": "Detect Anything via Next Point Prediction",
+        "first_author": "Qing Jiang",
+        "authors": 9,
+        "year": "2025"
+      },
+      {
+        "id": "2303.05499",
+        "title": "Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection",
+        "first_author": "Shilong Liu",
+        "authors": 11,
+        "year": "2023"
+      },
+      {
+        "id": "1405.0312",
+        "title": "Microsoft COCO: Common Objects in Context",
+        "first_author": "Tsung-Yi Lin",
+        "authors": 10,
+        "year": "2014"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 43,
+      "top": [
+        "embedl/hfviewer",
+        "nvidia/LocateAnything",
+        "akhaliq/LocateAnything"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

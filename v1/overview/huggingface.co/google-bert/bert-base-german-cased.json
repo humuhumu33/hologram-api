@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google-bert/bert-base-german-cased",
+  "revision": "0b061b4f7ce140d10dce6b6bd8a77da8ec80931b",
+  "manifest": "blake3:0fcbe86fbfb768839682c320504e6601eecf0536e4fe775c02d36df5e17b8f2f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google-bert/bert-base-german-cased",
+    "readme": "file:README.md@sha256:f43d51cd4950d9b0e5a6efe00e6a97d8911bfe6b833814768471fdf54201e09c",
+    "config": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c"
+  },
+  "summary": {
+    "value": "Update April 3rd, 2020: we updated the vocabulary file on deepset's s3 to conform with the default tokenization of punctuation tokens. For details see the related FARM issue.",
+    "source": "file:README.md@sha256:f43d51cd4950d9b0e5a6efe00e6a97d8911bfe6b833814768471fdf54201e09c"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109705010,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "de"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 82,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 18131270,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30000,
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:a56bfcfb1096d41c2e3e748a0af8ab92877ea4750a055deaff13e7e0f563fb2c#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 1,
+        "Fine tuned": 145
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 1,
+        "finetune": 145
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 54,
+      "top": [
+        "shi-labs/Versatile-Diffusion",
+        "Yuliang/ECON",
+        "Awiny/Image2Paragraph"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

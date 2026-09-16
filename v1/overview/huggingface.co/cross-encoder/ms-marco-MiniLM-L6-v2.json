@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "manifest": "blake3:5d888d4c4199360696cb1b5cbd6a302a1d6fe41a0939246ed095ca80bb2555fa",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2",
+    "readme": "file:README.md@sha256:7c0ec39941d0d1d766ccde671f592971d82fe45b7eea550a80d1ea864ebc3baa",
+    "config": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc"
+  },
+  "summary": {
+    "value": "The model can be used for Information Retrieval: Given a query, encode the query with all possible passages (e.g. retrieved with ElasticSearch). Then sort the passages in a decreasing order.",
+    "source": "file:README.md@sha256:7c0ec39941d0d1d766ccde671f592971d82fe45b7eea550a80d1ea864ebc3baa"
+  },
+  "glance": {
+    "task": {
+      "value": "text-ranking",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 22714113,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "cross-encoder/ms-marco-MiniLM-L12-v2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 341,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 561914537,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 27,
+        "Fine tuned": 78
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 27,
+        "finetune": 78
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "sentence-transformers/msmarco"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "AishaSurve/codebase-agent"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Musixmatch/umberto-commoncrawl-cased-v1",
+  "revision": "fe7b14808cccbbe2984b05e6fbfd71127f11008f",
+  "manifest": "blake3:c0899b192712f08d830a45b91b3e7d8bb8a76ec3039fb9b2f3fdab1a68fc9d3a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Musixmatch/umberto-commoncrawl-cased-v1",
+    "readme": "file:README.md@sha256:be4eff16648b7d522635a826c57fe1acf8d0199fb00eca85f7e28e78b7f68a72",
+    "config": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba"
+  },
+  "summary": {
+    "value": "UmBERTo is a Roberta-based Language Model trained on large Italian Corpora and uses two innovative approaches: SentencePiece and Whole Word Masking. Now available at github.com/huggingface/transformers",
+    "source": "file:README.md@sha256:be4eff16648b7d522635a826c57fe1acf8d0199fb00eca85f7e28e78b7f68a72"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Camembert",
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#model_type"
+    },
+    "architecture_id": {
+      "value": "camembert",
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "it"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-02-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 19,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1374755,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32005,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:040e75e6b8dcded7c01d4d3acb9cade6f8b51e038e8658664327bfc5b48897ba#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Fine tuned": 18
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "finetune": 18
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "responsibility-framing/sociofillmore_public",
+        "Matt-CB/TwitterAccountAnalyzer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

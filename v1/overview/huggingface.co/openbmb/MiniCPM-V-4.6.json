@@ -1,0 +1,195 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openbmb/MiniCPM-V-4.6",
+  "revision": "36f34a661a4bd35d0dc2294cb044d2584646c7d3",
+  "manifest": "blake3:7eeb36245ad9d89d1fb8f73b40036c6c6c3d1cc6f57c72f1ad49974f8208820a",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openbmb/MiniCPM-V-4.6",
+    "readme": "file:README.md@sha256:d08f69f90aa371f85fccb9369eb43d9261bed706a9b48e73f0a4553f6a954e50",
+    "config": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c"
+  },
+  "summary": {
+    "value": "A Pocket-Sized MLLM for Ultra-Efficient Image and Video Understanding on Your Phone",
+    "source": "file:README.md@sha256:d08f69f90aa371f85fccb9369eb43d9261bed706a9b48e73f0a4553f6a954e50"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1300428016,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Minicpmv4 6",
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#model_type"
+    },
+    "architecture_id": {
+      "value": "minicpmv4_6",
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-04-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1212,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3205505,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248094,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "minicpmv4_6_vision",
+      "source": "file:config.json@sha256:72d83ac9089bebddf28131b9953908acaf0a5740b868263c8aaac7c40b97991c#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 8,
+        "Quantized": 27,
+        "Fine tuned": 16
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 8,
+        "quantized": 27,
+        "finetune": 16
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2604.27393",
+        "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+        "first_author": "Junbo Cui",
+        "authors": 36,
+        "year": "2026"
+      },
+      {
+        "id": "2509.18154",
+        "title": "MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and Training Recipe",
+        "first_author": "Tianyu Yu",
+        "authors": 34,
+        "year": "2025"
+      },
+      {
+        "id": "2408.01800",
+        "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+        "first_author": "Yuan Yao",
+        "authors": 23,
+        "year": "2024"
+      },
+      {
+        "id": "2605.08985",
+        "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+        "first_author": "Kechen Fang",
+        "authors": 6,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 99,
+      "top": [
+        "embedl/hfviewer",
+        "build-small-hackathon/blood-test-explainer",
+        "openbmb/MiniCPM-V-4.6-Demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

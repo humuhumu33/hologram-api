@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "StanfordAIMI/stanford-deidentifier-base",
+  "revision": "661b9c1c717d3165512d440abc3700c386aefab6",
+  "manifest": "blake3:0b99381abd22021de282fb929cecbdb822e914ef88c965c57f31f2a42d14e859",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/StanfordAIMI/stanford-deidentifier-base",
+    "readme": "file:README.md@sha256:af68d40fc7cb84ebd583a3a062eea249487a925bb2413bbe82fa3b4423d53b1f",
+    "config": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc"
+  },
+  "summary": {
+    "value": "Stanford de-identifier was trained on a variety of radiology and biomedical documents with the goal of automatising the de-identification process while reaching satisfactory accuracy for use in production. Manuscript in-proceedings.",
+    "source": "file:README.md@sha256:af68d40fc7cb84ebd583a3a062eea249487a925bb2413bbe82fa3b4423d53b1f"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-06-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-10-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 85,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 26763380,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:e28091d60d4e75673b4f4b2bbe3363cdcccbace87da48f04b6c5b669957764cc#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "radreports"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 23,
+      "top": [
+        "embedl/hfviewer",
+        "MattStammers/pteredactyl_PII",
+        "woodmastr/presidio_WW"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

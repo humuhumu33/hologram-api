@@ -1,0 +1,129 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Arunavaonly/Bangla-twoclass-Sentiment-Analyzer",
+  "revision": "b2b3ca5db5eaf56a8542ee9deff888d5fa1b5cad",
+  "manifest": "blake3:656d83d55e85919cdfd59e7d51176773ae281a391eae259d69f9156f752ab4e5",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Arunavaonly/Bangla-twoclass-Sentiment-Analyzer",
+    "readme": "file:README.md@sha256:50f1362a9b6f3eef6a402a3db581fe877c91832cbd95c94122089a052886ba09",
+    "config": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of xlm-roberta-base on the None dataset. It achieves the following results on the evaluation set: - Loss: 2.7755 - F1: 0.6113",
+    "source": "file:README.md@sha256:50f1362a9b6f3eef6a402a3db581fe877c91832cbd95c94122089a052886ba09"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 278045955,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "FacebookAI/xlm-roberta-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2023-09-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3357852,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:3bc26da3f7d3b762d5008ae17d5ebfd074ea4fc3357049fa7d4870501cf30e44#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/resnet-50",
+  "revision": "34c2154c194f829b11125337b98c8f5f9965ff19",
+  "manifest": "blake3:2d4c8e2366b086070855e760e92a99bbaeeeb34bd8627126889f9c3b984ecc20",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/resnet-50",
+    "readme": "file:README.md@sha256:04d061880708f068399982df268dcbf26c221847a3fe5c20053b209af594bd04",
+    "config": "file:config.json@sha256:a1be0f56d516d0b55f9844ce0fbfe5fb359195cba6c6c102d41ae6c202c84d5e"
+  },
+  "summary": {
+    "value": "ResNet model pre-trained on ImageNet-1k at resolution 224x224. It was introduced in the paper Deep Residual Learning for Image Recognition by He et al.",
+    "source": "file:README.md@sha256:04d061880708f068399982df268dcbf26c221847a3fe5c20053b209af594bd04"
+  },
+  "glance": {
+    "task": {
+      "value": "Image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 25610152,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Resnet",
+      "source": "file:config.json@sha256:a1be0f56d516d0b55f9844ce0fbfe5fb359195cba6c6c102d41ae6c202c84d5e#model_type"
+    },
+    "architecture_id": {
+      "value": "resnet",
+      "source": "file:config.json@sha256:a1be0f56d516d0b55f9844ce0fbfe5fb359195cba6c6c102d41ae6c202c84d5e#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 509,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 574223970,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 11,
+        "Fine tuned": 499
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 11,
+        "finetune": 499
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1512.03385",
+        "title": "Deep Residual Learning for Image Recognition",
+        "first_author": "Kaiming He",
+        "authors": 4,
+        "year": "2015"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "imagenet-1k"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "merve/vision_papers",
+        "burtenshaw/autotrain-mcp"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

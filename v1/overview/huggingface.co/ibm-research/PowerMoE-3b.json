@@ -1,0 +1,265 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ibm-research/PowerMoE-3b",
+  "revision": "13fcb5a98001438bed01cf1ac4b423751dc4c2ea",
+  "manifest": "blake3:e12c6ff0a0183a0b6b77b756be600fa1ec2698727c4414e0835643a841fef7a4",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ibm-research/PowerMoE-3b",
+    "readme": "file:README.md@sha256:9b829545269d049958e30da894891580c378ee51e5083a376656f848564f1169",
+    "config": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f"
+  },
+  "summary": {
+    "value": "PowerMoE-3b is a 3.4B Granitemoe model for text generation by ibm-research, released Aug 2024, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3374286336,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 40,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#num_local_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Granitemoe",
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#model_type"
+    },
+    "architecture_id": {
+      "value": "granitemoe",
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#model_type"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-08-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 11831147,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1536,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 49152,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#vocab_size"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#max_position_embeddings"
+    },
+    "experts": {
+      "value": 40,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#num_local_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:c1ab33e5e331b17da2f9e226f8e8ff499bd8e9fcf41ce7a0da5bca519745d65f#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "ARC",
+        "task": "accuracy-norm",
+        "value": 58.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "BoolQ",
+        "task": "accuracy",
+        "value": 65,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Hellaswag",
+        "task": "accuracy-norm",
+        "value": 71.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "OpenBookQA",
+        "task": "accuracy-norm",
+        "value": 41,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "PIQA",
+        "task": "accuracy-norm",
+        "value": 79.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Winogrande",
+        "task": "accuracy-norm",
+        "value": 65,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MMLU (5 shot)",
+        "task": "accuracy",
+        "value": 42.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GSM8k (5 shot)",
+        "task": "accuracy",
+        "value": 25.9,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "math (4 shot)",
+        "task": "accuracy",
+        "value": 14.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "humaneval",
+        "task": "pass@1",
+        "value": 20.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MBPP",
+        "task": "pass@1",
+        "value": 32.4,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 9
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 9
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2408.13359",
+        "title": "Power Scheduler: A Batch Size and Token Number Agnostic Learning Rate Scheduler",
+        "first_author": "Yikang Shen",
+        "authors": 9,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

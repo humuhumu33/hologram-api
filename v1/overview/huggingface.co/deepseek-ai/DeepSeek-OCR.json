@@ -1,0 +1,491 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepseek-ai/DeepSeek-OCR",
+  "revision": "9f30c71f441d010e5429c532364a86705536c53a",
+  "manifest": "blake3:29b3eb50b05870a51f97a15d49c541757195b77719e5dec6a98fa521f43844b6",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-OCR",
+    "readme": "file:README.md@sha256:4f5e1d9e3b0c65c442f9c57c708e15d06ba9e277bb58db49bc9ba833f62f8f76",
+    "config": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8"
+  },
+  "summary": {
+    "value": "We would like to thank Vary, GOT-OCR2.0, MinerU, PaddleOCR, OneChart, Slow Perception for their valuable models and ideas.",
+    "source": "file:README.md@sha256:4f5e1d9e3b0c65c442f9c57c708e15d06ba9e277bb58db49bc9ba833f62f8f76"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3336106240,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek VL V2",
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_vl_v2",
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2025-10-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-11-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3380,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 35001939,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#hidden_size"
+    },
+    "heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#max_position_embeddings"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#num_experts_per_tok"
+    },
+    "vision_encoder": {
+      "value": "vision",
+      "source": "file:config.json@sha256:ac358c28898de6a71e84e0cb959fcc97fcb9c674edae13cd24286c17b90032d8#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "overall",
+        "value": 73.99,
+        "date": "2026-08-08T14:28:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "scanning",
+        "value": 86.17,
+        "date": "2026-08-08T14:28:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "warping",
+        "value": 67.2,
+        "date": "2026-08-08T14:28:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "screen_photography",
+        "value": 75.31,
+        "date": "2026-08-08T14:28:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "illumination",
+        "value": 78.1,
+        "date": "2026-08-08T14:28:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "skew",
+        "value": 63.01,
+        "date": "2026-08-08T14:28:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "overall",
+        "value": 51.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "digital",
+        "value": 80.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "photographed",
+        "value": 42.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "latin",
+        "value": 54.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "de",
+        "value": 55,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "en",
+        "value": 58.3,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "es",
+        "value": 44.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "fr",
+        "value": 43.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "id",
+        "value": 60.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "it",
+        "value": 69.3,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "nl",
+        "value": 52.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "pt",
+        "value": 53,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "vi",
+        "value": 54.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "non_latin",
+        "value": 48.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ar",
+        "value": 56.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "hi",
+        "value": 52.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "jp",
+        "value": 49.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ko",
+        "value": 28.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ru",
+        "value": 36.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "th",
+        "value": 49.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh",
+        "value": 59.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh_t",
+        "value": 59.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "private",
+        "value": 54.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "overall",
+        "value": 75.7,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "arxiv_math",
+        "value": 77.2,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans_math",
+        "value": 73.6,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "table_tests",
+        "value": 80.2,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans",
+        "value": 33.3,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "headers_footers",
+        "value": 96.1,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "multi_column",
+        "value": 66.4,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "long_tiny_text",
+        "value": 79.4,
+        "date": "2026-02-19T20:45:41.000Z",
+        "verified": false,
+        "source": "https://github.com/allenai/olmocr/tree/main/olmocr/bench"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 27,
+        "Merged": 3,
+        "Quantized": 11,
+        "Fine tuned": 130
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 27,
+        "merge": 3,
+        "quantized": 11,
+        "finetune": 130
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2510.18234",
+        "title": "DeepSeek-OCR: Contexts Optical Compression",
+        "first_author": "Haoran Wei",
+        "authors": 3,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "finebooks/bhl-ocr-leaderboard",
+        "khang119966/DeepSeek-OCR-DEMO"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

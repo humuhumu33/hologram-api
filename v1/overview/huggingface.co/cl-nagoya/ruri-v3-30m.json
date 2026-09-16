@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cl-nagoya/ruri-v3-30m",
+  "revision": "24899e5de370b56d179604a007c0d727bf144504",
+  "manifest": "blake3:ef8ce3764a89ce94ae5150bc3dd01e94404e007978d1663d7d7fb5c77f2fe8e2",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cl-nagoya/ruri-v3-30m",
+    "readme": "file:README.md@sha256:99ed37d027742a41691a862a1646ece9be68ff63d1184ad3bb7c0bfc0844c414",
+    "config": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5"
+  },
+  "summary": {
+    "value": "Ruri v3 is a general-purpose Japanese text embedding model built on top of ModernBERT-Ja.",
+    "source": "file:README.md@sha256:99ed37d027742a41691a862a1646ece9be68ff63d1184ad3bb7c0bfc0844c414"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 36705536,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "cl-nagoya/ruri-v3-pt-30m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-04-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1958212,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 10,
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 256,
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#hidden_size"
+    },
+    "heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#num_attention_heads"
+    },
+    "vocab": {
+      "value": 102400,
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:3230a8666ce50d245a0e68f5bff4682c419c541f1212ba001a497f327fb7a9e5#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 10
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 10
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2409.07737",
+        "title": "Ruri: Japanese General Text Embeddings",
+        "first_author": "Hayato Tsukagoshi",
+        "authors": 2,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "cl-nagoya/ruri-v3-dataset-ft"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "mteb/leaderboard",
+        "hakari-bench/leaderboard",
+        "maxpar1/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

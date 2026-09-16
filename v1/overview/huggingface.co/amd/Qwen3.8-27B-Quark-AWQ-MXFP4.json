@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "amd/Qwen3.8-27B-Quark-AWQ-MXFP4",
+  "revision": "5233554c5fa56afda40150556b95573c2d7d29c0",
+  "manifest": "blake3:bb80c800d102038947694903f45f8d2a85a1a9d1cdb7a74bfeceaa5c4697ce18",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/amd/Qwen3.8-27B-Quark-AWQ-MXFP4",
+    "readme": "file:README.md@sha256:acfbd8c9a14c5b69fee7cedc38c05c509b9db9b9e4dc52ea508929edb17ddaaa",
+    "config": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55"
+  },
+  "summary": {
+    "value": "Qwen/Qwen3.8-27B quantized to MXFP4 weights + MXFP4 activations with AMD Quark, using the AWQ (Activation-aware Weight Quantization) algorithm.",
+    "source": "file:README.md@sha256:acfbd8c9a14c5b69fee7cedc38c05c509b9db9b9e4dc52ea508929edb17ddaaa"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 15606149872,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 78%, BF16 22%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 24,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 18712,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "quark",
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:4a139d3e01df039e17b4c8b8362f7944674d76051a8cd96f213c6bc332d69f55#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

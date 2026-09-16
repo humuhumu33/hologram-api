@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jhgan/ko-sroberta-multitask",
+  "revision": "8fca7c9c98c26599be0e14b9916b11a756a26f19",
+  "manifest": "blake3:ba80b2bafac843f2131b71d9f46f4251255f2dcf09252e93b31028d6837d54b0",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jhgan/ko-sroberta-multitask",
+    "readme": "file:README.md@sha256:00f40982660d39f808a54e0ba800d5f115d69877a34ccf955576aad179692cb8",
+    "config": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+    "source": "file:README.md@sha256:00f40982660d39f808a54e0ba800d5f115d69877a34ccf955576aad179692cb8"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 110618626,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 151,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 23669981,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:50fb1a0ef3d83f79e28a157218dfce1f8e53bcd71a203168a06fff9d040d344b#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 9
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 9
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2004.03289",
+        "title": "KorNLI and KorSTS: New Benchmark Datasets for Korean Natural Language Understanding",
+        "first_author": "Jiyeon Ham",
+        "authors": 5,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 95,
+      "top": [
+        "mteb/leaderboard",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "dohyune/PLOBIN"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

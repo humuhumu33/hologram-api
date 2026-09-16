@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sshleifer/distilbart-cnn-12-6",
+  "revision": "a4f8f3ea906ed274767e9906dbaede7531d660ff",
+  "manifest": "blake3:84809d2d486344808d18c6e0ab8a131028706fff925cdf28ec7e910ccd2d1e34",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sshleifer/distilbart-cnn-12-6",
+    "readme": "file:README.md@sha256:e6114f9ddddd7aec5e9858b9849d1b53dc42b596420888b82fbf3f8defb64bf7",
+    "config": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917"
+  },
+  "summary": {
+    "value": "This checkpoint should be loaded into BartForConditionalGeneration.frompretrained. See the BART docs for more information.",
+    "source": "file:README.md@sha256:e6114f9ddddd7aec5e9858b9849d1b53dc42b596420888b82fbf3f8defb64bf7"
+  },
+  "glance": {
+    "task": {
+      "value": "Summarization",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Bart",
+      "source": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917#model_type"
+    },
+    "architecture_id": {
+      "value": "bart",
+      "source": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917#model_type"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-06-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 325,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 46473496,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917#d_model"
+    },
+    "vocab": {
+      "value": 50264,
+      "source": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917#vocab_size"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:028d72a28b90a369eff3f99ceb585fbd2ababf070e8577d72c315757a49b8917#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 49
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 49
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "summarization"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "cnn_dailymail",
+      "xsum"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "GenAILearniverse/TextSummarizer",
+        "ShivaCharanReddy-Kumbam/AI-Text-Summarizer",
+        "nickmuchi/article-text-summarizer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

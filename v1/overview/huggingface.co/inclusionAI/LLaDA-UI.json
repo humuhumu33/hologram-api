@@ -1,0 +1,147 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "inclusionAI/LLaDA-UI",
+  "revision": "f9a59c1945fc4de68f4bd667b49001cba4a1d954",
+  "manifest": "blake3:beceac4024cc1b52b9cdade23a06c507b3f1a4e7e0c4ce1fe2876085698e2e21",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/inclusionAI/LLaDA-UI",
+    "readme": "file:README.md@sha256:91e20087233402f74972bc72da3f9c08bd4ff5d1a4f991fcab6bcd48d14d8d7a",
+    "config": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07"
+  },
+  "summary": {
+    "value": "LLaDA-UI is an MoE-based, block-wise diffusion vision-language GUI agent. It understands screenshots at their native aspect ratio and produces grounded coordinates or structured actions for mobile, desktop, and web interfaces.",
+    "source": "file:README.md@sha256:91e20087233402f74972bc72da3f9c08bd4ff5d1a4f991fcab6bcd48d14d8d7a"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 16924344064,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Llada2vl",
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#model_type"
+    },
+    "architecture_id": {
+      "value": "llada2vl",
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "released": {
+      "value": "2026-09-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 20,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 176,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 20,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 157188,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 600000,
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#rope_theta"
+    },
+    "vision_encoder": {
+      "value": "lladavision",
+      "source": "file:config.json@sha256:277aa5e80d0c4d8368d43be218ecd498fba510c090c2d047a9ed7fe7afd6ed07#vision_config"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.13287",
+        "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents",
+        "first_author": "Zhangxuan Gu",
+        "authors": 20,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "inclusionAI/llada-ui-gui-agent-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

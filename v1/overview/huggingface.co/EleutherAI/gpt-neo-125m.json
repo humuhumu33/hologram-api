@@ -1,0 +1,173 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "EleutherAI/gpt-neo-125m",
+  "revision": "21def0189f5705e2521767faed922f1f15e7d7db",
+  "manifest": "blake3:11aa5d7bd54b750eab2b6e674edc87ab3aa53a98c102cca558d7bc6beab53f77",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/EleutherAI/gpt-neo-125m",
+    "readme": "file:README.md@sha256:c76aab9c03b38833cf58c4f30f6a2617b578106fb62f2e52bfc34bfb3d370fda",
+    "config": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16"
+  },
+  "summary": {
+    "value": "GPT-Neo 125M is a transformer model designed using EleutherAI's replication of the GPT-3 architecture. GPT-Neo refers to the class of models, while 125M represents the number of parameters of this particular pre-trained model.",
+    "source": "file:README.md@sha256:c76aab9c03b38833cf58c4f30f6a2617b578106fb62f2e52bfc34bfb3d370fda"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 150364416,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "GPT Neo",
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#model_type"
+    },
+    "architecture_id": {
+      "value": "gpt_neo",
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 83%, UINT8 17%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-01-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 229,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10611042,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#num_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#num_heads"
+    },
+    "vocab": {
+      "value": 50257,
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:dace197ce91788731063527367b0a6766d7d3a4ab72c671fabf16dbbf9037e16#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 99,
+        "Quantized": 4,
+        "Fine tuned": 183
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 99,
+        "quantized": 4,
+        "finetune": 183
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2101.00027",
+        "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+        "first_author": "Leo Gao",
+        "authors": 12,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "EleutherAI/pile"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "VIDraft/global-llm-leaderboard",
+        "yuntian-deng/latex2im",
+        "seawolf2357/LLM_Quantization"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

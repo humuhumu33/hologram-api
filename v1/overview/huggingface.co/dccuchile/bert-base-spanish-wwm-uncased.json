@@ -1,0 +1,187 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "dccuchile/bert-base-spanish-wwm-uncased",
+  "revision": "d1c9c4565c9d6731e57ed7f027b802697bad861e",
+  "manifest": "blake3:76d388325cccb06ad8bc857d3d33b227ce145006d59d22b25664c0f3206f92fb",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/dccuchile/bert-base-spanish-wwm-uncased",
+    "readme": "file:README.md@sha256:34bb04b0cd670257fda320bda7c2fc38e636d614abd5c502f551af0e9de17199",
+    "config": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f"
+  },
+  "summary": {
+    "value": "BETO is a BERT model trained on a big Spanish corpus. BETO is of size similar to a BERT-Base and was trained with the Whole Word Masking technique.",
+    "source": "file:README.md@sha256:34bb04b0cd670257fda320bda7c2fc38e636d614abd5c502f551af0e9de17199"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "es"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-01-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 77,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 17311196,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 31002,
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:ee7d29a157d70dd6736e8dfadff7e32544566c701e95565a8849c1e65218e86f#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 202
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 202
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1904.09077",
+        "title": "Beto, Bentz, Becas: The Surprising Cross-Lingual Effectiveness of BERT",
+        "first_author": "Shijie Wu",
+        "authors": 2,
+        "year": "2019"
+      },
+      {
+        "id": "1906.01502",
+        "title": "How multilingual is Multilingual BERT?",
+        "first_author": "Telmo Pires",
+        "authors": 3,
+        "year": "2019"
+      },
+      {
+        "id": "1812.10464",
+        "title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+        "first_author": "Mikel Artetxe",
+        "authors": 2,
+        "year": "2018"
+      },
+      {
+        "id": "1901.07291",
+        "title": "Cross-lingual Language Model Pretraining",
+        "first_author": "Guillaume Lample",
+        "authors": 2,
+        "year": "2019"
+      },
+      {
+        "id": "1904.02099",
+        "title": "75 Languages, 1 Model: Parsing Universal Dependencies Universally",
+        "first_author": "Dan Kondratyuk",
+        "authors": 2,
+        "year": "2019"
+      },
+      {
+        "id": "1906.01569",
+        "title": "Sequence Tagging with Contextual and Non-Contextual Subword Representations: A Multilingual Evaluation",
+        "first_author": "Benjamin Heinzerling",
+        "authors": 2,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 46,
+      "top": [
+        "mrfakename/MeloTTS",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "neuromod0/MeloTTS-English-v3"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

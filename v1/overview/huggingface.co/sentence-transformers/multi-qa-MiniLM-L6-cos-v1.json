@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+  "revision": "b207367332321f8e44f96e224ef15bc607f4dbf0",
+  "manifest": "blake3:12172fd4ad54a93fae3d57cf55777c6e28e653c1dd00d09c599dbf20e4e82348",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+    "readme": "file:README.md@sha256:516c81b58be758ff4a521ec86d6f30668c68644e2d55d5dcbba3e60f4ca5efe0",
+    "config": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41"
+  },
+  "summary": {
+    "value": "In the following some technical details how this model must be used:",
+    "source": "file:README.md@sha256:516c81b58be758ff4a521ec86d6f30668c68644e2d55d5dcbba3e60f4ca5efe0"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 22713728,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 138,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 111261883,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Merged": 4,
+        "Quantized": 4,
+        "Fine tuned": 28
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "merge": 4,
+        "quantized": 4,
+        "finetune": 28
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "flax-sentence-embeddings/stackexchange_xml",
+      "ms_marco",
+      "gooaq",
+      "yahoo_answers_topics",
+      "search_qa",
+      "eli5",
+      "natural_questions",
+      "trivia_qa",
+      "embedding-data/QQP",
+      "embedding-data/PAQ_pairs",
+      "embedding-data/Amazon-QA",
+      "embedding-data/WikiAnswers"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "mteb/leaderboard",
+        "mteb/leaderboard_legacy",
+        "jorge-henao/ask2democracycol"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

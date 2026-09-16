@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "softcatala/wav2vec2-large-xlsr-catala",
+  "revision": "4e8ceed125344298e04a2a5d9ce1645f7fc3d4b9",
+  "manifest": "blake3:8ae513a1becba2066865228211590ff9480d8a00e30adf29e694f589e2593b3c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/softcatala/wav2vec2-large-xlsr-catala",
+    "readme": "file:README.md@sha256:933b4f6697ad2066c4eb9d9bb3c9cc80078fd038c2179273ff0830bdde7651ea",
+    "config": "file:config.json@sha256:cc7612edcb82027d7f335c7ef9ff8322f11e68e718cc56d8b377bf38f88afb45"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Catalan language using the Common Voice and ParlamentParla datasets.",
+    "source": "file:README.md@sha256:933b4f6697ad2066c4eb9d9bb3c9cc80078fd038c2179273ff0830bdde7651ea"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:cc7612edcb82027d7f335c7ef9ff8322f11e68e718cc56d8b377bf38f88afb45#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:cc7612edcb82027d7f335c7ef9ff8322f11e68e718cc56d8b377bf38f88afb45#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ca"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-02-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6721678,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:cc7612edcb82027d7f335c7ef9ff8322f11e68e718cc56d8b377bf38f88afb45#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:cc7612edcb82027d7f335c7ef9ff8322f11e68e718cc56d8b377bf38f88afb45#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:cc7612edcb82027d7f335c7ef9ff8322f11e68e718cc56d8b377bf38f88afb45#num_attention_heads"
+    },
+    "vocab": {
+      "value": 42,
+      "source": "file:config.json@sha256:cc7612edcb82027d7f335c7ef9ff8322f11e68e718cc56d8b377bf38f88afb45#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "task": "Test WER",
+        "value": 6.92,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "task": "Google Crowsourced Corpus WER",
+        "value": 12.99,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "task": "Audiobook “La llegenda de Sant Jordi” WER",
+        "value": 13.23,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "common_voice",
+      "parlament_parla"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "JPLTedCas/TedCasSpeechRecognition",
+        "Sven33/SATEv1.5"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

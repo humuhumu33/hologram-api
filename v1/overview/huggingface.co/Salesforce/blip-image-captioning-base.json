@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Salesforce/blip-image-captioning-base",
+  "revision": "82a37760796d32b1411fe092ab5d4e227313294b",
+  "manifest": "blake3:bbbe740771a94d069848c6c6c158598a3221d04297b2399455a9bcd57b41a7bf",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Salesforce/blip-image-captioning-base",
+    "readme": "file:README.md@sha256:eae8c14a066e611a51a803cccb35c892bbd78d1ca7db45fbb06f5fb79bff7ad1",
+    "config": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82"
+  },
+  "summary": {
+    "value": "Model card for image captioning pretrained on COCO dataset - base architecture (with ViT base backbone).",
+    "source": "file:README.md@sha256:eae8c14a066e611a51a803cccb35c892bbd78d1ca7db45fbb06f5fb79bff7ad1"
+  },
+  "glance": {
+    "task": {
+      "value": "Image to text",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Blip",
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#model_type"
+    },
+    "architecture_id": {
+      "value": "blip",
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "bsd-3-clause",
+        "name": "BSD 3 Clause",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-12-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-02-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 889,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 68306794,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30524,
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "blip_vision_model",
+      "source": "file:config.json@sha256:f7846f82f4e2c4a2ccbab9ae8b0e44873540a271a76a1288effd078180c13a82#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 9,
+        "Quantized": 1,
+        "Fine tuned": 61
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 9,
+        "quantized": 1,
+        "finetune": 61
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2201.12086",
+        "title": "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation",
+        "first_author": "JunnanLi",
+        "authors": 4,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "ankitkr1499/Image_To_Sketch_With_Content_Based_Feature_Extraction"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

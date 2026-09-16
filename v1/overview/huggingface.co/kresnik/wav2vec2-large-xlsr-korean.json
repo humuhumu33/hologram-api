@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kresnik/wav2vec2-large-xlsr-korean",
+  "revision": "629c9a3501c10ba128bf3fa1eebb12af3be03f61",
+  "manifest": "blake3:274faf7424de09cb1e0b5f8112c20c195c3965b6f9093cd6566651bc358e455b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kresnik/wav2vec2-large-xlsr-korean",
+    "readme": "file:README.md@sha256:9a1472ae3d3f81d17789147112929375736b480bd43798c634f5824a298f0d53",
+    "config": "file:config.json@sha256:51dc5f213d247606740afc690711e9880349d2e2ff29c922c657e2116b660ffa"
+  },
+  "summary": {
+    "value": "wav2vec2-large-xlsr-korean is a 317M Wav2vec2 model for speech recognition by kresnik, released Mar 2022, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 316673845,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:51dc5f213d247606740afc690711e9880349d2e2ff29c922c657e2116b660ffa#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:51dc5f213d247606740afc690711e9880349d2e2ff29c922c657e2116b660ffa#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-07-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 56,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 48283946,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:51dc5f213d247606740afc690711e9880349d2e2ff29c922c657e2116b660ffa#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:51dc5f213d247606740afc690711e9880349d2e2ff29c922c657e2116b660ffa#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:51dc5f213d247606740afc690711e9880349d2e2ff29c922c657e2116b660ffa#num_attention_heads"
+    },
+    "vocab": {
+      "value": 1205,
+      "source": "file:config.json@sha256:51dc5f213d247606740afc690711e9880349d2e2ff29c922c657e2116b660ffa#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Zeroth Korean",
+        "task": "Test WER",
+        "value": 4.74,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Zeroth Korean",
+        "task": "Test CER",
+        "value": 1.78,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "kresnik/zeroth_korean"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 12,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "kresnik/asr-kor-streaming",
+        "kresnik/asr"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

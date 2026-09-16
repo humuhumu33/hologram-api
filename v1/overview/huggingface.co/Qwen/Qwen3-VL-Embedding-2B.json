@@ -1,0 +1,186 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen3-VL-Embedding-2B",
+  "revision": "9f2f7e710d6d81056aa5c0a4f04764fec6bb7bda",
+  "manifest": "blake3:bc1e6b1ade957f1edcfa9eba5f8a4c6088005068e2e794963a8d5338db95863b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen3-VL-Embedding-2B",
+    "readme": "file:README.md@sha256:0c01437645b55e91c0145f7f3d9d414d0091cefe53c5f17938949f4c4baad0f2",
+    "config": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded"
+  },
+  "summary": {
+    "value": "The Qwen3-VL-Embedding and Qwen3-VL-Reranker model series are the latest additions to the Qwen family, built upon the recently open-sourced and powerful Qwen3-VL foundation model.",
+    "source": "file:README.md@sha256:0c01437645b55e91c0145f7f3d9d414d0091cefe53c5f17938949f4c4baad0f2"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2127532032,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3 VL",
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_vl",
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-VL-2B-Instruct"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-01-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 452,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10798860,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 5000000,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_vl",
+      "source": "file:config.json@sha256:9172f55b0b9cce70b7f67b10c58a408ccf3ec15c587e6efd4d5f41631237fded#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 9,
+        "Quantized": 25,
+        "Fine tuned": 13
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 9,
+        "quantized": 25,
+        "finetune": 13
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2601.04720",
+        "title": "Qwen3-VL-Embedding and Qwen3-VL-Reranker: A Unified Framework for State-of-the-Art Multimodal Retrieval and Ranking",
+        "first_author": "Mingxin Li",
+        "authors": 12,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 25,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "baohuynhbk14/Qwen3-VL-Multimodal-Search-DEMO"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

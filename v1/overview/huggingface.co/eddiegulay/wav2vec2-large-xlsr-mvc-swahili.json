@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "eddiegulay/wav2vec2-large-xlsr-mvc-swahili",
+  "revision": "fc0d824e4ebacc09562436993497d350e9ac97c3",
+  "manifest": "blake3:19d87f709275f78f1153153337e1eb0677d3bd824a4a1a86babfc35791b3e63f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/eddiegulay/wav2vec2-large-xlsr-mvc-swahili",
+    "readme": "file:README.md@sha256:63785516ec8f15b6ec9408028f2411cd3b5fbab5b0f1db638e02d3e282bf5ca0",
+    "config": "file:config.json@sha256:3eff5232f5de8108f0654d588224562a5f026e46a898bf401d9e2e1d5edc373f"
+  },
+  "summary": {
+    "value": "There was an issue with vocab, seems like there are special characters included and they were not considered during training You could try",
+    "source": "file:README.md@sha256:63785516ec8f15b6ec9408028f2411cd3b5fbab5b0f1db638e02d3e282bf5ca0"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315499195,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:3eff5232f5de8108f0654d588224562a5f026e46a898bf401d9e2e1d5edc373f#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:3eff5232f5de8108f0654d588224562a5f026e46a898bf401d9e2e1d5edc373f#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "sw"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-large-xlsr-53"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2023-11-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-11-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4974011,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:3eff5232f5de8108f0654d588224562a5f026e46a898bf401d9e2e1d5edc373f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:3eff5232f5de8108f0654d588224562a5f026e46a898bf401d9e2e1d5edc373f#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:3eff5232f5de8108f0654d588224562a5f026e46a898bf401d9e2e1d5edc373f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 59,
+      "source": "file:config.json@sha256:3eff5232f5de8108f0654d588224562a5f026e46a898bf401d9e2e1d5edc373f#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "common_voice_13_0",
+        "task": "Wer",
+        "value": 0.2,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "common_voice_13_0"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

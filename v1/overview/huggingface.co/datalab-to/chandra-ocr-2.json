@@ -1,0 +1,477 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "datalab-to/chandra-ocr-2",
+  "revision": "af93b47dba1b47b6640c86ccf487ed2260ab9a09",
+  "manifest": "blake3:b4a1d1991ed4006561a9158359f1c1ad3808cea7767860b6c8d97cb4b8a51c89",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/datalab-to/chandra-ocr-2",
+    "readme": "file:README.md@sha256:5eedfd77eb548b023400175628f98146414d2551aedfe3060c09d3e499f7368f",
+    "config": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587"
+  },
+  "summary": {
+    "value": "Chandra 2 is a state of the art OCR model from Datalab that outputs markdown, HTML, and JSON. It is highly accurate at extracting text from images and PDFs, while preserving layout information.",
+    "source": "file:README.md@sha256:5eedfd77eb548b023400175628f98146414d2551aedfe3060c09d3e499f7368f"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 5295564288,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "openrail",
+        "name": "OpenRAIL",
+        "commercial": "conditions",
+        "note": "Use restrictions apply"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-03-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 508,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 11466445,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:e26f17b70463de21fd68f1ef6d8f67f8e33e65d55a7a6895242130a18db60587#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "overall",
+        "value": 85.8,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "arxiv_math",
+        "value": 86.9,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans_math",
+        "value": 89.1,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "table_tests",
+        "value": 92.1,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans",
+        "value": 51.1,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "headers_footers",
+        "value": 91.4,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "multi_column",
+        "value": 82.1,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "long_tiny_text",
+        "value": 93.7,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "baseline",
+        "value": 99.9,
+        "date": "2026-06-26T10:30:43.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datalab-to/chandra-ocr-2"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "overall",
+        "value": 79.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "digital",
+        "value": 87.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "photographed",
+        "value": 77.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "latin",
+        "value": 82.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "de",
+        "value": 86.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "en",
+        "value": 86.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "es",
+        "value": 69.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "fr",
+        "value": 70.3,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "id",
+        "value": 84.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "it",
+        "value": 87.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "nl",
+        "value": 82.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "pt",
+        "value": 90.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "vi",
+        "value": 85.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "non_latin",
+        "value": 76.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ar",
+        "value": 78.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "hi",
+        "value": 81.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "jp",
+        "value": 68.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ko",
+        "value": 80.3,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ru",
+        "value": 74,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "th",
+        "value": 78.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh",
+        "value": 73.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh_t",
+        "value": 76.3,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "private",
+        "value": 82.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 70.1,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: chandra2_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 83.7,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: chandra2_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 61.4,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: chandra2_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 51.2,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: chandra2_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 65.1,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: chandra2_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 89.2,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: chandra2_vllm"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Quantized": 38,
+        "Fine tuned": 6
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "quantized": 38,
+        "finetune": 6
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 12,
+      "top": [
+        "embedl/hfviewer",
+        "victor/chandra-ocr-2",
+        "aaryanpethkar483/chandra-ocr"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

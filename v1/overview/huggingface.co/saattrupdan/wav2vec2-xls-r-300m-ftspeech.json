@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "saattrupdan/wav2vec2-xls-r-300m-ftspeech",
+  "revision": "7a60985d596e7a9e26b01a0707fe59daac6ffe84",
+  "manifest": "blake3:a72dd638552c146dc569b25b2ffc7c416ef472431fbd0611472eeb12e4415a17",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/saattrupdan/wav2vec2-xls-r-300m-ftspeech",
+    "readme": "file:README.md@sha256:52348594c4f04e2d1958d926d2a5844d08e527e7a7accdcb352178b0e033b1f3",
+    "config": "file:config.json@sha256:bf640f5d4cc305caffd4e9100873625a9e712e9d3be859f69984aac36447555d"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/wav2vec2-xls-r-300m on the FTSpeech dataset, being a dataset of 1,800 hours of transcribed speeches from the Danish parliament.",
+    "source": "file:README.md@sha256:52348594c4f04e2d1958d926d2a5844d08e527e7a7accdcb352178b0e033b1f3"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315474595,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:bf640f5d4cc305caffd4e9100873625a9e712e9d3be859f69984aac36447555d#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:bf640f5d4cc305caffd4e9100873625a9e712e9d3be859f69984aac36447555d#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "da"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-xls-r-300m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12520575,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:bf640f5d4cc305caffd4e9100873625a9e712e9d3be859f69984aac36447555d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:bf640f5d4cc305caffd4e9100873625a9e712e9d3be859f69984aac36447555d#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bf640f5d4cc305caffd4e9100873625a9e712e9d3be859f69984aac36447555d#num_attention_heads"
+    },
+    "vocab": {
+      "value": 35,
+      "source": "file:config.json@sha256:bf640f5d4cc305caffd4e9100873625a9e712e9d3be859f69984aac36447555d#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Danish Common Voice 8.0",
+        "task": "wer",
+        "value": 17.91,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Alvenir ASR test dataset",
+        "task": "wer",
+        "value": 13.84,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ftspeech"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "Sven33/SATEv1.5"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

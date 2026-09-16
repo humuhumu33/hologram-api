@@ -1,0 +1,261 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sentence-transformers/all-MiniLM-L12-v2",
+  "revision": "a50ef00143b4d5391434df20ae11632588ac25be",
+  "manifest": "blake3:bb2b67072eef7095aedf7a52f379c203a02fc7c7d9f7b5d8062b7fbb22f0da08",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L12-v2",
+    "readme": "file:README.md@sha256:a9c5a266121350036e45a733802ac6a8567604be365de01e40aa4b43e5ee594d",
+    "config": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48"
+  },
+  "summary": {
+    "value": "The project aims to train sentence embedding models on very large sentence level datasets using a self-supervised contrastive learning objective. We used the pretrained microsoft/MiniLM-L12-H384-uncased model and fine-tuned in on a 1B sentence pairs dataset.",
+    "source": "file:README.md@sha256:a9c5a266121350036e45a733802ac6a8567604be365de01e40aa4b43e5ee594d"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 33360512,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "microsoft/MiniLM-L12-H384-uncased"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-03-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 329,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 253246174,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:bc451f333af67312ba0de5018ef1c9ba663cb18549443e568f0bd35262dc1c48#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "mteb/arguana",
+        "task": "ArguAna_default_test",
+        "value": 47.128,
+        "date": "2026-03-05T13:56:48.000Z",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v1.38.3"
+      },
+      {
+        "dataset": "mteb/arguana",
+        "task": "ArguAna",
+        "value": 47.128,
+        "date": "2026-03-05T13:56:48.000Z",
+        "verified": false,
+        "source": "https://github.com/embeddings-benchmark/mteb/",
+        "notes": "Obtained using MTEB v1.38.3"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 17,
+        "Fine tuned": 66
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 17,
+        "finetune": 66
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1904.06472",
+        "title": "A Repository of Conversational Datasets",
+        "first_author": "Matthew Henderson",
+        "authors": 11,
+        "year": "2019"
+      },
+      {
+        "id": "2102.07033",
+        "title": "PAQ: 65 Million Probably-Asked Questions and What You Can Do With Them",
+        "first_author": "Patrick Lewis",
+        "authors": 8,
+        "year": "2021"
+      },
+      {
+        "id": "2104.08727",
+        "title": "GooAQ: Open Question Answering with Diverse Answer Types",
+        "first_author": "Daniel Khashabi",
+        "authors": 6,
+        "year": "2021"
+      },
+      {
+        "id": "1704.05179",
+        "title": "SearchQA: A New Q&A Dataset Augmented with Context from a Search Engine",
+        "first_author": "Matthew Dunn",
+        "authors": 6,
+        "year": "2017"
+      },
+      {
+        "id": "1810.09305",
+        "title": "WikiHow: A Large Scale Text Summarization Dataset",
+        "first_author": "Mahnaz Koupaee",
+        "authors": 2,
+        "year": "2018"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "s2orc",
+      "flax-sentence-embeddings/stackexchange_xml",
+      "ms_marco",
+      "gooaq",
+      "yahoo_answers_topics",
+      "code_search_net",
+      "search_qa",
+      "eli5",
+      "snli",
+      "multi_nli",
+      "wikihow",
+      "natural_questions",
+      "trivia_qa",
+      "embedding-data/sentence-compression",
+      "embedding-data/flickr30k-captions",
+      "embedding-data/altlex",
+      "embedding-data/simple-wiki",
+      "embedding-data/QQP",
+      "embedding-data/SPECTER",
+      "embedding-data/PAQ_pairs",
+      "embedding-data/WikiAnswers"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "hakari-bench/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

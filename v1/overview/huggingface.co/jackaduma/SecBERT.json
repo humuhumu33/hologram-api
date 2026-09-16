@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jackaduma/SecBERT",
+  "revision": "7c603df5bc4c5ba9c731bcc2ea0ab2db36e104cb",
+  "manifest": "blake3:0d5041f109b3d654c12ddeb258cd2c75f11def6415010f79e9d88c37c2a75b0e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jackaduma/SecBERT",
+    "readme": "file:README.md@sha256:22af21a84fff873b78be8cd08eb1172f069c7a4115c0b930c322820e653037c7",
+    "config": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827"
+  },
+  "summary": {
+    "value": "This is the pretrained model presented in SecBERT: A Pretrained Language Model for Cyber Security Text, which is a BERT model trained on cyber security text.",
+    "source": "file:README.md@sha256:22af21a84fff873b78be8cd08eb1172f069c7a4115c0b930c322820e653037c7"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 84095522,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-06-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 64,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6545891,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#num_attention_heads"
+    },
+    "vocab": {
+      "value": 52000,
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:8e342ccd44e6356b7d074168fb97347285e5f85f757b53d002b7762bc2ad7827#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "APTnotes",
+      "Stucco-Data",
+      "CASIE"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "omasteam/Cyber-Threat-Radar",
+        "jackaduma/jackaduma-SecBERT"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

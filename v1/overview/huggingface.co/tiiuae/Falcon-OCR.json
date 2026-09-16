@@ -1,0 +1,294 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tiiuae/Falcon-OCR",
+  "revision": "fe757d59ecd79d4d68760162306a70a015761ad9",
+  "manifest": "blake3:5ef08622720a0e7ba469219b3ff0730388d018022afab8c957dee972c51de852",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tiiuae/Falcon-OCR",
+    "readme": "file:README.md@sha256:25f52a04ae10f2407b0ac52f09115e32282fc460c5c615c31942003834ad4b79",
+    "config": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf"
+  },
+  "summary": {
+    "value": "Falcon OCR is a 270M parameter early-fusion vision-language model for document OCR. Given an image, it can produce plain text, LaTeX for formulas, or HTML for tables.",
+    "source": "file:README.md@sha256:25f52a04ae10f2407b0ac52f09115e32282fc460c5c615c31942003834ad4b79"
+  },
+  "glance": {
+    "task": {
+      "value": "Image to text",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 269944416,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Falcon Ocr",
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#model_type"
+    },
+    "architecture_id": {
+      "value": "falcon_ocr",
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-02-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 154,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 44649,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#dim"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#n_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#n_kv_heads"
+    },
+    "vocab": {
+      "value": 65536,
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#vocab_size"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:ba4aec622ec2954e22c76d7ced80817c34d91e26970884e484c29a872e794adf#rope_theta"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "overall",
+        "value": 80.3,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "arxiv_math",
+        "value": 80.5,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans_math",
+        "value": 69.2,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "table_tests",
+        "value": 90.3,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans",
+        "value": 43.5,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "headers_footers",
+        "value": 94,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "multi_column",
+        "value": 87.1,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "long_tiny_text",
+        "value": 78.5,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "baseline",
+        "value": 99.5,
+        "date": "2026-04-01T10:14:21.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/tiiuae/Falcon-OCR",
+        "notes": "English-subset only"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 53.08,
+        "date": "2026-05-12",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: falconocr_pipeline"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 78.59,
+        "date": "2026-05-12",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: falconocr_pipeline"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 47.91,
+        "date": "2026-05-12",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: falconocr_pipeline"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 63.37,
+        "date": "2026-05-12",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: falconocr_pipeline"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 0.82,
+        "date": "2026-05-12",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: falconocr_pipeline"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 74.7,
+        "date": "2026-05-12",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: falconocr_pipeline"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2603.27365",
+        "title": "Falcon Perception",
+        "first_author": "Aviraj Bevli",
+        "authors": 9,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "Syncre/arabic-audio-reader-worker",
+        "chris-rannou/ocr-job-template"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

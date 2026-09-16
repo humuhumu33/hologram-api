@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nijatzeynalov/wav2vec2-large-mms-1b-azerbaijani-common_voice15.0",
+  "revision": "6ee1f0dbf4eb7373f7370360cbe6d46e27c203f6",
+  "manifest": "blake3:40d852dcf6548f1cd3f8e76af6520a2bb042a862e4ab73e988612baf9f381786",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nijatzeynalov/wav2vec2-large-mms-1b-azerbaijani-common_voice15.0",
+    "readme": "file:README.md@sha256:427cc89fdcd85b0a17c7ea45b77375087b475db1f1c984beee2dd9d38f4532a1",
+    "config": "file:config.json@sha256:c1d1e5c6168120a53fc9e1d043ff26b84f224a072484ef58e623025deeefbc20"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of facebook/mms-1b-all on the commonvoice150 dataset. It achieves the following results on the evaluation set: - Loss: 0.3188 - Wer: 0.2632",
+    "source": "file:README.md@sha256:427cc89fdcd85b0a17c7ea45b77375087b475db1f1c984beee2dd9d38f4532a1"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 964697254,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:c1d1e5c6168120a53fc9e1d043ff26b84f224a072484ef58e623025deeefbc20#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:c1d1e5c6168120a53fc9e1d043ff26b84f224a072484ef58e623025deeefbc20#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/mms-1b-all"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2023-11-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-11-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 5,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1372692,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:c1d1e5c6168120a53fc9e1d043ff26b84f224a072484ef58e623025deeefbc20#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:c1d1e5c6168120a53fc9e1d043ff26b84f224a072484ef58e623025deeefbc20#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:c1d1e5c6168120a53fc9e1d043ff26b84f224a072484ef58e623025deeefbc20#num_attention_heads"
+    },
+    "vocab": {
+      "value": 38,
+      "source": "file:config.json@sha256:c1d1e5c6168120a53fc9e1d043ff26b84f224a072484ef58e623025deeefbc20#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "common_voice_15_0",
+        "task": "Wer",
+        "value": 0.2631578947368421,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "common_voice_15_0"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Daniel9046/SoniTranslate",
+        "RO-Rtechs/Translate_Video_language",
+        "r3gm/SoniTranslate_translate_audio_of_a_video_content"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "LiquidAI/LFM2.5-2.6B",
+  "revision": "654f9463ce32b05d0429d76fe1f580b27d4c1ac0",
+  "manifest": "blake3:fec02af8b73f536a3f5dd4684e9d61d8cbede1e396e44d928da11aa3b7a0a8ad",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/LiquidAI/LFM2.5-2.6B",
+    "readme": "file:README.md@sha256:003ceb63ec63a5b06b17f5e7b7a7d907695f037ad18720cabbcf8d8d68813f24",
+    "config": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273"
+  },
+  "summary": {
+    "value": "LFM2.5-2.6B is part of LFM2.5, a family of hybrid models designed for on-device deployment. It builds on the LFM2 architecture with a 128K context window and agentic post-training.",
+    "source": "file:README.md@sha256:003ceb63ec63a5b06b17f5e7b7a7d907695f037ad18720cabbcf8d8d68813f24"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2697198592,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm2",
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm2",
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "de",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "ko",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "th",
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM2.5-2.6B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 763,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 245022,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:480f63fa8e1efa534ae8b92774b3b53b8d6812d62a726e9ecfc866933662f273#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LiquidAI/ifstruct-v1.0",
+        "task": "ifstruct_v1",
+        "value": 85.49,
+        "date": "2026-07-28",
+        "verified": false,
+        "source": "https://www.liquid.ai/blog/lfm2-5-2-6b"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 22,
+        "Merged": 1,
+        "Quantized": 94,
+        "Fine tuned": 40
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 22,
+        "merge": 1,
+        "quantized": 94,
+        "finetune": 40
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2511.23404",
+        "title": "LFM2 Technical Report",
+        "first_author": "Alexander Amini",
+        "authors": 33,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 13,
+      "top": [
+        "embedl/hfviewer",
+        "ginigen-ai/open-router-leaderboard",
+        "librarian-bots/dataset-tldr"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

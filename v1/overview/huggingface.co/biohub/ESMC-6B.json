@@ -1,0 +1,138 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "biohub/ESMC-6B",
+  "revision": "7d0f99a8b716749ad1a0328181c1e0339691b0c2",
+  "manifest": "blake3:087f117dcbf43fdc481b3600395aa46620e094ef07dbe6d94da2d7296b4412f1",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/biohub/ESMC-6B",
+    "readme": "file:README.md@sha256:59867d6e974fc0b2f6841615901e85c9a8144098534b03553828212ac611c7a4",
+    "config": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540"
+  },
+  "summary": {
+    "value": "ESMC is a state-of-the-art protein language model that has learned the rules of protein biology from training on billions of protein sequences. ESMC provides representations of proteins enabling novel AI applications from therapeutic protein engineering to unlocking basic insights into protein biology across life.",
+    "source": "file:README.md@sha256:59867d6e974fc0b2f6841615901e85c9a8144098534b03553828212ac611c7a4"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 6352005184,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Esmc",
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#model_type"
+    },
+    "architecture_id": {
+      "value": "esmc",
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": [
+          "mit",
+          "other"
+        ],
+        "name": [
+          "mit",
+          "other"
+        ]
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-05-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 32,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7577273,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 80,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 64,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:80ccf981fbbd4f9f0a64830a0b64f1c79ed0f629d3f3b95f4424fd73174ac540#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

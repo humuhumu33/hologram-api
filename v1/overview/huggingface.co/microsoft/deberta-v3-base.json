@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/deberta-v3-base",
+  "revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+  "manifest": "blake3:29b8c7153e81073fe50301551919658445d595dc7b11cca89e2f80b366690b25",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/deberta-v3-base",
+    "readme": "file:README.md@sha256:7e9ea69ca00d0609cc0e0b9cec76f9ba6ae71601244c4136a3f25bd02dce4c4d",
+    "config": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b"
+  },
+  "summary": {
+    "value": "DeBERTa improves the BERT and RoBERTa models using disentangled attention and enhanced mask decoder. With those two improvements, DeBERTa out perform RoBERTa on a majority of NLU tasks with 80GB training data.",
+    "source": "file:README.md@sha256:7e9ea69ca00d0609cc0e0b9cec76f9ba6ae71601244c4136a3f25bd02dce4c4d"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Deberta V2",
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#model_type"
+    },
+    "architecture_id": {
+      "value": "deberta-v2",
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-09-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 443,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 73825489,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#num_attention_heads"
+    },
+    "vocab": {
+      "value": 128100,
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:649f6a1ec33c6bdd9a6486d5c66019d461139e54957073eafe9bbc2d34c75b0b#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 32,
+        "Quantized": 29,
+        "Fine tuned": 770
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 32,
+        "quantized": 29,
+        "finetune": 770
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2006.03654",
+        "title": "DeBERTa: Decoding-enhanced BERT with Disentangled Attention",
+        "first_author": "Pengcheng He",
+        "authors": 4,
+        "year": "2020"
+      },
+      {
+        "id": "2111.09543",
+        "title": "DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing",
+        "first_author": "Pengcheng He",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "EuroEval/euroeval_leaderboard",
+        "eduagarcia/multilingual-tokenizer-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

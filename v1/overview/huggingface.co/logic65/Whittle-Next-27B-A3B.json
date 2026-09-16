@@ -1,0 +1,215 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "logic65/Whittle-Next-27B-A3B",
+  "revision": "0383248cd818e2826d0516fe8f573cb5757e1960",
+  "manifest": "blake3:8c36d452ee7c3c8319451914cf9a45cefde03bf70de6dae60105601ab628a6f3",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/logic65/Whittle-Next-27B-A3B",
+    "readme": "file:README.md@sha256:534b4a38eb46c6ce62f9049996029c169b63ef235cf0a24b45386bca40ef44bb",
+    "config": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03"
+  },
+  "summary": {
+    "value": "The successor to Whittle-Next-26B-A3B: the same Qwen3.8-Flash-Next-format (qwen4exp) body built from Qwen3.6-35B-A3B, a 2B-row hashed n-gram memory, hyper-connection streams that are genuinely different from each other, and a distillation lineage from Qwen3.8-27B.",
+    "source": "file:README.md@sha256:534b4a38eb46c6ce62f9049996029c169b63ef235cf0a24b45386bca40ef44bb"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27568288915,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 180,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 4 Exp Text",
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen4_exp_text",
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.6-35B-A3B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3531,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#max_position_embeddings"
+    },
+    "experts": {
+      "value": 180,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:bf91d644b03a90ece24e540a60c8bb3b6e7b0ed76885b121aa28b2dc72ee8f03#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "GSM8K",
+        "task": "exact match (v3 Q8_0 GGUF, stock llama.cpp, serving sampler)",
+        "value": 86.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GSM8K",
+        "task": "exact match, thinking on, 2048-token cap (v3 Q8_0 GGUF)",
+        "value": 86.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Whittle long-context reading harness (private repository; transcripts withheld)",
+        "task": "questions correct at 4k tokens (v4.3, Q8_0)",
+        "value": 100,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Whittle long-context reading harness (private repository; transcripts withheld)",
+        "task": "questions correct at 8k tokens (v4.3, Q8_0)",
+        "value": 83.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Whittle long-context reading harness (private repository; transcripts withheld)",
+        "task": "questions correct at 26k to 75k tokens (v4.3, Q8_0; parent Qwen3.6-35B-A3B scores 100)",
+        "value": 66.7,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

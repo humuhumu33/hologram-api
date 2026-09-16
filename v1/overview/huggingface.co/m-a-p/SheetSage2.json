@@ -1,0 +1,173 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "m-a-p/SheetSage2",
+  "revision": "7cb7b16233d2f5ccb4d3295c2b501fdc31bc0384",
+  "manifest": "blake3:ddd51da6cf25e150ab07946d7566ffb20ac70f42ee7bad451366926b20b4a699",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/m-a-p/SheetSage2",
+    "readme": "file:README.md@sha256:05f813b94c9641002c5e67f5b6b38ce8897806d84987b169dcce27910512cd6a",
+    "config": "file:config.json@sha256:a986e63f5d831ecb823c11d19cfb371d763f25ae2e614ec9acd714c0b8bb87fd"
+  },
+  "summary": {
+    "value": "SheetSage2 turns music recordings into lead sheets and timed musical annotations. Transcribe a complete song, edit its ABC or MIDI, render a piano preview, or extract embeddings and token predictions for your own tools.",
+    "source": "file:README.md@sha256:05f813b94c9641002c5e67f5b6b38ce8897806d84987b169dcce27910512cd6a"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 57174553,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Sheetsage2",
+      "source": "file:config.json@sha256:a986e63f5d831ecb823c11d19cfb371d763f25ae2e614ec9acd714c0b8bb87fd#model_type"
+    },
+    "architecture_id": {
+      "value": "sheetsage2",
+      "source": "file:config.json@sha256:a986e63f5d831ecb823c11d19cfb371d763f25ae2e614ec9acd714c0b8bb87fd#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "m-a-p/MERT-v2-FullSong"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 83,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6264,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:a986e63f5d831ecb823c11d19cfb371d763f25ae2e614ec9acd714c0b8bb87fd#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:a986e63f5d831ecb823c11d19cfb371d763f25ae2e614ec9acd714c0b8bb87fd#num_attention_heads"
+    },
+    "vocab": {
+      "value": 31678,
+      "source": "file:config.json@sha256:a986e63f5d831ecb823c11d19cfb371d763f25ae2e614ec9acd714c0b8bb87fd#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2502.11840",
+        "title": "ChordFormer: A Conformer-Based Architecture for Large-Vocabulary Audio Chord Recognition",
+        "first_author": "Muhammad Waseem Akram",
+        "authors": 4,
+        "year": "2025"
+      },
+      {
+        "id": "2510.02797",
+        "title": "SongFormer: Scaling Music Structure Analysis with Heterogeneous Supervision",
+        "first_author": "Chunbo Hao",
+        "authors": 7,
+        "year": "2025"
+      },
+      {
+        "id": "2212.01884",
+        "title": "Melody transcription via generative pre-training",
+        "first_author": "Chris Donahue",
+        "authors": 3,
+        "year": "2022"
+      },
+      {
+        "id": "2503.08638",
+        "title": "YuE: Scaling Open Foundation Models for Long-Form Music Generation",
+        "first_author": "Ruibin Yuan",
+        "authors": 57,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 21,
+      "top": [
+        "mrfakename/yue2-3b",
+        "Reubencf/Score-Studio",
+        "Reubencf/Audio-to-Score"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "moonshotai/Kimi-K3",
+  "revision": "f831ab66814297da540d832a5235f8e904f29d06",
+  "manifest": "blake3:26aec67077eea89207e83ef95faa36a7bee9b47c8e77853c9d798c66fb68c9ac",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/moonshotai/Kimi-K3",
+    "readme": "file:README.md@sha256:57de265b5842dfa465c6e73b368b0e15a89b8793b5450528dad577da202cc6fe",
+    "config": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213"
+  },
+  "summary": {
+    "value": "Kimi K3 is an open-weight, native multimodal agentic model and our most capable model to date. It is a 2.8T-parameter model built on Kimi Delta Attention (KDA) and Attention Residuals (AttnRes), with native vision capabilities and a 1-million-token context window.",
+    "source": "file:README.md@sha256:57de265b5842dfa465c6e73b368b0e15a89b8793b5450528dad577da202cc6fe"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2779931837184,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 896,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#num_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#num_experts_per_token"
+    },
+    "architecture": {
+      "value": "Kimi K3",
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#model_type"
+    },
+    "architecture_id": {
+      "value": "kimi_k3",
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 98%, BF16 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-06-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-02",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11377,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4450621,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 93,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 7168,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#hidden_size"
+    },
+    "heads": {
+      "value": 96,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 96,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 163840,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#max_position_embeddings"
+    },
+    "experts": {
+      "value": 896,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#num_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#num_experts_per_token"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "mercor/apex-agents",
+        "task": "apex-agents",
+        "value": 41,
+        "date": "2026-07-27T16:29:18.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "dataset": "datacurve/deep-swe",
+        "task": "deep_swe",
+        "value": 67.5,
+        "date": "2026-07-27T16:29:18.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 93.5,
+        "date": "2026-07-27T16:29:18.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 56,
+        "date": "2026-07-27T16:29:18.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "dataset": "hkust-nlp/Toolathlon",
+        "task": "toolathlon_verified",
+        "value": 76.5,
+        "date": "2026-08-20",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "dataset": "joelniklaus/LEXam-hard",
+        "task": "lexam_hard",
+        "value": 29.54,
+        "date": "2026-08-03",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/joelniklaus/SwissLegalEvals",
+        "notes": "lighteval, LEXam paper prompts, one response per question, no tools; DeepSeek-R1-0528 judge; mean of the German and English means over the 518 questions, 0-100"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "mean",
+        "value": 83.17,
+        "date": "2026-08-25",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: kimi_k3_extract_oneshot_structured_output_file; served via Fireworks hosted API"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "short",
+        "value": 94.64,
+        "date": "2026-08-25",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: kimi_k3_extract_oneshot_structured_output_file; served via Fireworks hosted API"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "medium",
+        "value": 69.64,
+        "date": "2026-08-25",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: kimi_k3_extract_oneshot_structured_output_file; served via Fireworks hosted API"
+      },
+      {
+        "dataset": "llamaindex/ExtractBench",
+        "task": "long",
+        "value": 4.99,
+        "date": "2026-08-25",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ExtractBench",
+        "notes": "Pipeline name: kimi_k3_extract_oneshot_structured_output_file; served via Fireworks hosted API"
+      },
+      {
+        "dataset": "crosbylegal/RedlineBench",
+        "task": "redline_overall",
+        "value": 49.3,
+        "date": "2026-08-20",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K3",
+        "notes": "agent=kimi-k3; 3-LLM judge panel (majority vote); turn-weighted weighted pass rate (0-100); post-publication run"
+      },
+      {
+        "dataset": "IntelligenceLab/Long-Horizon-Terminal-Bench",
+        "task": "lhtb_solved",
+        "value": 6,
+        "date": "2026-07-22",
+        "verified": false,
+        "source": "https://zli12321.github.io/LHTB/leaderboard.html",
+        "notes": "6/46 tasks solved at reward >= 0.95 (pass@0.95); mean reward x100 = 37.8; official LHTB Harbor harness"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "overall",
+        "value": 83.6,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "digital",
+        "value": 90.8,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "photographed",
+        "value": 81.2,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "latin",
+        "value": 86.2,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "de",
+        "value": 89.1,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "en",
+        "value": 87.2,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "es",
+        "value": 80.2,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "fr",
+        "value": 80,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "id",
+        "value": 86.9,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "it",
+        "value": 92.7,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "nl",
+        "value": 86,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "pt",
+        "value": 88.9,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "vi",
+        "value": 84.8,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "non_latin",
+        "value": 80.7,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ar",
+        "value": 77.4,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "hi",
+        "value": 77.5,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "jp",
+        "value": 74.9,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ko",
+        "value": 89.9,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ru",
+        "value": 82.4,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "th",
+        "value": 72.1,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh",
+        "value": 89.5,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh_t",
+        "value": 81.9,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "private",
+        "value": 85.6,
+        "date": "2026-08-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "overall",
+        "value": 54.5,
+        "date": "2026-08-11",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "avg_time",
+        "value": 488,
+        "date": "2026-08-11",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "avg_cost",
+        "value": 40.08,
+        "date": "2026-08-11",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 50,
+        "Fine tuned": 47
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 50,
+        "finetune": 47
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "baseten",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "fireworks-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "together",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 58,
+      "top": [
+        "embedl/hfviewer",
+        "ginigen-ai/open-router-leaderboard",
+        "akhaliq/Kimi-K3"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

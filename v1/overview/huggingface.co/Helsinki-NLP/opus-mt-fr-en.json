@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Helsinki-NLP/opus-mt-fr-en",
+  "revision": "c4aed37b318c763fd177aa449b44e3b783cc6c02",
+  "manifest": "blake3:21b59b464fa31635c0af68a1c42f6922d36373da8bd14bd4027ef5ecda1d9bc7",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Helsinki-NLP/opus-mt-fr-en",
+    "readme": "file:README.md@sha256:a923263e9691f40ce7c9afe5d59f6296051439ae7776a158d18d57258be48195",
+    "config": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7"
+  },
+  "summary": {
+    "value": "opus-mt-fr-en is a 75.2M Marian model for translation by Helsinki-NLP, released Mar 2022, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Translation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 75193466,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Marian",
+      "source": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7#model_type"
+    },
+    "architecture_id": {
+      "value": "marian",
+      "source": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-11-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 56,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 47406552,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7#d_model"
+    },
+    "vocab": {
+      "value": 59514,
+      "source": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:b3be13d046d9899d7aab8cf4ed624d9a79f5776038ba793f6b4d2ce3e02192f7#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5,
+        "Fine tuned": 19
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5,
+        "finetune": 19
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "translation"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Helsinki-NLP/opus-translate",
+        "hashan-7/h7-chat-backend",
+        "gundeep/open-translate"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

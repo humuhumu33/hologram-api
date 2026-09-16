@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Octen/Octen-Embedding-8B",
+  "revision": "5adcfa292e712091dfc30f0e97f0b2282e6cc66c",
+  "manifest": "blake3:00306715ae7e021a42d1b8bcbb3770baf7ed638693e3d6554da0b62f96d8ac51",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Octen/Octen-Embedding-8B",
+    "readme": "file:README.md@sha256:7cd2b4a58884ff2e35e102b8057f7ca346bcb72e1f5b995096c70847bf3779b2",
+    "config": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59"
+  },
+  "summary": {
+    "value": "Octen-Embedding-8B is a text embedding model developed by Octen for semantic search and retrieval tasks. This model is fine-tuned from Qwen/Qwen3-Embedding-8B and supports multiple languages, providing high-quality embeddings for various applications.",
+    "source": "file:README.md@sha256:7cd2b4a58884ff2e35e102b8057f7ca346bcb72e1f5b995096c70847bf3779b2"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7567295488,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#model_type"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-Embedding-8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-12-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-02-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 190,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 901454,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151665,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:a8ca4fa4fee945c0cc9025b5c6977725dbb136c849559bd365bc04dd1d972e59#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 9,
+        "Fine tuned": 10
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 9,
+        "finetune": 10
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "MTEB-BR/leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

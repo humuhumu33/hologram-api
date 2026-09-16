@@ -1,0 +1,140 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cross-encoder/ms-marco-electra-base",
+  "revision": "8b9301757513f8a695920c334c3a9f365ebeb357",
+  "manifest": "blake3:8c77e6c9f238ae365e6c217df14f880471637310496a7541e705122b4360240d",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cross-encoder/ms-marco-electra-base",
+    "readme": "file:README.md@sha256:8a74e258d3396c446903bbb8c08c947a396b1d0fcaeabb85e95bbd793a2fc08e",
+    "config": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c"
+  },
+  "summary": {
+    "value": "The model can be used for Information Retrieval: Given a query, encode the query will all possible passages (e.g. retrieved with ElasticSearch). Then sort the passages in a decreasing order.",
+    "source": "file:README.md@sha256:8a74e258d3396c446903bbb8c08c947a396b1d0fcaeabb85e95bbd793a2fc08e"
+  },
+  "glance": {
+    "task": {
+      "value": "text-ranking",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109483521,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Electra",
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#model_type"
+    },
+    "architecture_id": {
+      "value": "electra",
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/electra-base-discriminator"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-08-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6056937,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:efcbf7efb470b56a9237b997fa52d1f247681321deb95050df6a7035d795fd3c#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "sentence-transformers/msmarco"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "dejanseo/grounding-snippet-generator",
+        "gourisankar85/realtime-rag-pipeline",
+        "gourisankar85/TalkToYourDocument"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

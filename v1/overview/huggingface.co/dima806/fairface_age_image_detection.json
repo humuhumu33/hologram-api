@@ -1,0 +1,160 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "dima806/fairface_age_image_detection",
+  "revision": "4e02ab8057ea7fd74b1670940995c5dfda3e6ec0",
+  "manifest": "blake3:f18b63ebc5ea273cdda3e8325c60834985a7d76d8ec5d8058dc38dc9c943102f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/dima806/fairface_age_image_detection",
+    "readme": "file:README.md@sha256:182dd440f8ae894f83f3751fd8edba28b6f6a3599134fe784dd7b8d57daae0fe",
+    "config": "file:config.json@sha256:1ce878a77395b4a6a4da291a09b2b627d7d9b31bbe3be1fb1a37ad4d63f1a7e2"
+  },
+  "summary": {
+    "value": "fairface_age_image_detection is a 85.8M ViT model for image classification by dima806, released Dec 2024, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 85805577,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "ViT",
+      "source": "file:config.json@sha256:1ce878a77395b4a6a4da291a09b2b627d7d9b31bbe3be1fb1a37ad4d63f1a7e2#model_type"
+    },
+    "architecture_id": {
+      "value": "vit",
+      "source": "file:config.json@sha256:1ce878a77395b4a6a4da291a09b2b627d7d9b31bbe3be1fb1a37ad4d63f1a7e2#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/vit-base-patch16-224-in21k"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-12-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 83,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 795651716,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:1ce878a77395b4a6a4da291a09b2b627d7d9b31bbe3be1fb1a37ad4d63f1a7e2#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:1ce878a77395b4a6a4da291a09b2b627d7d9b31bbe3be1fb1a37ad4d63f1a7e2#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:1ce878a77395b4a6a4da291a09b2b627d7d9b31bbe3be1fb1a37ad4d63f1a7e2#num_attention_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nateraw/fairface"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "embedl/hfviewer",
+        "RichardTiny/dima806-fairface_age_image_detection",
+        "lostspace003/fsgg"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Babelscape/wikineural-multilingual-ner",
+  "revision": "bed6ee7a45d2827b6c90a4fd7983f0241ae0a5c1",
+  "manifest": "blake3:70838b4e330ccf58b9f608e7991224dca1fe39dd8d6928d9e1747bd8017de66b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Babelscape/wikineural-multilingual-ner",
+    "readme": "file:README.md@sha256:24c415f03a0ef4ec192aff0c4a824b085a4fbace3e08cb472683cd5884ad2e0f",
+    "config": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f"
+  },
+  "summary": {
+    "value": "If you use the model, please reference this work in your paper:",
+    "source": "file:README.md@sha256:24c415f03a0ef4ec192aff0c4a824b085a4fbace3e08cb472683cd5884ad2e0f"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 177270281,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": [
+          "cc-by-nc-sa-4.0"
+        ],
+        "name": [
+          "cc-by-nc-sa-4.0"
+        ]
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "nl",
+        "pl",
+        "pt",
+        "ru",
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-05-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 168,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 17612236,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 119547,
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:8bd6d9c4ba8fce84407876a7711090363259313bb94a3e5ae350d5f6d287092f#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "Babelscape/wikineural"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 37,
+      "top": [
+        "PIISA/PIISA_Demo",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "Chris4K/NamedEntityRecognitionTool"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

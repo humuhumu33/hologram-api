@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Edge0/Edge0-8B-A1B-preview",
+  "revision": "fbf8fe011db997247534f0c9ab903d7b6f9476e7",
+  "manifest": "blake3:75909d413155d31131d4173e0ee2ade4c816e543bd6b157a9dab5cc53528780f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Edge0/Edge0-8B-A1B-preview",
+    "readme": "file:README.md@sha256:33477cec20d62f12969f5f2e50a62116422ec487501d302241672dbb2cd6f8de",
+    "config": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340"
+  },
+  "summary": {
+    "value": "Edge0-8b-a1b — an 8B MoE LLM that runs at viable speed in under 1 GiB of active memory, via the edge0 streaming inference framework.",
+    "source": "file:README.md@sha256:33477cec20d62f12969f5f2e50a62116422ec487501d302241672dbb2cd6f8de"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7923998112,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#num_experts_per_tok"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mlx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "inclusionAI/Ling-3.0-tiny-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 63,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3569,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1536,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 157184,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 6000000,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "4 bit",
+      "source": "file:config.json@sha256:5790c795d490d7b90eb04b269f5db4faad08bcc560f8da6e30b61057b1606340#quantization_config"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "edgebites/edge0-35b-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

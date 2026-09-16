@@ -1,0 +1,179 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "typeform/distilbert-base-uncased-mnli",
+  "revision": "cfa538a0fddbbd978fefe8966c1aeff7ad409c90",
+  "manifest": "blake3:ffaeaa401fccd66b7b9e376de862c73fc94b58c2e8ee5fdaad36d973e3f9959c",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/typeform/distilbert-base-uncased-mnli",
+    "readme": "file:README.md@sha256:d2909bb0ea3a74fa092c2c7b26a2c884d1a2b0fad814ee9897ed2336d307936e",
+    "config": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385"
+  },
+  "summary": {
+    "value": "Significant research has explored bias and fairness issues with language models (see, e.g., Sheng et al. (2021) and Bender et al. (2021)).",
+    "source": "file:README.md@sha256:d2909bb0ea3a74fa092c2c7b26a2c884d1a2b0fad814ee9897ed2336d307936e"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 66955779,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Distilbert",
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#model_type"
+    },
+    "architecture_id": {
+      "value": "distilbert",
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-03-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 46,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7296483,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#dim"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#n_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:d6d658b44d7260410d8aa3f6cd585016656dfe57dd57855c070f86ddcb257385#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 18
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 18
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "zero-shot-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.09700",
+        "title": "Quantifying the Carbon Emissions of Machine Learning",
+        "first_author": "Alexandre Lacoste",
+        "authors": 4,
+        "year": "2019"
+      },
+      {
+        "id": "2105.09680",
+        "title": "KLUE: Korean Language Understanding Evaluation",
+        "first_author": "Sungjoon Park",
+        "authors": 31,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "multi_nli"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "yangheng/Super-Resolution-Anime-Diffusion",
+        "Really-amin/Datasourceforcryptocurrency-2",
+        "chicham/query_analysis"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

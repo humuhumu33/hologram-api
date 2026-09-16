@@ -1,0 +1,147 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "dbmdz/bert-large-cased-finetuned-conll03-english",
+  "revision": "4c534963167c08d4b8ff1f88733cf2930f86add0",
+  "manifest": "blake3:e8af6519a87ffe11e126a083e9474b795212368f8d8da02d08f1ad1ec2b5f96b",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/dbmdz/bert-large-cased-finetuned-conll03-english",
+    "config": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2"
+  },
+  "summary": {
+    "value": "bert-large-cased-finetuned-conll03-english is a 334M BERT model for token classification by dbmdz, released Mar 2022.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 333588489,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 98,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 56141043,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#num_attention_heads"
+    },
+    "vocab": {
+      "value": 28996,
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:b5998b6ddf1bf0b722772c1071d7eab1c2d842281a8e722b1ff6c9e9df9e71e2#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "Shouryahere/infy",
+        "eduagarcia/multilingual-tokenizer-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

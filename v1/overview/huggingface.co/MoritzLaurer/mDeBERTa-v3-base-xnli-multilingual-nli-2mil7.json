@@ -1,0 +1,290 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+  "revision": "b5113eb38ab63efdd7f280f8c144ea8b13f978ce",
+  "manifest": "blake3:e5613a783308418cf8551b814bb8bc65c86a006f4ddc8dae9d84f720c795681e",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+    "readme": "file:README.md@sha256:0784c14bc6eb570eaba78dc8c6bb3c437e88e38dbf064e98023f28ff19397205",
+    "config": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b"
+  },
+  "summary": {
+    "value": "This multilingual model can perform natural language inference (NLI) on 100 languages and is therefore also suitable for multilingual zero-shot classification. The underlying mDeBERTa-v3-base model was pre-trained by Microsoft on the CC100 multilingual dataset with 100 languages.",
+    "source": "file:README.md@sha256:0784c14bc6eb570eaba78dc8c6bb3c437e88e38dbf064e98023f28ff19397205"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 278812163,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Deberta V2",
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#model_type"
+    },
+    "architecture_id": {
+      "value": "deberta-v2",
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual",
+        "zh",
+        "ja",
+        "ar",
+        "ko",
+        "de",
+        "fr",
+        "es",
+        "pt",
+        "hi",
+        "id",
+        "it",
+        "tr",
+        "ru",
+        "bn",
+        "ur",
+        "mr",
+        "ta",
+        "vi",
+        "fa",
+        "pl",
+        "uk",
+        "nl",
+        "sv",
+        "he",
+        "sw",
+        "ps"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-08-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-04-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 386,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8862205,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#num_attention_heads"
+    },
+    "vocab": {
+      "value": 251000,
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:bc7b85f164a17c1b007d87fb99d3676f4a4d2e6511d2288dd3f5334dc0f34e6b#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MultiNLI-matched",
+        "task": "accuracy",
+        "value": "0,857",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MultiNLI-mismatched",
+        "task": "accuracy",
+        "value": "0,856",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ANLI-all",
+        "task": "accuracy",
+        "value": "0,537",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ANLI-r3",
+        "task": "accuracy",
+        "value": "0,497",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "WANLI",
+        "task": "accuracy",
+        "value": "0,732",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LingNLI",
+        "task": "accuracy",
+        "value": "0,788",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "fever-nli",
+        "task": "accuracy",
+        "value": "0,761",
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 6,
+        "Quantized": 3,
+        "Fine tuned": 24
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 6,
+        "quantized": 3,
+        "finetune": 24
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "zero-shot-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2111.09543",
+        "title": "DeBERTaV3: Improving DeBERTa using ELECTRA-Style Pre-Training with Gradient-Disentangled Embedding Sharing",
+        "first_author": "Pengcheng He",
+        "authors": 3,
+        "year": "2021"
+      },
+      {
+        "id": "2104.07179",
+        "title": "Does Putting a Linguist in the Loop Improve NLU Data Collection?",
+        "first_author": "Alicia Parrish",
+        "authors": 10,
+        "year": "2021"
+      },
+      {
+        "id": "1809.05053",
+        "title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+        "first_author": "Alexis Conneau",
+        "authors": 7,
+        "year": "2018"
+      },
+      {
+        "id": "1911.02116",
+        "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+        "first_author": "Alexis Conneau",
+        "authors": 10,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "MoritzLaurer/multilingual-NLI-26lang-2mil7",
+      "xnli",
+      "multi_nli",
+      "facebook/anli",
+      "fever",
+      "lingnli",
+      "alisawuffles/WANLI"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 47,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "akdeniz27/turkish-zero-shot-text-classification-with-multilingual-models",
+        "nutrientdocs/grounding-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

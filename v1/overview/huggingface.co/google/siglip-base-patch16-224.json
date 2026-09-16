@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/siglip-base-patch16-224",
+  "revision": "7fd15f0689c79d79e38b1c2e2e2370a7bf2761ed",
+  "manifest": "blake3:4f20b9ed71a4a5c7b959904a65ba43ce5a339e54ed7f199c310d5343cf3f2763",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/siglip-base-patch16-224",
+    "readme": "file:README.md@sha256:86c231c4a7bf0ee2435295413ad5c7cf567c9426f00b79711ce8eda884b7a8d3",
+    "config": "file:config.json@sha256:cd85b3d28829722820bcb89a2cfbb4160e55fd359249a3044da724166a8d9688"
+  },
+  "summary": {
+    "value": "SigLIP model pre-trained on WebLi at resolution 224x224. It was introduced in the paper Sigmoid Loss for Language Image Pre-Training by Zhai et al. and first released in this repository.",
+    "source": "file:README.md@sha256:86c231c4a7bf0ee2435295413ad5c7cf567c9426f00b79711ce8eda884b7a8d3"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 203155970,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "SigLIP",
+      "source": "file:config.json@sha256:cd85b3d28829722820bcb89a2cfbb4160e55fd359249a3044da724166a8d9688#model_type"
+    },
+    "architecture_id": {
+      "value": "siglip",
+      "source": "file:config.json@sha256:cd85b3d28829722820bcb89a2cfbb4160e55fd359249a3044da724166a8d9688#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2023-09-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-09-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 92,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 22398012,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:cd85b3d28829722820bcb89a2cfbb4160e55fd359249a3044da724166a8d9688#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:cd85b3d28829722820bcb89a2cfbb4160e55fd359249a3044da724166a8d9688#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:cd85b3d28829722820bcb89a2cfbb4160e55fd359249a3044da724166a8d9688#vocab_size"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:cd85b3d28829722820bcb89a2cfbb4160e55fd359249a3044da724166a8d9688#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 8,
+        "Fine tuned": 12
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 8,
+        "finetune": 12
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForZeroShotImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2303.15343",
+        "title": "Sigmoid Loss for Language Image Pre-Training",
+        "first_author": "Xiaohua Zhai",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2209.06794",
+        "title": "PaLI: A Jointly-Scaled Multilingual Language-Image Model",
+        "first_author": "Xi Chen",
+        "authors": 29,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "mteb/leaderboard",
+        "ByteDance-Seed/BAGEL"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "superwhisper/s1-mini",
+  "revision": "88f6b15896c73bbb13a3b596e0afe8ea0d5150b4",
+  "manifest": "blake3:f71e486fee94b18d548389f164aa44226c185aeb582a21f5b77388c49dcf8efa",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/superwhisper/s1-mini",
+    "readme": "file:README.md@sha256:34417f7527b5244af56736dcb5bddff968b7be6c5c8273c8db3800a6a5f75e62",
+    "config": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd"
+  },
+  "summary": {
+    "value": "A 0.6B-parameter text normalizer for speech-to-text output.",
+    "source": "file:README.md@sha256:34417f7527b5244af56736dcb5bddff968b7be6c5c8273c8db3800a6a5f75e62"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 751632384,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#model_type"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-0.6B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 351,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9125,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 12,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 12,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2505.09388",
+        "title": "Qwen3 Technical Report",
+        "first_author": "An Yang",
+        "authors": 60,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "embedl/hfviewer",
+        "webml-community/s1-mini-webgpu",
+        "superwhisper/s1-mini-transcript-cleanup"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

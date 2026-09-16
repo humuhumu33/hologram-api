@@ -1,0 +1,186 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "protectai/deberta-v3-base-prompt-injection-v2",
+  "revision": "90c9989b1a342275dd0d1a95aad283c04e075671",
+  "manifest": "blake3:820b9e09c1cec9dc522d5384c54b17cd6b563d0cce0e11f57597ae8abcb3699d",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/protectai/deberta-v3-base-prompt-injection-v2",
+    "readme": "file:README.md@sha256:37221a38df1e60ad56364c39a233c75b77fa08740ecdee248d1b4e07ccc8ef5a",
+    "config": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of microsoft/deberta-v3-base specifically developed to detect and classify prompt injection attacks which can manipulate language models into producing unintended outputs.",
+    "source": "file:README.md@sha256:37221a38df1e60ad56364c39a233c75b77fa08740ecdee248d1b4e07ccc8ef5a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 184423682,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Deberta V2",
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#model_type"
+    },
+    "architecture_id": {
+      "value": "deberta-v2",
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "microsoft/deberta-v3-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-04-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 116,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7040669,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#num_attention_heads"
+    },
+    "vocab": {
+      "value": 128100,
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 6,
+        "Fine tuned": 11
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 6,
+        "finetune": 11
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "natolambert/xstest-v2-copy",
+      "VMware/open-instruct",
+      "alespalla/chatbot_instruction_prompts",
+      "HuggingFaceH4/grok-conversation-harmless",
+      "Harelix/Prompt-Injection-Mixed-Techniques-2024",
+      "OpenSafetyLab/Salad-Data",
+      "jackhhao/jailbreak-classification"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 28,
+      "top": [
+        "ml6team/secret-agent-guardrail-challenge",
+        "wandb/guardrails-genie",
+        "Om43937/AEGIS-AI-Security"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

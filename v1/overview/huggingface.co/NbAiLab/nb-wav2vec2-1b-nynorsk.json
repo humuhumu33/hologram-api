@@ -1,0 +1,179 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "NbAiLab/nb-wav2vec2-1b-nynorsk",
+  "revision": "37107327f6af742c008042d8cfdba4276de18f82",
+  "manifest": "blake3:c523578aaf58488432c10f6005cf671db0471fec6bedc17ef556dfe7c4ed8abd",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/NbAiLab/nb-wav2vec2-1b-nynorsk",
+    "readme": "file:README.md@sha256:bb3e721d5022300f5d473532fadb872e9047b569bebc1e0b56f8bf941300518f",
+    "config": "file:config.json@sha256:ee41a09d449fc8875b6179db551e96f01732e76337bc291352e1b54d10ad5d0c"
+  },
+  "summary": {
+    "value": "When you have verified that you are able to do this, create a fresh new repo. You can then start by copying the files",
+    "source": "file:README.md@sha256:bb3e721d5022300f5d473532fadb872e9047b569bebc1e0b56f8bf941300518f"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 962540962,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:ee41a09d449fc8875b6179db551e96f01732e76337bc291352e1b54d10ad5d0c#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:ee41a09d449fc8875b6179db551e96f01732e76337bc291352e1b54d10ad5d0c#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "nn",
+        "no"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-06-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10320204,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:ee41a09d449fc8875b6179db551e96f01732e76337bc291352e1b54d10ad5d0c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:ee41a09d449fc8875b6179db551e96f01732e76337bc291352e1b54d10ad5d0c#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ee41a09d449fc8875b6179db551e96f01732e76337bc291352e1b54d10ad5d0c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 34,
+      "source": "file:config.json@sha256:ee41a09d449fc8875b6179db551e96f01732e76337bc291352e1b54d10ad5d0c#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "NPSC",
+        "task": "Test (Nynorsk) WER",
+        "value": 0.11319692134409612,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "NPSC",
+        "task": "Test (Nynorsk) CER",
+        "value": 0.040263696587740365,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2307.01672",
+        "title": "Boosting Norwegian Automatic Speech Recognition",
+        "first_author": "Javier de la Rosa",
+        "authors": 5,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "NbAiLab/NPSC"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "Sven33/SATEv1.5"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

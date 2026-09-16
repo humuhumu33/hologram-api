@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Leo97/KoELECTRA-small-v3-modu-ner",
+  "revision": "bb9d562674e260712d9779f140ff5564a9e44d36",
+  "manifest": "blake3:5ab422ec1b0ae91366c585f7b221a309ef3c5714bdbd7f325a9f3a490ab50d37",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Leo97/KoELECTRA-small-v3-modu-ner",
+    "readme": "file:README.md@sha256:e9101a415628260a581a4eac7c5e6a2fa52aa390b78f713fab1f5bb44caf8391",
+    "config": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of monologg/koelectra-small-v3-discriminator on an unknown dataset. It achieves the following results on the evaluation set: - Loss: 0.1431 - Precision: 0.8232 - Recall: 0.8449 - F1: 0.8339 - Accuracy: 0.9628",
+    "source": "file:README.md@sha256:e9101a415628260a581a4eac7c5e6a2fa52aa390b78f713fab1f5bb44caf8391"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 14064671,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Electra",
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#model_type"
+    },
+    "architecture_id": {
+      "value": "electra",
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-03-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-04-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1974557,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 256,
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#hidden_size"
+    },
+    "heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#num_attention_heads"
+    },
+    "vocab": {
+      "value": 35000,
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:433b9d9d6272e0820a62062b13be5d631891d5a509ecb8ae9c782cccfe740a78#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 6,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "esun-choi/INVOHIDE_inisw8",
+        "esun-choi/InvoHide_Inisw_teem8"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

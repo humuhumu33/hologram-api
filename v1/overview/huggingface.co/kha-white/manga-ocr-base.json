@@ -1,0 +1,131 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kha-white/manga-ocr-base",
+  "revision": "aa6573bd10b0d446cbf622e29c3e084914df9741",
+  "manifest": "blake3:46fc768c20a81d8f8001283afec82e1cd3d05d208cfe8671120ecf12b5196cd5",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kha-white/manga-ocr-base",
+    "readme": "file:README.md@sha256:32f413afcc4295151e77d25202c5c5d81ef621b46f947da1c3bde13256dc0d5f",
+    "config": "file:config.json@sha256:8c0e395de8fa699daaac21aee33a4ba9bd1309cfbff03147813d2a025f39f349"
+  },
+  "summary": {
+    "value": "Optical character recognition for Japanese text, with the main focus being Japanese manga.",
+    "source": "file:README.md@sha256:32f413afcc4295151e77d25202c5c5d81ef621b46f947da1c3bde13256dc0d5f"
+  },
+  "glance": {
+    "task": {
+      "value": "Image to text",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Vision Encoder Decoder",
+      "source": "file:config.json@sha256:8c0e395de8fa699daaac21aee33a4ba9bd1309cfbff03147813d2a025f39f349#model_type"
+    },
+    "architecture_id": {
+      "value": "vision-encoder-decoder",
+      "source": "file:config.json@sha256:8c0e395de8fa699daaac21aee33a4ba9bd1309cfbff03147813d2a025f39f349#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-06-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 180,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9241548,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "vocab": {
+      "value": 6144,
+      "source": "file:config.json@sha256:8c0e395de8fa699daaac21aee33a4ba9bd1309cfbff03147813d2a025f39f349#vocab_size"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:8c0e395de8fa699daaac21aee33a4ba9bd1309cfbff03147813d2a025f39f349#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "manga109s"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 42,
+      "top": [
+        "gryan-galario/manga-ocr-demo",
+        "Kapanther/manga-translator",
+        "romogey764/kha-white-manga-ocr-base"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ncbi/MedCPT-Cross-Encoder",
+  "revision": "71caf65d4927987813984f54c284405a13fcca49",
+  "manifest": "blake3:5c49fdab8a295c76d75a20caed9054602f16937085f384006603d5606c05cf84",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ncbi/MedCPT-Cross-Encoder",
+    "readme": "file:README.md@sha256:8ab1ceed3beea346789e0b9cd7e04d6373dcf8b738fb63b996c7d97bb25df2ec",
+    "config": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42"
+  },
+  "summary": {
+    "value": "This work was supported by the Intramural Research Programs of the National Institutes of Health, National Library of Medicine.",
+    "source": "file:README.md@sha256:8ab1ceed3beea346789e0b9cd7e04d6373dcf8b738fb63b996c7d97bb25df2ec"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2023-11-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-12-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 32,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4071557,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:1f375c7e8081f043c99fdb9c80059c44ed757cce7b05d333b7f3c81b1b713a42#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "sanjiv2311/solomidBE",
+        "lvwerra/bio-retrieval-resources",
+        "hari6677/ncbi-MedCPT-Cross-Encoder"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

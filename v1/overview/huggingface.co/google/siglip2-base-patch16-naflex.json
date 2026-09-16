@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/siglip2-base-patch16-naflex",
+  "revision": "b53b807d3a2d5e2b3911292f2d69e5341cdc064c",
+  "manifest": "blake3:3e31a226b2525140814712a4b76bb42de782eec2b681af635dbc44ebd6ee7b1f",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/siglip2-base-patch16-naflex",
+    "readme": "file:README.md@sha256:d4353009ea90b7de43575c4ba7e547e195e3239a62f7746afb16ae4ca7fa390a",
+    "config": "file:config.json@sha256:c0b8c2e7f0527b0bea1b1d9abe0381c0f294352df92439c54590b8420e539118"
+  },
+  "summary": {
+    "value": "SigLIP 2 extends the pretraining objective of SigLIP with prior, independently developed techniques into a unified recipe, for improved semantic understanding, localization, and dense features.",
+    "source": "file:README.md@sha256:d4353009ea90b7de43575c4ba7e547e195e3239a62f7746afb16ae4ca7fa390a"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 375234050,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "SigLIP 2",
+      "source": "file:config.json@sha256:c0b8c2e7f0527b0bea1b1d9abe0381c0f294352df92439c54590b8420e539118#model_type"
+    },
+    "architecture_id": {
+      "value": "siglip2",
+      "source": "file:config.json@sha256:c0b8c2e7f0527b0bea1b1d9abe0381c0f294352df92439c54590b8420e539118#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-02-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-02-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 39,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10477164,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "vocab": {
+      "value": 256000,
+      "source": "file:config.json@sha256:c0b8c2e7f0527b0bea1b1d9abe0381c0f294352df92439c54590b8420e539118#vocab_size"
+    },
+    "vision_encoder": {
+      "value": "siglip2_vision_model",
+      "source": "file:config.json@sha256:c0b8c2e7f0527b0bea1b1d9abe0381c0f294352df92439c54590b8420e539118#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForZeroShotImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2502.14786",
+        "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features",
+        "first_author": "Michael Tschannen",
+        "authors": 14,
+        "year": "2025"
+      },
+      {
+        "id": "2303.15343",
+        "title": "Sigmoid Loss for Language Image Pre-Training",
+        "first_author": "Xiaohua Zhai",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2209.06794",
+        "title": "PaLI: A Jointly-Scaled Multilingual Language-Image Model",
+        "first_author": "Xi Chen",
+        "authors": 29,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "speridlabs/eneas",
+        "JustANormalTinkerer/hayai-ocr-v2",
+        "hugging-apps/unispace-gen-edit"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

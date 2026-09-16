@@ -1,0 +1,160 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jonatasgrosman/wav2vec2-large-xlsr-53-hungarian",
+  "revision": "2bd0786e71cad097c4e6ce9b3e45b40c74ad8f37",
+  "manifest": "blake3:b8bfc4132dbf6f4d76526ad9390ee8e798ca0f8e9eb82ad11ee868b495aa01ea",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jonatasgrosman/wav2vec2-large-xlsr-53-hungarian",
+    "readme": "file:README.md@sha256:33cb832e3faa0407b501031f9106a01bc5d6862e1a4aad93951a6fd14174c549",
+    "config": "file:config.json@sha256:4388dcd3842a6a64eafb76c83189675214eb21671ff4729a70d77e4fe7b56f7b"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Hungarian using the train and validation splits of Common Voice 6.1 and CSS10. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:33cb832e3faa0407b501031f9106a01bc5d6862e1a4aad93951a6fd14174c549"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:4388dcd3842a6a64eafb76c83189675214eb21671ff4729a70d77e4fe7b56f7b#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:4388dcd3842a6a64eafb76c83189675214eb21671ff4729a70d77e4fe7b56f7b#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "hu"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-12-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16659230,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:4388dcd3842a6a64eafb76c83189675214eb21671ff4729a70d77e4fe7b56f7b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:4388dcd3842a6a64eafb76c83189675214eb21671ff4729a70d77e4fe7b56f7b#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:4388dcd3842a6a64eafb76c83189675214eb21671ff4729a70d77e4fe7b56f7b#num_attention_heads"
+    },
+    "vocab": {
+      "value": 41,
+      "source": "file:config.json@sha256:4388dcd3842a6a64eafb76c83189675214eb21671ff4729a70d77e4fe7b56f7b#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice hu",
+        "task": "Test WER",
+        "value": 31.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice hu",
+        "task": "Test CER",
+        "value": 6.2,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/3577",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 9,
+      "top": [
+        "embedl/hfviewer",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "qanastek/Alexa-NLU-Clone"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

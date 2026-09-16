@@ -1,0 +1,247 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "distil-whisper/distil-large-v3",
+  "revision": "8031d2e6ce6631b7fc45629dddfc00271116d981",
+  "manifest": "blake3:a624a60d04ea086fea907ff4b39759dbf82e607a0d6f4240a7cf6ed6349e09a4",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/distil-whisper/distil-large-v3",
+    "readme": "file:README.md@sha256:5556e0b4dfb4b1ac9b7dc20a28e99dc9535e71067712c89d6b4f978c1b8ff4fd",
+    "config": "file:config.json@sha256:ef5ee106790d92c963ffba0f80c2986fb2ce7bd24593cb93d851b72c037e4ad0"
+  },
+  "summary": {
+    "value": "Distil-Whisper was proposed in the paper Robust Knowledge Distillation via Large-Scale Pseudo Labelling.",
+    "source": "file:README.md@sha256:5556e0b4dfb4b1ac9b7dc20a28e99dc9535e71067712c89d6b4f978c1b8ff4fd"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 756405760,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Whisper",
+      "source": "file:config.json@sha256:ef5ee106790d92c963ffba0f80c2986fb2ce7bd24593cb93d851b72c037e4ad0#model_type"
+    },
+    "architecture_id": {
+      "value": "whisper",
+      "source": "file:config.json@sha256:ef5ee106790d92c963ffba0f80c2986fb2ce7bd24593cb93d851b72c037e4ad0#model_type"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-03-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 382,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 20274321,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:ef5ee106790d92c963ffba0f80c2986fb2ce7bd24593cb93d851b72c037e4ad0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:ef5ee106790d92c963ffba0f80c2986fb2ce7bd24593cb93d851b72c037e4ad0#d_model"
+    },
+    "vocab": {
+      "value": 51866,
+      "source": "file:config.json@sha256:ef5ee106790d92c963ffba0f80c2986fb2ce7bd24593cb93d851b72c037e4ad0#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 7.5175,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 214.4214313,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 15.16,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 11.79,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 10.08,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 2.54,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 5.19,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 3.27,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 3.86,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 8.25,
+        "date": "2024-03-21",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 3,
+        "Fine tuned": 23
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 3,
+        "finetune": 23
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSpeechSeq2Seq",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2311.00430",
+        "title": "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling",
+        "first_author": "Sanchit Gandhi",
+        "authors": 3,
+        "year": "2023"
+      },
+      {
+        "id": "2210.13352",
+        "title": "ESB: A Benchmark For Multi-Domain End-to-End Speech Recognition",
+        "first_author": "Sanchit Gandhi",
+        "authors": 3,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "distil-whisper/whisper-vs-distil-whisper",
+        "gobeldan/insanely-fast-whisper-webui",
+        "devilent2/whisper-v3-zero"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

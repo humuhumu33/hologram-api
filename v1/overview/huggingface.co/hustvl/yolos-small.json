@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "hustvl/yolos-small",
+  "revision": "3d8f7130d3ce4907cb206fe1c8485dc8fe8703de",
+  "manifest": "blake3:0798630035bb1b7ecd862e05e6f5f31d028fc09d93be3e89fe7ac139f297a1f4",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/hustvl/yolos-small",
+    "readme": "file:README.md@sha256:0e95447d56c12b6833a42bc781fefcb318c65e6499d1b7b03912cbbfbc1c6352",
+    "config": "file:config.json@sha256:340c26d18da821b80b7e3a558697f0d39328f99f9f4eabe246ea9851e7f50de5"
+  },
+  "summary": {
+    "value": "YOLOS model fine-tuned on COCO 2017 object detection (118k annotated images). It was introduced in the paper You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection by Fang et al. and first released in this repository.",
+    "source": "file:README.md@sha256:0e95447d56c12b6833a42bc781fefcb318c65e6499d1b7b03912cbbfbc1c6352"
+  },
+  "glance": {
+    "task": {
+      "value": "Object detection",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "boxes"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 30684768,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Yolos",
+      "source": "file:config.json@sha256:340c26d18da821b80b7e3a558697f0d39328f99f9f4eabe246ea9851e7f50de5#model_type"
+    },
+    "architecture_id": {
+      "value": "yolos",
+      "source": "file:config.json@sha256:340c26d18da821b80b7e3a558697f0d39328f99f9f4eabe246ea9851e7f50de5#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-04-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-05-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 98,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13114454,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:340c26d18da821b80b7e3a558697f0d39328f99f9f4eabe246ea9851e7f50de5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:340c26d18da821b80b7e3a558697f0d39328f99f9f4eabe246ea9851e7f50de5#hidden_size"
+    },
+    "heads": {
+      "value": 6,
+      "source": "file:config.json@sha256:340c26d18da821b80b7e3a558697f0d39328f99f9f4eabe246ea9851e7f50de5#num_attention_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 9
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 9
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForObjectDetection",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2106.00666",
+        "title": "You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection",
+        "first_author": "Yuxin Fang",
+        "authors": 8,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "coco"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 65,
+      "top": [
+        "Gradio-Blocks/Object-Detection-With-DETR-and-YOLOS",
+        "ClassCat/YOLOS-Object-Detection",
+        "CVPR/Object-Detection-With-DETR-and-YOLOS"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

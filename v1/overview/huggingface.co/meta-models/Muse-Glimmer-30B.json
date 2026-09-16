@@ -1,0 +1,289 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "meta-models/Muse-Glimmer-30B",
+  "revision": "a4e59da52a7bc87ae7251dd5545c0dd437c44b68",
+  "manifest": "blake3:31795a73ddaf1871107a78cb4033a7228b399cc33ec2b9fa05bf945f6dc16e82",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/meta-models/Muse-Glimmer-30B",
+    "readme": "file:README.md@sha256:5894e358c58f4f8425645a5b0b890468ecb3e6b049c2e941648db077c4b7df58",
+    "config": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14"
+  },
+  "summary": {
+    "value": "Authors: Meta Superintelligence Lab Model Release Date: August 2026 License: Apache 2.0",
+    "source": "file:README.md@sha256:5894e358c58f4f8425645a5b0b890468ecb3e6b049c2e941648db077c4b7df58"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 29776626688,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Muse Glimmer",
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#model_type"
+    },
+    "architecture_id": {
+      "value": "muse_glimmer",
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-08-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1902,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 756337,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 52,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6656,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 202048,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "muse_glimmer_vision",
+      "source": "file:config.json@sha256:5a9df2d8a385b3d361ab6ae68d73586f4e775033933bd0cd863fb7f3820e6a14#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "harborframework/terminal-bench-2.1",
+        "task": "terminalbench_2_1",
+        "value": 51.7,
+        "date": "2026-08-11",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+        "notes": "Terminus-2 harness, High Reasoning mode."
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 83.5,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_standard_10_options",
+        "value": 74,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "MathArena/aime_2026",
+        "task": "MathArena/aime_2026",
+        "value": 94.7,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 76,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "ScaleAI/SWE-bench_Pro",
+        "task": "SWE_Bench_Pro",
+        "value": 51.2,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 22,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "benchflow/skillsbench",
+        "task": "skillsbench_v1_1",
+        "value": 44.3,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "overall",
+        "value": 47.6,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "overall",
+        "value": 75.4,
+        "date": "2026-08-10",
+        "verified": false,
+        "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 12,
+        "Merged": 1,
+        "Quantized": 169,
+        "Fine tuned": 42
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 12,
+        "merge": 1,
+        "quantized": 169,
+        "finetune": 42
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "fireworks-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "together",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2504.13181",
+        "title": "Perception Encoder: The best visual embeddings are not at the output of the network",
+        "first_author": "Daniel Bolya",
+        "authors": 18,
+        "year": "2025"
+      },
+      {
+        "id": "2602.06036",
+        "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
+        "first_author": "Jian Chen",
+        "authors": 3,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 22,
+      "top": [
+        "embedl/hfviewer",
+        "ukung/Muse-Glimmer-30B-DFlash-Abliterated",
+        "akhaliq/Muse-Glimmer-30B"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

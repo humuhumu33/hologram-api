@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "distilbert/distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "manifest": "blake3:0427e64f0883f71247e281486d983c4a4f93a7a88c4b658d9a43078daef3c7a3",
+  "addressed": true,
+  "generated": "2026-09-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/distilbert/distilbert-base-uncased",
+    "readme": "file:README.md@sha256:b925a22d8efd7a29608a0e10d3f2fb33d5d80df7de4ac6e34093853cd8e0274e",
+    "config": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83"
+  },
+  "summary": {
+    "value": "This model is a distilled version of the BERT base model. It was introduced in this paper.",
+    "source": "file:README.md@sha256:b925a22d8efd7a29608a0e10d3f2fb33d5d80df7de4ac6e34093853cd8e0274e"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 66985530,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Distilbert",
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#model_type"
+    },
+    "architecture_id": {
+      "value": "distilbert",
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-05-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1459,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 686788894,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#dim"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#n_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:69c94b0222d5d1f4b0ad027ca7416cdafb98378cbbb8305d0bf47c9365c60c83#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 390,
+        "Quantized": 99,
+        "Fine tuned": 12432
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 390,
+        "quantized": 99,
+        "finetune": 12432
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1910.01108",
+        "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+        "first_author": "Victor Sanh",
+        "authors": 4,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "bookcorpus",
+      "wikipedia"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "exbert-project/exbert",
+        "Uthar/BodyPaint"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
