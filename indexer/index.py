@@ -154,6 +154,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", default=".")
     parser.add_argument("--limit", type=int, default=200, help="top N models by downloads")
+    parser.add_argument("--trending", type=int, default=0, help="also index the top N trending models")
     parser.add_argument("--repos", nargs="*", help="index these repos (in addition to the top N)")
     parser.add_argument("--selftest", action="store_true")
     parser.add_argument("--budget-minutes", type=float, default=300)
@@ -167,6 +168,9 @@ def main():
     root = os.path.join(args.out, "v1")
     listing = fetch(f"{HUB}/api/models?sort=downloads&direction=-1&limit={min(args.limit, 1000)}", want_json=True)
     candidates = [m["id"] for m in listing if not m.get("private")][: args.limit]
+    if args.trending:
+        trending = fetch(f"{HUB}/api/models?sort=trendingScore&direction=-1&limit={min(args.trending, 1000)}", want_json=True)
+        candidates += [m["id"] for m in trending if not m.get("private") and m["id"] not in candidates]
     for extra in args.repos or []:
         if extra not in candidates:
             candidates.append(extra)

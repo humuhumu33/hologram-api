@@ -8,6 +8,9 @@ on:
       limit:
         description: "Top N models by downloads"
         default: "1000"
+      trending:
+        description: "Also index the top N trending models"
+        default: "500"
 
 permissions:
   contents: write
@@ -35,7 +38,7 @@ jobs:
       - name: Index
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python indexer/index.py --limit "${{ github.event.inputs.limit || '1000' }}" --budget-minutes 320
+        run: python indexer/index.py --limit "${{ github.event.inputs.limit || '1000' }}" --trending "${{ github.event.inputs.trending || '500' }}" --budget-minutes 320
 
       - name: Verify every new manifest is named by its own BLAKE3
         run: |
