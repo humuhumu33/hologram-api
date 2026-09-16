@@ -1,20 +1,243 @@
 <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hologram Index</title>
+<title>Hologram API</title>
+<meta name="description" content="Content-address and verify any bytes, where the bytes already are. Nothing is uploaded.">
+<link rel="alternate" type="text/plain" href="llms.txt" title="Agent guide">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
-  body{font:16px/1.6 system-ui,sans-serif;max-width:46rem;margin:3rem auto;padding:0 1rem;color:#1b1b1f;background:#fbfbfd}
-  code,pre{font:14px ui-monospace,Menlo,monospace}pre{background:#f0f0f5;padding:1rem;overflow-x:auto}
-  a{color:#2d4bd8}
-  @media (prefers-color-scheme:dark){body{color:#e8e8f0;background:#131318}pre{background:#1d1d24}a{color:#8da2ff}}
+  :root{
+    --ground:#f7f7fa;--surface:#fff;--sunk:#efeff4;--ink:#15151c;--body:#3a3a46;--muted:#6b6b7a;
+    --rule:#e2e2ea;--accent:#2d4bd8;--accent-ink:#fff;--pass:#0f6b52;--pass-soft:#e2f2ec;--fail:#a62b1f;--fail-soft:#fbe8e5;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --ground:#111117;--surface:#191920;--sunk:#0d0d12;--ink:#ececf3;--body:#c4c4d0;--muted:#8d8d9d;
+    --rule:#2b2b36;--accent:#8ea2ff;--accent-ink:#0d0d12;--pass:#62c9a6;--pass-soft:#11261e;--fail:#ff8a78;--fail-soft:#2d1613;
+  }}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--body);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding-inline:20px}
+  header{padding-block:56px 36px}
+  h1{font-size:clamp(2rem,5.5vw,3rem);line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin:0}
+  .lede{font-size:1.15rem;max-width:44ch;margin:14px 0 0;color:var(--body)}
+  .lede strong{color:var(--ink)}
+  .verbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .verb{font:500 .8rem var(--mono);border:1px solid var(--rule);background:var(--surface);padding:4px 10px;border-radius:999px;color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+  .panel{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+  .panel h2{font-size:1.05rem;margin:0;color:var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .panel h2 span{font:500 .72rem var(--mono);color:var(--muted)}
+  .hint{font-size:.88rem;color:var(--muted);margin:0}
+  label{font-size:.8rem;font-weight:600;color:var(--ink)}
+  input[type=text],textarea{width:100%;font:.86rem var(--mono);color:var(--ink);background:var(--sunk);border:1px solid var(--rule);border-radius:8px;padding:9px 10px}
+  textarea{min-height:68px;resize:vertical}
+  input:focus-visible,textarea:focus-visible,button:focus-visible,.drop:focus-within,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .drop{border:1.5px dashed var(--rule);border-radius:10px;padding:16px;text-align:center;font-size:.9rem;color:var(--muted);background:var(--sunk);cursor:pointer;position:relative}
+  .drop.over{border-color:var(--accent);color:var(--ink)}
+  .drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+  button{font:600 .9rem var(--sans);background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:9px 14px;cursor:pointer;align-self:flex-start}
+  button.ghost{background:transparent;color:var(--accent);border:1px solid var(--rule);padding:4px 9px;font-size:.78rem}
+  .out{display:flex;flex-direction:column;gap:6px}
+  .row{display:grid;grid-template-columns:64px 1fr auto;gap:8px;align-items:center;font:.8rem var(--mono)}
+  .row b{color:var(--muted);font-weight:500}
+  .row code{overflow-wrap:anywhere;color:var(--ink)}
+  .verdict{font:600 .95rem var(--sans);padding:10px 12px;border-radius:8px}
+  .verdict.ok{background:var(--pass-soft);color:var(--pass)}
+  .verdict.no{background:var(--fail-soft);color:var(--fail)}
+  .verdict small{display:block;font:400 .76rem var(--mono);color:var(--body);margin-top:4px;overflow-wrap:anywhere}
+  .table{overflow-x:auto;max-height:280px;border:1px solid var(--rule);border-radius:8px}
+  table{border-collapse:collapse;width:100%;font:.76rem var(--mono)}
+  th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule);white-space:nowrap}
+  th{position:sticky;top:0;background:var(--surface);font:600 .7rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  section{margin-block:40px}
+  section>h2{font-size:1.35rem;color:var(--ink);margin:0 0 6px;letter-spacing:-.01em}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 0}
+  .tab{font:600 .82rem var(--sans);background:var(--surface);color:var(--body);border:1px solid var(--rule);border-radius:999px;padding:5px 12px}
+  .tab[aria-selected=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+  pre{margin:10px 0 0;background:var(--sunk);border:1px solid var(--rule);border-radius:10px;padding:14px;overflow-x:auto;font:.8rem/1.6 var(--mono);color:var(--ink)}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:14px}
+  .facts div{border-top:2px solid var(--ink);padding-top:10px;font-size:.92rem}
+  .facts b{display:block;color:var(--ink);font-size:.95rem}
+  footer{border-top:1px solid var(--rule);padding-block:24px 48px;font-size:.84rem;color:var(--muted)}
+  a{color:var(--accent)}
+  @media (prefers-reduced-motion:no-preference){button,.tab{transition:filter .15s}button:hover{filter:brightness(1.08)}}
 </style>
-<h1>Hologram Index</h1>
-<p>Self-verifying addresses for open model weights. Static, append-only, free to read from anywhere.</p>
-<pre>curl -s https://humuhumu33.github.io/hologram-index/v1/huggingface.co/sentence-transformers/all-MiniLM-L6-v2/latest.json</pre>
-<p>Download files from their normal URLs, hash them, compare with <code>files[].address</code>.</p>
-<ul>
-  <li><a href="llms.txt">llms.txt</a> — agent guide</li>
-  <li><a href="capabilities.json">capabilities.json</a></li>
-  <li><a href="v1/index.json">v1/index.json</a> — every indexed model</li>
-  <li><a href="https://github.com/humuhumu33/hologram-index">Source and history</a></li>
-</ul>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Hologram API</h1>
+  <p class="lede">Content-address and verify <strong>any bytes</strong>, right where they already are. In your browser, your terminal or your agent. <strong>Nothing is uploaded.</strong></p>
+  <div class="verbs"><span class="verb">address(bytes)</span><span class="verb">verify(bytes, address)</span><span class="verb">fetchVerified(url, address)</span><span class="verb">resolve(model)</span></div>
+</header>
+
+<div class="grid">
+  <div class="panel">
+    <h2>Address <span>sha256 · blake3</span></h2>
+    <p class="hint">Drop a file or type text. Hashing runs on this device.</p>
+    <label class="drop" id="a-drop"><span>Drop a file, or click to choose</span><input type="file" id="a-file" aria-label="File to address"></label>
+    <textarea id="a-text" aria-label="Text to address" placeholder="…or type text here">hello, hologram</textarea>
+    <div class="out" id="a-out" aria-live="polite"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Verify <span>match or refuse</span></h2>
+    <p class="hint">Is this file exactly the one that was addressed?</p>
+    <label class="drop" id="v-drop"><span>Drop the file to check</span><input type="file" id="v-file" aria-label="File to verify"></label>
+    <label for="v-addr">Expected address</label>
+    <input type="text" id="v-addr" placeholder="sha256:… or blake3:…" autocomplete="off" spellcheck="false">
+    <div class="out" id="v-out" aria-live="polite"></div>
+  </div>
+
+  <div class="panel" style="grid-column:1/-1">
+    <h2>Resolve a model <span id="r-count">Hugging Face</span></h2>
+    <p class="hint">Every file of a model with its address. The document is checked against its own manifest before it is shown.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input type="text" id="r-repo" value="sentence-transformers/all-MiniLM-L6-v2" aria-label="Model repository" style="flex:1;min-width:220px" spellcheck="false">
+      <button id="r-go">Resolve</button>
+    </div>
+    <div class="out" id="r-out" aria-live="polite"></div>
+  </div>
+</div>
+
+<section>
+  <h2>For agents and scripts</h2>
+  <p class="hint">No account, no key, no install. Every recipe hashes locally, so the answer never depends on trusting a server — including this one. Agents: read <a href="llms.txt">llms.txt</a>.</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="shell">Shell</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="py">Python</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="js">JavaScript</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="model">A model, verified</button>
+  </div>
+<pre id="code-shell"># content-address any bytes
+sha256sum file.bin          # → sha256:&lt;hex&gt;
+b3sum file.bin              # → blake3:&lt;hex&gt;   (b3sum is optional)
+
+# verify: the hex must match the address exactly
+echo "&lt;hex&gt;  file.bin" | sha256sum -c -</pre>
+<pre id="code-py" hidden>import hashlib
+
+def address(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(8 &lt;&lt; 20), b""):
+            h.update(chunk)
+    return "sha256:" + h.hexdigest()
+
+assert address("file.bin") == "sha256:&lt;hex&gt;", "not the bytes that were addressed"</pre>
+<pre id="code-js" hidden>import { address, verify, fetchVerified, resolve }
+  from "https://humuhumu33.github.io/hologram-api/hologram.js";
+
+await address(fileOrBytesOrStream)        // { sha256, blake3, size }
+await verify(bytes, "sha256:…")            // { ok, expected, received }
+await fetchVerified(url, "sha256:…")       // bytes, or throws Refused
+await resolve("owner/repo")                // every file of a model, addressed</pre>
+<pre id="code-model" hidden># 1. one curl: the model's files and their addresses (also a lockfile)
+curl -s https://humuhumu33.github.io/hologram-api/v1/huggingface.co/sentence-transformers/all-MiniLM-L6-v2/latest.json -o weights.lock
+
+# 2. download a file from its usual URL, then compare
+curl -sL https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/&lt;commit&gt;/model.safetensors -o model.safetensors
+sha256sum model.safetensors   # must equal that file's "address" in weights.lock</pre>
+</section>
+
+<section>
+  <h2>How it holds up</h2>
+  <div class="facts">
+    <div><b>No trusted server</b>Hashing runs where the bytes are. Model documents are checked against their own manifest address, and every file carries its SHA-256.</div>
+    <div><b>Free at any scale</b>Static files on GitHub Pages and jsDelivr. Each user's CPU does its own hashing, so more traffic costs nothing extra.</div>
+    <div><b>Public history</b>The model index is a Git repository refreshed daily. A silent change to a published address would show in the history.</div>
+    <div><b>Plain standards</b><code>sha256:</code> for interoperability (RFC 9530, OCI, Hugging Face LFS), <code>blake3:</code> for speed. Plain HTTPS URLs.</div>
+  </div>
+</section>
+
+<footer>
+  <a href="llms.txt">llms.txt</a> · <a href="capabilities.json">capabilities.json</a> · <a href="v1/index.json">model index</a> · <a href="hologram.js">hologram.js</a> · <a href="https://github.com/humuhumu33/hologram-api">source</a><br>
+  Verification proves you have the bytes that were addressed — not that those bytes are safe. The model index covers the most-downloaded public, ungated Hugging Face models and refreshes daily. Apache-2.0.
+</footer>
+</div>
+
+<script type="module">
+import { address, verify, resolve } from "./hologram.js";
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const human = (n) => n == null ? "" : n < 1e3 ? `${n} B` : n < 1e6 ? `${(n / 1e3).toFixed(1)} kB` : n < 1e9 ? `${(n / 1e6).toFixed(1)} MB` : `${(n / 1e9).toFixed(2)} GB`;
+const copyBtn = (text) => `<button class="ghost" data-copy="${esc(text)}">Copy</button>`;
+
+document.addEventListener("click", async (e) => {
+  const t = e.target.closest("[data-copy]");
+  if (t) { await navigator.clipboard.writeText(t.dataset.copy); t.textContent = "Copied"; setTimeout(() => (t.textContent = "Copy"), 1200); }
+  const tab = e.target.closest(".tab");
+  if (tab) {
+    document.querySelectorAll(".tab").forEach((b) => b.setAttribute("aria-selected", String(b === tab)));
+    ["shell", "py", "js", "model"].forEach((k) => ($(`code-${k}`).hidden = k !== tab.dataset.t));
+  }
+});
+
+for (const [drop, input] of [["a-drop", "a-file"], ["v-drop", "v-file"]]) {
+  const d = $(drop);
+  d.addEventListener("dragover", (e) => { e.preventDefault(); d.classList.add("over"); });
+  d.addEventListener("dragleave", () => d.classList.remove("over"));
+  d.addEventListener("drop", (e) => { e.preventDefault(); d.classList.remove("over"); $(input).files = e.dataTransfer.files; $(input).dispatchEvent(new Event("change")); });
+}
+
+async function runAddress(source, label) {
+  const out = $("a-out");
+  out.innerHTML = `<p class="hint">Hashing ${esc(label)}…</p>`;
+  const t0 = performance.now();
+  const r = await address(source);
+  const s = (performance.now() - t0) / 1000;
+  out.innerHTML = [["sha256", r.sha256], ["blake3", r.blake3]].map(([k, v]) => `<div class="row"><b>${k}</b><code>${esc(v)}</code>${copyBtn(v)}</div>`).join("")
+    + `<p class="hint">${esc(label)} · ${human(r.size)} · ${s < 0.01 ? "<0.01" : s.toFixed(2)} s${r.size > 5e6 ? ` · ${(r.size / 1e6 / s).toFixed(0)} MB/s` : ""}</p>`;
+}
+$("a-file").addEventListener("change", (e) => { const f = e.target.files[0]; if (f) { $("a-drop").querySelector("span").textContent = f.name; runAddress(f, f.name); } });
+let typing;
+$("a-text").addEventListener("input", (e) => { clearTimeout(typing); typing = setTimeout(() => runAddress(e.target.value, "text"), 150); });
+runAddress($("a-text").value, "text");
+
+async function runVerify() {
+  const f = $("v-file").files[0], a = $("v-addr").value.trim(), out = $("v-out");
+  if (!f || !a) { out.innerHTML = `<p class="hint">Choose a file and paste the address it should have.</p>`; return; }
+  try {
+    const r = await verify(f, a);
+    out.innerHTML = r.ok
+      ? `<div class="verdict ok">Match — these are the bytes that were addressed<small>${esc(r.received)}</small></div>`
+      : `<div class="verdict no">Refused — not the bytes that were addressed<small>expected ${esc(r.expected)}<br>received ${esc(r.received)}</small></div>`;
+  } catch (err) {
+    out.innerHTML = `<div class="verdict no">${esc(err.code || "Error")}<small>${esc(err.message)}</small></div>`;
+  }
+}
+$("v-file").addEventListener("change", (e) => { const f = e.target.files[0]; if (f) $("v-drop").querySelector("span").textContent = f.name; runVerify(); });
+$("v-addr").addEventListener("input", runVerify);
+runVerify();
+
+async function runResolve() {
+  const repo = $("r-repo").value.trim(), out = $("r-out");
+  out.innerHTML = `<p class="hint">Resolving ${esc(repo)}…</p>`;
+  try {
+    const doc = await resolve(repo);
+    const lock = URL.createObjectURL(new Blob([JSON.stringify(doc, null, 1)], { type: "application/json" }));
+    const weights = doc.files.filter((f) => f.weights).reduce((n, f) => n + (f.size || 0), 0);
+    out.innerHTML = `<div class="verdict ok">Document verified against its manifest<small>${esc(doc.manifest)} · commit ${esc(doc.revision.slice(0, 12))} · ${doc.files.length} files · ${human(weights)} of weights</small></div>
+      <div class="table"><table><thead><tr><th>File</th><th>Size</th><th>Address</th><th></th></tr></thead><tbody>
+      ${doc.files.map((f) => `<tr><td>${esc(f.path)}</td><td class="num">${human(f.size)}</td><td>${esc(f.address.slice(0, 23))}…</td><td>${copyBtn(f.address)}</td></tr>`).join("")}
+      </tbody></table></div>
+      <p class="hint"><a href="${lock}" download="weights.lock">Save as lockfile</a> · <a href="v1/huggingface.co/${esc(repo)}/${esc(doc.revision)}.json">pinned document</a></p>`;
+  } catch (err) {
+    out.innerHTML = `<div class="verdict no">${esc(err.code || "Error")}<small>${esc(err.message)}${err.next ? " — " + esc(err.next) : ""}</small></div>`;
+  }
+}
+$("r-go").addEventListener("click", runResolve);
+$("r-repo").addEventListener("keydown", (e) => e.key === "Enter" && runResolve());
+runResolve();
+fetch("v1/index.json").then((r) => r.json()).then((d) => ($("r-count").textContent = `${d.models.length} models indexed`)).catch(() => {});
+</script>
+</body>
+</html>

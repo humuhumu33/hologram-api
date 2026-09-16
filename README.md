@@ -1,49 +1,56 @@
-# Hologram Index
+# Hologram API
 
-Self-verifying addresses for open model weights. A static, append-only index any agent can read with one
-`curl`, served for free by GitHub Pages and jsDelivr.
+**Content-address and verify any bytes, right where they already are.**
+An address is the hash of the bytes, so anyone can recompute it and nobody has to be trusted.
 
-```bash
-curl -s https://humuhumu33.github.io/hologram-index/v1/huggingface.co/sentence-transformers/all-MiniLM-L6-v2/latest.json
+→ **https://humuhumu33.github.io/hologram-api/** — drop a file to address or verify it; nothing is uploaded.
+→ Agents: [`llms.txt`](https://humuhumu33.github.io/hologram-api/llms.txt) · [`capabilities.json`](https://humuhumu33.github.io/hologram-api/capabilities.json)
+
+```js
+import { address, verify, fetchVerified, resolve } from "https://humuhumu33.github.io/hologram-api/hologram.js";
+
+await address(file)                          // { sha256: "sha256:…", blake3: "blake3:…", size }
+await verify(file, "sha256:…")               // { ok, expected, received }
+await fetchVerified(url, "sha256:…")         // bytes, or throws Refused
+await resolve("sentence-transformers/all-MiniLM-L6-v2")   // every file of a model, addressed
 ```
 
-Each document lists every file in the model with its SHA-256 address and its normal Hugging Face URL.
-Download the file however you already do, hash it, compare. The document doubles as a lockfile for
-`holo-verify` (`HOLO_VERIFY_PIN`) and `hologram-api audit --pin`.
+```bash
+sha256sum file.bin                                   # address, anywhere, no install
+echo "<hex>  file.bin" | sha256sum -c -              # verify
+curl -s https://humuhumu33.github.io/hologram-api/v1/huggingface.co/<owner>/<repo>/latest.json   # resolve a model
+```
 
-## Why it is shaped like this
+## Why there is no server
 
-- **Answers never change.** A commit-pinned resolution is a fact, so it is a static file, not a service.
-  Static files are served for free at any scale, with no servers to keep up.
-- **No host is trusted.** Every file carries its SHA-256 and every manifest is named by its own BLAKE3,
-  so a mirror that lies is caught by the client. That is why the same bytes can be served from several
-  free CDNs at once.
-- **History is public.** This is a Git repository; every indexing run is a commit. Anyone can clone it,
-  and a silent change to a published address would show up in the history.
-- **No weight bytes are downloaded to build it.** Weight files take the SHA-256 the Hub publishes; small
-  files are fetched once, checked against the Hub's own Git SHA-1, and addressed by SHA-256.
+Addressing and verifying are pure functions of the bytes. A server that hashes your data makes you upload it
+(slow, and it sees your data) and then asks you to trust its answer — which defeats verification. So the
+functions run where the bytes are, in the browser, the shell or the agent. The only published data is the
+model index, and it is static: commit-pinned answers never change, so they are files served for free by
+GitHub Pages and jsDelivr at any scale, and every document is named by its own hash so no host needs trusting.
 
 ## Layout
 
 | Path | What |
 |---|---|
-| `v1/huggingface.co/<owner>/<repo>/latest.json` | newest indexed commit |
-| `v1/huggingface.co/<owner>/<repo>/<commit>.json` | pinned commit — immutable |
-| `v1/manifests/<blake3>.json` | canonical manifest bytes, named by their own hash |
-| `v1/index.json` | every indexed model, and every repo skipped with the reason |
+| `index.html` | the product page — address, verify, resolve, recipes |
+| `hologram.js` | the client API; vendored `hash-wasm` (MIT) for BLAKE3/SHA in the browser |
 | `llms.txt`, `capabilities.json` | agent guide and machine-readable description |
-| `indexer/index.py` | the indexer; `--selftest` checks the canonical form against hologram-api |
+| `v1/huggingface.co/<owner>/<repo>/{latest,<commit>}.json` | model documents; each is also a lockfile |
+| `v1/manifests/<blake3>.json` | canonical manifests, named by their own hash |
+| `v1/index.json` | every indexed model, and every repo skipped with the reason |
+| `indexer/index.py` | daily indexer; `--selftest` checks the canonical form against hologram-api-server |
+| `tests/hologram.test.mjs` | client tests: vectors, streaming, tamper refusal, live resolve |
 
-## Coverage
+## Coverage and limits
 
-Top Hugging Face models by downloads, public and ungated, refreshed daily by
-[`.github/workflows/index.yml`](.github/workflows/index.yml). Gated models need an authenticated indexer
-and are not included yet. `latest.json` can trail a repo by up to a day plus CDN caching; `<commit>.json`
-never changes.
+The model index covers the most-downloaded public, ungated Hugging Face models (961 at the first daily run)
+and refreshes daily; gated models need an authenticated indexer and are not included yet. `latest.json` can
+trail a repo by up to a day plus CDN caching; `<commit>.json` never changes. Verification proves you have the
+bytes that were addressed, not that those bytes are safe. Published documents are cached permanently by
+jsDelivr and cannot be withdrawn from it.
 
-## What this does and does not prove
+Storing bytes by address (`PUT`/`GET /v1/a`) and shared manifests need a stateful service; that part of
+Hologram API runs on hologram-api-server (Rust, built on Hologram Live) and is not yet publicly hosted.
 
-It proves you received the bytes that were published at a commit. It does not prove those bytes are
-safe — a malicious upload is indexed as faithfully as an honest one. The public history makes a silent
-change detectable; signing is not implemented yet. Data is Hugging Face's public metadata; published
-addresses are cached permanently by jsDelivr and cannot be withdrawn from it.
+Apache-2.0.

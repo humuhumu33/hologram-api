@@ -1,0 +1,24 @@
+name: test
+
+on:
+  push:
+    paths-ignore: ["v1/**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  client:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Client API tests (vectors, streaming, tamper refusal, live resolve + verified download)
+        env:
+          HOLOGRAM_NETWORK: "1"
+        run: node --test tests/hologram.test.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet blake3 && python indexer/index.py --selftest

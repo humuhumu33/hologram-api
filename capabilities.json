@@ -1,12 +1,37 @@
 {
- "service": "hologram-index",
- "version": 1,
- "description": "Static, append-only, self-verifying address index for open model weights",
+ "service": "hologram-api",
+ "version": "1.0.0",
+ "description": "Content-address and verify any bytes, where the bytes already are",
  "hosts": [
-  "https://humuhumu33.github.io/hologram-index/",
-  "https://cdn.jsdelivr.net/gh/humuhumu33/hologram-index@main/"
+  "https://humuhumu33.github.io/hologram-api/",
+  "https://cdn.jsdelivr.net/gh/humuhumu33/hologram-api@main/"
  ],
- "trust": "no host is trusted; every file has a sha256 address and every manifest is named by its own blake3",
+ "trust": "no server is trusted: hashing runs where the bytes are, and every published document is named by its own blake3",
+ "addresses": {
+  "sha256": "sha256:<64 hex> — interoperable (RFC 9530, OCI, Hugging Face LFS)",
+  "blake3": "blake3:<64 hex> — fast; manifests are addressed with it",
+  "gitsha1": "gitsha1:<40 hex> — the Hub's Git blob hash, sha1(\"blob <len>\\0\" + bytes)"
+ },
+ "verbs": {
+  "address": {
+   "shell": "sha256sum FILE",
+   "python": "\"sha256:\" + hashlib.sha256(data).hexdigest()",
+   "javascript": "address(bytes) -> {sha256, blake3, size}"
+  },
+  "verify": {
+   "shell": "echo \"<hex>  FILE\" | sha256sum -c -",
+   "javascript": "verify(bytes, address) -> {ok, expected, received, size}"
+  },
+  "fetch_verified": {
+   "shell": "curl -sL URL -o FILE && echo \"<hex>  FILE\" | sha256sum -c - || rm -f FILE",
+   "javascript": "fetchVerified(url, address) -> Uint8Array, throws Refused(ADDRESS_MISMATCH)"
+  },
+  "resolve": {
+   "http": "GET v1/huggingface.co/{owner}/{repo}/latest.json | v1/huggingface.co/{owner}/{repo}/{commit}.json",
+   "javascript": "resolve(\"owner/repo\", {revision?, manifest?}) -> document"
+  }
+ },
+ "module": "hologram.js",
  "documents": {
   "latest": "v1/huggingface.co/{owner}/{repo}/latest.json",
   "pinned": "v1/huggingface.co/{owner}/{repo}/{commit}.json",
@@ -14,11 +39,6 @@
   "index": "v1/index.json",
   "agent_guide": "llms.txt"
  },
- "addresses": ["sha256:<64 hex>", "gitsha1:<40 hex>", "blake3:<64 hex>"],
- "verify": "download file from files[].url, compute sha256, compare with files[].address",
- "coverage": "top Hugging Face models by downloads, public and ungated, refreshed daily",
- "clients": {
-  "holo-verify": "HOLO_VERIFY_PIN=<pinned or latest json> makes huggingface_hub downloads verify offline",
-  "hologram-api": "hologram-api audit <dir> --pin <pinned or latest json>"
- }
+ "errors": ["ADDRESS_MISMATCH", "BAD_ADDRESS", "BAD_INPUT", "UNVERIFIABLE", "NOT_FOUND", "UPSTREAM_ERROR"],
+ "coverage": "any bytes for address/verify; the most-downloaded public, ungated Hugging Face models for resolve, refreshed daily"
 }

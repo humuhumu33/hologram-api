@@ -10,7 +10,7 @@ and under v1/manifests/:
 
 Addresses: weight files (Git LFS) use the SHA-256 the Hub publishes — no weight bytes are downloaded.
 Small files are fetched once, checked against the Hub's Git SHA-1, and addressed by SHA-256.
-The canonical manifest is byte-identical to hologram-api's resolver (checked by --selftest).
+The canonical manifest is byte-identical to hologram-api-server's resolver (checked by --selftest).
 """
 
 import argparse
@@ -146,8 +146,8 @@ def selftest():
     got = resolution["manifest"]
     assert blake3.blake3(canonical).hexdigest() == got.split(":", 1)[1]
     if got != expected:
-        sys.exit(f"SELFTEST FAILED: {got} != {expected} (canonical form drifted from hologram-api)")
-    print(f"selftest ok: {repo}@{commit[:12]} -> {got} (identical to hologram-api's Rust resolver)")
+        sys.exit(f"SELFTEST FAILED: {got} != {expected} (canonical form drifted from hologram-api-server)")
+    print(f"selftest ok: {repo}@{commit[:12]} -> {got} (identical to hologram-api-server's Rust resolver)")
 
 
 def main():
