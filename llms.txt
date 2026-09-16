@@ -1,0 +1,41 @@
+# Hologram Index
+
+> Self-verifying addresses for open model weights on Hugging Face. Static JSON, no account, no key,
+> served by GitHub Pages and jsDelivr. Fetch a model's document, download files from their normal
+> URLs, hash what you received, compare. Anything that does not match is not the file that was published.
+
+Hosts (identical bytes, use any; every manifest is named by its own hash, so no host needs trusting):
+- https://humuhumu33.github.io/hologram-index/
+- https://cdn.jsdelivr.net/gh/humuhumu33/hologram-index@main/
+
+## Verify a model in three commands
+
+```
+curl -s https://humuhumu33.github.io/hologram-index/v1/huggingface.co/<owner>/<repo>/latest.json -o weights.lock
+curl -sL "$(python3 -c 'import json;print([f["url"] for f in json.load(open("weights.lock"))["files"] if f["path"]=="model.safetensors"][0])')" -o model.safetensors
+sha256sum model.safetensors   # must equal the hex after "sha256:" for that file in weights.lock
+```
+
+`weights.lock` is also a pin file: `HOLO_VERIFY_PIN=weights.lock` (holo-verify) and
+`hologram-api audit <dir> --pin weights.lock` read it directly.
+
+## Documents
+
+- [v1/huggingface.co/<owner>/<repo>/latest.json](https://humuhumu33.github.io/hologram-index/v1/huggingface.co/sentence-transformers/all-MiniLM-L6-v2/latest.json): newest indexed commit. Fields: name, revision, manifest, files[] {path, size, address, url, weights?, hub_etag?}.
+- v1/huggingface.co/<owner>/<repo>/<commit>.json: the same for a pinned commit. Immutable.
+- v1/manifests/<hex>.json: canonical manifest bytes; blake3 of the file must equal <hex>.
+- [v1/index.json](https://humuhumu33.github.io/hologram-index/v1/index.json): every indexed model with revision and manifest, plus repos skipped and why.
+- [capabilities.json](https://humuhumu33.github.io/hologram-index/capabilities.json): this, machine-readable.
+
+## Addresses
+
+- `sha256:<64 hex>` — SHA-256 of the file's bytes. Every file in the index carries one.
+- `gitsha1:<40 hex>` — the Hub's own Git blob hash, given as `hub_etag` for small files.
+- `blake3:<64 hex>` — the manifest's address.
+
+## Coverage and freshness
+
+Top models on Hugging Face by downloads, public and ungated, refreshed daily. Gated models are not
+indexed yet. `latest.json` can trail a repo by up to a day plus CDN caching (jsDelivr branch URLs: 12 h);
+a `<commit>.json` never changes. For a model that is not listed, the Hub's own
+`/api/models/<repo>/revision/<rev>?blobs=true` gives the SHA-256 of its weight files.

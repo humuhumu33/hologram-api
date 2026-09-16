@@ -1,0 +1,24 @@
+{
+ "service": "hologram-index",
+ "version": 1,
+ "description": "Static, append-only, self-verifying address index for open model weights",
+ "hosts": [
+  "https://humuhumu33.github.io/hologram-index/",
+  "https://cdn.jsdelivr.net/gh/humuhumu33/hologram-index@main/"
+ ],
+ "trust": "no host is trusted; every file has a sha256 address and every manifest is named by its own blake3",
+ "documents": {
+  "latest": "v1/huggingface.co/{owner}/{repo}/latest.json",
+  "pinned": "v1/huggingface.co/{owner}/{repo}/{commit}.json",
+  "manifest": "v1/manifests/{blake3_hex}.json",
+  "index": "v1/index.json",
+  "agent_guide": "llms.txt"
+ },
+ "addresses": ["sha256:<64 hex>", "gitsha1:<40 hex>", "blake3:<64 hex>"],
+ "verify": "download file from files[].url, compute sha256, compare with files[].address",
+ "coverage": "top Hugging Face models by downloads, public and ungated, refreshed daily",
+ "clients": {
+  "holo-verify": "HOLO_VERIFY_PIN=<pinned or latest json> makes huggingface_hub downloads verify offline",
+  "hologram-api": "hologram-api audit <dir> --pin <pinned or latest json>"
+ }
+}
