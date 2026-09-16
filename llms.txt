@@ -22,6 +22,7 @@ Hosts (identical content; nothing on them needs trusting):
    - Shell: `curl -sL URL -o FILE && echo "<hex>  FILE" | sha256sum -c - || rm -f FILE`
    - JavaScript: `await fetchVerified(url, "sha256:<hex>")` (throws `Refused` with code `ADDRESS_MISMATCH`)
 4. **resolve(model)** — every file of a Hugging Face model with its address.
+6. **Peer to peer**: for models listed with a `bittorrent` source, `v1/p2p/huggingface.co/<owner>/<repo>.torrent` is a hybrid BitTorrent v1+v2 torrent of the exact indexed revision, web seeded by Hugging Face (completes with zero peers). Per-file BitTorrent v2 roots and IPFS CIDv1 (raw leaves, 1 MiB chunks) are in `v1/aliases/huggingface.co/<owner>/<repo>.json`; IPFS is listed as a source only once pinned.
 5. **sources(model)** — other places the identical bytes live (today ModelScope), matched file by file on SHA-256. Fetch from any of them with fetchVerified; `v1/sources/huggingface.co/<owner>/<repo>.json`, summary in `v1/sources/index.json`.
    - `curl -s https://humuhumu33.github.io/hologram-api/v1/huggingface.co/<owner>/<repo>/latest.json`
    - JavaScript: `await resolve("<owner>/<repo>")` (checks the document against its own manifest address)

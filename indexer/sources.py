@@ -89,6 +89,21 @@ def check(root, entry, today):
             "weights": len(weights), "weights_identical": len(weights & set(identical)),
             "missing": sorted(set(ours) - set(identical)),
         })
+    # Peer to peer and IPFS: addresses computed from the bytes by indexer/aliases.py for this exact revision.
+    alias_path = os.path.join(root, "aliases", "huggingface.co", *repo.split("/")) + ".json"
+    if os.path.exists(alias_path):
+        alias = json.load(open(alias_path, encoding="utf-8"))
+        if alias.get("revision") == doc["revision"]:
+            every = {"files": len(ours), "identical": len(ours), "weights": len(weights),
+                     "weights_identical": len(weights), "missing": []}
+            bt = alias["bittorrent"]
+            result["sources"].append({"kind": "bittorrent", "name": "BitTorrent", "p2p": True,
+                                      "page": f"https://humuhumu33.github.io/hologram-api/{bt['torrent']}",
+                                      "magnet": bt["magnet"], "infohash_v2": bt["infohash_v2"], **every})
+            ipfs = alias.get("ipfs") or {}
+            if ipfs.get("pinned") and ipfs.get("gateway"):
+                result["sources"].append({"kind": "ipfs", "name": "IPFS", "page": ipfs["gateway"],
+                                          "gateway": ipfs["gateway"], **every})
     return result
 
 
