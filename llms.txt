@@ -22,6 +22,7 @@ Hosts (identical content; nothing on them needs trusting):
    - Shell: `curl -sL URL -o FILE && echo "<hex>  FILE" | sha256sum -c - || rm -f FILE`
    - JavaScript: `await fetchVerified(url, "sha256:<hex>")` (throws `Refused` with code `ADDRESS_MISMATCH`)
 4. **resolve(model)** — every file of a Hugging Face model with its address.
+5. **sources(model)** — other places the identical bytes live (today ModelScope), matched file by file on SHA-256. Fetch from any of them with fetchVerified; `v1/sources/huggingface.co/<owner>/<repo>.json`, summary in `v1/sources/index.json`.
    - `curl -s https://humuhumu33.github.io/hologram-api/v1/huggingface.co/<owner>/<repo>/latest.json`
    - JavaScript: `await resolve("<owner>/<repo>")` (checks the document against its own manifest address)
 

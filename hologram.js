@@ -223,3 +223,16 @@ export async function resolve(repo, { revision = "latest", manifest, hosts = HOS
   }
   throw lastError;
 }
+
+/**
+ * Other places the same bytes live. Each source lists which files it serves with the identical SHA-256; the
+ * addresses still come from `resolve`, so fetch from any source with `fetchVerified(source.resolve + path, file.address)`.
+ */
+export async function sources(repo, { hosts = HOSTS } = {}) {
+  for (const host of hosts) {
+    const response = await fetch(`${host}/v1/sources/huggingface.co/${repo}.json`).catch(() => null);
+    if (response?.ok) return (await response.json()).sources;
+    if (response?.status === 404) break;
+  }
+  return [{ kind: "huggingface.co", name: "Hugging Face", repo, page: `https://huggingface.co/${repo}` }];
+}
