@@ -1,0 +1,18 @@
+== 1. agent: one curl for the lock, download from the published URL, sha256sum
+  published sha256:8111d5afb0715dbf5a31396d31432cb56370ba23f6650a035ea0fc8a20b4e500
+  received  sha256:8111d5afb0715dbf5a31396d31432cb56370ba23f6650a035ea0fc8a20b4e500
+  VERIFIED
+
+== 2. the two hosts serve identical bytes
+  GitHub Pages == jsDelivr: yes
+
+== 3. manifest fetched from a public host is named by its own BLAKE3
+   self-verifies: blake3:84f5556b153b70dd1204686�
+  same address hologram-api's Rust resolver produced locally: yes
+
+== 4. the published document is a lockfile: hologram-api audit
+  10 matched · 0 mismatched · 0 missing · 0 unaccounted · 12.5 MB hashed in 0.08s
+  CLEAN
+
+== 5. ...and a pin for holo-verify: a byte-flipping mirror is refused against the published document
+  REFUSED: HOLO_VERIFY_ADDRESS_MISMATCH: pytorch_model.bin: the bytes received are not the bytes addressed. expected sha256:4fab47c129967e0db58e8faf8494e4bd04f2e
