@@ -1,0 +1,141 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Helsinki-NLP/opus-mt-de-en",
+  "revision": "1a922f3b32a8e809e17a47d4b32142d8105924e5",
+  "manifest": "blake3:bcf3b4478bc7f47c07835a475993500a5d776fce148d5dc4b63f1a694864653b",
+  "addressed": true,
+  "generated": "2026-09-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Helsinki-NLP/opus-mt-de-en",
+    "readme": "file:README.md@sha256:ae6f262ce3e16c3ee213703b6e89bdc744e6c8d784a1f286a3de8abc86667e89",
+    "config": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb"
+  },
+  "summary": {
+    "value": "opus-mt-de-en is a Marian model for translation by Helsinki-NLP, released Mar 2022, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Translation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Marian",
+      "source": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb#model_type"
+    },
+    "architecture_id": {
+      "value": "marian",
+      "source": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-08-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 50,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 34074453,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb#d_model"
+    },
+    "vocab": {
+      "value": 58101,
+      "source": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:89368ef76ea89581025cdf605caac75b8a22af2c1a90ec57c8a5001f10537eeb#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 6,
+        "Fine tuned": 11
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 6,
+        "finetune": 11
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "translation"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Helsinki-NLP/opus-translate",
+        "gundeep/open-translate",
+        "eduagarcia/multilingual-tokenizer-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

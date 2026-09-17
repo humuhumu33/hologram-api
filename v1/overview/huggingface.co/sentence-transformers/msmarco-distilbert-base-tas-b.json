@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sentence-transformers/msmarco-distilbert-base-tas-b",
+  "revision": "b12d9352e776979147078a8975a4885042984fd1",
+  "manifest": "blake3:f9eb7da5fb0283b415fdc4a09a20f8276ef3e4a484a66c8b10ddd4ddc6c96286",
+  "addressed": true,
+  "generated": "2026-09-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sentence-transformers/msmarco-distilbert-base-tas-b",
+    "readme": "file:README.md@sha256:6d9e22e0432e7d79553ddc68da0e6dfe50eb01e3276011c274241636a76a87cf",
+    "config": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924"
+  },
+  "summary": {
+    "value": "This is a port of the DistilBert TAS-B Model to sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and is optimized for the task of semantic search.",
+    "source": "file:README.md@sha256:6d9e22e0432e7d79553ddc68da0e6dfe50eb01e3276011c274241636a76a87cf"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 66362880,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Distilbert",
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#model_type"
+    },
+    "architecture_id": {
+      "value": "distilbert",
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 44,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12348451,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#n_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#dim"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#n_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:d410f2b99ddbbaf510b794df3720ce1bfd39f2a8fd0253870b4d14b2e7085924#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ms_marco"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "anakin87/fact-checking-rocks",
+        "ysharma/Voice-to-jokes",
+        "ysharma/text_to_joke"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

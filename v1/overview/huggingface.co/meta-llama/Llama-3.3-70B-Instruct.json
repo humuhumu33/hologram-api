@@ -1,0 +1,296 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "meta-llama/Llama-3.3-70B-Instruct",
+  "revision": "6f6073b423013f6a7d4d9f39144961bfbfbc386b",
+  "addressed": false,
+  "generated": "2026-09-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/meta-llama/Llama-3.3-70B-Instruct",
+    "readme": "file:README.md@sha256:83bfcf4ac40ab3f4d30577e669599e94955b26d6926861410e75e43a07772dad"
+  },
+  "summary": {
+    "value": "The Meta Llama 3.3 multilingual large language model (LLM) is an instruction tuned generative model in 70B (text in/text out).",
+    "source": "file:README.md@sha256:83bfcf4ac40ab3f4d30577e669599e94955b26d6926861410e75e43a07772dad"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 70553706496,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "llama3.3",
+        "name": "Llama 3.3 Community",
+        "commercial": "conditions",
+        "note": "Conditions above 700M monthly users"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "it",
+        "pt",
+        "hi",
+        "es",
+        "th",
+        "de"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "meta-llama/Llama-3.1-70B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-11-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3041,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 14526788,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "joelniklaus/LEXam-hard",
+        "task": "lexam_hard",
+        "value": 26.78,
+        "date": "2026-07-12",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/joelniklaus/SwissLegalEvals",
+        "notes": "lighteval, LEXam paper prompts, one response per question, no tools; DeepSeek-R1-0528 judge; mean of the German and English means over the 518 questions, 0-100"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "src",
+        "value": 0.4167,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "SRC overall; deterministic action-based grader, no LLM judge; seed 0, n=75"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "time",
+        "value": 0.75,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=time; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "access_deny",
+        "value": 0.0833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=access_deny; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "memory_label",
+        "value": 0.5833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=memory_label; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "injection",
+        "value": 0.5833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=injection; n=12"
+      },
+      {
+        "dataset": "thamilvendhan/signalbench",
+        "task": "bot_policy",
+        "value": 0.0833,
+        "date": "2026-07-08",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/thamilvendhan/signalbench",
+        "notes": "family=bot_policy; n=12"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 51.5151515152,
+        "date": "2026-04-16",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/44/8b/448b1084-4794-44f8-b895-d76737e71c5d.json",
+        "notes": "GPQA Diamond"
+      },
+      {
+        "dataset": "openai/gsm8k",
+        "task": "gsm8k",
+        "value": 94.8445792267,
+        "date": "2025-03-19",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/84/2f/842f32fc-84e3-4dd7-b9ce-8cadeb908e16.json"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 65.92,
+        "date": "2026-06-30T12:52:51.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/75/25/752505c6-7335-4044-a70e-c95542c76a4a.json"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "open_question",
+        "value": 41.27,
+        "date": "2026-06-02T12:14:58.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "mcq_4_choices",
+        "value": 28.19,
+        "date": "2026-06-02T12:14:58.000Z",
+        "verified": false,
+        "source": "https://lexam-benchmark.github.io/"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 442,
+        "Merged": 70,
+        "Quantized": 163,
+        "Fine tuned": 662
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 442,
+        "merge": 70,
+        "quantized": 163,
+        "finetune": 662
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "ovhcloud",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "scaleway",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "together",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2204.05149",
+        "title": "The Carbon Footprint of Machine Learning Training Will Plateau, Then Shrink",
+        "first_author": "David Patterson",
+        "authors": 10,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "xingyuanzhao/nocode-workflow",
+        "evaleval/best-model-finder"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

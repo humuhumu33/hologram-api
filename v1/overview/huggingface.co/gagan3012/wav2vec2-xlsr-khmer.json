@@ -1,0 +1,134 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "gagan3012/wav2vec2-xlsr-khmer",
+  "revision": "2b626a577ac629a05d1ab01ac5ba3ad14740de54",
+  "manifest": "blake3:473b35f7a5a78395065e14bbfbfdccb0f81f165ff0944666f8b72246e2ca4446",
+  "addressed": true,
+  "generated": "2026-09-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/gagan3012/wav2vec2-xlsr-khmer",
+    "readme": "file:README.md@sha256:820f21de8cd21d6afd4e7df9095088af6db1d0d0224801b7441890ae7bdaafb4",
+    "config": "file:config.json@sha256:9e2dd4bf489b9c9bb5501710fbd390d1b917039a243c76b52bdcdfa40cb9ab45"
+  },
+  "summary": {
+    "value": "When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:820f21de8cd21d6afd4e7df9095088af6db1d0d0224801b7441890ae7bdaafb4"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:9e2dd4bf489b9c9bb5501710fbd390d1b917039a243c76b52bdcdfa40cb9ab45#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:9e2dd4bf489b9c9bb5501710fbd390d1b917039a243c76b52bdcdfa40cb9ab45#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "km"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-07-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3223705,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:9e2dd4bf489b9c9bb5501710fbd390d1b917039a243c76b52bdcdfa40cb9ab45#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:9e2dd4bf489b9c9bb5501710fbd390d1b917039a243c76b52bdcdfa40cb9ab45#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9e2dd4bf489b9c9bb5501710fbd390d1b917039a243c76b52bdcdfa40cb9ab45#num_attention_heads"
+    },
+    "vocab": {
+      "value": 73,
+      "source": "file:config.json@sha256:9e2dd4bf489b9c9bb5501710fbd390d1b917039a243c76b52bdcdfa40cb9ab45#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "OpenSLR km",
+        "task": "Test WER",
+        "value": 24.96,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "OpenSLR",
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "Man1997/gagan3012-wav2vec2-xlsr-khmer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
