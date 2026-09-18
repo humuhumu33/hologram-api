@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sumedh/wav2vec2-large-xlsr-marathi",
+  "revision": "899f3f97fc4d0e6ef6286f35ecf78ee8570ecf9d",
+  "manifest": "blake3:8b66cd5c751fe57db00a7e97cb4c97a912628b63858094d7832f9664ac59e4fa",
+  "addressed": true,
+  "generated": "2026-09-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sumedh/wav2vec2-large-xlsr-marathi",
+    "readme": "file:README.md@sha256:1c7bf3d308a7eeba85976ec199f83f34cf920d0b59ab47032032eaf9356a93b0",
+    "config": "file:config.json@sha256:8b3080adbe4e8508c350253ade262e1581eed84479b08f3b76cf4fd05b439e69"
+  },
+  "summary": {
+    "value": "wav2vec2-large-xlsr-marathi is a 316M Wav2vec2 model for speech recognition by sumedh, released Mar 2022, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315508420,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:8b3080adbe4e8508c350253ade262e1581eed84479b08f3b76cf4fd05b439e69#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:8b3080adbe4e8508c350253ade262e1581eed84479b08f3b76cf4fd05b439e69#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "mr"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-large-xlsr-53"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-02-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2161988,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:8b3080adbe4e8508c350253ade262e1581eed84479b08f3b76cf4fd05b439e69#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:8b3080adbe4e8508c350253ade262e1581eed84479b08f3b76cf4fd05b439e69#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:8b3080adbe4e8508c350253ade262e1581eed84479b08f3b76cf4fd05b439e69#num_attention_heads"
+    },
+    "vocab": {
+      "value": 68,
+      "source": "file:config.json@sha256:8b3080adbe4e8508c350253ade262e1581eed84479b08f3b76cf4fd05b439e69#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "OpenSLR mr",
+        "task": "Test WER",
+        "value": 12.7,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "openslr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Daniel9046/SoniTranslate",
+        "RO-Rtechs/Translate_Video_language",
+        "r3gm/SoniTranslate_translate_audio_of_a_video_content"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

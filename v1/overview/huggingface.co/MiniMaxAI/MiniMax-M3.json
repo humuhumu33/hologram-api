@@ -1,0 +1,325 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MiniMaxAI/MiniMax-M3",
+  "revision": "f0e1c1e04d40177e4673a22097036854f536e9c0",
+  "addressed": false,
+  "generated": "2026-09-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M3",
+    "readme": "file:README.md@sha256:6148856dbf8be26dcf3f9b913be0252c38454e852108fdab01212fe965f3e327",
+    "config": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b"
+  },
+  "summary": {
+    "value": "MiniMax-M3 is a native multimodal model with 1M context. It has 428B parameters and 23B activated parameters.",
+    "source": "file:README.md@sha256:6148856dbf8be26dcf3f9b913be0252c38454e852108fdab01212fe965f3e327"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 427040140160,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "MiniMax M3 VL",
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#model_type"
+    },
+    "architecture_id": {
+      "value": "minimax_m3_vl",
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-06-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1539,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 682860,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 60,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 200064,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 5000000,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "clip_vision_model",
+      "source": "file:config.json@sha256:c9c97ce1e4eece60012d5a10ea87717458bfb1f19c2c7a615a3dbff83d090c6b#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "IntelligenceLab/Long-Horizon-Terminal-Bench",
+        "task": "lhtb",
+        "value": 38.5,
+        "date": "2026-07-16",
+        "verified": false,
+        "source": "https://zli12321.github.io/LHTB/leaderboard.html",
+        "notes": "mean reward x100 over 46 tasks (partial credit); solved@0.95=3/46; official LHTB Harbor harness"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 80.5,
+        "date": "2026-06-23T11:50:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "notes": "Evaluated on internal infrastructure using Claude Code as the scaffolding. Each test was run 4 times and the average was taken."
+      },
+      {
+        "dataset": "ScaleAI/SWE-bench_Pro",
+        "task": "SWE_Bench_Pro",
+        "value": 59,
+        "date": "2026-06-23T11:50:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "notes": "Evaluated on internal infrastructure using Claude Code as the scaffolding. Testing logic is aligned with the official evaluation."
+      },
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_standard_10_options",
+        "value": 78.1,
+        "date": "2026-06-23T11:50:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "notes": "MMMU-Pro score extracted from the model card benchmark graph. The exact task variant (vision, standard 4-options, or standard 10-options) is not explicitly stated."
+      },
+      {
+        "dataset": "MME-Benchmarks/Video-MME-v2",
+        "task": "video-mme-v2",
+        "value": 85.4,
+        "date": "2026-06-23T11:50:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "notes": "Model card reports 'VideoMME (w/ sub)'. Mapped to the closest registered benchmark on the Hub, Video-MME-v2."
+      },
+      {
+        "dataset": "claw-eval/Claw-Eval",
+        "task": "general",
+        "value": 74.5,
+        "date": "2026-06-23T11:50:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "notes": "Model card reports a single 'Claw-Eval' score. Mapped to the 'general' task (overall); the exact task split is not specified."
+      },
+      {
+        "dataset": "mercor/apex-agents",
+        "task": "apex-agents",
+        "value": 27.7,
+        "date": "2026-06-23T11:50:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "notes": "Evaluated on the apex-agents benchmark."
+      },
+      {
+        "dataset": "collinear-ai/yc-bench",
+        "task": "medium",
+        "value": 2100000,
+        "date": "2026-06-23T11:50:00.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "notes": "Model card reports 2.1M (monetary value, final assets fund). The benchmark's 'medium' task is used as the overall evaluation. Metric is monetary, not percentage-based."
+      },
+      {
+        "dataset": "joelniklaus/LEXam-hard",
+        "task": "lexam_hard",
+        "value": 37.07,
+        "date": "2026-06-20",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/joelniklaus/SwissLegalEvals",
+        "notes": "lighteval, LEXam paper prompts, one response per question, no tools; DeepSeek-R1-0528 judge; mean of the German and English means over the 518 questions, 0-100"
+      },
+      {
+        "dataset": "IntelligenceLab/Long-Horizon-Terminal-Bench",
+        "task": "lhtb_solved",
+        "value": 3,
+        "date": "2026-07-16",
+        "verified": false,
+        "source": "https://zli12321.github.io/LHTB/leaderboard.html",
+        "notes": "3/46 tasks solved at reward >= 0.95 (pass@0.95); mean reward x100 = 38.5; official LHTB Harbor harness"
+      },
+      {
+        "dataset": "benchflow/skillsbench",
+        "task": "skillsbench_v1_1",
+        "value": 53,
+        "date": "2026-06-11",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/benchflow/skillsbench-leaderboard/raw/main/leaderboard/skillsbench/v1.1/official.json",
+        "notes": "with-skills; BenchFlow harness; OpenHands agent; 87 tasks x 3 trials; full 261/261 coverage"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 59,
+        "Fine tuned": 14
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 59,
+        "finetune": 14
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "fireworks-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "together",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2606.13392",
+        "title": "MiniMax Sparse Attention",
+        "first_author": "Xunhao Lai",
+        "authors": 11,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 52,
+      "top": [
+        "embedl/hfviewer",
+        "ginigen-ai/open-router-leaderboard",
+        "MiniMaxAI/MiniMax-Music3-workflow"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

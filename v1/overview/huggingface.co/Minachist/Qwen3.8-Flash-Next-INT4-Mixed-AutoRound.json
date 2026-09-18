@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Minachist/Qwen3.8-Flash-Next-INT4-Mixed-AutoRound",
+  "revision": "1703ff595285561b141648609291377d3faf3b64",
+  "manifest": "blake3:aaf47c5a91c7ab1b0df33bba1d325763191e387c7f0191f561f54c5cc8da3a58",
+  "addressed": true,
+  "generated": "2026-09-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Minachist/Qwen3.8-Flash-Next-INT4-Mixed-AutoRound",
+    "readme": "file:README.md@sha256:5dcf2a86d3df62781eec634c37d714219f02fb0cda4030c3eeed541273e2278b",
+    "config": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba"
+  },
+  "summary": {
+    "value": "This repository has a mixed-precision AutoRound 4.21bpw quantization of Qwen3.8-Flash-Next, and the vLLM patch that runs it. The model is a 125B-A6B mixture of experts, which means that only a few experts run for each token.",
+    "source": "file:README.md@sha256:5dcf2a86d3df62781eec634c37d714219f02fb0cda4030c3eeed541273e2278b"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 139734687635,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 4 Exp",
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen4_exp",
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 61%, BF16 39%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.8-Flash-Next"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 129,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen4_exp_vision",
+      "source": "file:config.json@sha256:b058d1b1cde7b76b342b0838ac02e1d1175f5d4aa5a6b0471d6f43a91bcbfaba#vision_config"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "yqi0/petitgpt",
+  "revision": "7ae08edab72fd4a43c110b6c87c73671dac80f29",
+  "manifest": "blake3:8b756542dbb2560306d8b3382f35ecd86a78acbd95b36f88d5e49444c3df144b",
+  "addressed": true,
+  "generated": "2026-09-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/yqi0/petitgpt",
+    "readme": "file:README.md@sha256:91a1fe8fcd5d74a00c71041962f373986152a5088170758741d74c8e2cf1055b",
+    "config": "file:config.json@sha256:fe6cd464a09a0605f6ead38867c0497edc71de31fa45446f790e3f9a4f937369"
+  },
+  "summary": {
+    "value": "This project trains a 124.6M-parameter language model from scratch on a single NVIDIA RTX 4090, processing approximately 13B model-input positions during pretraining. This repository publishes the selected PetitGPT checkpoint, its custom tokenizer, the model configuration, and a native PyTorch inference implementation.",
+    "source": "file:README.md@sha256:91a1fe8fcd5d74a00c71041962f373986152a5088170758741d74c8e2cf1055b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 124635456,
+      "source": "api:safetensors.total"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1025,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:fe6cd464a09a0605f6ead38867c0497edc71de31fa45446f790e3f9a4f937369#n_layers"
+    },
+    "hidden": {
+      "value": 576,
+      "source": "file:config.json@sha256:fe6cd464a09a0605f6ead38867c0497edc71de31fa45446f790e3f9a4f937369#d_model"
+    },
+    "heads": {
+      "value": 9,
+      "source": "file:config.json@sha256:fe6cd464a09a0605f6ead38867c0497edc71de31fa45446f790e3f9a4f937369#n_heads"
+    },
+    "kv_heads": {
+      "value": 3,
+      "source": "file:config.json@sha256:fe6cd464a09a0605f6ead38867c0497edc71de31fa45446f790e3f9a4f937369#n_kv_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:fe6cd464a09a0605f6ead38867c0497edc71de31fa45446f790e3f9a4f937369#vocab_size"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:fe6cd464a09a0605f6ead38867c0497edc71de31fa45446f790e3f9a4f937369#rope_theta"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "ARC-Easy",
+        "task": "accuracy (zero-shot likelihood, FP32)",
+        "value": 57.74,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ARC-Easy",
+        "task": "normalized accuracy (zero-shot likelihood, FP32)",
+        "value": 52.36,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "PIQA",
+        "task": "accuracy (zero-shot likelihood, FP32)",
+        "value": 63.49,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "PIQA",
+        "task": "normalized accuracy (zero-shot likelihood, FP32)",
+        "value": 62.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ARC-Challenge",
+        "task": "accuracy (zero-shot likelihood, FP32)",
+        "value": 28.16,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ARC-Challenge",
+        "task": "project-protocol normalized accuracy (zero-shot likelihood, FP32)",
+        "value": 32.68,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HellaSwag",
+        "task": "accuracy (zero-shot likelihood, FP32)",
+        "value": 31.28,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HellaSwag",
+        "task": "project-protocol normalized accuracy (zero-shot likelihood, FP32)",
+        "value": 35.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "IFEval",
+        "task": "prompt-level strict accuracy (native chat template, greedy, max_new_tokens=1280)",
+        "value": 17.19,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "IFEval",
+        "task": "instruction-level strict accuracy (native chat template, greedy, max_new_tokens=1280)",
+        "value": 28.54,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "IFEval",
+        "task": "prompt-level loose accuracy (native chat template, greedy, max_new_tokens=1280)",
+        "value": 17.74,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "IFEval",
+        "task": "instruction-level loose accuracy (native chat template, greedy, max_new_tokens=1280)",
+        "value": 29.98,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "datasets": {
+    "value": [
+      "HuggingFaceTB/smollm-corpus",
+      "HuggingFaceTB/dclm-edu",
+      "HuggingFaceFW/finewiki",
+      "HuggingFaceFW/finephrase",
+      "allenai/dolmino-mix-1124",
+      "common-pile/stackv2_edu_filtered",
+      "HuggingFaceTB/smol-smoltalk"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

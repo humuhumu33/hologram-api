@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "d0xin/Swift-Qwen3.8-27B-Uncensored-BF16",
+  "revision": "174e348a73e3f7beb86afe5e751ef75c2bbc0ced",
+  "manifest": "blake3:fb50b037076803f10c97e5ac58be2ee1b707ae7611c887ff861e404246830bce",
+  "addressed": true,
+  "generated": "2026-09-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/d0xin/Swift-Qwen3.8-27B-Uncensored-BF16",
+    "readme": "file:README.md@sha256:df3efb9296b982a337bf37fb875979f1026b4c38734ae74314ab3eabd07904f0",
+    "config": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+  },
+  "summary": {
+    "value": "The primary behavioral difference from the original Swift model is refusal behavior.",
+    "source": "file:README.md@sha256:df3efb9296b982a337bf37fb875979f1026b4c38734ae74314ab3eabd07904f0"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781427952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "ukisai/Swift-Qwen3.8-27b"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 188,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 6,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 6,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

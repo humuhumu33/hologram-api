@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Mia-AiLab/DeepSeek-V4.1-Flash-EXL3-2.9bpw",
+  "revision": "64ba41b6c916a587db06eae2e19b7845f7be6e6b",
+  "manifest": "blake3:1e0ac56db55e8471d512c9ce1fbeda446c67153b8c3013084ae8cc3118385081",
+  "addressed": true,
+  "generated": "2026-09-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Mia-AiLab/DeepSeek-V4.1-Flash-EXL3-2.9bpw",
+    "readme": "file:README.md@sha256:a1b6f421d17869b1048cbca6014c4f60bd280ce4635f59a4cc3182491d82d77e",
+    "config": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca"
+  },
+  "summary": {
+    "value": "This is not a drop-in replacement for the original FP8 checkpoint. The Engram embedding tables are not in this repo — you still need shards 47 and 48 from the base model (95 GiB each).",
+    "source": "file:README.md@sha256:a1b6f421d17869b1048cbca6014c4f60bd280ce4635f59a4cc3182491d82d77e"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 105247851346,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek V41",
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_v41",
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#max_position_embeddings"
+    },
+    "precision": {
+      "value": "I16 98%, BF16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "exllamav3",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "deepseek-ai/DeepSeek-V4.1-Flash"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1398,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#max_position_embeddings"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "exl3",
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "deepseek_v41_vision",
+      "source": "file:config.json@sha256:8b2cb821118c407a148bc86a5a280f4cf4c633c82b5273c529e60afc2c702eca#vision_config"
+    }
+  }
+}

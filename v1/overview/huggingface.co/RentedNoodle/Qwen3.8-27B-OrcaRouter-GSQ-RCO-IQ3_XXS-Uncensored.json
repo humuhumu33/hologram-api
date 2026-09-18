@@ -1,0 +1,222 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "RentedNoodle/Qwen3.8-27B-OrcaRouter-GSQ-RCO-IQ3_XXS-Uncensored",
+  "revision": "28bc640e63efc63b8fc06b72f75cee44b1d387ee",
+  "manifest": "blake3:dc97a87ea212a5c441a7386cff3c7cc99478eb64cfd37df764ecd107f680b8fa",
+  "addressed": true,
+  "generated": "2026-09-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/RentedNoodle/Qwen3.8-27B-OrcaRouter-GSQ-RCO-IQ3_XXS-Uncensored",
+    "readme": "file:README.md@sha256:46e163526147371fcac29466865dcbe00f67d1fa25c7ee711a7a514eff693cc7",
+    "config": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+  },
+  "summary": {
+    "value": "A 3-bit GGUF quant of the uncensored OrcaRouter Qwen3.8-27B, carrying an S1-trained MTP draft head and a custom OrcaRouter-native imatrix. Built to run on a single 16 GB GPU.",
+    "source": "file:README.md@sha256:46e163526147371fcac29466865dcbe00f67d1fa25c7ee711a7a514eff693cc7"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27320697856,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "gguf",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "orcarouter/Qwen3.8-27B-Uncensored"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12078,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "needle-retrieval-15k",
+        "task": "exact-match",
+        "value": "6/6",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "toolcall-json-full-14-case",
+        "task": "pass-rate",
+        "value": "9/14",
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "gpqa-diamond",
+        "task": "accuracy",
+        "value": 75.25,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "wikitext-2",
+        "task": "perplexity",
+        "value": 6.17,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ifeval",
+        "task": "prompt-strict-accuracy",
+        "value": 70.24,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ifeval",
+        "task": "instruction-strict-accuracy",
+        "value": 76.26,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "truthfulqa",
+        "task": "mc1",
+        "value": 77.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "truthfulqa",
+        "task": "mc2",
+        "value": 81.98,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "xstest-safe",
+        "task": "over-refusal-rate",
+        "value": 0,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2604.18556",
+        "title": "GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling",
+        "first_author": "Alireza Dadgarnia",
+        "authors": 6,
+        "year": "2026"
+      },
+      {
+        "id": "2605.00649",
+        "title": "Model Compression with Exact Budget Constraints via Riemannian Manifolds",
+        "first_author": "Michael Helcig",
+        "authors": 2,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}
