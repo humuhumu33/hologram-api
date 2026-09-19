@@ -1,0 +1,528 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lightonai/LightOnOCR-2-1B",
+  "revision": "c97bd377f04481830395218fa8951df9deaba756",
+  "manifest": "blake3:931b43febc7d89865556c3712a6928c7b3e5a0008034187ff3537c45c0be0b92",
+  "addressed": true,
+  "generated": "2026-09-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lightonai/LightOnOCR-2-1B",
+    "readme": "file:README.md@sha256:92a1e0f0a25403e345510cd78256caa86c9c5db89625663011b7a953cef212bf",
+    "config": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a"
+  },
+  "summary": {
+    "value": "📄 Paper | 📝 Blog | 🚀 Demo | 📊 Dataset | 📓 Finetuning",
+    "source": "file:README.md@sha256:92a1e0f0a25403e345510cd78256caa86c9c5db89625663011b7a953cef212bf"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1005647872,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Mistral 3",
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#model_type"
+    },
+    "architecture_id": {
+      "value": "mistral3",
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "nl",
+        "pt",
+        "sv",
+        "da",
+        "zh",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-01-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 818,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3270558,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "pixtral",
+      "source": "file:config.json@sha256:43b62f9ec0a7207f67fd032f7ef9719fa8b6b44d7b3cf20fbc2346329493ff3a#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "overall",
+        "value": 63.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "digital",
+        "value": 80.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "photographed",
+        "value": 58.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "latin",
+        "value": 73.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "de",
+        "value": 72.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "en",
+        "value": 79.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "es",
+        "value": 65,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "fr",
+        "value": 62.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "id",
+        "value": 72.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "it",
+        "value": 82.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "nl",
+        "value": 70.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "pt",
+        "value": 83.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "vi",
+        "value": 74.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "non_latin",
+        "value": 52.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ar",
+        "value": 64.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "hi",
+        "value": 59,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "jp",
+        "value": 50.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ko",
+        "value": 41.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ru",
+        "value": 54.3,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "th",
+        "value": 51.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh",
+        "value": 46.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh_t",
+        "value": 54.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "private",
+        "value": 68.1,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "overall",
+        "value": 83.2,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251",
+        "notes": "H&F rewards omission, not transcription thus a model that outputs nothing scores perfectly. Excluded to keep Overall focused on real OCR quality."
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "arxiv_math",
+        "value": 89.6,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans_math",
+        "value": 85.6,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "table_tests",
+        "value": 89,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans",
+        "value": 42.2,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "multi_column",
+        "value": 84.8,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "long_tiny_text",
+        "value": 91.4,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "headers_footers",
+        "value": 19.7,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251",
+        "notes": "Instead of removing headers and footers, our model is trained for full-page transcription and explicitly rewards their presence (via flipped RLVR tests), which lowers this score under the original benchmark scoring."
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "baseline",
+        "value": 99.6,
+        "date": "2026-04-07T12:42:28.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/papers/2601.14251"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 48,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: lightonocr_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 87.8,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: lightonocr_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 63.2,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: lightonocr_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 0,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: lightonocr_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 13.5,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: lightonocr_vllm"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 75.5,
+        "date": "2026-04-14",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench",
+        "notes": "Pipeline name: lightonocr_vllm"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 7,
+        "Quantized": 16,
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 7,
+        "quantized": 16,
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2601.14251",
+        "title": "LightOnOCR: A 1B End-to-End Multilingual Vision-Language Model for State-of-the-Art OCR",
+        "first_author": "Said Taghadouini",
+        "authors": 3,
+        "year": "2026"
+      },
+      {
+        "id": "2412.13663",
+        "title": "Smarter, Better, Faster, Longer: A Modern Bidirectional Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference",
+        "first_author": "Benjamin Warner",
+        "authors": 14,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 18,
+      "top": [
+        "embedl/hfviewer",
+        "finebooks/bhl-ocr-leaderboard",
+        "lightonai/LightOnOCR-2-1B-Demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

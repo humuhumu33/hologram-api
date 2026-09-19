@@ -1,0 +1,229 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/nemotron-speech-streaming-en-0.6b",
+  "revision": "ebe59e5a817142986528bbbee5dba8db7b38ed50",
+  "manifest": "blake3:7c65ab6774ae5c69a01793f64d9e3fa252521b9a44ce7ccb29dbb508a01d76e5",
+  "addressed": true,
+  "generated": "2026-09-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/nemotron-speech-streaming-en-0.6b",
+    "readme": "file:README.md@sha256:7701f4b2f1c16542c8ceb2b3a61dd144032898c17f4dc9cc1bbecda6972edec8",
+    "config": "file:config.json@sha256:dffe850bc79ad2b0f8117804502b24d2c4a445aafbed4c1e40f8d78e0cb44065"
+  },
+  "summary": {
+    "value": "hr { border: none; border-top: 1px solid #e5e7eb; margin: 2rem 0; }",
+    "source": "file:README.md@sha256:7701f4b2f1c16542c8ceb2b3a61dd144032898c17f4dc9cc1bbecda6972edec8"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 618084865,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron ASR Streaming",
+      "source": "file:config.json@sha256:dffe850bc79ad2b0f8117804502b24d2c4a445aafbed4c1e40f8d78e0cb44065#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron_asr_streaming",
+      "source": "file:config.json@sha256:dffe850bc79ad2b0f8117804502b24d2c4a445aafbed4c1e40f8d78e0cb44065#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "nemo",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2025-12-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 624,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 777929,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "vocab": {
+      "value": 1025,
+      "source": "file:config.json@sha256:dffe850bc79ad2b0f8117804502b24d2c4a445aafbed4c1e40f8d78e0cb44065#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "AMI",
+        "task": "WER (1.12s frame size)",
+        "value": 11.73,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Earnings22",
+        "task": "WER (1.12s frame size)",
+        "value": 12.52,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Gigaspeech",
+        "task": "WER (1.12s frame size)",
+        "value": 9.66,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-clean",
+        "task": "WER (1.12s frame size)",
+        "value": 2.32,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-other",
+        "task": "WER (1.12s frame size)",
+        "value": 4.84,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SPGI Speech",
+        "task": "WER (1.12s frame size)",
+        "value": 2.97,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TEDLIUM",
+        "task": "WER (1.12s frame size)",
+        "value": 3.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "VoxPopuli",
+        "task": "WER (1.12s frame size)",
+        "value": 7.97,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 26,
+        "Fine tuned": 14
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 26,
+        "finetune": 14
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2312.17279",
+        "title": "Stateful Conformer with Cache-based Inference for Streaming Automatic Speech Recognition",
+        "first_author": "Vahid Noroozi",
+        "authors": 5,
+        "year": "2023"
+      },
+      {
+        "id": "2305.05084",
+        "title": "Fast Conformer with Linearly Scalable Attention for Efficient Speech Recognition",
+        "first_author": "Dima Rekesh",
+        "authors": 8,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Granary",
+      "YTC",
+      "Yodas2",
+      "LibriLight",
+      "librispeech_asr",
+      "fisher_corpus",
+      "Switchboard-1",
+      "WSJ-0",
+      "WSJ-1",
+      "National-Singapore-Corpus-Part-1",
+      "National-Singapore-Corpus-Part-6",
+      "vctk",
+      "voxpopuli",
+      "europarl",
+      "multilingual_librispeech",
+      "fleurs",
+      "mozilla-foundation/common_voice_8_0",
+      "MLCommons/peoples_speech",
+      "google/speech_commands"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 17,
+      "top": [
+        "embedl/hfviewer",
+        "build-small-hackathon/hackathon-advisor",
+        "pollen-robotics/reachy-mini-chatbox"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

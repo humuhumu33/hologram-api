@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Mapika/decider-2b",
+  "revision": "1d96be0093133e194fe18105a521b3e69be931d2",
+  "manifest": "blake3:170db6c8bb93c8a45ba28795c2c6f7d0c5863fd27457b4daa1a5d69de1c1d009",
+  "addressed": true,
+  "generated": "2026-09-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Mapika/decider-2b",
+    "readme": "file:README.md@sha256:bcbfab7dcd7c77afe6a20f94a243200f5cf4772489878ef38fe3974c2742af9e",
+    "config": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52"
+  },
+  "summary": {
+    "value": "An open replication of the \"System One model\" idea: a language model that does not generate text. It reads a context plus one or more typed questions, each with an explicit option list, and returns a probability distribution over the options for every question from a single forward pass.",
+    "source": "file:README.md@sha256:bcbfab7dcd7c77afe6a20f94a243200f5cf4772489878ef38fe3974c2742af9e"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1881825088,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-2B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 26,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 111,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "multimodalart/jev-reproductions-tracker"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "StarDoc-AI/TeleOCR",
+  "revision": "8706730e41382f4a8f2562616d47225fee8e2f7a",
+  "manifest": "blake3:fa54c4cf36be0d9c48536b9d93fb3fc32294352d39e9642630a41b55cae83d1f",
+  "addressed": true,
+  "generated": "2026-09-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/StarDoc-AI/TeleOCR",
+    "readme": "file:README.md@sha256:648a65dd241522d59ae2bd19a4909fcf6c01eb3f57acfa6917d3d814643537cc",
+    "config": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75"
+  },
+  "summary": {
+    "value": "TeleOCR is a lightweight (1.2B parameters), open-source Vision-Language Model designed specifically for document parsing.",
+    "source": "file:README.md@sha256:648a65dd241522d59ae2bd19a4909fcf6c01eb3f57acfa6917d3d814643537cc"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1415072768,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 2.5 VL",
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen2_5_vl",
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh",
+        "en",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-08-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 51,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 30446,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen2_5_vl",
+      "source": "file:config.json@sha256:92c5e15f1768dcb54bceae170043fbfefd248508159700b2179824b88c33ae75#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "overall",
+        "value": 90.72,
+        "date": "2026-08-28T08:10:47.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "scanning",
+        "value": 92.33,
+        "date": "2026-08-28T08:10:47.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "warping",
+        "value": 90.63,
+        "date": "2026-08-28T08:10:47.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "screen_photography",
+        "value": 89.09,
+        "date": "2026-08-28T08:10:47.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "illumination",
+        "value": 90.9,
+        "date": "2026-08-28T08:10:47.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "skew",
+        "value": 90.63,
+        "date": "2026-08-28T08:10:47.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2608.12898",
+        "title": "NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents",
+        "first_author": "Peng Cai",
+        "authors": 9,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "StarDoc-AI/navidc-ocr-demo",
+        "hugging-apps/teleocr-document-parsing"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

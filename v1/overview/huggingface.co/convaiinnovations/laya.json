@@ -1,31 +1,32 @@
 {
   "format": "hologram.overview/v1",
   "name": "convaiinnovations/laya",
-  "revision": "7c76b622dfc5cac71b2dc1c29873efe2ce509a05",
-  "addressed": false,
-  "generated": "2026-09-18",
+  "revision": "458d7563c5cab85ff9f7f6e06cf2dd166fb697e2",
+  "manifest": "blake3:d1ccf8f684b60730620bc73f132f2a9d1a896bf1a462cc6fb3e229a1b3da14dd",
+  "addressed": true,
+  "generated": "2026-09-19",
   "provenance": {
     "api": "https://huggingface.co/api/models/convaiinnovations/laya",
-    "readme": "file:README.md@sha256:d624e74e89bd6fb773eba880dd9f78d854777d13809f32822fa678a453569312"
+    "readme": "file:README.md@sha256:45f1b912bec2470ae2a28aa8364a49da990876df758305c1632000ffdafe0b3b"
   },
   "summary": {
-    "value": "Laya is an open-source, non-autoregressive System 1 decision model: give it a state (text, email, ticket, or JSON document) and typed questions, and it returns typed answers with mathematically calibrated probabilities and confidence scores. It never generates text, eliminating parsing errors and hallucinations.",
-    "source": "file:README.md@sha256:d624e74e89bd6fb773eba880dd9f78d854777d13809f32822fa678a453569312"
+    "value": "Open-source, non-autoregressive System 1 decision model. Give it a state (text, email, ticket, or JSON) and typed questions; it returns typed answers with calibrated probabilities in a single forward pass.",
+    "source": "file:README.md@sha256:45f1b912bec2470ae2a28aa8364a49da990876df758305c1632000ffdafe0b3b"
   },
   "glance": {
     "task": {
-      "value": "Reinforcement learning",
+      "value": "Text classification",
       "source": "api:pipeline_tag"
     },
     "input": {
       "value": [
-        "state"
+        "text"
       ],
       "source": "derived:pipeline_tag"
     },
     "output": {
       "value": [
-        "action"
+        "label"
       ],
       "source": "derived:pipeline_tag"
     },
@@ -59,16 +60,32 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-18",
+      "value": "2026-09-19",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 12,
+      "value": 195,
       "source": "api:likes"
     },
     "downloads_all_time": {
       "value": 0,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
     }
   },
   "run": {
@@ -79,8 +96,9 @@
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 2,
       "top": [
+        "multimodalart/jev-reproductions-tracker",
         "convaiinnovations/laya-demo"
       ]
     },

@@ -1,0 +1,200 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tiiuae/falcon-7b",
+  "revision": "ec89142b67d748a1865ea4451372db8313ada0d8",
+  "manifest": "blake3:8b95502a93d161b87bcb19827734e3bbd32abcace99f90b49c9afc8f28fd7ee8",
+  "addressed": true,
+  "generated": "2026-09-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tiiuae/falcon-7b",
+    "readme": "file:README.md@sha256:95c8af3ae14c6becb4b4c211477179278b393c0de7c6baadd23b908523d7da92",
+    "config": "file:config.json@sha256:ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31"
+  },
+  "summary": {
+    "value": "Falcon-7B is a 7B parameters causal decoder-only model built by TII and trained on 1,500B tokens of RefinedWeb enhanced with curated corpora. It is made available under the Apache 2.0 license.",
+    "source": "file:README.md@sha256:95c8af3ae14c6becb4b4c211477179278b393c0de7c6baadd23b908523d7da92"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7217189760,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Falcon",
+      "source": "file:config.json@sha256:ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31#model_type"
+    },
+    "architecture_id": {
+      "value": "falcon",
+      "source": "file:config.json@sha256:ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31#model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-04-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-10-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1105,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16413149,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4544,
+      "source": "file:config.json@sha256:ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31#hidden_size"
+    },
+    "heads": {
+      "value": 71,
+      "source": "file:config.json@sha256:ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31#num_attention_heads"
+    },
+    "vocab": {
+      "value": 65024,
+      "source": "file:config.json@sha256:ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 289,
+        "Quantized": 13,
+        "Fine tuned": 47
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 289,
+        "quantized": 13,
+        "finetune": 47
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2205.14135",
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "first_author": "Tri Dao",
+        "authors": 5,
+        "year": "2022"
+      },
+      {
+        "id": "1911.02150",
+        "title": "Fast Transformer Decoding: One Write-Head is All You Need",
+        "first_author": "Noam Shazeer",
+        "authors": 1,
+        "year": "2019"
+      },
+      {
+        "id": "2101.00027",
+        "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+        "first_author": "Leo Gao",
+        "authors": 12,
+        "year": "2020"
+      },
+      {
+        "id": "2005.14165",
+        "title": "Language Models are Few-Shot Learners",
+        "first_author": "Tom B. Brown",
+        "authors": 31,
+        "year": "2020"
+      },
+      {
+        "id": "2104.09864",
+        "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+        "first_author": "Jianlin Su",
+        "authors": 6,
+        "year": "2021"
+      },
+      {
+        "id": "2306.01116",
+        "title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+        "first_author": "Guilherme Penedo",
+        "authors": 9,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "tiiuae/falcon-refinedweb"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "pliny-the-prompter/obliteratus",
+        "h2oai/h2ogpt-chatbot2",
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
