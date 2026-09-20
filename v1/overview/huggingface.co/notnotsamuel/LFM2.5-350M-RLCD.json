@@ -1,0 +1,139 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "notnotsamuel/LFM2.5-350M-RLCD",
+  "revision": "deb589d803d141cabd158ef55f6617b128529f36",
+  "manifest": "blake3:880c5d9ccd3a1190a3443164ff728a81262875af30dbbedd7b2d98a12c47e5d8",
+  "addressed": true,
+  "generated": "2026-09-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/notnotsamuel/LFM2.5-350M-RLCD",
+    "readme": "file:README.md@sha256:ff299e25ff6de1f35e55145fc9342d24191f5926e81799384c48638a33a1316d",
+    "config": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8"
+  },
+  "summary": {
+    "value": "Parallel structured inference with unchanged LiquidAI/LFM2.5-350M weights. Prefill the context once, reuse attention and convolution state across candidate branches, score allowed values in a batch, and assemble JSON in Python.",
+    "source": "file:README.md@sha256:ff299e25ff6de1f35e55145fc9342d24191f5926e81799384c48638a33a1316d"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 354483968,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm2",
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm2",
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "es"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 204,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 16,
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 65536,
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:720b43d6ddc2ed25be23eed355aefcf342434a176dedad23dbe0a5e3ac24bbb8#max_position_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "multimodalart/jev-reproductions-tracker"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

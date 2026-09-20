@@ -1,0 +1,198 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ibm-granite/granite-4.1-3b",
+  "revision": "c0650403e44e78ec0262dab1c90914c65b196c4e",
+  "manifest": "blake3:77bb5fdcba0fbbe253927bc44cfca0f35d32438596ab6f87d59136e00d0b102a",
+  "addressed": true,
+  "generated": "2026-09-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ibm-granite/granite-4.1-3b",
+    "readme": "file:README.md@sha256:7868b8ead19d157ad23ec827f252f6709a380d1b2cedc35c0e7a533b91550f1f",
+    "config": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c"
+  },
+  "summary": {
+    "value": "Model Summary: Granite-4.1-3B is a 3B parameter long-context instruct model finetuned from Granite-4.1-3B-Base using a combination of open source instruction datasets with permissive license and internally collected synthetic datasets.",
+    "source": "file:README.md@sha256:7868b8ead19d157ad23ec827f252f6709a380d1b2cedc35c0e7a533b91550f1f"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3402836480,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Granite",
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#model_type"
+    },
+    "architecture_id": {
+      "value": "granite",
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-04-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-05-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 111,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1359824,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 100352,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000000,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9a0e589b69e7d3ad9fb9fb2c844aa7d7156e052cb7ea4211de7de48ab7c8525c#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "openai/gsm8k",
+        "task": "gsm8k",
+        "value": 86.88,
+        "date": "2026-04-29",
+        "verified": false,
+        "source": "https://huggingface.co/ibm-granite/granite-4.1-3b"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 49.83,
+        "date": "2026-04-29",
+        "verified": false,
+        "source": "https://huggingface.co/ibm-granite/granite-4.1-3b"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 31.7,
+        "date": "2026-04-29",
+        "verified": false,
+        "source": "https://huggingface.co/ibm-granite/granite-4.1-3b"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 17,
+        "Quantized": 61,
+        "Fine tuned": 20
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 17,
+        "quantized": 61,
+        "finetune": 20
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "0000.00000"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "embedl/hfviewer",
+        "VIDraft/global-llm-leaderboard",
+        "ibm-granite/granite-guardian"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

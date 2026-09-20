@@ -1,0 +1,124 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jaredpalmer/kev-0.5b",
+  "revision": "edf1dc6d7f8d983c0adfd251e80a686e5539fc61",
+  "manifest": "blake3:fdf08e2b9bf55dbf0ed002f96912eecc133af5776924f51459177195bd4c00bc",
+  "addressed": true,
+  "generated": "2026-09-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jaredpalmer/kev-0.5b",
+    "readme": "file:README.md@sha256:18e3e1f62317bcadad4e8ab7118cadbf0aa756e99491323b65130329d44d14d0"
+  },
+  "summary": {
+    "value": "kev-0.5b is a decision model. It takes one document (the state) and a set of typed questions, and returns a probability distribution for each question in one forward pass.",
+    "source": "file:README.md@sha256:18e3e1f62317bcadad4e8ab7118cadbf0aa756e99491323b65130329d44d14d0"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "peft",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Qwen/Qwen2.5-0.5B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 104,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "held-out split of the six training sources (1,350 questions)",
+        "task": "accuracy",
+        "value": 0.799,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "held-out split of the six training sources (1,350 questions)",
+        "task": "ECE (10 bins)",
+        "value": 0.065,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "held-out split of the six training sources (1,350 questions)",
+        "task": "ECE after temperature scaling (T=1.47)",
+        "value": 0.031,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "datasets": {
+    "value": [
+      "legacy-datasets/banking77",
+      "google/boolq",
+      "fancyzhx/ag_news",
+      "nyu-mll/multi_nli",
+      "SetFit/sst5",
+      "Yelp/yelp_review_full"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/kev-decision-model-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "joeddav/xlm-roberta-large-xnli",
+  "revision": "b227ee8435ceadfa86dc1368a34254e2838bf242",
+  "manifest": "blake3:da72bb8423406cb1b1cf62ed3bb8ea4a2bc0bd21fe9810c6a1d757ec33f8a897",
+  "addressed": true,
+  "generated": "2026-09-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/joeddav/xlm-roberta-large-xnli",
+    "readme": "file:README.md@sha256:faf45acf8420d3689444ed3934c1952f5826f815f11b7e56d1130de116091327",
+    "config": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404"
+  },
+  "summary": {
+    "value": "This model takes xlm-roberta-large and fine-tunes it on a combination of NLI data in 15 languages. It is intended to be used for zero-shot text classification, such as with the Hugging Face ZeroShotClassificationPipeline.",
+    "source": "file:README.md@sha256:faf45acf8420d3689444ed3934c1952f5826f815f11b7e56d1130de116091327"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 560943621,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual",
+        "en",
+        "fr",
+        "es",
+        "de",
+        "el",
+        "bg",
+        "ru",
+        "tr",
+        "ar",
+        "vi",
+        "th",
+        "zh",
+        "hi",
+        "sw",
+        "ur"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-10-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 293,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 15058121,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:af751dca748bcc82c58fe150ce879862a825b1f5bc492d7289dc12e7a1e4b404#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 16
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 16
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "zero-shot-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1911.02116",
+        "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+        "first_author": "Alexis Conneau",
+        "authors": 10,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "doi": {
+    "value": "10.57967/hf/6544",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "multi_nli",
+      "xnli"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 96,
+      "top": [
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "joeddav/zero-shot-demo",
+        "akdeniz27/turkish-zero-shot-text-classification-with-multilingual-models"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

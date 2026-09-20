@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "AlexWortega/openjev",
-  "revision": "f8187e6e11d413d0771bcc7970b85f78e194264c",
-  "manifest": "blake3:a61fbdefb537e632eb0dabe13a78996e392ab82d3f856c5ae51fd10d3b1df631",
+  "revision": "4b5f9a67fa2ebe77466bce0656ce350effc3148c",
+  "manifest": "blake3:5bc1875d85e77682c4309c21ff5644a911ec2ca6e2d5b414058a7d3f8edfb510",
   "addressed": true,
-  "generated": "2026-09-18",
+  "generated": "2026-09-20",
   "provenance": {
     "api": "https://huggingface.co/api/models/AlexWortega/openjev",
-    "readme": "file:README.md@sha256:c5405c9dc771ad3a52856f93ab8038c38cb04ecb780f8960f79cefc9b30cd867"
+    "readme": "file:README.md@sha256:092c7ea7ac1cc8bb54ca557de40b8c6b0ca46184ba3d9d348563dcd9ede4e718"
   },
   "summary": {
-    "value": "Bigger jev: Qwen3.5-35B-A3B (MoE) as the backbone. Zero-shot, and with the backbone frozen plus a small MLP head on the last-token latent (mlpheads35b/, one head per task, loadable with LatentMLPHead.load):",
-    "source": "file:README.md@sha256:c5405c9dc771ad3a52856f93ab8038c38cb04ecb780f8960f79cefc9b30cd867"
+    "value": "openjev is Qwen3.5 turned into a jev model: a single cross-encoder that reads a premise and a hypothesis and answers with entailment, contradiction or neutral.",
+    "source": "file:README.md@sha256:092c7ea7ac1cc8bb54ca557de40b8c6b0ca46184ba3d9d348563dcd9ede4e718"
   },
   "glance": {
     "task": {
@@ -63,16 +63,30 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-17",
+      "value": "2026-09-19",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 102,
+      "value": 239,
       "source": "api:likes"
     },
     "downloads_all_time": {
       "value": 0,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
     }
   },
   "run": {
@@ -83,9 +97,11 @@
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 3,
       "top": [
-        "multimodalart/jev-reproductions-tracker"
+        "multimodalart/jev-reproductions-tracker",
+        "akhaliq/openjev",
+        "AlexWortega/openjev"
       ]
     },
     "source": "api:spaces"

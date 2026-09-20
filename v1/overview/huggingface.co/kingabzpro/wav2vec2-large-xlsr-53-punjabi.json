@@ -1,0 +1,163 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kingabzpro/wav2vec2-large-xlsr-53-punjabi",
+  "revision": "cd3f671b063c09d247dc1c550002c2049abd622d",
+  "manifest": "blake3:ae62c2a55fd6309b19b3107f39f309d380e8dd70673228f471fce55e372e6327",
+  "addressed": true,
+  "generated": "2026-09-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kingabzpro/wav2vec2-large-xlsr-53-punjabi",
+    "readme": "file:README.md@sha256:567fe75064696896e413165377e9657ae81f568dcd850acaedfee8f8fb73cb44",
+    "config": "file:config.json@sha256:126b10407ea6d6720d23ac90896f71ab70e456a47b57c819970f8351f1887418"
+  },
+  "summary": {
+    "value": "This model is a fine-tuned version of Harveenchadha/vakyansh-wav2vec2-punjabi-pam-10 on the commonvoice dataset. It achieves the following results on the evaluation set: - Loss: 1.2101 - Wer: 0.4939 - Cer: 0.2238",
+    "source": "file:README.md@sha256:567fe75064696896e413165377e9657ae81f568dcd850acaedfee8f8fb73cb44"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 94421697,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:126b10407ea6d6720d23ac90896f71ab70e456a47b57c819970f8351f1887418#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:126b10407ea6d6720d23ac90896f71ab70e456a47b57c819970f8351f1887418#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "pa"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Harveenchadha/vakyansh-wav2vec2-punjabi-pam-10"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-10-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2320893,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:126b10407ea6d6720d23ac90896f71ab70e456a47b57c819970f8351f1887418#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:126b10407ea6d6720d23ac90896f71ab70e456a47b57c819970f8351f1887418#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:126b10407ea6d6720d23ac90896f71ab70e456a47b57c819970f8351f1887418#num_attention_heads"
+    },
+    "vocab": {
+      "value": 65,
+      "source": "file:config.json@sha256:126b10407ea6d6720d23ac90896f71ab70e456a47b57c819970f8351f1887418#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Common Voice pa-IN",
+        "task": "Test WER With LM",
+        "value": 36.02,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Common Voice pa-IN",
+        "task": "Test CER With LM",
+        "value": 12.81,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "mozilla-foundation/common_voice_8_0"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Daniel9046/SoniTranslate",
+        "RO-Rtechs/Translate_Video_language",
+        "r3gm/SoniTranslate_translate_audio_of_a_video_content"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
