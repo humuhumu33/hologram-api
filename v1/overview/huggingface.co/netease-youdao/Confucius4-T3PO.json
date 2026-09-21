@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "netease-youdao/Confucius4-T3PO",
+  "revision": "446e5dcca080740f2c2dc9d06a91ed66a9920410",
+  "manifest": "blake3:998c276e7ac69f5f74943cdb7621fd15cfa1dca9058c289c755291915a9d4aa4",
+  "addressed": true,
+  "generated": "2026-09-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/netease-youdao/Confucius4-T3PO",
+    "readme": "file:README.md@sha256:8673d6ed205bc74a598a2b9bf43dd3a6fc7aa6bfe4737e1d6bd1a29f03264bfa",
+    "config": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786"
+  },
+  "summary": {
+    "value": "Confucius4-T3PO (simulTaneous Translation via pareTo Policy Optimization) is a 14-billion-parameter text-to-text simultaneous machine translation (SiMT) model developed by the NetEase Youdao AI team.",
+    "source": "file:README.md@sha256:8673d6ed205bc74a598a2b9bf43dd3a6fc7aa6bfe4737e1d6bd1a29f03264bfa"
+  },
+  "glance": {
+    "task": {
+      "value": "Translation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 14770033664,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 2",
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen2",
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen2.5-14B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 21,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 704,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152064,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:e1ba05e4e9a98b3931e62d9e4a885bc00c082203aebf4f4646bd1a8c99e77786#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

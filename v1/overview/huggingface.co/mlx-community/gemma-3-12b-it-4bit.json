@@ -1,0 +1,123 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mlx-community/gemma-3-12b-it-4bit",
+  "revision": "86cc6a8dedbc456dd0e4af01a9d09f396f77e558",
+  "manifest": "blake3:4247d967912db9043f05b287804ce22cecd5728cd89ff5c0247c44af341059fd",
+  "addressed": true,
+  "generated": "2026-09-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mlx-community/gemma-3-12b-it-4bit",
+    "readme": "file:README.md@sha256:e6cbf9a42bcd91e2ca8299ba0c509b3b4df5d565b59866ccca79c2f3cbe6a6a0",
+    "config": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed"
+  },
+  "summary": {
+    "value": "gemma-3-12b-it-4bit is a Gemma 3 model for vision language by mlx-community, released Mar 2025, under Gemma Terms.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Gemma 3",
+      "source": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3",
+      "source": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-3-12b-pt"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-03-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 6,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 419250,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3840,
+      "source": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed#num_key_value_heads"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:73ed96a3f1d596fcf3c07f17ed7e4358fd99be688c97da45f2464fd48dd069ed#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "codelion/mlx-model-explorer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

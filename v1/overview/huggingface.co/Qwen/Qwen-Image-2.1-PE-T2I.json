@@ -1,0 +1,143 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Qwen/Qwen-Image-2.1-PE-T2I",
+  "revision": "f3ed7985c788ad75b3ab7223e0c4c51e2a43545b",
+  "manifest": "blake3:920e8da9fff94b75d685be2cd91dd9c6e4b8f7397405562391c59d858d4fadd8",
+  "addressed": true,
+  "generated": "2026-09-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Qwen/Qwen-Image-2.1-PE-T2I",
+    "readme": "file:README.md@sha256:c7966c436441c895c765be0dd53584e514cd4aa086f890274c27f556db55e5ee",
+    "config": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb"
+  },
+  "summary": {
+    "value": "We are excited to open-source Qwen-Image-2.1, a unified text-to-image generation and image editing model in the Qwen family. With just 7B parameters in its visual generation component (32 Single-Stream DiT layers), Qwen-Image-2.1 balances generation quality, inference efficiency, and versatility.",
+    "source": "file:README.md@sha256:c7966c436441c895c765be0dd53584e514cd4aa086f890274c27f556db55e5ee"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to image",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:edf64f9b3295a6fe6b8deda075485d911a9f406b042ac53e829ce6784bdb01cb#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 9,
+      "top": [
+        "directedbykobyperez/Qwen-Image-2.1-Create",
+        "akhaliq/Qwen-Image-2.1",
+        "baka999/qwen-image-2.1"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

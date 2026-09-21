@@ -1,0 +1,212 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/gemma-2-2b-it",
+  "revision": "299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8",
+  "addressed": false,
+  "generated": "2026-09-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/gemma-2-2b-it",
+    "readme": "file:README.md@sha256:bb52a3f239a1e7b24907644c29e51ff3159fcff5488333d75b1056ddfdd74950"
+  },
+  "summary": {
+    "value": "Below we share some code snippets on how to get quickly started with running the model. First, install the Transformers library with:",
+    "source": "file:README.md@sha256:bb52a3f239a1e7b24907644c29e51ff3159fcff5488333d75b1056ddfdd74950"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2614341888,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 2",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "gemma2",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-2-2b"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-07-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-08-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1514,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 11821609,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "main",
+        "value": 16.8161434978,
+        "date": "2026-06-30T12:50:54.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/52/2c/522cfde2-2125-4826-94f6-64902618c0f8.json",
+        "notes": "GPQA chain-of-thought"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 23.7373737374,
+        "date": "2026-04-18",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/da/9c/da9c93a1-831c-4301-a3d7-5be0c52500b6.json",
+        "notes": "GPQA Diamond"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 516,
+        "Merged": 19,
+        "Quantized": 199,
+        "Fine tuned": 1097
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 516,
+        "merge": 19,
+        "quantized": 199,
+        "finetune": 1097
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2009.03300",
+        "title": "Measuring Massive Multitask Language Understanding",
+        "first_author": "Dan Hendrycks",
+        "authors": 7,
+        "year": "2020"
+      },
+      {
+        "id": "1905.07830",
+        "title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "first_author": "Rowan Zellers",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1911.11641",
+        "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "first_author": "Yonatan Bisk",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1904.09728",
+        "title": "SocialIQA: Commonsense Reasoning about Social Interactions",
+        "first_author": "Maarten Sap",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1905.10044",
+        "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "first_author": "Christopher Clark",
+        "authors": 6,
+        "year": "2019"
+      },
+      {
+        "id": "1907.10641",
+        "title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+        "first_author": "Keisuke Sakaguchi",
+        "authors": 4,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "Abdurrehman999/Posture_Ergonomics_Monitor1",
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

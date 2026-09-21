@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Mapika/decider-2b-vision",
+  "revision": "446c8c5e334e53ae3526a1c5384f93d5caee68cd",
+  "manifest": "blake3:1b5b0d764861f28281d7c68aa08e4abe41c9f48d2da9e44d927c4c431973863b",
+  "addressed": true,
+  "generated": "2026-09-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Mapika/decider-2b-vision",
+    "readme": "file:README.md@sha256:bbe5ec4870ede8b120b9daadbfceb1051f704d24905955e771acf912ea7c06a1",
+    "config": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb"
+  },
+  "summary": {
+    "value": "The vision variant of decider-2b (v5 language weights transplanted into the full Qwen3.5-2B vision-language model), fine-tuned so that an image (a photo, a diagram, a game frame) plus a text question with lettered options yields a calibrated probability over the options at a single answer slot. No generation.",
+    "source": "file:README.md@sha256:bbe5ec4870ede8b120b9daadbfceb1051f704d24905955e771acf912ea7c06a1"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2213241664,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-2B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 154,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:5f3f3c430ad91ade79382728d2cd78d369d32bc3d00fbe67aae8852dad272aeb#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "multimodalart/jev-reproductions-tracker",
+        "hugging-apps/decider-2b-vision-demo",
+        "zchjkhzkhc/decider-2b-bill-scan"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

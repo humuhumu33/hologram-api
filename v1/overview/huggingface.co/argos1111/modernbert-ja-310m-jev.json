@@ -1,0 +1,148 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "argos1111/modernbert-ja-310m-jev",
+  "revision": "07cda23579443e7a33c0f474114279fa032340d6",
+  "manifest": "blake3:da8484f93e078bc49a5d87f5a2b0f59eb70d56b6bee8762007338e2b985e984e",
+  "addressed": true,
+  "generated": "2026-09-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/argos1111/modernbert-ja-310m-jev",
+    "readme": "file:README.md@sha256:fc2902bdae110c0ce565721a53f3076c587c47a193fd75e28c25d0ae55bfe363",
+    "config": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64"
+  },
+  "summary": {
+    "value": "sbintuitions/modernbert-ja-310m を、 Jev Local の ModernBERT バックエンド用に fine-tune した cross-encoder です。 「質問＋状況（State）」と「候補」のペアを 1 本の系列として読み、1 つのスコアを出します。 候補ごとのスコアを softmax すると Choice（選択肢）・Score（段階評価）・Noul（真偽）の確率になります。",
+    "source": "file:README.md@sha256:fc2902bdae110c0ce565721a53f3076c587c47a193fd75e28c25d0ae55bfe363"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315203329,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-sa-4.0",
+        "name": "CC BY SA 4.0",
+        "commercial": "yes",
+        "note": "Attribution, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "sbintuitions/modernbert-ja-310m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 88,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 25,
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#num_attention_heads"
+    },
+    "vocab": {
+      "value": 102400,
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:22d564d0e22fb9f481da4b5a6a2602db35e40878596e4c69fdbaa4347c6b6a64#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "yahoojapan/JGLUE",
+      "osekilab/JCoLA",
+      "Language-Media-Lab/commonsense-moral-ja",
+      "AmazonScience/massive"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}
