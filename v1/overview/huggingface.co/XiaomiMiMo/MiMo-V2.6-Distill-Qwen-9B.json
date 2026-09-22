@@ -1,0 +1,197 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+  "revision": "2367e865d009c13ac81713a2878291d33ab28177",
+  "manifest": "blake3:b85b0304f2dbabe8364d05dd2cf9c749d825d2347f6c72fe8572ad73383225f0",
+  "addressed": true,
+  "generated": "2026-09-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+    "readme": "file:README.md@sha256:09f915ac8116db54ca78586cfdf9ddb14209cba1ca23561a202f38039eac95ca",
+    "config": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633"
+  },
+  "summary": {
+    "value": "MiMo-V2.6-Distill-Qwen-9B is a 9B agentic model developed by Xiaomi MiMo through supervised fine-tuning of Qwen3.5-9B on MiMo-generated data. It covers coding, general-purpose agent tasks, visual coding, and cybersecurity.",
+    "source": "file:README.md@sha256:09f915ac8116db54ca78586cfdf9ddb14209cba1ca23561a202f38039eac95ca"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 224,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:407c46388b8fa2ae9bf69fe27d40af236d373e86a6b48f5284c86df5cd183633#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 61.1,
+        "date": "2026-09-22",
+        "verified": false,
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+        "notes": "Agent harness/scaffold not disclosed"
+      },
+      {
+        "dataset": "ScaleAI/SWE-bench_Pro",
+        "task": "SWE_Bench_Pro",
+        "value": 44.6,
+        "date": "2026-09-22",
+        "verified": false,
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+        "notes": "Agent harness/scaffold not disclosed"
+      },
+      {
+        "dataset": "hkust-nlp/Toolathlon",
+        "task": "toolathlon_verified",
+        "value": 35.2,
+        "date": "2026-09-22",
+        "verified": false,
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B"
+      },
+      {
+        "dataset": "harborframework/terminal-bench-2.1",
+        "task": "terminalbench_2_1",
+        "value": 37.1,
+        "date": "2026-09-22",
+        "verified": false,
+        "source": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 22,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 22,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "AikidoSec/altar-1",
+  "revision": "5d591cd98958e4e7e429517887e80ca3bb7ce2c4",
+  "manifest": "blake3:ed80842ce2f9501d9458729450bd0b85ccb8be547243ec394431acba6c9dc3fd",
+  "addressed": true,
+  "generated": "2026-09-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/AikidoSec/altar-1",
+    "readme": "file:README.md@sha256:f934bd2cc46f4c5579c21e1421fec804eea6c8dfb8b43e920f40109e61a4896b",
+    "config": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f"
+  },
+  "summary": {
+    "value": "GLM-5.3 with 34% of its experts removed, at INT4 — 328 GB, built to serve on 4× H200 (Hopper) in vLLM. Altar-1 was calibrated on cybersecurity traces, coding, tool calling, reasoning, and English.",
+    "source": "file:README.md@sha256:f934bd2cc46f4c5579c21e1421fec804eea6c8dfb8b43e920f40109e61a4896b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 500825296352,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 168,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "GLM MoE Dsa",
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#model_type"
+    },
+    "architecture_id": {
+      "value": "glm_moe_dsa",
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 95%, BF16 5%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "cyankiwi/GLM-5.3-AWQ-INT4"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 102,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 484,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 78,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 154880,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#max_position_embeddings"
+    },
+    "experts": {
+      "value": 168,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:8723bf372e54a63cf57d8a0b8b1c5e3d590b8e2a84b1d762580b92609a76540f#quantization_config"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2510.13999",
+        "title": "REAP the Experts: Why Pruning Prevails for One-Shot MoE compression",
+        "first_author": "Mike Lasby",
+        "authors": 6,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

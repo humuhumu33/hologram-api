@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jaredpalmer/kev-4b",
+  "revision": "485ace8703592fcf405488b262449990824cfed1",
+  "manifest": "blake3:a1c1b241af5a96217e5e0f71eb5e135700fa4c974e8fad6d72e6d5e0fe866896",
+  "addressed": true,
+  "generated": "2026-09-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jaredpalmer/kev-4b",
+    "readme": "file:README.md@sha256:cd570e68d784769e5fb7b9906f982be77630d4128843ae70ac04cdd56faea056"
+  },
+  "summary": {
+    "value": "Kev-4B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
+    "source": "file:README.md@sha256:cd570e68d784769e5fb7b9906f982be77630d4128843ae70ac04cdd56faea056"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "peft",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Qwen/Qwen3.5-4B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 21,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 846,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
+        "task": "accuracy",
+        "value": 0.872,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
+        "task": "ECE, raw probabilities",
+        "value": 0.075,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
+        "task": "accuracy",
+        "value": 0.797,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
+        "task": "brier_score",
+        "value": 0.299,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 test (read once)",
+        "task": "accuracy",
+        "value": 0.837,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 test (read once)",
+        "task": "brier_score",
+        "value": 0.255,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "legacy-datasets/banking77",
+      "google/boolq",
+      "fancyzhx/ag_news",
+      "nyu-mll/multi_nli",
+      "SetFit/sst5",
+      "Yelp/yelp_review_full",
+      "CogComp/trec",
+      "fancyzhx/dbpedia_14",
+      "SetFit/amazon_reviews_multi_en",
+      "stanfordnlp/imdb"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "jaredpalmer/kev",
+        "hugging-apps/kev-4b-decision-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
