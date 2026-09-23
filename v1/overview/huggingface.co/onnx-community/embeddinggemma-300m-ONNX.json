@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "onnx-community/embeddinggemma-300m-ONNX",
+  "revision": "5090578d9565bb06545b4552f76e6bc2c93e4a66",
+  "manifest": "blake3:77805f9dc98954a33782de50cbd4a223f94a91a7d17b839f17f5e80a9656dd68",
+  "addressed": true,
+  "generated": "2026-09-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/onnx-community/embeddinggemma-300m-ONNX",
+    "readme": "file:README.md@sha256:fa2c412692dbd5b7ccba2cf6d316b3b58c2642c64e50fa4eee1fc75d95629f0e",
+    "config": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b"
+  },
+  "summary": {
+    "value": "EmbeddingGemma is a 300M parameter, state-of-the-art for its size, open embedding model from Google, built from Gemma 3 (with T5Gemma initialization) and the same research and technology used to create Gemini models.",
+    "source": "file:README.md@sha256:fa2c412692dbd5b7ccba2cf6d316b3b58c2642c64e50fa4eee1fc75d95629f0e"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Gemma 3 Text",
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3_text",
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers.js",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/embeddinggemma-300m"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-08-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-09-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 74,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1022136,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#hidden_size"
+    },
+    "heads": {
+      "value": 3,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:6e1f06404b7163e0325ed2ea3e6781cde50f4a50b31780a95ad0d30e8404d77b#rope_theta"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 20,
+      "top": [
+        "CODE7X/AIKnowledgeAssistantISHANMANISINGH",
+        "webml-community/semantic-galaxy",
+        "lamhieu/lightweight-embeddings"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

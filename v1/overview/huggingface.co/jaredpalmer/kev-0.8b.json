@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jaredpalmer/kev-0.8b",
+  "revision": "54f4f8777356cd5bbbb6c6919c657f26e6f2f6d8",
+  "manifest": "blake3:1878e254c713a3c10b14c31f0d4bddb68200896d6bc92ccbf6513fa15bae9d4e",
+  "addressed": true,
+  "generated": "2026-09-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jaredpalmer/kev-0.8b",
+    "readme": "file:README.md@sha256:35c559a75e4907f60f702fd05101b69db85ac4dd2e86ab3b9367d02bdb2df3a0"
+  },
+  "summary": {
+    "value": "Kev-0.8B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
+    "source": "file:README.md@sha256:35c559a75e4907f60f702fd05101b69db85ac4dd2e86ab3b9367d02bdb2df3a0"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "peft",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Qwen/Qwen3.5-0.8B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1159,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
+        "task": "accuracy",
+        "value": 0.825,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
+        "task": "ECE, raw probabilities",
+        "value": 0.11,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
+        "task": "accuracy",
+        "value": 0.652,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
+        "task": "brier_score",
+        "value": 0.499,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "legacy-datasets/banking77",
+      "google/boolq",
+      "fancyzhx/ag_news",
+      "nyu-mll/multi_nli",
+      "SetFit/sst5",
+      "Yelp/yelp_review_full",
+      "CogComp/trec",
+      "fancyzhx/dbpedia_14",
+      "SetFit/amazon_reviews_multi_en",
+      "stanfordnlp/imdb"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "jaredpalmer/kev",
+        "MahmoudGhraibeh/kev-decisions",
+        "sayshara/capability-decision-lab"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

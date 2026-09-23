@@ -1,0 +1,173 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openai/privacy-filter",
+  "revision": "7ffa9a043d54d1be65afb281eddf0ffbe629385b",
+  "manifest": "blake3:612922215a19a7e9d5de894bb92730758df3a5538bf9a0ee6cd44482cae8438f",
+  "addressed": true,
+  "generated": "2026-09-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openai/privacy-filter",
+    "readme": "file:README.md@sha256:48318ff48819858192dbb59f106dd709c3017e447bcc540807df66840a03a695",
+    "config": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1"
+  },
+  "summary": {
+    "value": "OpenAI Privacy Filter is a bidirectional token-classification model for personally identifiable information (PII) detection and masking in text. It is intended for high-throughput data sanitization workflows where teams need a model that they can run on-premises that is fast, context-aware, and tunable.",
+    "source": "file:README.md@sha256:48318ff48819858192dbb59f106dd709c3017e447bcc540807df66840a03a695"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1399486865,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Openai Privacy Filter",
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#model_type"
+    },
+    "architecture_id": {
+      "value": "openai_privacy_filter",
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-04-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1769,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1851003,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 8,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 640,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#hidden_size"
+    },
+    "heads": {
+      "value": 14,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 200064,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:b2b26a4a4a000639ad30b0c264adbefe365bdb567fbd7bb27303b8c438375bd1#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Quantized": 8,
+        "Fine tuned": 51
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "quantized": 8,
+        "finetune": 51
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 42,
+      "top": [
+        "embedl/hfviewer",
+        "openai/privacy-filter",
+        "webml-community/privacy-filter-webgpu"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

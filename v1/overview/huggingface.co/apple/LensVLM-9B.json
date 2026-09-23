@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "apple/LensVLM-9B",
+  "revision": "ac40d9667bd68df3ac9839d3f0dc7bdb93f5f92b",
+  "manifest": "blake3:45a019d15652d8f31f237a26c12a8ccd10b696e2d7a2020349e6cde15d1de326",
+  "addressed": true,
+  "generated": "2026-09-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/apple/LensVLM-9B",
+    "readme": "file:README.md@sha256:d8fdf357688c3564037d546b6e00266002a330caece25bc9f7b5fecabbd1837e",
+    "config": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af"
+  },
+  "summary": {
+    "value": "LensVLM is a 9B Vision Language Model (VLM) that scans compressed images of text, then selectively expands only the relevant pages to their uncompressed form via learned tools.",
+    "source": "file:README.md@sha256:d8fdf357688c3564037d546b6e00266002a330caece25bc9f7b5fecabbd1837e"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apple-amlr",
+        "name": "apple-amlr"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 87,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:017d47371f51fd9fb9e5c9fac53e818a9f21054f1575762136e83ff8a29400af#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2605.07019",
+        "title": "LensVLM: Selective Context Expansion for Compressed Visual Representation of Text",
+        "first_author": "Roy Xie",
+        "authors": 10,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/lensvlm-9b-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
