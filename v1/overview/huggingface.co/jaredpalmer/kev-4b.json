@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "jaredpalmer/kev-4b",
-  "revision": "485ace8703592fcf405488b262449990824cfed1",
-  "manifest": "blake3:a1c1b241af5a96217e5e0f71eb5e135700fa4c974e8fad6d72e6d5e0fe866896",
+  "revision": "1da696f7938f77c4cdf5471e92fd342baff41778",
+  "manifest": "blake3:d326f02146e1c25ff7d5421e57146f792bb7b3a43ca1fdb24110918ccb357d67",
   "addressed": true,
-  "generated": "2026-09-22",
+  "generated": "2026-09-24",
   "provenance": {
     "api": "https://huggingface.co/api/models/jaredpalmer/kev-4b",
-    "readme": "file:README.md@sha256:cd570e68d784769e5fb7b9906f982be77630d4128843ae70ac04cdd56faea056"
+    "readme": "file:README.md@sha256:41ec4b78c21311cf06f3fed23d578d21bf4423106c762b5e14cc39dea2dbc8ae"
   },
   "summary": {
     "value": "Kev-4B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
-    "source": "file:README.md@sha256:cd570e68d784769e5fb7b9906f982be77630d4128843ae70ac04cdd56faea056"
+    "source": "file:README.md@sha256:41ec4b78c21311cf06f3fed23d578d21bf4423106c762b5e14cc39dea2dbc8ae"
   },
   "glance": {
     "task": {
@@ -63,20 +63,34 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-21",
+      "value": "2026-09-24",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 21,
+      "value": 42,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 846,
+      "value": 4307,
       "source": "api:downloadsAllTime"
     }
   },
   "benchmarks": {
     "value": [
+      {
+        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives; read once)",
+        "task": "accuracy",
+        "value": 0.904,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives; read once)",
+        "task": "brier_score",
+        "value": 0.156,
+        "verified": false,
+        "source": "model card"
+      },
       {
         "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
         "task": "accuracy",
@@ -125,13 +139,13 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 1
+        "Quantized": 3
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 1
+        "quantized": 3
       },
       "source": "api:childrenModelCount"
     }
@@ -153,10 +167,11 @@
   },
   "spaces": {
     "value": {
-      "count": 2,
+      "count": 4,
       "top": [
         "jaredpalmer/kev",
-        "hugging-apps/kev-4b-decision-demo"
+        "jaredpalmer/kev-4b-decision-demo",
+        "MahmoudGhraibeh/kev-decisions"
       ]
     },
     "source": "api:spaces"

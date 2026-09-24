@@ -1,0 +1,132 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ATH-MaaS/Ovis-VL-Embedding-2B",
+  "revision": "ed955cc01f2d979202080f2ef2025a2a19c50b7e",
+  "manifest": "blake3:588d2281eba1a456dd009bdc9b71437df7679e0b29dcfc595bae2daf98f318eb",
+  "addressed": true,
+  "generated": "2026-09-24",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ATH-MaaS/Ovis-VL-Embedding-2B",
+    "readme": "file:README.md@sha256:45e0c96d4998dd6856bbaf45ccb7f7885f79ffbdcd83af8ee2cbe58fe615c046",
+    "config": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f"
+  },
+  "summary": {
+    "value": "Ovis-VL-Embedding-2B is a compact vision-language embedding model for text, images, visual documents, video, and interleaved multimodal inputs. It maps every supported input type into one coherent representation space, enabling cross-modal retrieval with a single 2B-scale encoder.",
+    "source": "file:README.md@sha256:45e0c96d4998dd6856bbaf45ccb7f7885f79ffbdcd83af8ee2cbe58fe615c046"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:531b2356f75f227ca353c24b979605b64a9f2e914301ccc266c81b0534bc409f#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.25165",
+        "title": "Ovis-Embedding: Pushing the Frontiers of Universal Omni-Modal Embeddings",
+        "first_author": "Embedding Team",
+        "authors": 1,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

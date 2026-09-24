@@ -1,0 +1,155 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/Nemotron-3-Diarization",
+  "revision": "f667ed73aee57d40cc39428eb768b4fd87a0a29e",
+  "manifest": "blake3:cc601f3cda5fbd5c1fe04fe16ba2ff7d1b932438d2f8541953d5bf8329a5531a",
+  "addressed": true,
+  "generated": "2026-09-24",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/Nemotron-3-Diarization",
+    "readme": "file:README.md@sha256:5fe88ca4020d2ee134f806a0a02c52c19855b73047bc2e6f25b9171e1abeebfd",
+    "config": "file:config.json@sha256:dd795ec07ffa09acf18d231aa3fa8642aa5c521760953754e02559a7413b6873"
+  },
+  "summary": {
+    "value": "Nemotron 3 Diarization is an open-weight speaker diarization model designed to determine \"who spoke when\" in real-world audio. It supports both streaming and offline inference and handles up to eight speakers.",
+    "source": "file:README.md@sha256:5fe88ca4020d2ee134f806a0a02c52c19855b73047bc2e6f25b9171e1abeebfd"
+  },
+  "glance": {
+    "task": {
+      "value": "voice-activity-detection",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 99226504,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron3 Diarization",
+      "source": "file:config.json@sha256:dd795ec07ffa09acf18d231aa3fa8642aa5c521760953754e02559a7413b6873#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron3_diarization",
+      "source": "file:config.json@sha256:dd795ec07ffa09acf18d231aa3fa8642aa5c521760953754e02559a7413b6873#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "nemo",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "openmdw-1.1",
+        "name": "OpenMDW 1.1",
+        "commercial": "yes",
+        "note": "Permissive, for models"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 194,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 27,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "audio_encoder": {
+      "value": "nemotron3_diarization_audio",
+      "source": "file:config.json@sha256:dd795ec07ffa09acf18d231aa3fa8642aa5c521760953754e02559a7413b6873#audio_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 9,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 9,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForAudioFrameClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2409.06656",
+        "title": "Sortformer: Seamless Integration of Speaker Diarization and ASR by Bridging Timestamps and Tokens",
+        "first_author": "Taejin Park",
+        "authors": 9,
+        "year": "2024"
+      },
+      {
+        "id": "2507.18446",
+        "title": "Streaming Sortformer: Speaker Cache-Based Online Speaker Diarization with Arrival-Time Ordering",
+        "first_author": "Ivan Medennikov",
+        "authors": 8,
+        "year": "2025"
+      },
+      {
+        "id": "2605.15442",
+        "title": "Mind the Gap: Impact of Synthetic Conversational Data on Multi-Talker ASR and Speaker Diarization",
+        "first_author": "Alexander Polok",
+        "authors": 6,
+        "year": "2026"
+      },
+      {
+        "id": "2507.09226",
+        "title": "Can We Really Repurpose Multi-Speaker ASR Corpus for Speaker Diarization?",
+        "first_author": "Shota Horiguchi",
+        "authors": 5,
+        "year": "2025"
+      },
+      {
+        "id": "2408.13106",
+        "title": "NEST: Self-supervised Fast Conformer as All-purpose Seasoning to Speech Processing Tasks",
+        "first_author": "He Huang",
+        "authors": 9,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "nvidia/nemotron-diarization",
+        "nvidia/NeMo-Speech-Streaming-Multispeaker-ASR",
+        "rizar001/nemotron-3-diarization"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

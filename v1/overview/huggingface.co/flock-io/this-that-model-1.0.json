@@ -1,0 +1,163 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "flock-io/this-that-model-1.0",
+  "revision": "3d927195c4f9845efe66c5715883a7a0f42b1239",
+  "manifest": "blake3:f0096d189e18ff821b20f42530feff63280fb0fd7db8800c0c5280dee41eaedf",
+  "addressed": true,
+  "generated": "2026-09-24",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/flock-io/this-that-model-1.0",
+    "readme": "file:README.md@sha256:abe872c49ef19bf551d6751abdd47a98a201e14ab18c74762f62376ab7699ac5",
+    "config": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52"
+  },
+  "summary": {
+    "value": "A typed decision model. One forward pass, no decoding loop, no parser, no retry.",
+    "source": "file:README.md@sha256:abe872c49ef19bf551d6751abdd47a98a201e14ab18c74762f62376ab7699ac5"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1881825088,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 395,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "limberc/this-that-spatial-bench"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/typed-decider-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

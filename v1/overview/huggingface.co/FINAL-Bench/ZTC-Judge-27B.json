@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "FINAL-Bench/ZTC-Judge-27B",
+  "revision": "756e423adb7a5a13aa9747c590663cf6f5cd2b8d",
+  "manifest": "blake3:a00a5166b4c0ea0dfb2eecb9f2de3efcd09d1726bfe4e665acc96175241c9472",
+  "addressed": true,
+  "generated": "2026-09-24",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/FINAL-Bench/ZTC-Judge-27B",
+    "readme": "file:README.md@sha256:f84726c8bc86a83ac75d3c3f27d076055dfffbbec373bf993ec9264677fa89bc",
+    "config": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c"
+  },
+  "summary": {
+    "value": "Zero-Token Confidence (ZTC) reads a model's own internal state to judge whether an answer is right — generating zero tokens. Darwin-397B-ZTC ships a self-readout probe; ZTC-Judge-27B judges other models' answers; the arcade shows the gate deciding execute or hold in real time.",
+    "source": "file:README.md@sha256:f84726c8bc86a83ac75d3c3f27d076055dfffbbec373bf993ec9264677fa89bc"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781427952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 39,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 279,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:f8d190c5b89c1521220f935d2567a587d6e291ed69066a45a106560b05a2174c#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "FINAL-Bench/Tetris-JEV-LAYA-ZTC",
+        "mayafree/typed-decision-leaderboard",
+        "FINAL-Bench/gate-tetris"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

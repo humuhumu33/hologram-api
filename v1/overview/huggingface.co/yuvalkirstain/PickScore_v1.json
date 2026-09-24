@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "yuvalkirstain/PickScore_v1",
+  "revision": "a4e4367c6dfa7288a00c550414478f865b875800",
+  "manifest": "blake3:ba15a1c37d61ed132182fc80fb340637a0e6ca063bbe8b11b1bfd70db758b262",
+  "addressed": true,
+  "generated": "2026-09-24",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/yuvalkirstain/PickScore_v1",
+    "readme": "file:README.md@sha256:f8c96727315b6912b69f515d8e694f8da238a7b83549425e52bfc4c1ba16f257",
+    "config": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce"
+  },
+  "summary": {
+    "value": "This model is a scoring function for images generated from text. It takes as input a prompt and a generated image and outputs a score.",
+    "source": "file:README.md@sha256:f8c96727315b6912b69f515d8e694f8da238a7b83549425e52bfc4c1ba16f257"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 986109774,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "CLIP",
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#model_type"
+    },
+    "architecture_id": {
+      "value": "clip",
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#model_type"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2023-04-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-05-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 53,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 15795640,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#num_attention_heads"
+    },
+    "vocab": {
+      "value": 49408,
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#vocab_size"
+    },
+    "context": {
+      "value": 77,
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "clip_vision_model",
+      "source": "file:config.json@sha256:bfa2a8243d3f82ad7c4746a0b62817e895f9f225926e6caecfc9dbb9171647ce#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForZeroShotImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2305.01569",
+        "title": "Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation",
+        "first_author": "Yuval Kirstain",
+        "authors": 6,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 22,
+      "top": [
+        "zheyangqin/VADER",
+        "sam-motamed/VOID",
+        "fffiloni/ReNO"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
