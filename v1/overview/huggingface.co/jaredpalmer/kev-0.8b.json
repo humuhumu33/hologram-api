@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "jaredpalmer/kev-0.8b",
-  "revision": "54f4f8777356cd5bbbb6c6919c657f26e6f2f6d8",
-  "manifest": "blake3:1878e254c713a3c10b14c31f0d4bddb68200896d6bc92ccbf6513fa15bae9d4e",
+  "revision": "9a45d25eb2ab761841196625383fa1dff0e56c1e",
+  "manifest": "blake3:2f0722798fe8d96bbf2c7d03f11a5d3e690d4ff198c651ca4bd35c4f880bc908",
   "addressed": true,
-  "generated": "2026-09-23",
+  "generated": "2026-09-25",
   "provenance": {
     "api": "https://huggingface.co/api/models/jaredpalmer/kev-0.8b",
-    "readme": "file:README.md@sha256:35c559a75e4907f60f702fd05101b69db85ac4dd2e86ab3b9367d02bdb2df3a0"
+    "readme": "file:README.md@sha256:5c0408069bf3882c758ccc10a8351a4fba6a66e5cdce0ae6b3c320f4a50c0afb"
   },
   "summary": {
     "value": "Kev-0.8B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
-    "source": "file:README.md@sha256:35c559a75e4907f60f702fd05101b69db85ac4dd2e86ab3b9367d02bdb2df3a0"
+    "source": "file:README.md@sha256:5c0408069bf3882c758ccc10a8351a4fba6a66e5cdce0ae6b3c320f4a50c0afb"
   },
   "glance": {
     "task": {
@@ -63,45 +63,101 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-21",
+      "value": "2026-09-24",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 13,
+      "value": 19,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1159,
+      "value": 4308,
       "source": "api:downloadsAllTime"
     }
   },
   "benchmarks": {
     "value": [
       {
-        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
+        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives; read once)",
         "task": "accuracy",
-        "value": 0.825,
+        "value": 0.851,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
-        "task": "ECE, raw probabilities",
-        "value": 0.11,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
-        "task": "accuracy",
-        "value": 0.652,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
+        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives; read once)",
         "task": "brier_score",
-        "value": 0.499,
+        "value": 0.244,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates; read once)",
+        "task": "accuracy",
+        "value": 0.665,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates; read once)",
+        "task": "brier_score",
+        "value": 0.46,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources; read once)",
+        "task": "accuracy",
+        "value": 0.637,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources; read once)",
+        "task": "brier_score",
+        "value": 0.442,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "decision-v7 development (1,264 questions; ten trained public sources + programmatic policy data)",
+        "task": "accuracy",
+        "value": 0.827,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "decision-v7 development (1,264 questions; ten trained public sources + programmatic policy data)",
+        "task": "ECE, as served",
+        "value": 0.033,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 development (656 questions; six never-trained sources + held-out policy structures)",
+        "task": "accuracy",
+        "value": 0.648,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 development (656 questions; six never-trained sources + held-out policy structures)",
+        "task": "brier_score",
+        "value": 0.43,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 test (read once)",
+        "task": "accuracy",
+        "value": 0.697,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 test (read once)",
+        "task": "brier_score",
+        "value": 0.397,
         "verified": false,
         "source": "model card"
       }
@@ -111,13 +167,13 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 1
+        "Quantized": 3
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 1
+        "quantized": 3
       },
       "source": "api:childrenModelCount"
     }
@@ -139,11 +195,11 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 6,
       "top": [
+        "multimodalart/jev-decision-index",
         "jaredpalmer/kev",
-        "MahmoudGhraibeh/kev-decisions",
-        "sayshara/capability-decision-lab"
+        "MahmoudGhraibeh/kev-decisions"
       ]
     },
     "source": "api:spaces"

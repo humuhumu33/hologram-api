@@ -1,0 +1,138 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "fastino/GLiNER2.5-Decide",
+  "revision": "7ee5da4c2415e32259bcdc0b1a7367c32ce8d6f6",
+  "manifest": "blake3:ce35a78c0f1ea5d5df8f99fb09d165aaf8f18c9c594de38e9e7c690ce31cee72",
+  "addressed": true,
+  "generated": "2026-09-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/fastino/GLiNER2.5-Decide",
+    "readme": "file:README.md@sha256:dfcbd7c87a74b78d0250acf166a47c8ece8a51ba22dc1e14a622c52c76f9b569",
+    "config": "file:config.json@sha256:e748e5b80575471c91b3f0dd00f513ba58242544fcb7e1236e0021e61abd7673"
+  },
+  "summary": {
+    "value": "The 340M English classification model in the GLiNER2.5 family. Pass any label set at call time: intent, routing, sentiment, priority, policy, and multi-label tags, in a single forward pass.",
+    "source": "file:README.md@sha256:dfcbd7c87a74b78d0250acf166a47c8ece8a51ba22dc1e14a622c52c76f9b569"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 486444053,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Extractor",
+      "source": "file:config.json@sha256:e748e5b80575471c91b3f0dd00f513ba58242544fcb7e1236e0021e61abd7673#model_type"
+    },
+    "architecture_id": {
+      "value": "extractor",
+      "source": "file:config.json@sha256:e748e5b80575471c91b3f0dd00f513ba58242544fcb7e1236e0021e61abd7673#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "gliner2",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "fastino/gliner2-large-v1"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 102,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2507.18546",
+        "title": "GLiNER2: An Efficient Multi-Task Information Extraction System with Schema-Driven Interface",
+        "first_author": "Urchade Zaratiana",
+        "authors": 5,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "hugging-apps/gliner25-decide-demo",
+        "fastino/gliner25-decide-playground",
+        "craigm26/duckbatch"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

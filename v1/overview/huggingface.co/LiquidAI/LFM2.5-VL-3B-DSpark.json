@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "LiquidAI/LFM2.5-VL-3B-DSpark",
+  "revision": "af77e9306a26e8625fde74d2a3051ab6d21bd955",
+  "manifest": "blake3:8d455091df2d800accd94a4b004e1a412e04244ff2277046541bee47725a4004",
+  "addressed": true,
+  "generated": "2026-09-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/LiquidAI/LFM2.5-VL-3B-DSpark",
+    "readme": "file:README.md@sha256:e2506a13bb6712d7b6354bfd957210b3b873f5e58bd6c365fae0cf5e4704b983",
+    "config": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df"
+  },
+  "summary": {
+    "value": "LFM2.5-VL-3B-DSpark is an experimental speculative-decoding draft model that brings DSpark to vision-language models. It allows LiquidAI/LFM2.5-VL-3B to decode substantially faster without changing its output, for a minimal increase in memory footprint.",
+    "source": "file:README.md@sha256:e2506a13bb6712d7b6354bfd957210b3b873f5e58bd6c365fae0cf5e4704b983"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 279468801,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sglang",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM2.5-VL-3B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 37,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 4,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:d27752772953bb64e70a6a1c5a28b23b03dfb76bb920a001184b87dbf61d98df#rope_theta"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2603.14989",
+        "title": "MMSpec: Benchmarking Speculative Decoding for Vision-Language Models",
+        "first_author": "Hui Shen",
+        "authors": 14,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

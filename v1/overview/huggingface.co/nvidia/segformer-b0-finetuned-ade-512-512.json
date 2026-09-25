@@ -1,0 +1,149 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/segformer-b0-finetuned-ade-512-512",
+  "revision": "489d5cd81a0b59fab9b7ea758d3548ebe99677da",
+  "manifest": "blake3:27e5bbae1888cd624a16243d490ed24b4d34c3e7cb22fde2a3563ecec56e4c94",
+  "addressed": true,
+  "generated": "2026-09-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/segformer-b0-finetuned-ade-512-512",
+    "readme": "file:README.md@sha256:a738172c9395b26f14e1981f6a95885085cc1239210446d752bf30ad6a9b8538",
+    "config": "file:config.json@sha256:209caa9091e4632f7c8883c11170cd08ad29af68b23c09590aa4a5befb1a2a7f"
+  },
+  "summary": {
+    "value": "SegFormer model fine-tuned on ADE20k at resolution 512x512. It was introduced in the paper SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers by Xie et al. and first released in this repository.",
+    "source": "file:README.md@sha256:a738172c9395b26f14e1981f6a95885085cc1239210446d752bf30ad6a9b8538"
+  },
+  "glance": {
+    "task": {
+      "value": "Image segmentation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "mask"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3753206,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Segformer",
+      "source": "file:config.json@sha256:209caa9091e4632f7c8883c11170cd08ad29af68b23c09590aa4a5befb1a2a7f#model_type"
+    },
+    "architecture_id": {
+      "value": "segformer",
+      "source": "file:config.json@sha256:209caa9091e4632f7c8883c11170cd08ad29af68b23c09590aa4a5befb1a2a7f#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-01-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 201,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9355893,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 2,
+        "Fine tuned": 53
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 2,
+        "finetune": 53
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "SegformerForSemanticSegmentation",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-segmentation"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2105.15203",
+        "title": "SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers",
+        "first_author": "Enze Xie",
+        "authors": 6,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "scene_parse_150"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "chroneus/stylematte",
+        "sofmi/semantic-segmentation-revamped",
+        "befozg/stylematte"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
