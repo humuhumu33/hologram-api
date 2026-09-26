@@ -1,0 +1,140 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ForgeWorks/ForgePlex-M1-6M",
+  "revision": "f45b761f4c450dde9da232e3a838fbfaaf47b2e1",
+  "manifest": "blake3:b2ae3e5cf59d1a21efe05e0a378f2172a49ed76dda926c4c89d49348f413773e",
+  "addressed": true,
+  "generated": "2026-09-26",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ForgeWorks/ForgePlex-M1-6M",
+    "readme": "file:README.md@sha256:e45714678a0ef920cc984e7e17d8d27b14806ed5539763e51ef4c5f248c39ae2",
+    "config": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29"
+  },
+  "summary": {
+    "value": "ForgePlex-M1-6M is a 6.58M-parameter Llama style language model from ForgeWorks the first model in the ForgePlex-M series. It was trained on 12.5B tokens of Fineweb-Edu.",
+    "source": "file:README.md@sha256:e45714678a0ef920cc984e7e17d8d27b14806ed5539763e51ef4c5f248c39ae2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 6584928,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 200,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 10,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 224,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#hidden_size"
+    },
+    "heads": {
+      "value": 7,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 4096,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:144db4fffc298de4b945499de3315e5bdde2c66c6d761aadb4a96e4869742c29#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "HuggingFaceFW/fineweb-edu"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

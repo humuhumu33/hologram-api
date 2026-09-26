@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "aimeigaoshou/agent-jev",
-  "revision": "e711cf4be8d1009458d2254f60df21738db8c6c0",
-  "manifest": "blake3:a693ffa13b84d29ea6415632c1c0de890a0d917ca76f603b0f39b1dc07fa92a0",
+  "revision": "0e2593e6e6c0eade0700712ac13c4389aa7654cc",
+  "manifest": "blake3:f183e033ddea9c2c6d236cdb42a7d986013d1043bce3f66273ffb878ea492430",
   "addressed": true,
-  "generated": "2026-09-23",
+  "generated": "2026-09-26",
   "provenance": {
     "api": "https://huggingface.co/api/models/aimeigaoshou/agent-jev",
-    "readme": "file:README.md@sha256:28fe991f83fd1eedc12e080b8d7db13d6b46c6aa6b7bbb6e630720078976f4e8",
+    "readme": "file:README.md@sha256:6d815be329e11626d89c9d41271010052b106fefd3b3d571f8dcd7b92552ce41",
     "config": "file:config.json@sha256:f5fbcc53c06e833cffa4af05b8ab34988be9429df265a17e562c920114852384"
   },
   "summary": {
-    "value": "This is the coding-completion checkpoint. It reads a task, the code, and the public checks, then returns a distribution over whether the work is actually done.",
-    "source": "file:README.md@sha256:28fe991f83fd1eedc12e080b8d7db13d6b46c6aa6b7bbb6e630720078976f4e8"
+    "value": "This file is the coding-completion checkpoint. It reads the task, the code, and the checks that were shown, then returns a probability that the work is actually finished.",
+    "source": "file:README.md@sha256:6d815be329e11626d89c9d41271010052b106fefd3b3d571f8dcd7b92552ce41"
   },
   "glance": {
     "parameters": {
@@ -39,10 +39,6 @@
       "value": "Safetensors",
       "source": "api:safetensors|gguf"
     },
-    "library": {
-      "value": "transformers",
-      "source": "api:library_name"
-    },
     "license": {
       "value": {
         "id": "apache-2.0",
@@ -59,20 +55,29 @@
       ],
       "source": "api:cardData.language"
     },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-0.6B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
     "released": {
       "value": "2026-09-21",
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-23",
+      "value": "2026-09-26",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 22,
+      "value": 31,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 32,
+      "value": 613,
       "source": "api:downloadsAllTime"
     }
   },
@@ -110,29 +115,38 @@
       "source": "file:config.json@sha256:f5fbcc53c06e833cffa4af05b8ab34988be9429df265a17e562c920114852384#tie_word_embeddings"
     }
   },
-  "family": {
-    "children": {
-      "value": {
-        "Quantized": 1
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Executed coding pairs",
+        "task": "Accuracy (%)",
+        "value": 57.8,
+        "verified": false,
+        "source": "model card"
       },
-      "source": "api:childrenModelCount"
-    },
-    "children_raw": {
-      "value": {
-        "quantized": 1
+      {
+        "dataset": "Executed coding pairs",
+        "task": "Recall (%)",
+        "value": 57.8,
+        "verified": false,
+        "source": "model card"
       },
-      "source": "api:childrenModelCount"
-    }
-  },
-  "run": {
-    "auto_model": {
-      "value": "AutoModel",
-      "source": "api:transformersInfo.auto_model"
-    },
-    "processor": {
-      "value": "AutoTokenizer",
-      "source": "api:transformersInfo.processor"
-    }
+      {
+        "dataset": "Executed coding pairs",
+        "task": "AUROC",
+        "value": 0.589,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Invoice processing",
+        "task": "Teacher agreement (%)",
+        "value": 87.2,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
   },
   "spaces": {
     "value": {

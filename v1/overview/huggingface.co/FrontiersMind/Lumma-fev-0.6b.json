@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "FrontiersMind/Lumma-fev-0.6b",
-  "revision": "23dc7bda64c2747c34dda78e7d8a1636c98530da",
-  "manifest": "blake3:5ed01d3227cebc16d72e40b7c5edb9c52190aa29bb8f178fbc91d7af0ec6eb58",
+  "revision": "9f12b0cc6cff04cf89b5a4ff4db743c3a89fdce9",
+  "manifest": "blake3:c983fbad0b89f4c6f60870d13ecdf30014f381d24c58c0a3269295c552b334db",
   "addressed": true,
-  "generated": "2026-09-24",
+  "generated": "2026-09-26",
   "provenance": {
     "api": "https://huggingface.co/api/models/FrontiersMind/Lumma-fev-0.6b",
-    "readme": "file:README.md@sha256:b939a195a07c9b9028d64070f26ae9139e9cc51793379359ee2d520f5d20da1b",
-    "config": "file:config.json@sha256:a1c7afbe099f7796044fbfc837937e45419768e48757723e15e889878a7ada3d"
+    "readme": "file:README.md@sha256:f56644c6a64a09c5c3598e47ea5f7d59bfe2b95cc387a2d6e8083d7ed9da786e",
+    "config": "file:config.json@sha256:153740c71e02b9b46611b0ae47d532c02432179dda60b7c48cc826d28e4d13c1"
   },
   "summary": {
-    "value": "Lumma-Fev-0.6B is a decision model. It takes one document (the state) and a set of typed questions, and returns a probability distribution for each question in one forward pass.",
-    "source": "file:README.md@sha256:b939a195a07c9b9028d64070f26ae9139e9cc51793379359ee2d520f5d20da1b"
+    "value": "Lumma-Fev-0.6B is a decision model. It reads one document (the state) and a set of typed questions, and returns a probability distribution for each question in a single forward pass.",
+    "source": "file:README.md@sha256:f56644c6a64a09c5c3598e47ea5f7d59bfe2b95cc387a2d6e8083d7ed9da786e"
   },
   "glance": {
     "task": {
@@ -32,31 +32,35 @@
       "source": "derived:pipeline_tag"
     },
     "parameters": {
-      "value": 650020268,
+      "value": 649282476,
       "source": "api:safetensors.total"
     },
     "architecture": {
       "value": "Fev",
-      "source": "file:config.json@sha256:a1c7afbe099f7796044fbfc837937e45419768e48757723e15e889878a7ada3d#model_type"
+      "source": "file:config.json@sha256:153740c71e02b9b46611b0ae47d532c02432179dda60b7c48cc826d28e4d13c1#model_type"
     },
     "architecture_id": {
       "value": "fev",
-      "source": "file:config.json@sha256:a1c7afbe099f7796044fbfc837937e45419768e48757723e15e889878a7ada3d#model_type"
+      "source": "file:config.json@sha256:153740c71e02b9b46611b0ae47d532c02432179dda60b7c48cc826d28e4d13c1#model_type"
     },
     "precision": {
-      "value": "BF16",
+      "value": "BF16 100%",
       "source": "api:safetensors.parameters"
     },
     "format": {
       "value": "Safetensors",
       "source": "api:safetensors|gguf"
     },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
     "license": {
       "value": {
-        "id": "mit",
-        "name": "MIT",
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
         "commercial": "yes",
-        "note": "Permissive"
+        "note": "Permissive, with patent grant"
       },
       "source": "api:cardData.license"
     },
@@ -80,22 +84,28 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-23",
+      "value": "2026-09-25",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 45,
+      "value": 55,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 363,
+      "value": 1003,
       "source": "api:downloadsAllTime"
     }
   },
   "architecture": {
     "hidden": {
       "value": 1440,
-      "source": "file:config.json@sha256:a1c7afbe099f7796044fbfc837937e45419768e48757723e15e889878a7ada3d#hidden_size"
+      "source": "file:config.json@sha256:153740c71e02b9b46611b0ae47d532c02432179dda60b7c48cc826d28e4d13c1#hidden_size"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
     }
   }
 }

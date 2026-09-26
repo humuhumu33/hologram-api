@@ -1,13 +1,14 @@
 {
   "format": "hologram.overview/v1",
   "name": "akhilaaa3/Jev-Omni",
-  "revision": "c050d51354147985d13286cf4acf90f562f2c631",
-  "manifest": "blake3:5ea90cd87ecce7d678c595d26d325656c404ab5c5898e0b5e97f3299b61cc655",
+  "revision": "5addda86ddee081a68fb067477ea100c221b8917",
+  "manifest": "blake3:234636547cfa31417cd32150c1d18673b3d2874f723158df67e1cffda0ed98c5",
   "addressed": true,
-  "generated": "2026-09-23",
+  "generated": "2026-09-26",
   "provenance": {
     "api": "https://huggingface.co/api/models/akhilaaa3/Jev-Omni",
-    "readme": "file:README.md@sha256:42995cac5590c55bc79bdedd427ccfb0d717ed1d183ddf402a7e8d6ea3dc0aa9"
+    "readme": "file:README.md@sha256:42995cac5590c55bc79bdedd427ccfb0d717ed1d183ddf402a7e8d6ea3dc0aa9",
+    "config": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5"
   },
   "summary": {
     "value": "A multimodal decision classifier for text, images, audio and video. Supply a question and options; receive a probability for each option—not a generated explanation.",
@@ -29,6 +30,30 @@
         "label"
       ],
       "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 11959730224,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 4 Unified",
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4_unified",
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
     },
     "library": {
       "value": "transformers",
@@ -57,11 +82,11 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-22",
+      "value": "2026-09-25",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 100,
+      "value": 240,
       "source": "api:likes"
     },
     "downloads_all_time": {
@@ -69,17 +94,74 @@
       "source": "api:downloadsAllTime"
     }
   },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3840,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "gemma4_unified_vision",
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#vision_config"
+    },
+    "audio_encoder": {
+      "value": "gemma4_unified_audio",
+      "source": "file:config.json@sha256:346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5#audio_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
   "run": {
     "auto_model": {
-      "value": "AutoModel",
+      "value": "AutoModelForMultimodalLM",
       "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
     }
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 2,
       "top": [
-        "akhilaaa3/jev-omni"
+        "akhilaaa3/jev-omni",
+        "simkeyur/omnisnap-engine"
       ]
     },
     "source": "api:spaces"
