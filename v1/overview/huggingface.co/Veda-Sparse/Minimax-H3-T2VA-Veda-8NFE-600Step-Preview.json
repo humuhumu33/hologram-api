@@ -1,0 +1,101 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview",
+  "revision": "75108df3748d723ccb4239f21d7cb62d5f4888a2",
+  "manifest": "blake3:7255e09cd3e01af7e588335e70e5f751304adc94a089b68d8d85ce08ffbe72c2",
+  "addressed": true,
+  "generated": "2026-09-27",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Veda-Sparse/Minimax-H3-T2VA-Veda-8NFE-600Step-Preview",
+    "readme": "file:README.md@sha256:046b837f34e4da1718e45ca117f4fdd9bc1bcfe7cd3e4d03111008d5c0fc469b",
+    "config": "file:config.json@sha256:be5ccfb73aef4fdbde1f889a46572af40139dfe336e8e206187fceaebb9e1f24"
+  },
+  "summary": {
+    "value": "The Veda tile-score predictor for MiniMax-H3 text-to-audio-video at eight denoising steps. It selects, per layer and per head, which 128-token key tiles each query tile attends to, so attention runs block-sparse at a 10% keep ratio instead of dense.",
+    "source": "file:README.md@sha256:046b837f34e4da1718e45ca117f4fdd9bc1bcfe7cd3e4d03111008d5c0fc469b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to video",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "video"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Veda Tile Score Predictor",
+      "source": "file:config.json@sha256:be5ccfb73aef4fdbde1f889a46572af40139dfe336e8e206187fceaebb9e1f24#model_type"
+    },
+    "architecture_id": {
+      "value": "veda_tile_score_predictor",
+      "source": "file:config.json@sha256:be5ccfb73aef4fdbde1f889a46572af40139dfe336e8e206187fceaebb9e1f24#model_type"
+    },
+    "library": {
+      "value": "minimax-h3",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "MiniMaxAI/MiniMax-H3"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 179,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 50,
+      "source": "file:config.json@sha256:be5ccfb73aef4fdbde1f889a46572af40139dfe336e8e206187fceaebb9e1f24#num_layers"
+    },
+    "heads": {
+      "value": 56,
+      "source": "file:config.json@sha256:be5ccfb73aef4fdbde1f889a46572af40139dfe336e8e206187fceaebb9e1f24#num_heads"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2605.30325",
+        "title": "Veda: Scalable Video Diffusion via Distilled Sparse Attention",
+        "first_author": "Shihao Han",
+        "authors": 6,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

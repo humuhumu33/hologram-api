@@ -1,0 +1,131 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mlx-community/MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit",
+  "revision": "f8642c8eff3159d84518ad005c95d940f359e538",
+  "manifest": "blake3:e38b1d4298a914822207e763355cf92751cfb86e7bb5c2c24850fd675272280d",
+  "addressed": true,
+  "generated": "2026-09-27",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mlx-community/MiMo-V2.6-Distill-Qwen-9B-OptiQ-4bit",
+    "readme": "file:README.md@sha256:bd281f6e9abde681d4912d99e44b68b9088161fe3f9a252b7d2c25fa0db3b41b",
+    "config": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294"
+  },
+  "summary": {
+    "value": "A 4-bit mixed-precision MLX quant of XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B, a distillation of the Qwen3.5 9B architecture. Sensitive layers are kept at 8-bit and robust ones at 4-bit, rather than crushing everything to a uniform width.",
+    "source": "file:README.md@sha256:bd281f6e9abde681d4912d99e44b68b9088161fe3f9a252b7d2c25fa0db3b41b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8953801728,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mlx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3136,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "4 bit",
+      "source": "file:config.json@sha256:6eca30db5b0d68c31eb699ba6b9da382d5e5c39915417df88aeb63acb3516294#quantization_config"
+    }
+  }
+}

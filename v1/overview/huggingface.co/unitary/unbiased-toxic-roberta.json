@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "unitary/unbiased-toxic-roberta",
+  "revision": "36295dd80b422dc49f40052021430dae76241adc",
+  "manifest": "blake3:2ed9ff8100e3a306df674d91a7ebc6cdba85e87709d6dcd3865774f4f7aaf966",
+  "addressed": true,
+  "generated": "2026-09-27",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/unitary/unbiased-toxic-roberta",
+    "readme": "file:README.md@sha256:5ab17611a1ae299c3ea19b0813ae6f16e571ed472bb08282303eb7386d31bc3f",
+    "config": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031"
+  },
+  "summary": {
+    "value": "⚠️ Disclaimer: The huggingface models currently give different results to the detoxify library (see issue here). For the most up to date models we recommend using the models from https://github.com/unitaryai/detoxify",
+    "source": "file:README.md@sha256:5ab17611a1ae299c3ea19b0813ae6f16e571ed472bb08282303eb7386d31bc3f"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-08-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 30,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3246099,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:ec3a47e5c4bd713a8ec190cc696cf4ae247959fbe95921199805d5704bda6031#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1703.04009",
+        "title": "Automated Hate Speech Detection and the Problem of Offensive Language",
+        "first_author": "Thomas Davidson",
+        "authors": 4,
+        "year": "2017"
+      },
+      {
+        "id": "1905.12516",
+        "title": "Racial Bias in Hate Speech and Abusive Language Detection Datasets",
+        "first_author": "Thomas Davidson",
+        "authors": 3,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 24,
+      "top": [
+        "kparkhade/nlp-genius",
+        "JatinAutonomousLabs/Research_AI_Assistant",
+        "LeahRocks/SafeSpaceAI"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

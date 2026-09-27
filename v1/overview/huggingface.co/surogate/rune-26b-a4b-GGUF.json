@@ -1,0 +1,166 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "surogate/rune-26b-a4b-GGUF",
+  "revision": "c6b360d47895bb77bdf3805a13ee5a5557ab1921",
+  "manifest": "blake3:bf5ad9f704538b7ad808a2b5dcccf3ebd0e7695622879d13048fc0f01f0f851d",
+  "addressed": true,
+  "generated": "2026-09-27",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/surogate/rune-26b-a4b-GGUF",
+    "readme": "file:README.md@sha256:9a554f14ac5d9181bf7ed29c44c62bfee1fb0e697f52aa071c8ccea8b5996984",
+    "config": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3"
+  },
+  "summary": {
+    "value": "Rune is a decision model for text and images with a context size of 262k: give it a state, which can be text, structured data or a picture with text, plus a question and a set of options, and it returns one option with a probability over all of them, in a single forward pass.",
+    "source": "file:README.md@sha256:9a554f14ac5d9181bf7ed29c44c62bfee1fb0e697f52aa071c8ccea8b5996984"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 25805936206,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#top_k_experts"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-4-26B-A4B-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1235,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2816,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#top_k_experts"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "multimodalart/jev-decision-index"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

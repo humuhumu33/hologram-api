@@ -1,20 +1,36 @@
 {
   "format": "hologram.overview/v1",
   "name": "cosmicoptima/computer-10",
-  "revision": "61350bff78dd4ed64e896a311dca0c76455088ec",
-  "manifest": "blake3:cd4410ffee89140cda4583437f56bfe3f045f70488d410149f4143a18e92040d",
+  "revision": "5acef04300dac1d0275e1037a5a21aa96728f7a8",
+  "manifest": "blake3:45c82a62ee738845096b398382fc40657e592e2e23735ebe54dca20663c5835c",
   "addressed": true,
-  "generated": "2026-09-24",
+  "generated": "2026-09-27",
   "provenance": {
     "api": "https://huggingface.co/api/models/cosmicoptima/computer-10",
-    "readme": "file:README.md@sha256:6c125b860787ef0351272ee76db226880c123386197d782ab2b20b8f196803e9",
+    "readme": "file:README.md@sha256:8e284850b9aea11c34f6a3af6d04a50b00f5763762a19b790ed7751e3f1f6d8d",
     "config": "file:config.json@sha256:93ee6ae14c1f8b77f6df278daf4f919fe5d04430a7fa1b6d68cdde87f0a2e803"
   },
   "summary": {
-    "value": "Computer-9 fine-tuned on its own conversations: 25,197 of its turns that passed a mechanical filter and a logic check, length- and surprisal-matched across bins, with only Model C's turns in the loss. Full-parameter, one epoch, lr 2e-6.",
-    "source": "file:README.md@sha256:6c125b860787ef0351272ee76db226880c123386197d782ab2b20b8f196803e9"
+    "value": "Computer is a 70B character model grown from the Llama 3.1 70B base model, with no assistant or instruction data anywhere in its line.",
+    "source": "file:README.md@sha256:8e284850b9aea11c34f6a3af6d04a50b00f5763762a19b790ed7751e3f1f6d8d"
   },
   "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
     "parameters": {
       "value": 70553706496,
       "source": "api:safetensors.total"
@@ -39,6 +55,10 @@
       "value": "Safetensors",
       "source": "api:safetensors|gguf"
     },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
     "license": {
       "value": {
         "id": "llama3.1",
@@ -47,6 +67,12 @@
         "note": "Conditions above 700M monthly users"
       },
       "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
     },
     "base": {
       "value": {
@@ -62,15 +88,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-22",
+      "value": "2026-09-26",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 28,
+      "value": 31,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 24,
+      "value": 680,
       "source": "api:downloadsAllTime"
     }
   },
@@ -122,6 +148,16 @@
         "finetune": 2
       },
       "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
     }
   },
   "spaces": {
