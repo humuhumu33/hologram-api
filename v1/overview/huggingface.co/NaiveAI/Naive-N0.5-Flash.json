@@ -1,0 +1,122 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "NaiveAI/Naive-N0.5-Flash",
+  "revision": "0235b3b5ff27422b1f57cdc2acddfaf643e08356",
+  "manifest": "blake3:06170fed871b3b904ccc73dba33d9edea4df31991875b0bf7d7614dfb035b4ea",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/NaiveAI/Naive-N0.5-Flash",
+    "readme": "file:README.md@sha256:6c07a461fd56436b789829073526969cf7b95e4109c6a0aa28b75cac72dae1d3",
+    "config": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27"
+  },
+  "summary": {
+    "value": "Naive-N0.5-Flash is an open-weight 309B MoE model with 15.5B active parameters, built for coding and AI R&D. It supports a native 1M-token context window through a hybrid of Sliding-Window Attention (SWA) and lightweight DeepSeek Sparse Attention (DSA), with no full-attention layers.",
+    "source": "file:README.md@sha256:6c07a461fd56436b789829073526969cf7b95e4109c6a0aa28b75cac72dae1d3"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Naive N05 Flash",
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#model_type"
+    },
+    "architecture_id": {
+      "value": "naive_n05_flash",
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#max_position_embeddings"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 76,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152576,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000000,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:cd73b4545be676224c297e0e5192c64717103ae127b12d97b4b891387b4e0e27#tie_word_embeddings"
+    }
+  }
+}

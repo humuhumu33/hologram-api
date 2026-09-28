@@ -1,0 +1,149 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lolzinventor/Qwen3.5-4B-Base-ZitGen-V1",
+  "revision": "2fc81376b418580a06908dd8b61cafeae30e572b",
+  "manifest": "blake3:67ece91ac1d06a4f9f723a0872cf8113b6b212dc2a2d2a913decb964de6fc161",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lolzinventor/Qwen3.5-4B-Base-ZitGen-V1",
+    "readme": "file:README.md@sha256:fc88795ab1b91b9d9681ece162c7f2d370f5b9136fd5dc325e0d3d1323b9c77e",
+    "config": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364"
+  },
+  "summary": {
+    "value": "An image captioning fine-tune of Qwen 3.5 4B optimized for Z-Image Turbo image generation (image-to-prompt).",
+    "source": "file:README.md@sha256:fc88795ab1b91b9d9681ece162c7f2d370f5b9136fd5dc325e0d3d1323b9c77e"
+  },
+  "glance": {
+    "task": {
+      "value": "Image to text",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4205751296,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.5-4B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13551,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:1fca79262e0ac89a35be321c60d6abe7cfd905977ee78a60de312c8fe58c2364#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "lolzinventor/ZitGen-Dataset-V1"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

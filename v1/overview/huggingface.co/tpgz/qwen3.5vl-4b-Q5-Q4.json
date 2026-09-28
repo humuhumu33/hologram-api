@@ -1,0 +1,89 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tpgz/qwen3.5vl-4b-Q5-Q4",
+  "revision": "647c231061f11601ad1ec91fdd9ccfa41937d878",
+  "manifest": "blake3:0f24c25bda12638df6bff0a1219ec401ff9b9e49606e297e232de6fad147c844",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tpgz/qwen3.5vl-4b-Q5-Q4",
+    "readme": "file:README.md@sha256:45742561a16135efe184cbb9386537a9453ae93c1fd91166b64bef4ba16357d7"
+  },
+  "summary": {
+    "value": "原 Q40 GGUF 中 24 个 ssmout.weight 为 Q5K，在当前 Qualcomm HTP 后端不能执行，会回退 CPU。当前正式制品从 BF16 源重新量化，将 24 个 ssmout.weight 制作为 Q41，并保留其他张量的目标量化分配。",
+    "source": "file:README.md@sha256:45742561a16135efe184cbb9386537a9453ae93c1fd91166b64bef4ba16357d7"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4205751296,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Qwen 35",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "qwen35",
+      "source": "api:config.model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "api:gguf.context_length"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "unsloth/Qwen3.5-4B-GGUF"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1790,
+      "source": "api:downloadsAllTime"
+    }
+  }
+}

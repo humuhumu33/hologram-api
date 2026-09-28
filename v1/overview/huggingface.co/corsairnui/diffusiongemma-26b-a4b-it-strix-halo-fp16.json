@@ -1,0 +1,172 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "corsairnui/diffusiongemma-26b-a4b-it-strix-halo-fp16",
+  "revision": "8778a35f8b3f66dc68fe306efdd342b5ae3a8f81",
+  "manifest": "blake3:f70f7bb8c27a2148a3608c7285039aa9ce7bcd0456d6874a3d40cbca68edd634",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/corsairnui/diffusiongemma-26b-a4b-it-strix-halo-fp16",
+    "readme": "file:README.md@sha256:aad98c0f8f581dbcd8e39eaf17b1fc4f5d9c18644271fca5a3fff33f7669c316"
+  },
+  "summary": {
+    "value": "This is an AMD Strix Halo focused build of google/diffusiongemma-26B-A4B-it. It includes locally converted GGUF files plus the benchmark settings that worked best on the tested Strix Halo machine.",
+    "source": "file:README.md@sha256:aad98c0f8f581dbcd8e39eaf17b1fc4f5d9c18644271fca5a3fff33f7669c316"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 25250987068,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Diffusion Gemma",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "diffusion-gemma",
+      "source": "api:config.model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "api:gguf.context_length"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/diffusiongemma-26B-A4B-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-06-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 9,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4097,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Matched FP16 baseline mean tok/s",
+        "value": 115.42064300242075,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Matched FP16 AOTriton mean tok/s",
+        "value": 134.64554066846702,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Matched FP16 AOTriton mean gain percent",
+        "value": 16.65637720077774,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Q5_K_M conversation 2048-token mean tok/s estimate",
+        "value": 124.49085304893482,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Q4_K_M conversation 2048-token mean tok/s estimate",
+        "value": 122.40066128094192,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Q5_K_M deterministic FP16-comparison gates passed",
+        "value": 5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Q5_K_M deterministic FP16-comparison gates total",
+        "value": 5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Q4_K_M deterministic FP16-comparison gates passed",
+        "value": 3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Local Strix Halo benchmark prompts",
+        "task": "Q4_K_M deterministic FP16-comparison gates total",
+        "value": 5,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "second-state/TinyLlama-1.1B-Chat-v1.0-GGUF",
+  "revision": "19c7cc6de4ed24f2950b17895f6c6f84564a514f",
+  "manifest": "blake3:f47bdc531c124dc00c848e08fcdff5ad88debf39d0612ff8e64e07b67a2df900",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/second-state/TinyLlama-1.1B-Chat-v1.0-GGUF",
+    "readme": "file:README.md@sha256:78ad974f11b0a6e48ab36eb33cf39c1d03d4a869af21b6dfd20d90ba655b291b",
+    "config": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9"
+  },
+  "summary": {
+    "value": "TinyLlama-1.1B-Chat-v1.0-GGUF is a 1.1B Llama model for text generation by second-state, released Jan 2024, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1100048384,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-01-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-07-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 30834,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:486bedda3a6988332e60d9638a09ca4b260d34ebcf1b19e22cf3b140b63d8fe9#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

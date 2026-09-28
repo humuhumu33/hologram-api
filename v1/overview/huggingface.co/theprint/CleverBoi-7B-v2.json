@@ -1,0 +1,158 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "theprint/CleverBoi-7B-v2",
+  "revision": "1a33977e823bcb2cc6dd1db9e384cb6c8d0c6adf",
+  "manifest": "blake3:dd21576454cd5413a9955d18fc63fd72b16532e6bbb0272685865671ef0e2582",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/theprint/CleverBoi-7B-v2",
+    "readme": "file:README.md@sha256:f1dec3253bd53f2483cf07b4c3cf0e590603d8a2af06278742a09e050b7f8714",
+    "config": "file:config.json@sha256:30cb87afc808145fa471edaa22506b2aed31bb0997e4ef6c5b6abf149ea6c237"
+  },
+  "summary": {
+    "value": "The CleverBoi series is based on models that have been fine tuned on a collection of data sets that emphasize logic, inference, math and coding, also known as the CleverBoi data set.",
+    "source": "file:README.md@sha256:f1dec3253bd53f2483cf07b4c3cf0e590603d8a2af06278742a09e050b7f8714"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7248023552,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Mistral",
+      "source": "file:config.json@sha256:30cb87afc808145fa471edaa22506b2aed31bb0997e4ef6c5b6abf149ea6c237#model_type"
+    },
+    "architecture_id": {
+      "value": "mistral",
+      "source": "file:config.json@sha256:30cb87afc808145fa471edaa22506b2aed31bb0997e4ef6c5b6abf149ea6c237#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "api:gguf.context_length"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "unsloth/mistral-7b-v0.3-bnb-4bit"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-09-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-09-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6814,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "IFEval (0-Shot)",
+        "task": "strict accuracy",
+        "value": 21.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "BBH (3-Shot)",
+        "task": "normalized accuracy",
+        "value": 23.44,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MATH Lvl 5 (4-Shot)",
+        "task": "exact match",
+        "value": 1.89,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GPQA (0-shot)",
+        "task": "acc_norm",
+        "value": 5.15,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MuSR (0-shot)",
+        "task": "acc_norm",
+        "value": 18.66,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MMLU-PRO (5-shot)",
+        "task": "accuracy",
+        "value": 18.98,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "datasets": {
+    "value": [
+      "theprint/CleverBoi-Abridged"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

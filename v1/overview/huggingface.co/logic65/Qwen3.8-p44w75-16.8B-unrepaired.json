@@ -1,0 +1,137 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "logic65/Qwen3.8-p44w75-16.8B-unrepaired",
+  "revision": "6564386a404fd80aea9e361dd18fa249907fb702",
+  "manifest": "blake3:d8239dca18827b4583f2d09493ff446eed88840ad0de37be4760c36eb2689dcc",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/logic65/Qwen3.8-p44w75-16.8B-unrepaired",
+    "readme": "file:README.md@sha256:27ff804916629a9fbf26fbcf9f8836984c574917b8a472bc1dcfec2415131be9",
+    "config": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c"
+  },
+  "summary": {
+    "value": "27B → 16.8B → 20.5 tok/s on two consumer 8GB GPUs. No fine-tuning, no distillation, no calibration training — pure measured surgery, built in one day on a Ryzen 2700X.",
+    "source": "file:README.md@sha256:27ff804916629a9fbf26fbcf9f8836984c574917b8a472bc1dcfec2415131be9"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 16344368864,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.8-27B-FP8"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8029,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 44,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:561c63951b79412c2865d4741e458093690604a677c4105443e4c9b97502498c#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  }
+}

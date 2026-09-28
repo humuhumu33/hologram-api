@@ -1,0 +1,95 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cfigueiroa/Qwen3.8-27B-RVN-vision-MTP",
+  "revision": "067cc9b83eece85895ba9641a13f99c3b634e9a4",
+  "manifest": "blake3:9c116a5e4070e00bc7cacf7fe53087c564a07b71e6bbeb78d54cbf6f2e284fec",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cfigueiroa/Qwen3.8-27B-RVN-vision-MTP",
+    "readme": "file:README.md@sha256:61f44846e07cc9d50db6217e18e97af3cb3c7c640244659f06cecab61f2c073a"
+  },
+  "summary": {
+    "value": "Cérebro RVN de 0bserverx (3 passadas ARA, o ficheiro RVN-Q4KM.gguf que eles publicaram sem NextN) + cabeça MTP/NextN enxertada (15/15 tensores blk.64., os mesmos que o Qwen original — a ARA não os altera) + projector de visão oficial.",
+    "source": "file:README.md@sha256:61f44846e07cc9d50db6217e18e97af3cb3c7c640244659f06cecab61f2c073a"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 460730096,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "CLIP",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "clip",
+      "source": "api:config.model_type"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "0bserverx/Qwen3.8-27B-Heretic-Abliterated-Uncensored-GGUF"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 820,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

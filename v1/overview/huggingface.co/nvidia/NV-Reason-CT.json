@@ -1,0 +1,190 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/NV-Reason-CT",
+  "revision": "386b93e034983f6c1fc841a43833a1b6a0cd9c13",
+  "manifest": "blake3:d29032dda58dce8bd7f792ad864def74ff7be7a4f08bbf39e815404ed7044887",
+  "addressed": true,
+  "generated": "2026-09-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/NV-Reason-CT",
+    "readme": "file:README.md@sha256:bbb6db3402c2d9b6d49aad08939caae3bd4acacb6089dd63e7cd691983875de8",
+    "config": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d"
+  },
+  "summary": {
+    "value": "NV-Reason-CT is a 3D vision-language model (VLM) for CT image analysis. It combines a native 3D vision encoder (3D ViT) with a language model and is designed for radiology report generation, general question answering, and multi-step reasoning across chest and abdominal CT volumes.",
+    "source": "file:README.md@sha256:bbb6db3402c2d9b6d49aad08939caae3bd4acacb6089dd63e7cd691983875de8"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 5322014624,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "openmdw-1.1",
+        "name": "OpenMDW 1.1",
+        "commercial": "yes",
+        "note": "Permissive, for models"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-25",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 20,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 392,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:c03e6071e42cc9f243c3f9bf66c5af9f749ee66c1ff9aa11fa6b5ed33045fe2d#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageTextToText",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.27511",
+        "title": "NV-Reason-CT: 3D Visual Language Model for CT Analysis",
+        "first_author": "Andriy Myronenko",
+        "authors": 16,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "ibrahimhamamci/CT-RATE",
+      "BodyMaps/CancerVerse"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "nvidia/nv-reason-ct"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
