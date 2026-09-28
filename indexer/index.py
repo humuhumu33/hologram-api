@@ -31,6 +31,7 @@ SELFTEST = ("hf-internal-testing/tiny-random-gpt2",
             "71034c5d8bde858ff824298bdedc65515b97d2b9",
             "blake3:84f5556b153b70dd120468684ff501e3bb4905a251ebff3b32e5bd8989eee76b")
 MAX_FILES = 2000
+QUANTISED_TASKS = {"text-generation", "image-text-to-text", "text2text-generation"}
 MAX_SMALL_BYTES = 64 << 20
 TOKEN = os.environ.get("HF_TOKEN")
 
@@ -156,6 +157,8 @@ def main():
     parser.add_argument("--limit", type=int, default=200, help="top N models by downloads")
     parser.add_argument("--trending", type=int, default=0, help="also index the top N trending models")
     parser.add_argument("--repos", nargs="*", help="index these repos (in addition to the top N)")
+    parser.add_argument("--quants", type=int, default=0,
+                        help="for every text model indexed, also index its N most downloaded GGUF quantisations")
     parser.add_argument("--selftest", action="store_true")
     parser.add_argument("--budget-minutes", type=float, default=300)
     args = parser.parse_args()
@@ -174,6 +177,34 @@ def main():
     for extra in args.repos or []:
         if extra not in candidates:
             candidates.append(extra)
+    if args.quants:
+        # The repos people actually pull with llama.cpp -hf, Ollama hf.co/ names and LM Studio are quantisations
+        # published by others (bartowski, unsloth, lmstudio-community ...), declared on the Hub as
+        # base_model:quantized:<base>. Index the most downloaded ones for every text model, so the same names work
+        # against the hub endpoint.
+        rows = {m["id"]: m for m in listing}
+        if args.trending:
+            rows.update({m["id"]: m for m in trending})
+        def task(c):
+            if c not in rows:                       # an --repos extra: the listings did not carry its task
+                try:
+                    rows[c] = fetch(f"{HUB}/api/models/{c}", want_json=True)
+                except (urllib.error.HTTPError, RuntimeError):
+                    rows[c] = {}
+            return rows[c].get("pipeline_tag")
+        text = [c for c in list(candidates) if task(c) in QUANTISED_TASKS]
+        found = 0
+        for base in text:
+            try:
+                quants = fetch(f"{HUB}/api/models?filter=base_model:quantized:{urllib.parse.quote(base, safe='/')}"
+                               f"&filter=gguf&sort=downloads&direction=-1&limit={args.quants}", want_json=True)
+            except (urllib.error.HTTPError, RuntimeError):
+                continue
+            for q in quants:
+                if not q.get("private") and q["id"] not in candidates:
+                    candidates.append(q["id"])
+                    found += 1
+        print(f"quantisations: {found} GGUF repos of {len(text)} text models")
 
     index_path = os.path.join(root, "index.json")
     index = {}

@@ -38,7 +38,7 @@ jobs:
       - name: Index
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python indexer/index.py --limit "${{ github.event.inputs.limit || '1000' }}" --trending "${{ github.event.inputs.trending || '500' }}" --budget-minutes 320
+        run: python indexer/index.py --limit "${{ github.event.inputs.limit || '1000' }}" --trending "${{ github.event.inputs.trending || '500' }}" --quants 3 --budget-minutes 320
 
       - name: Sources — other places the same bytes live (SHA-256 must match, no weight bytes)
         run: python indexer/sources.py --workers 12
