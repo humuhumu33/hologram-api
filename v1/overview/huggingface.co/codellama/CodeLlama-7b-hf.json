@@ -1,0 +1,189 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "codellama/CodeLlama-7b-hf",
+  "revision": "6c284d1468fe6c413cf56183e69b194dcfa27fe6",
+  "manifest": "blake3:329711e7d35746c5f36cd1778a41a2b9c17b9c96bd7bb1d2945f1b39febd5ffc",
+  "addressed": true,
+  "generated": "2026-09-29",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/codellama/CodeLlama-7b-hf",
+    "readme": "file:README.md@sha256:9cafb4e6d8a41f0655f4edde465f8f4eae47ceb8db2e4dce36bcdd16abab59f2",
+    "config": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e"
+  },
+  "summary": {
+    "value": "To use this model, please make sure to install transformers from main until the next version is released:",
+    "source": "file:README.md@sha256:9cafb4e6d8a41f0655f4edde465f8f4eae47ceb8db2e4dce36bcdd16abab59f2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 6738546688,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "llama2",
+        "name": "llama2"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "code"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2023-08-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-04-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 379,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4292169,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32016,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5840cc039d74e97065cce7b29c6518be1bc15312323d1ea33753f46a0c00682e#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 550,
+        "Merged": 6,
+        "Quantized": 41,
+        "Fine tuned": 79
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 550,
+        "merge": 6,
+        "quantized": 41,
+        "finetune": 79
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2308.12950",
+        "title": "Code Llama: Open Foundation Models for Code",
+        "first_author": "Baptiste Rozière",
+        "authors": 25,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "bigcode/bigcode-models-leaderboard",
+        "aquanode/gpu-vram-calculator",
+        "Vokturz/can-it-run-llm"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

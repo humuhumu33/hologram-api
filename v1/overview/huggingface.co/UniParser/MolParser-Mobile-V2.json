@@ -1,0 +1,129 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "UniParser/MolParser-Mobile-V2",
+  "revision": "11d114da4b66d1a98843f94dd4e9b208ea10645d",
+  "manifest": "blake3:f59771f8440140cfae7f45d3e5508f302dadde00d5864a36239409b4ce18225b",
+  "addressed": true,
+  "generated": "2026-09-29",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/UniParser/MolParser-Mobile-V2",
+    "readme": "file:README.md@sha256:f12d8323289a4c78a25f83a892d2ddf20aca7ee59728988bcb37a40e3408489d",
+    "config": "file:config.json@sha256:bb4b58b3b5e4e0db94af12569171b98737b0866c17aae2aad76ffe5f83e38e84"
+  },
+  "summary": {
+    "value": "MolParser-Mobile-V2 is a lightweight Optical Chemical Structure Recognition (OCSR) model that converts molecular structure images directly into E-SMILES 2.0.",
+    "source": "file:README.md@sha256:f12d8323289a4c78a25f83a892d2ddf20aca7ee59728988bcb37a40e3408489d"
+  },
+  "glance": {
+    "task": {
+      "value": "Image to text",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 10000256,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Molparser Vision Encoder Decoder",
+      "source": "file:config.json@sha256:bb4b58b3b5e4e0db94af12569171b98737b0866c17aae2aad76ffe5f83e38e84#model_type"
+    },
+    "architecture_id": {
+      "value": "molparser_vision_encoder_decoder",
+      "source": "file:config.json@sha256:bb4b58b3b5e4e0db94af12569171b98737b0866c17aae2aad76ffe5f83e38e84#model_type"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-sa-4.0",
+        "name": "CC BY NC SA 4.0",
+        "commercial": "no",
+        "note": "Non commercial, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 19,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 42,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "vocab": {
+      "value": 414,
+      "source": "file:config.json@sha256:bb4b58b3b5e4e0db94af12569171b98737b0866c17aae2aad76ffe5f83e38e84#vocab_size"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:bb4b58b3b5e4e0db94af12569171b98737b0866c17aae2aad76ffe5f83e38e84#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageTextToText",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.05807",
+        "title": "MolParser-Mobile: Ultrafast OCSR System for Large-Scale Chemical Literature Mining",
+        "first_author": "Xi Fang",
+        "authors": 6,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "UniParser/MolParser-7M",
+      "UniParser/MolGallery"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "hugging-apps/molparser-mobile-v2",
+        "AI4Industry/molparser-mobile"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

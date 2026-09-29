@@ -1,0 +1,149 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "IQuestLab/IQuest-Q1",
+  "revision": "5c21b0630586ef77d38cff1094b8cf37a417fcd8",
+  "manifest": "blake3:a125c27f97d47438edacce7ba9a2e1cca9b4c796948ceb55ebecbdd5695cd785",
+  "addressed": true,
+  "generated": "2026-09-29",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/IQuestLab/IQuest-Q1",
+    "readme": "file:README.md@sha256:6cfffdb876de081cbfe6022342c3850a1777094cc473053b3da2f891111755d1",
+    "config": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac"
+  },
+  "summary": {
+    "value": "IQuest-Q1 is a Mixture-of-Experts (MoE) model developed by IQuest for agentic coding, reasoning, and multi-step tool use. It comprises approximately 320B total parameters, with an estimated 15B parameters activated per token.",
+    "source": "file:README.md@sha256:6cfffdb876de081cbfe6022342c3850a1777094cc473053b3da2f891111755d1"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 320318615552,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Iquest Q1",
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#model_type"
+    },
+    "architecture_id": {
+      "value": "iquest_q1",
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#model_type"
+    },
+    "context": {
+      "value": 524288,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 82,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 130,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 88,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3072,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#hidden_size"
+    },
+    "heads": {
+      "value": 48,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 160000,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#vocab_size"
+    },
+    "context": {
+      "value": 524288,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:b698ef6d25615a24a30c34a26692940bdf60fd40a5f23d343abc8d935df47cac#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

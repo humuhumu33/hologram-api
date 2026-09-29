@@ -1,0 +1,126 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jaredpalmer/kev-27b",
+  "revision": "01b81998019be550f0ae858727df49bac9511195",
+  "manifest": "blake3:d611f75e68d888d065459bad7745422c2008f73188c6867537a36d44505f03a0",
+  "addressed": true,
+  "generated": "2026-09-29",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jaredpalmer/kev-27b",
+    "readme": "file:README.md@sha256:bc70fafe8d8106278d31d3ce081e376b4532ff6113ee1ef34e2b9039de99b994"
+  },
+  "summary": {
+    "value": "Kev-27B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
+    "source": "file:README.md@sha256:bc70fafe8d8106278d31d3ce081e376b4532ff6113ee1ef34e2b9039de99b994"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "peft",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 386,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "transfer-v4 test (read once)",
+        "task": "accuracy",
+        "value": 0.896,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-v4 test (read once)",
+        "task": "brier_score",
+        "value": 0.16,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "transfer-r6 test (1,260 questions, read once)",
+        "task": "accuracy",
+        "value": 0.863,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "decision-v7 test (read once)",
+        "task": "accuracy",
+        "value": 0.87,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "datasets": {
+    "value": [
+      "legacy-datasets/banking77",
+      "google/boolq",
+      "fancyzhx/ag_news",
+      "nyu-mll/multi_nli",
+      "SetFit/sst5",
+      "Yelp/yelp_review_full",
+      "CogComp/trec",
+      "fancyzhx/dbpedia_14",
+      "SetFit/amazon_reviews_multi_en",
+      "stanfordnlp/imdb"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

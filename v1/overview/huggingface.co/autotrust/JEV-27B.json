@@ -1,0 +1,234 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autotrust/JEV-27B",
+  "revision": "9b1f6fda6c26b2f7191d437eb34a263911dd1575",
+  "manifest": "blake3:ad31f759e37ed1419d25efd358dd2af2687266ebd8989237267336cc7b6af535",
+  "addressed": true,
+  "generated": "2026-09-29",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autotrust/JEV-27B",
+    "readme": "file:README.md@sha256:9f62113c96738d7d9238e3ceba5f972fd070c5ba50884f2a196a31eaa66ce52d",
+    "config": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017"
+  },
+  "summary": {
+    "value": "Fast, calibrated System 1 decisions that are indistinguishable from the closed TypeSafe Jev 1.13 by KL, and deliberate System 2 generation and reasoning from an untouched Qwen3.8-27B — one set of weights, one vLLM engine, routed per request.",
+    "source": "file:README.md@sha256:9f62113c96738d7d9238e3ceba5f972fd070c5ba50884f2a196a31eaa66ce52d"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 26895998464,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 205,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5a1c114fa93e7c2cdc262732ad831f786022fef86041f0c551576f9c3faff017#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "jev-distill-corpus-v3 · test_set_30k",
+        "task": "mean KL(target ‖ model), all test rows (25,376 of 29,955 targets are TypeSafe Jev 1.13 distributions)",
+        "value": 0.0186,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "jev-distill-corpus-v3 · test_set_30k",
+        "task": "noul AUROC",
+        "value": 0.996,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "jev-distill-corpus-v3 · test_set_30k",
+        "task": "noul Brier (vs. target probability, all rows)",
+        "value": 0.0013,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "jev-distill-corpus-v3 · test_set_30k",
+        "task": "score expected-value MAE (0–5 scale)",
+        "value": 0.098,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "jev-distill-corpus-v3 · test_set_30k",
+        "task": "ECE (15 bins, after temperature)",
+        "value": 0.0009,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "jev-distill-corpus-v3 · test_set_30k",
+        "task": "choice top-1 agreement (all rows)",
+        "value": 0.903,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "jev-distill-corpus-v3 · test_set_30k",
+        "task": "choice top-1 agreement (decisive-target rows, top-2 gap ≥ 0.1)",
+        "value": 0.958,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HumanEval",
+        "task": "pass@1 (greedy, completion-style prompt)",
+        "value": 0.78,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "SargeDev/jev-distill-corpus-v3"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "autotrust/jev-9b-decision-demo",
+        "autotrust/JEV-27B-Demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

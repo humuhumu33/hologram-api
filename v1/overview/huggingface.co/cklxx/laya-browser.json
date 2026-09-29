@@ -1,19 +1,60 @@
 {
   "format": "hologram.overview/v1",
   "name": "cklxx/laya-browser",
-  "revision": "ac29aefbc3a9b541f270e122e2e36d7e7081adaa",
-  "manifest": "blake3:3d5d7a4aa10128b0925a6dd3671e583d738dcd0ce0ed1dd54bdb0d2e1d2a0c16",
+  "revision": "645cf366a2ae35f1086e8c20eff48f909bb49206",
+  "manifest": "blake3:0a66c56a3ff708e62304486182136fe437604bf6adccbd2e0f0bf267d9df6061",
   "addressed": true,
-  "generated": "2026-09-27",
+  "generated": "2026-09-29",
   "provenance": {
     "api": "https://huggingface.co/api/models/cklxx/laya-browser",
-    "readme": "file:README.md@sha256:8e0476b04da783dc65a6c957d540a78c5ad8d797739730b914e1199c51342f0b"
+    "readme": "file:README.md@sha256:09dd7dc3675472a53ee8ab2996ae28ba7831e384503d889947b9811959f540e2",
+    "config": "file:config.json@sha256:5f2dc280e9107ab24e9dddb7471e126d36946cc9873f284284a4af8fd025e4b8"
   },
   "summary": {
     "value": "laya (convaiinnovations/laya) is a non-autoregressive \"System 1\" decision model: one bidirectional encoder pass answers several typed questions (choice / score / noul) with calibrated probabilities, no text generation.",
-    "source": "file:README.md@sha256:8e0476b04da783dc65a6c957d540a78c5ad8d797739730b914e1199c51342f0b"
+    "source": "file:README.md@sha256:09dd7dc3675472a53ee8ab2996ae28ba7831e384503d889947b9811959f540e2"
   },
   "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 321908998,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Laya Browser",
+      "source": "file:config.json@sha256:5f2dc280e9107ab24e9dddb7471e126d36946cc9873f284284a4af8fd025e4b8#model_type"
+    },
+    "architecture_id": {
+      "value": "laya_browser",
+      "source": "file:config.json@sha256:5f2dc280e9107ab24e9dddb7471e126d36946cc9873f284284a4af8fd025e4b8#model_type"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
     "license": {
       "value": {
         "id": "apache-2.0",
@@ -44,11 +85,11 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-26",
+      "value": "2026-09-29",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 16,
+      "value": 23,
       "source": "api:likes"
     },
     "downloads_all_time": {
@@ -70,10 +111,17 @@
       "source": "api:childrenModelCount"
     }
   },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
   "datasets": {
     "value": [
       "osunlp/Mind2Web",
-      "stanfordnlp/nnetnav-live"
+      "stanfordnlp/nnetnav-live",
+      "webagentlab/webchain"
     ],
     "source": "api:cardData.datasets"
   }
