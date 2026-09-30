@@ -1,0 +1,155 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Mapika/decider-4b",
+  "revision": "eb5fbdfc9448473ec25e399882912863afbdb70e",
+  "addressed": false,
+  "generated": "2026-09-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Mapika/decider-4b",
+    "readme": "file:README.md@sha256:3a4a82d78e0adcfb84bc7a9691f8a79b0f54a5c1efd8379621a9dbf1d6de980b",
+    "config": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724"
+  },
+  "summary": {
+    "value": "A language model that does not generate text. It reads a state and one or more typed questions, each with an explicit option list, and returns a probability distribution over the options for every question from one forward pass.",
+    "source": "file:README.md@sha256:3a4a82d78e0adcfb84bc7a9691f8a79b0f54a5c1efd8379621a9dbf1d6de980b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4205751296,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-4B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 18425,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:63f47812d0f11118e4d252d2b3ad488707eb9287a11589f4fd382a1d31182724#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "uulonger/jev-decision-index",
+        "dkappe/decider4b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

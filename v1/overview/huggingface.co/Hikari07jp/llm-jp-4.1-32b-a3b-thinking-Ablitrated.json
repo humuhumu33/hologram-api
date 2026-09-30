@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Hikari07jp/llm-jp-4.1-32b-a3b-thinking-Ablitrated",
+  "revision": "db2c33359764bf26cf07446c56d61e601156abab",
+  "manifest": "blake3:39ea31d726c0ff0a112f763540c6cb112e40906bf46b430bb10d03b3731e79e0",
+  "addressed": true,
+  "generated": "2026-09-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Hikari07jp/llm-jp-4.1-32b-a3b-thinking-Ablitrated",
+    "readme": "file:README.md@sha256:3a88cd6e76164b2bae9f7784bddfa52eedd498743bcf033313df9df68f29032d",
+    "config": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c"
+  },
+  "summary": {
+    "value": "skipspecialtokens=False で返り値に analysis ... final ... が入るので、 final の部分だけを UI に渡すのが基本です（後述の Harmony プロトコル注意点参照）。",
+    "source": "file:README.md@sha256:3a88cd6e76164b2bae9f7784bddfa52eedd498743bcf033313df9df68f29032d"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 32139028992,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 3 MoE",
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_moe",
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#model_type"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ja",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "llm-jp/llm-jp-4.1-32b-a3b-thinking"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 213,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 196608,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#vocab_size"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 500000,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:a5d9e5f3b672928df4011b3476edfc2d40d740d0b63bde480f3761e1be8e518c#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

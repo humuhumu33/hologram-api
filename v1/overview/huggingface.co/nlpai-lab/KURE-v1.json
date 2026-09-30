@@ -1,0 +1,160 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nlpai-lab/KURE-v1",
+  "revision": "8b418a58414668e75532ed045c22d9ca018ae2b2",
+  "manifest": "blake3:ba16ac2b60ba261a895aa0c3eca6ed12a4a57699861338e7f3e81da004b56943",
+  "addressed": true,
+  "generated": "2026-09-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nlpai-lab/KURE-v1",
+    "readme": "file:README.md@sha256:31eee15f3a8169b6749a4ac61c56e63ad5a6d9dbb6c96d4c6fae3c0522c61d6d",
+    "config": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d"
+  },
+  "summary": {
+    "value": "Introducing Korea University Retrieval Embedding model, KURE-v1 It has shown remarkable performance in Korean text retrieval, speficially overwhelming most multilingual embedding models. To our knowledge, It is one of the best publicly opened Korean retrieval models.",
+    "source": "file:README.md@sha256:31eee15f3a8169b6749a4ac61c56e63ad5a6d9dbb6c96d4c6fae3c0522c61d6d"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 567754752,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#model_type"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "BAAI/bge-m3"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-12-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 94,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2594312,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#vocab_size"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:852d42e020c7f989c2acaf30fc683b7f768e8c6d1ab17166e835442162bd825d#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 5,
+        "Fine tuned": 15
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 5,
+        "finetune": 15
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 18,
+      "top": [
+        "mteb/leaderboard",
+        "dasomaru/docker-api",
+        "GUNK1NG/medical_law_AI"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

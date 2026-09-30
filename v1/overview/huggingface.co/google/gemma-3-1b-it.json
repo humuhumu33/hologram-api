@@ -1,0 +1,212 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/gemma-3-1b-it",
+  "revision": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+  "addressed": false,
+  "generated": "2026-09-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/gemma-3-1b-it",
+    "readme": "file:README.md@sha256:60be259533fe3acba21d109a51673815a4c29aefdb7769862695086fcedbeb7a"
+  },
+  "summary": {
+    "value": "Below, there are some code snippets on how to get quickly started with running the model. First, install the Transformers library.",
+    "source": "file:README.md@sha256:60be259533fe3acba21d109a51673815a4c29aefdb7769862695086fcedbeb7a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 999885952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 3 Text",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3_text",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-3-1b-pt"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-03-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-04-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1198,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 52540583,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "main",
+        "value": 16.8161434978,
+        "date": "2026-06-30T12:51:10.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/61/b3/61b3794c-d32c-46eb-9b9e-3895a95fb6e2.json",
+        "notes": "GPQA chain-of-thought"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 24.7474747475,
+        "date": "2026-04-16",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/56/ca/56cad6e2-2b5e-4782-b947-48e4e7e8c78b.json",
+        "notes": "GPQA Diamond"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 205,
+        "Merged": 9,
+        "Quantized": 475,
+        "Fine tuned": 553
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 205,
+        "merge": 9,
+        "quantized": 475,
+        "finetune": 553
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1905.07830",
+        "title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "first_author": "Rowan Zellers",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1905.10044",
+        "title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "first_author": "Christopher Clark",
+        "authors": 6,
+        "year": "2019"
+      },
+      {
+        "id": "1911.11641",
+        "title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "first_author": "Yonatan Bisk",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1904.09728",
+        "title": "SocialIQA: Commonsense Reasoning about Social Interactions",
+        "first_author": "Maarten Sap",
+        "authors": 5,
+        "year": "2019"
+      },
+      {
+        "id": "1705.03551",
+        "title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "first_author": "Mandar Joshi",
+        "authors": 4,
+        "year": "2017"
+      },
+      {
+        "id": "1911.01547",
+        "title": "On the Measure of Intelligence",
+        "first_author": "François Chollet",
+        "authors": 1,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "aquanode/gpu-vram-calculator",
+        "EuroEval/euroeval_leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

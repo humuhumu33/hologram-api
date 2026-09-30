@@ -1,0 +1,189 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepvk/USER-bge-m3",
+  "revision": "0cc6cfe48e260fb0474c753087a69369e88709ae",
+  "manifest": "blake3:0188044e75bc15fd77a85d0732e037f2606675368d5043a23db332b4aa1f2897",
+  "addressed": true,
+  "generated": "2026-09-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepvk/USER-bge-m3",
+    "readme": "file:README.md@sha256:eb176c83586e764e1c71a7d22e248fea424669b3d59aafa81c938e06af1ac534",
+    "config": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f"
+  },
+  "summary": {
+    "value": "Universal Sentence Encoder for Russian (USER) is a sentence-transformer model for extracting embeddings exclusively for Russian language. It maps sentences & paragraphs to a 1024 dimensional dense vector space and can be used for tasks like clustering or semantic search.",
+    "source": "file:README.md@sha256:eb176c83586e764e1c71a7d22e248fea424669b3d59aafa81c938e06af1ac534"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 359026688,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#model_type"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ru"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-07-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-07-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 86,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6070187,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 46166,
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#vocab_size"
+    },
+    "context": {
+      "value": 8194,
+      "source": "file:config.json@sha256:f3552b70cacff0f14829896d9021372a7667676f900111d1e68664e021ab3f7f#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 8,
+        "Fine tuned": 17
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 8,
+        "finetune": 17
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2311.13534",
+        "title": "LM-Cocktail: Resilient Tuning of Language Models via Model Merging",
+        "first_author": "Shitao Xiao",
+        "authors": 4,
+        "year": "2023"
+      },
+      {
+        "id": "2309.12871",
+        "title": "AnglE-optimized Text Embeddings",
+        "first_author": "Xianming Li",
+        "authors": 2,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "deepvk/ru-HNP",
+      "deepvk/ru-WANLI",
+      "Shitao/bge-m3-data",
+      "RussianNLP/russian_super_glue",
+      "reciTAL/mlsum",
+      "Milana/russian_keywords",
+      "IlyaGusev/gazeta",
+      "d0rj/gsm8k-ru",
+      "bragovo/dsum_ru",
+      "CarlBrendt/Summ_Dialog_News"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 19,
+      "top": [
+        "mteb/leaderboard",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "kaengreg/rusBEIR"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

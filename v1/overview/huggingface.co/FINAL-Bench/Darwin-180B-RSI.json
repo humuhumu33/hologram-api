@@ -1,17 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "FINAL-Bench/Darwin-180B-RSI",
-  "revision": "6f7beb6ceecdc22e98fe202af78f0098f4cf41ea",
-  "addressed": false,
-  "generated": "2026-09-28",
+  "revision": "bc3c7b0410b40c085b78084e13f01c12df31087b",
+  "manifest": "blake3:c7bef1d6cd96dcd9d99beea41be93951e04866fcafe85bda5727ce63bfe9a8e0",
+  "addressed": true,
+  "generated": "2026-09-30",
   "provenance": {
     "api": "https://huggingface.co/api/models/FINAL-Bench/Darwin-180B-RSI",
-    "readme": "file:README.md@sha256:6dd3e58ddd5774e1b68beb4dff9f16bf676d42ee22dd80806d5f78f75deb307c",
+    "readme": "file:README.md@sha256:b11dbb2110db2f3e6a03559b04c570143f22c9e623606f3e7d8430b309ddea10",
     "config": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b"
   },
   "summary": {
     "value": "reasoning · MoE 512 experts · 262K long context · image + text · Korean + English · self-improvement · ZTC",
-    "source": "file:README.md@sha256:6dd3e58ddd5774e1b68beb4dff9f16bf676d42ee22dd80806d5f78f75deb307c"
+    "source": "file:README.md@sha256:b11dbb2110db2f3e6a03559b04c570143f22c9e623606f3e7d8430b309ddea10"
   },
   "glance": {
     "task": {
@@ -89,15 +90,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-28",
+      "value": "2026-09-30",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 41,
+      "value": 92,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 70,
+      "value": 353,
       "source": "api:downloadsAllTime"
     }
   },
@@ -171,6 +172,24 @@
         "verified": false,
         "source": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
         "notes": "HMMT February 2026, all 33 problems; majority vote over 16 samples (maj@16) = 100.0; mean accuracy over 16 samples = 96.59; temperature=1.0, top_p=0.95, top_k=20; thinking budget 131,072 tokens; bf16"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "mcq_4_choices",
+        "value": 68.94,
+        "date": "2026-09-29",
+        "verified": false,
+        "source": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+        "notes": "LEXam mcq_4_choices, all 1,655 items; majority vote over 4 samples (temperature=1.0, top_p=0.95, top_k=20); thinking budget 32,768 tokens; bf16. Single-sample 60.54, mean of 4 samples 61.42"
+      },
+      {
+        "dataset": "joelniklaus/LEXam-hard",
+        "task": "lexam_hard",
+        "value": 45.72,
+        "date": "2026-09-30",
+        "verified": false,
+        "source": "https://huggingface.co/FINAL-Bench/Darwin-180B-RSI",
+        "notes": "LEXam-hard, all 518 open questions; single sample (temperature=1.0, top_p=0.95, top_k=20); thinking budget 32,768 tokens, responses truncated at 32K regenerated with a 120K budget (60 items); judged by DeepSeek-R1-0528 with the LEXam paper judge prompt (eval.yaml); score = mean of German and English mean grades x 100 (de 44.37, en 47.07); 1 item without a parsable grade counted as 0; bf16"
       },
       {
         "dataset": "TIGER-Lab/MMLU-Pro",

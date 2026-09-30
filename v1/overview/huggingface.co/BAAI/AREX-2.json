@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "BAAI/AREX-2",
+  "revision": "eb5e6e41d8aa097ad90797e6790b664db02969b2",
+  "manifest": "blake3:2552f138621428173f2451b8b1d69e4d2d63e4e8767ae1ba7c52e230282a0379",
+  "addressed": true,
+  "generated": "2026-09-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/BAAI/AREX-2",
+    "readme": "file:README.md@sha256:d93be0cf8aea02134a2c95efff761b9bfaa07799fa18eb91062227e7bd0c526d",
+    "config": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69"
+  },
+  "summary": {
+    "value": "AREX-2 is a 27B-parameter long-horizon agent model from the Beijing Academy of Artificial Intelligence (BAAI). It learns to improve a solution over multiple test-time rounds: propose, measure, reflect, and revise.",
+    "source": "file:README.md@sha256:d93be0cf8aea02134a2c95efff761b9bfaa07799fa18eb91062227e7bd0c526d"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27356728560,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 21,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 40,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:b957efeeab22876b90b87ee232f1a6fabb9002515924036cabdb189bc41c1a69#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2607.21461",
+        "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
+        "first_author": "Shuqi Lu",
+        "authors": 24,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}
