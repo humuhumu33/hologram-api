@@ -1,17 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "jaredpalmer/kev-27b",
-  "revision": "01b81998019be550f0ae858727df49bac9511195",
-  "manifest": "blake3:d611f75e68d888d065459bad7745422c2008f73188c6867537a36d44505f03a0",
+  "revision": "ef78cc8a34d5f426fb229c52089db189218cfe5c",
+  "manifest": "blake3:a606e5343e8072692bee73d38aeccf025ba6da67db961a8217f3ae25c8792fd9",
   "addressed": true,
-  "generated": "2026-09-29",
+  "generated": "2026-10-01",
   "provenance": {
     "api": "https://huggingface.co/api/models/jaredpalmer/kev-27b",
-    "readme": "file:README.md@sha256:bc70fafe8d8106278d31d3ce081e376b4532ff6113ee1ef34e2b9039de99b994"
+    "readme": "file:README.md@sha256:63063eed50b5cf2a5f1b397ac97c6b742df7d5c9966c5a7f0ec8fbdb0118bd92",
+    "config": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5"
   },
   "summary": {
-    "value": "Kev-27B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
-    "source": "file:README.md@sha256:bc70fafe8d8106278d31d3ce081e376b4532ff6113ee1ef34e2b9039de99b994"
+    "value": "Kev-27B is a decision model. It reads one document (the state) and a set of typed questions about it, and returns a calibrated probability distribution over the options supplied with each question, in a single forward pass and without generating text.",
+    "source": "file:README.md@sha256:63063eed50b5cf2a5f1b397ac97c6b742df7d5c9966c5a7f0ec8fbdb0118bd92"
   },
   "glance": {
     "task": {
@@ -30,8 +31,32 @@
       ],
       "source": "derived:pipeline_tag"
     },
+    "parameters": {
+      "value": 25624600064,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
     "library": {
-      "value": "peft",
+      "value": "transformers",
       "source": "api:library_name"
     },
     "license": {
@@ -51,7 +76,7 @@
     },
     "base": {
       "value": {
-        "relation": "Adapter for",
+        "relation": "Fine tuned from",
         "models": [
           "Qwen/Qwen3.8-27B"
         ]
@@ -63,53 +88,123 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-24",
+      "value": "2026-09-30",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 14,
+      "value": 17,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 386,
+      "value": 624,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:7d2f033e87337113a7ffec63bd0c7102dd076c92beecc828e7231a1e5fdfbeb5#tie_word_embeddings"
     }
   },
   "benchmarks": {
     "value": [
       {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "accuracy",
-        "value": 0.896,
+        "value": 0.8887,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "brier_score",
-        "value": 0.16,
+        "value": 0.154,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "transfer-r6 test (1,260 questions, read once)",
+        "dataset": "breadth-v1 test: 10 of 14 held-out public datasets (2,489 questions)",
         "task": "accuracy",
-        "value": 0.863,
+        "value": 0.832,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "decision-v7 test (read once)",
+        "dataset": "tasksource-heldout-v1 test: 17 of 24 held-out task families (2,024 questions)",
         "task": "accuracy",
-        "value": 0.87,
+        "value": 0.795,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 + devtools-v1 + documents-v1 test (2,795 questions)",
+        "task": "accuracy",
+        "value": 0.889,
         "verified": false,
         "source": "model card"
       }
     ],
     "source": "api:cardData.model-index"
   },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
   "datasets": {
     "value": [
+      "deepmind/aqua_rat",
+      "allenai/ai2_arc",
+      "coastalcph/lex_glue",
+      "allenai/cosmos_qa",
+      "tau/commonsense_qa",
+      "tasksource/esci",
+      "openai/gsm8k",
+      "nvidia/HelpSteer2",
+      "nvidia/HelpSteer3",
+      "hotpotqa/hotpot_qa",
+      "AmazonScience/massive",
+      "allenai/math_qa",
+      "openlifescienceai/medmcqa",
+      "pfb30/multi_woz_v22",
+      "sentence-transformers/natural-questions",
+      "allenai/openbookqa",
+      "google-research-datasets/poem_sentiment",
+      "allenai/qasc",
+      "allenai/quartz",
+      "allenai/social_i_qa",
+      "stanfordnlp/snli",
+      "ChilleD/StrategyQA",
+      "allenai/winogrande",
       "legacy-datasets/banking77",
       "google/boolq",
       "fancyzhx/ag_news",
@@ -119,7 +214,10 @@
       "CogComp/trec",
       "fancyzhx/dbpedia_14",
       "SetFit/amazon_reviews_multi_en",
-      "stanfordnlp/imdb"
+      "stanfordnlp/imdb",
+      "bigcode/commitpackft",
+      "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+      "davidheineman/consumer-finance-complaints-large"
     ],
     "source": "api:cardData.datasets"
   }

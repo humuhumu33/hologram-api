@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nationaldesignstudio/rampart",
+  "revision": "b1993e4e68b082835b80ffc65acc03325ea2e501",
+  "manifest": "blake3:0d0f4bb29c69a18a7063af297d9a6d2b7c2b7d55107655748225735a42383b17",
+  "addressed": true,
+  "generated": "2026-10-01",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nationaldesignstudio/rampart",
+    "readme": "file:README.md@sha256:4149222b3e79f28df9cb1497fa77d449a32e37b33f43bdcc14cf543086ed1b35",
+    "config": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6"
+  },
+  "summary": {
+    "value": "rampart is a 14.7 MB ONNX token-classification model that detects personally identifiable information (PII) in text before it leaves the user's device. It is the on-device half of Rampart, a defense-in-depth client-side redaction system released by National Design Studio.",
+    "source": "file:README.md@sha256:4149222b3e79f28df9cb1497fa77d449a32e37b33f43bdcc14cf543086ed1b35"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers.js",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-4.0",
+        "name": "CC BY 4.0",
+        "commercial": "yes",
+        "note": "Attribution required"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "nreimers/MiniLM-L6-H384-uncased"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-06-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-06-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 176,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 37998,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#num_attention_heads"
+    },
+    "vocab": {
+      "value": 19730,
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:003b84bbcd489f5e782fe5cad8f3249c3653ec880089abb1ccc398a0d895e3e6#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ai4privacy/pii-masking-openpii-1.5m"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "embedl/hfviewer",
+        "piimb/pii-masking-benchmark-leaderboard",
+        "nationaldesignstudio/rampart"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

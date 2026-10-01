@@ -1,0 +1,216 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/Phi-3.5-mini-instruct",
+  "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77",
+  "manifest": "blake3:51b78506c3fc1fe0006ebfd7ab9dc0ba26b58fd69966ae9f9961cd1a9ee56b94",
+  "addressed": true,
+  "generated": "2026-10-01",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/Phi-3.5-mini-instruct",
+    "readme": "file:README.md@sha256:cab9d7e23368cf9e8ba469e6c9facf2535f4d32eb9381a604d6d6757f9915b94",
+    "config": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974"
+  },
+  "summary": {
+    "value": "Phi-3.5-mini is a lightweight, state-of-the-art open model built upon datasets used for Phi-3 - synthetic data and filtered publicly available websites - with a focus on very high-quality, reasoning dense data. The model belongs to the Phi-3 model family and supports 128K token context length.",
+    "source": "file:README.md@sha256:cab9d7e23368cf9e8ba469e6c9facf2535f4d32eb9381a604d6d6757f9915b94"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3821079552,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Phi 3",
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#model_type"
+    },
+    "architecture_id": {
+      "value": "phi3",
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-08-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-12-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1232,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12841803,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3072,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32064,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:224de4f6a15b9d2a89695ec04b7f7ab2dd93a008a506979925e5a88cb5804974#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "openai/gsm8k",
+        "task": "gsm8k",
+        "value": 86.2,
+        "date": "2024-04-22",
+        "verified": false,
+        "source": "https://hf.co/papers/2404.14219"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 47.87,
+        "date": "2026-06-30T12:47:29.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/03/b7/03b77a5a-1723-4cab-9d50-1a634bf8b06a.json"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 715,
+        "Merged": 19,
+        "Quantized": 196,
+        "Fine tuned": 336
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 715,
+        "merge": 19,
+        "quantized": 196,
+        "finetune": 336
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2404.14219",
+        "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+        "first_author": "Marah Abdin",
+        "authors": 84,
+        "year": "2024"
+      },
+      {
+        "id": "2407.13833",
+        "title": "Phi-3 Safety Post-Training: Aligning Language Models with a \"Break-Fix\" Cycle",
+        "first_author": "Emman Haider",
+        "authors": 30,
+        "year": "2024"
+      },
+      {
+        "id": "2403.06412",
+        "title": "CLIcK: A Benchmark Dataset of Cultural and Linguistic Intelligence in Korean",
+        "first_author": "Eunsu Kim",
+        "authors": 6,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "embedl/hfviewer",
+        "pliny-the-prompter/obliteratus",
+        "aquanode/gpu-vram-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

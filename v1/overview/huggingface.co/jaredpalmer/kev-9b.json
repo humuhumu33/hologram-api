@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "jaredpalmer/kev-9b",
-  "revision": "2629c06a5aeb0feb3b9783bafed17ed8f39ecf5c",
-  "manifest": "blake3:e506f59f108cd038a28324fad3a7b8cfe78baa766208dda88bbdf79ddca71eaa",
+  "revision": "b5d8c18e44c60888d138b65cb6507ff0a5a448a0",
+  "manifest": "blake3:e8ae9c13ae5430f2f4e427a83e6862dc2db1157d236b5ffc9c9249aabf226b46",
   "addressed": true,
-  "generated": "2026-09-30",
+  "generated": "2026-10-01",
   "provenance": {
     "api": "https://huggingface.co/api/models/jaredpalmer/kev-9b",
-    "readme": "file:README.md@sha256:2322a5d6837e04a6845866da42ab297f04c31a349c22601ba009debd3d3245e3"
+    "readme": "file:README.md@sha256:168edeedf820c6fabdd496212ba4aac6fd1bfd9961233e8e23890385f06f145a"
   },
   "summary": {
-    "value": "Kev-9B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
-    "source": "file:README.md@sha256:2322a5d6837e04a6845866da42ab297f04c31a349c22601ba009debd3d3245e3"
+    "value": "This is Kev-9B v2, released 2026-09-30 on the main branch of jaredpalmer/kev-9b.",
+    "source": "file:README.md@sha256:168edeedf820c6fabdd496212ba4aac6fd1bfd9961233e8e23890385f06f145a"
   },
   "glance": {
     "task": {
@@ -63,59 +63,52 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-21",
+      "value": "2026-09-30",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 54,
+      "value": 56,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 3162,
+      "value": 3474,
       "source": "api:downloadsAllTime"
     }
   },
   "benchmarks": {
     "value": [
       {
-        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
-        "task": "accuracy",
-        "value": 0.872,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "decision-v7 development (1,204 records; ten trained public sources + programmatic policy data)",
-        "task": "ECE, raw probabilities",
-        "value": 0.076,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
-        "task": "accuracy",
-        "value": 0.822,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (764 records; six never-trained sources + held-out policy structures)",
-        "task": "brier_score",
-        "value": 0.286,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test (locked)",
         "task": "accuracy",
         "value": 0.852,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test (locked)",
         "task": "brier_score",
-        "value": 0.237,
+        "value": 0.199,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions)",
+        "task": "accuracy",
+        "value": 0.834,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "devtools-v1 test (1,071 questions)",
+        "task": "accuracy",
+        "value": 0.791,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "documents-v1 test (936 questions)",
+        "task": "accuracy",
+        "value": 0.9,
         "verified": false,
         "source": "model card"
       }
@@ -126,6 +119,7 @@
     "children": {
       "value": {
         "Adapter": 1,
+        "Merged": 1,
         "Fine tuned": 2
       },
       "source": "api:childrenModelCount"
@@ -133,6 +127,7 @@
     "children_raw": {
       "value": {
         "adapter": 1,
+        "merge": 1,
         "finetune": 2
       },
       "source": "api:childrenModelCount"
@@ -149,7 +144,9 @@
       "CogComp/trec",
       "fancyzhx/dbpedia_14",
       "SetFit/amazon_reviews_multi_en",
-      "stanfordnlp/imdb"
+      "stanfordnlp/imdb",
+      "bigcode/commitpackft",
+      "davidheineman/consumer-finance-complaints-large"
     ],
     "source": "api:cardData.datasets"
   },
@@ -158,8 +155,8 @@
       "count": 4,
       "top": [
         "multimodalart/jev-decision-index",
-        "DerAuctor/kev-9b",
-        "uulonger/jev-decision-index"
+        "hotchpotch/S1MB-leaderboard",
+        "DerAuctor/kev-9b"
       ]
     },
     "source": "api:spaces"
