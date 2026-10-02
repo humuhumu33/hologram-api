@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "jaredpalmer/kev-0.8b",
-  "revision": "9a45d25eb2ab761841196625383fa1dff0e56c1e",
-  "manifest": "blake3:2f0722798fe8d96bbf2c7d03f11a5d3e690d4ff198c651ca4bd35c4f880bc908",
+  "revision": "bf75a6a8848ea6960ff2ed108d9ed44c2941174f",
+  "manifest": "blake3:c4e8b6cf74096c444574b960980d574acd509f2423dd9cc93696524a18b31d59",
   "addressed": true,
-  "generated": "2026-09-25",
+  "generated": "2026-10-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/jaredpalmer/kev-0.8b",
-    "readme": "file:README.md@sha256:5c0408069bf3882c758ccc10a8351a4fba6a66e5cdce0ae6b3c320f4a50c0afb"
+    "readme": "file:README.md@sha256:96df0121af5e6097916920c1c3a119600cddfe0af8cd0d90b2f16de7d1f2e185"
   },
   "summary": {
-    "value": "Kev-0.8B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
-    "source": "file:README.md@sha256:5c0408069bf3882c758ccc10a8351a4fba6a66e5cdce0ae6b3c320f4a50c0afb"
+    "value": "Kev-0.8B is a decision model. It reads one document (the state) and a set of typed questions about it, and returns a calibrated probability distribution over the options supplied with each question, in a single forward pass and without generating text.",
+    "source": "file:README.md@sha256:96df0121af5e6097916920c1c3a119600cddfe0af8cd0d90b2f16de7d1f2e185"
   },
   "glance": {
     "task": {
@@ -63,101 +63,87 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-24",
+      "value": "2026-10-01",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 19,
+      "value": 34,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 4308,
+      "value": 11298,
       "source": "api:downloadsAllTime"
     }
   },
   "benchmarks": {
     "value": [
       {
-        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives; read once)",
-        "task": "accuracy",
-        "value": 0.851,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives; read once)",
-        "task": "brier_score",
-        "value": 0.244,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates; read once)",
-        "task": "accuracy",
-        "value": 0.665,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates; read once)",
-        "task": "brier_score",
-        "value": 0.46,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources; read once)",
-        "task": "accuracy",
-        "value": 0.637,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources; read once)",
-        "task": "brier_score",
-        "value": 0.442,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "decision-v7 development (1,264 questions; ten trained public sources + programmatic policy data)",
-        "task": "accuracy",
-        "value": 0.827,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "decision-v7 development (1,264 questions; ten trained public sources + programmatic policy data)",
-        "task": "ECE, as served",
-        "value": 0.033,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (656 questions; six never-trained sources + held-out policy structures)",
-        "task": "accuracy",
-        "value": 0.648,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (656 questions; six never-trained sources + held-out policy structures)",
-        "task": "brier_score",
-        "value": 0.43,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "accuracy",
         "value": 0.697,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "brier_score",
         "value": 0.397,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "breadth-v1 test: 14 held-out public datasets (3,089 questions)",
+        "task": "accuracy",
+        "value": 0.586,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "tasksource-heldout-v1 development: 17 of 24 held-out task families (1,993 questions)",
+        "task": "accuracy",
+        "value": 0.515,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives)",
+        "task": "accuracy",
+        "value": 0.851,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives)",
+        "task": "brier_score",
+        "value": 0.244,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates)",
+        "task": "accuracy",
+        "value": 0.665,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates)",
+        "task": "brier_score",
+        "value": 0.46,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources)",
+        "task": "accuracy",
+        "value": 0.637,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources)",
+        "task": "brier_score",
+        "value": 0.442,
         "verified": false,
         "source": "model card"
       }
@@ -167,13 +153,19 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 3
+        "Adapter": 3,
+        "Merged": 1,
+        "Quantized": 5,
+        "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 3
+        "adapter": 3,
+        "merge": 1,
+        "quantized": 5,
+        "finetune": 1
       },
       "source": "api:childrenModelCount"
     }
@@ -189,17 +181,20 @@
       "CogComp/trec",
       "fancyzhx/dbpedia_14",
       "SetFit/amazon_reviews_multi_en",
-      "stanfordnlp/imdb"
+      "stanfordnlp/imdb",
+      "bigcode/commitpackft",
+      "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+      "davidheineman/consumer-finance-complaints-large"
     ],
     "source": "api:cardData.datasets"
   },
   "spaces": {
     "value": {
-      "count": 6,
+      "count": 8,
       "top": [
         "multimodalart/jev-decision-index",
         "jaredpalmer/kev",
-        "MahmoudGhraibeh/kev-decisions"
+        "hotchpotch/S1MB-leaderboard"
       ]
     },
     "source": "api:spaces"

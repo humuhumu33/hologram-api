@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/llmlingua-2-bert-base-multilingual-cased-meetingbank",
+  "revision": "5f0c82792b7ea14c6484e015b6a072009496b7f2",
+  "manifest": "blake3:4bb5a454e318d4ead680d9da9b9c1cbdb4b052366c2193260b7dd53a4e4d0364",
+  "addressed": true,
+  "generated": "2026-10-02",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/llmlingua-2-bert-base-multilingual-cased-meetingbank",
+    "readme": "file:README.md@sha256:ab01af377c6285e0bd040661569238aba5f66f842dcecaa4c2fc704f40c7402b",
+    "config": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085"
+  },
+  "summary": {
+    "value": "This model was introduced in the paper LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression (Pan et al, 2024). It is a BERT multilingual base model (cased) finetuned to perform token classification for task agnostic prompt compression.",
+    "source": "file:README.md@sha256:ab01af377c6285e0bd040661569238aba5f66f842dcecaa4c2fc704f40c7402b"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 177341186,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-03-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 56,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4289581,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#num_attention_heads"
+    },
+    "vocab": {
+      "value": 119647,
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:e6c33ec2f099e659e125efaa8b7bb07a6e65b7d9fc36211c6fa3206e1c399085#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2403.12968",
+        "title": "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression",
+        "first_author": "Zhuoshi Pan",
+        "authors": 13,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 26,
+      "top": [
+        "microsoft/llmlingua-2",
+        "Yashuu/TokenTrim",
+        "Arafath10/llmlingua-2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

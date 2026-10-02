@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "jaredpalmer/kev-9b",
-  "revision": "b5d8c18e44c60888d138b65cb6507ff0a5a448a0",
-  "manifest": "blake3:e8ae9c13ae5430f2f4e427a83e6862dc2db1157d236b5ffc9c9249aabf226b46",
+  "revision": "db029f08b290afd9fee4aa4bbcd9ae48602d1eb0",
+  "manifest": "blake3:febb34255efe9be71be6428338567146db6f96ebe40843dddb2e1b7071e13932",
   "addressed": true,
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/jaredpalmer/kev-9b",
-    "readme": "file:README.md@sha256:168edeedf820c6fabdd496212ba4aac6fd1bfd9961233e8e23890385f06f145a"
+    "readme": "file:README.md@sha256:adeee7ce4c43394dfd9f318ea433ab773668e742dcb7d1b41a3856defdf7918e"
   },
   "summary": {
-    "value": "This is Kev-9B v2, released 2026-09-30 on the main branch of jaredpalmer/kev-9b.",
-    "source": "file:README.md@sha256:168edeedf820c6fabdd496212ba4aac6fd1bfd9961233e8e23890385f06f145a"
+    "value": "Kev-9B is a decision model. It reads one document (the state) and a set of typed questions about it, and returns a calibrated probability distribution over the options supplied with each question, in a single forward pass and without generating text.",
+    "source": "file:README.md@sha256:adeee7ce4c43394dfd9f318ea433ab773668e742dcb7d1b41a3856defdf7918e"
   },
   "glance": {
     "task": {
@@ -63,50 +63,57 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-30",
+      "value": "2026-10-01",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 56,
+      "value": 61,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 3474,
+      "value": 3853,
       "source": "api:downloadsAllTime"
     }
   },
   "benchmarks": {
     "value": [
       {
-        "dataset": "transfer-v4 test (locked)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "accuracy",
         "value": 0.852,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "transfer-v4 test (locked)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "brier_score",
         "value": 0.199,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "hard-v1 test (1,088 questions)",
+        "dataset": "breadth-v1 test: 14 held-out public datasets (3,089 questions)",
+        "task": "accuracy",
+        "value": 0.698,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates)",
         "task": "accuracy",
         "value": 0.834,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "devtools-v1 test (1,071 questions)",
+        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources)",
         "task": "accuracy",
         "value": 0.791,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "documents-v1 test (936 questions)",
+        "dataset": "documents-v1 test (936 questions on CFPB complaint narratives)",
         "task": "accuracy",
         "value": 0.9,
         "verified": false,
@@ -146,13 +153,14 @@
       "SetFit/amazon_reviews_multi_en",
       "stanfordnlp/imdb",
       "bigcode/commitpackft",
+      "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
       "davidheineman/consumer-finance-complaints-large"
     ],
     "source": "api:cardData.datasets"
   },
   "spaces": {
     "value": {
-      "count": 4,
+      "count": 5,
       "top": [
         "multimodalart/jev-decision-index",
         "hotchpotch/S1MB-leaderboard",

@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "llm-jp/llm-jp-4.1-33b-thinking",
+  "revision": "de581ee4353568c480d47129948d1be99f02f4ff",
+  "manifest": "blake3:e0957183940e4b37db177047a3451de20c6509f773b1bde20bb7cffbb2126432",
+  "addressed": true,
+  "generated": "2026-10-02",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/llm-jp/llm-jp-4.1-33b-thinking",
+    "readme": "file:README.md@sha256:d4982a1f41b7255f44513daeed8ac295ace68d60fea4672367235079b89b213f",
+    "config": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728"
+  },
+  "summary": {
+    "value": "LLM-jp-4.1 is a series of large language models developed by the Research and Development Center for Large Language Models at the National Institute of Informatics.",
+    "source": "file:README.md@sha256:d4982a1f41b7255f44513daeed8ac295ace68d60fea4672367235079b89b213f"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 33219548160,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#model_type"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 609,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 196608,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#vocab_size"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 500000,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:4280bec35dc7a2cb3f6d3fec4ddf27e5ac6fe2293098610db9be895261d42728#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

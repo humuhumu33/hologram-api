@@ -1,0 +1,202 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "StrandsAgents/strands-decider-2B-hobson-v19",
+  "revision": "bb282d786bc251fd4e3068de3ada9ddbb38127cd",
+  "manifest": "blake3:69b7e723831b4b76c930395f1ba12e809bae844534e663b86c0a5169b47b29ca",
+  "addressed": true,
+  "generated": "2026-10-02",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/StrandsAgents/strands-decider-2B-hobson-v19",
+    "readme": "file:README.md@sha256:e9bd6ec77988cf45a0b13ebf3193743bcf1c9a0bd34f43bed84a211c76025ecb"
+  },
+  "summary": {
+    "value": "Strands decider is a small, fast decision model for agentic AI. Unlike an LLM, which can generate arbitrary text, a decision model picks between sets of options and rates things on a scale, and every answer carries a calibrated confidence.",
+    "source": "file:README.md@sha256:e9bd6ec77988cf45a0b13ebf3193743bcf1c9a0bd34f43bed84a211c76025ecb"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "peft",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Qwen/Qwen3.5-2B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-01",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "JevBench public, served at 4096",
+        "task": "accuracy (167/231)",
+        "value": 0.7229,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "JevBench public, served at 3072",
+        "task": "accuracy (167/231)",
+        "value": 0.7229,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: held-out short tasks",
+        "task": "accuracy (n=6000)",
+        "value": 0.641,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: boardgame",
+        "task": "accuracy (n=900)",
+        "value": 0.822,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: contractnli",
+        "task": "accuracy (n=1026)",
+        "value": 0.872,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: hotpotqa (held out)",
+        "task": "accuracy (n=959)",
+        "value": 0.717,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: musique",
+        "task": "accuracy (n=1199)",
+        "value": 0.884,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: musique, answerable",
+        "task": "accuracy (n=599)",
+        "value": 0.87,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: musique, unanswerable",
+        "task": "accuracy (n=600)",
+        "value": 0.898,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: [4] adequacy_hs2",
+        "task": "accuracy (n=234)",
+        "value": 0.722,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "eval: [5] gen:adequacy",
+        "task": "accuracy (n=302)",
+        "value": 0.798,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ccdv/arxiv-classification",
+      "clinc/clinc_oos",
+      "community-datasets/yahoo_answers_topics",
+      "dair-ai/emotion",
+      "fancyzhx/ag_news",
+      "fancyzhx/dbpedia_14",
+      "google-research-datasets/paws",
+      "google/boolq",
+      "google/civil_comments",
+      "legacy-datasets/banking77",
+      "mteb/amazon_massive_intent",
+      "nyu-mll/glue",
+      "osyvokon/pavlick-formality-scores",
+      "papluca/language-identification",
+      "qiaojin/PubMedQA",
+      "raquiba/Sarcasm_News_Headline",
+      "sealuzh/app_reviews",
+      "SetFit/20_newsgroups",
+      "SetFit/sst5",
+      "SetFit/subj",
+      "SetFit/TREC-QC",
+      "tals/vitaminc",
+      "tasksource/ruletaker",
+      "ucberkeley-dlab/measuring-hate-speech",
+      "ucirvine/sms_spam",
+      "Yelp/yelp_review_full",
+      "nvidia/HelpSteer2",
+      "tasksource/Boardgame-QA",
+      "hotpotqa/hotpot_qa"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

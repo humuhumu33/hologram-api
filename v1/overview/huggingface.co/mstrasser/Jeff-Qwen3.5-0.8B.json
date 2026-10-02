@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "mstrasser/Jeff-Qwen3.5-0.8B",
-  "revision": "0f212b3e72acb4dde3f7da61e925d6ab7f819990",
-  "manifest": "blake3:c49b9976f165363beef1c2b2fc217dc84315ed7313dda50d7829d3ba18351040",
+  "revision": "51552f39a943d62e8387c4ea5e17026a1408729f",
+  "manifest": "blake3:ef0f2cbc65ef229730a5dbbb13d256e82658869b8034add97806436cbfd07234",
   "addressed": true,
-  "generated": "2026-09-30",
+  "generated": "2026-10-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/mstrasser/Jeff-Qwen3.5-0.8B",
-    "readme": "file:README.md@sha256:6ba93b37c586ad32312e9ae0a9ee9eb726e7ab43e3db7c2edb264c61c8cdcfff",
+    "readme": "file:README.md@sha256:1452a9398b52d9e8c2c3c4ca016322d6ee403d2f3320777c17f09d4d909fa8fa",
     "config": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25"
   },
   "summary": {
-    "value": "The Jeff models are fine-tunes of Qwen3.5 and Gemma 4 for zero-shot classification: small, fast decision models you slot into your code. You describe a situation and list the options in plain words; Jeff returns a calibrated probability for each option from a single forward pass.",
-    "source": "file:README.md@sha256:6ba93b37c586ad32312e9ae0a9ee9eb726e7ab43e3db7c2edb264c61c8cdcfff"
+    "value": "Let a strong local model such as Qwen3.8-27B write and plan, and let Jeff make the quick decisions in front of it: Jeff answers first, and only when it is unsure does the query go on to the 27B. Across 8 adapters\\, with the same test rows both ways on an Apple M4 Max:",
+    "source": "file:README.md@sha256:1452a9398b52d9e8c2c3c4ca016322d6ee403d2f3320777c17f09d4d909fa8fa"
   },
   "glance": {
     "task": {
@@ -88,15 +88,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-29",
+      "value": "2026-10-01",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 14,
+      "value": 18,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 820,
+      "value": 1576,
       "source": "api:downloadsAllTime"
     }
   },
@@ -134,15 +134,58 @@
       "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.483,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.679,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.313,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.251,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
+        "Adapter": 10,
         "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
+        "adapter": 10,
         "finetune": 1
       },
       "source": "api:childrenModelCount"
@@ -160,9 +203,10 @@
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 2,
       "top": [
-        "hugging-apps/jeff-qwen3-5-0-8b"
+        "mstrasser/jeff-qwen3-5-0-8b",
+        "mstrasser/Jeff-adapters-demo"
       ]
     },
     "source": "api:spaces"

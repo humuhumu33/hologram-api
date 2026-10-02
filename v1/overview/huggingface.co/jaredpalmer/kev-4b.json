@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "jaredpalmer/kev-4b",
-  "revision": "139fdd94f1b6a6ad80cc15e08fcb99cac885a101",
-  "manifest": "blake3:23459c7c47744c95b5aebf65923a3d0208d6045b5bce4f5e18c06dc3dd8b4bb2",
+  "revision": "6cfce5c2fa4b4bd64026336ab649c5ca78857d52",
+  "manifest": "blake3:6821d161d9f2c47b6cb395444cca03607700e1f7f89b8ad4bbd9d6bb6a66198d",
   "addressed": true,
-  "generated": "2026-09-25",
+  "generated": "2026-10-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/jaredpalmer/kev-4b",
-    "readme": "file:README.md@sha256:3eac08b65ac314e0ee1b4ae7ddda9440e39310effa5da3a2cdcb56a9f1249e76"
+    "readme": "file:README.md@sha256:e423ce0e3caf0a1e6ff996a58522946a97711e0439c5fea332a8861b02498435"
   },
   "summary": {
-    "value": "Kev-4B is a decision model: one document (the state) and a set of typed questions in, a probability distribution per question out, in one forward pass. No text generation.",
-    "source": "file:README.md@sha256:3eac08b65ac314e0ee1b4ae7ddda9440e39310effa5da3a2cdcb56a9f1249e76"
+    "value": "Kev-4B is a decision model. It reads one document (the state) and a set of typed questions about it, and returns a calibrated probability distribution over the options supplied with each question, in a single forward pass and without generating text.",
+    "source": "file:README.md@sha256:e423ce0e3caf0a1e6ff996a58522946a97711e0439c5fea332a8861b02498435"
   },
   "glance": {
     "task": {
@@ -63,87 +63,73 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-24",
+      "value": "2026-10-01",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 45,
+      "value": 98,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 6087,
+      "value": 15206,
       "source": "api:downloadsAllTime"
     }
   },
   "benchmarks": {
     "value": [
       {
-        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates; read once)",
-        "task": "accuracy",
-        "value": 0.803,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates; read once)",
-        "task": "brier_score",
-        "value": 0.278,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources; read once)",
-        "task": "accuracy",
-        "value": 0.756,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources; read once)",
-        "task": "brier_score",
-        "value": 0.342,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "decision-v7 development (1,264 questions; ten trained public sources + programmatic policy data)",
-        "task": "accuracy",
-        "value": 0.873,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "decision-v7 development (1,264 questions; ten trained public sources + programmatic policy data)",
-        "task": "ECE, as served",
-        "value": 0.013,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (656 questions; six never-trained sources + held-out policy structures)",
-        "task": "accuracy",
-        "value": 0.817,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 development (656 questions; six never-trained sources + held-out policy structures)",
-        "task": "brier_score",
-        "value": 0.243,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "accuracy",
         "value": 0.838,
         "verified": false,
         "source": "model card"
       },
       {
-        "dataset": "transfer-v4 test (read once)",
+        "dataset": "transfer-v4 test: six never-trained public sources and held-out policy structures (656 questions)",
         "task": "brier_score",
         "value": 0.224,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "breadth-v1 test: 14 held-out public datasets (3,089 questions)",
+        "task": "accuracy",
+        "value": 0.69,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "tasksource-heldout-v1 development: 17 of 24 held-out task families (1,993 questions)",
+        "task": "accuracy",
+        "value": 0.677,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates)",
+        "task": "accuracy",
+        "value": 0.803,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "hard-v1 test (1,088 questions; programmatic labels, held-out templates)",
+        "task": "brier_score",
+        "value": 0.278,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources)",
+        "task": "accuracy",
+        "value": 0.756,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "devtools-v1 test (1,071 questions; six public developer-tooling sources)",
+        "task": "brier_score",
+        "value": 0.342,
         "verified": false,
         "source": "model card"
       }
@@ -153,13 +139,17 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 4
+        "Adapter": 2,
+        "Merged": 1,
+        "Quantized": 7
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 4
+        "adapter": 2,
+        "merge": 1,
+        "quantized": 7
       },
       "source": "api:childrenModelCount"
     }
@@ -175,17 +165,20 @@
       "CogComp/trec",
       "fancyzhx/dbpedia_14",
       "SetFit/amazon_reviews_multi_en",
-      "stanfordnlp/imdb"
+      "stanfordnlp/imdb",
+      "bigcode/commitpackft",
+      "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+      "davidheineman/consumer-finance-complaints-large"
     ],
     "source": "api:cardData.datasets"
   },
   "spaces": {
     "value": {
-      "count": 4,
+      "count": 11,
       "top": [
+        "multimodalart/jev-decision-index",
         "jaredpalmer/kev",
-        "jaredpalmer/kev-4b-decision-demo",
-        "MahmoudGhraibeh/kev-decisions"
+        "mayafree/typed-decision-leaderboard"
       ]
     },
     "source": "api:spaces"

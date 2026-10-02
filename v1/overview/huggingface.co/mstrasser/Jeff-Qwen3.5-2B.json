@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "mstrasser/Jeff-Qwen3.5-2B",
-  "revision": "2b1055eddeb00788f22c0b6156b8d6fa6fc0eecd",
-  "manifest": "blake3:22726a529dc0b7def4071307237257b6e5c283fa4c98f81dfd8c06d1e65ec3c6",
+  "revision": "00448e884cce9e34396d8c72e9a692b41383b1ee",
+  "manifest": "blake3:af8495634c442b9ec805e620528d94a530b5b39f56b0b996769b384522a74ef1",
   "addressed": true,
-  "generated": "2026-09-30",
+  "generated": "2026-10-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/mstrasser/Jeff-Qwen3.5-2B",
-    "readme": "file:README.md@sha256:c617734354d6a10bdaaf8ee23e402cc4f19c496a19df276bf7477fdf9c37188e",
+    "readme": "file:README.md@sha256:98c93df5d364a74a8d7458fdcc04e9cd70b725b700f1a1d753fb866917637c86",
     "config": "file:config.json@sha256:d5acc57c9f1995cd2ae48cbeaf8669eec1b93f3b3afb90e65471ff7766717358"
   },
   "summary": {
     "value": "The Jeff models are fine-tunes of Qwen3.5 and Gemma 4 for zero-shot classification: small, fast decision models you slot into your code. You describe a situation and list the options in plain words; Jeff returns a calibrated probability for each option from a single forward pass.",
-    "source": "file:README.md@sha256:c617734354d6a10bdaaf8ee23e402cc4f19c496a19df276bf7477fdf9c37188e"
+    "source": "file:README.md@sha256:98c93df5d364a74a8d7458fdcc04e9cd70b725b700f1a1d753fb866917637c86"
   },
   "glance": {
     "task": {
@@ -88,15 +88,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-29",
+      "value": "2026-10-01",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 12,
+      "value": 14,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 381,
+      "value": 701,
       "source": "api:downloadsAllTime"
     }
   },
@@ -133,6 +133,47 @@
       "value": "qwen3_5_vision",
       "source": "file:config.json@sha256:d5acc57c9f1995cd2ae48cbeaf8669eec1b93f3b3afb90e65471ff7766717358#vision_config"
     }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.511,
+        "date": "2026-10-01T23:10:40.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.46,
+        "date": "2026-10-01T23:10:40.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.237,
+        "date": "2026-10-01T23:10:40.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.203,
+        "date": "2026-10-01T23:10:40.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      }
+    ],
+    "source": "api:evalResults"
   },
   "run": {
     "auto_model": {

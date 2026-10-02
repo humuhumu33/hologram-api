@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Cloudflare/clef-flash",
+  "revision": "17f0b0ad64efb65d273590632833508766b2aae6",
+  "manifest": "blake3:a134c0ad2b0c1ab7c9c1570402da5e5e2eb2d459530b5b27e200410bbfadc12e",
+  "addressed": true,
+  "generated": "2026-10-02",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Cloudflare/clef-flash",
+    "readme": "file:README.md@sha256:4aac13b2563900152eab8feaad0b310a91b55a96135abf4ad17ad4a302bd73e6",
+    "config": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238"
+  },
+  "summary": {
+    "value": "Clef-Flash is a 9B multimodal model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question in a single forward pass.",
+    "source": "file:README.md@sha256:4aac13b2563900152eab8feaad0b310a91b55a96135abf4ad17ad4a302bd73e6"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-01",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 167,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1303,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 13
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 13
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/clef-flash"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
