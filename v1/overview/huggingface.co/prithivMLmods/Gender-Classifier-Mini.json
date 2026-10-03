@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "prithivMLmods/Gender-Classifier-Mini",
+  "revision": "4855356b698e88ba57996836bb35091f81932667",
+  "manifest": "blake3:3b405007f61dac603f6b53eeb525edef75484ab198ff6819e1e05b4f62331951",
+  "addressed": true,
+  "generated": "2026-10-03",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/prithivMLmods/Gender-Classifier-Mini",
+    "readme": "file:README.md@sha256:e091a5f72ca3bd5bea832346ecae5d4d3aad6f20c090ff243667cb020f013912",
+    "config": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174"
+  },
+  "summary": {
+    "value": "The model categorizes images into two classes: - Class 0: \"Female ♀\" - Class 1: \"Male ♂\"",
+    "source": "file:README.md@sha256:e091a5f72ca3bd5bea832346ecae5d4d3aad6f20c090ff243667cb020f013912"
+  },
+  "glance": {
+    "task": {
+      "value": "Image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 92885762,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "SigLIP",
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#model_type"
+    },
+    "architecture_id": {
+      "value": "siglip",
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#model_type"
+    },
+    "context": {
+      "value": 64,
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/siglip2-base-patch16-224"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-03-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 425587,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#num_attention_heads"
+    },
+    "vocab": {
+      "value": 256000,
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#vocab_size"
+    },
+    "context": {
+      "value": 64,
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#max_position_embeddings"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:e31f24a5c53ef0b70a3c5c143873f58fe06e5f1cc8d722818382ffb1e85b0174#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/5278",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "myvision/gender-classification"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "ehsanshahid522/aml_project",
+        "Ahmedhany1/project-lab",
+        "benstaf/gender-api-fastapi"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

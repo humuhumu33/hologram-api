@@ -1,27 +1,26 @@
 {
   "format": "hologram.overview/v1",
   "name": "RentedNoodle/Qwen3.8-27B-OrcaRouter-GSQ-RCO-IQ3_XXS-Uncensored",
-  "revision": "28bc640e63efc63b8fc06b72f75cee44b1d387ee",
-  "manifest": "blake3:dc97a87ea212a5c441a7386cff3c7cc99478eb64cfd37df764ecd107f680b8fa",
+  "revision": "77897a8be12465044129a4e1c89ccc2b11f89f0e",
+  "manifest": "blake3:1ebb83037862d04379cc2256eebf3dba5dba5a3916dd863fb5ee7c33cd36f693",
   "addressed": true,
-  "generated": "2026-09-26",
+  "generated": "2026-10-03",
   "provenance": {
     "api": "https://huggingface.co/api/models/RentedNoodle/Qwen3.8-27B-OrcaRouter-GSQ-RCO-IQ3_XXS-Uncensored",
-    "readme": "file:README.md@sha256:46e163526147371fcac29466865dcbe00f67d1fa25c7ee711a7a514eff693cc7",
+    "readme": "file:README.md@sha256:7957b233424a9fe2747a5d56789c5c5012228111328a1910481f6dd71a6d2fe8",
     "config": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
   },
   "summary": {
-    "value": "A 3-bit GGUF quant of the uncensored OrcaRouter Qwen3.8-27B, carrying an S1-trained MTP draft head and a custom OrcaRouter-native imatrix. Built to run on a single 16 GB GPU.",
-    "source": "file:README.md@sha256:46e163526147371fcac29466865dcbe00f67d1fa25c7ee711a7a514eff693cc7"
+    "value": "A 3 bpw GGUF quantization of the OrcaRouter Qwen3.8-27B, carrying an embedded MTP draft head and a custom OrcaRouter-native imatrix. Built to run on a single 16 GB GPU.",
+    "source": "file:README.md@sha256:7957b233424a9fe2747a5d56789c5c5012228111328a1910481f6dd71a6d2fe8"
   },
   "glance": {
     "task": {
-      "value": "Vision language",
+      "value": "Text generation",
       "source": "api:pipeline_tag"
     },
     "input": {
       "value": [
-        "image",
         "text"
       ],
       "source": "derived:pipeline_tag"
@@ -86,15 +85,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-15",
+      "value": "2026-10-03",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 28,
+      "value": 32,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 26759,
+      "value": 38273,
       "source": "api:downloadsAllTime"
     }
   },
@@ -132,91 +131,18 @@
       "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vision_config"
     }
   },
-  "benchmarks": {
-    "value": [
-      {
-        "dataset": "needle-retrieval-15k",
-        "task": "exact-match",
-        "value": "6/6",
-        "verified": false,
-        "source": "model card"
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
       },
-      {
-        "dataset": "toolcall-json-full-14-case",
-        "task": "pass-rate",
-        "value": "9/14",
-        "verified": false,
-        "source": "model card"
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
       },
-      {
-        "dataset": "gpqa-diamond",
-        "task": "accuracy",
-        "value": 75.25,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "wikitext-2",
-        "task": "perplexity",
-        "value": 6.17,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "ifeval",
-        "task": "prompt-strict-accuracy",
-        "value": 70.24,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "ifeval",
-        "task": "instruction-strict-accuracy",
-        "value": 76.26,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "truthfulqa",
-        "task": "mc1",
-        "value": 77.6,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "truthfulqa",
-        "task": "mc2",
-        "value": 81.98,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "xstest-safe",
-        "task": "over-refusal-rate",
-        "value": 0,
-        "verified": false,
-        "source": "model card"
-      }
-    ],
-    "source": "api:cardData.model-index"
-  },
-  "papers": {
-    "value": [
-      {
-        "id": "2604.18556",
-        "title": "GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling",
-        "first_author": "Alireza Dadgarnia",
-        "authors": 6,
-        "year": "2026"
-      },
-      {
-        "id": "2605.00649",
-        "title": "Model Compression with Exact Budget Constraints via Riemannian Manifolds",
-        "first_author": "Michael Helcig",
-        "authors": 2,
-        "year": "2026"
-      }
-    ],
-    "source": "api:tags(arxiv)+api:papers"
+      "source": "api:childrenModelCount"
+    }
   }
 }

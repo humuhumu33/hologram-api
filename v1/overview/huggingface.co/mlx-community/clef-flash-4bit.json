@@ -1,0 +1,135 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mlx-community/clef-flash-4bit",
+  "revision": "140bf7e037f5fa95a96535feca112f46c15927cf",
+  "manifest": "blake3:a39dfd6d166483d15f54e25e1bfa36e055b46bc014fd5a003fe536e9c3f9097d",
+  "addressed": true,
+  "generated": "2026-10-03",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mlx-community/clef-flash-4bit",
+    "readme": "file:README.md@sha256:638f113d80ea2f4a6793adbd3786cbab2ac447716ab481a407d2c395cc58e72a",
+    "config": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1"
+  },
+  "summary": {
+    "value": "Clef turns a state (text, JSON, images, or video) plus a schema of typed questions into a probability for every allowed option, in a single forward pass. It is not a chat model — mlxvlm.generate, mlxlm.generate, and LM Studio will load the backbone but produce meaningless text.",
+    "source": "file:README.md@sha256:638f113d80ea2f4a6793adbd3786cbab2ac447716ab481a407d2c395cc58e72a"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT32 95%, BF16 5%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mlx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Cloudflare/clef-flash"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-02",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1074,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "4 bit",
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#vision_config"
+    }
+  }
+}
