@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MaziyarPanahi/ModernJEV-Decide-Preview",
+  "revision": "d5b398ed03de073a00bc4e53acf53afda409445e",
+  "manifest": "blake3:8dd93c60dce8dbd33551c17c30a2190affeea716d8cb932de144763b97eb731a",
+  "addressed": true,
+  "generated": "2026-10-04",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MaziyarPanahi/ModernJEV-Decide-Preview",
+    "readme": "file:README.md@sha256:cd2cb33549c319b4cb935f09917b34c8c60e899a0796fd27610ca29b6f99f10b",
+    "config": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb"
+  },
+  "summary": {
+    "value": "A small encoder for choosing an action or a tool from the options you provide. We trained this 60,000-decision prototype for about $6.60 in A100 compute, including setup and evaluation.",
+    "source": "file:README.md@sha256:cd2cb33549c319b4cb935f09917b34c8c60e899a0796fd27610ca29b6f99f10b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 149605633,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "answerdotai/ModernBERT-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-01",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 132,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50368,
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:d4bba090422f16e88d80af37134760ee23095ed4fa0d01ed70fe771a9c7ed4fb#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "MaziyarPanahi/AgentToolDecisions-180K"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

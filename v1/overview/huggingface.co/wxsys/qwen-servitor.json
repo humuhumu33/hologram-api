@@ -1,0 +1,167 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "wxsys/qwen-servitor",
+  "revision": "00d8ab75f188d80b02b560944d511d7e5910e2bb",
+  "manifest": "blake3:4c51f6336ac975a788fa84dd11cc4aff7718701b8dfabf2013ec5fd205c4a674",
+  "addressed": true,
+  "generated": "2026-10-04",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/wxsys/qwen-servitor",
+    "readme": "file:README.md@sha256:d67fcc7a0197cf92a7c4aaab04704f839d278db305cffda0fa00546ca6e868b3",
+    "config": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249"
+  },
+  "summary": {
+    "value": "Qwen-Servitor is a headless neural decision engine designed for automated pull request review, pre-commit gating, and static code security triage. It operates as the fast, lightweight component in the Servitor family, complementing the larger wxsys/spark-servitor (1.7B, Sliding Window Attention, 1M context).",
+    "source": "file:README.md@sha256:d67fcc7a0197cf92a7c4aaab04704f839d278db305cffda0fa00546ca6e868b3"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 752393024,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "id"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1091,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:e49c2a678ea5ffa39ecad043174972ae8bef5781f2241d4b222b73d80b1f0249#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "9router Real-World PR Benchmark",
+        "task": "Real-World PR Accuracy",
+        "value": 90,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "9router Real-World PR Benchmark",
+        "task": "Critical Vulnerability Recall",
+        "value": 100,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}
