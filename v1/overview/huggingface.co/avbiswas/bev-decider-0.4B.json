@@ -1,0 +1,111 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "avbiswas/bev-decider-0.4B",
+  "revision": "cf5138b5b465343d09c3b4fbd71eaca36d989d34",
+  "manifest": "blake3:553c584d57ce22d08aec86938dbdf30f5a2ccce4044b6e470a597041f762355b",
+  "addressed": true,
+  "generated": "2026-10-05",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/avbiswas/bev-decider-0.4B",
+    "readme": "file:README.md@sha256:9536299f93f1b599bd285672fbf84556797a0b59058721f436bb4391420cc806",
+    "config": "file:config.json@sha256:f408f4ef02ee910fdc3e2790f1f0b48d4dd526beca39c89c9eeb947cae7f98fb"
+  },
+  "summary": {
+    "value": "bev-decider is a 0.4B-parameter System One decision model. It reads a state (text or JSON) and typed questions about it, and returns calibrated probabilities in a single forward pass, with no text generation.",
+    "source": "file:README.md@sha256:9536299f93f1b599bd285672fbf84556797a0b59058721f436bb4391420cc806"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 477566976,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Bev Decider",
+      "source": "file:config.json@sha256:f408f4ef02ee910fdc3e2790f1f0b48d4dd526beca39c89c9eeb947cae7f98fb#model_type"
+    },
+    "architecture_id": {
+      "value": "bev-decider",
+      "source": "file:config.json@sha256:f408f4ef02ee910fdc3e2790f1f0b48d4dd526beca39c89c9eeb947cae7f98fb#model_type"
+    },
+    "precision": {
+      "value": "BF16 98%, FP32 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "bev-decider",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-0.6B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 170,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 20,
+      "source": "file:config.json@sha256:f408f4ef02ee910fdc3e2790f1f0b48d4dd526beca39c89c9eeb947cae7f98fb#num_layers"
+    }
+  },
+  "datasets": {
+    "value": [
+      "avbiswas/bev-decision"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

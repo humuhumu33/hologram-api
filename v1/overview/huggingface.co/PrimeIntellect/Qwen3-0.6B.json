@@ -1,0 +1,176 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "PrimeIntellect/Qwen3-0.6B",
+  "revision": "15aba67c8ec68aeac96f57ba7e31d373564ee03c",
+  "manifest": "blake3:808ebe4d805f22359a10a45b96642f04e887cc2562e0b05014c8f04136da9e41",
+  "addressed": true,
+  "generated": "2026-10-05",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/PrimeIntellect/Qwen3-0.6B",
+    "readme": "file:README.md@sha256:5eff9371fccab96eb2ffdf230552337f0a808263ac98a4555339ea55e288c7e6",
+    "config": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd"
+  },
+  "summary": {
+    "value": "This is a clone of Qwen/Qwen3-0.6B with a multi-turn, tool-call compatible chat template.",
+    "source": "file:README.md@sha256:5eff9371fccab96eb2ffdf230552337f0a808263ac98a4555339ea55e288c7e6"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 751632384,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#model_type"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-0.6B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-08-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-09-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 593366,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "tardellirs/model-pulse",
+        "aquanode/gpu-vram-calculator",
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

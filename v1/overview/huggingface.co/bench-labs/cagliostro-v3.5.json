@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "bench-labs/cagliostro-v3.5",
+  "revision": "0795c7c2b663a733712a6e7628fdb3d1e951400a",
+  "manifest": "blake3:01cc6b3b088a685e2a5169280296c4b691d809359ed64a7a405f98b34cd85a45",
+  "addressed": true,
+  "generated": "2026-10-05",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/bench-labs/cagliostro-v3.5",
+    "readme": "file:README.md@sha256:cd829880d7000e5351dac983c43847376717c78a0581f2bad642c23886057039",
+    "config": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b"
+  },
+  "summary": {
+    "value": "A 146M parameter decoder-only language model. It is cagliostro-v3's final checkpoint with one more short training stage: 0.39B tokens of v3's own cooldown data mixed with how-to and textbook text from Cosmopedia.",
+    "source": "file:README.md@sha256:cd829880d7000e5351dac983c43847376717c78a0581f2bad642c23886057039"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 146352000,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Cagliostro",
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#model_type"
+    },
+    "architecture_id": {
+      "value": "cagliostro",
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "bench-labs/cagliostro-v3"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 138,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 640,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#hidden_size"
+    },
+    "heads": {
+      "value": 10,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 5,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32768,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 100000.0,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "datasets": {
+    "value": [
+      "HuggingFaceTB/smollm-corpus",
+      "mlfoundations/dclm-baseline-1.0",
+      "HuggingFaceTB/finemath",
+      "nvidia/OpenMathInstruct-2",
+      "HuggingFaceTB/smoltalk",
+      "HuggingFaceTB/cosmopedia"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

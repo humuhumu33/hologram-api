@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "FINAL-Bench/Darwin-180B-RSI",
-  "revision": "455f3af2b70e0ef37829d418f84951378e5ab9da",
-  "manifest": "blake3:9904925666fab8a22b1b4d8c062e369024f6058828b9236cc865b606a83199a3",
+  "revision": "3aefe844554b954fabe3258695bfd16e4cab4b46",
+  "manifest": "blake3:feff9a4e1ac9ef1ec8b06e5e0dcd3a7d77f4b79908bbe50ed6fcc759f01545a8",
   "addressed": true,
-  "generated": "2026-10-02",
+  "generated": "2026-10-05",
   "provenance": {
     "api": "https://huggingface.co/api/models/FINAL-Bench/Darwin-180B-RSI",
-    "readme": "file:README.md@sha256:c8621fb3bb81315506afe1bf39e9e7ae7a7304625b195ab68488ca501fa51bda",
+    "readme": "file:README.md@sha256:16f9793e1b003a9b116de79a5bcd2bf80f6b90ae427c8ab694a0f6080005b1e7",
     "config": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b"
   },
   "summary": {
     "value": "reasoning · MoE 512 experts · 262K long context · image + text · Korean + English · self-improvement · ZTC",
-    "source": "file:README.md@sha256:c8621fb3bb81315506afe1bf39e9e7ae7a7304625b195ab68488ca501fa51bda"
+    "source": "file:README.md@sha256:16f9793e1b003a9b116de79a5bcd2bf80f6b90ae427c8ab694a0f6080005b1e7"
   },
   "glance": {
     "task": {
@@ -90,15 +90,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-02",
+      "value": "2026-10-05",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 99,
+      "value": 112,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 476,
+      "value": 736,
       "source": "api:downloadsAllTime"
     }
   },
@@ -174,6 +174,15 @@
         "notes": "HMMT February 2026, all 33 problems; majority vote over 16 samples (maj@16) = 100.0; mean accuracy over 16 samples = 96.59; temperature=1.0, top_p=0.95, top_k=20; thinking budget 131,072 tokens; bf16"
       },
       {
+        "dataset": "LiquidAI/ifstruct-v1.0",
+        "task": "ifstruct_v1",
+        "value": 98.95,
+        "date": "2026-10-05",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LiquidAI/ifstruct-v1.0",
+        "notes": "Official harness (github.com/Liquid4All/ifstruct, ifstruct-eval) with its defaults: temperature 0, max_tokens 16000, 32 threads, 2,000 prompts from data/test.jsonl. Thinking on. Served checkpoint: FINAL-Bench/Darwin-180B-RSI on vLLM 0.29.0 with online FP8 quantization, tensor parallel 2. 1,979 of 2,000 passed; one request exceeded the harness 120-second read timeout on every retry and is counted as a failure. Single run."
+      },
+      {
         "dataset": "LEXam-Benchmark/LEXam",
         "task": "mcq_4_choices",
         "value": 68.94,
@@ -215,15 +224,13 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 1,
-        "Fine tuned": 1
+        "Quantized": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 1,
-        "finetune": 1
+        "quantized": 1
       },
       "source": "api:childrenModelCount"
     }
@@ -259,9 +266,11 @@
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 4,
       "top": [
-        "embedl/hfviewer"
+        "tardellirs/model-pulse",
+        "embedl/hfviewer",
+        "quantid/huggingface-official-benchmark-leaderboards"
       ]
     },
     "source": "api:spaces"
