@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autotrust/JEV-Gemma4-26B-A4B",
+  "revision": "603bfed48410726eac15681bc9c55da904547e2d",
+  "manifest": "blake3:90a7a73d2a1d6148c96e5c6279f15a554c2f1a2b6f866c0ddc3140b521b76bbd",
+  "addressed": true,
+  "generated": "2026-10-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autotrust/JEV-Gemma4-26B-A4B",
+    "readme": "file:README.md@sha256:d4da96ac68b20f9e65ebc6e8bec055a6f6356c6868399fc25a67dab80241771a",
+    "config": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3"
+  },
+  "summary": {
+    "value": "This bundle serves two systems from one set of base weights. System 2 is the unmodified google/gemma-4-26B-A4B-it (a 26 B-parameter mixture-of-experts model with ≈ 4 B active parameters per token, text and image input): generation and reasoning, bit-identical to the base model.",
+    "source": "file:README.md@sha256:d4da96ac68b20f9e65ebc6e8bec055a6f6356c6868399fc25a67dab80241771a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 25805936206,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#top_k_experts"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "google/gemma-4-26B-A4B-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7251,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2816,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#top_k_experts"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Decision Index suite 0.2 (edition 0.2.1)",
+        "task": "Decision Index (balanced skill)",
+        "value": 58.05,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "jeff-legacy/Jeff-Qwen3.5-0.8B",
+  "revision": "d86f657f503245be5291e3c69e573bf48033aa50",
+  "manifest": "blake3:9bdac5e5b52328ec35305195c5d60cddb58f37c7a7e030d76f48402bfab9e400",
+  "addressed": true,
+  "generated": "2026-10-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/jeff-legacy/Jeff-Qwen3.5-0.8B",
+    "readme": "file:README.md@sha256:e5d376a3c6fa01ae0394d667ce64cc15182f39a6beb098c74e9a38f0ff56f378",
+    "config": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25"
+  },
+  "summary": {
+    "value": "Let a strong local model such as Qwen3.8-27B write and plan, and let Jeff make the quick decisions in front of it: Jeff answers first, and only when it is unsure does the query go on to the 27B. Across 8 adapters\\, with the same test rows both ways on an Apple M4 Max:",
+    "source": "file:README.md@sha256:e5d376a3c6fa01ae0394d667ce64cc15182f39a6beb098c74e9a38f0ff56f378"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 852985920,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2262,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:e430598ca8aa6228b9856573dcc0425d0710acad4a19a937da52cde724b34f25#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.483,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.679,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.313,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.251,
+        "date": "2026-10-01T23:06:56.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "Zero-shot (not trained on the benchmark's train split). Scored by the benchmark maintainers on the test split."
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 10,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 10,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "tardellirs/model-pulse",
+        "hotchpotch/S1MB-leaderboard",
+        "mstrasser/Jeff-adapters-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "gravitee-io/bert-small-pii-detection",
+  "revision": "f8c27a85c51c0168f07b9dcf00265bf0a4097939",
+  "manifest": "blake3:8ddca2b6217f361aa93a51a17300c62957f788f198b5948f0b4335c266dfd2ed",
+  "addressed": true,
+  "generated": "2026-10-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/gravitee-io/bert-small-pii-detection",
+    "readme": "file:README.md@sha256:2b047773ebf24c021432eea343ffc15e35603aa2895d3ccdf95b8d448fef43e6",
+    "config": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8"
+  },
+  "summary": {
+    "value": "Detect personally identifiable information (PII) spans in english text. Suitable for privacy filtering, redaction pipelines, and data-leak prevention particularly on structured data (JSON, HTML, XML, SQL, Document)",
+    "source": "file:README.md@sha256:2b047773ebf24c021432eea343ffc15e35603aa2895d3ccdf95b8d448fef43e6"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 28527155,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "prajjwal1/bert-small"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-09-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-05-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1263397,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 4,
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30522,
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:6757df1ae2ec9ca16cef63009af337a66573d06c721d03c7820590f69eefa6c8#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2110.01518",
+        "title": "Generalization in NLI: Ways (Not) To Go Beyond Simple Heuristics",
+        "first_author": "Prajjwal Bhargava",
+        "authors": 3,
+        "year": "2021"
+      },
+      {
+        "id": "1908.08962",
+        "title": "Well-Read Students Learn Better: On the Importance of Pre-training Compact Models",
+        "first_author": "Iulia Turc",
+        "authors": 4,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "gravitee-io/pii-detection-dataset"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 9,
+      "top": [
+        "tardellirs/model-pulse",
+        "gravitee-io/bert-pii",
+        "cleanroom-ai/pii-privacy-redaction"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

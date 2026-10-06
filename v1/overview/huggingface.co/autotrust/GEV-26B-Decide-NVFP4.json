@@ -1,0 +1,188 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autotrust/GEV-26B-Decide-NVFP4",
+  "revision": "26e8e3137156bd6b80f0e1a78ce46717ef3e363e",
+  "manifest": "blake3:9d9294846eaaee5e095f7e2da57f66d6e70fc107ade622d76eabc609061c93b9",
+  "addressed": true,
+  "generated": "2026-10-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autotrust/GEV-26B-Decide-NVFP4",
+    "readme": "file:README.md@sha256:2d6788e8b5df338e048e32d4afeeab5281a9e944fafa51319fd03b6229774b51",
+    "config": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8"
+  },
+  "summary": {
+    "value": "This repository is autotrust/GEV-26B-Decide with its 3,840 routed expert MLPs (30 layers × 128 experts) quantized to NVFP4. Everything else is the bf16 model unchanged: attention, the dense MLP of every layer, the routers, the vision tower, the lmhead, the System 1 adapter, the decision head and the temperatures.",
+    "source": "file:README.md@sha256:2d6788e8b5df338e048e32d4afeeab5281a9e944fafa51319fd03b6229774b51"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 14386943566,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#top_k_experts"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 79%, BF16 21%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "autotrust/GEV-26B-Decide"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 35,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9282,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2816,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#top_k_experts"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:58bd32bea3d9fc2ada7e3a6296a4c29f2c633a7b8707faf3c3e653a12ae4aaa8#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Decision Index suite 0.2 (edition 0.2.1)",
+        "task": "Decision Index (balanced skill), bf16 GEV-26B-Decide",
+        "value": 62.48,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Blockway/Agens-Volundr-32B-Preview",
+  "revision": "7cea75eb72c58284e86f6b048ab87712665ed206",
+  "manifest": "blake3:a20eefe186188ff4bf228fc9bd523331d6cd2eebc539f22e08dd87d8aefc3a70",
+  "addressed": true,
+  "generated": "2026-10-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Blockway/Agens-Volundr-32B-Preview",
+    "readme": "file:README.md@sha256:d759895d68a7b621c8ee61993b645182cf72a6bc48861b200d4b287596f29921",
+    "config": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38"
+  },
+  "summary": {
+    "value": "Agens Volundr 32B is an open-weights model from Blockway, built for reasoning, coding and agent work. This is a Preview release: the architecture, format and post-training pipeline are final; continued pre-training is still running and the full v1 will replace this checkpoint.",
+    "source": "file:README.md@sha256:d759895d68a7b621c8ee61993b645182cf72a6bc48861b200d4b287596f29921"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 32688700242,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Volundr",
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#model_type"
+    },
+    "architecture_id": {
+      "value": "volundr",
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "yue"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 38,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 156,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 72,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageTextToText",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}
