@@ -1,0 +1,141 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "perplexity-ai/pplx-decider-v1.1-27b",
+  "revision": "3b45dead91dfa6d95aad6b95764a606fab2bf7a6",
+  "manifest": "blake3:8226ae1d77eeecf4c7304f69c8f17222ea66721310ccf091fbdf06a756932853",
+  "addressed": true,
+  "generated": "2026-10-07",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/perplexity-ai/pplx-decider-v1.1-27b",
+    "readme": "file:README.md@sha256:8886d8a4bed44995a03443f1fa6de4c7103c51f9d979772d48a3fcd5b1a82210",
+    "config": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3"
+  },
+  "summary": {
+    "value": "pplx-decider-v1.1-27b is an update of our pplx-decider-v1-27b model, that boost the Decision Index score from 56.4 to 61.56, now outperforming Jev by more than 3.5 points, while using the same backbone.",
+    "source": "file:README.md@sha256:8886d8a4bed44995a03443f1fa6de4c7103c51f9d979772d48a3fcd5b1a82210"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 26085330160,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "pytorch",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 33,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 170,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3#vision_config"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

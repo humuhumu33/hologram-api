@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nace-ai/drex-dlm",
+  "revision": "d407a08085323d775c2dc6a3118fb5dce2f716ad",
+  "manifest": "blake3:c2e6cf97d26db25c343ab667fb601ee65e214201f28b32b93407bdcbd2c1d70a",
+  "addressed": true,
+  "generated": "2026-10-07",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nace-ai/drex-dlm",
+    "readme": "file:README.md@sha256:4de98ba60045e8719788e69255e6523e3699b5b82ef9f1c92f4591b228e7ef85",
+    "config": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94"
+  },
+  "summary": {
+    "value": "We introduce Drex DLM from Nace.AI, a decision model that answers typed questions about a given context. Pass that context as state, provide one or more named questions, and get a probability for every option.",
+    "source": "file:README.md@sha256:4de98ba60045e8719788e69255e6523e3699b5b82ef9f1c92f4591b228e7ef85"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8190735360,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Edlm",
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#model_type"
+    },
+    "architecture_id": {
+      "value": "edlm",
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/Efficient-DLM-8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 19,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 40,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5cccb45640b20e5d27a5ae503692cbb528c11e6df62417b0619744266abf9b94#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "hugging-apps/drex-dlm"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

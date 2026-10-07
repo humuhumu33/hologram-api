@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "google/embeddinggemma-2",
+  "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+  "manifest": "blake3:5fbc86fff7c3506d10c17f64145b94d87e45cf6419b15905f35fbd3475ea0e29",
+  "addressed": true,
+  "generated": "2026-10-07",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/google/embeddinggemma-2",
+    "readme": "file:README.md@sha256:b677a0ee2818c36f091b65fd3d9b4baea9f04d53b02b49cae916c74bf9682037",
+    "config": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3"
+  },
+  "summary": {
+    "value": "EmbeddingGemma 2 is an open multimodal embedding model built by Google DeepMind which maps text (incl. code), images, video, and audio inputs—and combinations thereof—into a single, unified 768-dimensional vector space.",
+    "source": "file:README.md@sha256:b677a0ee2818c36f091b65fd3d9b4baea9f04d53b02b49cae916c74bf9682037"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 744371512,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Embedding Gemma 2",
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#model_type"
+    },
+    "architecture_id": {
+      "value": "embedding_gemma2",
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 734,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7562,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#hidden_size"
+    },
+    "heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#max_position_embeddings"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#vision_config"
+    },
+    "audio_encoder": {
+      "value": "gemma4_audio",
+      "source": "file:config.json@sha256:b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3#audio_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 21,
+        "Fine tuned": 22
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 21,
+        "finetune": 22
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 10,
+      "top": [
+        "tardellirs/model-pulse",
+        "webml-community/embeddinggemma-2-webgpu",
+        "google/embedding-draw-challenge"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
