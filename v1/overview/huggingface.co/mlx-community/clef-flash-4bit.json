@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "mlx-community/clef-flash-4bit",
-  "revision": "140bf7e037f5fa95a96535feca112f46c15927cf",
-  "manifest": "blake3:a39dfd6d166483d15f54e25e1bfa36e055b46bc014fd5a003fe536e9c3f9097d",
+  "revision": "3fb6bec9d8017565c767a9f3796d49f7d2bdba6c",
+  "manifest": "blake3:0e9498da7a7db6b136df5682d33b5729a8bda4117f3744897e03ae567dbecec7",
   "addressed": true,
-  "generated": "2026-10-03",
+  "generated": "2026-10-08",
   "provenance": {
     "api": "https://huggingface.co/api/models/mlx-community/clef-flash-4bit",
-    "readme": "file:README.md@sha256:638f113d80ea2f4a6793adbd3786cbab2ac447716ab481a407d2c395cc58e72a",
+    "readme": "file:README.md@sha256:98c3712a002afd107eaad221499d9c086bd106445757fbfcd96d17bbf03daa1e",
     "config": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1"
   },
   "summary": {
     "value": "Clef turns a state (text, JSON, images, or video) plus a schema of typed questions into a probability for every allowed option, in a single forward pass. It is not a chat model — mlxvlm.generate, mlxlm.generate, and LM Studio will load the backbone but produce meaningless text.",
-    "source": "file:README.md@sha256:638f113d80ea2f4a6793adbd3786cbab2ac447716ab481a407d2c395cc58e72a"
+    "source": "file:README.md@sha256:98c3712a002afd107eaad221499d9c086bd106445757fbfcd96d17bbf03daa1e"
   },
   "glance": {
     "task": {
@@ -82,15 +82,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-02",
+      "value": "2026-10-07",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 13,
+      "value": 24,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1074,
+      "value": 3804,
       "source": "api:downloadsAllTime"
     }
   },
@@ -131,5 +131,55 @@
       "value": "qwen3_5_vision",
       "source": "file:config.json@sha256:c323f36eb35fb9349b2bde60b3e16ee3d86316e20a5166c91f4a0585286f0ec1#vision_config"
     }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.701,
+        "date": "2026-10-08T07:00:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "General model (any question schema at request time), not fitted by us on this benchmark's train split. Scored on the full 400-case test split (2,000 decisions): one request per case with all five questions, text only, the benchmark's own metrics, MLX on an Apple M3 Max."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.2126,
+        "date": "2026-10-08T07:00:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "General model (any question schema at request time), not fitted by us on this benchmark's train split. Scored on the full 400-case test split (2,000 decisions): one request per case with all five questions, text only, the benchmark's own metrics, MLX on an Apple M3 Max."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.1104,
+        "date": "2026-10-08T07:00:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "General model (any question schema at request time), not fitted by us on this benchmark's train split. Scored on the full 400-case test split (2,000 decisions): one request per case with all five questions, text only, the benchmark's own metrics, MLX on an Apple M3 Max."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.1204,
+        "date": "2026-10-08T07:00:46.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions",
+        "notes": "General model (any question schema at request time), not fitted by us on this benchmark's train split. Scored on the full 400-case test split (2,000 decisions): one request per case with all five questions, text only, the benchmark's own metrics, MLX on an Apple M3 Max."
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
   }
 }

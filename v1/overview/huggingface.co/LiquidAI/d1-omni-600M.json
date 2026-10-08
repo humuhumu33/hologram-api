@@ -1,0 +1,199 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "LiquidAI/d1-omni-600M",
+  "revision": "02b55d7076f15129e59ab3f94783f32c4b088674",
+  "manifest": "blake3:b7512d7a5fa5b06b854546757cddc3bc5a90291bda96580db865bb024c87aeac",
+  "addressed": true,
+  "generated": "2026-10-08",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/LiquidAI/d1-omni-600M",
+    "readme": "file:README.md@sha256:6577bee7b8cb23b595a90e99aa82007f57214d447f0ebcdfb2e812a7123d57bf",
+    "config": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619"
+  },
+  "summary": {
+    "value": "d1-omni-600M is a 600M parameter decision model built on LFM2.5-Encoder-350M. You give it a state (text or JSON, with images or a voice clip) and a set of named questions.",
+    "source": "file:README.md@sha256:6577bee7b8cb23b595a90e99aa82007f57214d447f0ebcdfb2e812a7123d57bf"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 587161089,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "D1 Omni",
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#model_type"
+    },
+    "architecture_id": {
+      "value": "d1_omni",
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "de",
+        "es",
+        "fr",
+        "it",
+        "nl",
+        "pl",
+        "pt",
+        "ar",
+        "hi",
+        "ja",
+        "ru",
+        "tr",
+        "vi",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM2.5-Encoder-350M"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 60,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8487,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 16,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 65536,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#rope_theta"
+    },
+    "vision_encoder": {
+      "value": "siglip2_vision_model",
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#vision_config"
+    },
+    "audio_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:dfccae241822f81752426629c88c8b8d7efdd03dd19418b6645c604fad43d619#audio_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 7,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 7,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2511.23404",
+        "title": "LFM2 Technical Report",
+        "first_author": "Alexander Amini",
+        "authors": 33,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "tardellirs/model-pulse",
+        "muratcanlaloglu/TurkishDecisionBenchmark",
+        "shreyask/d1-omni-voice"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

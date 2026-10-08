@@ -1,0 +1,147 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "raincandy-u/MacroStories",
+  "revision": "dc1ef998bf5331f7f70a77c815ed3e4f643a0ba7",
+  "manifest": "blake3:478108addc47ab97d19e6cb6fb965521d867414c9490b2614689f25ccceb5d73",
+  "addressed": true,
+  "generated": "2026-10-08",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/raincandy-u/MacroStories",
+    "readme": "file:README.md@sha256:f2f8a6a742a539dd5eaa75cd9d480bd1ea914600451545db4cf6aeb7ec7edffd",
+    "config": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea"
+  },
+  "summary": {
+    "value": "MacroStories is a 19,969-parameter autoregressive Transformer that generates complete English children's stories from a single start token. Her FP32 weights occupy just 81,364 bytes—smaller than many PNG images.",
+    "source": "file:README.md@sha256:f2f8a6a742a539dd5eaa75cd9d480bd1ea914600451545db4cf6aeb7ec7edffd"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 19969,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Ouro",
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#model_type"
+    },
+    "architecture_id": {
+      "value": "ouro",
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 19,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 296,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 1,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 32,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#hidden_size"
+    },
+    "heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 378,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:fba7d0c516d8c60bde7481d63de9229e33e8d7ccece778ad3103176531e80bea#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2305.07759",
+        "title": "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?",
+        "first_author": "Ronen Eldan",
+        "authors": 2,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "danmoreng/macrostories-browser"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

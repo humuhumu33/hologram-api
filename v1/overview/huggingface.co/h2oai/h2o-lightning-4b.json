@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "h2oai/h2o-lightning-4b",
+  "revision": "672dc01ed37a516357cd3c7da777c96699d3f16c",
+  "manifest": "blake3:2af93ebd9c4b6a96644220d2118a953701c3079da6fb6e41fe6bb69dce3441ec",
+  "addressed": true,
+  "generated": "2026-10-08",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/h2oai/h2o-lightning-4b",
+    "readme": "file:README.md@sha256:e6a7cdff6e16cfbf3b7f998c3a8c75bb7f6d7ec527321e87b6ebc9c2f8abcad0",
+    "config": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba"
+  },
+  "summary": {
+    "value": "H2O-Lightning-4B is a 4B-parameter decision model from H2O.ai, built on Qwen/Qwen3.5-4B. It answers typed decision questions about a record (a document, a ticket, a policy, a conversation) and about images that come with the record (photos, screenshots, scanned documents, charts).",
+    "source": "file:README.md@sha256:e6a7cdff6e16cfbf3b7f998c3a8c75bb7f6d7ec527321e87b6ebc9c2f8abcad0"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4539265536,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 261,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:9217764b18e7182502c371c4309ec1757e1ba8d9ef2b9b1efbaf94de2d331bba#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/h2o-lightning-4b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

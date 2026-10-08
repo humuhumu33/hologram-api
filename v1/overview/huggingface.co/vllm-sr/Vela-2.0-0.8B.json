@@ -1,0 +1,144 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "vllm-sr/Vela-2.0-0.8B",
+  "revision": "326b01d81f61fff7fd4ae570e54b87a49119e490",
+  "manifest": "blake3:d9ae57abf5b7d0deba8ac5d3a06a6d71add735d91de97ed4ac25e123eeb4eb6d",
+  "addressed": true,
+  "generated": "2026-10-08",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/vllm-sr/Vela-2.0-0.8B",
+    "readme": "file:README.md@sha256:501ff00d0ca959364db922abe32734553e79cce9cd46b3abf6f2f52e91c2d37d",
+    "config": "file:config.json@sha256:0637ca193b9159b6ece25837913956477164d3392d9b5dd1e6b74b95a484004a"
+  },
+  "summary": {
+    "value": "The compact hybrid member of Vela 2.0: a 756M-parameter model for multilingual routing, safety checks and span-level decisions through one interface.",
+    "source": "file:README.md@sha256:501ff00d0ca959364db922abe32734553e79cce9cd46b3abf6f2f52e91c2d37d"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 754565953,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Vela2 Decoder",
+      "source": "file:config.json@sha256:0637ca193b9159b6ece25837913956477164d3392d9b5dd1e6b74b95a484004a#model_type"
+    },
+    "architecture_id": {
+      "value": "vela2-decoder",
+      "source": "file:config.json@sha256:0637ca193b9159b6ece25837913956477164d3392d9b5dd1e6b74b95a484004a#model_type"
+    },
+    "precision": {
+      "value": "BF16 66%, FP32 34%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ar",
+        "zh",
+        "cs",
+        "nl",
+        "en",
+        "fr",
+        "de",
+        "hi",
+        "it",
+        "ja",
+        "ko",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sv",
+        "th"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "vllm-sr/Decision-2.0-Eos-0.8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 87,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+      "ToxicityPrompts/PolyGuardMix",
+      "nvidia/Nemotron-Safety-Guard-Dataset-v3",
+      "microsoft/llmail-inject-challenge",
+      "OpenSafetyLab/Salad-Data",
+      "KRLabsOrg/lettucedetect-prose-hallucination",
+      "KRLabsOrg/lettucedetect-code-hallucination",
+      "numind/NuNER",
+      "urchade/pile-mistral-v0.1",
+      "knowledgator/GLINER-multi-task-synthetic-data",
+      "nlpaueb/finer-139",
+      "tonytan48/Re-DocRED",
+      "MultiCoNER/multiconer_v2",
+      "martinjosifoski/SynthIE",
+      "rajpurkar/squad_v2",
+      "hotpotqa/hotpot_qa",
+      "google-research-datasets/natural_questions",
+      "KRLabsOrg/verbatim-spans",
+      "KRLabsOrg/tool-output-extraction-swebench"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "vllm-sr/vela2-studio"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
