@@ -1,47 +1,35 @@
 {
   "format": "hologram.overview/v1",
   "name": "fastino/GLiNER2.5-multi-Decide",
-  "revision": "a35a0cd3b7a0f00f2effc576f454cd48fa98aa5f",
-  "manifest": "blake3:0e2c9092fe2cfc84d55dff16539040c56597cdd4a0b788e0cb14e71a813bfdfe",
+  "revision": "e173bca1f0c4217d7a55b3b0c705d5ece8a0218d",
+  "manifest": "blake3:37bd3f70db1240c4065fd71b190049ad0ba705d8bdaa276f3dd344135b3072e8",
   "addressed": true,
-  "generated": "2026-10-06",
+  "generated": "2026-10-09",
   "provenance": {
     "api": "https://huggingface.co/api/models/fastino/GLiNER2.5-multi-Decide",
-    "readme": "file:README.md@sha256:989d19265d83c9a3886577b5d3851e6c58b585f15d5b2912e925655b201fc42d",
-    "config": "file:config.json@sha256:be5123080c0f3f01b938bc46a5dd0d7a2e515a34f6df798dfd70ed04c277c8bf"
+    "readme": "file:README.md@sha256:55531b81804b6c8160d41de57ff9559ca20b2f3779ab6e36e471dcd51127d92b",
+    "config": "file:config.json@sha256:aa29cd584316b61b0bfed94d03ee1cfdaf28b46a37686293742929c49b8bd2f7"
   },
   "summary": {
     "value": "The 287M multilingual classification model in the GLiNER2.5 family. Pass any label set at call time: intent, routing, sentiment, priority, policy, and multi-label tags, in a single forward pass.",
-    "source": "file:README.md@sha256:989d19265d83c9a3886577b5d3851e6c58b585f15d5b2912e925655b201fc42d"
+    "source": "file:README.md@sha256:55531b81804b6c8160d41de57ff9559ca20b2f3779ab6e36e471dcd51127d92b"
   },
   "glance": {
     "task": {
-      "value": "Token classification",
+      "value": "schema-extraction",
       "source": "api:pipeline_tag"
-    },
-    "input": {
-      "value": [
-        "text"
-      ],
-      "source": "derived:pipeline_tag"
-    },
-    "output": {
-      "value": [
-        "label"
-      ],
-      "source": "derived:pipeline_tag"
     },
     "parameters": {
       "value": 287355159,
       "source": "api:safetensors.total"
     },
     "architecture": {
-      "value": "Extractor",
-      "source": "file:config.json@sha256:be5123080c0f3f01b938bc46a5dd0d7a2e515a34f6df798dfd70ed04c277c8bf#model_type"
+      "value": "Gliner2",
+      "source": "file:config.json@sha256:aa29cd584316b61b0bfed94d03ee1cfdaf28b46a37686293742929c49b8bd2f7#model_type"
     },
     "architecture_id": {
-      "value": "extractor",
-      "source": "file:config.json@sha256:be5123080c0f3f01b938bc46a5dd0d7a2e515a34f6df798dfd70ed04c277c8bf#model_type"
+      "value": "gliner2",
+      "source": "file:config.json@sha256:aa29cd584316b61b0bfed94d03ee1cfdaf28b46a37686293742929c49b8bd2f7#model_type"
     },
     "precision": {
       "value": "FP32",
@@ -52,7 +40,7 @@
       "source": "api:safetensors|gguf"
     },
     "library": {
-      "value": "gliner2",
+      "value": "transformers",
       "source": "api:library_name"
     },
     "license": {
@@ -85,22 +73,21 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-28",
+      "value": "2026-10-08",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 54,
+      "value": 59,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 12439,
+      "value": 13935,
       "source": "api:downloadsAllTime"
     }
   },
   "family": {
     "children": {
       "value": {
-        "Adapter": 1,
         "Quantized": 1,
         "Fine tuned": 3
       },
@@ -108,11 +95,16 @@
     },
     "children_raw": {
       "value": {
-        "adapter": 1,
         "quantized": 1,
         "finetune": 3
       },
       "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "Gliner2ForSchemaExtraction",
+      "source": "api:transformersInfo.auto_model"
     }
   },
   "papers": {

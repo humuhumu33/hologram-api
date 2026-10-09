@@ -1,0 +1,197 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Phocinae/Phocinae-Largha-150M-v1",
+  "revision": "9a37d71465be4b2abb8a64c5270008c08897cd33",
+  "manifest": "blake3:dc1874424e0afd8f3b0c1c8e708c913b22792078050e434f1364913a2a74d83c",
+  "addressed": true,
+  "generated": "2026-10-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Phocinae/Phocinae-Largha-150M-v1",
+    "readme": "file:README.md@sha256:bf42e9ab2e3a8250a5c19b5921787192daf41f7b4f6d9ced3b8d2c949ca6dc93",
+    "config": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c"
+  },
+  "summary": {
+    "value": "斑海豹 Largha, the spotted seal: a 144.3M decision model (en-first; zh evaluated on machine-translated cases) (150M-class) for structured decisions — one forward pass per decision, on your own hardware.",
+    "source": "file:README.md@sha256:bf42e9ab2e3a8250a5c19b5921787192daf41f7b4f6d9ced3b8d2c949ca6dc93"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 144292870,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "jhu-clsp/mmBERT-small"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 108,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 89,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#hidden_size"
+    },
+    "heads": {
+      "value": 6,
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 256000,
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.906,
+        "date": "2026-10-09",
+        "verified": false,
+        "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
+        "notes": "Specialist: fitted on the Typed Decisions train split (mmBERT-small base) — NOT zero-shot; per the benchmark README this belongs to the \"fitted/fine-tuned on train\" table and is not comparable with the zero-shot table. Test split, 400 cases / 2,000 decisions, one request per case with the state and all five questions (README request shape), all answered, zero errors. Accuracy = agreement with the gold label. One forward pass per question, no generated tokens. Self-reported (self-host, no verifyToken). The submitted accuracy sits above the 0.735 teacher self-agreement ceiling — per the README this indicates the model is learning the teacher's quirks (label-specificity), also probed via JevBench on the model card. zh (machine-translated test cases; the training mix includes machine-translated + native Chinese rows) has no benchmark task; see the model card.\n"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.0548,
+        "date": "2026-10-09",
+        "verified": false,
+        "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
+        "notes": "KL(gold || prediction), mean over the 2,000 decisions; scored with the benchmark's conventions (reproduced exactly from the README's Uniform reference row). Specialist: fitted on the train split — not comparable with the zero-shot table. Self-reported.\n"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.0248,
+        "date": "2026-10-09",
+        "verified": false,
+        "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
+        "notes": "Brier summed over options, mean over the 2,000 decisions; scored with the benchmark's conventions (reproduced exactly from the README's Uniform reference row). Specialist: fitted on the train split — not comparable with the zero-shot table. Self-reported.\n"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.2519,
+        "date": "2026-10-09",
+        "verified": false,
+        "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
+        "notes": "ECE with the shipped temperature column (en, 15 equal-width bins), as computed by our scorer and documented in BENCHMARKS.md (the benchmark README warns that submitters compute ECE differently). An optional bundled calibration column (calib/) reaches 0.0168. Self-reported (self-host, no verifyToken).\n"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "LocalLLaMA/typed-decisions"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "hugging-apps/phocinae-largha-150m"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

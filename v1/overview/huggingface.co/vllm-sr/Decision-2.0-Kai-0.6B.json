@@ -1,22 +1,22 @@
 {
   "format": "hologram.overview/v1",
   "name": "vllm-sr/Decision-2.0-Kai-0.6B",
-  "revision": "cd49ea3813fd8ba0928a9a23ef6c9a0f2f0cd764",
-  "manifest": "blake3:eb245698fd11c20524dcf196490cd39b6fb940c9d2fd15ebe195142ed53cc8f9",
+  "revision": "61f9343673c727fba5dce65b69c6675cd7b24ff0",
+  "manifest": "blake3:eaeab0f9fe557a6720e86eed2d9bde3730b625b654c0f0c476a8cf91d2454f70",
   "addressed": true,
-  "generated": "2026-10-04",
+  "generated": "2026-10-09",
   "provenance": {
     "api": "https://huggingface.co/api/models/vllm-sr/Decision-2.0-Kai-0.6B",
-    "readme": "file:README.md@sha256:155fe13afc8f4d75ceb24bb4f29f8667f9650a54c1195b19f3f401d6497ced75",
+    "readme": "file:README.md@sha256:9415634ca5f130849511c89ab4a43ab9497a345ce38c0b0227e247b2ba422b64",
     "config": "file:config.json@sha256:35ce70886f7642ec5eacf969e27da404915824aa25f6a30a19a1107cb2ec99b3"
   },
   "summary": {
     "value": "Decision-2.0-Kai-0.6B is the 0.6B model of Decision 2.0, the decision models of vLLM Semantic Router. Give it an input (text or JSON) and the questions you need answered: pick one of several options, say yes or no, or rate on a scale.",
-    "source": "file:README.md@sha256:155fe13afc8f4d75ceb24bb4f29f8667f9650a54c1195b19f3f401d6497ced75"
+    "source": "file:README.md@sha256:9415634ca5f130849511c89ab4a43ab9497a345ce38c0b0227e247b2ba422b64"
   },
   "glance": {
     "task": {
-      "value": "Embeddings",
+      "value": "Zero shot classification",
       "source": "api:pipeline_tag"
     },
     "input": {
@@ -27,7 +27,7 @@
     },
     "output": {
       "value": [
-        "vector"
+        "label"
       ],
       "source": "derived:pipeline_tag"
     },
@@ -66,28 +66,30 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-03",
+      "value": "2026-10-08",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 18,
+      "value": 34,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 485,
+      "value": 1300,
       "source": "api:downloadsAllTime"
     }
   },
   "family": {
     "children": {
       "value": {
-        "Quantized": 1
+        "Adapter": 1,
+        "Quantized": 4
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 1
+        "adapter": 1,
+        "quantized": 4
       },
       "source": "api:childrenModelCount"
     }
@@ -100,8 +102,9 @@
   },
   "spaces": {
     "value": {
-      "count": 2,
+      "count": 3,
       "top": [
+        "multimodalart/jev-decision-index",
         "tardellirs/model-pulse",
         "vllm-sr/decision-studio"
       ]

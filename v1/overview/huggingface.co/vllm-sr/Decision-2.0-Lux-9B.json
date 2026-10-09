@@ -1,22 +1,22 @@
 {
   "format": "hologram.overview/v1",
   "name": "vllm-sr/Decision-2.0-Lux-9B",
-  "revision": "78bf3c03d9147aeb30b641edfe0e30ed04887ca5",
-  "manifest": "blake3:64a3da22490621c5c0eebb66399549add70f6fad95a3af6cf246a748252765f4",
+  "revision": "e0cd13890ba2995c8ad1a464ff0cbd817f1aed7a",
+  "manifest": "blake3:28692b5c3d57d0693b87022fcb0ab48a4bad27c93cc99d70401858c7501fc16c",
   "addressed": true,
-  "generated": "2026-10-04",
+  "generated": "2026-10-09",
   "provenance": {
     "api": "https://huggingface.co/api/models/vllm-sr/Decision-2.0-Lux-9B",
-    "readme": "file:README.md@sha256:6eb1f152418ea30ef2a46f641a5b00a758805efc3d9a96790e7685d721b54405",
+    "readme": "file:README.md@sha256:a3f5bff7706263f3924716dadb36638492a9d647a9b6f5185119f499d1c23bb1",
     "config": "file:config.json@sha256:31d19d0b9ea246729c9b2964b219728ac0c51714b8c3bb231d757bef2d1cda2c"
   },
   "summary": {
     "value": "Decision-2.0-Lux-9B is the 9B model of Decision 2.0, the decision models of vLLM Semantic Router. Give it an input (text or JSON) and the questions you need answered: pick one of several options, say yes or no, or rate on a scale.",
-    "source": "file:README.md@sha256:6eb1f152418ea30ef2a46f641a5b00a758805efc3d9a96790e7685d721b54405"
+    "source": "file:README.md@sha256:a3f5bff7706263f3924716dadb36638492a9d647a9b6f5185119f499d1c23bb1"
   },
   "glance": {
     "task": {
-      "value": "Embeddings",
+      "value": "Zero shot classification",
       "source": "api:pipeline_tag"
     },
     "input": {
@@ -27,7 +27,7 @@
     },
     "output": {
       "value": [
-        "vector"
+        "label"
       ],
       "source": "derived:pipeline_tag"
     },
@@ -66,28 +66,32 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-03",
+      "value": "2026-10-08",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 19,
+      "value": 37,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 257,
+      "value": 746,
       "source": "api:downloadsAllTime"
     }
   },
   "family": {
     "children": {
       "value": {
-        "Quantized": 1
+        "Adapter": 1,
+        "Quantized": 3,
+        "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 1
+        "adapter": 1,
+        "quantized": 3,
+        "finetune": 1
       },
       "source": "api:childrenModelCount"
     }
@@ -100,11 +104,11 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 4,
       "top": [
+        "multimodalart/jev-decision-index",
         "tardellirs/model-pulse",
-        "vllm-sr/decision-studio",
-        "hugging-apps/decision-2-lux-9b"
+        "vllm-sr/decision-studio"
       ]
     },
     "source": "api:spaces"

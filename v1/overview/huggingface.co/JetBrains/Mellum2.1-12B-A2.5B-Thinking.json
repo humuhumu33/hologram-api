@@ -1,0 +1,320 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "JetBrains/Mellum2.1-12B-A2.5B-Thinking",
+  "revision": "92ddae9fc7665e9f801d141d2e5a6b2caf2460c4",
+  "manifest": "blake3:49f5c1b8a3ee63195552e447d187d2dd4dae4e704573d6b2e099d68505423568",
+  "addressed": true,
+  "generated": "2026-10-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/JetBrains/Mellum2.1-12B-A2.5B-Thinking",
+    "readme": "file:README.md@sha256:3da5f8b9862c7b3560e631d778e2402f222d87f1a332c34696dfa399608824a7",
+    "config": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541"
+  },
+  "summary": {
+    "value": "Mellum2.1 is the next version of Mellum2 Thinking. The architecture is unchanged (a 12B mixture-of-experts model with 2.5B active parameters), and almost all of the work for this version went into post-training, primarily reinforcement learning (RL):",
+    "source": "file:README.md@sha256:3da5f8b9862c7b3560e631d778e2402f222d87f1a332c34696dfa399608824a7"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 12149923072,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Mellum",
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#model_type"
+    },
+    "architecture_id": {
+      "value": "mellum",
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "JetBrains/Mellum2-12B-A2.5B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 56,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 198,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2304,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 98304,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#max_position_embeddings"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:f43d018246094dee6dca455b3072766b6acbefd1ac8e7fe664df34710606a541#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LiveCodeBench v6",
+        "task": "pass@1",
+        "value": 82,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HumanEval+",
+        "task": "pass@1",
+        "value": 91.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MBPP+",
+        "task": "pass@1",
+        "value": 79.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "AIME 25/26",
+        "task": "exact match",
+        "value": 83.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GSM-Plus",
+        "task": "exact match",
+        "value": 88.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SWE-bench Verified",
+        "task": "resolved rate",
+        "value": 47,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Terminal-Bench 2.1",
+        "task": "resolved rate",
+        "value": 17.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SWE-bench Pro",
+        "task": "resolved rate",
+        "value": 28,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "BFCL v4",
+        "task": "accuracy",
+        "value": 62.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "WorkBench",
+        "task": "task completion",
+        "value": 44.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "ToolHop",
+        "task": "accuracy",
+        "value": 49.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "IFEval",
+        "task": "accuracy",
+        "value": 90.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GPQA Diamond",
+        "task": "accuracy",
+        "value": 64.6,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MMLU-Redux",
+        "task": "accuracy",
+        "value": 87.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MixEval-Hard",
+        "task": "accuracy",
+        "value": 46.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "XSTest",
+        "task": "safe compliance",
+        "value": 88.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HarmBench (harmful rate, lower is better)",
+        "task": "harmful rate",
+        "value": 8.5,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 8
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 8
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2605.31268",
+        "title": "Mellum2 Technical Report",
+        "first_author": "Marko Kojic",
+        "authors": 9,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "tardellirs/model-pulse",
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "Clay1024/mellum21-thinking"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

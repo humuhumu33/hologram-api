@@ -1,0 +1,304 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lightonai/LightOnOCR-3-4B",
+  "revision": "b71010f095dc3735de7ee6b9969bff8f8f50b39a",
+  "manifest": "blake3:8723d96c7b37e48aa25c48432fe4122186373743399849e9b5dfa952450884bb",
+  "addressed": true,
+  "generated": "2026-10-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lightonai/LightOnOCR-3-4B",
+    "readme": "file:README.md@sha256:4c56af1be12a620d0cadbb09976c0cd02fac5557f0f780be747d35bd6689fc54",
+    "config": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0"
+  },
+  "summary": {
+    "value": "📄 Paper | 📝 Blog | 🚀 Demo | 💻 GitHub | 🤗 LightOnOCR-2-1B",
+    "source": "file:README.md@sha256:4c56af1be12a620d0cadbb09976c0cd02fac5557f0f780be747d35bd6689fc54"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4539265536,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 80,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:99b4c363a998c2d8c5ed5b3f3a40ec5cb97a156034df5002d0d789c74324f5f0#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "overall",
+        "value": 86.3,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "arxiv_math",
+        "value": 91.1,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans_math",
+        "value": 89.1,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "table_tests",
+        "value": 90.2,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "old_scans",
+        "value": 52.5,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "headers_footers",
+        "value": 89.2,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "multi_column",
+        "value": 85.6,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "long_tiny_text",
+        "value": 93.2,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "allenai/olmOCR-bench",
+        "task": "baseline",
+        "value": 99.5,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 75.1,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 83.8,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 66.1,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 89.9,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 67.6,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 68.3,
+        "date": "2026-10-08",
+        "verified": false,
+        "source": "https://huggingface.co/blog/lightonai/lightonocr-3"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2601.14251",
+        "title": "LightOnOCR: A 1B End-to-End Multilingual Vision-Language Model for State-of-the-Art OCR",
+        "first_author": "Said Taghadouini",
+        "authors": 3,
+        "year": "2026"
+      },
+      {
+        "id": "2412.13663",
+        "title": "Smarter, Better, Faster, Longer: A Modern Bidirectional Encoder for Fast, Memory Efficient, and Long Context Finetuning and Inference",
+        "first_author": "Benjamin Warner",
+        "authors": 14,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "tardellirs/model-pulse",
+        "lightonai/LightOnOCR-3-Demo",
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

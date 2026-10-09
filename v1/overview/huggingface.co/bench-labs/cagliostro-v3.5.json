@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "bench-labs/cagliostro-v3.5",
-  "revision": "0795c7c2b663a733712a6e7628fdb3d1e951400a",
-  "manifest": "blake3:01cc6b3b088a685e2a5169280296c4b691d809359ed64a7a405f98b34cd85a45",
+  "revision": "2e3a2cdb72c0e979d498f2db00ed599e016ac95a",
+  "manifest": "blake3:9acab1315258f903235c487031ecb2653c7d7f3dacadc4436037a14cbacf053f",
   "addressed": true,
-  "generated": "2026-10-05",
+  "generated": "2026-10-09",
   "provenance": {
     "api": "https://huggingface.co/api/models/bench-labs/cagliostro-v3.5",
-    "readme": "file:README.md@sha256:cd829880d7000e5351dac983c43847376717c78a0581f2bad642c23886057039",
+    "readme": "file:README.md@sha256:ad60ca72fb772d5280bd2c26af7f80c9f7d070e44b313dc0528dd76326e64a5c",
     "config": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b"
   },
   "summary": {
-    "value": "A 146M parameter decoder-only language model. It is cagliostro-v3's final checkpoint with one more short training stage: 0.39B tokens of v3's own cooldown data mixed with how-to and textbook text from Cosmopedia.",
-    "source": "file:README.md@sha256:cd829880d7000e5351dac983c43847376717c78a0581f2bad642c23886057039"
+    "value": "The chat version is out: cagliostro-v3.5-chat, this model after one epoch of supervised fine-tuning on smol-smoltalk. It ends its own turns, follows system prompts, and comes out level with SmolLM2-135M-Instruct on MT-Bench.",
+    "source": "file:README.md@sha256:ad60ca72fb772d5280bd2c26af7f80c9f7d070e44b313dc0528dd76326e64a5c"
   },
   "glance": {
     "task": {
@@ -88,15 +88,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-04",
+      "value": "2026-10-08",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 12,
+      "value": 21,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 138,
+      "value": 643,
       "source": "api:downloadsAllTime"
     }
   },
@@ -134,6 +134,20 @@
       "source": "file:config.json@sha256:caf0686634f8da8ac180f7be73fa320f75c00fdc7dc3d853aee227c87f676e9b#tie_word_embeddings"
     }
   },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
   "run": {
     "auto_model": {
       "value": "AutoModelForCausalLM",
@@ -150,5 +164,15 @@
       "HuggingFaceTB/cosmopedia"
     ],
     "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "StentorLabs/SLM_Arena"
+      ]
+    },
+    "source": "api:spaces"
   }
 }

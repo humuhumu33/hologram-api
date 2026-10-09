@@ -1,0 +1,195 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepvk/USER2-base",
+  "revision": "94bbff0cc696f26dc93b275fc874657727df0c29",
+  "manifest": "blake3:d5d1db695003a0c722269eb70cb75093a66cc69bd61d889f9e4810df78a94d49",
+  "addressed": true,
+  "generated": "2026-10-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepvk/USER2-base",
+    "readme": "file:README.md@sha256:b706eccac4fdd9bb96e5154f7bfc4bfe8de223ed8e2f135b51006a1b47bbbbeb",
+    "config": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c"
+  },
+  "summary": {
+    "value": "USER2 is a new generation of the Universal Sentence Encoder for Russian, designed for sentence representation with long-context support of up to 8,192 tokens.",
+    "source": "file:README.md@sha256:b706eccac4fdd9bb96e5154f7bfc4bfe8de223ed8e2f135b51006a1b47bbbbeb"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 149014272,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ru"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "deepvk/RuModernBERT-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-02-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-03-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 29,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 558949,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50368,
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:05b36b716a11dcc12ea424d970e9e57427610ae42e9771e7027e0e424783123c#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2205.13147",
+        "title": "Matryoshka Representation Learning",
+        "first_author": "Aditya Kusupati",
+        "authors": 11,
+        "year": "2022"
+      },
+      {
+        "id": "2401.00368",
+        "title": "Improving Text Embeddings with Large Language Models",
+        "first_author": "Liang Wang",
+        "authors": 6,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "deepvk/ru-HNP",
+      "deepvk/ru-WANLI",
+      "deepvk/cultura_ru_ed",
+      "Shitao/bge-m3-data",
+      "CarlBrendt/Summ_Dialog_News",
+      "IlyaGusev/gazeta",
+      "its5Q/habr_qna",
+      "wikimedia/wikipedia",
+      "RussianNLP/wikiomnia"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 11,
+      "top": [
+        "tardellirs/model-pulse",
+        "mteb/leaderboard",
+        "sergeyzh/rusBEIR-lite"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

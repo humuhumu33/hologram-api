@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/mask2former-swin-large-ade-semantic",
+  "revision": "aa25c92404a40599614215e76514c79b427c7527",
+  "manifest": "blake3:285b0d932593c3678b366212d588ac0e3cdbca1fe646f44ab5e229acfd164e56",
+  "addressed": true,
+  "generated": "2026-10-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/mask2former-swin-large-ade-semantic",
+    "readme": "file:README.md@sha256:f9f97f6a088868c6c365b2b88a7df8a9f20a8df82f7494e61b19c3bbf367cc07",
+    "config": "file:config.json@sha256:573b9330846ed787069557d7eaf78d20a695a4ac7155b957becff02748a8d293"
+  },
+  "summary": {
+    "value": "Mask2Former model trained on ADE20k semantic segmentation (large-sized version, Swin backbone). It was introduced in the paper Masked-attention Mask Transformer for Universal Image Segmentation and first released in this repository.",
+    "source": "file:README.md@sha256:f9f97f6a088868c6c365b2b88a7df8a9f20a8df82f7494e61b19c3bbf367cc07"
+  },
+  "glance": {
+    "task": {
+      "value": "Image segmentation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "mask"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 215986594,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Mask2former",
+      "source": "file:config.json@sha256:573b9330846ed787069557d7eaf78d20a695a4ac7155b957becff02748a8d293#model_type"
+    },
+    "architecture_id": {
+      "value": "mask2former",
+      "source": "file:config.json@sha256:573b9330846ed787069557d7eaf78d20a695a4ac7155b957becff02748a8d293#model_type"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2023-01-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-09-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 25,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4857026,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 10,
+      "source": "file:config.json@sha256:573b9330846ed787069557d7eaf78d20a695a4ac7155b957becff02748a8d293#num_hidden_layers"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:573b9330846ed787069557d7eaf78d20a695a4ac7155b957becff02748a8d293#num_attention_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 10
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 10
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "Mask2FormerForUniversalSegmentation",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-segmentation"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2112.01527",
+        "title": "Masked-attention Mask Transformer for Universal Image Segmentation",
+        "first_author": "Bowen Cheng",
+        "authors": 5,
+        "year": "2021"
+      },
+      {
+        "id": "2107.06278",
+        "title": "Per-Pixel Classification is Not All You Need for Semantic Segmentation",
+        "first_author": "Bowen Cheng",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "coco"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 22,
+      "top": [
+        "tardellirs/model-pulse",
+        "nikitalokhmachev-ai/interior-semantic-segmentation",
+        "ALSv/img_backswapper"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
