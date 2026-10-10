@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tohoku-nlp/bert-base-japanese-whole-word-masking",
+  "revision": "861c1efefb044607ff5d1af7b5bb4c500279c8ab",
+  "manifest": "blake3:75432f9deccc488f737125056723178a60d23bfef6044ba61a234fbb2db6a3fa",
+  "addressed": true,
+  "generated": "2026-10-10",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tohoku-nlp/bert-base-japanese-whole-word-masking",
+    "readme": "file:README.md@sha256:a08086b01dada685b56a0640a73b5de158175e5ca1f7852cab5093faabe10de5",
+    "config": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6"
+  },
+  "summary": {
+    "value": "This is a BERT model pretrained on texts in the Japanese language.",
+    "source": "file:README.md@sha256:a08086b01dada685b56a0640a73b5de158175e5ca1f7852cab5093faabe10de5"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-sa-4.0",
+        "name": "CC BY SA 4.0",
+        "commercial": "yes",
+        "note": "Attribution, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 76,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 42067021,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:bee86ed8692ce85de6cae9fbecbd4f8da22bdf1e6c87553b803e3f489dfb77f6#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "wikipedia"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 30,
+      "top": [
+        "tardellirs/model-pulse",
+        "koajoel/PolyFormer",
+        "mazpie/genrl"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

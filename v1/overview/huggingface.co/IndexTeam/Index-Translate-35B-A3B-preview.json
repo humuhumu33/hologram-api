@@ -4,15 +4,13 @@
   "revision": "3ad5ab1b13d70303e1a1508af494a9cea4755afc",
   "manifest": "blake3:67ce7eff1617c90e566f9e94e04cf684a224040554f5de13f99a5079ae28ead5",
   "addressed": true,
-  "generated": "2026-10-02",
+  "generated": "2026-10-10",
   "provenance": {
-    "api": "https://huggingface.co/api/models/IndexTeam/Index-Translate-35B-A3B-preview",
-    "readme": "file:README.md@sha256:1173479a9e9a1b0b3eb24f38e31ae2a41e150447e701b77a776aad79f06b0cfd",
-    "config": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944"
+    "api": "https://huggingface.co/api/models/IndexTeam/Index-Translate-35B-A3B-preview"
   },
   "summary": {
-    "value": "Index-Translate-35B-A3B-preview is the 35B-total / 3B-active mixture-of-experts multilingual text model of the Index-Translate family, built on Qwen3.5. It supports text translation across 150 languages and follows translation instructions involving terminology, formatting, style, structure, context, and output length.",
-    "source": "file:README.md@sha256:1173479a9e9a1b0b3eb24f38e31ae2a41e150447e701b77a776aad79f06b0cfd"
+    "value": "Index-Translate-35B-A3B-preview is a 36B Qwen 3.5 MoE model for translation by IndexTeam, released Oct 2026, under Apache 2.0.",
+    "source": "derived:template"
   },
   "glance": {
     "task": {
@@ -31,25 +29,25 @@
       ],
       "source": "derived:pipeline_tag"
     },
-    "experts": {
-      "value": 256,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts"
-    },
-    "experts_active": {
-      "value": 8,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts_per_tok"
+    "parameters": {
+      "value": 35951822704,
+      "source": "api:safetensors.total"
     },
     "architecture": {
       "value": "Qwen 3.5 MoE",
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#model_type"
+      "source": "api:config.model_type"
     },
     "architecture_id": {
       "value": "qwen3_5_moe",
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#model_type"
+      "source": "api:config.model_type"
     },
-    "context": {
-      "value": 262144,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#max_position_embeddings"
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
     },
     "license": {
       "value": {
@@ -61,7 +59,7 @@
       "source": "api:cardData.license"
     },
     "released": {
-      "value": "2026-09-30",
+      "value": "2026-10-02",
       "source": "api:createdAt"
     },
     "updated": {
@@ -69,54 +67,26 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 11,
+      "value": 3,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 81,
+      "value": 315,
       "source": "api:downloadsAllTime"
     }
   },
-  "architecture": {
-    "layers": {
-      "value": 40,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_hidden_layers"
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 8
+      },
+      "source": "api:childrenModelCount"
     },
-    "hidden": {
-      "value": 2048,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#hidden_size"
-    },
-    "heads": {
-      "value": 16,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_attention_heads"
-    },
-    "kv_heads": {
-      "value": 2,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_key_value_heads"
-    },
-    "vocab": {
-      "value": 248320,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#vocab_size"
-    },
-    "context": {
-      "value": 262144,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#max_position_embeddings"
-    },
-    "experts": {
-      "value": 256,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts"
-    },
-    "experts_active": {
-      "value": 8,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts_per_tok"
-    },
-    "tied": {
-      "value": false,
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#tie_word_embeddings"
-    },
-    "vision_encoder": {
-      "value": "qwen3_5_moe",
-      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#vision_config"
+    "children_raw": {
+      "value": {
+        "quantized": 8
+      },
+      "source": "api:childrenModelCount"
     }
   },
   "papers": {

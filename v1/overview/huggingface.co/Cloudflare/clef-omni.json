@@ -1,0 +1,128 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Cloudflare/clef-omni",
+  "revision": "0db1cd2607d76a7bdb2a382f659e7b313079f84b",
+  "manifest": "blake3:ab84595b4a28dc56eb2c0aa5bd7110080f99b81a936fdd1886da734597b7480f",
+  "addressed": true,
+  "generated": "2026-10-10",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Cloudflare/clef-omni",
+    "readme": "file:README.md@sha256:f85fa4cb9d7e2df8f25568faa9527b9657620c4da8098cd2ad24005780640bda",
+    "config": "file:config.json@sha256:eab5093d47807aaf894119506b238b2b1cee70d08456e894fee9a012d88f2e0d"
+  },
+  "summary": {
+    "value": "Clef-Omni is a 30B-A3B mixture-of-experts multimodal model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, audio, or video, and returns a probability for every allowed option of every question in a single forward pass.",
+    "source": "file:README.md@sha256:f85fa4cb9d7e2df8f25568faa9527b9657620c4da8098cd2ad24005780640bda"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 35259818545,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3 Omni MoE",
+      "source": "file:config.json@sha256:eab5093d47807aaf894119506b238b2b1cee70d08456e894fee9a012d88f2e0d#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_omni_moe",
+      "source": "file:config.json@sha256:eab5093d47807aaf894119506b238b2b1cee70d08456e894fee9a012d88f2e0d#model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-Omni-30B-A3B-Instruct"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 49,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 108,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "hugging-apps/clef-omni"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
