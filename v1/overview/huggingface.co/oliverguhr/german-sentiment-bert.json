@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "oliverguhr/german-sentiment-bert",
+  "revision": "b1177ff59e305c966836ba2825d3dc2efc53f125",
+  "manifest": "blake3:fbfde4dae2c72ab8779d83adbdb3d0380dca79fc979b9985346e8746e6fb6d37",
+  "addressed": true,
+  "generated": "2026-10-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/oliverguhr/german-sentiment-bert",
+    "readme": "file:README.md@sha256:3c84341e5edf545aff93801086bfa827d4208333238b5c3fceb34e7cdc84d77f",
+    "config": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f"
+  },
+  "summary": {
+    "value": "This model was trained for sentiment classification of German language texts. To achieve the best results all model inputs needs to be preprocessed with the same procedure, that was applied during the training.",
+    "source": "file:README.md@sha256:3c84341e5edf545aff93801086bfa827d4208333238b5c3fceb34e7cdc84d77f"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 109083651,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "de"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 73,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12376059,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#num_attention_heads"
+    },
+    "vocab": {
+      "value": 30000,
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:3e70c1a5ac50257e34a47c537563fdf4189dfb6b8461f379eb2b053938f8c02f#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 21,
+      "top": [
+        "tardellirs/model-pulse",
+        "eduagarcia/multilingual-tokenizer-leaderboard",
+        "Chris4K/german-sentiment-bert"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

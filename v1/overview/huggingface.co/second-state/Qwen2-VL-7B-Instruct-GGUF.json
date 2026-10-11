@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "second-state/Qwen2-VL-7B-Instruct-GGUF",
+  "revision": "68098c0ea952cfb26f27a48783e7b3f9e3d76633",
+  "manifest": "blake3:a373fd76f6f864ce9374a82dfecd250f37747ac0d91cb917851b633376eceab6",
+  "addressed": true,
+  "generated": "2026-10-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/second-state/Qwen2-VL-7B-Instruct-GGUF",
+    "readme": "file:README.md@sha256:c3579440f0f36e679dc62e9178de3f3c83db479f639bf1d4c340c5db4d7294d6",
+    "config": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c"
+  },
+  "summary": {
+    "value": "Qwen2-VL-7B-Instruct-GGUF is a 7.6B Qwen 2 VL model for vision language by second-state, released Dec 2024, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7615616512,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Qwen 2 VL",
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen2_vl",
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen2-VL-7B-Instruct"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-12-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-01-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16199,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3584,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#hidden_size"
+    },
+    "heads": {
+      "value": 28,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152064,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:4745aaba24756172765cb804b86512792202df6c65ac28989355971bbb27649c#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

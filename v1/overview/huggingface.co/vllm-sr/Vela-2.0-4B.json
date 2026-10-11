@@ -1,0 +1,158 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "vllm-sr/Vela-2.0-4B",
+  "revision": "d692394127f6f87fc581d8634c9558fe4776efce",
+  "manifest": "blake3:622ff7f36a487ccf8815a72e65da7920deff53743b22025df7f26538d80b14e2",
+  "addressed": true,
+  "generated": "2026-10-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/vllm-sr/Vela-2.0-4B",
+    "readme": "file:README.md@sha256:b6c594d754a1218214b48e399641125decc7212fc7e242b3fd76e3e1c2239ad5",
+    "config": "file:config.json@sha256:c0318849c586fe42f98db289c9d959642a8e2020726f2b3cb4685ccfc9912c40"
+  },
+  "summary": {
+    "value": "The balanced hybrid member of Vela 2.0: strong multilingual safety and general decisions, with router and open-label spans through one interface.",
+    "source": "file:README.md@sha256:b6c594d754a1218214b48e399641125decc7212fc7e242b3fd76e3e1c2239ad5"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4211182081,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Vela2 Decoder",
+      "source": "file:config.json@sha256:c0318849c586fe42f98db289c9d959642a8e2020726f2b3cb4685ccfc9912c40#model_type"
+    },
+    "architecture_id": {
+      "value": "vela2-decoder",
+      "source": "file:config.json@sha256:c0318849c586fe42f98db289c9d959642a8e2020726f2b3cb4685ccfc9912c40#model_type"
+    },
+    "precision": {
+      "value": "BF16 85%, FP32 15%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ar",
+        "zh",
+        "cs",
+        "nl",
+        "en",
+        "fr",
+        "de",
+        "hi",
+        "it",
+        "ja",
+        "ko",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sv",
+        "th"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "vllm-sr/Decision-2.0-Nox-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-07",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 194,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Aegis-AI-Content-Safety-Dataset-2.0",
+      "ToxicityPrompts/PolyGuardMix",
+      "nvidia/Nemotron-Safety-Guard-Dataset-v3",
+      "microsoft/llmail-inject-challenge",
+      "OpenSafetyLab/Salad-Data",
+      "KRLabsOrg/lettucedetect-prose-hallucination",
+      "KRLabsOrg/lettucedetect-code-hallucination",
+      "numind/NuNER",
+      "urchade/pile-mistral-v0.1",
+      "knowledgator/GLINER-multi-task-synthetic-data",
+      "nlpaueb/finer-139",
+      "tonytan48/Re-DocRED",
+      "MultiCoNER/multiconer_v2",
+      "martinjosifoski/SynthIE",
+      "rajpurkar/squad_v2",
+      "hotpotqa/hotpot_qa",
+      "google-research-datasets/natural_questions",
+      "KRLabsOrg/verbatim-spans",
+      "KRLabsOrg/tool-output-extraction-swebench"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "vllm-sr/vela2-studio"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

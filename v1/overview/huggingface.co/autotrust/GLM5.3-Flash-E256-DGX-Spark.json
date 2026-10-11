@@ -1,0 +1,168 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autotrust/GLM5.3-Flash-E256-DGX-Spark",
+  "revision": "83fa8fe0495a3bee40adb4e46e6a47c7d9bf353f",
+  "manifest": "blake3:7e1761f47773a15005ca8061585805973bc09454874f53d2b9bdc127b06cbae2",
+  "addressed": true,
+  "generated": "2026-10-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autotrust/GLM5.3-Flash-E256-DGX-Spark",
+    "readme": "file:README.md@sha256:bc25d83b49c3d2b132700d53b12efe7939ca15bdf79d87a4fb321676510183b5",
+    "config": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f"
+  },
+  "summary": {
+    "value": "autotrust/GLM5.3-Flash-E256-DGX-Spark is a compact build of zai-org/GLM-5.3-Flash for Blackwell systems, from DGX Spark clusters to a single B200. It's an unofficial derivative.",
+    "source": "file:README.md@sha256:bc25d83b49c3d2b132700d53b12efe7939ca15bdf79d87a4fb321676510183b5"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 144544102910,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "GLM 5 Next",
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#model_type"
+    },
+    "architecture_id": {
+      "value": "glm5_next",
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 94%, BF16 6%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "vllm",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "zai-org/GLM-5.3-Flash"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 679,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 45,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 154880,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "glm5_next_vision",
+      "source": "file:config.json@sha256:e406df7cb91c4df76f9147919e36f8e636297139b05476803dd0c79339fa342f#vision_config"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

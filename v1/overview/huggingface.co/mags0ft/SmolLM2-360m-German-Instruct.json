@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mags0ft/SmolLM2-360m-German-Instruct",
+  "revision": "e4095399ddb979f5ca7127719a6024b5a85abf7c",
+  "manifest": "blake3:87ed9ad410b0ef1a71ea880c2305e2476a460de3176d5ab477334f16c7a6b50e",
+  "addressed": true,
+  "generated": "2026-10-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mags0ft/SmolLM2-360m-German-Instruct",
+    "readme": "file:README.md@sha256:22c835024255e2687badbff1ef5550b151b7a62b70d4a9b8679b04c7d9a4e910",
+    "config": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65"
+  },
+  "summary": {
+    "value": "This is a continued pre-train as well as an instruct fine-tune done using Unsloth in order to make SmolLM2 360m capable of speaking German. It has been trained on 25% of the German Wikipedia as well as the full German version of the Alpaca-GPT4 dataset (translated version).",
+    "source": "file:README.md@sha256:22c835024255e2687badbff1ef5550b151b7a62b70d4a9b8679b04c7d9a4e910"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 361821120,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "de"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "HuggingFaceTB/SmolLM2-360M"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-07-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-10-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3068,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 960,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#hidden_size"
+    },
+    "heads": {
+      "value": 15,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 5,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 49152,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 100000,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:785ce0a63d605dbb3028ef5d53d31f2635de60bedcc8e6ab46a732a12d64bc65#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "wikimedia/wikipedia",
+      "FreedomIntelligence/alpaca-gpt4-deutsch"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

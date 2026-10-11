@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "AxiomicLabs/GPT-S3-3M",
+  "revision": "21a3399bbe888bdf65d9e59eb2d9a79164b4ba16",
+  "manifest": "blake3:7c83789aee671863affe9b727991515d5449ff3cef3738c71897a28457178a8e",
+  "addressed": true,
+  "generated": "2026-10-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/AxiomicLabs/GPT-S3-3M",
+    "readme": "file:README.md@sha256:d4ff21a321cc2754e1da274327c1a4094f3f1f2986c157beabd76555efb5ffc6",
+    "config": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e"
+  },
+  "summary": {
+    "value": "GPT-S3-3M is Axiomic Labs' third-generation GPT-S base model, built on a hybrid GDN2/gated GQA architecture with Full Attention Residuals and trained from scratch with TrainWork. At 2.97M parameters, it achieves an Intelligence Index of 9.61 on the Open SLM Leaderboard achieving 1st in the <3m class and 2nd in <10m.",
+    "source": "file:README.md@sha256:d4ff21a321cc2754e1da274327c1a4094f3f1f2986c157beabd76555efb5ffc6"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2973666,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gpts3 Hybrid",
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#model_type"
+    },
+    "architecture_id": {
+      "value": "gpts3_hybrid",
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#model_type"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 29,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 8,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 144,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#hidden_size"
+    },
+    "heads": {
+      "value": 3,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 4096,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#vocab_size"
+    },
+    "context": {
+      "value": 1024,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:00a8e584ae14ab45d87457efeafa01314ed59ebfc8f100b645c0e0c38263fd3e#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Nemotron-ClimbMix",
+      "nvidia/OpenMathInstruct-2",
+      "IFM/TxT360-v2",
+      "openbmb/UltraData-Math",
+      "AxiomicLabs/FactBase-DCLM"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "SupraLabs/SupraSLM-Leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
