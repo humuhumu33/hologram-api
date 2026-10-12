@@ -1,0 +1,190 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "poolside/Laguna-M.1",
+  "revision": "2bf8a4ab6d2e8e1e0d92a41318532a0fee1640d6",
+  "manifest": "blake3:504062cab488b6873f5f03ebe3c4e91a577cc49b169af4a01026bdeef501c8a9",
+  "addressed": true,
+  "generated": "2026-10-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/poolside/Laguna-M.1",
+    "readme": "file:README.md@sha256:11275425c66e7e714240b5f8c3cd1036c6db887b82b4ab2d70e9b453f4b86adb",
+    "config": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df"
+  },
+  "summary": {
+    "value": "Laguna M.1 is a 225B total parameter Mixture-of-Experts model with 23B activated parameters per token designed for agentic coding and long-horizon work.",
+    "source": "file:README.md@sha256:11275425c66e7e714240b5f8c3cd1036c6db887b82b4ab2d70e9b453f4b86adb"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 225795725568,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#num_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Laguna",
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#model_type"
+    },
+    "architecture_id": {
+      "value": "laguna",
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "vllm",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-06-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-07-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 149,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 371814,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 70,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 100352,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#num_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:dceed3db9dc871dde5ec638fc54f3150739275af75f7652a3fdd771ea5ea90df#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "ScaleAI/SWE-bench_Pro",
+        "task": "SWE_Bench_Pro",
+        "value": 49.2,
+        "date": "2026-06-18T11:06:54.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/poolside/Laguna-M.1"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 74.6,
+        "date": "2026-06-18T11:06:54.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/poolside/Laguna-M.1"
+      },
+      {
+        "dataset": "harborframework/terminal-bench-2.0",
+        "task": "terminalbench_2",
+        "value": 45.8,
+        "date": "2026-06-18T11:06:54.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/poolside/Laguna-M.1"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 13,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 13,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 38,
+      "top": [
+        "tardellirs/model-pulse",
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

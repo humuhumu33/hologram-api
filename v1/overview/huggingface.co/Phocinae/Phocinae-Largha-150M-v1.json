@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "Phocinae/Phocinae-Largha-150M-v1",
-  "revision": "7070e070fec3407061e76de42d7d87240ff5b74b",
-  "manifest": "blake3:ae27158b43daf7b90f2df302c2883225587530fd5f10aeb08b72c33e572d6016",
+  "revision": "4faae10662a6588006d06dd75a239b93590f4322",
+  "manifest": "blake3:27ba212180c57f05bfc3eba4f3fa3457350ec578d5ac57c1a211aec9085cbbaf",
   "addressed": true,
-  "generated": "2026-10-11",
+  "generated": "2026-10-12",
   "provenance": {
     "api": "https://huggingface.co/api/models/Phocinae/Phocinae-Largha-150M-v1",
-    "readme": "file:README.md@sha256:41ea32b919db7e654c83e26d2857860ff09dfb52fef987554c0e9c7f0bb9486f",
+    "readme": "file:README.md@sha256:e8682a831382466892d2bf7881db85b54daa8f9a3358b6685c735f162159971f",
     "config": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c"
   },
   "summary": {
     "value": "斑海豹 Largha, the spotted seal: a 144.3M decision model (en-first; zh evaluated on machine-translated cases) (150M-class) for structured decisions — one forward pass per decision, on your own hardware.",
-    "source": "file:README.md@sha256:41ea32b919db7e654c83e26d2857860ff09dfb52fef987554c0e9c7f0bb9486f"
+    "source": "file:README.md@sha256:e8682a831382466892d2bf7881db85b54daa8f9a3358b6685c735f162159971f"
   },
   "glance": {
     "task": {
@@ -80,15 +80,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-10",
+      "value": "2026-10-12",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 231,
+      "value": 232,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 325,
+      "value": 362,
       "source": "api:downloadsAllTime"
     }
   },
@@ -127,7 +127,7 @@
         "date": "2026-10-09",
         "verified": false,
         "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
-        "notes": "Specialist: fitted on the Typed Decisions train split (mmBERT-small base) — NOT zero-shot; per the benchmark README this belongs to the \"fitted/fine-tuned on train\" table and is not comparable with the zero-shot table. Test split, 400 cases / 2,000 decisions, one request per case with the state and all five questions (README request shape), all answered, zero errors. Accuracy = agreement with the gold label. One forward pass per question, no generated tokens. Self-reported (self-host, no verifyToken). The submitted accuracy sits above the 0.735 teacher self-agreement ceiling — per the README this indicates the model is learning the teacher's quirks (label-specificity), also probed via JevBench on the model card. zh (machine-translated test cases; the training mix includes machine-translated + native Chinese rows) has no benchmark task; see the model card.\n"
+        "notes": "Specialist: fitted on the Typed Decisions train split (mmBERT-small base) — NOT zero-shot; per the benchmark README this belongs to the \"fitted/fine-tuned on train\" table and is not comparable with the zero-shot table. Test split, 400 cases / 2,000 decisions, one request per case with the state and all five questions (README request shape), all answered, zero errors. Accuracy = agreement with the gold label. One forward pass per question, no generated tokens. Self-reported (self-host, no verifyToken). The submitted accuracy sits above the 0.735 teacher self-agreement ceiling — per the README this indicates the model is learning the teacher's quirks (label-specificity), also probed via JevBench on the model card. zh (machine-translated test cases; the training mix includes machine-translated + native Chinese rows) has no benchmark task; see the model card. Training-overlap disclosure (corrected 2026-10-10; re-audited 2026-10-12): the fine-tune mix includes a 500-item error-correction pair pool mined from model predictions on this benchmark's test rows. Overlap with this test split: 500 / 2,000 decisions across 282 / 400 cases (S1MB typed-decisions subset: 82 / 100 cases, 151 / 500 decisions). This accuracy is therefore measured on a test split this lineage has partly seen — read as \"fitted on train, test-exposed\", not zero-shot. Full details: the model card's training-overlap disclosure. A clean re-score without the pool is in progress.\n"
       },
       {
         "dataset": "LocalLLaMA/typed-decisions",
@@ -136,7 +136,7 @@
         "date": "2026-10-09",
         "verified": false,
         "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
-        "notes": "KL(gold || prediction), mean over the 2,000 decisions; scored with the benchmark's conventions (reproduced exactly from the README's Uniform reference row). Specialist: fitted on the train split — not comparable with the zero-shot table. Self-reported.\n"
+        "notes": "KL(gold || prediction), mean over the 2,000 decisions; scored with the benchmark's conventions (reproduced exactly from the README's Uniform reference row). Specialist: fitted on the train split — not comparable with the zero-shot table. Self-reported. See the accuracy entry's overlap note: includes test-derived correction pairs; not zero-shot.\n"
       },
       {
         "dataset": "LocalLLaMA/typed-decisions",
@@ -145,7 +145,7 @@
         "date": "2026-10-09",
         "verified": false,
         "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
-        "notes": "Brier summed over options, mean over the 2,000 decisions; scored with the benchmark's conventions (reproduced exactly from the README's Uniform reference row). Specialist: fitted on the train split — not comparable with the zero-shot table. Self-reported.\n"
+        "notes": "Brier summed over options, mean over the 2,000 decisions; scored with the benchmark's conventions (reproduced exactly from the README's Uniform reference row). Specialist: fitted on the train split — not comparable with the zero-shot table. Self-reported. See the accuracy entry's overlap note: includes test-derived correction pairs; not zero-shot.\n"
       },
       {
         "dataset": "LocalLLaMA/typed-decisions",
@@ -154,7 +154,7 @@
         "date": "2026-10-09",
         "verified": false,
         "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
-        "notes": "ECE with the shipped temperature column (en, 15 equal-width bins), as computed by our scorer and documented in BENCHMARKS.md (the benchmark README warns that submitters compute ECE differently). An optional bundled calibration column (calib/) reaches 0.0168. Self-reported (self-host, no verifyToken).\n"
+        "notes": "ECE with the shipped temperature column (en, 15 equal-width bins), as computed by our scorer and documented in BENCHMARKS.md (the benchmark README warns that submitters compute ECE differently). An optional bundled calibration column (calib/) reaches 0.0168. Self-reported (self-host, no verifyToken). See the accuracy entry's overlap note: includes test-derived correction pairs; not zero-shot.\n"
       }
     ],
     "source": "api:evalResults"

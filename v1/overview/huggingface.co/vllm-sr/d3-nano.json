@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "vllm-sr/d3-nano",
+  "revision": "571f1cc45a1dad2d390a4a7473ada1d4fbaf1955",
+  "manifest": "blake3:720d1ae7a9b2ea067ffb5bed31ffd30251e5aa84ec0953064aa92f8995ffb1e8",
+  "addressed": true,
+  "generated": "2026-10-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/vllm-sr/d3-nano",
+    "readme": "file:README.md@sha256:210be7c5ab8f0c9e978357bbaa032cb765cb0c9083a81db4cb1957e5487a3c4f",
+    "config": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f"
+  },
+  "summary": {
+    "value": "d3-nano is the 2B multimodal foundation decision model of Decision 3.0, the decision models of vLLM Semantic Router. Give it an input (text or JSON, optionally with images and videos) and the questions you need answered: pick one of several options, say yes or no, or rate on a scale.",
+    "source": "file:README.md@sha256:210be7c5ab8f0c9e978357bbaa032cb765cb0c9083a81db4cb1957e5487a3c4f"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2213241664,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-2B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 329,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 6,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 6,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

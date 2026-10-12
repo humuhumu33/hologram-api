@@ -1,0 +1,147 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mattmdjaga/segformer_b2_clothes",
+  "revision": "584abc1e1d260e23c0fc627c5217a09b2b461046",
+  "manifest": "blake3:a2853cd299f4c45fde2cd5d3ec0fc2db05805b65f2c443696fd2866688c0c0fb",
+  "addressed": true,
+  "generated": "2026-10-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mattmdjaga/segformer_b2_clothes",
+    "readme": "file:README.md@sha256:fca39e62db301b5113f14ef71679da395d8c638a069176483373c74048563856",
+    "config": "file:config.json@sha256:4b5127ca00fe61187b6cc6c232c9e19326ed228683f8f5c221790be9cc196a6e"
+  },
+  "summary": {
+    "value": "SegFormer model fine-tuned on ATR dataset for clothes segmentation but can also be used for human segmentation. The dataset on hugging face is called \"mattmdjaga/humanparsingdataset\".",
+    "source": "file:README.md@sha256:fca39e62db301b5113f14ef71679da395d8c638a069176483373c74048563856"
+  },
+  "glance": {
+    "task": {
+      "value": "Image segmentation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "mask"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27362002,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Segformer",
+      "source": "file:config.json@sha256:4b5127ca00fe61187b6cc6c232c9e19326ed228683f8f5c221790be9cc196a6e#model_type"
+    },
+    "architecture_id": {
+      "value": "segformer",
+      "source": "file:config.json@sha256:4b5127ca00fe61187b6cc6c232c9e19326ed228683f8f5c221790be9cc196a6e#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2022-11-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-09-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 510,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 32706008,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "SegformerForSemanticSegmentation",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-segmentation"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2105.15203",
+        "title": "SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers",
+        "first_author": "Enze Xie",
+        "authors": 6,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "mattmdjaga/human_parsing_dataset"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "tardellirs/model-pulse",
+        "embedl/hfviewer",
+        "kulkas2pintu/Video_to_video_WAN"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

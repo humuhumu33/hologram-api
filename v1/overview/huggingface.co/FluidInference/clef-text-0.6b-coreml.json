@@ -1,0 +1,87 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "FluidInference/clef-text-0.6b-coreml",
+  "revision": "3c61a60954478ef385aa42d67d5764642dcc9135",
+  "manifest": "blake3:19328fc30238904a35ef4f14fbb2691279980b48c23cd087421cc8c87ec48818",
+  "addressed": true,
+  "generated": "2026-10-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/FluidInference/clef-text-0.6b-coreml",
+    "readme": "file:README.md@sha256:7c5c39630b3d332f02e27742ac117defb8ed9e2b2877298b1d5ca1cc80e6dbae",
+    "config": "file:config.json@sha256:af356b87b840722b77068df83612d6ad6efdd19804c6c955e4689a0e10c6bf58"
+  },
+  "summary": {
+    "value": "A 0.70B-parameter text decision model for Apple silicon, distilled from Cloudflare's clef-flash (9B) into Qwen3-0.6B plus Clef's joint schema head.",
+    "source": "file:README.md@sha256:7c5c39630b3d332f02e27742ac117defb8ed9e2b2877298b1d5ca1cc80e6dbae"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "coreml",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "FluidInference/clef-text-0.6b"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 106,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:af356b87b840722b77068df83612d6ad6efdd19804c6c955e4689a0e10c6bf58#hidden_size"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:af356b87b840722b77068df83612d6ad6efdd19804c6c955e4689a0e10c6bf58#vocab_size"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:af356b87b840722b77068df83612d6ad6efdd19804c6c955e4689a0e10c6bf58#rope_theta"
+    }
+  }
+}

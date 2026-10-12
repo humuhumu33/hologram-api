@@ -1,0 +1,167 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "vllm-sr/d3-flash",
+  "revision": "6838193a0185c0ecfecab937896059d2c3377d61",
+  "manifest": "blake3:2a1b4e56f9fb7652baef6757f7f28578dfc0cdc3fe6616e70fd2f5ee4d34331e",
+  "addressed": true,
+  "generated": "2026-10-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/vllm-sr/d3-flash",
+    "readme": "file:README.md@sha256:9b0865ff579fbd46abdabc5eba292cb3dcffeb46d5523709a1fbb9e217fa8aed",
+    "config": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb"
+  },
+  "summary": {
+    "value": "d3-flash is the 9B multimodal foundation decision model of Decision 3.0, the decision models of vLLM Semantic Router. Give it an input (text or JSON, optionally with images and videos) and the questions you need answered: pick one of several options, say yes or no, or rate on a scale.",
+    "source": "file:README.md@sha256:9b0865ff579fbd46abdabc5eba292cb3dcffeb46d5523709a1fbb9e217fa8aed"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8392695024,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 36,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 407,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "vllm-sr/d3-flash"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "AuroraAI-Research/AuroraIMG-6M",
+  "revision": "3d66743c3139d034b832a670d067221f5d544bbb",
+  "manifest": "blake3:c431378e80f680dcd6754dbe07c70d70454bf736103c19b3d88950932d816f65",
+  "addressed": true,
+  "generated": "2026-10-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/AuroraAI-Research/AuroraIMG-6M",
+    "readme": "file:README.md@sha256:711badf5c7ca2ee9a65ed64e257b44a24d0c7bedd77edb8cf4efaa2c423c8be2",
+    "config": "file:config.json@sha256:e6b26ac235b8812e76c2319adb93102cf106546a5a4ed57d1a71f27451d1c556"
+  },
+  "summary": {
+    "value": "AuroraIMG-6M is a text-to-image model that's just 6.82M parameters, and that number includes everything: the text encoder, the denoiser and the VAE. It generates 64×64 images from short English captions, and every part of it was trained from scratch on CC12M.",
+    "source": "file:README.md@sha256:711badf5c7ca2ee9a65ed64e257b44a24d0c7bedd77edb8cf4efaa2c423c8be2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to image",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Auroraimg",
+      "source": "file:config.json@sha256:e6b26ac235b8812e76c2319adb93102cf106546a5a4ed57d1a71f27451d1c556#model_type"
+    },
+    "architecture_id": {
+      "value": "auroraimg",
+      "source": "file:config.json@sha256:e6b26ac235b8812e76c2319adb93102cf106546a5a4ed57d1a71f27451d1c556#model_type"
+    },
+    "library": {
+      "value": "pytorch",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 23,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 33,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "GenEval",
+        "task": "GenEval overall (avg. over tasks)",
+        "value": 0.1387,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GenEval 2",
+        "task": "Soft-TIFA GM (prompt-level, official)",
+        "value": 2.21,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GenEval 2",
+        "task": "Soft-TIFA AM (atom-level)",
+        "value": 21.84,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "datasets": {
+    "value": [
+      "pixparse/cc12m-wds"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "hugging-apps/auroraimg-6m"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

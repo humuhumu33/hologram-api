@@ -1,0 +1,188 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autotrust/JEV-35B-NVFP4",
+  "revision": "10c2c62610e315e31a75baca849ad79d526e4658",
+  "manifest": "blake3:b241294c4d803b6ae320f886436a20459e14f1ea12c0dfdf802bf031c0cdf4c2",
+  "addressed": true,
+  "generated": "2026-10-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autotrust/JEV-35B-NVFP4",
+    "readme": "file:README.md@sha256:e822781a413f9dabdbf8ea20c89a5a89318ecf38c0dfd919911b72df1cd55239",
+    "config": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0"
+  },
+  "summary": {
+    "value": "This repository is autotrust/JEV-35B with its 10,240 routed expert MLPs (40 layers × 256 experts) quantized to NVFP4.",
+    "source": "file:README.md@sha256:e822781a413f9dabdbf8ea20c89a5a89318ecf38c0dfd919911b72df1cd55239"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 19845695344,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 MoE",
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 81%, BF16 19%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "autotrust/JEV-35B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 47,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 8218,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:19c5ca00152974328ba105781f2e1cf9a19d89c1184b243412b9db4f389ff7c0#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Decision Index 0.3 public suite",
+        "task": "Decision Index 0.3 public index",
+        "value": 59.18,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
