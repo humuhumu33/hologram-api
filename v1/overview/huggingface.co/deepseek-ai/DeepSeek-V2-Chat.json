@@ -1,0 +1,205 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepseek-ai/DeepSeek-V2-Chat",
+  "revision": "8e3f5f6c2226787e41ba3e9283a06389d178c926",
+  "manifest": "blake3:7a6a5356a57ffd54b639aaf339962cdd8312ae2ba760cce1e5fac04e127dda99",
+  "addressed": true,
+  "generated": "2026-10-13",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V2-Chat",
+    "readme": "file:README.md@sha256:c2570e681c2b9a43043d4981eedd38324f949c7ef6dcb91a55a8fb934cf1d16f",
+    "config": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1"
+  },
+  "summary": {
+    "value": "Due to the constraints of HuggingFace, the open-source code currently experiences slower performance than our internal codebase when running on GPUs with Huggingface. To facilitate the efficient execution of our model, we offer a dedicated vllm solution that optimizes performance for running our model effectively.",
+    "source": "file:README.md@sha256:c2570e681c2b9a43043d4981eedd38324f949c7ef6dcb91a55a8fb934cf1d16f"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 235741434880,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 160,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek V2",
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_v2",
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#model_type"
+    },
+    "context": {
+      "value": 163840,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-04-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-06-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 479,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 416658,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 60,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#hidden_size"
+    },
+    "heads": {
+      "value": 128,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 128,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 102400,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#vocab_size"
+    },
+    "context": {
+      "value": 163840,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#max_position_embeddings"
+    },
+    "experts": {
+      "value": 160,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:36f572d2909bd108d73a814c585fd61afd56266960a13eb67c713e229d3435d1#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 54.81,
+        "date": "2026-06-30T12:45:16.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/a7/68/a768afc2-e0b4-4ea5-ba40-166136c33b3b.json"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2405.04434",
+        "title": "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+        "first_author": "DeepSeek-AI",
+        "authors": 157,
+        "year": "2024"
+      },
+      {
+        "id": "2311.18743",
+        "title": "AlignBench: Benchmarking Chinese Alignment of Large Language Models",
+        "first_author": "Xiao Liu",
+        "authors": 17,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 45,
+      "top": [
+        "tardellirs/model-pulse",
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "emanforhelp/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

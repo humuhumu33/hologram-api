@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openbmb/MiniCPM-V-4.7-1B",
+  "revision": "984a89aafcd5160164f4f0d04b4be0f4eec03cb8",
+  "manifest": "blake3:2045510cc498b750ff5d824c43890fa6c598bd15b88b7fa779a2d1c786f8286c",
+  "addressed": true,
+  "generated": "2026-10-13",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openbmb/MiniCPM-V-4.7-1B",
+    "readme": "file:README.md@sha256:e9f741f0302aad23a2456109d827ed6f94ea4f0ade0acb05df7e059603918bfb",
+    "config": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4"
+  },
+  "summary": {
+    "value": "MiniCPM-V 4.7 is the latest model in the MiniCPM-V series, available in a 1B variant. It builds on the family's single-image, multi-image, and video understanding capabilities, combining stronger foundation capabilities with efficient visual encoding and on-device inference.",
+    "source": "file:README.md@sha256:e9f741f0302aad23a2456109d827ed6f94ea4f0ade0acb05df7e059603918bfb"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1554476272,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Minicpmv4 7",
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#model_type"
+    },
+    "architecture_id": {
+      "value": "minicpmv4_7",
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 159,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 263,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248094,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "minicpmv4_7_vision",
+      "source": "file:config.json@sha256:20ed1fe71b174719b88ed1ce37c840ec45e3657f1120391d45f33505be7638a4#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 26,
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 26,
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "openbmb/MiniCPM-V-4.7-Demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

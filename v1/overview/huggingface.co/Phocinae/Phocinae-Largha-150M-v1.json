@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "Phocinae/Phocinae-Largha-150M-v1",
-  "revision": "4faae10662a6588006d06dd75a239b93590f4322",
-  "manifest": "blake3:27ba212180c57f05bfc3eba4f3fa3457350ec578d5ac57c1a211aec9085cbbaf",
+  "revision": "6fd31334ad461265578a8b52cc38969b3960a9dc",
+  "manifest": "blake3:9af09db1814ad71bcb75b4625b8f1855a6ac962c4cb2addb844a947a02faa7d1",
   "addressed": true,
-  "generated": "2026-10-12",
+  "generated": "2026-10-13",
   "provenance": {
     "api": "https://huggingface.co/api/models/Phocinae/Phocinae-Largha-150M-v1",
-    "readme": "file:README.md@sha256:e8682a831382466892d2bf7881db85b54daa8f9a3358b6685c735f162159971f",
+    "readme": "file:README.md@sha256:f5db6a1d451d5a0053f29d804d505851af9b03987aef6b8cfb6b702049619391",
     "config": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c"
   },
   "summary": {
     "value": "斑海豹 Largha, the spotted seal: a 144.3M decision model (en-first; zh evaluated on machine-translated cases) (150M-class) for structured decisions — one forward pass per decision, on your own hardware.",
-    "source": "file:README.md@sha256:e8682a831382466892d2bf7881db85b54daa8f9a3358b6685c735f162159971f"
+    "source": "file:README.md@sha256:f5db6a1d451d5a0053f29d804d505851af9b03987aef6b8cfb6b702049619391"
   },
   "glance": {
     "task": {
@@ -88,7 +88,7 @@
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 362,
+      "value": 443,
       "source": "api:downloadsAllTime"
     }
   },
@@ -127,7 +127,7 @@
         "date": "2026-10-09",
         "verified": false,
         "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
-        "notes": "Specialist: fitted on the Typed Decisions train split (mmBERT-small base) — NOT zero-shot; per the benchmark README this belongs to the \"fitted/fine-tuned on train\" table and is not comparable with the zero-shot table. Test split, 400 cases / 2,000 decisions, one request per case with the state and all five questions (README request shape), all answered, zero errors. Accuracy = agreement with the gold label. One forward pass per question, no generated tokens. Self-reported (self-host, no verifyToken). The submitted accuracy sits above the 0.735 teacher self-agreement ceiling — per the README this indicates the model is learning the teacher's quirks (label-specificity), also probed via JevBench on the model card. zh (machine-translated test cases; the training mix includes machine-translated + native Chinese rows) has no benchmark task; see the model card. Training-overlap disclosure (corrected 2026-10-10; re-audited 2026-10-12): the fine-tune mix includes a 500-item error-correction pair pool mined from model predictions on this benchmark's test rows. Overlap with this test split: 500 / 2,000 decisions across 282 / 400 cases (S1MB typed-decisions subset: 82 / 100 cases, 151 / 500 decisions). This accuracy is therefore measured on a test split this lineage has partly seen — read as \"fitted on train, test-exposed\", not zero-shot. Full details: the model card's training-overlap disclosure. A clean re-score without the pool is in progress.\n"
+        "notes": "Specialist: fitted on the Typed Decisions train split (mmBERT-small base) — NOT zero-shot; per the benchmark README this belongs to the \"fitted/fine-tuned on train\" table and is not comparable with the zero-shot table. Test split, 400 cases / 2,000 decisions, one request per case with the state and all five questions (README request shape), all answered, zero errors. Accuracy = agreement with the gold label. One forward pass per question, no generated tokens. Self-reported (self-host, no verifyToken). The submitted accuracy sits above the 0.735 teacher self-agreement ceiling — per the README this indicates the model is learning the teacher's quirks (label-specificity), also probed via JevBench on the model card. zh (machine-translated test cases; the training mix includes machine-translated + native Chinese rows) has no benchmark task; see the model card. Training-overlap disclosure (corrected 2026-10-10; re-audited 2026-10-12): the fine-tune mix includes a 500-item error-correction pair pool mined from model predictions on this benchmark's test rows. Overlap with this test split: 500 / 2,000 decisions across 282 / 400 cases (S1MB typed-decisions subset: 82 / 100 cases, 151 / 500 decisions). This accuracy is therefore measured on a test split this lineage has partly seen — read as \"fitted on train, test-exposed\", not zero-shot. Full details: the model card's training-overlap disclosure. A clean re-score without the pool (same recipe, pairs swapped back out) measures 0.791 — published in the dataset discussion (2026-10-12).\n"
       },
       {
         "dataset": "LocalLLaMA/typed-decisions",
@@ -191,11 +191,11 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 4,
       "top": [
         "tardellirs/model-pulse",
         "hotchpotch/S1MB-leaderboard",
-        "hugging-apps/phocinae-largha-150m"
+        "emanforhelp/model-pulse"
       ]
     },
     "source": "api:spaces"

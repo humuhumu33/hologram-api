@@ -1,0 +1,167 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "vllm-sr/d3-lite",
+  "revision": "99e5b1ce5a718454cd112cfe00caa8d2ae8df2ff",
+  "manifest": "blake3:fbe29a6ad9106a60bbb6cf37b306050bebaacb3e278febbbcd149df4e7bc2b74",
+  "addressed": true,
+  "generated": "2026-10-13",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/vllm-sr/d3-lite",
+    "readme": "file:README.md@sha256:e0e88f974b4be737d680083687631893d25378518319602b53c2d23daa6b71c3",
+    "config": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9"
+  },
+  "summary": {
+    "value": "d3-lite is the 0.8B multimodal foundation decision model of Decision 3.0, the decision models of vLLM Semantic Router. Give it an input (text or JSON, optionally with images and videos) and the questions you need answered: pick one of several options, say yes or no, or rate on a scale.",
+    "source": "file:README.md@sha256:e0e88f974b4be737d680083687631893d25378518319602b53c2d23daa6b71c3"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 852985920,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 21,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 879,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 8,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 8,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "vllm-sr/d3-lite-decision-model"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

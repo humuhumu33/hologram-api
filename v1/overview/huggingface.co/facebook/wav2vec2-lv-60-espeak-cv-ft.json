@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/wav2vec2-lv-60-espeak-cv-ft",
+  "revision": "ae45363bf3413b374fecd9dc8bc1df0e24c3b7f4",
+  "manifest": "blake3:0b984431d3d374e49083c46d35993f2f238bc7dd55e2927fb43a9c866d382046",
+  "addressed": true,
+  "generated": "2026-10-13",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/wav2vec2-lv-60-espeak-cv-ft",
+    "readme": "file:README.md@sha256:81a55816a87034bcf0828d6181fa88abad32a0cbfcebc2ebc8b336664b69ba60",
+    "config": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13"
+  },
+  "summary": {
+    "value": "This checkpoint leverages the pretrained checkpoint wav2vec2-large-lv60 and is fine-tuned on CommonVoice to recognize phonetic labels in multiple languages.",
+    "source": "file:README.md@sha256:81a55816a87034bcf0828d6181fa88abad32a0cbfcebc2ebc8b336664b69ba60"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-10-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 74,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4354174,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#num_attention_heads"
+    },
+    "vocab": {
+      "value": 392,
+      "source": "file:config.json@sha256:4609fb49b7e1d28aecb2840da1926c40bd915bc6f1120a940afacf7159bbfb13#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 6,
+        "Fine tuned": 86
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 6,
+        "finetune": 86
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2109.11680",
+        "title": "Simple and Effective Zero-shot Cross-lingual Phoneme Recognition",
+        "first_author": "Qiantong Xu",
+        "authors": 3,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "common_voice"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 76,
+      "top": [
+        "tardellirs/model-pulse",
+        "mteb/leaderboard",
+        "emanforhelp/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
