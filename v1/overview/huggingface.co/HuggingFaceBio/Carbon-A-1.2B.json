@@ -1,0 +1,144 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "HuggingFaceBio/Carbon-A-1.2B",
+  "revision": "f6789ee79e6ef397de333577ffec1cb734496620",
+  "manifest": "blake3:eb33c1f9b9cded8ed663ab916feeba3231689851e397a8ce69310d0a501896ae",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/HuggingFaceBio/Carbon-A-1.2B",
+    "readme": "file:README.md@sha256:a0dde9c35c9529b77a00b68da437b1c4fa9b9ee3bd88dac7f35f20396b69786a",
+    "config": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71"
+  },
+  "summary": {
+    "value": "Carbon-A predicts protein-coding sequence (CDS) at single-base resolution in eukaryotic genomes. It produces separate forward- and reverse-strand probabilities, preserving coding regions that overlap on opposite strands.",
+    "source": "file:README.md@sha256:a0dde9c35c9529b77a00b68da437b1c4fa9b9ee3bd88dac7f35f20396b69786a"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1153656832,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Generanno",
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#model_type"
+    },
+    "architecture_id": {
+      "value": "generanno",
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "dna"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 286,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 26,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 4128,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 500000.0,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:3e6f553726cfee2449296a124620cd2aa1213d937c5162d464bffb46c2ffef71#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "HuggingFaceBio/carbon-a-release",
+        "hugging-apps/carbon-a-1-2b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

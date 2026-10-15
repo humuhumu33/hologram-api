@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ai-forever/FRIDA",
+  "revision": "850455b605544a944739b25f81ddf812b6e3d0d5",
+  "manifest": "blake3:de5e7378c5f0682aacdcae13e091e8e6e29934f857fbfde5b6060d20c6f97f5c",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ai-forever/FRIDA",
+    "readme": "file:README.md@sha256:63c14860029244a4aedb6f3172ffd24b3998148d0abbd405645c406208512588",
+    "config": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468"
+  },
+  "summary": {
+    "value": "FRIDA is a full-scale finetuned general text embedding model inspired by denoising architecture based on T5. The model is based on the encoder part of FRED-T5 model and continues research of text embedding models (ruMTEB, ru-en-RoSBERTa).",
+    "source": "file:README.md@sha256:63c14860029244a4aedb6f3172ffd24b3998148d0abbd405645c406208512588"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 823401216,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "T5",
+      "source": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468#model_type"
+    },
+    "architecture_id": {
+      "value": "t5",
+      "source": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ru",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "ai-forever/FRED-T5-1.7B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2024-12-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 156,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4006377,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468#num_layers"
+    },
+    "hidden": {
+      "value": 1536,
+      "source": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468#d_model"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468#num_heads"
+    },
+    "vocab": {
+      "value": 93651,
+      "source": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468#vocab_size"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c5d80c5870aa65a25b81191369a7c89a4c200c40f6be944aa04edb02a5775468#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2309.10931",
+        "title": "A Family of Pretrained Transformer Language Models for Russian",
+        "first_author": "Dmitry Zmitrovich",
+        "authors": 12,
+        "year": "2023"
+      },
+      {
+        "id": "2408.12503",
+        "title": "The Russian-focused embedders' exploration: ruMTEB benchmark and Russian embedding model design",
+        "first_author": "Artem Snegirev",
+        "authors": 5,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "ai-forever/solyanka"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 17,
+      "top": [
+        "mteb/leaderboard",
+        "kaengreg/rusBEIR",
+        "sergeyzh/rusBEIR-lite"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

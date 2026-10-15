@@ -1,0 +1,142 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "SupraLabs/Supra2.1-Ultra",
+  "revision": "f1f214dc845cbdda16388c35c136708091dc3689",
+  "manifest": "blake3:379e363d17bebc362e8cb8e8db65f537c31d503a5f98c201bbadd31774732fc8",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/SupraLabs/Supra2.1-Ultra",
+    "readme": "file:README.md@sha256:1b02e1ea988b7d3824fa2908dfa9dd225aabf680045417eb148ab862f46eae44",
+    "config": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7"
+  },
+  "summary": {
+    "value": "Supra2.1-Ultra is the model that refers to the Supra2.1 family. It has 230M params, 40B tokens trained on, with LLaMa arch.",
+    "source": "file:README.md@sha256:1b02e1ea988b7d3824fa2908dfa9dd225aabf680045417eb148ab862f46eae44"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 229688064,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 241,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 49152,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9d9331d3b7b354ec23b1efabeca46386f8d7d02f17ded62717d70597abbf4ea7#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "HuggingFaceFW/fineweb-edu",
+      "mlfoundations/dclm-baseline-1.0",
+      "HuggingFaceTB/finemath"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

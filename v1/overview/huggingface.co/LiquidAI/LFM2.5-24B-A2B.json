@@ -1,0 +1,209 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "LiquidAI/LFM2.5-24B-A2B",
+  "revision": "1769516ac588c4c558089c94f27d96b0dc67b183",
+  "manifest": "blake3:bbaabf58b7a762f3c6269367b19264111f920ccb84aaecf4e6348adc18126326",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/LiquidAI/LFM2.5-24B-A2B",
+    "readme": "file:README.md@sha256:22aa4c9f6882cc4c56cee5eb3326941e376351ced297ac1463997bfbefbe13e2",
+    "config": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf"
+  },
+  "summary": {
+    "value": "LFM2.5-24B-A2B is a 24B-parameter reasoning model with only 2B active parameters, built for fast, private agents on-device. It is the largest and final model in the LFM2.5 family, which now spans two orders of magnitude: from LFM2.5-230M to LFM2.5-24B-A2B.",
+    "source": "file:README.md@sha256:22aa4c9f6882cc4c56cee5eb3326941e376351ced297ac1463997bfbefbe13e2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 23971585280,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#num_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Lfm2 MoE",
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm2_moe",
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ar",
+        "zh",
+        "fr",
+        "de",
+        "ja",
+        "ko",
+        "es",
+        "pt",
+        "it",
+        "vi",
+        "th",
+        "id",
+        "hi",
+        "ru",
+        "pl"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM2.5-24B-A2B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 335,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4067,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#max_position_embeddings"
+    },
+    "experts": {
+      "value": 64,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#num_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#num_experts_per_tok"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 58,
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 58,
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2511.23404",
+        "title": "LFM2 Technical Report",
+        "first_author": "Alexander Amini",
+        "authors": 33,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "apathy-exe/LFM2.5-24B-A2B"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

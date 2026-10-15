@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "dmis-lab/UltraBERT-150M",
+  "revision": "f821af159246ab4ac84669d42533281366bc55ab",
+  "manifest": "blake3:42cc6ec52482bb4b14e944e98374423e40000be0975d2943e0df413a5e6a349b",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/dmis-lab/UltraBERT-150M",
+    "readme": "file:README.md@sha256:47f09be6ddcc3a858ed4630f52678291f7be8b7a9c5a3b04eafa5c42c410790c",
+    "config": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc"
+  },
+  "summary": {
+    "value": "UltraBERT is a family of English bidirectional encoders with a native 32K context that reach state of the art on both classification and retrieval, two task families on which previous encoders had to choose a side.",
+    "source": "file:README.md@sha256:47f09be6ddcc3a858ed4630f52678291f7be8b7a9c5a3b04eafa5c42c410790c"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 189960960,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Ultrabert",
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#model_type"
+    },
+    "architecture_id": {
+      "value": "ultrabert",
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 37,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 98,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#hidden_size"
+    },
+    "heads": {
+      "value": 6,
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 6,
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 49152,
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#vocab_size"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:fa964fef36aad5866bcbb9393a26644a9ab9403aeec8a76b8cf0803be93c59dc#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 13
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 13
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.15028",
+        "title": "UltraBERT: Beyond the Limit of BERT Pre-Training",
+        "first_author": "Jungwoo Park",
+        "authors": 3,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "mlfoundations/dclm-baseline-1.0",
+      "HuggingFaceFW/fineweb-edu",
+      "HuggingFaceTB/stack-edu",
+      "allenai/peS2o",
+      "LLM360/MegaMath",
+      "HuggingFaceTB/finemath",
+      "HuggingFaceTB/smollm-corpus",
+      "allenai/dolma",
+      "Open-Orca/FLAN",
+      "facebook/natural_reasoning"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

@@ -4,7 +4,7 @@
   "revision": "7e6f537f10337497069276892a5ef435028252ce",
   "manifest": "blake3:b20ded024f92994715ac5954aff89da4d4a7120fb8019bec99e8576b5030d62e",
   "addressed": true,
-  "generated": "2026-10-07",
+  "generated": "2026-10-15",
   "provenance": {
     "api": "https://huggingface.co/api/models/fastino/gliner2.5-small-v1",
     "readme": "file:README.md@sha256:9f787a87893b1511b3d850e947b1809e0dd5ca08e46e413873bde43e0950e2d3",
@@ -16,20 +16,8 @@
   },
   "glance": {
     "task": {
-      "value": "Token classification",
+      "value": "schema-extraction",
       "source": "api:pipeline_tag"
-    },
-    "input": {
-      "value": [
-        "text"
-      ],
-      "source": "derived:pipeline_tag"
-    },
-    "output": {
-      "value": [
-        "label"
-      ],
-      "source": "derived:pipeline_tag"
     },
     "parameters": {
       "value": 73881879,
@@ -52,7 +40,7 @@
       "source": "api:safetensors|gguf"
     },
     "library": {
-      "value": "gliner2",
+      "value": "transformers",
       "source": "api:library_name"
     },
     "license": {
@@ -75,32 +63,40 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-09-28",
+      "value": "2026-10-08",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 40,
+      "value": 43,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 36307,
+      "value": 43645,
       "source": "api:downloadsAllTime"
     }
   },
   "family": {
     "children": {
       "value": {
-        "Quantized": 2,
-        "Fine tuned": 4
+        "Adapter": 3,
+        "Quantized": 3,
+        "Fine tuned": 3
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 2,
-        "finetune": 4
+        "adapter": 3,
+        "quantized": 3,
+        "finetune": 3
       },
       "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "Gliner2ForSchemaExtraction",
+      "source": "api:transformersInfo.auto_model"
     }
   },
   "papers": {
@@ -120,8 +116,8 @@
       "count": 7,
       "top": [
         "multimodalart/jev-decision-index",
-        "tardellirs/model-pulse",
-        "hotchpotch/S1MB-leaderboard"
+        "hotchpotch/S1MB-leaderboard",
+        "fastino/gliner25-constrained-classification"
       ]
     },
     "source": "api:spaces"

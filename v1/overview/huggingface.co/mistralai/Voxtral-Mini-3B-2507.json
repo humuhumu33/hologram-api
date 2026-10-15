@@ -1,0 +1,252 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mistralai/Voxtral-Mini-3B-2507",
+  "revision": "3060fe34b35ba5d44202ce9ff3c097642914f8f3",
+  "manifest": "blake3:e1d41cd69b25f33e8859c14cfa96ecfba47dedbe550de06a525cd7fcd7b54e14",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mistralai/Voxtral-Mini-3B-2507",
+    "readme": "file:README.md@sha256:1bab81d52b2b8cab0a57603fc3ece9aec2afc53447bf4c4c3a45f620895c20d2",
+    "config": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e"
+  },
+  "summary": {
+    "value": "Voxtral Mini is an enhancement of Ministral 3B, incorporating state-of-the-art audio input capabilities while retaining best-in-class text performance. It excels at speech transcription, translation and audio understanding.",
+    "source": "file:README.md@sha256:1bab81d52b2b8cab0a57603fc3ece9aec2afc53447bf4c4c3a45f620895c20d2"
+  },
+  "glance": {
+    "parameters": {
+      "value": 4676271104,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Voxtral",
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#model_type"
+    },
+    "architecture_id": {
+      "value": "voxtral",
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mistral-common",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "nl",
+        "hi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2025-07-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-07-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 691,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 6473741,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3072,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 100000000.0,
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#rope_theta"
+    },
+    "audio_encoder": {
+      "value": "voxtral_encoder",
+      "source": "file:config.json@sha256:368124c9a9171b3a6c0cdb35cd7fedeff465eefecf315e2a621684bbed7dcd7e#audio_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "ARTPARK-IISc/Vaani-Benchmark-V1.0",
+        "task": "Hindi_WER",
+        "value": 21.3,
+        "date": "2026-06-26",
+        "verified": false
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 7.05,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 109.86,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 16.3,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 10.69,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 10.24,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 1.88,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 4.1,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 2.37,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 3.68,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 7.14,
+        "date": "2025-07-01",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 13,
+        "Quantized": 31,
+        "Fine tuned": 18
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 13,
+        "quantized": 31,
+        "finetune": 18
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2507.13264",
+        "title": "Voxtral",
+        "first_author": "Alexander H. Liu",
+        "authors": 106,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 30,
+      "top": [
+        "elmresearchcenter/open_universal_arabic_asr_leaderboard",
+        "RyeAI/danish-asr-leaderboard",
+        "MohamedRashad/Voxtral"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "deepseek-ai/deepseek-vl2",
+  "revision": "f363772d1c47f4239dd844015b4bd53beb87951b",
+  "manifest": "blake3:95645e9bb4cb79ef1b312b3a2ec9e612b7861a72c4d04a23d8aff2c1d3e4a330",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/deepseek-ai/deepseek-vl2",
+    "readme": "file:README.md@sha256:56da621443f438ff6993f418892a4fc4ae0b7be676e84952fb7fa631b0db9c21",
+    "config": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c"
+  },
+  "summary": {
+    "value": "Introducing DeepSeek-VL2, an advanced series of large Mixture-of-Experts (MoE) Vision-Language Models that significantly improves upon its predecessor, DeepSeek-VL.",
+    "source": "file:README.md@sha256:56da621443f438ff6993f418892a4fc4ae0b7be676e84952fb7fa631b0db9c21"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27480134248,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 72,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek VL V2",
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_vl_v2",
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#model_type"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2024-12-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-12-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 404,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 200190,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#hidden_size"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#vocab_size"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#max_position_embeddings"
+    },
+    "experts": {
+      "value": 72,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#num_experts_per_tok"
+    },
+    "vision_encoder": {
+      "value": "vision",
+      "source": "file:config.json@sha256:d5dadaf4d41af00d569ac376bf09de4e28324c853b3ae0c7f6fed66f19fdcf8c#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2412.10302",
+        "title": "DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding",
+        "first_author": "Zhiyu Wu",
+        "authors": 27,
+        "year": "2024"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 38,
+      "top": [
+        "deepseek-ai/deepseek-vl2-small",
+        "Sarath0x8f/Document-QA-bot",
+        "AskUI/DeepSeek-Vl-UI"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openbmb/MiniCPM-V-4.7-35B-A3B-DSpark",
+  "revision": "55249d3e69315892ca07bc956228b404f2526f9a",
+  "manifest": "blake3:d420a9e411a3c1f6640a37d761acbf88757b79711709315ffb8c7a8b8577b5cc",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openbmb/MiniCPM-V-4.7-35B-A3B-DSpark",
+    "readme": "file:README.md@sha256:c99dd2052fad0be461802f2e2e6177a7d09c386a6703aaf18a86619dd67e905f",
+    "config": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096"
+  },
+  "summary": {
+    "value": "MiniCPM-V-4.7-35B-A3B-DSpark is a DSpark draft checkpoint trained for exact pairing with MiniCPM-V-4.7-35B-A3B and its tokenizer.",
+    "source": "file:README.md@sha256:c99dd2052fad0be461802f2e2e6177a7d09c386a6703aaf18a86619dd67e905f"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 389223169,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 718,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 5,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248144,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:a603178db396e6a18e95d3151156ad817315e4135f99426253ac469629182096#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2607.05147",
+        "title": "DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation",
+        "first_author": "Xin Cheng",
+        "authors": 33,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

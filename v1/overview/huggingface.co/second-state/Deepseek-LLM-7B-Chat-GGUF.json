@@ -1,0 +1,135 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "second-state/Deepseek-LLM-7B-Chat-GGUF",
+  "revision": "d8712b3e967e703c3d1cdc1a52fe13da17f2d403",
+  "manifest": "blake3:0e3e89b9991f0431714025eb1dbfeb7b28e320b23024e4b463b135549db860f0",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/second-state/Deepseek-LLM-7B-Chat-GGUF",
+    "readme": "file:README.md@sha256:41d7ab94f9cd5c236bd10919a3c400cc3cfb426b74960fa62b730bf68102fb05",
+    "config": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c"
+  },
+  "summary": {
+    "value": "Deepseek-LLM-7B-Chat-GGUF is a 6.9B Llama model for text generation by second-state, released Dec 2023.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 6910365696,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#model_type"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "deepseek-ai/deepseek-llm-7b-chat"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2023-12-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-03-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 27408,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 102400,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#vocab_size"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:e659937a8435b099bf0778c1cf14e4bf4e01dc3a26b5213a3463c0fc3ec65c4c#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

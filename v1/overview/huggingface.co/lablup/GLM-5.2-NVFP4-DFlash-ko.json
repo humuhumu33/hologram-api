@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lablup/GLM-5.2-NVFP4-DFlash-ko",
+  "revision": "f0216f0a30a0aeeb056b15186418687c79fd174e",
+  "manifest": "blake3:b704325e28aa37d3b80a1cf1d2a63b66d1d9e0975e5802f2a0b8f805d4c36512",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lablup/GLM-5.2-NVFP4-DFlash-ko",
+    "readme": "file:README.md@sha256:f3dd4fb584fd9b753c64a69c9e7a7e1cc96fd3e7b27ca1eefc7815c0e1d81e5e",
+    "config": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b"
+  },
+  "summary": {
+    "value": "A DFlash block-diffusion draft model for speculative decoding, paired with the nvidia/GLM-5.2-NVFP4 target (753B-param MoE, 40B active). Specialized for Korean-query agentic (tool-calling) and coding traffic — trained on captured multi-turn agent trajectories, not benchmark suites.",
+    "source": "file:README.md@sha256:f3dd4fb584fd9b753c64a69c9e7a7e1cc96fd3e7b27ca1eefc7815c0e1d81e5e"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1824596608,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/GLM-5.2-NVFP4"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-07-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 37,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 5,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 154880,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:6623683e2efe1505e71650d29baff08ddc19acc7f135d2e846a24fc6fac37e0b#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2602.06036",
+        "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
+        "first_author": "Jian Chen",
+        "authors": 3,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

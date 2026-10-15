@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "GroundingPI/GroundingPI",
+  "revision": "08d397c8769f7f10b96ff6d56ee6f56acb04181f",
+  "manifest": "blake3:6c97e27f65d1f315b17af07c1b1898468fc84aaa478123e73632cd61e9cb4e96",
+  "addressed": true,
+  "generated": "2026-10-15",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/GroundingPI/GroundingPI",
+    "readme": "file:README.md@sha256:bb9b07128ec1e22c18a275ffea767b563a8a1da172acf1ffaa185cd68f9c09ca",
+    "config": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470"
+  },
+  "summary": {
+    "value": "Precise grounding matters. It specifies which object is the target and where that object is, even in clutter and for tiny objects, and it has to be fast enough for closed-loop control.",
+    "source": "file:README.md@sha256:bb9b07128ec1e22c18a275ffea767b563a8a1da172acf1ffaa185cd68f9c09ca"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4843664384,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Groundingpi",
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#model_type"
+    },
+    "architecture_id": {
+      "value": "groundingpi",
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-09-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 305,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152670,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "groundingpi_vision",
+      "source": "file:config.json@sha256:f1b10db719ed14ffa02e64c67c901cb93fe5d877b77ac71434cf46ff14b65470#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.39601",
+        "title": "GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives",
+        "first_author": "Qize Yu",
+        "authors": 26,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "GroundingPI/GroundingPI",
+        "FanLR/GroundingPI"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
