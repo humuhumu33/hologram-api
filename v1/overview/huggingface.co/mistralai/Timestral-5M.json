@@ -1,0 +1,144 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mistralai/Timestral-5M",
+  "revision": "bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f",
+  "manifest": "blake3:076767d97c2b35a41555f2aae488527d1d957798f9aef78f46b9da03c8b182d6",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mistralai/Timestral-5M",
+    "readme": "file:README.md@sha256:295a9aa5a97eb8fe93935ab8e3736ee762fffaf869dcc41de6fcc98c77829f12",
+    "config": "file:config.json@sha256:b5f27f61513f8fd1a3aa996f3720d3679cb40bce5bcb08eb3dc320ce726e7c2f"
+  },
+  "summary": {
+    "value": "Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M, 28M, 123M, and 209M parameter versions. This repository contains the 5M checkpoint.",
+    "source": "file:README.md@sha256:295a9aa5a97eb8fe93935ab8e3736ee762fffaf869dcc41de6fcc98c77829f12"
+  },
+  "glance": {
+    "task": {
+      "value": "Time series forecasting",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 5208960,
+      "source": "api:safetensors.total"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "timestral",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 18,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 192,
+      "source": "file:config.json@sha256:b5f27f61513f8fd1a3aa996f3720d3679cb40bce5bcb08eb3dc320ce726e7c2f#d_model"
+    },
+    "heads": {
+      "value": 3,
+      "source": "file:config.json@sha256:b5f27f61513f8fd1a3aa996f3720d3679cb40bce5bcb08eb3dc320ce726e7c2f#num_heads"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:b5f27f61513f8fd1a3aa996f3720d3679cb40bce5bcb08eb3dc320ce726e7c2f#rope_theta"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "GIFT-Eval",
+        "task": "MASE",
+        "value": 0.705,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GIFT-Eval",
+        "task": "CRPS",
+        "value": 0.479,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TIME",
+        "task": "MASE",
+        "value": 0.652,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TIME",
+        "task": "CRPS",
+        "value": 0.545,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "fev-bench",
+        "task": "SQL skill score",
+        "value": 46.19,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "fev-bench",
+        "task": "MASE skill score",
+        "value": 34.54,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/timestral-5m"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

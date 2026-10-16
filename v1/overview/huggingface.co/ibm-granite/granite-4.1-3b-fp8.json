@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ibm-granite/granite-4.1-3b-fp8",
+  "revision": "cb2c6e010b2ab22a6f02b36a2751ca1ee6fc05f5",
+  "manifest": "blake3:71eb99b22f706ebec952869ba043dae37b21f5b09bb195587f9f9bcfdab387eb",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ibm-granite/granite-4.1-3b-fp8",
+    "readme": "file:README.md@sha256:e69c6032a6998e14b5d05008e8ed059b13eb8e11e9ab3381b9e34bb6ea9e641e",
+    "config": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb"
+  },
+  "summary": {
+    "value": "granite-4.1-3b-fp8 is a 3.7B Granite model for text generation by ibm-granite, released Apr 2026, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3660741120,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Granite",
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#model_type"
+    },
+    "architecture_id": {
+      "value": "granite",
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 86%, BF16 14%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "ibm-granite/granite-4.1-3b"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-04-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 8,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13979,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 100352,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000000,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:0adfcc412ae141e0a2f4c38818d285562298382db563eee5a5f5b9bf374523bb#quantization_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "ibm-granite/granite-guardian"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

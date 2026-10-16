@@ -1,0 +1,338 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openai/whisper-large-v2",
+  "revision": "ae4642769ce2ad8fc292556ccea8e901f1530655",
+  "manifest": "blake3:29592965855a404a092c1766c093e7e6eb9a2d57ffb0c8dd5c241c9df3ba97cb",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openai/whisper-large-v2",
+    "readme": "file:README.md@sha256:09efecdc032557c1c1f8a2c3a0a321f3e9063db24ac984d41a98680dfdb6e2ed",
+    "config": "file:config.json@sha256:5f1573015838f8d679678b09354b537061561c55fd22eecd129ef4cf8588a470"
+  },
+  "summary": {
+    "value": "Whisper is a pre-trained model for automatic speech recognition (ASR) and speech translation. Trained on 680k hours of labelled data, Whisper models demonstrate a strong ability to generalise to many datasets and domains without the need for fine-tuning.",
+    "source": "file:README.md@sha256:09efecdc032557c1c1f8a2c3a0a321f3e9063db24ac984d41a98680dfdb6e2ed"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1543304960,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Whisper",
+      "source": "file:config.json@sha256:5f1573015838f8d679678b09354b537061561c55fd22eecd129ef4cf8588a470#model_type"
+    },
+    "architecture_id": {
+      "value": "whisper",
+      "source": "file:config.json@sha256:5f1573015838f8d679678b09354b537061561c55fd22eecd129ef4cf8588a470#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "de",
+        "es",
+        "ru",
+        "ko",
+        "fr",
+        "ja",
+        "pt",
+        "tr",
+        "pl",
+        "ca",
+        "nl",
+        "ar",
+        "sv",
+        "it",
+        "id",
+        "hi",
+        "fi",
+        "vi",
+        "he",
+        "uk",
+        "el",
+        "ms",
+        "cs",
+        "ro",
+        "da",
+        "hu",
+        "ta",
+        "no",
+        "th",
+        "ur",
+        "hr",
+        "bg",
+        "lt",
+        "la",
+        "mi",
+        "ml",
+        "cy",
+        "sk",
+        "te",
+        "fa",
+        "lv",
+        "bn",
+        "sr",
+        "az",
+        "sl",
+        "kn",
+        "et",
+        "mk",
+        "br",
+        "eu",
+        "is",
+        "hy",
+        "ne",
+        "mn",
+        "bs",
+        "kk",
+        "sq",
+        "sw",
+        "gl",
+        "mr",
+        "pa",
+        "si",
+        "km",
+        "sn",
+        "yo",
+        "so",
+        "af",
+        "oc",
+        "ka",
+        "be",
+        "tg",
+        "sd",
+        "gu",
+        "am",
+        "yi",
+        "lo",
+        "uz",
+        "fo",
+        "ht",
+        "ps",
+        "tk",
+        "nn",
+        "mt",
+        "sa",
+        "lb",
+        "my",
+        "bo",
+        "tl",
+        "mg",
+        "as",
+        "tt",
+        "haw",
+        "ln",
+        "ha",
+        "ba",
+        "jw",
+        "su"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-12-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-02-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1824,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 56453183,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:5f1573015838f8d679678b09354b537061561c55fd22eecd129ef4cf8588a470#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1280,
+      "source": "file:config.json@sha256:5f1573015838f8d679678b09354b537061561c55fd22eecd129ef4cf8588a470#d_model"
+    },
+    "vocab": {
+      "value": 51865,
+      "source": "file:config.json@sha256:5f1573015838f8d679678b09354b537061561c55fd22eecd129ef4cf8588a470#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 7.835,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 144.4521022,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 16.74,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 12.05,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 10.67,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 2.83,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 5.14,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 3.87,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 3.9,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 7.48,
+        "date": "2022-12-05",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 397,
+        "Quantized": 16,
+        "Fine tuned": 303
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 397,
+        "quantized": 16,
+        "finetune": 303
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSpeechSeq2Seq",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2212.04356",
+        "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+        "first_author": "Alec Radford",
+        "authors": 6,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "elmresearchcenter/open_universal_arabic_asr_leaderboard",
+        "dinhhccs/Transcribe_Audio_Whisper",
+        "sanchit-gandhi/whisper-large-v2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

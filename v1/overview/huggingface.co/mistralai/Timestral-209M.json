@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mistralai/Timestral-209M",
+  "revision": "9874d252ab0aae16f7f7c999f98f98d6ad7d8365",
+  "manifest": "blake3:6c4eadb4302c8cedb267ea653387ba72ea684f95e550ef24bc7e76664b87cf17",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mistralai/Timestral-209M",
+    "readme": "file:README.md@sha256:f85a2083f1bbb039b3fde4dfd0426ef5af3c1d9ee4cfb4afc3be742336ba64d5",
+    "config": "file:config.json@sha256:1764139bb6d37ee5ff543f470495c086cfa6c373f7134fc61c7e3d844538bfd8"
+  },
+  "summary": {
+    "value": "Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M, 28M, 123M, and 209M parameter versions. This repository contains the 209M checkpoint.",
+    "source": "file:README.md@sha256:f85a2083f1bbb039b3fde4dfd0426ef5af3c1d9ee4cfb4afc3be742336ba64d5"
+  },
+  "glance": {
+    "task": {
+      "value": "Time series forecasting",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "series"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 209312256,
+      "source": "api:safetensors.total"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "timestral",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 40,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 11,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:1764139bb6d37ee5ff543f470495c086cfa6c373f7134fc61c7e3d844538bfd8#d_model"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:1764139bb6d37ee5ff543f470495c086cfa6c373f7134fc61c7e3d844538bfd8#num_heads"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:1764139bb6d37ee5ff543f470495c086cfa6c373f7134fc61c7e3d844538bfd8#rope_theta"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "GIFT-Eval",
+        "task": "MASE",
+        "value": 0.658,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GIFT-Eval",
+        "task": "CRPS",
+        "value": 0.446,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TIME",
+        "task": "MASE",
+        "value": 0.626,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TIME",
+        "task": "CRPS",
+        "value": 0.522,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "fev-bench",
+        "task": "SQL skill score",
+        "value": 50.39,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "fev-bench",
+        "task": "MASE skill score",
+        "value": 39.49,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "tardellirs/model-pulse",
+        "mrfakename/timestral-209m"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

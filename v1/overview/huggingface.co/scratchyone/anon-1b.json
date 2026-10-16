@@ -1,0 +1,172 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "scratchyone/anon-1b",
+  "revision": "2831fb6c0906495bb5afdeb59cc1cbea34e61b12",
+  "manifest": "blake3:9b701e702dac3da7be7644a862e3cc4e47b2d688fe2cfa8556f0b3743bb9e214",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/scratchyone/anon-1b",
+    "readme": "file:README.md@sha256:f95e7dbe4a53630c248e49ca51be4d3aaa58c77b424cfe8718661d67a7ae66f6",
+    "config": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede"
+  },
+  "summary": {
+    "value": "anon-1b is a full fine-tune of google/gemma-3-1b-pt on 157,342 greentext stories. The stories were OCR'd from screenshots posted to r/greentext, r/4chan, r/4tran and r/classic4chan.",
+    "source": "file:README.md@sha256:f95e7dbe4a53630c248e49ca51be4d3aaa58c77b424cfe8718661d67a7ae66f6"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 999887104,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 3 Text",
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3_text",
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 70%, FP32 30%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "gemma",
+        "name": "Gemma Terms",
+        "commercial": "conditions",
+        "note": "Prohibited use policy applies"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/gemma-3-1b-pt"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 18,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 26,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1152,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#hidden_size"
+    },
+    "heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262145,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:6cd257bf5ed3f79f195a2cb388806fdae7b3696053cd07ca8b96a4303d7d4ede#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "scratchyone/anon-greentext"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "darvell/anon-1b-green-text"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

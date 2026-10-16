@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "aismlv/wav2vec2-large-xlsr-kazakh",
+  "revision": "b277ef85de7bbd28302d570062feb196cc4e9107",
+  "manifest": "blake3:a01271e9213ef812f6d3967cd8dcf1acf0916a8e14ac7041c7eab5d876141ac7",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/aismlv/wav2vec2-large-xlsr-kazakh",
+    "readme": "file:README.md@sha256:9e9155048c7bf32875ae96fec8b954d074874a30942f2597ff81b8026791f473",
+    "config": "file:config.json@sha256:457e3ac61c2d5fc81d9f2255cf8d004600f3f116615cf8eb54caca4cc7f82023"
+  },
+  "summary": {
+    "value": "When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:9e9155048c7bf32875ae96fec8b954d074874a30942f2597ff81b8026791f473"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 315484845,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:457e3ac61c2d5fc81d9f2255cf8d004600f3f116615cf8eb54caca4cc7f82023#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:457e3ac61c2d5fc81d9f2255cf8d004600f3f116615cf8eb54caca4cc7f82023#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "kk"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "facebook/wav2vec2-large-xlsr-53"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-12-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 21,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2532617,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:457e3ac61c2d5fc81d9f2255cf8d004600f3f116615cf8eb54caca4cc7f82023#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:457e3ac61c2d5fc81d9f2255cf8d004600f3f116615cf8eb54caca4cc7f82023#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:457e3ac61c2d5fc81d9f2255cf8d004600f3f116615cf8eb54caca4cc7f82023#num_attention_heads"
+    },
+    "vocab": {
+      "value": 45,
+      "source": "file:config.json@sha256:457e3ac61c2d5fc81d9f2255cf8d004600f3f116615cf8eb54caca4cc7f82023#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Kazakh Speech Corpus v1.1",
+        "task": "Test WER",
+        "value": 19.65,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "kazakh_speech_corpus"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "Daniel9046/SoniTranslate",
+        "aquanode/gpu-vram-calculator",
+        "r3gm/SoniTranslate_translate_audio_of_a_video_content"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

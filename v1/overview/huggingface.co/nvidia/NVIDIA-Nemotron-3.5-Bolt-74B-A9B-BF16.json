@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+  "revision": "a6a1e5030819a130a1ea08aadb1fe42f4cc86777",
+  "manifest": "blake3:6d89889be88a7b21be658a0724882fb97f6a4dc5c800dffbf5a43addf09da865",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+    "readme": "file:README.md@sha256:0f4d0799b778b50e78bfd2160d43064c9f9da4d68f69fd0d5e37da50f903a51c",
+    "config": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820"
+  },
+  "summary": {
+    "value": "NVIDIA Nemotron 3.5 Bolt 74B-A9B is a vision-language model (VLM) designed to run everyday agentic tasks locally. This is the full-precision (BF16) release of this model, intended primarily for customization and post-training rather than direct production inference.",
+    "source": "file:README.md@sha256:0f4d0799b778b50e78bfd2160d43064c9f9da4d68f69fd0d5e37da50f903a51c"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 74885081096,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#num_experts"
+    },
+    "architecture": {
+      "value": "Nemotron H Omni",
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron_h_omni",
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 33,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#num_experts"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "radio",
+      "source": "file:config.json@sha256:ccd28f87d7c5c405dcd82271e20492a2beddcfa446acbbd7b9f8c48eab890820#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 23
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 23
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2605.07182",
+        "title": "Star Elastic: Many-in-One Reasoning LLMs with Efficient Budget Control",
+        "first_author": "Ali Taghibakhshi",
+        "authors": 20,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/nemotron-post-training-v3",
+      "nvidia/nemotron-pre-training-datasets"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

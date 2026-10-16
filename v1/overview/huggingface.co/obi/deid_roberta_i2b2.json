@@ -1,0 +1,179 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "obi/deid_roberta_i2b2",
+  "revision": "78f2152eb93ddd817290ce8dbe46f1a6685e09fc",
+  "manifest": "blake3:819bef4ab2bf0ca8c115f63ddfd132acbb786b1bfceb8b5a0f83da7cf049111b",
+  "addressed": true,
+  "generated": "2026-10-16",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/obi/deid_roberta_i2b2",
+    "readme": "file:README.md@sha256:fbfe782cc53f0b935543ce71644eb656c333b2c832ef6733e269f62ca2ebc5f7",
+    "config": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01"
+  },
+  "summary": {
+    "value": "deid_roberta_i2b2 is a 354M RoBERTa model for token classification by obi, released Mar 2022, under MIT.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 354356783,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "RoBERTa",
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#model_type"
+    },
+    "architecture_id": {
+      "value": "roberta",
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-02-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 40,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 22885833,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50265,
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:37daaf34704b5e0fc9068963597f9afe126271b6e386a47181ce08888c1f6a01#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "1907.11692",
+        "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+        "first_author": "Yinhan Liu",
+        "authors": 10,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "I2B2"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 28,
+      "top": [
+        "zama-fhe/encrypted-anonymization",
+        "obi/Medical-Note-Deidentification",
+        "rishabh5752/Patient_Information_Encrypter_Using_NLP"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

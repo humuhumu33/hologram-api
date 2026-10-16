@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "Phocinae/Phocinae-Largha-150M-v1",
-  "revision": "6fd31334ad461265578a8b52cc38969b3960a9dc",
-  "manifest": "blake3:9af09db1814ad71bcb75b4625b8f1855a6ac962c4cb2addb844a947a02faa7d1",
+  "revision": "a57030322df13c8c55ab7a99b8b7b176e2c5aa85",
+  "manifest": "blake3:cf2cf8124b92d906c9045f893d8e72ec9cb5d73318ae358801fce79e964dcc6c",
   "addressed": true,
-  "generated": "2026-10-13",
+  "generated": "2026-10-16",
   "provenance": {
     "api": "https://huggingface.co/api/models/Phocinae/Phocinae-Largha-150M-v1",
-    "readme": "file:README.md@sha256:f5db6a1d451d5a0053f29d804d505851af9b03987aef6b8cfb6b702049619391",
+    "readme": "file:README.md@sha256:7b203842957efba74626fa9db1358d39231a994d4aa889c173dcad1cb3f6535a",
     "config": "file:config.json@sha256:74320cc2ba086d78dcc7d62c5545bbc8789f42ca5d769a14fdc6733d9ed7761c"
   },
   "summary": {
-    "value": "斑海豹 Largha, the spotted seal: a 144.3M decision model (en-first; zh evaluated on machine-translated cases) (150M-class) for structured decisions — one forward pass per decision, on your own hardware.",
-    "source": "file:README.md@sha256:f5db6a1d451d5a0053f29d804d505851af9b03987aef6b8cfb6b702049619391"
+    "value": "Phocinae-Largha-150M-v1（斑海豹 Largha，jhu-clsp/mmBERT-small 微调）是一个 144.3M 参数的双语「类型化决策模型」，不是聊天模型： 输入 state 状态文本 + 一组带类型的提问（noul 是否 · choice 多选一 · score 2–10 打分），它在一次前向传播内返回带标定置信度的答案，输出零 token，且对选项顺序不敏感。",
+    "source": "file:README.md@sha256:7b203842957efba74626fa9db1358d39231a994d4aa889c173dcad1cb3f6535a"
   },
   "glance": {
     "task": {
@@ -55,10 +55,6 @@
       "value": "Safetensors",
       "source": "api:safetensors|gguf"
     },
-    "library": {
-      "value": "transformers",
-      "source": "api:library_name"
-    },
     "license": {
       "value": {
         "id": "apache-2.0",
@@ -75,20 +71,29 @@
       ],
       "source": "api:cardData.language"
     },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "jhu-clsp/mmBERT-small"
+        ]
+      },
+      "source": "api:baseModels"
+    },
     "released": {
       "value": "2026-10-08",
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-12",
+      "value": "2026-10-15",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 232,
+      "value": 235,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 443,
+      "value": 530,
       "source": "api:downloadsAllTime"
     }
   },
@@ -123,8 +128,8 @@
       {
         "dataset": "LocalLLaMA/typed-decisions",
         "task": "accuracy",
-        "value": 0.906,
-        "date": "2026-10-09",
+        "value": 0.791,
+        "date": "2026-10-15",
         "verified": false,
         "source": "https://huggingface.co/Phocinae/Phocinae-Largha-150M-v1/blob/main/BENCHMARKS.md",
         "notes": "Specialist: fitted on the Typed Decisions train split (mmBERT-small base) — NOT zero-shot; per the benchmark README this belongs to the \"fitted/fine-tuned on train\" table and is not comparable with the zero-shot table. Test split, 400 cases / 2,000 decisions, one request per case with the state and all five questions (README request shape), all answered, zero errors. Accuracy = agreement with the gold label. One forward pass per question, no generated tokens. Self-reported (self-host, no verifyToken). The submitted accuracy sits above the 0.735 teacher self-agreement ceiling — per the README this indicates the model is learning the teacher's quirks (label-specificity), also probed via JevBench on the model card. zh (machine-translated test cases; the training mix includes machine-translated + native Chinese rows) has no benchmark task; see the model card. Training-overlap disclosure (corrected 2026-10-10; re-audited 2026-10-12): the fine-tune mix includes a 500-item error-correction pair pool mined from model predictions on this benchmark's test rows. Overlap with this test split: 500 / 2,000 decisions across 282 / 400 cases (S1MB typed-decisions subset: 82 / 100 cases, 151 / 500 decisions). This accuracy is therefore measured on a test split this lineage has partly seen — read as \"fitted on train, test-exposed\", not zero-shot. Full details: the model card's training-overlap disclosure. A clean re-score without the pool (same recipe, pairs swapped back out) measures 0.791 — published in the dataset discussion (2026-10-12).\n"
@@ -162,25 +167,17 @@
   "family": {
     "children": {
       "value": {
+        "Quantized": 1,
         "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
+        "quantized": 1,
         "finetune": 1
       },
       "source": "api:childrenModelCount"
-    }
-  },
-  "run": {
-    "auto_model": {
-      "value": "AutoModelForMaskedLM",
-      "source": "api:transformersInfo.auto_model"
-    },
-    "processor": {
-      "value": "AutoTokenizer",
-      "source": "api:transformersInfo.processor"
     }
   },
   "datasets": {
@@ -191,11 +188,10 @@
   },
   "spaces": {
     "value": {
-      "count": 4,
+      "count": 2,
       "top": [
-        "tardellirs/model-pulse",
         "hotchpotch/S1MB-leaderboard",
-        "emanforhelp/model-pulse"
+        "hugging-apps/phocinae-largha-150m"
       ]
     },
     "source": "api:spaces"
