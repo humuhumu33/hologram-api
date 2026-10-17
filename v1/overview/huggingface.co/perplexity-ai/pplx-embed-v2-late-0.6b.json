@@ -4,7 +4,7 @@
   "revision": "8fc2de24534aa3610d85fa59c463313a5f096455",
   "manifest": "blake3:83eed946ae85d81fc88c40be30c625a413af85cd59296d5d5a9ad30f610e343a",
   "addressed": true,
-  "generated": "2026-10-09",
+  "generated": "2026-10-17",
   "provenance": {
     "api": "https://huggingface.co/api/models/perplexity-ai/pplx-embed-v2-late-0.6b",
     "readme": "file:README.md@sha256:c47db7d49bb32b4ba82c76a1148ec42bfb1e9967eb55b16b4482b58a5172bd51",
@@ -83,11 +83,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 48,
+      "value": 59,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 641,
+      "value": 1606,
       "source": "api:downloadsAllTime"
     }
   },
@@ -128,26 +128,31 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 1
+        "Adapter": 1,
+        "Quantized": 2,
+        "Fine tuned": 5
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 1
+        "adapter": 1,
+        "quantized": 2,
+        "finetune": 5
       },
       "source": "api:childrenModelCount"
     }
   },
-  "spaces": {
-    "value": {
-      "count": 3,
-      "top": [
-        "tardellirs/model-pulse",
-        "mteb/leaderboard",
-        "fastgpu/vram-and-gpu-cost-calculator"
-      ]
-    },
-    "source": "api:spaces"
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
   }
 }

@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/GLM-5.3-Flash-FP4-Local",
+  "revision": "76348ddb2be2e35e39ecfc00e75dc07703f4f3d5",
+  "manifest": "blake3:90b6d9dcd84dfd2384f67737ffdeb55e0ef385d280bfad6580cd6d33a9b0e60c",
+  "addressed": true,
+  "generated": "2026-10-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/GLM-5.3-Flash-FP4-Local",
+    "readme": "file:README.md@sha256:2be9cb475642db883d014e63e07e65ebccfdc4503d953cefcd906fc9f6ff9daa",
+    "config": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8"
+  },
+  "summary": {
+    "value": "IMPORTANT: the NVFP4 scale factors in this checkpoint are in a new lossless compression format, but upstream vLLM support for this format has not yet landed. You must use one of the containers provided below.",
+    "source": "file:README.md@sha256:2be9cb475642db883d014e63e07e65ebccfdc4503d953cefcd906fc9f6ff9daa"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 175239203374,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 288,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "GLM 5 Next",
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#model_type"
+    },
+    "architecture_id": {
+      "value": "glm5_next",
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 95%, FP8 5%, BF16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "Model Optimizer",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "zai-org/GLM-5.3-Flash"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 36,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 52,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 45,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 154880,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#max_position_embeddings"
+    },
+    "experts": {
+      "value": 288,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "glm5_next_vision",
+      "source": "file:config.json@sha256:dbf6aaf0d3651a5a297e6672bed57979c20528e2aa7475b80df5ba63d5402ba8#vision_config"
+    }
+  }
+}

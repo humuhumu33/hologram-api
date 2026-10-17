@@ -1,0 +1,128 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "arbazsiddiqui/voxlock",
+  "revision": "894e78845eca66a7691d330665c60a7c821b8e2d",
+  "manifest": "blake3:ba19bc991ca9ca916c60fc0d59938b1fe7d54726c80925a11b062beb30113cfc",
+  "addressed": true,
+  "generated": "2026-10-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/arbazsiddiqui/voxlock",
+    "readme": "file:README.md@sha256:e18a76f4ab59cbd43cad6e00731ec411dcc4593fa7d079c446fd2479283eaafe"
+  },
+  "summary": {
+    "value": "The best performing voice isolator there is. VoxLock is an open-source voice isolation model: it keeps the caller's voice and removes the other voices in the room before speech-to-text hears them.",
+    "source": "file:README.md@sha256:e18a76f4ab59cbd43cad6e00731ec411dcc4593fa7d079c446fd2479283eaafe"
+  },
+  "glance": {
+    "task": {
+      "value": "Audio to audio",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27258122,
+      "source": "api:safetensors.total"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Wespeaker/wespeaker-voxceleb-ecapa-tdnn512"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 200,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Krisp Voice Isolation Benchmark, 265 real recordings",
+        "task": "Word error rate after isolation (Parakeet TDT 0.6B v2)",
+        "value": 4.95,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Krisp Voice Isolation Benchmark, 265 real recordings",
+        "task": "Background words leaked per minute of background-only speech",
+        "value": 0.11,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "AMI meetings, headset wearer as caller, 134 held-out windows",
+        "task": "Word error rate after isolation (Parakeet TDT 0.6B v3)",
+        "value": 10.12,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "datasets": {
+    "value": [
+      "openslr/librispeech_asr",
+      "edinburghcstr/ami"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "arbazsiddiqui/voxlock"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
