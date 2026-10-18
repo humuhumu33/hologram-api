@@ -4,7 +4,7 @@
   "revision": "0db1cd2607d76a7bdb2a382f659e7b313079f84b",
   "manifest": "blake3:ab84595b4a28dc56eb2c0aa5bd7110080f99b81a936fdd1886da734597b7480f",
   "addressed": true,
-  "generated": "2026-10-10",
+  "generated": "2026-10-18",
   "provenance": {
     "api": "https://huggingface.co/api/models/Cloudflare/clef-omni",
     "readme": "file:README.md@sha256:f85fa4cb9d7e2df8f25568faa9527b9657620c4da8098cd2ad24005780640bda",
@@ -83,24 +83,61 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 49,
+      "value": 127,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 108,
+      "value": 4399,
       "source": "api:downloadsAllTime"
     }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.673,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.2469,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.1233,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.0295,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      }
+    ],
+    "source": "api:evalResults"
   },
   "family": {
     "children": {
       "value": {
-        "Quantized": 2
+        "Quantized": 10
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 2
+        "quantized": 10
       },
       "source": "api:childrenModelCount"
     }
@@ -117,8 +154,9 @@
   },
   "spaces": {
     "value": {
-      "count": 2,
+      "count": 3,
       "top": [
+        "multimodalart/jev-decision-index",
         "tardellirs/model-pulse",
         "hugging-apps/clef-omni"
       ]

@@ -1,10 +1,10 @@
 {
   "format": "hologram.overview/v1",
   "name": "vllm-sr/d3",
-  "revision": "225be8b1e2270becab69c5fe05b26f99cbbdd66b",
-  "manifest": "blake3:abae2c25e68217bc727292a6762c7c301ec67f682b071d2ffc2464c43ecb5c8e",
+  "revision": "cf15549a78fc52598ddd1951f321c58372bbd64f",
+  "manifest": "blake3:3a18a6fcbd5897607393f87fe10a479ae3f2e7f03f7cefeb70a4a3abfd295f48",
   "addressed": true,
-  "generated": "2026-10-15",
+  "generated": "2026-10-18",
   "provenance": {
     "api": "https://huggingface.co/api/models/vllm-sr/d3",
     "readme": "file:README.md@sha256:2642e6e7d6f2e12cdfc2e2dabf2ba5e13c0d40b146ac87c4435482c2b0df42bb",
@@ -82,15 +82,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-15",
+      "value": "2026-10-17",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 178,
+      "value": 234,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1805,
+      "value": 4263,
       "source": "api:downloadsAllTime"
     }
   },
@@ -128,18 +128,64 @@
       "source": "file:config.json@sha256:7e16284fafd2d54b73c10073c0391bfd6804886ceaf2cbe37fdb62d4c6813dea#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.749,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.4093,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.1456,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.0486,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LEXam-Benchmark/LEXam",
+        "task": "mcq_4_choices",
+        "value": 61.75,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/HappyWindman555/d3-hub-evals",
+        "notes": "Decision-model protocol, not generative: one /v1/systemone request per item with a single choice question (lettered options with their text); prediction = argmax of the returned option probabilities, no sampling, no CoT. All 1655 items, 1655 answered, 0 errors. vLLM nightly (0.32.0rc1.dev190+g3f1bcfd82), --max-model-len 8192 --enforce-eager, 1x A100 80GB, BF16."
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
-        "Quantized": 9,
-        "Fine tuned": 1
+        "Quantized": 8,
+        "Fine tuned": 2
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 9,
-        "finetune": 1
+        "quantized": 8,
+        "finetune": 2
       },
       "source": "api:childrenModelCount"
     }
@@ -156,11 +202,11 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 6,
       "top": [
         "multimodalart/jev-decision-index",
-        "assix-research/jev-decision-index",
-        "vllm-sr/Decision-3.0"
+        "tardellirs/model-pulse",
+        "hotchpotch/S1MB-leaderboard"
       ]
     },
     "source": "api:spaces"

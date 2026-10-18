@@ -1,10 +1,10 @@
 {
   "format": "hologram.overview/v1",
   "name": "vllm-sr/d3-lite",
-  "revision": "9c10703193afc7c7d28c88201c0364bfbbf58320",
-  "manifest": "blake3:08f29db3e784bc738d3cf91d52d2b53837e0761e9be65869de0ab2b23a4d375a",
+  "revision": "03560c26f5199c3c04129a2ccb38960c913635e0",
+  "manifest": "blake3:90e555717763795ae7cc4e4ecb66928eeb9a731115f480601deae6ec52d577fd",
   "addressed": true,
-  "generated": "2026-10-15",
+  "generated": "2026-10-18",
   "provenance": {
     "api": "https://huggingface.co/api/models/vllm-sr/d3-lite",
     "readme": "file:README.md@sha256:6cc8a41274e59946159e0d4ec92cb4ef8fee7fac3d7fdfbbc8b8d84ec933137a",
@@ -82,15 +82,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-15",
+      "value": "2026-10-17",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 26,
+      "value": 28,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1311,
+      "value": 2609,
       "source": "api:downloadsAllTime"
     }
   },
@@ -128,18 +128,55 @@
       "source": "file:config.json@sha256:a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.5305,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.5181,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.2437,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.1296,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
         "Quantized": 7,
-        "Fine tuned": 3
+        "Fine tuned": 4
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
         "quantized": 7,
-        "finetune": 3
+        "finetune": 4
       },
       "source": "api:childrenModelCount"
     }
@@ -156,10 +193,10 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 5,
       "top": [
         "multimodalart/jev-decision-index",
-        "assix-research/jev-decision-index",
+        "hotchpotch/S1MB-leaderboard",
         "vllm-sr/Decision-3.0"
       ]
     },
