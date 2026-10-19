@@ -1,16 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "NaiveAI/Naive-N0.5-Flash-FP8",
-  "revision": "1cd079a56408064751b45c31da60d3c4ee8dd930",
-  "manifest": "blake3:6800cca0dcfef9eb0fbcb221d32e650098f2e8b26efcf65c8978c43b873a23c2",
+  "revision": "211b5013489943e4e2f69bb913c2c52601736bb1",
+  "manifest": "blake3:6f91e997de536355a00ea8ce01a05bb47a5fd38e71c56dcba1f1699133c87ce2",
   "addressed": true,
-  "generated": "2026-10-16",
+  "generated": "2026-10-19",
   "provenance": {
-    "api": "https://huggingface.co/api/models/NaiveAI/Naive-N0.5-Flash-FP8"
+    "api": "https://huggingface.co/api/models/NaiveAI/Naive-N0.5-Flash-FP8",
+    "readme": "file:README.md@sha256:6c07a461fd56436b789829073526969cf7b95e4109c6a0aa28b75cac72dae1d3",
+    "config": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783"
   },
   "summary": {
-    "value": "Naive-N0.5-Flash-FP8 is a Naive N05 Flash model for text generation by NaiveAI, released Sep 2026, under MIT.",
-    "source": "derived:template"
+    "value": "Naive-N0.5-Flash is an open-weight 309B MoE model with 15.5B active parameters, built for coding and AI R&D. It supports a native 1M-token context window through a hybrid of Sliding-Window Attention (SWA) and lightweight DeepSeek Sparse Attention (DSA), with no full-attention layers.",
+    "source": "file:README.md@sha256:6c07a461fd56436b789829073526969cf7b95e4109c6a0aa28b75cac72dae1d3"
   },
   "glance": {
     "task": {
@@ -29,13 +31,25 @@
       ],
       "source": "derived:pipeline_tag"
     },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#num_experts_per_tok"
+    },
     "architecture": {
       "value": "Naive N05 Flash",
-      "source": "api:config.model_type"
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#model_type"
     },
     "architecture_id": {
       "value": "naive_n05_flash",
-      "source": "api:config.model_type"
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#max_position_embeddings"
     },
     "license": {
       "value": {
@@ -55,12 +69,58 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 13,
+      "value": 63,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 479,
+      "value": 559,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152576,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000000,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:24a510d6dbe9c7b6c36fefe7dec33b8ce6a12e8815ded1cec7dcc2b90e1e7783#quantization_config"
     }
   },
   "family": {
@@ -76,5 +136,14 @@
       },
       "source": "api:childrenModelCount"
     }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
   }
 }

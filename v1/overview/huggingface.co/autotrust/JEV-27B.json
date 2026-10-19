@@ -4,7 +4,7 @@
   "revision": "14b425269ed24452e0a5ad5a8f3e51d139647a88",
   "manifest": "blake3:779895d1d342a584681ab556655c36ea787259a9515ffa854371137e8c8c80d6",
   "addressed": true,
-  "generated": "2026-10-11",
+  "generated": "2026-10-19",
   "provenance": {
     "api": "https://huggingface.co/api/models/autotrust/JEV-27B",
     "readme": "file:README.md@sha256:ddff9a781adf07fef7a5985390e3ee18e46b0cd75aefc1886bd102a8bdfe9985",
@@ -92,11 +92,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 79,
+      "value": 93,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 182232,
+      "value": 239683,
       "source": "api:downloadsAllTime"
     }
   },
@@ -133,63 +133,43 @@
   "benchmarks": {
     "value": [
       {
-        "dataset": "jev-distill-corpus-v3 · test_set_30k",
-        "task": "mean KL(target ‖ model), all test rows (25,376 of 29,955 targets are TypeSafe Jev 1.13 distributions)",
-        "value": 0.0186,
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.495,
+        "date": "2026-10-16",
         "verified": false,
-        "source": "model card"
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
       },
       {
-        "dataset": "jev-distill-corpus-v3 · test_set_30k",
-        "task": "noul AUROC",
-        "value": 0.996,
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.5497,
+        "date": "2026-10-16",
         "verified": false,
-        "source": "model card"
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
       },
       {
-        "dataset": "jev-distill-corpus-v3 · test_set_30k",
-        "task": "noul Brier (vs. target probability, all rows)",
-        "value": 0.0013,
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.2534,
+        "date": "2026-10-16",
         "verified": false,
-        "source": "model card"
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
       },
       {
-        "dataset": "jev-distill-corpus-v3 · test_set_30k",
-        "task": "score expected-value MAE (0–5 scale)",
-        "value": 0.098,
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.1364,
+        "date": "2026-10-16",
         "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "jev-distill-corpus-v3 · test_set_30k",
-        "task": "ECE (15 bins, after temperature)",
-        "value": 0.0009,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "jev-distill-corpus-v3 · test_set_30k",
-        "task": "choice top-1 agreement (all rows)",
-        "value": 0.903,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "jev-distill-corpus-v3 · test_set_30k",
-        "task": "choice top-1 agreement (decisive-target rows, top-2 gap ≥ 0.1)",
-        "value": 0.958,
-        "verified": false,
-        "source": "model card"
-      },
-      {
-        "dataset": "HumanEval",
-        "task": "pass@1 (greedy, completion-style prompt)",
-        "value": 0.78,
-        "verified": false,
-        "source": "model card"
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
       }
     ],
-    "source": "api:cardData.model-index"
+    "source": "api:evalResults"
   },
   "family": {
     "children": {
@@ -223,11 +203,11 @@
   },
   "spaces": {
     "value": {
-      "count": 8,
+      "count": 9,
       "top": [
         "multimodalart/jev-decision-index",
-        "tardellirs/model-pulse",
-        "hotchpotch/S1MB-leaderboard"
+        "hotchpotch/S1MB-leaderboard",
+        "autotrust/JEV-27B-Demo"
       ]
     },
     "source": "api:spaces"

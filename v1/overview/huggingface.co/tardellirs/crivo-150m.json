@@ -1,0 +1,191 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tardellirs/crivo-150m",
+  "revision": "981e257e06537ddfbdc6e7215124875a42fd97c0",
+  "manifest": "blake3:b936741ff28476bc44c9c32b4b558bf18a3e8be22f87b9469054a977bc3efa43",
+  "addressed": true,
+  "generated": "2026-10-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tardellirs/crivo-150m",
+    "readme": "file:README.md@sha256:c2ef1e88a276c5b25bb96271ae54d2b03de7bc348e3900db677c6980b09f7c3e",
+    "config": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09"
+  },
+  "summary": {
+    "value": "A compact typed-decision encoder for agents and pipelines. Version 2, distilled from Crivo-400M.",
+    "source": "file:README.md@sha256:c2ef1e88a276c5b25bb96271ae54d2b03de7bc348e3900db677c6980b09f7c3e"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 149610241,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#model_type"
+    },
+    "context": {
+      "value": 7999,
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "cross-encoder/ettin-reranker-150m-v1"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 267,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50369,
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#vocab_size"
+    },
+    "context": {
+      "value": 7999,
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:6962b45b3504bd3d83425a3de894c533153ad86d1a08cea8a9e7b13fded5fe09#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Decision Index 0.3",
+        "task": "Public index (self-run, complete public suite; version 2)",
+        "value": 34.38,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "hotchpotch/bekko-system-one-dataset-v0",
+      "tasksource/procedural-typed-decisions",
+      "tasksource/tasksource-jev-typed-decisions",
+      "NousResearch/hermes-function-calling-v1",
+      "Team-ACE/ToolACE",
+      "glaiveai/glaive-function-calling-v2",
+      "causalNLP/cladder",
+      "galileo-ai/ragbench",
+      "theatticusproject/cuad",
+      "facebook/anli",
+      "nvidia/When2Call"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "assix-research/jev-decision-index"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

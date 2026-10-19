@@ -1,0 +1,194 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/Nemotron-3.5-Parse",
+  "revision": "e7ea79242a87ea0ad3919b672bfedb429a683206",
+  "manifest": "blake3:debbfcff30233afaf8a8ea6a55a4798e88e64b66830d95aff68e5b2f1d28c9b5",
+  "addressed": true,
+  "generated": "2026-10-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/Nemotron-3.5-Parse",
+    "readme": "file:README.md@sha256:10929e823b91e440c973843f61335950fc2eee2c45e807e2da7850db64d4392b",
+    "config": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5"
+  },
+  "summary": {
+    "value": "Nemotron 3.5 Parse was developed by NVIDIA as a part of Nemotron.",
+    "source": "file:README.md@sha256:10929e823b91e440c973843f61335950fc2eee2c45e807e2da7850db64d4392b"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 630800504,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron Parse",
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron_parse",
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "openmdw-1.1",
+        "name": "OpenMDW 1.1",
+        "commercial": "yes",
+        "note": "Permissive, for models"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-09-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 19,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 632,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 10,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 72512,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "mean",
+        "value": 75.196195,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/nvidia/Nemotron-3.5-Parse/blob/main/reference/parsebench/pipeline/validation_metrics.json",
+        "notes": "Pipeline name: Nemotron 3.5 Parse; triple pass with region union"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "table",
+        "value": 84.672243,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/nvidia/Nemotron-3.5-Parse/blob/main/reference/parsebench/pipeline/validation_metrics.json",
+        "notes": "Pipeline name: Nemotron 3.5 Parse; triple pass with region union"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "chart",
+        "value": 64.398544,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/nvidia/Nemotron-3.5-Parse/blob/main/reference/parsebench/pipeline/validation_metrics.json",
+        "notes": "Pipeline name: Nemotron 3.5 Parse; triple pass with region union"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_content",
+        "value": 87.959904,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/nvidia/Nemotron-3.5-Parse/blob/main/reference/parsebench/pipeline/validation_metrics.json",
+        "notes": "Pipeline name: Nemotron 3.5 Parse; triple pass with region union"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "text_formatting",
+        "value": 68.277254,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/nvidia/Nemotron-3.5-Parse/blob/main/reference/parsebench/pipeline/validation_metrics.json",
+        "notes": "Pipeline name: Nemotron 3.5 Parse; triple pass with region union"
+      },
+      {
+        "dataset": "llamaindex/ParseBench",
+        "task": "layout",
+        "value": 70.673029,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/nvidia/Nemotron-3.5-Parse/blob/main/reference/parsebench/pipeline/validation_metrics.json",
+        "notes": "Pipeline name: Nemotron 3.5 Parse; triple pass with region union"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "quantid/huggingface-official-benchmark-leaderboards",
+        "nebius-build-week/britannica-across-time"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

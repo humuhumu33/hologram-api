@@ -1,0 +1,143 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "AuroraAI-Research/AuroraASR-1M",
+  "revision": "cd307b54b4d666d6ad7dc982a7a58a96d6e7f942",
+  "manifest": "blake3:29551a47be2ef6b632fbfce3980369b46da0b99afba18e00d27af7acfbdb1fc4",
+  "addressed": true,
+  "generated": "2026-10-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/AuroraAI-Research/AuroraASR-1M",
+    "readme": "file:README.md@sha256:6b13d119b00694203467bc6cb7a7709fa6b0b879982464f882f7586f44803e09",
+    "config": "file:config.json@sha256:13d237c9c1a1b3824af92c733fdeb6c7ad731a82bf1655f463c5c1de3756d521"
+  },
+  "summary": {
+    "value": "A tiny weight-shared Conformer-CTC speech recognizer under 1M parameters. Four unique Conformer-lite blocks are each applied twice, followed by a CTC head over a 256-piece BPE vocabulary.",
+    "source": "file:README.md@sha256:6b13d119b00694203467bc6cb7a7709fa6b0b879982464f882f7586f44803e09"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 949073,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Aurora ASR",
+      "source": "file:config.json@sha256:13d237c9c1a1b3824af92c733fdeb6c7ad731a82bf1655f463c5c1de3756d521#model_type"
+    },
+    "architecture_id": {
+      "value": "aurora_asr",
+      "source": "file:config.json@sha256:13d237c9c1a1b3824af92c733fdeb6c7ad731a82bf1655f463c5c1de3756d521#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 42,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 128,
+      "source": "file:config.json@sha256:13d237c9c1a1b3824af92c733fdeb6c7ad731a82bf1655f463c5c1de3756d521#d_model"
+    },
+    "heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:13d237c9c1a1b3824af92c733fdeb6c7ad731a82bf1655f463c5c1de3756d521#num_heads"
+    },
+    "vocab": {
+      "value": 257,
+      "source": "file:config.json@sha256:13d237c9c1a1b3824af92c733fdeb6c7ad731a82bf1655f463c5c1de3756d521#vocab_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "datasets": {
+    "value": [
+      "librispeech_asr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "hugging-apps/auroraasr-1m",
+        "mrfakename/auroraasr-1m",
+        "mrfakename/auroraasr-1m-webgpu"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
