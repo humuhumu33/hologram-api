@@ -1,0 +1,135 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "laion/larger_clap_general",
+  "revision": "ada0c23a36c4e8582805bb38fec3905903f18b41",
+  "manifest": "blake3:b35434cc9a2fbdb46204a1a7771ecaa6dc2c46d01a1227606d5e527a88baf256",
+  "addressed": true,
+  "generated": "2026-10-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/laion/larger_clap_general",
+    "readme": "file:README.md@sha256:fa3c15ecc9a6753f06a51205a0ca5213ae7be96a962ed9b2b1c970aea3b3c56e",
+    "config": "file:config.json@sha256:6268f76a067e3104bf9001e97d7dcc0fcfb16f3086cfb478ee72d95900d7fc1d"
+  },
+  "summary": {
+    "value": "CLAP is to audio what CLIP is to image. This is an improved CLAP checkpoint, specifically trained on general audio, music and speech.",
+    "source": "file:README.md@sha256:fa3c15ecc9a6753f06a51205a0ca5213ae7be96a962ed9b2b1c970aea3b3c56e"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Clap",
+      "source": "file:config.json@sha256:6268f76a067e3104bf9001e97d7dcc0fcfb16f3086cfb478ee72d95900d7fc1d#model_type"
+    },
+    "architecture_id": {
+      "value": "clap",
+      "source": "file:config.json@sha256:6268f76a067e3104bf9001e97d7dcc0fcfb16f3086cfb478ee72d95900d7fc1d#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2023-10-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-10-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 56,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 11622518,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 16,
+      "source": "file:config.json@sha256:6268f76a067e3104bf9001e97d7dcc0fcfb16f3086cfb478ee72d95900d7fc1d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:6268f76a067e3104bf9001e97d7dcc0fcfb16f3086cfb478ee72d95900d7fc1d#hidden_size"
+    },
+    "audio_encoder": {
+      "value": "clap_audio_model",
+      "source": "file:config.json@sha256:6268f76a067e3104bf9001e97d7dcc0fcfb16f3086cfb478ee72d95900d7fc1d#audio_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2211.06687",
+        "title": "Large-scale Contrastive Language-Audio Pretraining with Feature Fusion and Keyword-to-Caption Augmentation",
+        "first_author": "Yusong Wu",
+        "authors": 6,
+        "year": "2022"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 14,
+      "top": [
+        "OpenSound/SoloAudio",
+        "leadr64/database",
+        "leadr64/audi_data"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

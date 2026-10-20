@@ -1,17 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "FINAL-Bench/VKORE-46M-NPU",
-  "revision": "acc1eddb2abc97545c39d32653be32529c81a39d",
-  "manifest": "blake3:c9adbda4e6632a4fcf8ed41a36d355d90597acafd34040432d8c2653a8751d0b",
+  "revision": "d3457dfe06573867a50bc3075ac4c232086d0c70",
+  "manifest": "blake3:bf895cceee6e6192bdce49ca2b63e86a83770204ed25a021bdd6e048cba7eade",
   "addressed": true,
-  "generated": "2026-10-16",
+  "generated": "2026-10-20",
   "provenance": {
     "api": "https://huggingface.co/api/models/FINAL-Bench/VKORE-46M-NPU",
-    "readme": "file:README.md@sha256:e292d711de1b8e2654c10984fc46ee22a2e263524d9f60c6ded5159e3e2575b4"
+    "readme": "file:README.md@sha256:8100627596c6af95e317b2e5844021ab24351727c57c581d46d7950fbc888400",
+    "config": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24"
   },
   "summary": {
     "value": "A small language model pretrained entirely from scratch on an inference only NPU, using backpropagation run on the chip itself. To the best of our knowledge, this is the first publicly released model pretrained from scratch on an inference only NPU.",
-    "source": "file:README.md@sha256:e292d711de1b8e2654c10984fc46ee22a2e263524d9f60c6ded5159e3e2575b4"
+    "source": "file:README.md@sha256:8100627596c6af95e317b2e5844021ab24351727c57c581d46d7950fbc888400"
   },
   "glance": {
     "task": {
@@ -29,6 +30,30 @@
         "text"
       ],
       "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 45756928,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#model_type"
+    },
+    "context": {
+      "value": 256,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
     },
     "library": {
       "value": "transformers",
@@ -55,11 +80,11 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-15",
+      "value": "2026-10-20",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 24,
+      "value": 27,
       "source": "api:likes"
     },
     "downloads_all_time": {
@@ -67,10 +92,44 @@
       "source": "api:downloadsAllTime"
     }
   },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 256,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#vocab_size"
+    },
+    "context": {
+      "value": 256,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:839f0b30ebfc17c37019ca4d9e4a5c05a967f27508badbe993672a0e6ed90b24#tie_word_embeddings"
+    }
+  },
   "run": {
     "auto_model": {
-      "value": "AutoModel",
+      "value": "AutoModelForCausalLM",
       "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
     }
   },
   "datasets": {
@@ -81,11 +140,10 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 2,
       "top": [
         "VIDraft/ai-media",
-        "ginigen-ai/edge-ai-news",
-        "quantid/measurement-lab"
+        "ginigen-ai/edge-ai-news"
       ]
     },
     "source": "api:spaces"

@@ -4,7 +4,7 @@
   "revision": "42ac8d4fa9efb61f96e53d80962cf28f6dfe667e",
   "manifest": "blake3:bb20e64bd254fa01131f0ab0bd6f74d6f3893183e13b686dde320cf4d98da3ec",
   "addressed": true,
-  "generated": "2026-10-12",
+  "generated": "2026-10-20",
   "provenance": {
     "api": "https://huggingface.co/api/models/nandakishorm/vega-08b-public-intents",
     "readme": "file:README.md@sha256:9ef2f0b41a42626c73daab92c16873d6b674949fc0b44e0f6009368a9cebca29",
@@ -62,11 +62,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 30,
+      "value": 38,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 278,
+      "value": 812,
       "source": "api:downloadsAllTime"
     }
   },
@@ -79,6 +79,47 @@
       "value": 1024,
       "source": "file:config.json@sha256:50fcb549259884896c2e446fbe9cb028f9f79ec063c548e04e2e9420f7537a68#d_model"
     }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.6635,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Model was fitted/fine-tuned on this benchmark's train split (specialist row); not comparable with zero-shot rows."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.4353,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Model was fitted/fine-tuned on this benchmark's train split (specialist row); not comparable with zero-shot rows."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.1915,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Model was fitted/fine-tuned on this benchmark's train split (specialist row); not comparable with zero-shot rows."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.0737,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Model was fitted/fine-tuned on this benchmark's train split (specialist row); not comparable with zero-shot rows."
+      }
+    ],
+    "source": "api:evalResults"
   },
   "family": {
     "children": {
@@ -108,9 +149,8 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 2,
       "top": [
-        "tardellirs/model-pulse",
         "nandakishorm/vega-ttt",
         "kvnloo/vega-ttt"
       ]

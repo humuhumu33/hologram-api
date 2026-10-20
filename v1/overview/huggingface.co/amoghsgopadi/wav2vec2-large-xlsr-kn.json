@@ -1,0 +1,133 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "amoghsgopadi/wav2vec2-large-xlsr-kn",
+  "revision": "8fe9e06a881196a2f6d0a4104a1d46f67d4b9cad",
+  "manifest": "blake3:d6c870e303625f0df2151789624329887006cfe508f11120213a860c27f6c33c",
+  "addressed": true,
+  "generated": "2026-10-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/amoghsgopadi/wav2vec2-large-xlsr-kn",
+    "readme": "file:README.md@sha256:bc112de5dfa8a628a5ec58e73bd506dd9e79dbe30d075a78ed6b066808a628c7",
+    "config": "file:config.json@sha256:fe38d54100ea1d5943d282f611bd341dba4cc0be97557f95a8be9c75f6cd06b2"
+  },
+  "summary": {
+    "value": "Fine-tuned facebook/wav2vec2-large-xlsr-53 on Kannada using the OpenSLR SLR79 dataset. When using this model, make sure that your speech input is sampled at 16kHz.",
+    "source": "file:README.md@sha256:bc112de5dfa8a628a5ec58e73bd506dd9e79dbe30d075a78ed6b066808a628c7"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:fe38d54100ea1d5943d282f611bd341dba4cc0be97557f95a8be9c75f6cd06b2#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:fe38d54100ea1d5943d282f611bd341dba4cc0be97557f95a8be9c75f6cd06b2#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "kn"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2021-07-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2232763,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:fe38d54100ea1d5943d282f611bd341dba4cc0be97557f95a8be9c75f6cd06b2#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:fe38d54100ea1d5943d282f611bd341dba4cc0be97557f95a8be9c75f6cd06b2#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:fe38d54100ea1d5943d282f611bd341dba4cc0be97557f95a8be9c75f6cd06b2#num_attention_heads"
+    },
+    "vocab": {
+      "value": 101,
+      "source": "file:config.json@sha256:fe38d54100ea1d5943d282f611bd341dba4cc0be97557f95a8be9c75f6cd06b2#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "OpenSLR kn",
+        "task": "Test WER",
+        "value": 27.08,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "openslr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "anabaena/vaaksiddhi"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

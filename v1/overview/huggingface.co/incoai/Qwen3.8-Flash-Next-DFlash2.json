@@ -1,0 +1,160 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "incoai/Qwen3.8-Flash-Next-DFlash2",
+  "revision": "a22a1744e85c17364dcc54a6a420af7135d4c7f6",
+  "manifest": "blake3:10d2faf6571ffe597c266edf9796fef064aa1a410ef2038a82bc26fbc60a024f",
+  "addressed": true,
+  "generated": "2026-10-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/incoai/Qwen3.8-Flash-Next-DFlash2",
+    "readme": "file:README.md@sha256:296dfce04d501f313f4223a4ab2378f198ecb860e3b24a4689e66aff651f0477",
+    "config": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9"
+  },
+  "summary": {
+    "value": "This repository contains the DFlash 2 draft model for Qwen/Qwen3.8-Flash-Next. It is not a standalone language model: it runs inside a speculative decoding server and drafts tokens for the target model to verify.",
+    "source": "file:README.md@sha256:296dfce04d501f313f4223a4ab2378f198ecb860e3b24a4689e66aff651f0477"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 603065600,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-Flash-Next"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 41,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 5,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:2409575986f9ea24d455343eb469c0e6940def5edab1d1be503bb8eb4cc3b1b9#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

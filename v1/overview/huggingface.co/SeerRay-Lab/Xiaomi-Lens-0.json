@@ -1,0 +1,179 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "SeerRay-Lab/Xiaomi-Lens-0",
+  "revision": "c1c30be4da6e8098bfbbe1a43856e1da7828523f",
+  "manifest": "blake3:93aee48bdeb3a8b5899e907a305e6a4162a0f5225d337db3acb9bac0f0054adf",
+  "addressed": true,
+  "generated": "2026-10-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/SeerRay-Lab/Xiaomi-Lens-0",
+    "readme": "file:README.md@sha256:dea72f5aa801c1e4385e5140685f99b0f6d8bc95572a558ddd8780be49081349",
+    "config": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c"
+  },
+  "summary": {
+    "value": "Xiaomi-Lens-0 is a 4B multimodal language model built on Qwen3.5-4B. It adds a lightweight pixel-mask decoder and is trained with joint language and mask supervision.",
+    "source": "file:README.md@sha256:dea72f5aa801c1e4385e5140685f99b0f6d8bc95572a558ddd8780be49081349"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4622144192,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248078,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:c7700d967b39ecafc30179ff2d386e34edbadd94c87d662e2c1495e9228fbf0c#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.23279",
+        "title": "Xiaomi-Lens-0 Technical Report",
+        "first_author": "Pei Fu",
+        "authors": 15,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/xiaomi-lens-0"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
