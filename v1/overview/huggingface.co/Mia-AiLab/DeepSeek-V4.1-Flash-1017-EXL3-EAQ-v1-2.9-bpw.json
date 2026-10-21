@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Mia-AiLab/DeepSeek-V4.1-Flash-1017-EXL3-EAQ-v1-2.9-bpw",
+  "revision": "45ee5d0fd106c94a3d77f721e09cbb2f50e5a16b",
+  "manifest": "blake3:8e9948dc62bcdd578dfec5891948ebcba46786100ccbc31282d39c975899ffde",
+  "addressed": true,
+  "generated": "2026-10-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Mia-AiLab/DeepSeek-V4.1-Flash-1017-EXL3-EAQ-v1-2.9-bpw",
+    "readme": "file:README.md@sha256:177f7aa70a21c4ab124e49c979148cec5d51720c9dc6dd1d3b4491bb86ff5104",
+    "config": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d"
+  },
+  "summary": {
+    "value": "EAQ v1 (EXL3 format) quantization of deepseek-ai/DeepSeek-V4.1-Flash-1017 (revision 1bae0e10, the refreshed V4.1-Flash weights), converted with exllamav3 v1.6.1 plus the EAQ patch set (converter version 1.6.1) and a port of the DeepSeek-V4.1 architecture (see Conversion).",
+    "source": "file:README.md@sha256:177f7aa70a21c4ab124e49c979148cec5d51720c9dc6dd1d3b4491bb86ff5104"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 105247867090,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek V41",
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_v41",
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "I16 98%, BF16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "exllamav3",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1236,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#max_position_embeddings"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "exl3",
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "deepseek_v41_vision",
+      "source": "file:config.json@sha256:4eac47f0da99a65f2bcfb97ca357f7d5388a79c9b377d6dd65b1ed18548d846d#vision_config"
+    }
+  }
+}

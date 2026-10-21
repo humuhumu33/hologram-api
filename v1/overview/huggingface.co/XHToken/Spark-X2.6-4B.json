@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "XHToken/Spark-X2.6-4B",
+  "revision": "66e3ae7bee54e0a523d692cb8ef841f35409807b",
+  "manifest": "blake3:3c019a1d7616a85a0f3808afae9481e4b810df25dd9d398d788163ff8c71170c",
+  "addressed": true,
+  "generated": "2026-10-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/XHToken/Spark-X2.6-4B",
+    "readme": "file:README.md@sha256:c483630bf7e9c22a6583d127d74ecf0e3270aea0c358e770ac5b5f4dbb82bf39",
+    "config": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad"
+  },
+  "summary": {
+    "value": "Spark-X2.6-4B retains exactly the same architecture as Spark-X2.5-4B, achieving its capability gains through improved post-training. It delivers substantial improvements in coding, agent, long-context, multilingual, reasoning, etc.",
+    "source": "file:README.md@sha256:c483630bf7e9c22a6583d127d74ecf0e3270aea0c358e770ac5b5f4dbb82bf39"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4112079360,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Spark2 5",
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#model_type"
+    },
+    "architecture_id": {
+      "value": "spark2_5",
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "XHToken/Spark-X2.6-4B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 62,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:767161ece8ed2891e44345afdf98d29c1cacb964116cb6db7d20dc1c757490ad#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 17,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 17,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
