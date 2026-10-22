@@ -1,0 +1,130 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "KRAFTON/Raon-1-mini-preview-nvfp4",
+  "revision": "0b0f06ac2b3d03abea62dd221fe7839fddf36dfe",
+  "manifest": "blake3:5723aecd55f79592dd5ac86f7c51b6580b1b1042d56463356a88ddb236822bf5",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/KRAFTON/Raon-1-mini-preview-nvfp4",
+    "readme": "file:README.md@sha256:746e1ca09d0d476f2f67b026050d2d47e3d6bf71476ba269eae99aa2ee5aa9a2",
+    "config": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e"
+  },
+  "summary": {
+    "value": "Raon-1 mini is a 30B-A4B Mixture-of-Experts (MoE) language model, designed and trained from scratch by KRAFTON AI. It demonstrates strong capabilities in Korean conversation and agentic tasks.",
+    "source": "file:README.md@sha256:746e1ca09d0d476f2f67b026050d2d47e3d6bf71476ba269eae99aa2ee5aa9a2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 15084105442,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#num_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#num_experts_per_token"
+    },
+    "architecture": {
+      "value": "Raon1 Mini",
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#model_type"
+    },
+    "architecture_id": {
+      "value": "raon1_mini",
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 91%, BF16 5%, FP8 4%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 20,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 24,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 25,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#num_attention_heads"
+    },
+    "vocab": {
+      "value": 259840,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#num_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#num_experts_per_token"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt_fp4",
+      "source": "file:config.json@sha256:80e784352e79c467ad7731a7eeb1a4584084d9fa149faa33acf0cb7b7196b36e#quantization_config"
+    }
+  }
+}

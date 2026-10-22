@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/Sentiment-Analysis-7B",
+  "revision": "c443f040bb22ad30d69dbdd4482c8aa0f46a4d62",
+  "manifest": "blake3:23f07184c652553a4a268d6f5c00fdd2dad0e11f9b7159974679e2c2786ad4db",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/Sentiment-Analysis-7B",
+    "readme": "file:README.md@sha256:fbd582f3ddeded4750aed2718f4fb96ec557ded8baa83aac00641fa7a7bea2ca",
+    "config": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134"
+  },
+  "summary": {
+    "value": "Sentiment-Analysis-7B is a 7B-parameter autoregressive language model fine-tuned for sentiment classification of user messages directed at a service, product, or agent (the \"Target\").",
+    "source": "file:README.md@sha256:fbd582f3ddeded4750aed2718f4fb96ec557ded8baa83aac00641fa7a7bea2ca"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7241732096,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Mistral",
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#model_type"
+    },
+    "architecture_id": {
+      "value": "mistral",
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "mistralai/Mistral-7B-Instruct-v0.2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 123,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:4b67c75e719120a7dc6c8e079bda0cd0438878900d729b5e0bbbb2c4d8ff8134#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

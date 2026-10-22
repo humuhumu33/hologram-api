@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/Flora-Rewarder",
+  "revision": "7de68d22c4a9decec5ddb7f86ddcaee8f82d3367",
+  "manifest": "blake3:217576b32346d368cf963b2afb3839013904df7eaca84ca5942141ff541ff564",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/Flora-Rewarder",
+    "readme": "file:README.md@sha256:ad36503138b44380f6e0e6c4e79bd46464031d795ddb1a3c493969e70d1bd52f",
+    "config": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6"
+  },
+  "summary": {
+    "value": "Flora-rewarder-27B produces outcome rewards (an episode-level success score), used for monitoring real-world deployments, and process rewards (dense action-quality scores over short time steps), used during reinforcement learning-based post-training.",
+    "source": "file:README.md@sha256:ad36503138b44380f6e0e6c4e79bd46464031d795ddb1a3c493969e70d1bd52f"
+  },
+  "glance": {
+    "task": {
+      "value": "Video language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "video",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781428976,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 229,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:95b6f1f65acca29a2751a90a82d67d459fb5ffae0bb565c053763b05e6336de6#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2503.14734",
+        "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+        "first_author": "NVIDIA",
+        "authors": 42,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

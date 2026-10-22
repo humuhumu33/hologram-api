@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "melcheikh/gemma-4-31B-it-qat-NVFP4-Blackwell",
+  "revision": "4f01d2c46d00ad66cdaf1e58992749c4d4f0023f",
+  "manifest": "blake3:62e0462092e6e2a8f7af6ecbaad7be0c8df70ef1d947092694b56718f3669fee",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/melcheikh/gemma-4-31B-it-qat-NVFP4-Blackwell",
+    "readme": "file:README.md@sha256:df00a0336b8853780e21cdb7d76914c88c4705650c6b3bdf99e5fcacbffb879c",
+    "config": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012"
+  },
+  "summary": {
+    "value": "Gemma 4 31B IT quantized to NVFP4 for native FP4 inference on NVIDIA Blackwell GPUs. Quantized from Google's unquantized QAT weights (google/gemma-4-31B-it-qat-q40-unquantized) with NVIDIA Model Optimizer (modelopt 0.44.0), default absmax scaling.",
+    "source": "file:README.md@sha256:df00a0336b8853780e21cdb7d76914c88c4705650c6b3bdf99e5fcacbffb879c"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 16629722672,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 88%, BF16 12%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/gemma-4-31B-it-qat-q4_0-unquantized"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-06-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 373540,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 60,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5376,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:8f6b8db125a8dc57eb83508aca2a72871065dc560a4a02e9043081a428453012#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "VIDraft/global-llm-leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

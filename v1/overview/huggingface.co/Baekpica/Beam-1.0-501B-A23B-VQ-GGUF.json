@@ -1,0 +1,141 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Baekpica/Beam-1.0-501B-A23B-VQ-GGUF",
+  "revision": "7a971ac00844e16a971af17c5af0abfcad376b79",
+  "manifest": "blake3:3eb6f8066f82d0c58dacd0e9a720de2891b5e708d08c669d0285cb09d87ed623",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Baekpica/Beam-1.0-501B-A23B-VQ-GGUF",
+    "readme": "file:README.md@sha256:3cf2d4cca448940b28f36d7e2c75aa8c71454cfe07a9a2a79e02146bf4da0932",
+    "config": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd"
+  },
+  "summary": {
+    "value": "Reflection's 501B Beam with its full 1,048,576-token context, sized for one 128 GB DGX Spark. The 1.0 TB BF16 checkpoint becomes about 99.9 GB of GGUF parts: 98.3 GB that stay resident and a 1.56 GB BF16 token table that is read in rows from SSD.",
+    "source": "file:README.md@sha256:3cf2d4cca448940b28f36d7e2c75aa8c71454cfe07a9a2a79e02146bf4da0932"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7239549632,
+      "source": "api:gguf.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Beam",
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#model_type"
+    },
+    "architecture_id": {
+      "value": "beam",
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "reflection/Beam-1.0-501B-A23B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 570,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 52,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#hidden_size"
+    },
+    "heads": {
+      "value": 48,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c5dcc35e5f0135faaf50f91cedde15f66a50859663b4f669b077b3bc75bb65fd#tie_word_embeddings"
+    }
+  }
+}

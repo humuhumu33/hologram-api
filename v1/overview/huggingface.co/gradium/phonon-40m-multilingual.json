@@ -1,16 +1,16 @@
 {
   "format": "hologram.overview/v1",
   "name": "gradium/phonon-40m-multilingual",
-  "revision": "1267486cbcb55d2eaa61ba521c2ed8e4d22923c2",
+  "revision": "1537ce46c64f42903e0d608b132ccb073dac46d2",
   "addressed": false,
-  "generated": "2026-10-21",
+  "generated": "2026-10-22",
   "provenance": {
     "api": "https://huggingface.co/api/models/gradium/phonon-40m-multilingual",
-    "readme": "file:README.md@sha256:5377c94f30f49f3724323f5f3f46f4b0e0784cf8cc60634ce73799a6986a523b"
+    "readme": "file:README.md@sha256:cf222deb35e98cc6e10038c5580091cf28f9119ee61a8c53ed528d3b9534de88"
   },
   "summary": {
     "value": "phonon-40m is a text-to-speech model from the Phonon family. It turns text into natural 24 kHz speech in English, French, German, Spanish and Portuguese.",
-    "source": "file:README.md@sha256:5377c94f30f49f3724323f5f3f46f4b0e0784cf8cc60634ce73799a6986a523b"
+    "source": "file:README.md@sha256:cf222deb35e98cc6e10038c5580091cf28f9119ee61a8c53ed528d3b9534de88"
   },
   "glance": {
     "task": {
@@ -33,6 +33,14 @@
       "value": 50539363,
       "source": "api:safetensors.total"
     },
+    "architecture": {
+      "value": "Gradium Phonon TTS",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "gradium_phonon_tts",
+      "source": "api:config.model_type"
+    },
     "precision": {
       "value": "BF16 80%, FP32 20%",
       "source": "api:safetensors.parameters"
@@ -40,6 +48,10 @@
     "format": {
       "value": "GGUF",
       "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
     },
     "license": {
       "value": {
@@ -65,16 +77,26 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-20",
+      "value": "2026-10-22",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 17,
+      "value": 35,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 15,
+      "value": 349,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTextToWaveform",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
     }
   },
   "spaces": {

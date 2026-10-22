@@ -1,16 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "KRAFTON/Raon-1-mini-preview",
-  "revision": "8d2ced8f09f4ef1733a18b553ad580c3bbfb33b4",
-  "addressed": false,
-  "generated": "2026-10-21",
+  "revision": "da4cf162c8613993f2189ebb438a5f9a23f3e5ca",
+  "manifest": "blake3:0c54b6bdb113091daa76d3f611b0a3e0be873963316e99841aa064a8eb345abc",
+  "addressed": true,
+  "generated": "2026-10-22",
   "provenance": {
     "api": "https://huggingface.co/api/models/KRAFTON/Raon-1-mini-preview",
-    "readme": "file:README.md@sha256:11a20d735b2ab9bbb373d03c9a4a288dcb1c769b276418f57b48e7fd73f515ac"
+    "readme": "file:README.md@sha256:42e9ff6e285eb3ba038175c578752bf4ad3a4f7e085ace1ecd6040145e0a8a2c",
+    "config": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3"
   },
   "summary": {
     "value": "Raon-1 mini is a 30B-A4B Mixture-of-Experts (MoE) language model, designed and trained from scratch by KRAFTON AI. It demonstrates strong capabilities in Korean conversation and agentic tasks.",
-    "source": "file:README.md@sha256:11a20d735b2ab9bbb373d03c9a4a288dcb1c769b276418f57b48e7fd73f515ac"
+    "source": "file:README.md@sha256:42e9ff6e285eb3ba038175c578752bf4ad3a4f7e085ace1ecd6040145e0a8a2c"
   },
   "glance": {
     "task": {
@@ -33,13 +35,25 @@
       "value": 28783218402,
       "source": "api:safetensors.total"
     },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#num_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#num_experts_per_token"
+    },
     "architecture": {
       "value": "Raon1 Mini",
-      "source": "api:config.model_type"
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#model_type"
     },
     "architecture_id": {
       "value": "raon1_mini",
-      "source": "api:config.model_type"
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#max_position_embeddings"
     },
     "precision": {
       "value": "FP8 89%, BF16 11%",
@@ -67,27 +81,67 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-21",
+      "value": "2026-10-22",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 57,
+      "value": 121,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 0,
+      "value": 25,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 25,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#num_attention_heads"
+    },
+    "vocab": {
+      "value": 259840,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#num_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#num_experts_per_token"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "mxfp8",
+      "source": "file:config.json@sha256:ccd1541ed7d4e26dd86e0b9c706f13e5dbdf968c68824c27c2eb53f23d735ee3#quantization_config"
     }
   },
   "family": {
     "children": {
       "value": {
+        "Quantized": 1,
         "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
+        "quantized": 1,
         "finetune": 1
       },
       "source": "api:childrenModelCount"
@@ -101,9 +155,10 @@
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 2,
       "top": [
-        "tardellirs/model-pulse"
+        "tardellirs/model-pulse",
+        "BIGJUTT/model-pulse"
       ]
     },
     "source": "api:spaces"

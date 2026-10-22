@@ -1,0 +1,121 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "perplexity-ai/PII-Tracer",
+  "revision": "d25c16f2e57e321f6d2527715c01df9112f956f5",
+  "manifest": "blake3:3e972b914c9bfae4b0db6d03cf907e964ca39ede9454d38b0810717565a3184f",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/perplexity-ai/PII-Tracer",
+    "readme": "file:README.md@sha256:50033f4ce3f20f8fe9ac1b7e80ae50dff6ef47c2d9e99f8f35d64e09e37cdbf2",
+    "config": "file:config.json@sha256:7162c30da7009cfb9c9af6204782177ef6f5d88e2653fd87d6514308d97dcaa7"
+  },
+  "summary": {
+    "value": "PII masking model for conversational data. A 600M-parameter bidirectional Qwen3 encoder (perplexity-ai/pplx-embed-v1-0.6b backbone, run encoder-only via iscausal=false) with two heads:",
+    "source": "file:README.md@sha256:50033f4ce3f20f8fe9ac1b7e80ae50dff6ef47c2d9e99f8f35d64e09e37cdbf2"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 596090241,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Pii Masking",
+      "source": "file:config.json@sha256:7162c30da7009cfb9c9af6204782177ef6f5d88e2653fd87d6514308d97dcaa7#model_type"
+    },
+    "architecture_id": {
+      "value": "pii_masking",
+      "source": "file:config.json@sha256:7162c30da7009cfb9c9af6204782177ef6f5d88e2653fd87d6514308d97dcaa7#model_type"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-07-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-09-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 86,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 7530,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:7162c30da7009cfb9c9af6204782177ef6f5d88e2653fd87d6514308d97dcaa7#hidden_size"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.22200",
+        "title": "PII-TRACE: A Benchmark for Context-Aware PII Detection in Multi-Turn LLM Conversations",
+        "first_author": "Kaiyuan Zhang",
+        "authors": 7,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

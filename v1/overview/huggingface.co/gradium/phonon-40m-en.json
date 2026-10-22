@@ -1,16 +1,16 @@
 {
   "format": "hologram.overview/v1",
   "name": "gradium/phonon-40m-en",
-  "revision": "9b95393286eaeeebf1330b2ae90a14a2074c415d",
+  "revision": "cc738b7e4d182c2ba1bafb8062aa4846af000637",
   "addressed": false,
-  "generated": "2026-10-21",
+  "generated": "2026-10-22",
   "provenance": {
     "api": "https://huggingface.co/api/models/gradium/phonon-40m-en",
-    "readme": "file:README.md@sha256:4c2b6b54ee2e65f1db5facfe91012eadcfb0a4f4ae750d689252e259c46034a6"
+    "readme": "file:README.md@sha256:8fd1d3c26f9fd21f8f7bda3556c589d80bd9b69b6d746ac9f5e02366b509fc63"
   },
   "summary": {
     "value": "phonon-40m is a text-to-speech model from the Phonon family. It turns text into natural 24 kHz speech in English.",
-    "source": "file:README.md@sha256:4c2b6b54ee2e65f1db5facfe91012eadcfb0a4f4ae750d689252e259c46034a6"
+    "source": "file:README.md@sha256:8fd1d3c26f9fd21f8f7bda3556c589d80bd9b69b6d746ac9f5e02366b509fc63"
   },
   "glance": {
     "task": {
@@ -33,6 +33,14 @@
       "value": 50539363,
       "source": "api:safetensors.total"
     },
+    "architecture": {
+      "value": "Gradium Phonon TTS",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "gradium_phonon_tts",
+      "source": "api:config.model_type"
+    },
     "precision": {
       "value": "BF16 80%, FP32 20%",
       "source": "api:safetensors.parameters"
@@ -40,6 +48,10 @@
     "format": {
       "value": "GGUF",
       "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
     },
     "license": {
       "value": {
@@ -61,24 +73,35 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-20",
+      "value": "2026-10-22",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 41,
+      "value": 54,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 21,
+      "value": 562,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTextToWaveform",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
     }
   },
   "spaces": {
     "value": {
-      "count": 2,
+      "count": 3,
       "top": [
         "tardellirs/model-pulse",
-        "gradium/phonon"
+        "gradium/phonon",
+        "BIGJUTT/model-pulse"
       ]
     },
     "source": "api:spaces"

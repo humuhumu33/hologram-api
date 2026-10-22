@@ -1,0 +1,173 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "baselabs/elephant-1",
+  "revision": "c54a55c2d362a7e30ff30814d28e39054e954d58",
+  "manifest": "blake3:c77fd6a63ce1d3d59b4bfe679a78ced6237c6f81d06fed3e16c66e3c15893ebf",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/baselabs/elephant-1",
+    "readme": "file:README.md@sha256:4c7a19242af0f6432707b44fc0448138dcff5abe726efe8c9c3156608a6d00b2",
+    "config": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab"
+  },
+  "summary": {
+    "value": "elephant-1 is a 9B parameter decision model post-trained from Qwen3.5-9B by Base Labs at Baseten. Provide the model a state and a set of questions and it will return a calibrated probability for every option, answering all questions from one shared-prefix prefill.",
+    "source": "file:README.md@sha256:4c7a19242af0f6432707b44fc0448138dcff5abe726efe8c9c3156608a6d00b2"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 27,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 21,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:f26324589d15932e2742dbb13dbc7c561865ce4f80990af3b7dff05efe4dadab#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "hugging-apps/elephant-1"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

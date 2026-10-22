@@ -1,0 +1,134 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nlpai-lab/KURE-v3",
+  "revision": "c74871cd57f3377c8b7c3ed9f4ac0fff22a898a3",
+  "manifest": "blake3:48959e911bb30fe260e73eec8b60d77f62e41244c85e199b493fe5da2da504cf",
+  "addressed": true,
+  "generated": "2026-10-22",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nlpai-lab/KURE-v3",
+    "readme": "file:README.md@sha256:e9ddccb6d1a7a1dba9e8e7c177ab74bef8691fcac82f661def79f7301a33e7b0",
+    "config": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017"
+  },
+  "summary": {
+    "value": "KURE-v3 is a Korean-English bilingual dense retrieval model. With 1.1B parameters, it averages 0.8027 nDCG@10 on MTEB(kor, v2) Retrieval.",
+    "source": "file:README.md@sha256:e9ddccb6d1a7a1dba9e8e7c177ab74bef8691fcac82f661def79f7301a33e7b0"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1140918272,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Ministral3",
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#model_type"
+    },
+    "architecture_id": {
+      "value": "ministral3",
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/Nemotron-3-Embed-1B-BF16"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 89,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 16,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:568d6e1774e4fac6de0e5787002cd274462b3feb0cfa5dc5df8e188e5e5ef017#tie_word_embeddings"
+    }
+  }
+}
