@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Wan-AI/Wan2.1-T2V-14B",
+  "revision": "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4",
+  "manifest": "blake3:e8b41cfbe05939d9b0e2ab77cf292748f6a5a0e40a1c8b3885c1aa2ba32e757c",
+  "addressed": true,
+  "generated": "2026-10-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Wan-AI/Wan2.1-T2V-14B",
+    "readme": "file:README.md@sha256:448184fe68f994c99be61d0095d29c22b8ecd121e7b1d68d7d16a81fc47880ea",
+    "config": "file:config.json@sha256:7c9d7887442cb46716380bdf4426933d7cf88cbb31abcb434ea219322f5580ad"
+  },
+  "summary": {
+    "value": "In this repository, we present Wan2.1, a comprehensive and open suite of video foundation models that pushes the boundaries of video generation.",
+    "source": "file:README.md@sha256:448184fe68f994c99be61d0095d29c22b8ecd121e7b1d68d7d16a81fc47880ea"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to video",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "video"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 14288491584,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "T2v",
+      "source": "file:config.json@sha256:7c9d7887442cb46716380bdf4426933d7cf88cbb31abcb434ea219322f5580ad#model_type"
+    },
+    "architecture_id": {
+      "value": "t2v",
+      "source": "file:config.json@sha256:7c9d7887442cb46716380bdf4426933d7cf88cbb31abcb434ea219322f5580ad#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "diffusers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2025-02-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1596,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1225061,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:7c9d7887442cb46716380bdf4426933d7cf88cbb31abcb434ea219322f5580ad#num_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:7c9d7887442cb46716380bdf4426933d7cf88cbb31abcb434ea219322f5580ad#dim"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:7c9d7887442cb46716380bdf4426933d7cf88cbb31abcb434ea219322f5580ad#num_heads"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 85,
+        "Quantized": 19,
+        "Fine tuned": 90
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 85,
+        "quantized": 19,
+        "finetune": 90
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "fal-ai",
+          "status": "live",
+          "task": "text-to-video"
+        },
+        {
+          "provider": "wavespeed",
+          "status": "live",
+          "task": "text-to-video"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "hugging-apps/qwen-video-edit",
+        "alexnasa/OmniAvatar",
+        "seokochin/Wan2.1-Kerala"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

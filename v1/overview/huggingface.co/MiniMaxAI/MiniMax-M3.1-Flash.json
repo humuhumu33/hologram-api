@@ -1,0 +1,192 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MiniMaxAI/MiniMax-M3.1-Flash",
+  "revision": "54e4e69dfc452b1e94a426c24a4fdeeaa8e3ad5e",
+  "manifest": "blake3:9a09214d6d45c95fba0875cb49b28ddc61c4a516b9a11175b91290e4e2fa68e4",
+  "addressed": true,
+  "generated": "2026-10-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M3.1-Flash",
+    "readme": "file:README.md@sha256:11a354bec1bb89e6e92b33888dc081e212811c2de437bd64e7521ca22d64b812",
+    "config": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab"
+  },
+  "summary": {
+    "value": "MiniMax-M3.1-Flash is a native multimodal mixture-of-experts model for coding, agentic workflows, computer use, and cybersecurity. It supports text, image, and video inputs with a context window of up to 1M tokens.",
+    "source": "file:README.md@sha256:11a354bec1bb89e6e92b33888dc081e212811c2de437bd64e7521ca22d64b812"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 220490854016,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "MiniMax M3 VL",
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#model_type"
+    },
+    "architecture_id": {
+      "value": "minimax_m3_vl",
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 94%, FP8 5%, BF16 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 152,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 357,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 60,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 200064,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#num_local_experts"
+    },
+    "experts_active": {
+      "value": 4,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000000,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "mxfp8",
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "clip_vision_model",
+      "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 13,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 13,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2606.13392",
+        "title": "MiniMax Sparse Attention",
+        "first_author": "Xunhao Lai",
+        "authors": 11,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/model-pulse"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

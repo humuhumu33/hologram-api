@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "bottlecapai/ThinkingCap-Qwen3.8-Flash-Next",
+  "revision": "d90c9fedadaf7556df4206e6bea5a6b391b1a58e",
+  "manifest": "blake3:23403941046e83f232cd4db7fdb990c81f5859c1cc020e9c122f5489eb6d98a3",
+  "addressed": true,
+  "generated": "2026-10-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/bottlecapai/ThinkingCap-Qwen3.8-Flash-Next",
+    "readme": "file:README.md@sha256:d79302a9d1dd52eef61233b75c4796614ced0ab30cd21efa672f1bea08cc6e06",
+    "config": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b"
+  },
+  "summary": {
+    "value": "ThinkingCap brings our shorter-thinking post-training to Qwen3.8-Flash-Next (Qwen Team, 2026), a mixture-of-experts model with image input. ThinkingCap Qwen3.8-Flash-Next cuts reasoning tokens by 38.5% on average (22% to 51% depending on the benchmark) at an average accuracy of 88.8% against the base model's 89.8%.",
+    "source": "file:README.md@sha256:d79302a9d1dd52eef61233b75c4796614ced0ab30cd21efa672f1bea08cc6e06"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 179999981459,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 4 Exp",
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen4_exp",
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-Flash-Next"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-22",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 20,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen4_exp",
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

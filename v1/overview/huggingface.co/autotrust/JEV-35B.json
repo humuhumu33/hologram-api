@@ -4,7 +4,7 @@
   "revision": "a5d0d580bb9324f0f4c07dcba5c5ca91e813e7c9",
   "manifest": "blake3:98a11b2d923b2bf8702c36660d64c64b3e2dc158ad81fdf1b2a321ffbeb2250a",
   "addressed": true,
-  "generated": "2026-10-15",
+  "generated": "2026-10-23",
   "provenance": {
     "api": "https://huggingface.co/api/models/autotrust/JEV-35B",
     "readme": "file:README.md@sha256:405750efad6a56a7f8686e4302f33e78409955bbfcea7ed8a9ef22d5bcd5f2f7",
@@ -100,11 +100,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 832,
+      "value": 455,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 27970,
+      "value": 713162,
       "source": "api:downloadsAllTime"
     }
   },
@@ -153,26 +153,51 @@
   "benchmarks": {
     "value": [
       {
-        "dataset": "Decision Index 0.3 public suite",
-        "task": "Decision Index 0.3 public index",
-        "value": 59.73,
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.7,
+        "date": "2026-10-16",
         "verified": false,
-        "source": "model card"
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.5257,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.169,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.0617,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
       }
     ],
-    "source": "api:cardData.model-index"
+    "source": "api:evalResults"
   },
   "family": {
     "children": {
       "value": {
-        "Quantized": 3,
+        "Quantized": 7,
         "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 3,
+        "quantized": 7,
         "finetune": 1
       },
       "source": "api:childrenModelCount"
@@ -199,5 +224,14 @@
       }
     ],
     "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "multimodalart/jev-decision-index"
+      ]
+    },
+    "source": "api:spaces"
   }
 }

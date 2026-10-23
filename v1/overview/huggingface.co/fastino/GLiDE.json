@@ -1,0 +1,140 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "fastino/GLiDE",
+  "revision": "e827fc56dc65d88b58ccec0dd0ba9bfe0583dbc5",
+  "manifest": "blake3:7758beb2530e61af03ad91bc5d96946e0520c6d4ef026559157f4c060badc0d5",
+  "addressed": true,
+  "generated": "2026-10-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/fastino/GLiDE",
+    "readme": "file:README.md@sha256:5e9100b037f88a0924ceb5b62a1f6ad085afca7c5c472c56d1e6d524516724d0",
+    "config": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f"
+  },
+  "summary": {
+    "value": "GLiDE is a decision model from Fastino. Given a state (text or JSON, optionally with images) and one or more typed questions, it returns a probability for every option of every question.",
+    "source": "file:README.md@sha256:5e9100b037f88a0924ceb5b62a1f6ad085afca7c5c472c56d1e6d524516724d0"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 26085330160,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 31,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 25,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "multimodalart/jev-decision-index"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

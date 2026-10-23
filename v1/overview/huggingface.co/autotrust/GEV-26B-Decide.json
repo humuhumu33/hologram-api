@@ -4,7 +4,7 @@
   "revision": "eea849038e792cd09aa731d59d586f0eaf2c18f6",
   "manifest": "blake3:4b713c9efbe41adec8268296711e1cb09970f12b7253e3c7b20d54ac8cca4842",
   "addressed": true,
-  "generated": "2026-10-15",
+  "generated": "2026-10-23",
   "provenance": {
     "api": "https://huggingface.co/api/models/autotrust/GEV-26B-Decide",
     "readme": "file:README.md@sha256:033e24d81684bb67d920d952472034a34e37da37764dd0e1e38262743e2a3290",
@@ -100,11 +100,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 2449,
+      "value": 291,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1045716,
+      "value": 1155426,
       "source": "api:downloadsAllTime"
     }
   },
@@ -153,20 +153,49 @@
   "benchmarks": {
     "value": [
       {
-        "dataset": "Decision Index suite 0.2 (edition 0.2.1)",
-        "task": "Decision Index (balanced skill)",
-        "value": 62.48,
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.522,
+        "date": "2026-10-16",
         "verified": false,
-        "source": "model card"
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.4227,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.2146,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.0658,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals",
+        "notes": "Evaluated one question per request (the model's native /v1/decide interface), not the benchmark's single-request protocol; option/rubric descriptions embedded in the question text."
       }
     ],
-    "source": "api:cardData.model-index"
+    "source": "api:evalResults"
   },
   "family": {
     "children": {
       "value": {
         "Adapter": 1,
-        "Quantized": 7,
+        "Quantized": 8,
         "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
@@ -174,7 +203,7 @@
     "children_raw": {
       "value": {
         "adapter": 1,
-        "quantized": 7,
+        "quantized": 8,
         "finetune": 1
       },
       "source": "api:childrenModelCount"

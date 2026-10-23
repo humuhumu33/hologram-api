@@ -1,0 +1,221 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Blockway/Agens-Volundr-32B-v1",
+  "revision": "621284bdb9c87ede1e42f8d686f7a2ec1562abdb",
+  "manifest": "blake3:d54f49d7bf99667f4c6ca73f8580475e5c26d46d3511b0bae418c47d6c7af338",
+  "addressed": true,
+  "generated": "2026-10-23",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Blockway/Agens-Volundr-32B-v1",
+    "readme": "file:README.md@sha256:fc7842ba3750ce537eaa023e7618e1c334b04c86f8753418a8776ccbf25edf4f",
+    "config": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38"
+  },
+  "summary": {
+    "value": "Agens Volundr 32B is Blockway's open-weights model for coding, reasoning and agent work — the model behind Agens. v1 is the full release the Preview (2026-10-05) announced: the same architecture, continued pre-training run to its end, and post-training built for long agent sessions.",
+    "source": "file:README.md@sha256:fc7842ba3750ce537eaa023e7618e1c334b04c86f8753418a8776ccbf25edf4f"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 32688700242,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Volundr",
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#model_type"
+    },
+    "architecture_id": {
+      "value": "volundr",
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "yue"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 192,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 72,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:c9d531195f64436d9d972801a87bdfceeb892e2d9823c783644fc31a7b151e38#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LiveCodeBench v6 (2025-02 to 2025-05)",
+        "task": "pass@1 (best of 2 runs)",
+        "value": 67.9,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "HumanEval",
+        "task": "pass@1 (greedy)",
+        "value": 78.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SWE-bench Verified (50-task subset",
+        "task": "resolved",
+        "value": 54,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "AIME 2025",
+        "task": "avg@4 (best of 2 runs)",
+        "value": 80,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MATH-500",
+        "task": "accuracy",
+        "value": 96.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GPQA Diamond (6K thinking budget",
+        "task": "accuracy (best of 4 runs)",
+        "value": 80.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "IFEval (prompt strict)",
+        "task": "accuracy",
+        "value": 87.2,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MMLU-Pro (1",
+        "task": "accuracy",
+        "value": 80,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "τ²-bench (airline, retail, telecom)",
+        "task": "pass rate",
+        "value": 76.7,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageTextToText",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}
