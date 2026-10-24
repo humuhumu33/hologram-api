@@ -1,17 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "Baekpica/ThinkingCap-Qwen3.8-Flash-Next-Mixed-Quant-GGUF",
-  "revision": "76ba2ee80e3af716e1446ba89b338b85ae48c32c",
-  "manifest": "blake3:4ca7a7938a359d9f04286a7cdf53f15645c494e686c97b60c9b3db5f7500c1b9",
+  "revision": "3528e502f9a7e243f21e5fb091b1dfbf393ec174",
+  "manifest": "blake3:aa14d6957c425d3fae9ccd8319ee0e08a29bd445312e3b8035e8b16ba075bfbc",
   "addressed": true,
-  "generated": "2026-10-23",
+  "generated": "2026-10-24",
   "provenance": {
     "api": "https://huggingface.co/api/models/Baekpica/ThinkingCap-Qwen3.8-Flash-Next-Mixed-Quant-GGUF",
-    "readme": "file:README.md@sha256:8d15a454319f54dcf072360d17ab630af657a936ff9c5b3b402e6d8cee831e39"
+    "readme": "file:README.md@sha256:61efe51aec02bea162576bec50c1b68f7e28d7dae13ded61778b15ed229ecc28",
+    "config": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b"
   },
   "summary": {
-    "value": "Built with Qwen. Independent conversion of bottlecapai/ThinkingCap-Qwen3.8-Flash-Next, BottleCap AI's shorter-thinking post-training of Qwen3.8-Flash-Next, for the qwen4exp runtime in ds4-dfm-rs on one DGX Spark / GB10.",
-    "source": "file:README.md@sha256:8d15a454319f54dcf072360d17ab630af657a936ff9c5b3b402e6d8cee831e39"
+    "value": "Independent conversion of bottlecapai/ThinkingCap-Qwen3.8-Flash-Next, BottleCap AI's shorter-thinking post-training of Qwen3.8-Flash-Next. Source revision: d90c9fedadaf7556df4206e6bea5a6b391b1a58e.",
+    "source": "file:README.md@sha256:61efe51aec02bea162576bec50c1b68f7e28d7dae13ded61778b15ed229ecc28"
   },
   "glance": {
     "task": {
@@ -30,6 +31,34 @@
         "text"
       ],
       "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 128799735699,
+      "source": "api:gguf.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 4 Exp",
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen4_exp",
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
     },
     "license": {
       "value": {
@@ -62,6 +91,48 @@
     "downloads_all_time": {
       "value": 0,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen4_exp",
+      "source": "file:config.json@sha256:889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b#vision_config"
     }
   }
 }
