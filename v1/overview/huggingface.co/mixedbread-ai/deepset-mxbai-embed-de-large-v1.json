@@ -1,0 +1,178 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mixedbread-ai/deepset-mxbai-embed-de-large-v1",
+  "revision": "cbbec43ebdf8b2d8304d3093781eee56a8cdfb69",
+  "manifest": "blake3:166a932760a8bcbb6f9a4867e9ee966ddec090537e7ab60c0ed196c75b3bbf0f",
+  "addressed": true,
+  "generated": "2026-10-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mixedbread-ai/deepset-mxbai-embed-de-large-v1",
+    "readme": "file:README.md@sha256:4a048134dac6e4be8b12e14b07bf8f8c4290036035e9e166ccd34abaddff8a26",
+    "config": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867"
+  },
+  "summary": {
+    "value": "This model is a powerful open-source German/English embedding model developed by Mixedbread in collaboration with deepset. It's built upon intfloat/multilingual-e5-large and trained using the AnglE loss.",
+    "source": "file:README.md@sha256:4a048134dac6e4be8b12e14b07bf8f8c4290036035e9e166ccd34abaddff8a26"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 487066624,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "de",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-07-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-03-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 61,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3992515,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#num_attention_heads"
+    },
+    "vocab": {
+      "value": 178885,
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:8a7071404356321a910d3f3c79409223408a43dbde801099a6b1f526e3be2867#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Quantized": 7,
+        "Fine tuned": 7
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "quantized": 7,
+        "finetune": 7
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "feature-extraction"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2309.12871",
+        "title": "AnglE-optimized Text Embeddings",
+        "first_author": "Xianming Li",
+        "authors": 2,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 4,
+      "top": [
+        "ki-adventskalender/ki-adventskalender-aufgabe-24",
+        "Sheller/north-pole-data-center",
+        "Sieddi/hdp-embedder"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

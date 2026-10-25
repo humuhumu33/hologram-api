@@ -1,0 +1,190 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "pawlaszc/DigitalForensicsText2SQLite",
+  "revision": "3bd524d99c4788c1fb5c380e7b3885335b9e3508",
+  "manifest": "blake3:2bbebd1d205ab860bd883204d171330655224853476d26b5d6c4021f517685aa",
+  "addressed": true,
+  "generated": "2026-10-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/pawlaszc/DigitalForensicsText2SQLite",
+    "readme": "file:README.md@sha256:b060f62a9ac4805e0172cf23ed1d9c1780cb190f5846d0263f8c65765a1b4180",
+    "config": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682"
+  },
+  "summary": {
+    "value": "This model was developed as part of a research project and accompanying journal paper investigating LLM fine-tuning for forensic database analysis, and is integrated into FQLite, an established open-source forensic analysis tool.",
+    "source": "file:README.md@sha256:b060f62a9ac4805e0172cf23ed1d9c1780cb190f5846d0263f8c65765a1b4180"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3212749824,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Llama",
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#model_type"
+    },
+    "architecture_id": {
+      "value": "llama",
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "unsloth/Llama-3.2-3B-Instruct"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-01-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-03-12",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3091,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3072,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128256,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 500000.0,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:d189d02487d1d38c1988fd5d1f9cb7ebde5ed459c08fbaf3f0ec28e953704682#tie_word_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Mobile Forensics SQL Dataset",
+        "task": "Overall Accuracy",
+        "value": 91,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mobile Forensics SQL Dataset",
+        "task": "Easy Queries Accuracy",
+        "value": 95.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mobile Forensics SQL Dataset",
+        "task": "Medium Queries Accuracy",
+        "value": 87.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mobile Forensics SQL Dataset",
+        "task": "Hard Queries Accuracy",
+        "value": 88.9,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "doi": {
+    "value": "10.57967/hf/7675",
+    "source": "api:tags(doi)"
+  },
+  "datasets": {
+    "value": [
+      "pawlaszc/mobile-forensics-sql"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

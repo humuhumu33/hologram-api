@@ -2,8 +2,9 @@
   "format": "hologram.overview/v1",
   "name": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
   "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
-  "addressed": false,
-  "generated": "2026-10-17",
+  "manifest": "blake3:ef55afb4faaa216f11dfcd6f7419d225790fb5ad47986784867c54c17e516600",
+  "addressed": true,
+  "generated": "2026-10-25",
   "provenance": {
     "api": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash-1017",
     "readme": "file:README.md@sha256:b72b796e4f4c739eca5d0ad360a7679b39118ca7eb64891f7151a527b292c42a",
@@ -85,11 +86,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 43,
+      "value": 2846,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 0,
+      "value": 73215,
       "source": "api:downloadsAllTime"
     }
   },
@@ -143,10 +144,111 @@
       "source": "file:config.json@sha256:8be45ce0476004a3f529fd896115a4a2e800a129ad2d3ec05b16050f52e21879#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 42.6,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "notes": "Without tools."
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 44,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "notes": "Text-only subset, without tools."
+      },
+      {
+        "dataset": "harborframework/terminal-bench",
+        "task": "terminalbench_4",
+        "value": 42.3,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "notes": "Claude Code harness per the model card."
+      },
+      {
+        "dataset": "datacurve/deep-swe",
+        "task": "deep_swe",
+        "value": 77,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "notes": "DeepSWE 1.1, Mini-SWE-V2 harness per the model card."
+      },
+      {
+        "dataset": "agents-last-exam/agents-last-exam",
+        "task": "overall-pass-rate",
+        "value": 35.4,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "notes": "Card does not specify the ALE split; mapped to the overall pass-rate task."
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 3,
+        "Merged": 1,
+        "Quantized": 129,
+        "Fine tuned": 39
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 3,
+        "merge": 1,
+        "quantized": 129,
+        "finetune": 39
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
   "run": {
     "auto_model": {
       "value": "AutoModelForCausalLM",
       "source": "api:transformersInfo.auto_model"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "baseten",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "together",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
     }
+  },
+  "spaces": {
+    "value": {
+      "count": 14,
+      "top": [
+        "lalopenguin/deepseek-v4-1-flash-demo",
+        "3htbe/deepseek-v41-uncensored-demo",
+        "Shadowsun2069/deepseek-v41-uncensored-demo"
+      ]
+    },
+    "source": "api:spaces"
   }
 }

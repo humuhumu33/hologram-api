@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Freepik/nsfw_image_detector",
+  "revision": "15b85477e4fd2000db76ae9aae0f89a72f95e2e3",
+  "manifest": "blake3:28bee15f04a076393c0db78c6dbb64e88d0329b8eefb91c684ee6776ece1e20d",
+  "addressed": true,
+  "generated": "2026-10-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Freepik/nsfw_image_detector",
+    "readme": "file:README.md@sha256:5ee5d8aaa3b908091d7eea4b3251a79168c8672c2c23a7698b15382698151ed3",
+    "config": "file:config.json@sha256:39f53e86cc4868e0e11396b523c906f376621f54c1025ffc9ee2ee840542a41b"
+  },
+  "summary": {
+    "value": "This model is a vision transformer based on the EVA architecture, fine-tuned for NSFW content classification. It has been trained to detect four categories (neutral, low, medium, high) of visual content using 100,000 synthetically labeled images.",
+    "source": "file:README.md@sha256:5ee5d8aaa3b908091d7eea4b3251a79168c8672c2c23a7698b15382698151ed3"
+  },
+  "glance": {
+    "task": {
+      "value": "Image classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 86351620,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Timm Wrapper",
+      "source": "file:config.json@sha256:39f53e86cc4868e0e11396b523c906f376621f54c1025ffc9ee2ee840542a41b#model_type"
+    },
+    "architecture_id": {
+      "value": "timm_wrapper",
+      "source": "file:config.json@sha256:39f53e86cc4868e0e11396b523c906f376621f54c1025ffc9ee2ee840542a41b#model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "timm/eva02_base_patch14_448.mim_in22k_ft_in22k_in1k"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-04-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-05-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 63,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 9943266,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoImageProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "image-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2303.11331",
+        "title": "EVA-02: A Visual Representation for Neon Genesis",
+        "first_author": "Yuxin Fang",
+        "authors": 6,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "ccabrerafreepik/nsfw_image_detector",
+        "InspiratioNULL/nsfw_image_detector",
+        "kuldeepsinghpro/hervoice-analysis"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

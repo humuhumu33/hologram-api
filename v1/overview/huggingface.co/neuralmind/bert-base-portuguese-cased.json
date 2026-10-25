@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "neuralmind/bert-base-portuguese-cased",
+  "revision": "94d69c95f98f7d5b2a8700c420230ae10def0baa",
+  "manifest": "blake3:f385227c8c483349f754112c14b8b295afcf68824495c326b2b16e242818bc2e",
+  "addressed": true,
+  "generated": "2026-10-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/neuralmind/bert-base-portuguese-cased",
+    "readme": "file:README.md@sha256:5d6b9daa0639405621d8a6f0ae31b1cb0a8e4bc2fa1a2667312ce51e976786aa",
+    "config": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357"
+  },
+  "summary": {
+    "value": "BERTimbau Base is a pretrained BERT model for Brazilian Portuguese that achieves state-of-the-art performances on three downstream NLP tasks: Named Entity Recognition, Sentence Textual Similarity and Recognizing Textual Entailment. It is available in two sizes: Base and Large.",
+    "source": "file:README.md@sha256:5d6b9daa0639405621d8a6f0ae31b1cb0a8e4bc2fa1a2667312ce51e976786aa"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "pt"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-06-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 242,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 54569507,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#num_attention_heads"
+    },
+    "vocab": {
+      "value": 29794,
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:5d8e34a2272a548e9c346133253ac20453b0d1ad8d3190d6ba89252c7c544357#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 4,
+        "Quantized": 8,
+        "Fine tuned": 230
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 4,
+        "quantized": 8,
+        "finetune": 230
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "fill-mask"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "brWaC"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 62,
+      "top": [
+        "MTEB-BR/leaderboard",
+        "ruanchaves/portuguese-offensive-language-detection",
+        "bg6293/neuralmind-bert-base-portuguese-cased"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

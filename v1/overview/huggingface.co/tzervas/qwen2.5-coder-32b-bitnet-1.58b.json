@@ -1,0 +1,138 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tzervas/qwen2.5-coder-32b-bitnet-1.58b",
+  "revision": "9ac46529ffcfbaa4e043156dc70e0a60139fae16",
+  "manifest": "blake3:1287f7599ddc3d214ed04eb67d3823b80026020132c3031479ab2268be9cbeda",
+  "addressed": true,
+  "generated": "2026-10-25",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tzervas/qwen2.5-coder-32b-bitnet-1.58b",
+    "readme": "file:README.md@sha256:3b8a77d29de4e8f93777e48587086a4f6175ff8229686da34dfb03f3e0686c5c",
+    "config": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6"
+  },
+  "summary": {
+    "value": "This is an experimental BitNet 1.58-bit quantization of the Qwen2.5-Coder-32B-Instruct model using absmean scaling with group-wise quantization. The model stores weights as ternary values ({-1, 0, +1}) packed 4 values per byte.",
+    "source": "file:README.md@sha256:3b8a77d29de4e8f93777e48587086a4f6175ff8229686da34dfb03f3e0686c5c"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8703726592,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 2",
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen2",
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 94%, FP32 6%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "safetensors",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen2.5-Coder-32B-Instruct"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-01-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-01-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 23721,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152064,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000.0,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:9fb1473a47db69c00c02f365c7b9e9d84fd2163c687c63b5a31167ebb2b189a6#tie_word_embeddings"
+    }
+  }
+}
