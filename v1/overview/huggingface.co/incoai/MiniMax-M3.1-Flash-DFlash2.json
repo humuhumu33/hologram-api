@@ -1,0 +1,137 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "incoai/MiniMax-M3.1-Flash-DFlash2",
+  "revision": "ac07a7c1ecaae26a7ace595756124dca974b432d",
+  "manifest": "blake3:ae9e8176d4594df67a22c611e0631159f90524d9d65d957af35c0f81824e8325",
+  "addressed": true,
+  "generated": "2026-10-26",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/incoai/MiniMax-M3.1-Flash-DFlash2",
+    "readme": "file:README.md@sha256:8ec2de932fdd0e2d72a36ba17a0c593cfcba053609661a22fcb841047ae93282",
+    "config": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815"
+  },
+  "summary": {
+    "value": "This repository contains the DFlash 2 draft model for MiniMaxAI/MiniMax-M3.1-Flash. It is not a standalone language model: it runs inside a speculative decoding server and drafts tokens for the target model to verify.",
+    "source": "file:README.md@sha256:8ec2de932fdd0e2d72a36ba17a0c593cfcba053609661a22fcb841047ae93282"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2123883776,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "MiniMaxAI/MiniMax-M3.1-Flash"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 132,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 5,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 200064,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:64c32db3c3bc5de64a048d949c5acd91352ae9b0f02ef636e3382c838f1d0815#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

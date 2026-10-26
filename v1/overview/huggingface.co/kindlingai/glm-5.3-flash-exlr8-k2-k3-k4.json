@@ -1,0 +1,136 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kindlingai/glm-5.3-flash-exlr8-k2-k3-k4",
+  "revision": "867580abd28d142bb4c56218bb81a752b7dea988",
+  "manifest": "blake3:1d4a5281533eeeee42296d4bb128397063609459cda64c0c0dd57f4dea77bada",
+  "addressed": true,
+  "generated": "2026-10-26",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kindlingai/glm-5.3-flash-exlr8-k2-k3-k4",
+    "readme": "file:README.md@sha256:21798c2ebc673a23defa4a90c48686b17e5cb125592698ffff4df2e64060845c",
+    "config": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943"
+  },
+  "summary": {
+    "value": "A quantization of GLM-5.3-Flash in the exlr8 v2 format, built for NVIDIA GB10-class unified-memory devices (DGX Spark, ASUS GX10) served on one to four boxes. Every routed and shared expert is stored at three trellis widths, K2, K3 and K4, and the serving width is chosen at load time.",
+    "source": "file:README.md@sha256:21798c2ebc673a23defa4a90c48686b17e5cb125592698ffff4df2e64060845c"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "experts": {
+      "value": 288,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "GLM 5 Next",
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#model_type"
+    },
+    "architecture_id": {
+      "value": "glm5_next",
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#max_position_embeddings"
+    },
+    "library": {
+      "value": "trellis",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "zai-org/GLM-5.3-Flash-BF16"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 3,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 356502,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 45,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 154880,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#max_position_embeddings"
+    },
+    "experts": {
+      "value": 288,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "glm5_next_vision",
+      "source": "file:config.json@sha256:33e63ec7fe607658be712bd6dd3c16c6549960d8e7f0483d34b939881b55f943#vision_config"
+    }
+  }
+}

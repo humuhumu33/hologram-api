@@ -1,0 +1,136 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "second-state/medgemma-4b-it-GGUF",
+  "revision": "6ae5ea3daf19e1dafa596c6b3aa1d07f36339df3",
+  "manifest": "blake3:8461c709e81c01d205d4dd30b9c460425f1e8fc21755ffd3e8051d10978a6988",
+  "addressed": true,
+  "generated": "2026-10-26",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/second-state/medgemma-4b-it-GGUF",
+    "readme": "file:README.md@sha256:0b230b8f8b6740b1ab30ec23403c1d7800e0fb1fb77560ae261cb76a5eb1946c",
+    "config": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1"
+  },
+  "summary": {
+    "value": "Note that input images are required to be normalized to 896 x 896 resolution and encoded to 256 tokens each",
+    "source": "file:README.md@sha256:0b230b8f8b6740b1ab30ec23403c1d7800e0fb1fb77560ae261cb76a5eb1946c"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3880263168,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Gemma 3",
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma3",
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "google/medgemma-4b-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-05-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-05-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 13612,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 34,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262208,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#rope_theta"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:15bdae39652948a3764888cd2da78ac476614496afa23dbc5c5db2ba90aa87a1#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

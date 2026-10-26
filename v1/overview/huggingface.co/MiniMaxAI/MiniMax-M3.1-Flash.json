@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "MiniMaxAI/MiniMax-M3.1-Flash",
-  "revision": "54e4e69dfc452b1e94a426c24a4fdeeaa8e3ad5e",
-  "manifest": "blake3:9a09214d6d45c95fba0875cb49b28ddc61c4a516b9a11175b91290e4e2fa68e4",
+  "revision": "262ae6830934f3512211081b8a3f16425b93a239",
+  "manifest": "blake3:9d3cd5cc05c2638f55fdcda5ac11552d5f67360595485c388fe2b34649c8ba74",
   "addressed": true,
-  "generated": "2026-10-23",
+  "generated": "2026-10-26",
   "provenance": {
     "api": "https://huggingface.co/api/models/MiniMaxAI/MiniMax-M3.1-Flash",
-    "readme": "file:README.md@sha256:11a354bec1bb89e6e92b33888dc081e212811c2de437bd64e7521ca22d64b812",
+    "readme": "file:README.md@sha256:c49a7cca92321066bc20e25ce720260242dcb112baf1d09c7c213899e39d2151",
     "config": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab"
   },
   "summary": {
     "value": "MiniMax-M3.1-Flash is a native multimodal mixture-of-experts model for coding, agentic workflows, computer use, and cybersecurity. It supports text, image, and video inputs with a context window of up to 1M tokens.",
-    "source": "file:README.md@sha256:11a354bec1bb89e6e92b33888dc081e212811c2de437bd64e7521ca22d64b812"
+    "source": "file:README.md@sha256:c49a7cca92321066bc20e25ce720260242dcb112baf1d09c7c213899e39d2151"
   },
   "glance": {
     "task": {
@@ -80,15 +80,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-23",
+      "value": "2026-10-26",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 152,
+      "value": 361,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 357,
+      "value": 7355,
       "source": "api:downloadsAllTime"
     }
   },
@@ -142,18 +142,59 @@
       "source": "file:config.json@sha256:df6a3668e2de5b8dc0e883e3767495ad17af7e4d69fabe9683088be015fda9ab#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "harborframework/terminal-bench",
+        "task": "terminalbench_4",
+        "value": 38.1,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+        "notes": "Codex 0.149.1 harness per the model card."
+      },
+      {
+        "dataset": "datacurve/deep-swe",
+        "task": "deep_swe",
+        "value": 73.7,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+        "notes": "DeepSWE 1.1, mini-SWE-agent 2.4.5 harness."
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 43.4,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+        "notes": "Text-only subset, without tools."
+      },
+      {
+        "dataset": "agents-last-exam/agents-last-exam",
+        "task": "overall-pass-rate",
+        "value": 29.6,
+        "date": "2026-10-17",
+        "verified": false,
+        "source": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+        "notes": "Official Overall setting per the model card."
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
-        "Quantized": 13,
-        "Fine tuned": 3
+        "Quantized": 31,
+        "Fine tuned": 8
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 13,
-        "finetune": 3
+        "quantized": 31,
+        "finetune": 8
       },
       "source": "api:childrenModelCount"
     }
@@ -166,6 +207,16 @@
     "processor": {
       "value": "AutoProcessor",
       "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
     }
   },
   "papers": {
@@ -182,9 +233,10 @@
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 2,
       "top": [
-        "tardellirs/model-pulse"
+        "Jindrich3/openajaj",
+        "hmb/m31-vs-deepseek"
       ]
     },
     "source": "api:spaces"

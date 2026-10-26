@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Mia-AiLab/DeepSeek-V4.1-Flash-1017-EXL3-EAQ-v1.1-2.9-bpw",
+  "revision": "aee640e2afba93be683bb5b9b420115fe7fbac20",
+  "manifest": "blake3:38d0abfcc0a365431cda919e33edea99557a0c24c017ae64c34d17af8d686740",
+  "addressed": true,
+  "generated": "2026-10-26",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Mia-AiLab/DeepSeek-V4.1-Flash-1017-EXL3-EAQ-v1.1-2.9-bpw",
+    "readme": "file:README.md@sha256:794b1b3e9453a62fda1cfc044f22982ac63cc9a46da816a533291eff3b63ab2e",
+    "config": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0"
+  },
+  "summary": {
+    "value": "EAQ v1.1 quantization of deepseek-ai/DeepSeek-V4.1-Flash-1017 (revision 1bae0e10). It has the same 2.9 bpw body as EAQ v1, with one change: the sparse-attention indexer path is stored at source precision instead of being quantized.",
+    "source": "file:README.md@sha256:794b1b3e9453a62fda1cfc044f22982ac63cc9a46da816a533291eff3b63ab2e"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 105325358290,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "DeepSeek V41",
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#model_type"
+    },
+    "architecture_id": {
+      "value": "deepseek_v41",
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#max_position_embeddings"
+    },
+    "precision": {
+      "value": "I16 98%, BF16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "exllamav3",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 244,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 129280,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#max_position_embeddings"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "exl3",
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "deepseek_v41_vision",
+      "source": "file:config.json@sha256:47c8a8cdb564cf96dcb9670edf20694d33f1c6c3e66855dac30a77a61a299da0#vision_config"
+    }
+  }
+}

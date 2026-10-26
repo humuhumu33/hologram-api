@@ -1,0 +1,975 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "moonshotai/Kimi-K2.5",
+  "revision": "4d01dfe0332d63057c186e0b262165819efb6611",
+  "manifest": "blake3:2ecccd1b80eeeb21e824cece359e5b454b2920726e086b7fce975178db2d9951",
+  "addressed": true,
+  "generated": "2026-10-26",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/moonshotai/Kimi-K2.5",
+    "readme": "file:README.md@sha256:1b04bed9c6c25894171c0ab5e0b4c4d57667698a654dbfd5a6c1649b922810a5",
+    "config": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6"
+  },
+  "summary": {
+    "value": "Kimi K2.5 is an open-source, native multimodal agentic model built through continual pretraining on approximately 15 trillion mixed visual and text tokens atop Kimi-K2-Base.",
+    "source": "file:README.md@sha256:1b04bed9c6c25894171c0ab5e0b4c4d57667698a654dbfd5a6c1649b922810a5"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1026879376368,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Kimi K25",
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#model_type"
+    },
+    "architecture_id": {
+      "value": "kimi_k25",
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 99%, BF16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-01-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-04-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2893,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16271249,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 61,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 7168,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 163840,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#max_position_embeddings"
+    },
+    "experts": {
+      "value": 384,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 50000.0,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:acd5bb01a16f64b309599cd6ed196be056f613c99d6bc9300692b82cd10882f6#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 50.2,
+        "date": "2026-02-04T09:20:25.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "notes": "With tools"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Multilingual",
+        "task": "swe_bench_multilingual_%_resolved",
+        "value": 73,
+        "date": "2026-08-10T19:50:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "overall",
+        "value": 89.09,
+        "date": "2026-08-08T14:28:24.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "scanning",
+        "value": 89.67,
+        "date": "2026-08-08T14:28:24.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "warping",
+        "value": 88.86,
+        "date": "2026-08-08T14:28:24.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "screen_photography",
+        "value": 88.39,
+        "date": "2026-08-08T14:28:24.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "illumination",
+        "value": 89.66,
+        "date": "2026-08-08T14:28:24.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "skew",
+        "value": 88.86,
+        "date": "2026-08-08T14:28:24.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "overall",
+        "value": 77.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "digital",
+        "value": 85,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "photographed",
+        "value": 75,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "latin",
+        "value": 81.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "de",
+        "value": 85.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "en",
+        "value": 86.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "es",
+        "value": 72.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "fr",
+        "value": 71,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "id",
+        "value": 80.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "it",
+        "value": 86.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "nl",
+        "value": 77.4,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "pt",
+        "value": 87.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "vi",
+        "value": 86.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "non_latin",
+        "value": 72.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ar",
+        "value": 75.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "hi",
+        "value": 74.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "jp",
+        "value": 72.5,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ko",
+        "value": 70.9,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "ru",
+        "value": 61.8,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "th",
+        "value": 67,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh",
+        "value": 81.7,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "zh_t",
+        "value": 78.6,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Delores-Lin/MDPBench",
+        "task": "private",
+        "value": 81.2,
+        "date": "2026-07-03",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/Delores-Lin/MDPBench"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 87.3737373737,
+        "date": "2026-04-21",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/5c/4b/5c4b9bd9-14db-4c11-bf99-9661461459f6.json",
+        "notes": "GPQA Diamond"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "default",
+        "value": 24.37,
+        "date": "2026-02-13",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/evaleval/EEE_datastore/blob/192329fb7d6b15b7b0936a1a58ae862aa7e8ba24/flat/objects/aa/05/aa055fe5-5174-4517-8b10-19d46da94f3e.json"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "overall",
+        "value": 30.8,
+        "date": "2026-05-22",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "avg_time",
+        "value": 406,
+        "date": "2026-05-22",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "internlm/WildClawBench",
+        "task": "avg_cost",
+        "value": 6.6,
+        "date": "2026-05-22",
+        "verified": false,
+        "source": "https://internlm.github.io/WildClawBench"
+      },
+      {
+        "dataset": "InternScience/ResearchClawBench",
+        "task": "overall",
+        "value": 13.96,
+        "date": "2026-04-15",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "notes": "ResearchHarness evaluation with tools enabled, code execution, and a file-system workspace; completed 39/40 ResearchClawBench tasks."
+      },
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_vision",
+        "value": 78.5,
+        "date": "2026-04-23",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "overall",
+        "value": 0.3026,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Claude Code"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "appworld",
+        "value": 0.08,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Claude Code"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "browsecomp_plus",
+        "value": 0.56,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Claude Code"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "swebench",
+        "value": 0.5204,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Claude Code"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_airline",
+        "value": 0.12,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Claude Code"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_retail",
+        "value": 0.03,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Claude Code"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_telecom",
+        "value": 0,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Claude Code"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "overall",
+        "value": 0.2501,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: OpenAI Solo"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "appworld",
+        "value": 0.08,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: OpenAI Solo"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "browsecomp_plus",
+        "value": 0.35,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: OpenAI Solo"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "swebench",
+        "value": 0.567,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: OpenAI Solo"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_airline",
+        "value": 0,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: OpenAI Solo"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_retail",
+        "value": 0.01,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: OpenAI Solo"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_telecom",
+        "value": 0,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: OpenAI Solo"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "overall",
+        "value": 0.42,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Smolagent"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "appworld",
+        "value": 0.11,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Smolagent"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "browsecomp_plus",
+        "value": 0.33,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Smolagent"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "swebench",
+        "value": 0.5761,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Smolagent"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_airline",
+        "value": 0.56,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Smolagent"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_retail",
+        "value": 0.7245,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Smolagent"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_telecom",
+        "value": 0.7071,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: Smolagent"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "overall",
+        "value": 0.4251,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "appworld",
+        "value": 0.09,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "browsecomp_plus",
+        "value": 0.34,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "swebench",
+        "value": 0.5714,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_airline",
+        "value": 0.62,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_retail",
+        "value": 0.6465,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_telecom",
+        "value": 0.83,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "overall",
+        "value": 0.4276,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React + Shortlisting"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "appworld",
+        "value": 0.1,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React + Shortlisting"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "browsecomp_plus",
+        "value": 0.34,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React + Shortlisting"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "swebench",
+        "value": 0.5714,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React + Shortlisting"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_airline",
+        "value": 0.62,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React + Shortlisting"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_retail",
+        "value": 0.6465,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React + Shortlisting"
+      },
+      {
+        "dataset": "open-agent-leaderboard/results",
+        "task": "taubench_telecom",
+        "value": 0.83,
+        "date": "2026-05-18T12:28:12.000Z",
+        "verified": false,
+        "source": "https://www.exgentic.ai",
+        "notes": "agent: React + Shortlisting"
+      },
+      {
+        "dataset": "claw-eval/Claw-Eval",
+        "task": "general",
+        "value": 52.8,
+        "date": "2026-04-23",
+        "verified": false,
+        "source": "https://claw-eval.github.io",
+        "notes": "Pass³% | N=3 | 161 tasks"
+      },
+      {
+        "dataset": "claw-eval/Claw-Eval",
+        "task": "multimodal",
+        "value": 14.8,
+        "date": "2026-04-23",
+        "verified": false,
+        "source": "https://claw-eval.github.io",
+        "notes": "Pass³% | N=3 | 101 tasks"
+      },
+      {
+        "dataset": "claw-eval/Claw-Eval",
+        "task": "multi_turn",
+        "value": 50,
+        "date": "2026-04-23",
+        "verified": false,
+        "source": "https://claw-eval.github.io",
+        "notes": "Pass³% | N=3 | 38 tasks"
+      },
+      {
+        "dataset": "MME-Benchmarks/Video-MME-v2",
+        "task": "video-mme-v2",
+        "value": 61.1,
+        "date": "2026-04-30T09:18:35.000Z",
+        "verified": false,
+        "source": "https://video-mme-v2.netlify.app/#leaderboard",
+        "notes": "512 frames"
+      },
+      {
+        "dataset": "MME-Benchmarks/Video-MME-v2",
+        "task": "video-mme-v2",
+        "value": 54.4,
+        "date": "2026-04-30T09:18:35.000Z",
+        "verified": false,
+        "source": "https://video-mme-v2.netlify.app/#leaderboard",
+        "notes": "64 frames"
+      },
+      {
+        "dataset": "mercor/APEX-SWE",
+        "task": "apex-swe",
+        "value": 30.3,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://www.mercor.com/apex/apex-swe-leaderboard/",
+        "notes": "harness: claude_code; reasoning_effort: thinking"
+      },
+      {
+        "dataset": "mercor/apex-agents",
+        "task": "apex-agents",
+        "value": 14.4,
+        "date": "2026-04-22",
+        "verified": false,
+        "source": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+        "notes": "harness: react_toolbelt_agent; reasoning_effort: thinking"
+      },
+      {
+        "dataset": "collinear-ai/yc-bench",
+        "task": "medium",
+        "value": 408822,
+        "date": "2026-03-24",
+        "verified": false,
+        "source": "https://github.com/collinear-ai/yc-bench",
+        "notes": "avg final funds (USD) across seeds 1,2,3. Kimi K2.5 (via OpenRouter moonshotai/kimi-k2.5)"
+      },
+      {
+        "dataset": "ScaleAI/SWE-bench_Pro",
+        "task": "SWE_Bench_Pro",
+        "value": 50.7,
+        "date": "2026-03-17",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 70.8,
+        "date": "2026-03-02T08:49:15.000Z",
+        "verified": false,
+        "source": "https://www.swebench.com/",
+        "notes": "high reasoning"
+      },
+      {
+        "dataset": "MathArena/hmmt_feb_2026",
+        "task": "MathArena/hmmt_feb_2026",
+        "value": 87.12,
+        "date": "2026-02-23",
+        "verified": false,
+        "source": "https://matharena.ai/?comp=hmmt--hmmt_feb_2026"
+      },
+      {
+        "dataset": "harborframework/terminal-bench-2.0",
+        "task": "terminalbench_2",
+        "value": 43.2,
+        "date": "2026-02-04",
+        "verified": false,
+        "source": "https://www.tbench.ai/leaderboard/terminal-bench/2.0",
+        "notes": "agent: Terminus 2"
+      },
+      {
+        "dataset": "MathArena/aime_2026",
+        "task": "MathArena/aime_2026",
+        "value": 95.83,
+        "date": "2026-02-18",
+        "verified": false,
+        "source": "https://matharena.ai/?comp=aime--aime_2026"
+      },
+      {
+        "dataset": "TIGER-Lab/MMLU-Pro",
+        "task": "mmlu_pro",
+        "value": 87.1,
+        "date": "2026-02-04T09:27:33.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 87.6,
+        "date": "2026-02-04T09:24:13.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 29,
+        "Merged": 1,
+        "Quantized": 39,
+        "Fine tuned": 46
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 29,
+        "merge": 1,
+        "quantized": 39,
+        "finetune": 46
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "deepinfra",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "novita",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2602.02276",
+        "title": "Kimi K2.5: Visual Agentic Intelligence",
+        "first_author": "Kimi Team",
+        "authors": 326,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "akhaliq/anycoder",
+        "pliny-the-prompter/obliteratus",
+        "hadadxyz/ai"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
