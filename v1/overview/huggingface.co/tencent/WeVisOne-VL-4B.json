@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "tencent/WeVisOne-VL-4B",
-  "revision": "4a7bed92750ac9d8b8a124cede14759036932dc2",
-  "manifest": "blake3:b7ed7b3cf402a5b92cbf4534a3200df089ba01c11f20a8d83088c2b074085ab2",
+  "revision": "6b44a45873b4bbc7dca383922504430dc60eca23",
+  "manifest": "blake3:b22fe4276f9b31abb6b74896c323bbda2417bc305be8c4c29a10745b7bb0fe82",
   "addressed": true,
-  "generated": "2026-10-24",
+  "generated": "2026-10-27",
   "provenance": {
     "api": "https://huggingface.co/api/models/tencent/WeVisOne-VL-4B",
-    "readme": "file:README.md@sha256:2ea80f93490d3bd5e11eea5d942474700ea65a94803b451582a5317997749be8",
+    "readme": "file:README.md@sha256:694a4542b3a060bc8bb5b095af0de19679b86ca5c38b0c9a9f9158033cff725f",
     "config": "file:config.json@sha256:69da45bf7cdb6776dc3949034ff9c4ab711abddc696adc272a8cf18bc5399697"
   },
   "summary": {
-    "value": "The model uses dedicated coordinate tokens ( ... ) to represent normalized bounding boxes and points, returns None when a queried target is absent, and emits a special instance token (, token ID 152678) after each predicted box for dense tasks.",
-    "source": "file:README.md@sha256:2ea80f93490d3bd5e11eea5d942474700ea65a94803b451582a5317997749be8"
+    "value": "Paper: WeVisOne-VL: Unified Visual Perception from Objects to Pixels | Project Page: WeVisOne-VL",
+    "source": "file:README.md@sha256:694a4542b3a060bc8bb5b095af0de19679b86ca5c38b0c9a9f9158033cff725f"
   },
   "glance": {
     "task": {
@@ -49,7 +49,7 @@
       "source": "file:config.json@sha256:69da45bf7cdb6776dc3949034ff9c4ab711abddc696adc272a8cf18bc5399697#max_position_embeddings"
     },
     "precision": {
-      "value": "FP32",
+      "value": "BF16",
       "source": "api:safetensors.parameters"
     },
     "format": {
@@ -74,15 +74,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-23",
+      "value": "2026-10-27",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 18,
+      "value": 67,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 0,
+      "value": 2605,
       "source": "api:downloadsAllTime"
     }
   },
@@ -120,6 +120,20 @@
       "source": "file:config.json@sha256:69da45bf7cdb6776dc3949034ff9c4ab711abddc696adc272a8cf18bc5399697#vision_config"
     }
   },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
   "run": {
     "auto_model": {
       "value": "AutoModelForMultimodalLM",
@@ -129,6 +143,18 @@
       "value": "AutoProcessor",
       "source": "api:transformersInfo.processor"
     }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.31329",
+        "title": "WeVisOne-VL: Unified Visual Perception from Objects to Pixels",
+        "first_author": "Tianming Liang",
+        "authors": 8,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
   },
   "spaces": {
     "value": {
