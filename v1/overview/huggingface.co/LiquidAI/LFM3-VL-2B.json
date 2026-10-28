@@ -1,0 +1,184 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "LiquidAI/LFM3-VL-2B",
+  "revision": "f83d2b0a2296aaa277f394990a9b8b949ddf9691",
+  "manifest": "blake3:442e3d09554bad86f16bddea1c8842a2b1438b34ce4ff6d53a8cb823fee32bf9",
+  "addressed": true,
+  "generated": "2026-10-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/LiquidAI/LFM3-VL-2B",
+    "readme": "file:README.md@sha256:01a1856ea6c289d174e877e71d06d70c99686f3b1a0ae0f91cd868fca3401dd0",
+    "config": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3"
+  },
+  "summary": {
+    "value": "LFM3-VL-2B is a vision-language model for on-device visual understanding. It takes text, images, and video as input, and combines the LFM3 language model with a new in-house vision encoder.",
+    "source": "file:README.md@sha256:01a1856ea6c289d174e877e71d06d70c99686f3b1a0ae0f91cd868fca3401dd0"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1918181888,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm3 VL",
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm3_vl",
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ar",
+        "zh",
+        "fr",
+        "de",
+        "it",
+        "ja",
+        "ko",
+        "pt",
+        "es",
+        "vi",
+        "th",
+        "id",
+        "hi",
+        "ru",
+        "pl"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM3-1.7B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 103,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1596,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "lfm3_vl_vision",
+      "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 14,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 14,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageTextToText",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 5,
+      "top": [
+        "webml-community/LFM3-VL-2B-WebGPU",
+        "fusorlabs/liquidai-lmf3-wasm",
+        "hugging-apps/lfm3-vl-2b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

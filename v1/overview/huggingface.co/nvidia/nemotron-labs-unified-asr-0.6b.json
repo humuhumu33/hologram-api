@@ -1,0 +1,424 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/nemotron-labs-unified-asr-0.6b",
+  "revision": "023ce907267a09a308a5cb69239447cb3d0c1597",
+  "manifest": "blake3:8ef240659e1b3be1629c134a486dbb34de638d2cfafca568ad3b117d11891fe6",
+  "addressed": true,
+  "generated": "2026-10-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/nemotron-labs-unified-asr-0.6b",
+    "readme": "file:README.md@sha256:d02e62476e0ef2e146f02b99def75c90ba3db6801873d91c72837a799a03b3d2"
+  },
+  "summary": {
+    "value": "Nemotron-Labs-Unified-ASR-0.6b is the multilingual version of Parakeet-unified-en-0.6b — a unified automatic speech recognition (ASR) model that combines offline and streaming inference (with a minimum algorithmic latency of 160ms) in a single model [1].",
+    "source": "file:README.md@sha256:d02e62476e0ef2e146f02b99def75c90ba3db6801873d91c72837a799a03b3d2"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "library": {
+      "value": "nemo",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-08-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 90,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "AMI (cleaned)",
+        "task": "WER (offline)",
+        "value": 7.91,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Earnings22 (cleaned, AA-chunked)",
+        "task": "WER (offline)",
+        "value": 6.96,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GigaSpeech (cleaned)",
+        "task": "WER (offline)",
+        "value": 8.23,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-clean",
+        "task": "WER (offline)",
+        "value": 1.38,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-other",
+        "task": "WER (offline)",
+        "value": 2.81,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SPGI Speech",
+        "task": "WER (offline)",
+        "value": 2.04,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "VoxPopuli (cleaned)",
+        "task": "WER (offline)",
+        "value": 3.41,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "AMI (cleaned)",
+        "task": "WER (1.12s latency)",
+        "value": 8.47,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Earnings22 (cleaned, AA-chunked)",
+        "task": "WER (1.12s latency)",
+        "value": 9.65,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GigaSpeech (cleaned)",
+        "task": "WER (1.12s latency)",
+        "value": 8.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-clean",
+        "task": "WER (1.12s latency)",
+        "value": 1.49,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-other",
+        "task": "WER (1.12s latency)",
+        "value": 3.59,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SPGI Speech",
+        "task": "WER (1.12s latency)",
+        "value": 2.28,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "VoxPopuli (cleaned)",
+        "task": "WER (1.12s latency)",
+        "value": 3.67,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (German)",
+        "task": "WER (offline)",
+        "value": 3.87,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (French)",
+        "task": "WER (offline)",
+        "value": 5.28,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (Italian)",
+        "task": "WER (offline)",
+        "value": 2.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (Spanish)",
+        "task": "WER (offline)",
+        "value": 3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (Portuguese)",
+        "task": "WER (offline)",
+        "value": 4.42,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (German)",
+        "task": "WER (offline)",
+        "value": 4.77,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (French)",
+        "task": "WER (offline)",
+        "value": 6.92,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (Italian)",
+        "task": "WER (offline)",
+        "value": 3.62,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (Spanish)",
+        "task": "WER (offline)",
+        "value": 3.97,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (Portuguese)",
+        "task": "WER (offline)",
+        "value": 4.06,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (French)",
+        "task": "WER (offline)",
+        "value": 4.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (Italian)",
+        "task": "WER (offline)",
+        "value": 7.07,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (Spanish)",
+        "task": "WER (offline)",
+        "value": 3.87,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (Portuguese)",
+        "task": "WER (offline)",
+        "value": 7.05,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (German)",
+        "task": "WER (1.12s latency)",
+        "value": 5.24,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (French)",
+        "task": "WER (1.12s latency)",
+        "value": 6.9,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (Italian)",
+        "task": "WER (1.12s latency)",
+        "value": 2.98,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (Spanish)",
+        "task": "WER (1.12s latency)",
+        "value": 4.63,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "FLEURS (Portuguese)",
+        "task": "WER (1.12s latency)",
+        "value": 4.98,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (German)",
+        "task": "WER (1.12s latency)",
+        "value": 5.65,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (French)",
+        "task": "WER (1.12s latency)",
+        "value": 7.61,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (Italian)",
+        "task": "WER (1.12s latency)",
+        "value": 4.33,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (Spanish)",
+        "task": "WER (1.12s latency)",
+        "value": 4.53,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Mozilla Common Voice (Portuguese)",
+        "task": "WER (1.12s latency)",
+        "value": 5.15,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (French)",
+        "task": "WER (1.12s latency)",
+        "value": 6.36,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (Italian)",
+        "task": "WER (1.12s latency)",
+        "value": 8.38,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (Spanish)",
+        "task": "WER (1.12s latency)",
+        "value": 4.42,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Multilingual LibriSpeech (Portuguese)",
+        "task": "WER (1.12s latency)",
+        "value": 8.45,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2604.19079",
+        "title": "Reducing the Offline-Streaming Gap for Unified ASR Transducer with Consistency Regularization",
+        "first_author": "Andrei Andrusenko",
+        "authors": 6,
+        "year": "2026"
+      },
+      {
+        "id": "2305.05084",
+        "title": "Fast Conformer with Linearly Scalable Attention for Efficient Speech Recognition",
+        "first_author": "Dima Rekesh",
+        "authors": 8,
+        "year": "2023"
+      },
+      {
+        "id": "2304.09325",
+        "title": "Dynamic Chunk Convolution for Unified Streaming and Non-Streaming Conformer ASR",
+        "first_author": "Xilai Li",
+        "authors": 5,
+        "year": "2023"
+      },
+      {
+        "id": "2005.08100",
+        "title": "Conformer: Convolution-augmented Transformer for Speech Recognition",
+        "first_author": "Anmol Gulati",
+        "authors": 11,
+        "year": "2020"
+      },
+      {
+        "id": "2505.13404",
+        "title": "Granary: Speech Recognition and Translation Dataset in 25 European Languages",
+        "first_author": "Nithin Rao Koluguri",
+        "authors": 15,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Granary",
+      "YTC",
+      "Yodas2",
+      "LibriLight",
+      "librispeech_asr",
+      "fisher_corpus",
+      "Switchboard-1",
+      "WSJ-0",
+      "WSJ-1",
+      "National-Singapore-Corpus-Part-1",
+      "National-Singapore-Corpus-Part-6",
+      "vctk",
+      "voxpopuli",
+      "europarl",
+      "multilingual_librispeech",
+      "fleurs",
+      "mozilla-foundation/common_voice_8_0",
+      "MLCommons/peoples_speech",
+      "google/speech_commands"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

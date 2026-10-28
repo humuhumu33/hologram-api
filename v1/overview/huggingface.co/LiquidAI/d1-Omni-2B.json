@@ -1,0 +1,183 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "LiquidAI/d1-Omni-2B",
+  "revision": "c8d48c08dada0191c6b362820f055cfb49c99426",
+  "manifest": "blake3:66acf089b19555c4b1f8c934d5d588c1305816dce7ed046b474110233baccfd4",
+  "addressed": true,
+  "generated": "2026-10-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/LiquidAI/d1-Omni-2B",
+    "readme": "file:README.md@sha256:71eb818049c1cd964565473cad13ec931d5c4d47e6ef3e57697c1ec20bfde67d",
+    "config": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169"
+  },
+  "summary": {
+    "value": "d1-Omni-2B is a decision model for text, pictures, and audio, built on LFM3-Omni-2B. It returns calibrated answers in one forward pass, without generating tokens.",
+    "source": "file:README.md@sha256:71eb818049c1cd964565473cad13ec931d5c4d47e6ef3e57697c1ec20bfde67d"
+  },
+  "glance": {
+    "task": {
+      "value": "Audio language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2166928384,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm3 Omni",
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm3_omni",
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ar",
+        "zh",
+        "fr",
+        "de",
+        "it",
+        "ja",
+        "ko",
+        "pt",
+        "es",
+        "vi",
+        "th",
+        "id",
+        "hi",
+        "ru",
+        "pl"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM3-Omni-2B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-24",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 57,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 252,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "lfm3_vl_vision",
+      "source": "file:config.json@sha256:cebf53b6bb8835cefe9b415d9619c23398ab8326d6385ee80f98fef0caad7169#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "fusorlabs/liquidai-lmf3-wasm",
+        "hugging-apps/d1-omni-2b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

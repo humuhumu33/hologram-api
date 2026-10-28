@@ -1,0 +1,140 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "openbmb/MiniCPM-OCR-Jev",
+  "revision": "b9caa86805fc609941c484d614b55bac74523a6e",
+  "manifest": "blake3:61c7e0720ad0f039e7c40b711cbecd7fd6e165161c7bb05549a07a64377675d0",
+  "addressed": true,
+  "generated": "2026-10-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/openbmb/MiniCPM-OCR-Jev",
+    "readme": "file:README.md@sha256:c35a96f2807000a1f242fd1369394ec23cc96ce70fd7339573bc5e0929e377f1",
+    "config": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34"
+  },
+  "summary": {
+    "value": "MiniCPM-OCR Jev (2B) is an OCR correctness decision model for text, formula, and table regions. Given a region image and a candidate OCR result, it returns a score from 0 to 1 — higher means the candidate is more likely correct.",
+    "source": "file:README.md@sha256:c35a96f2807000a1f242fd1369394ec23cc96ce70fd7339573bc5e0929e377f1"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2213245760,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 41,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 581,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  }
+}

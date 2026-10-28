@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "webbrain-one/lfm3-vld-2b",
+  "revision": "fbe2e60e5bdcc357c02efa52e2b5ac8acb365dbc",
+  "manifest": "blake3:4ea0fc75f01eb60f2f878e721585cbba105b67117fbe9fb3ef719ef65d080ba2",
+  "addressed": true,
+  "generated": "2026-10-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/webbrain-one/lfm3-vld-2b",
+    "readme": "file:README.md@sha256:803dbc89b4a573e40f07a68357263299bba13ef6bd9e01d47675a10ff1095f4b",
+    "config": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3"
+  },
+  "summary": {
+    "value": "LFM3-VLD-2B (Restored Language Head) is a hybrid multimodal browser decision model built using the Pegasus method (inspired by AveLabs/Qwen3.8-27B-Perplexing-Pegasus).",
+    "source": "file:README.md@sha256:803dbc89b4a573e40f07a68357263299bba13ef6bd9e01d47675a10ff1095f4b"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2180325888,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm3 VL",
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm3_vl",
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/d1-2B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "lfm3_vl_vision",
+      "source": "file:config.json@sha256:d7f011bb158660347e73c8dcf5a643828bc0c3f59414a2b6ec7a2c3a527353f3#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageTextToText",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/lfm3-vld-2b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

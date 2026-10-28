@@ -4,7 +4,7 @@
   "revision": "4fb1ef80f7e2a1d95c1fc368a0b19ef2578ace1b",
   "manifest": "blake3:db3ac312c6d80affa114b619ff9f634d3675671ccb9511704921d8b8534eac31",
   "addressed": true,
-  "generated": "2026-10-20",
+  "generated": "2026-10-28",
   "provenance": {
     "api": "https://huggingface.co/api/models/patrickbdevaney/MiMo-V2.6-Flash-REAP50-GGUF",
     "readme": "file:README.md@sha256:b6cbb3fb7b1b82108a5705ff30c23852e502a682997c05e44ed27fee6ce2d863"
@@ -14,6 +14,23 @@
     "source": "file:README.md@sha256:b6cbb3fb7b1b82108a5705ff30c23852e502a682997c05e44ed27fee6ce2d863"
   },
   "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
     "parameters": {
       "value": 157356536128,
       "source": "api:gguf.total"
@@ -34,49 +51,51 @@
       "value": "GGUF",
       "source": "api:safetensors|gguf"
     },
+    "library": {
+      "value": "gguf",
+      "source": "api:library_name"
+    },
     "license": {
       "value": {
-        "id": "mit",
-        "name": "MIT",
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
         "commercial": "yes",
-        "note": "Permissive"
+        "note": "Permissive, with patent grant"
       },
       "source": "api:cardData.license"
     },
-    "base": {
-      "value": {
-        "relation": "Quantized from",
-        "models": [
-          "XiaomiMiMo/MiMo-V2.6-Flash-RL"
-        ]
-      },
-      "source": "api:baseModels"
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
     },
     "released": {
       "value": "2026-09-25",
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-12",
+      "value": "2026-10-26",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 5,
+      "value": 6,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 7363,
+      "value": 8702,
       "source": "api:downloadsAllTime"
     }
   },
   "papers": {
     "value": [
       {
-        "id": "2609.18916",
-        "title": "Higher-order pruning of experts in mixture-of-experts language models",
-        "first_author": "Alex M. Tseng",
-        "authors": 5,
-        "year": "2026"
+        "id": "2510.13999",
+        "title": "REAP the Experts: Why Pruning Prevails for One-Shot MoE compression",
+        "first_author": "Mike Lasby",
+        "authors": 6,
+        "year": "2025"
       }
     ],
     "source": "api:tags(arxiv)+api:papers"

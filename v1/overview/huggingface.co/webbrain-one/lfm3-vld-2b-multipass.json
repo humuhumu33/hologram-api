@@ -1,0 +1,145 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "webbrain-one/lfm3-vld-2b-multipass",
+  "revision": "73c037449c3543965d2ab81a7560630c471d0055",
+  "manifest": "blake3:86498914103c738d6913f32dd01524a5a08039fd88761cea4adf1b9086f5dde9",
+  "addressed": true,
+  "generated": "2026-10-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/webbrain-one/lfm3-vld-2b-multipass",
+    "readme": "file:README.md@sha256:5f8a398aa5d8bac29df9098bc200b8e405160446e328321c0bd9a58b045d15c8",
+    "config": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a"
+  },
+  "summary": {
+    "value": "LiquidAI/LFM3-VL-2B adapted with WebBrain's multipass VL-D (verify Yes/No per option + readout option code) decision protocol, distilled from LiquidAI/d1-2B on WebBrain multimodal browser workflow screenshots — without full VL/Compass fine-tuning (vision tower frozen, language backbone adapted via LoRA and merged…",
+    "source": "file:README.md@sha256:5f8a398aa5d8bac29df9098bc200b8e405160446e328321c0bd9a58b045d15c8"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1918181888,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm3 VL",
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm3_vl",
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM3-VL-2B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "lfm3_vl_vision",
+      "source": "file:config.json@sha256:70389f46de70d23c3ccde40ae55b67d206f8ca6d21c76946fabc157a2bd38a0a#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForImageTextToText",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/lfm3-vl-2b-multipass"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tencent/Hy-SimulMT-30B-A3B-Interleave",
+  "revision": "e988e52e19ec4002e2763ec46fdff997c68fe859",
+  "manifest": "blake3:047894642121bc8dfe1e7d610dee9cbc683eaba011cbc235c409e2992c0f28d9",
+  "addressed": true,
+  "generated": "2026-10-28",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tencent/Hy-SimulMT-30B-A3B-Interleave",
+    "readme": "file:README.md@sha256:d6c8d7654390cf0a8ec1133c5cfa080e6a6d981f4806964b4fd070f52843e4c3",
+    "config": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64"
+  },
+  "summary": {
+    "value": "Hy-SimulMT is a real-time simultaneous translation model developed by Tencent Hunyuan, supporting bidirectional speech-to-speech translation between Chinese and English. It continuously receives incoming audio and translates as the speaker talks, producing both translated text and speech.",
+    "source": "file:README.md@sha256:d6c8d7654390cf0a8ec1133c5cfa080e6a6d981f4806964b4fd070f52843e4c3"
+  },
+  "glance": {
+    "task": {
+      "value": "Translation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 30394794496,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Hy V3",
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#model_type"
+    },
+    "architecture_id": {
+      "value": "hy_v3",
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh",
+        "en",
+        "fr",
+        "pt",
+        "es",
+        "ja",
+        "tr",
+        "ru",
+        "ar",
+        "ko",
+        "th",
+        "it",
+        "de",
+        "vi",
+        "ms",
+        "id",
+        "tl",
+        "hi",
+        "pl",
+        "cs",
+        "nl",
+        "km",
+        "my",
+        "fa",
+        "gu",
+        "ur",
+        "te",
+        "mr",
+        "he",
+        "bn",
+        "ta",
+        "uk",
+        "bo",
+        "kk",
+        "mn",
+        "ug"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-22",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 166,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 48,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 120832,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 11158840.0,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#tie_word_embeddings"
+    },
+    "audio_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:af0a452d97e5c463459d174d95d42571d74c0cd2c768a2ad9761b639fdd47d64#audio_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/hy-simulmt-30b-a3b-interleave"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
