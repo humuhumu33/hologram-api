@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "LiquidAI/LFM3-VL-2B",
-  "revision": "f83d2b0a2296aaa277f394990a9b8b949ddf9691",
-  "manifest": "blake3:442e3d09554bad86f16bddea1c8842a2b1438b34ce4ff6d53a8cb823fee32bf9",
+  "revision": "ba44bd51db20a2753f28c273a1571ccaa210d954",
+  "manifest": "blake3:f3f180de883ce5122ce048ebd27f14b4d862d91382749055dd40c23551093a6f",
   "addressed": true,
-  "generated": "2026-10-28",
+  "generated": "2026-10-29",
   "provenance": {
     "api": "https://huggingface.co/api/models/LiquidAI/LFM3-VL-2B",
-    "readme": "file:README.md@sha256:01a1856ea6c289d174e877e71d06d70c99686f3b1a0ae0f91cd868fca3401dd0",
+    "readme": "file:README.md@sha256:5bf94c37626a07e676e7d97d3b0bcdb56946b64a1099c89b8324fd05bd5b5da2",
     "config": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3"
   },
   "summary": {
     "value": "LFM3-VL-2B is a vision-language model for on-device visual understanding. It takes text, images, and video as input, and combines the LFM3 language model with a new in-house vision encoder.",
-    "source": "file:README.md@sha256:01a1856ea6c289d174e877e71d06d70c99686f3b1a0ae0f91cd868fca3401dd0"
+    "source": "file:README.md@sha256:5bf94c37626a07e676e7d97d3b0bcdb56946b64a1099c89b8324fd05bd5b5da2"
   },
   "glance": {
     "task": {
@@ -102,15 +102,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-27",
+      "value": "2026-10-28",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 103,
+      "value": 148,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1596,
+      "value": 4193,
       "source": "api:downloadsAllTime"
     }
   },
@@ -148,18 +148,41 @@
       "source": "file:config.json@sha256:18a02e8b5963e38c98683e2c948705ea45220d75f017e9b4bdd9cf54692e6dc3#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_standard_10_options",
+        "value": 45.7,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-VL-2B"
+      },
+      {
+        "dataset": "likaixin/ScreenSpot-Pro",
+        "task": "overall",
+        "value": 55.5,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-VL-2B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
-        "Quantized": 14,
-        "Fine tuned": 3
+        "Adapter": 1,
+        "Quantized": 21,
+        "Fine tuned": 6
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 14,
-        "finetune": 3
+        "adapter": 1,
+        "quantized": 21,
+        "finetune": 6
       },
       "source": "api:childrenModelCount"
     }
@@ -176,7 +199,7 @@
       "top": [
         "webml-community/LFM3-VL-2B-WebGPU",
         "fusorlabs/liquidai-lmf3-wasm",
-        "hugging-apps/lfm3-vl-2b"
+        "hugging-apps/lfm3-vld-2b"
       ]
     },
     "source": "api:spaces"

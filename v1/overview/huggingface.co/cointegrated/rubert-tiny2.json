@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "cointegrated/rubert-tiny2",
+  "revision": "e8ed3b0c8bbf4fb6984c3de043bf7d2f4e5969ae",
+  "manifest": "blake3:887af26e459ac8bd84d3e4844dc6bc704aa4dd3fce0a4c1f3f5b02a62914d36d",
+  "addressed": true,
+  "generated": "2026-10-29",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/cointegrated/rubert-tiny2",
+    "readme": "file:README.md@sha256:6eec7047e9db76ee30e4c9dd542a25cf0c4f1f93a2119db56cd10f0c393fc00f",
+    "config": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff"
+  },
+  "summary": {
+    "value": "This is an updated version of cointegrated/rubert-tiny: a small Russian BERT-based encoder with high-quality sentence embeddings. This post in Russian gives more details.",
+    "source": "file:README.md@sha256:6eec7047e9db76ee30e4c9dd542a25cf0c4f1f93a2119db56cd10f0c393fc00f"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 29378550,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "BERT",
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#model_type"
+    },
+    "architecture_id": {
+      "value": "bert",
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ru"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-12-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 184,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 20756711,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 3,
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 312,
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#num_attention_heads"
+    },
+    "vocab": {
+      "value": 83828,
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:adee8b3e344bcb8379f44d0b3577c267d52881341e05d973c43e49974778dfff#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 1,
+        "Quantized": 6,
+        "Fine tuned": 88
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 1,
+        "quantized": 6,
+        "finetune": 88
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForPreTraining",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 98,
+      "top": [
+        "mteb/leaderboard",
+        "sergeyzh/rusBEIR-lite",
+        "srchakaev/find_my_movie_hf"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

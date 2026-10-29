@@ -1,34 +1,39 @@
 {
   "format": "hologram.overview/v1",
   "name": "ccore/Qwen3.5-4B-3D-Coder",
-  "revision": "15f353a67b292997a02a687b6c2d4e8751e25eff",
-  "manifest": "blake3:370656987ff99a78ccf00b5419d2fc8b9f06b8a2966165844e178e23c77a5b19",
+  "revision": "1bf0f958cb4bac8e04b98280dd9fb3f0e942c015",
+  "manifest": "blake3:bbea1ebdd94e1aa91f8181c33c9d9dacab34419b2d7edbeb46f22811e8c28e54",
   "addressed": true,
-  "generated": "2026-10-28",
+  "generated": "2026-10-29",
   "provenance": {
     "api": "https://huggingface.co/api/models/ccore/Qwen3.5-4B-3D-Coder",
-    "readme": "file:README.md@sha256:9bc731a701294eb9ddf55650424703c81aeb7b81d1c4e6e4a414abc0ebc79169"
+    "readme": "file:README.md@sha256:7599085ebd577a58806af1e6ffd26ac7adfde1dd8caa63d312a38763ba17690f",
+    "config": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed"
   },
   "summary": {
     "value": "An experiment exploring the feasibility of small language models for general-purpose coding and high-quality 3D scene generation.",
-    "source": "file:README.md@sha256:9bc731a701294eb9ddf55650424703c81aeb7b81d1c4e6e4a414abc0ebc79169"
+    "source": "file:README.md@sha256:7599085ebd577a58806af1e6ffd26ac7adfde1dd8caa63d312a38763ba17690f"
   },
   "glance": {
     "parameters": {
-      "value": 4205751296,
-      "source": "api:gguf.total"
+      "value": 4539265536,
+      "source": "api:safetensors.total"
     },
     "architecture": {
-      "value": "Qwen 35",
-      "source": "api:config.model_type"
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#model_type"
     },
     "architecture_id": {
-      "value": "qwen35",
-      "source": "api:config.model_type"
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#model_type"
     },
     "context": {
       "value": 262144,
-      "source": "api:gguf.context_length"
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
     },
     "format": {
       "value": "GGUF",
@@ -57,11 +62,11 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-28",
+      "value": "2026-10-29",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 196,
+      "value": 254,
       "source": "api:likes"
     },
     "downloads_all_time": {
@@ -69,11 +74,65 @@
       "source": "api:downloadsAllTime"
     }
   },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ccore/ThreeJS-3D-Scenes"
+    ],
+    "source": "api:cardData.datasets"
+  },
   "spaces": {
     "value": {
       "count": 1,
       "top": [
-        "ReallyFloppyPenguin/3D-World-Generator"
+        "ReallyFloppyPenguin/3D-World-Generator-WebGPU"
       ]
     },
     "source": "api:spaces"

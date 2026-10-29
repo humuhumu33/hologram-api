@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "LiquidAI/LFM3-Omni-2B",
-  "revision": "ce2458cbce4ad970f92032ed94e3d18d30b04f9c",
-  "manifest": "blake3:e91063c7db4fa0fedeea33d7cb09836577456ede34b8b91964abd7328938fa5a",
+  "revision": "5797d07c125503bd4f4c0e7f915ae2d3d703e8de",
+  "manifest": "blake3:f9d2f5ac40f62b407bb295fb2d7ae4f552d199beb4b966322a86aab8e95b1c01",
   "addressed": true,
-  "generated": "2026-10-28",
+  "generated": "2026-10-29",
   "provenance": {
     "api": "https://huggingface.co/api/models/LiquidAI/LFM3-Omni-2B",
-    "readme": "file:README.md@sha256:97e8f3b8e1c78f887b0e69c887f7995e765863d9e75ec4ba64e39c48059de070",
+    "readme": "file:README.md@sha256:2574663e12ee8b2780a67fe0435d10a5f545c21e40ee5c8cc68024ca1ed50df6",
     "config": "file:config.json@sha256:17e3792551ef56b37e85bbd1e6e968f70dc5b4b14c96f1339d0be85e0ba46875"
   },
   "summary": {
     "value": "LFM3-Omni-2B is Liquid AI's first omni-modal model in the LFM3 family: a single end-to-end model that understands text, images, video and audio, and answers in text and speech. It is built for on-device use: one model replaces a separate ASR model, vision-language model, LLM and TTS model.",
-    "source": "file:README.md@sha256:97e8f3b8e1c78f887b0e69c887f7995e765863d9e75ec4ba64e39c48059de070"
+    "source": "file:README.md@sha256:2574663e12ee8b2780a67fe0435d10a5f545c21e40ee5c8cc68024ca1ed50df6"
   },
   "glance": {
     "task": {
@@ -103,11 +103,11 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-27",
+      "value": "2026-10-28",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 107,
+      "value": 174,
       "source": "api:likes"
     },
     "downloads_all_time": {
@@ -149,18 +149,39 @@
       "source": "file:config.json@sha256:17e3792551ef56b37e85bbd1e6e968f70dc5b4b14c96f1339d0be85e0ba46875#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MMMU/MMMU_Pro",
+        "task": "mmmu_pro_vision",
+        "value": 27.28,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-Omni-2B"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 6.36,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-Omni-2B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
-        "Quantized": 8,
-        "Fine tuned": 2
+        "Quantized": 14,
+        "Fine tuned": 4
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 8,
-        "finetune": 2
+        "quantized": 14,
+        "finetune": 4
       },
       "source": "api:childrenModelCount"
     }

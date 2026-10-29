@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "LiquidAI/LFM3-1.7B",
-  "revision": "40ebe0aa6662c9d40389c2f5d565b6a2c6aebacd",
-  "manifest": "blake3:080d4bdd7014e7ed86c55e8dec117d8996d21e7ff17118df1157f3ecd12ca172",
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "manifest": "blake3:cd4a0c0ee72051b13592430cb82029145bba96d803802675d3d199a44fe059c5",
   "addressed": true,
-  "generated": "2026-10-28",
+  "generated": "2026-10-29",
   "provenance": {
     "api": "https://huggingface.co/api/models/LiquidAI/LFM3-1.7B",
-    "readme": "file:README.md@sha256:ed4b0481a10fd3a84827ddab869e17512900f54fa737e43e8c87075247eff320",
+    "readme": "file:README.md@sha256:ca4ea3e8ddda8690b0479d0bbcdd4539f92d42e0092aa396a2bd29a75b6d59d8",
     "config": "file:config.json@sha256:8c6ae8b8f6d88c87cfb98cf4b5e34e943d0ee07e24215c4121b3159a46e1399d"
   },
   "summary": {
     "value": "LFM3-1.7B is a text model for local agents and specialized applications, based on our new tri-hybrid architecture.",
-    "source": "file:README.md@sha256:ed4b0481a10fd3a84827ddab869e17512900f54fa737e43e8c87075247eff320"
+    "source": "file:README.md@sha256:ca4ea3e8ddda8690b0479d0bbcdd4539f92d42e0092aa396a2bd29a75b6d59d8"
   },
   "glance": {
     "task": {
@@ -101,11 +101,11 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-27",
+      "value": "2026-10-28",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 268,
+      "value": 435,
       "source": "api:likes"
     },
     "downloads_all_time": {
@@ -143,18 +143,85 @@
       "source": "file:config.json@sha256:8c6ae8b8f6d88c87cfb98cf4b5e34e943d0ee07e24215c4121b3159a46e1399d#tie_word_embeddings"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "harborframework/terminal-bench-2.1",
+        "task": "terminalbench_2_1",
+        "value": 12.92,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+        "notes": "OpenCode agent, up to 100 turns."
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 43.4,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+        "notes": "OpenCode agent, up to 250 turns."
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Multilingual",
+        "task": "swe_bench_multilingual_%_resolved",
+        "value": 23,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+        "notes": "OpenCode agent, up to 250 turns."
+      },
+      {
+        "dataset": "claw-eval/Claw-Eval",
+        "task": "general",
+        "value": 51.4,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      },
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 63.37,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 7.17,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+        "notes": "No tools."
+      },
+      {
+        "dataset": "LiquidAI/ifstruct-v1.0",
+        "task": "ifstruct_v1",
+        "value": 93.72,
+        "date": "2026-10-27",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
-        "Quantized": 23,
-        "Fine tuned": 6
+        "Adapter": 1,
+        "Quantized": 50,
+        "Fine tuned": 8
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 23,
-        "finetune": 6
+        "adapter": 1,
+        "quantized": 50,
+        "finetune": 8
       },
       "source": "api:childrenModelCount"
     }
@@ -167,7 +234,7 @@
   },
   "spaces": {
     "value": {
-      "count": 5,
+      "count": 6,
       "top": [
         "akhaliq/lfm3-studio",
         "fusorlabs/liquidai-lmf3-wasm",
