@@ -1,0 +1,174 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "PrimeIntellect/Qwen3-1.7B",
+  "revision": "61a79cd101170642a653d1d44d18f69f88f54e08",
+  "manifest": "blake3:caa4bef82d75fe64385a9b678b6605a28a812e3ceaeaddb23b4dca593b1568e7",
+  "addressed": true,
+  "generated": "2026-10-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/PrimeIntellect/Qwen3-1.7B",
+    "readme": "file:README.md@sha256:0f24ef7925c348ed05c07b7f5b0782501737fc8fd6e045286e94163fb038b84a",
+    "config": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+  },
+  "summary": {
+    "value": "This is a clone of Qwen/Qwen3-1.7B with a multi-turn, tool-call compatible chat template.",
+    "source": "file:README.md@sha256:0f24ef7925c348ed05c07b7f5b0782501737fc8fd6e045286e94163fb038b84a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2031739904,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#model_type"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-1.7B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-09-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-09-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 413919,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "featherless-ai",
+          "status": "live",
+          "task": "conversational"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/fine-tuning-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

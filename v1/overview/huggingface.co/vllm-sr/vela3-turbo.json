@@ -1,0 +1,129 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "vllm-sr/vela3-turbo",
+  "revision": "ce95e6d9e10def159fbdb39c95bfc4ff6a30b955",
+  "manifest": "blake3:b0ee6c0ebe86eab85192578f15ca847842ea44c342bb1bc8da2f19a7dc758ef3",
+  "addressed": true,
+  "generated": "2026-10-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/vllm-sr/vela3-turbo",
+    "readme": "file:README.md@sha256:ddfe0ac13f44cd9abbacd4524e580410a308ad749c583f7597e05cf0cf189de0",
+    "config": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed"
+  },
+  "summary": {
+    "value": "vela3-turbo is the 27B member of the Vela 3.0 family, built on d3-turbo. In one systemone call it answers routing and general decisions and finds the exact spans you name (entities, relations, personal data, unsupported claims, evidence), with probabilities and character offsets and no generated text.",
+    "source": "file:README.md@sha256:ddfe0ac13f44cd9abbacd4524e580410a308ad749c583f7597e05cf0cf189de0"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "vllm-sr/d3-turbo"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 127,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:8fa1f8e03f3a39e6cfc808db1151163fe1118a8e7a89cd040573814680b7f4ed#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

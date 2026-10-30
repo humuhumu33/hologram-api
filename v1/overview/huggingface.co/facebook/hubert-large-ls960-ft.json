@@ -1,0 +1,237 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/hubert-large-ls960-ft",
+  "revision": "ece5fabbf034c1073acae96d5401b25be96709d8",
+  "manifest": "blake3:35cdf399844b079915e2d83310aba6049263f1b7a6e6c48111dbcce48fb6c4fb",
+  "addressed": true,
+  "generated": "2026-10-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/hubert-large-ls960-ft",
+    "readme": "file:README.md@sha256:b093bdd6918af0fa1929d8948aba62846dd2bb0efa2723ebd742f4d8cb213515",
+    "config": "file:config.json@sha256:f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429"
+  },
+  "summary": {
+    "value": "The large model fine-tuned on 960h of Librispeech on 16kHz sampled speech audio. When using the model make sure that your speech input is also sampled at 16Khz.",
+    "source": "file:README.md@sha256:b093bdd6918af0fa1929d8948aba62846dd2bb0efa2723ebd742f4d8cb213515"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Hubert",
+      "source": "file:config.json@sha256:f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429#model_type"
+    },
+    "architecture_id": {
+      "value": "hubert",
+      "source": "file:config.json@sha256:f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-05-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 84,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 20395066,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32,
+      "source": "file:config.json@sha256:f87fc63802e37115034d1018c663b61ccd26000e78461a50fbca8fddddc4f429#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 22.69375,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 495.8627041,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 39.72,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 35.24,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 25.01,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 11.35,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 12.75,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 18.86,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 15.92,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 22.7,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 36
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 36
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2106.07447",
+        "title": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+        "first_author": "Wei-Ning Hsu",
+        "authors": 6,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "libri-light",
+      "librispeech_asr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 58,
+      "top": [
+        "microsoft/paza-bench",
+        "reach-vb/asr-pyctcdecode",
+        "hynt/ZipVoice-Vietnamese-100h"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

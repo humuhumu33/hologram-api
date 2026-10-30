@@ -1,0 +1,208 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B-NVFP4",
+  "revision": "66c6adc4020179567074d0399cda2a4eeb2bb347",
+  "manifest": "blake3:c5c0b6b6f64f5c41772aa548b6b41c3299fb4b09ed42949934ebb7ae5d6795ef",
+  "addressed": true,
+  "generated": "2026-10-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B-NVFP4",
+    "readme": "file:README.md@sha256:dc4049b66d750e2a40351e4c2b64cbf56f1f7d9fb354bf03c7d618bfec1d9336",
+    "config": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313"
+  },
+  "summary": {
+    "value": "Nemotron 3.5 Transcribe is an open-weight, offline speech and audio model for transcription in 40 languages, with support for recordings up to one hour and a 65,536-token context.",
+    "source": "file:README.md@sha256:dc4049b66d750e2a40351e4c2b64cbf56f1f7d9fb354bf03c7d618bfec1d9336"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 18710697253,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Nemo Speechlm",
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#model_type"
+    },
+    "architecture_id": {
+      "value": "nemo_speechlm",
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 80%, FP8 15%, BF16 4%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "nemo",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "cs",
+        "nl",
+        "en",
+        "fr",
+        "de",
+        "hi",
+        "it",
+        "ko",
+        "pl",
+        "pt",
+        "ru",
+        "sk",
+        "es",
+        "bg",
+        "hr",
+        "da",
+        "et",
+        "fi",
+        "hu",
+        "ja",
+        "lv",
+        "lt",
+        "ro",
+        "sl",
+        "sv",
+        "th",
+        "tr",
+        "uk",
+        "ar",
+        "bn",
+        "zh",
+        "el",
+        "he",
+        "id",
+        "mt",
+        "mr",
+        "tl",
+        "ta",
+        "te",
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1940,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 2688,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:c6509c7a68ae4bd94fca06a39216029c233f8dc43428d6228fe425cfe4926313#quantization_config"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2310.09424",
+        "title": "SALM: Speech-augmented Language Model with In-context Learning for Speech Recognition and Translation",
+        "first_author": "Zhehuai Chen",
+        "authors": 9,
+        "year": "2023"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Granary-v2"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

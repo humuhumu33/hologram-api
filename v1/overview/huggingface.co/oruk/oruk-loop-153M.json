@@ -1,0 +1,241 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "oruk/oruk-loop-153M",
+  "revision": "58b0065fe80f8f8b70d8afe81db95a9a3e3a9029",
+  "manifest": "blake3:2ff1f30020583bf5d8913a5369301236f24f954c3d0f37a983d5cf9b0b3dfc84",
+  "addressed": true,
+  "generated": "2026-10-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/oruk/oruk-loop-153M",
+    "readme": "file:README.md@sha256:169460b26d2d13335a9310cd15b064587bb04aa10938dbc2fc6ebe13d75480a2",
+    "config": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c"
+  },
+  "summary": {
+    "value": "Oruk AI · Free for noncommercial use and for small businesses; other commercial use needs a license from Oruk AI (terms).",
+    "source": "file:README.md@sha256:169460b26d2d13335a9310cd15b064587bb04aa10938dbc2fc6ebe13d75480a2"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 153428522,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3 ASR",
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_asr",
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#model_type"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 89%, BF16 10%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-ASR-1.7B-hf"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-26",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 62,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#vocab_size"
+    },
+    "context": {
+      "value": 65536,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#tie_word_embeddings"
+    },
+    "audio_encoder": {
+      "value": "qwen3_asr_encoder",
+      "source": "file:config.json@sha256:1522a3c49a077506aaaceb48cb12e84d9c2dae159b54a139679bdf9b7fe1c77c#audio_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "AMI (IHM)",
+        "task": "Test WER (beam 4)",
+        "value": 11.22,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Earnings-22",
+        "task": "Test WER (beam 4)",
+        "value": 9.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GigaSpeech",
+        "task": "Test WER (beam 4)",
+        "value": 10.45,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-clean",
+        "task": "Test WER (beam 4)",
+        "value": 2.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "LibriSpeech test-other",
+        "task": "Test WER (beam 4)",
+        "value": 5.95,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SPGISpeech",
+        "task": "Test WER (beam 4)",
+        "value": 2.48,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TED-LIUM 3",
+        "task": "Test WER (beam 4)",
+        "value": 3.77,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "VoxPopuli (en)",
+        "task": "Test WER (beam 4)",
+        "value": 7.55,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2601.21337",
+        "title": "Qwen3-ASR Technical Report",
+        "first_author": "Xian Shi",
+        "authors": 13,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "openslr/librispeech_asr",
+      "kensho/spgispeech",
+      "speechcolab/gigaspeech",
+      "facebook/voxpopuli",
+      "edinburghcstr/ami",
+      "sanchit-gandhi/tedlium-data",
+      "sanchit-gandhi/earnings22_split",
+      "espnet/yodas3",
+      "google/fleurs"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/oruk-loop-153m"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "datalab-to/surya-ocr-2.5-gguf",
+  "revision": "eb78671ae9af9bdddfac2e25507c55337b6098e2",
+  "manifest": "blake3:de6f114cd208b574f804b1d82cbc5675cc94266f0d670f30591e12c64cf446fa",
+  "addressed": true,
+  "generated": "2026-10-30",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/datalab-to/surya-ocr-2.5-gguf",
+    "readme": "file:README.md@sha256:87a30a3da89b9e3e35dca63b1cc01da1834d840c60ae08183376da184c82ec35",
+    "config": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec"
+  },
+  "summary": {
+    "value": "pip install surya-ocr downloads the bf16 file and starts llama-server for you on Apple Silicon and CPU. To serve it yourself:",
+    "source": "file:README.md@sha256:87a30a3da89b9e3e35dca63b1cc01da1834d840c60ae08183376da184c82ec35"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 588763968,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#max_position_embeddings"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "openrail",
+        "name": "OpenRAIL",
+        "commercial": "conditions",
+        "note": "Use restrictions apply"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "datalab-to/surya-ocr-2.5"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-25",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 513,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 88526,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:37b7e37ff4ca2e6ec7c67e2808b61274c0d08aeef80bb03349637743ae7db2ec#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2105.15203",
+        "title": "SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers",
+        "first_author": "Enze Xie",
+        "authors": 6,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}
