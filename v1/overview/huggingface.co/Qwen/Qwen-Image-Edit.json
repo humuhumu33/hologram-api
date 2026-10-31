@@ -4,7 +4,7 @@
   "revision": "ac7f9318f633fc4b5778c59367c8128225f1e3de",
   "manifest": "blake3:c4d9a0a1606030d6fdd4e955cc5ddc63277677e39023f1d702a5182d737c1d4d",
   "addressed": true,
-  "generated": "2026-10-23",
+  "generated": "2026-10-31",
   "provenance": {
     "api": "https://huggingface.co/api/models/Qwen/Qwen-Image-Edit",
     "readme": "file:README.md@sha256:a6ff443f680a02fec00b6511ec7c38d72569de86658849f9957c302ca3b2088b"
@@ -71,18 +71,41 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 2560,
+      "value": 2565,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1630877,
+      "value": 1675518,
       "source": "api:downloadsAllTime"
     }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hongzhuyi/VDEBench",
+        "task": "local",
+        "value": 0.757,
+        "date": "2026-10-15",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2602.00122v4",
+        "notes": "local setting, n=3,506, PaddleOCR-VL; IoU 0.767, CDM 0.841, BLEU-4 0.574, TEDS 0.846"
+      },
+      {
+        "dataset": "hongzhuyi/VDEBench",
+        "task": "global",
+        "value": 0.799,
+        "date": "2026-10-15",
+        "verified": false,
+        "source": "https://arxiv.org/abs/2602.00122v4",
+        "notes": "global setting, n=3,506, PaddleOCR-VL; IoU 0.901, CDM 0.897, BLEU-4 0.541, TEDS 0.857"
+      }
+    ],
+    "source": "api:evalResults"
   },
   "family": {
     "children": {
       "value": {
-        "Adapter": 49,
+        "Adapter": 48,
         "Quantized": 22,
         "Fine tuned": 27
       },
@@ -90,7 +113,7 @@
     },
     "children_raw": {
       "value": {
-        "adapter": 49,
+        "adapter": 48,
         "quantized": 22,
         "finetune": 27
       },
@@ -102,6 +125,11 @@
       "value": [
         {
           "provider": "fal-ai",
+          "status": "live",
+          "task": "image-to-image"
+        },
+        {
+          "provider": "replicate",
           "status": "live",
           "task": "image-to-image"
         },
@@ -131,8 +159,8 @@
       "count": 100,
       "top": [
         "RioShiina/ImageGen",
-        "hugging-apps/qwen-video-edit",
-        "Qwen/Qwen-Image-Edit"
+        "Gramlin/ImageGennew",
+        "Qwen/Qwen-Image-Edit-2511"
       ]
     },
     "source": "api:spaces"

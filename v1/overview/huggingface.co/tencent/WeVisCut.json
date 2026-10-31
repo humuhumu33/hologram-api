@@ -1,0 +1,178 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tencent/WeVisCut",
+  "revision": "b19fecbf1f9dcc87d7e63e09069364208d5fc53d",
+  "manifest": "blake3:f20c2148f76c42528cefa6777e1aabe62c7a4127f8aba1f7c0394fde749a4ff7",
+  "addressed": true,
+  "generated": "2026-10-31",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tencent/WeVisCut",
+    "readme": "file:README.md@sha256:513a0aab9b4f8d6b9b19e61f25527c6b3443a08f8b2ec3355c0fea4c018f0203",
+    "config": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d"
+  },
+  "summary": {
+    "value": "WeVisCut is a 9B tool-using agent that turns knowledge articles or narration scripts into multi-minute edited videos. At each step, it reads the current editing state and selects one of 12 tools for planning, narration, asset retrieval, composition, inspection, or repair.",
+    "source": "file:README.md@sha256:513a0aab9b4f8d6b9b19e61f25527c6b3443a08f8b2ec3355c0fea4c018f0203"
+  },
+  "glance": {
+    "task": {
+      "value": "Any to any",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 121,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:e9fdd7e5071eca50784d3a8f69e1312baa0e681303d51721c6212e67a2f5247d#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.38352",
+        "title": "WeVisCut: The Whole Editing Room in One Agent From Narration to Long-Form Video",
+        "first_author": "Chenyu Mu",
+        "authors": 11,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "inclusionAI/ZwZ2-27B",
+  "revision": "6decedf05c953da84fe272922e192499794244e9",
+  "manifest": "blake3:1698fa1d8e27fc84b629781c8f545243aaa4cfbbc9902231ddbc4c9b01f2a78c",
+  "addressed": true,
+  "generated": "2026-10-31",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/inclusionAI/ZwZ2-27B",
+    "readme": "file:README.md@sha256:aad6c458de077258c831f9dec436166c95e711b35fd1a4c956699390a74cff0a",
+    "config": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a"
+  },
+  "summary": {
+    "value": "ZwZ2-27B is the Qwen3.6-27B-based model in Zooming-without-Zooming-v2 (ZwZ2). It learns to connect visual evidence across regions through comparison, aggregation, matching, and multi-step reasoning.",
+    "source": "file:README.md@sha256:aad6c458de077258c831f9dec436166c95e711b35fd1a4c956699390a74cff0a"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27356728560,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.6-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-16",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 390,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:f1f40186daa67c71f566760113c425119bb9d895f89df7e346427ba0e49cd48a#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.37037",
+        "title": "Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception",
+        "first_author": "Lai Wei",
+        "authors": 13,
+        "year": "2026"
+      },
+      {
+        "id": "2602.11858",
+        "title": "Zooming without Zooming: Region-to-Image Distillation for Fine-Grained Multimodal Perception",
+        "first_author": "Lai Wei",
+        "authors": 12,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "inclusionAI/ZwZ2-RL-VQA"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/zwz2-27b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

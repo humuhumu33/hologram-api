@@ -1,0 +1,160 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sensenova/SenseNova-Loop-9B-Preview",
+  "revision": "27abea779b1e6634b136805b6519371739d551f7",
+  "manifest": "blake3:d8faa6d5c160c5a03f551f572b8db586ce1693ce79d48b3ae12cb27b3e6c6cd2",
+  "addressed": true,
+  "generated": "2026-10-31",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sensenova/SenseNova-Loop-9B-Preview",
+    "readme": "file:README.md@sha256:f6bb9c645df066c71ceae1d4ae55c14ee879dd9510f3af2c9c71e6e31ad8cf7f",
+    "config": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51"
+  },
+  "summary": {
+    "value": "SenseNova-Loop-9B-Preview is a multimodal language model developed for long-context and agentic workflows. It accepts text and images and generates text for applications that combine document understanding, coding, and interaction with external tools.",
+    "source": "file:README.md@sha256:f6bb9c645df066c71ceae1d4ae55c14ee879dd9510f3af2c9c71e6e31ad8cf7f"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9656250480,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Sensenova Loop",
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#model_type"
+    },
+    "architecture_id": {
+      "value": "sensenova_loop",
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 97%, BF16 3%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 86,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 566,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "mrfakename/sensenova-loop-9b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

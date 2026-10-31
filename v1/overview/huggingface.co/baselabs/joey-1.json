@@ -1,0 +1,193 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "baselabs/joey-1",
+  "revision": "9efbe485efbed9598dfca5294cbbe8da00e21908",
+  "manifest": "blake3:3b92e67f00ba4b1cf2f783ebb6aa3ce0a08b39c9db7efbd69586c67acfd4bd62",
+  "addressed": true,
+  "generated": "2026-10-31",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/baselabs/joey-1",
+    "readme": "file:README.md@sha256:dd6a8e4489b231f665ef561737638608e1c8af018d721c92cc9f017f91c5125a",
+    "config": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1"
+  },
+  "summary": {
+    "value": "joey-1 is a 2B parameter decision model post-trained from Qwen3.5-2B by Base Labs at Baseten. Provide the model a state (text, optionally with images) and a set of questions and it will return a calibrated probability for every option, answering all questions from one shared-prefix prefill.",
+    "source": "file:README.md@sha256:dd6a8e4489b231f665ef561737638608e1c8af018d721c92cc9f017f91c5125a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 2721801024,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-2B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 18,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 229,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:7c7ebc3322308391787aac279c7cbd4c3a38bba85e270b5f5568ad07467673e1#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "balanced_accuracy",
+        "value": 0.502,
+        "date": "2026-10-30",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench"
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "auroc",
+        "value": 0.482,
+        "date": "2026-10-30",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench"
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "false_block_rate",
+        "value": 0.154,
+        "date": "2026-10-30",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench"
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "category_macro_f1",
+        "value": 0.219,
+        "date": "2026-10-30",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "multimodalart/jev-decision-index"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

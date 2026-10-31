@@ -1,0 +1,242 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "xiaomi-research/Xiaomi-OCR-0",
+  "revision": "bbd8cf8d21f256b3644b44cb860f3a7cecb93c30",
+  "manifest": "blake3:c9d5258883c7d5f4181acbaee83709289c0f462c01b1373c44201a877a8b9141",
+  "addressed": true,
+  "generated": "2026-10-31",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/xiaomi-research/Xiaomi-OCR-0",
+    "readme": "file:README.md@sha256:54f2dbecfe9aa354da5a568ec555f2ca5c2d9b06ec2c8cd54b882af516625d46",
+    "config": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c"
+  },
+  "summary": {
+    "value": "Xiaomi-OCR-0 is a unified 0.8B OCR-specialized vision-language model for both document parsing and OCR-centric understanding.",
+    "source": "file:README.md@sha256:54f2dbecfe9aa354da5a568ec555f2ca5c2d9b06ec2c8cd54b882af516625d46"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 873438784,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-09-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 142,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 16874,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000000,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "overall",
+        "value": 92.73,
+        "date": "2026-10-23T06:50:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "scanning",
+        "value": 93.73,
+        "date": "2026-10-23T06:50:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "warping",
+        "value": 92.76,
+        "date": "2026-10-23T06:50:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "screen_photography",
+        "value": 92.8,
+        "date": "2026-10-23T06:50:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "illumination",
+        "value": 92.68,
+        "date": "2026-10-23T06:50:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "skew",
+        "value": 91.69,
+        "date": "2026-10-23T06:50:23.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.36136",
+        "title": "Xiaomi-OCR-0 Technical Report",
+        "first_author": "Xin Chen",
+        "authors": 10,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "custom-ocr-centric-corpus"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "loongwayX/Xiaomi-OCR-0-demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

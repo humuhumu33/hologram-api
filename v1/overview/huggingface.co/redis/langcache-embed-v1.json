@@ -1,0 +1,197 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "redis/langcache-embed-v1",
+  "revision": "2f6ffda359ab94a9c222947bfd87ea8f85ea7e0a",
+  "manifest": "blake3:2fa6be957eb1fc1bb8b84baf0b4e3a8f239f5458db83891dc88beb597db04322",
+  "addressed": true,
+  "generated": "2026-10-31",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/redis/langcache-embed-v1",
+    "readme": "file:README.md@sha256:aaec8923faed079490e3c21987fb9bb3b538d334e5c95beb11d9816fe91126ac",
+    "config": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2"
+  },
+  "summary": {
+    "value": "This is a sentence-transformers model finetuned from Alibaba-NLP/gte-modernbert-base on the Quora dataset. It maps sentences & paragraphs to a 768-dimensional dense vector space and can be used for semantic textual similarity for the purpose of semantic caching.",
+    "source": "file:README.md@sha256:aaec8923faed079490e3c21987fb9bb3b538d334e5c95beb11d9816fe91126ac"
+  },
+  "glance": {
+    "task": {
+      "value": "Sentence similarity",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 149014272,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Alibaba-NLP/gte-modernbert-base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2025-03-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2025-12-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2608743,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50368,
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:82779b8d52566907948b15d853d113d24275004831b3cec0164af54ca97218d2#max_position_embeddings"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Quora",
+        "task": "Cosine Accuracy",
+        "value": 0.9,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Quora",
+        "task": "Cosine F1",
+        "value": 0.87,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Quora",
+        "task": "Cosine Precision",
+        "value": 0.84,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Quora",
+        "task": "Cosine Recall",
+        "value": 0.9,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Quora",
+        "task": "Cosine Ap",
+        "value": 0.92,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "sentence-similarity"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2504.02268",
+        "title": "Advancing Semantic Caching for LLMs with Domain-Specific Embeddings and Synthetic Data",
+        "first_author": "Waris Gill",
+        "authors": 8,
+        "year": "2025"
+      },
+      {
+        "id": "1908.10084",
+        "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+        "first_author": "Nils Reimers",
+        "authors": 2,
+        "year": "2019"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}
