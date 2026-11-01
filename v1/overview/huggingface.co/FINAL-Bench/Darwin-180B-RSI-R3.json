@@ -4,7 +4,7 @@
   "revision": "15495159641ac68386ccf446e34e01fb1ad86b53",
   "manifest": "blake3:acb82069ae9ca62217ec3d309571a543ca54a034d1611c311e169f46cbc23a74",
   "addressed": true,
-  "generated": "2026-10-24",
+  "generated": "2026-11-01",
   "provenance": {
     "api": "https://huggingface.co/api/models/FINAL-Bench/Darwin-180B-RSI-R3",
     "readme": "file:README.md@sha256:ba7fe40e5c8f4ed6709457fa0c80702a78a713b3bf6684e92eda23a988de5e35",
@@ -90,15 +90,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-05",
+      "value": "2026-10-29",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 21,
+      "value": 39,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 598,
+      "value": 823,
       "source": "api:downloadsAllTime"
     }
   },
@@ -146,6 +146,14 @@
   },
   "benchmarks": {
     "value": [
+      {
+        "dataset": "mteb/arguana",
+        "task": "ArguAna",
+        "value": 83.83,
+        "date": "2026-10-29",
+        "verified": false,
+        "notes": "nDCG@10 x 100 on the ArguAna test split (1,406 queries, full corpus). Two-stage retrieval: first stage Qwen3-Embedding-4B top-100, then Darwin-180B-RSI-R3 listwise rerank of the top 10 (greedy, temperature 0). First stage alone scored 75.37 in the same run."
+      },
       {
         "dataset": "FutureMa/EvasionBench",
         "task": "evasion_bench",
@@ -198,14 +206,14 @@
     "children": {
       "value": {
         "Merged": 1,
-        "Quantized": 3
+        "Quantized": 5
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
         "merge": 1,
-        "quantized": 3
+        "quantized": 5
       },
       "source": "api:childrenModelCount"
     }

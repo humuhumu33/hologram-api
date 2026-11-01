@@ -1,0 +1,164 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "udgamlabs/Vemana-Base",
+  "revision": "93cefe2594c5157e4aa8eb9908639c253652fed9",
+  "manifest": "blake3:527240a63927d295e1b741464a84cb66610aa2c205168bef5c43be8608b4172c",
+  "addressed": true,
+  "generated": "2026-11-01",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/udgamlabs/Vemana-Base",
+    "readme": "file:README.md@sha256:48dd381b209095b96210eefee46042c91072bc2d88d1e579251d99a528362eaa",
+    "config": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d"
+  },
+  "summary": {
+    "value": "Vemana is a 278M-parameter Telugu language model, trained from scratch on 5.1 billion tokens of public Telugu web text, read about 2.4 times (12.0 billion token positions), with its own 32,000-token Telugu tokenizer.",
+    "source": "file:README.md@sha256:48dd381b209095b96210eefee46042c91072bc2d88d1e579251d99a528362eaa"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 278214162,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 4 Text",
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4_text",
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#model_type"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "te"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 821,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 18,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32000,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#vocab_size"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:dc3c351ff7a00bad134c84fc9a99682647b38cd7f0eafb6ef798adc551d3bc9d#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ai4bharat/sangraha",
+      "HuggingFaceFW/fineweb-2"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "udgamlabs/Vemana"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
