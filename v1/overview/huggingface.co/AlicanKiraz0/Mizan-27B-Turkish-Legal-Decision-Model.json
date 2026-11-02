@@ -1,0 +1,109 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "AlicanKiraz0/Mizan-27B-Turkish-Legal-Decision-Model",
+  "revision": "9e5e9dbb78e66f3f5f1549e3556cfe1fe8d0781c",
+  "manifest": "blake3:d5765e6b5016d508e98c72d464c8a67b1a6c5755f4eaa8c307dcedefeb479a26",
+  "addressed": true,
+  "generated": "2026-11-02",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/AlicanKiraz0/Mizan-27B-Turkish-Legal-Decision-Model",
+    "readme": "file:README.md@sha256:ecc9b231f8c47444b31e3216c378f04d220e839536ef0f481599fbd984a5c3a9"
+  },
+  "summary": {
+    "value": "Türkçe hukuk için metin üretmeyen karar modeli. Bir olay özeti (state) ile tipli sorular alır; tek forward pass'te her soru için kalibre olasılık dağılımı döndürür.",
+    "source": "file:README.md@sha256:ecc9b231f8c47444b31e3216c378f04d220e839536ef0f481599fbd984a5c3a9"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "tr"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.6-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-31",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "legal decision test split (1000 records)",
+        "task": "accuracy (calibrated)",
+        "value": 0.9486,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "legal decision test split (1000 records)",
+        "task": "ECE (calibrated)",
+        "value": 0.0097,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "legal decision test split (1000 records)",
+        "task": "NLL (calibrated)",
+        "value": 0.1467,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "AlicanKiraz0/Mizan-27B-Turkish-Legal-Decision-Model"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

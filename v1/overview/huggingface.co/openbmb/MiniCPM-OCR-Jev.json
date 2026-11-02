@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "openbmb/MiniCPM-OCR-Jev",
-  "revision": "bdb03f86182a2824d2632d129c719cdf780502e2",
-  "manifest": "blake3:23d29832e39737481f6674a81ae4b4368257f43c6cc81bb19025bb2f6a7e0c1c",
+  "revision": "a0ed278eb6aa1f333a711665ab610055a4a816ab",
+  "manifest": "blake3:cf1c3ecc2b59141f41c10c6445ae49a526564bb31cf1dea545f3c49b33254501",
   "addressed": true,
-  "generated": "2026-10-30",
+  "generated": "2026-11-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/openbmb/MiniCPM-OCR-Jev",
-    "readme": "file:README.md@sha256:899a1dc7f9e7b61826fd7a1ce6723288d18cfaa44aab76d6070a303d405b2a4c",
+    "readme": "file:README.md@sha256:85c7c19f9e03063d79a06bf3cdfc655d4ecd93202a75750ef559d725ad615876",
     "config": "file:config.json@sha256:fd3d48eacdf595b290afc504ac05aa4a4e44343a227406e60eb61516dc772b34"
   },
   "summary": {
     "value": "MiniCPM-OCR Jev is a 2B OCR correctness decision model for text, formula, and table regions. Given a region image and a candidate OCR result, it returns a score from 0 to 1 — higher means the candidate is more likely correct.",
-    "source": "file:README.md@sha256:899a1dc7f9e7b61826fd7a1ce6723288d18cfaa44aab76d6070a303d405b2a4c"
+    "source": "file:README.md@sha256:85c7c19f9e03063d79a06bf3cdfc655d4ecd93202a75750ef559d725ad615876"
   },
   "glance": {
     "task": {
@@ -56,6 +56,10 @@
       "value": "Safetensors",
       "source": "api:safetensors|gguf"
     },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
     "license": {
       "value": {
         "id": "apache-2.0",
@@ -86,15 +90,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-30",
+      "value": "2026-11-02",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 73,
+      "value": 84,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1425,
+      "value": 2523,
       "source": "api:downloadsAllTime"
     }
   },
@@ -135,15 +139,27 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 3
+        "Quantized": 4,
+        "Fine tuned": 2
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 3
+        "quantized": 4,
+        "finetune": 2
       },
       "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
     }
   },
   "spaces": {

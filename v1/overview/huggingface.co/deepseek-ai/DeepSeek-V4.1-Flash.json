@@ -4,7 +4,7 @@
   "revision": "314113f8a7dadb388215396ba5fbee2c610a04d6",
   "manifest": "blake3:5c611d27b9b6a3aa23c09486d2eb64170440379cae5b39f5535a9def49fce735",
   "addressed": true,
-  "generated": "2026-10-25",
+  "generated": "2026-11-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash",
     "readme": "file:README.md@sha256:347c9db4e5506acb531cbc3b724407ab88e9af8781679152f0823d7bac16d251",
@@ -86,11 +86,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 4731,
+      "value": 4841,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 2192901,
+      "value": 2940638,
       "source": "api:downloadsAllTime"
     }
   },
@@ -146,6 +146,24 @@
   },
   "benchmarks": {
     "value": [
+      {
+        "dataset": "google/physical-engineerings-last-exam",
+        "task": "overall-score",
+        "value": 17,
+        "date": "2026-10-20",
+        "verified": false,
+        "source": "https://ple-bench.com/leaderboard?set=dev",
+        "notes": "Harness: DeepSeek Harness. Mean of 3 runs on the 29 dev tasks (std 1.7)."
+      },
+      {
+        "dataset": "VCLab-PolyU/OmniCompass",
+        "task": "OmniCompass-VL",
+        "value": 26.5,
+        "date": "2026-10-26T14:32:29.000Z",
+        "verified": false,
+        "source": "https://omnicompass.netlify.app/#leaderboard",
+        "notes": "OmniCompass-VL; Overall CS on a 0-100 scale, higher is better. 64 video frames; paired Text and Text+Image; TG, SG and QA. Imported from the benchmark authors' published results, rounded to one decimal. Evaluation settings and model-specific limits follow the cited source. This submission does not claim HF verified status."
+      },
       {
         "dataset": "llamaindex/ExtractBench",
         "task": "mean",
@@ -311,14 +329,14 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 139,
+        "Quantized": 145,
         "Fine tuned": 25
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 139,
+        "quantized": 145,
         "finetune": 25
       },
       "source": "api:childrenModelCount"
@@ -367,11 +385,11 @@
   },
   "spaces": {
     "value": {
-      "count": 62,
+      "count": 76,
       "top": [
         "fastgpu/vram-and-gpu-cost-calculator",
-        "FineEnvs/RL-Explorer",
-        "BIGJUTT/model-pulse"
+        "BIGJUTT/model-pulse",
+        "quantid/huggingface-official-benchmark-leaderboards"
       ]
     },
     "source": "api:spaces"

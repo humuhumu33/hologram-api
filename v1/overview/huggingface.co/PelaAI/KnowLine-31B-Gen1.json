@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "PelaAI/KnowLine-31B-Gen1",
+  "revision": "8f052a8130e599b53e5324c34f0f5ff90696e1c6",
+  "manifest": "blake3:ca8719074f0325273050154458eb6b46aea9fcf714425e072851308a254d9013",
+  "addressed": true,
+  "generated": "2026-11-02",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/PelaAI/KnowLine-31B-Gen1",
+    "readme": "file:README.md@sha256:348d4666c951cc4cf193ee1b3130becb0c93d4d5bfe520031a97d5139d0f0bb6",
+    "config": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0"
+  },
+  "summary": {
+    "value": "The first release of PelaAI's System One decision model on a dense Gemma 4 base: 31B parameters, trained in the same agent-driven data loop as the KnowLine-26B-A4B, KnowLine-35B-A3B and KnowLine-4B lines, and served with read twice.",
+    "source": "file:README.md@sha256:348d4666c951cc4cf193ee1b3130becb0c93d4d5bfe520031a97d5139d0f0bb6"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 31273088876,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-4-31B-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-28",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 557,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 60,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5376,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:086d159de6603dd83bf2c457acabd7d950bbda809a8ca1730ca3de490757daa0#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Merged": 1,
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "merge": 1,
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "hotchpotch/S1MB-leaderboard",
+        "hugging-apps/knowline-31b-decision"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

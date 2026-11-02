@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "openbmb/MiniCPM-OCR-1.0",
-  "revision": "c5833cddb363aa62f1cb60ddde48c832e8f1a92c",
-  "manifest": "blake3:f6bacc84675bf8074a356253508aff25eada13d2131ba3b91ccc76dd75d1fe0c",
+  "revision": "d7684f10aeb69e7d055d270724ab24d06bedc0f7",
+  "manifest": "blake3:1b30125141737175fb5cd84584c6ff0ed0a61de774f46e94b467808a314602e8",
   "addressed": true,
-  "generated": "2026-10-30",
+  "generated": "2026-11-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/openbmb/MiniCPM-OCR-1.0",
-    "readme": "file:README.md@sha256:fb94f2ec83b73e3bfb1a0e0da740305ad0d9b408cec576b2eae2dcf933007359",
+    "readme": "file:README.md@sha256:25dd3bd2fbcc3f9855fa8afac8b62a431baab728794637d9b9ba26c98ecbd7c4",
     "config": "file:config.json@sha256:762025491b206967a3c29c3e36ff2cccd8af6a8c750360b61dc91882b573f759"
   },
   "summary": {
-    "value": "Official Demo(CN / Global) · Basic Demo(CN / Global) \\ GitHub · Free API · Usage · DSpark · Skill",
-    "source": "file:README.md@sha256:fb94f2ec83b73e3bfb1a0e0da740305ad0d9b408cec576b2eae2dcf933007359"
+    "value": "Demo (CN / Global) · GitHub · Free API · SDK usage · DSpark · Skill",
+    "source": "file:README.md@sha256:25dd3bd2fbcc3f9855fa8afac8b62a431baab728794637d9b9ba26c98ecbd7c4"
   },
   "glance": {
     "task": {
@@ -56,6 +56,10 @@
       "value": "Safetensors",
       "source": "api:safetensors|gguf"
     },
+    "library": {
+      "value": "minicpm-ocr",
+      "source": "api:library_name"
+    },
     "license": {
       "value": {
         "id": "apache-2.0",
@@ -86,15 +90,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-29",
+      "value": "2026-11-02",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 342,
+      "value": 397,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 2413,
+      "value": 4191,
       "source": "api:downloadsAllTime"
     }
   },
@@ -132,25 +136,78 @@
       "source": "file:config.json@sha256:762025491b206967a3c29c3e36ff2cccd8af6a8c750360b61dc91882b573f759#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "overall",
+        "value": 93.75,
+        "date": "2026-11-02T08:12:03.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "scanning",
+        "value": 94.45,
+        "date": "2026-11-02T08:12:03.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "warping",
+        "value": 93.54,
+        "date": "2026-11-02T08:12:03.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "screen_photography",
+        "value": 93.74,
+        "date": "2026-11-02T08:12:03.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "illumination",
+        "value": 93.74,
+        "date": "2026-11-02T08:12:03.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      },
+      {
+        "dataset": "PaddlePaddle/Real5-OmniDocBench",
+        "task": "skew",
+        "value": 93.28,
+        "date": "2026-11-02T08:12:03.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/PaddlePaddle/Real5-OmniDocBench"
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
         "Quantized": 6,
-        "Fine tuned": 2
+        "Fine tuned": 5
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
         "quantized": 6,
-        "finetune": 2
+        "finetune": 5
       },
       "source": "api:childrenModelCount"
     }
   },
   "spaces": {
     "value": {
-      "count": 5,
+      "count": 8,
       "top": [
         "openbmb/MiniCPM-OCR",
         "nielsr/MiniCPM-OCR-vs-Unlimited-OCR-2",

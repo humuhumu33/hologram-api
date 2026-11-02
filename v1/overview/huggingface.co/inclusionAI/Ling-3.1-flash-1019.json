@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "inclusionAI/Ling-3.1-flash-1019",
-  "revision": "dddfee4bb43519a92761fbc5cefe3f0d3ff4aded",
-  "manifest": "blake3:f683735cca19d70ae30e51283d04c29e2fa634fe884a9cedc22fae457af1d05b",
+  "revision": "3ec24e305c377d99623eb841f38928341c0e1562",
+  "manifest": "blake3:eb6a82d77d8e50dfd30cc22b1ec3e76d528631f62c6132f0475d41ab3ef80ba9",
   "addressed": true,
-  "generated": "2026-10-28",
+  "generated": "2026-11-02",
   "provenance": {
     "api": "https://huggingface.co/api/models/inclusionAI/Ling-3.1-flash-1019",
-    "readme": "file:README.md@sha256:470997c4d6ba587fae89f05d08ec4100b44128b7fc8d4608434bee9b4fa2d187",
+    "readme": "file:README.md@sha256:a66ee82fb5a93f8a5e9e11bc6312d86c194703f8b266bff41a4ee0483dd8bf1e",
     "config": "file:config.json@sha256:7b1732fd23b932c203bf77ded8f3af00e16895fa126e8b34d6bdffe1258de256"
   },
   "summary": {
     "value": "The day-0 SGLang image includes Ling-3.1-flash support, MTP (NEXTN) speculative decoding, and Hopper decode optimizations:",
-    "source": "file:README.md@sha256:470997c4d6ba587fae89f05d08ec4100b44128b7fc8d4608434bee9b4fa2d187"
+    "source": "file:README.md@sha256:a66ee82fb5a93f8a5e9e11bc6312d86c194703f8b266bff41a4ee0483dd8bf1e"
   },
   "glance": {
     "task": {
@@ -77,15 +77,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-27",
+      "value": "2026-11-02",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 69,
+      "value": 89,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 548,
+      "value": 1851,
       "source": "api:downloadsAllTime"
     }
   },
@@ -135,18 +135,52 @@
       "source": "file:config.json@sha256:7b1732fd23b932c203bf77ded8f3af00e16895fa126e8b34d6bdffe1258de256#quantization_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "harborframework/terminal-bench",
+        "task": "terminalbench_4",
+        "value": 32.8,
+        "date": "2026-10-30T08:38:08.000Z",
+        "verified": false,
+        "source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "notes": "Ling 3.1 Flash 1019; mini-swe-agent harness, pass@1 averaged over three repeats."
+      },
+      {
+        "dataset": "harborframework/terminal-bench-science",
+        "task": "terminalbenchscience_0_1",
+        "value": 4.3,
+        "date": "2026-10-30T08:38:08.000Z",
+        "verified": false,
+        "source": "https://artificialanalysis.ai/evaluations/terminal-bench-science",
+        "notes": "Ling 3.1 Flash 1019; mini-swe-agent harness, pass@1 averaged over three repeats."
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
-        "Quantized": 6
+        "Quantized": 11
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 6
+        "quantized": 11
       },
       "source": "api:childrenModelCount"
     }
+  },
+  "spaces": {
+    "value": {
+      "count": 7,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "600me/llm-gpu-cost-calculator",
+        "600me/rag-web-scraping-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
   }
 }
