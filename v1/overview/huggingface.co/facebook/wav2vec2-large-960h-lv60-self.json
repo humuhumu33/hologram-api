@@ -1,0 +1,241 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "facebook/wav2vec2-large-960h-lv60-self",
+  "revision": "54074b1c16f4de6a5ad59affb4caa8f2ea03a119",
+  "manifest": "blake3:4bb00f93ae564c7014a1100356e9e5f8ac8c54647b4d34e6588e0a34083be00d",
+  "addressed": true,
+  "generated": "2026-11-03",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/facebook/wav2vec2-large-960h-lv60-self",
+    "readme": "file:README.md@sha256:c84b90c84e32773d67536fdd93ad4e0fd27a662e024c698bc62a66f0bae3c342",
+    "config": "file:config.json@sha256:bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797"
+  },
+  "summary": {
+    "value": "The large model pretrained and fine-tuned on 960 hours of Libri-Light and Librispeech on 16kHz sampled speech audio. Model was trained with Self-Training objective.",
+    "source": "file:README.md@sha256:c84b90c84e32773d67536fdd93ad4e0fd27a662e024c698bc62a66f0bae3c342"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Wav2vec2",
+      "source": "file:config.json@sha256:bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797#model_type"
+    },
+    "architecture_id": {
+      "value": "wav2vec2",
+      "source": "file:config.json@sha256:bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797#model_type"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2022-05-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 172,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12152659,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797#num_attention_heads"
+    },
+    "vocab": {
+      "value": 32,
+      "source": "file:config.json@sha256:bcb82b508db66c6772b34a978bcc6a411f9ea99c33cd9dee337119b5f6ddb797#vocab_size"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "mean_wer",
+        "value": 21.2725,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "rtfx",
+        "value": 509.3204173,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "ami_wer",
+        "value": 36.77,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "earnings22_wer",
+        "value": 31.68,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "gigaspeech_wer",
+        "value": 23.94,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_clean_wer",
+        "value": 11.13,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "librispeech_other_wer",
+        "value": 12.42,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "spgispeech_wer",
+        "value": 17.94,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "tedlium_wer",
+        "value": 14.88,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      },
+      {
+        "dataset": "hf-audio/open-asr-leaderboard",
+        "task": "voxpopuli_wer",
+        "value": 21.42,
+        "date": "2022-03-02",
+        "verified": false,
+        "source": "https://huggingface.co/hf-audio"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 12
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 12
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCTC",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2010.11430",
+        "title": "Self-training and Pre-training are Complementary for Speech Recognition",
+        "first_author": "Qiantong Xu",
+        "authors": 8,
+        "year": "2020"
+      },
+      {
+        "id": "2006.11477",
+        "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+        "first_author": "Alexei Baevski",
+        "authors": 4,
+        "year": "2020"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "librispeech_asr"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 70,
+      "top": [
+        "radames/edit-video-by-editing-text",
+        "microsoft/paza-bench",
+        "abnerh/video-to-subs"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

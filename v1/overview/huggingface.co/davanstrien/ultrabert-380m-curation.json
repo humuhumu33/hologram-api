@@ -1,0 +1,171 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "davanstrien/ultrabert-380m-curation",
+  "revision": "c6a1fa055d36aeb3349b9a54537a5bc3f585d77d",
+  "manifest": "blake3:60a12300f6186c28b00b02c1cf4a316afdeb6dd90a203db5f253c3f6759739f6",
+  "addressed": true,
+  "generated": "2026-11-03",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/davanstrien/ultrabert-380m-curation",
+    "readme": "file:README.md@sha256:ff9f23d7a394e21fddf458b2d188cac1e02a5f9a0770d26ce9507d53d5c2da0f",
+    "config": "file:config.json@sha256:e02e5ab43da6c9ceeaeb989cff4af8b6b798f3205196397afc1dc98965bfe1ef"
+  },
+  "summary": {
+    "value": "A 380M-parameter decision model for data curation, with its training data and the recipe that made it, both open. Give it a state (a web page, a prompt, a maths problem, a library record) and a set of named, typed questions; it returns a probability for every option of every question, with no generated text.",
+    "source": "file:README.md@sha256:ff9f23d7a394e21fddf458b2d188cac1e02a5f9a0770d26ce9507d53d5c2da0f"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 382296577,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "GLiClass",
+      "source": "file:config.json@sha256:e02e5ab43da6c9ceeaeb989cff4af8b6b798f3205196397afc1dc98965bfe1ef#model_type"
+    },
+    "architecture_id": {
+      "value": "GLiClass",
+      "source": "file:config.json@sha256:e02e5ab43da6c9ceeaeb989cff4af8b6b798f3205196397afc1dc98965bfe1ef#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "gliclass",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "dmis-lab/UltraBERT-380M"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-29",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 283,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:e02e5ab43da6c9ceeaeb989cff4af8b6b798f3205196397afc1dc98965bfe1ef#hidden_size"
+    },
+    "vocab": {
+      "value": 49155,
+      "source": "file:config.json@sha256:e02e5ab43da6c9ceeaeb989cff4af8b6b798f3205196397afc1dc98965bfe1ef#vocab_size"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2203.05482",
+        "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+        "first_author": "Mitchell Wortsman",
+        "authors": 11,
+        "year": "2022"
+      },
+      {
+        "id": "2502.10341",
+        "title": "Organize the Web: Constructing Domains Enhances Pre-Training Data Curation",
+        "first_author": "Alexander Wettig",
+        "authors": 6,
+        "year": "2025"
+      },
+      {
+        "id": "2406.17557",
+        "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+        "first_author": "Guilherme Penedo",
+        "authors": 8,
+        "year": "2024"
+      },
+      {
+        "id": "2506.14111",
+        "title": "Essential-Web v1.0: 24T tokens of organized web data",
+        "first_author": "Essential AI",
+        "authors": 24,
+        "year": "2025"
+      },
+      {
+        "id": "1805.01042",
+        "title": "Hypothesis Only Baselines in Natural Language Inference",
+        "first_author": "Adam Poliak",
+        "authors": 5,
+        "year": "2018"
+      },
+      {
+        "id": "1803.02324",
+        "title": "Annotation Artifacts in Natural Language Inference Data",
+        "first_author": "Suchin Gururangan",
+        "authors": 6,
+        "year": "2018"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "davanstrien/curation-decision-mix"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/ultrabert-380m-curation"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

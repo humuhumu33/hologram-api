@@ -4,7 +4,7 @@
   "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
   "manifest": "blake3:7e757423d5be55c6184e1b9f7a7b496a64c6f27bd54b90228027000919d3184a",
   "addressed": true,
-  "generated": "2026-10-26",
+  "generated": "2026-11-03",
   "provenance": {
     "api": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B",
     "readme": "file:README.md@sha256:57e4bdb258ee1a7d2635c5174ebd4e56abe392505cdb5f8bbb356b0dc4293641",
@@ -78,11 +78,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 18422,
+      "value": 19044,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 18570261,
+      "value": 20960828,
       "source": "api:downloadsAllTime"
     }
   },
@@ -166,6 +166,24 @@
         "notes": "Reported as ClawEval-MM. Pass@3, the benchmark's own Pass³ methodology; card also reports a secondary 56.9 'Average' metric, not included here."
       },
       {
+        "dataset": "harborframework/terminal-bench",
+        "task": "terminalbench_4",
+        "value": 5.6,
+        "date": "2026-10-30T08:37:58.000Z",
+        "verified": false,
+        "source": "https://artificialanalysis.ai/evaluations/terminalbench-4-0",
+        "notes": "Qwen3.8 27B (Xhigh); mini-swe-agent harness, pass@1 averaged over three repeats."
+      },
+      {
+        "dataset": "harborframework/terminal-bench-science",
+        "task": "terminalbenchscience_0_1",
+        "value": 0.5,
+        "date": "2026-10-30T08:37:58.000Z",
+        "verified": false,
+        "source": "https://artificialanalysis.ai/evaluations/terminal-bench-science",
+        "notes": "Qwen3.8 27B (Xhigh); mini-swe-agent harness, pass@1 averaged over three repeats."
+      },
+      {
         "dataset": "agents-last-exam/agents-last-exam",
         "task": "overall-pass-rate",
         "value": 20.394736842105264,
@@ -226,34 +244,7 @@
         "date": "2026-10-01T20:43:40.000Z",
         "verified": false,
         "source": "https://agents-last-exam.org/leaderboard",
-        "notes": "harness=claude_code; harness_variant=reasoning-max; attempted=55/55; official leaderboard snapshot=2026-10-01T20:39:17.826877+00:00; values are percentages (0-100); equal-task aggregation; unattempted tasks contribute zero; pass threshold score>=0.999. This is an official leaderboard export, not an HF-verified evaluation."
-      },
-      {
-        "dataset": "agents-last-exam/agents-last-exam",
-        "task": "full-spectrum-score",
-        "value": 42.54520629651143,
-        "date": "2026-10-01T20:43:40.000Z",
-        "verified": false,
-        "source": "https://agents-last-exam.org/leaderboard",
-        "notes": "harness=claude_code; harness_variant=reasoning-max; attempted=55/55; official leaderboard snapshot=2026-10-01T20:39:17.826877+00:00; values are percentages (0-100); equal-task aggregation; unattempted tasks contribute zero; pass threshold score>=0.999. This is an official leaderboard export, not an HF-verified evaluation."
-      },
-      {
-        "dataset": "agents-last-exam/agents-last-exam",
-        "task": "last-exam-pass-rate",
-        "value": 2.631578947368421,
-        "date": "2026-10-01T20:43:40.000Z",
-        "verified": false,
-        "source": "https://agents-last-exam.org/leaderboard",
-        "notes": "harness=claude_code; harness_variant=reasoning-max; attempted=35/38; official leaderboard snapshot=2026-10-01T20:39:17.826877+00:00; values are percentages (0-100); equal-task aggregation; unattempted tasks contribute zero; pass threshold score>=0.999. This is an official leaderboard export, not an HF-verified evaluation."
-      },
-      {
-        "dataset": "agents-last-exam/agents-last-exam",
-        "task": "last-exam-score",
-        "value": 14.726424569791586,
-        "date": "2026-10-01T20:43:40.000Z",
-        "verified": false,
-        "source": "https://agents-last-exam.org/leaderboard",
-        "notes": "harness=claude_code; harness_variant=reasoning-max; attempted=35/38; official leaderboard snapshot=2026-10-01T20:39:17.826877+00:00; values are percentages (0-100); equal-task aggregation; unattempted tasks contribute zero; pass threshold score>=0.999. This is an official leaderboard export, not an HF-verified evaluation."
+        "notes": "harness=claude_code; harness_variant=reasoning-max; attempted=55/55; official leaderboard snapshot=2026-10-01T20:39:17.826877+00:00; values are percentages (0-100); equal-task aggregation; unattempted tasks contribute zero; pass threshold score>=0.999. This is an official leaderboard export, not an HF-verified ev"
       },
       {
         "dataset": "llamaindex/ExtractBench",
@@ -355,6 +346,15 @@
         "notes": "Row labeled \"(Terminus)\" as the harness; no further hyperparameter footnote given for this row."
       },
       {
+        "dataset": "VCLab-PolyU/OmniCompass",
+        "task": "OmniCompass-VL",
+        "value": 29.6,
+        "date": "2026-10-26T14:32:38.000Z",
+        "verified": false,
+        "source": "https://omnicompass.netlify.app/#leaderboard",
+        "notes": "OmniCompass-VL; Overall CS on a 0-100 scale, higher is better. 32 video frames; paired Text and Text+Image; TG, SG and QA. Imported from the benchmark authors' published results, rounded to one decimal. Evaluation settings and model-specific limits follow the cited source. This submission does not claim HF verified status."
+      },
+      {
         "dataset": "facebook/mmi",
         "task": "mmi-value",
         "value": 11.46,
@@ -432,19 +432,19 @@
   "family": {
     "children": {
       "value": {
-        "Adapter": 267,
+        "Adapter": 285,
         "Merged": 27,
-        "Quantized": 1555,
-        "Fine tuned": 733
+        "Quantized": 1648,
+        "Fine tuned": 809
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "adapter": 267,
+        "adapter": 285,
         "merge": 27,
-        "quantized": 1555,
-        "finetune": 733
+        "quantized": 1648,
+        "finetune": 809
       },
       "source": "api:childrenModelCount"
     }
@@ -479,6 +479,16 @@
           "provider": "novita",
           "status": "live",
           "task": "conversational"
+        },
+        {
+          "provider": "nscale",
+          "status": "live",
+          "task": "conversational"
+        },
+        {
+          "provider": "scaleway",
+          "status": "live",
+          "task": "conversational"
         }
       ],
       "source": "api:inferenceProviderMapping"
@@ -488,9 +498,9 @@
     "value": {
       "count": 100,
       "top": [
-        "RioShiina/ImageGen",
         "JonathanColetti/Qwen3.8-27B-Uncensored-Demo",
-        "Gramlin/ImageGennew"
+        "RioShiina/ImageGen",
+        "tardellirs/typed-decisions-explorer"
       ]
     },
     "source": "api:spaces"

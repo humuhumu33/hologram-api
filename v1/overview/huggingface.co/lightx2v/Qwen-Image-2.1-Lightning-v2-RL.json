@@ -1,0 +1,103 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lightx2v/Qwen-Image-2.1-Lightning-v2-RL",
+  "revision": "682b2529ffb5ae9ba39ceb81a31ce99e602da2ee",
+  "manifest": "blake3:92d5202f91f7a9daf3fcc1804eae9cb4e1b2ef49b53b3ebc6ef8d282213d353b",
+  "addressed": true,
+  "generated": "2026-11-03",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lightx2v/Qwen-Image-2.1-Lightning-v2-RL",
+    "readme": "file:README.md@sha256:56a624f44bab84856008569ab0f78fe924c7c48edd492429191fcd96c1edb018",
+    "config": "file:config.json@sha256:2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3"
+  },
+  "summary": {
+    "value": "This model is the reinforcement-learning-refined version of LightX2V Lightning v2, distilled from Qwen-Image-2.1. It supports text-to-image generation, single-reference image editing, and multi-reference image generation with 4 denoising steps and CFG = 1.0.",
+    "source": "file:README.md@sha256:56a624f44bab84856008569ab0f78fe924c7c48edd492429191fcd96c1edb018"
+  },
+  "glance": {
+    "task": {
+      "value": "Text to image",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7115124736,
+      "source": "api:safetensors.total"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "diffusers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen-Image-2.1"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 29,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 247,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3#num_layers"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:2c567038ca190824728844b8d06d94ae02360e668707afd9734e789a7eb58ce3#num_attention_heads"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "hugging-apps/qwen-image-2-1-lightning-v2-rl"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

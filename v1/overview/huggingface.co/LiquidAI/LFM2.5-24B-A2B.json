@@ -1,10 +1,10 @@
 {
   "format": "hologram.overview/v1",
   "name": "LiquidAI/LFM2.5-24B-A2B",
-  "revision": "3fcfdbfa1a1b6d8166846a6323e69f1e1254440d",
-  "manifest": "blake3:fa6db82ec23f439d5746e501cef0c374bd4f3cc18a34cbdc623dd677b06dc6a7",
+  "revision": "2c958e9179b120afeac110a90b192fb41f5585c1",
+  "manifest": "blake3:9fa1089b240430b12f7e62695a9ebe44cf92bc3f70b51e3274b7a55e53f68fee",
   "addressed": true,
-  "generated": "2026-10-29",
+  "generated": "2026-11-03",
   "provenance": {
     "api": "https://huggingface.co/api/models/LiquidAI/LFM2.5-24B-A2B",
     "readme": "file:README.md@sha256:e5e174cc7f03caf4621e2372395ea558765bf5cddbcf052a6e591090b491af69",
@@ -109,15 +109,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-21",
+      "value": "2026-11-03",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 588,
+      "value": 596,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 26645,
+      "value": 32791,
       "source": "api:downloadsAllTime"
     }
   },
@@ -159,18 +159,49 @@
       "source": "file:config.json@sha256:b0c46662afe3881e49cf542e683bf5ea8a5e0b780a429b6141a48defc33531bf#tie_word_embeddings"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 74.42,
+        "date": "2026-11-03T06:15:29.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      },
+      {
+        "dataset": "cais/hle",
+        "task": "hle",
+        "value": 7.4,
+        "date": "2026-11-03T06:15:29.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      },
+      {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "task": "swe_bench_%_resolved",
+        "value": 51,
+        "date": "2026-11-03T06:15:29.000Z",
+        "verified": false,
+        "source": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
+        "Adapter": 3,
         "Quantized": 85,
-        "Fine tuned": 15
+        "Fine tuned": 16
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
+        "adapter": 3,
         "quantized": 85,
-        "finetune": 15
+        "finetune": 16
       },
       "source": "api:childrenModelCount"
     }
@@ -199,11 +230,11 @@
   },
   "spaces": {
     "value": {
-      "count": 4,
+      "count": 12,
       "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
         "BIGJUTT/model-pulse",
-        "ginigen-ai/edge-ai-news",
-        "apathy-exe/LFM2.5-24B-A2B"
+        "ginigen-ai/edge-ai-news"
       ]
     },
     "source": "api:spaces"
