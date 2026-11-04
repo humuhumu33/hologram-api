@@ -1,0 +1,162 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "prithivMLmods/chandra-ocr-2-MTP-Repacked",
+  "revision": "7c6e990e7eae49c9454c54320c936ed38be656e8",
+  "manifest": "blake3:c935f0003ee600eb9ec914e9e587b8fdeae66dc886be3dec0a02adb416110fbd",
+  "addressed": true,
+  "generated": "2026-11-04",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/prithivMLmods/chandra-ocr-2-MTP-Repacked",
+    "readme": "file:README.md@sha256:a97dccc2d0cf4a02d20ece979737d4bb4c1a5cfa0f03b261b39264cc4d094f27",
+    "config": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09"
+  },
+  "summary": {
+    "value": "Tested chandra-ocr-2-MTP.BF16.gguf (with chandra-ocr-2-MTP.mmproj-bf16.gguf) on an NVIDIA RTX PRO 6000 Blackwell Server Edition GPU with 96 GB of VRAM, using llama-cli with full GPU offloading and MTP speculative decoding.",
+    "source": "file:README.md@sha256:a97dccc2d0cf4a02d20ece979737d4bb4c1a5cfa0f03b261b39264cc4d094f27"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4659865088,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "openrail",
+        "name": "OpenRAIL",
+        "commercial": "conditions",
+        "note": "Use restrictions apply"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "datalab-to/chandra-ocr-2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 586,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:9475ea6d293f38d66c09c7f8f0631e1c6633502847b3cd495b0358a7e2f79f09#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

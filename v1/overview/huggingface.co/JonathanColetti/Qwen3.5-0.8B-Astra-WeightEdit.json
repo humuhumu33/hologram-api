@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "JonathanColetti/Qwen3.5-0.8B-Astra-WeightEdit",
+  "revision": "415f6d0ea27bd6de1965a32509722f22175e5060",
+  "manifest": "blake3:97f03a0bdba510728cc081174658d7687e4f11bd4a5756921f923cc81c40af6e",
+  "addressed": true,
+  "generated": "2026-11-04",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/JonathanColetti/Qwen3.5-0.8B-Astra-WeightEdit",
+    "readme": "file:README.md@sha256:d5bcc02bb73df0023a2d5b3cbe1aef8c7af24624b49e80bd088600e2dd90865f",
+    "config": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204"
+  },
+  "summary": {
+    "value": "Qwen3.5-0.8B with 2 tensors edited directly by an LLM (GPT-6 Astra), with no training. This fixes the model's thinking-mode repeat loops.",
+    "source": "file:README.md@sha256:d5bcc02bb73df0023a2d5b3cbe1aef8c7af24624b49e80bd088600e2dd90865f"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 873438784,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 141,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "JonathanColetti/Qwen3.5-Astra-WeightEdit-Demo"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

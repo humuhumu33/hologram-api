@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "perplexity-ai/pplx-embed-v2-context-0.6b",
+  "revision": "6d1fddab0a18478acc0a51edd1e81333fe441095",
+  "manifest": "blake3:1b04ccbb4d452e3ecbdfcad3cd602e9fcc1fd8dc243fbf8ef264da90b754a0f3",
+  "addressed": true,
+  "generated": "2026-11-04",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/perplexity-ai/pplx-embed-v2-context-0.6b",
+    "readme": "file:README.md@sha256:fa56ace450397778e5bb58294a8c85314daef832a9c0bf75e67cec91762a95fe",
+    "config": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781"
+  },
+  "summary": {
+    "value": "pplx-embed-v2-context-0.6b is a state-of-the-art vision-language embedding model for retrieval over text, images, and visual documents. It supports contextual and non-contextual embeddings: In contextual mode, the model embeds chunks of a document with the surrounding context in view.",
+    "source": "file:README.md@sha256:fa56ace450397778e5bb58294a8c85314daef832a9c0bf75e67cec91762a95fe"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 595370176,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Pplx Contextual Qwen 3.5",
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#model_type"
+    },
+    "architecture_id": {
+      "value": "pplx_contextual_qwen3_5",
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "languages": {
+      "value": [
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "perplexity-ai/pplx-embed-v2-late-0.6b"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-30",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 627,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:f07bbe5fcde7c2e5a0c43289b92d750f8e07a6fa1b6d87d976681fc5c60f7781#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.38854",
+        "title": "Contextual Embeddings Beyond the Gold Chunk",
+        "first_author": "Sedigheh Eslami",
+        "authors": 10,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}
