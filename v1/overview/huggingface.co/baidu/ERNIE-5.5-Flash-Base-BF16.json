@@ -1,0 +1,175 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "baidu/ERNIE-5.5-Flash-Base-BF16",
+  "revision": "dfab899dadcff8f4d08af24b75a26c6d4d2e0b09",
+  "manifest": "blake3:61bc9c03b589511984fa9f7c6e4bd28eac8b107a72ae90beeae9f658707add8e",
+  "addressed": true,
+  "generated": "2026-11-05",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/baidu/ERNIE-5.5-Flash-Base-BF16",
+    "readme": "file:README.md@sha256:a510d9e28a243dc0d877192861cfaaec21c7e6bb87b87fbe7402259b57c3402e",
+    "config": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e"
+  },
+  "summary": {
+    "value": "ERNIE 5.5 Flash is an efficient sparse Mixture-of-Experts (MoE) language model with 280B total parameters and 14B activated per token, pre-trained from scratch on 33.5T tokens with a training context of up to 128K; fine-tuning and inference support a 1M-token context.",
+    "source": "file:README.md@sha256:a510d9e28a243dc0d877192861cfaaec21c7e6bb87b87fbe7402259b57c3402e"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 286245622106,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "ERNIE 5.5 MoE",
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#model_type"
+    },
+    "architecture_id": {
+      "value": "ernie5_5_moe",
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 27,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 11,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 43,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 1,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 201216,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 10,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 8000000,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:2e003576938d182dde438acc93afbef79b64c480252fbf6d6120378321e8b68e#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.17959",
+        "title": "Virtual Head Attention",
+        "first_author": "Xibo Ding",
+        "authors": 7,
+        "year": "2026"
+      },
+      {
+        "id": "2610.40577",
+        "title": "Multi-View MoE: Letting Every Router Shape Expert Computation",
+        "first_author": "Zelin Zhao",
+        "authors": 5,
+        "year": "2026"
+      },
+      {
+        "id": "2610.24766",
+        "title": "ECHO: Efficient Causal Self-Recursion Beyond Auxiliary Multi-Token Prediction",
+        "first_author": "Yuxuan Zhou",
+        "authors": 8,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  }
+}

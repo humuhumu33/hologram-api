@@ -1,0 +1,177 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MuyaoYuan/LoCo-7B",
+  "revision": "9e98cf6d58ec4152c599ec099d4a818ea5aea77d",
+  "manifest": "blake3:429f862af68ddd5dff699a113147f0858fe9ab218d967b8fb4fab2088f4c674e",
+  "addressed": true,
+  "generated": "2026-11-05",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MuyaoYuan/LoCo-7B",
+    "readme": "file:README.md@sha256:b0ff03fee03086c85f2028270e48d89bb622049f018bfee344d0fed8bdc18f67",
+    "config": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387"
+  },
+  "summary": {
+    "value": "TL;DR: LoCo compresses a reasoning model's chain of thought using its own traces. It locally detects overthinking states, pairs them with shorter verified continuations regenerated from the same states, and applies DPO to these state conditioned pairs to teach the model when to stop thinking.",
+    "source": "file:README.md@sha256:b0ff03fee03086c85f2028270e48d89bb622049f018bfee344d0fed8bdc18f67"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7615616512,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 2",
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen2",
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-03",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 21,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 125,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3584,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#hidden_size"
+    },
+    "heads": {
+      "value": 28,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 152064,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:aac3a506fdfd25d2b90f1b7ac3eae6d4640f182f74f1f20f90462f27d4330387#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2611.04814",
+        "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+        "first_author": "Muyao Yuan",
+        "authors": 7,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "Jhoni08/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

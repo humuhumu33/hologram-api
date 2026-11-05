@@ -1,0 +1,156 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Sparset/Thinklite-27B",
+  "revision": "2aa81615c583852cd561164946f1a458ed21b13f",
+  "manifest": "blake3:d776d765a0dac383e93b738887f0c0459ac19d78762ca13184b888387208f1f9",
+  "addressed": true,
+  "generated": "2026-11-05",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Sparset/Thinklite-27B",
+    "readme": "file:README.md@sha256:5bc191879544255b7b2c91bd5951518365024ec8b8c02725a544f42c4cc9493d",
+    "config": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab"
+  },
+  "summary": {
+    "value": "Qwen3.8-27B and Thinklite-27B get the same debugging prompt (retry code plus two logs: find the duplicate charges to refund and the fix) with the same seed, each model on one NVIDIA RTX PRO 6000 serving 20 requests at once.",
+    "source": "file:README.md@sha256:5bc191879544255b7b2c91bd5951518365024ec8b8c02725a544f42c4cc9493d"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27781427952,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 204,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

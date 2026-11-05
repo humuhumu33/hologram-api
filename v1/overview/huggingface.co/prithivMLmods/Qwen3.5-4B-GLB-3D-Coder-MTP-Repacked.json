@@ -1,0 +1,148 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "prithivMLmods/Qwen3.5-4B-GLB-3D-Coder-MTP-Repacked",
+  "revision": "d0f2811e10f884e9514729ba1455a5e6449aab2d",
+  "manifest": "blake3:3b514e9a250aae9945b579529c60eac05ded05a7563fed1f55873006f1d01256",
+  "addressed": true,
+  "generated": "2026-11-05",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/prithivMLmods/Qwen3.5-4B-GLB-3D-Coder-MTP-Repacked",
+    "readme": "file:README.md@sha256:88640a5b37bfd15654202b1fb2d416b87c0886a8377e06adaa7d7e35f61a5c3b",
+    "config": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570"
+  },
+  "summary": {
+    "value": "We need produce HTML complete. Need likely use CDN imports, create scene.",
+    "source": "file:README.md@sha256:88640a5b37bfd15654202b1fb2d416b87c0886a8377e06adaa7d7e35f61a5c3b"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4659865088,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 90%, BF16 10%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "ccore/Qwen3.5-4B-GLB-3D-Coder"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:16dfc0f546de1e80413f45af871146a3f446f217bd6500cc5b29be49a33fe570#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}
