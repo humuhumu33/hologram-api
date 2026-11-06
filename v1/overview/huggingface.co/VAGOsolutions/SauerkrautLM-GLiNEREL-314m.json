@@ -1,0 +1,115 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "VAGOsolutions/SauerkrautLM-GLiNEREL-314m",
+  "revision": "9424e1eb432625b356ec73ea701c5d2b31cbc162",
+  "manifest": "blake3:fcda88f42219e8b4a809bd1b1fc74fe729b4a54dabb518691edd9fa75fd36fca",
+  "addressed": true,
+  "generated": "2026-11-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/VAGOsolutions/SauerkrautLM-GLiNEREL-314m",
+    "readme": "file:README.md@sha256:844255fd43d9e08b6afb9d8ee2373dfc900bb047dcc6f51700eed056cdcf7d0d",
+    "config": "file:config.json@sha256:60e9dc3b9051880736da216704fabf6a5f2b70e050d463f6eac54594448da038"
+  },
+  "summary": {
+    "value": "Joint named-entity recognition, PII detection and relation extraction in one encoder pass. It turns a 33-page PDF into a knowledge graph in 0.39 s on a GPU, where a 4B generative model needs 17.6 s for a single paragraph.",
+    "source": "file:README.md@sha256:844255fd43d9e08b6afb9d8ee2373dfc900bb047dcc6f51700eed056cdcf7d0d"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 314233880,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Extractor",
+      "source": "file:config.json@sha256:60e9dc3b9051880736da216704fabf6a5f2b70e050d463f6eac54594448da038#model_type"
+    },
+    "architecture_id": {
+      "value": "extractor",
+      "source": "file:config.json@sha256:60e9dc3b9051880736da216704fabf6a5f2b70e050d463f6eac54594448da038#model_type"
+    },
+    "precision": {
+      "value": "BF16 99%, FP32 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "glinerel-fast",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "de",
+        "fr",
+        "it",
+        "es"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM2.5-Encoder-230M"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 50,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  }
+}

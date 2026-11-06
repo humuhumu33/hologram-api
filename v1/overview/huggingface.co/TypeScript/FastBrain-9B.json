@@ -1,0 +1,245 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "TypeScript/FastBrain-9B",
+  "revision": "74fd75104c93abedc6410d97754853cfb4a80fdd",
+  "manifest": "blake3:c1798af081ea038b9eeb04a8336bd215de785dddd14298e41dbc9472117c742d",
+  "addressed": true,
+  "generated": "2026-11-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/TypeScript/FastBrain-9B",
+    "readme": "file:README.md@sha256:f25c091cfa7282b7d862384545faa0c727589680b043985b2a577f38cbb2ce4b",
+    "config": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238"
+  },
+  "summary": {
+    "value": "FastBrain-9B (9.4B total parameters: Qwen3.5-9B hybrid backbone + 116M JointSchemaHead) is a single-forward-pass, non-autoregressive System-1 structured decision model.",
+    "source": "file:README.md@sha256:f25c091cfa7282b7d862384545faa0c727589680b043985b2a577f38cbb2ce4b"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9409813744,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Cloudflare/clef-flash"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-02",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4899,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.7525,
+        "date": "2026-10-31",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions/discussions/58"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.1508,
+        "date": "2026-10-31",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions/discussions/58"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.0795,
+        "date": "2026-10-31",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions/discussions/58"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.0947,
+        "date": "2026-10-31",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/LocalLLaMA/typed-decisions/discussions/58"
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "balanced_accuracy",
+        "value": 0.974,
+        "date": "2026-11-02",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench/discussions/1"
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "auroc",
+        "value": 0.983,
+        "date": "2026-11-02",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench/discussions/1"
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "false_block_rate",
+        "value": 0.051,
+        "date": "2026-11-02",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench/discussions/1"
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "category_macro_f1",
+        "value": 0.85,
+        "date": "2026-11-02",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench/discussions/1"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "TypeScript/FastBrain-Instruct"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "tardellirs/typed-decisions-explorer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

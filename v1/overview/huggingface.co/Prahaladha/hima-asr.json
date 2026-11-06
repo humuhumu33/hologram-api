@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Prahaladha/hima-asr",
+  "revision": "7f7fd3034a7fed7fdd1c752e3d83251ce0a7dd7b",
+  "manifest": "blake3:ed4c250791cde283060022146e379e5a0391f0d128cbf4a7649997dacce870ea",
+  "addressed": true,
+  "generated": "2026-11-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Prahaladha/hima-asr",
+    "readme": "file:README.md@sha256:c3d11fe2fa96b8fb5fc8beb9885cb025523ded0310dbda944e7f6f1fbbef822e",
+    "config": "file:config.json@sha256:b71fe090261be89bf2e64af5ad73fd968409609d2901df2213930078eaa46539"
+  },
+  "summary": {
+    "value": "Hima-ASR is a compact 0.46B model for 11 Indian languages and English. It writes down what was said, and its decision head answers questions about how it was said: the speaker's tone and emotion, what a caller wants, what they're talking about, how urgent it is, which language it is and who is speaking.",
+    "source": "file:README.md@sha256:c3d11fe2fa96b8fb5fc8beb9885cb025523ded0310dbda944e7f6f1fbbef822e"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 459713255,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Hima ASR",
+      "source": "file:config.json@sha256:b71fe090261be89bf2e64af5ad73fd968409609d2901df2213930078eaa46539#model_type"
+    },
+    "architecture_id": {
+      "value": "hima_asr",
+      "source": "file:config.json@sha256:b71fe090261be89bf2e64af5ad73fd968409609d2901df2213930078eaa46539#model_type"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "as",
+        "bn",
+        "gu",
+        "hi",
+        "kn",
+        "ml",
+        "mr",
+        "or",
+        "pa",
+        "ta",
+        "te",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-ASR-1.7B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 518,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "FLEURS (12 languages)",
+        "task": "WER (average of 12 languages)",
+        "value": 12.7,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Kathbath (Hindi)",
+        "task": "WER",
+        "value": 3.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Lahaja (Hindi)",
+        "task": "WER",
+        "value": 8.8,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/hima-asr"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Mincofficial/Minico-M1-1105",
+  "revision": "822419b44aed2111dabdbf685a21769449127107",
+  "manifest": "blake3:0d7fc5c315f4901711ff950673d91ae914047acc6ff09b2aff6fba000435ccde",
+  "addressed": true,
+  "generated": "2026-11-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Mincofficial/Minico-M1-1105",
+    "readme": "file:README.md@sha256:1c23a8b8d77097ec6f1aefb54a9bcf9db32842dd3e4c2307eb62aa29a3b36457",
+    "config": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde"
+  },
+  "summary": {
+    "value": "A 350M reasoning model you can run on a laptop, and you choose how hard it thinks.",
+    "source": "file:README.md@sha256:1c23a8b8d77097ec6f1aefb54a9bcf9db32842dd3e4c2307eb62aa29a3b36457"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 354483968,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm2",
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm2",
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#model_type"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "LiquidAI/LFM2.5-350M"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 89,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 16,
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 65536,
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#vocab_size"
+    },
+    "context": {
+      "value": 128000,
+      "source": "file:config.json@sha256:62fa5e96031a6c5e8ab252c35249371a936d26b392b9d679d86de8adacaeecde#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

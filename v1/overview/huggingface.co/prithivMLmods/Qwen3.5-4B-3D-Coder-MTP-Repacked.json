@@ -1,0 +1,154 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "prithivMLmods/Qwen3.5-4B-3D-Coder-MTP-Repacked",
+  "revision": "53ab160b036d12819b7eb7a5f694d5945a47d4c9",
+  "manifest": "blake3:f15eac4ba187d2463db5afbb54000cb2b810faa27679acb86b2cb21e4271e437",
+  "addressed": true,
+  "generated": "2026-11-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/prithivMLmods/Qwen3.5-4B-3D-Coder-MTP-Repacked",
+    "readme": "file:README.md@sha256:f80f28274ab6432a73f1e025f6ebcc9972fcbc7c782aa28ebaae0953dace50a6",
+    "config": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed"
+  },
+  "summary": {
+    "value": "We need answer likely provide code? User asks scene.",
+    "source": "file:README.md@sha256:f80f28274ab6432a73f1e025f6ebcc9972fcbc7c782aa28ebaae0953dace50a6"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4659865088,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16 97%, BF16 3%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "ccore/Qwen3.5-4B-3D-Coder"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3507,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:02dd25e951f465523d0f0424878075607c07b96dd378a6510a787c8b0d9c0fed#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "ccore/ThreeJS-3D-Scenes"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

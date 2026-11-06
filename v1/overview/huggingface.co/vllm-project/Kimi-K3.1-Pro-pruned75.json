@@ -1,0 +1,177 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "vllm-project/Kimi-K3.1-Pro-pruned75",
+  "revision": "fc72e5a1dd8819cf722fee249bb166c4cbc8ba38",
+  "manifest": "blake3:3c01b19c4fbb1d86707d7e5c65fda3af93d6dbfde1867f16011ee6e25e67019f",
+  "addressed": true,
+  "generated": "2026-11-06",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/vllm-project/Kimi-K3.1-Pro-pruned75",
+    "readme": "file:README.md@sha256:2a6d87e3629ca505119a510e2e10e0f3c4828f5e8bd732b581984d30ae411be2",
+    "config": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754"
+  },
+  "summary": {
+    "value": "A calibration-free, expert-pruned checkpoint derived from moonshotai/Kimi-K3.1-Pro that removes 75% of the routed experts in every MoE layer. It is intended for vLLM serving and evaluation smoke tests on fewer GPUs, not for quality-sensitive use.",
+    "source": "file:README.md@sha256:2a6d87e3629ca505119a510e2e10e0f3c4828f5e8bd732b581984d30ae411be2"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 737611524480,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 224,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#num_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#num_experts_per_token"
+    },
+    "architecture": {
+      "value": "Kimi K31",
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#model_type"
+    },
+    "architecture_id": {
+      "value": "kimi_k31",
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 92%, BF16 8%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "moonshotai/Kimi-K3.1-Pro"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 17,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 115,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 93,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 7168,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#hidden_size"
+    },
+    "heads": {
+      "value": 96,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 96,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 163840,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#max_position_embeddings"
+    },
+    "experts": {
+      "value": 224,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#num_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#num_experts_per_token"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:bc704c598b54239aa77f448a4126ae19f23413875e1bfce6595274b97ec71754#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "GSM8K",
+        "task": "Accuracy",
+        "value": 43.67,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
