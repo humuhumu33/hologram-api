@@ -1,25 +1,26 @@
 {
   "format": "hologram.overview/v1",
   "name": "patrickbdevaney/GLM-5.3-Flash-REAP50-GGUF",
-  "revision": "b48fbd31a2e1c6922880c05699a12931eed92024",
-  "manifest": "blake3:307b5f6b0e7979ff2dd6e2eade4164d6d5a9a4548130337bec4f92cddfa7ef99",
+  "revision": "cc7c2b5e4069365d6b7ceaea420330b4176da981",
+  "manifest": "blake3:1e55476d28ce42fc256c256184c399f6c5aee40b5ddcdc6a88f772306a75eeed",
   "addressed": true,
-  "generated": "2026-11-06",
+  "generated": "2026-11-07",
   "provenance": {
     "api": "https://huggingface.co/api/models/patrickbdevaney/GLM-5.3-Flash-REAP50-GGUF",
-    "readme": "file:README.md@sha256:79c3137fba970cc1a9675480f3409c11d9bc4c45123891c988fc83630642977b"
+    "readme": "file:README.md@sha256:08d76488e99a74366a171dfde1e5ecdbaaa5974acd253ddb81b22cdeeb2ebca6"
   },
   "summary": {
-    "value": "50% expert-pruned zai-org/GLM-5.3-Flash (301B → 157B total, 12.5B active) in GGUF (IQ3M to Q4KM, 72.9–94.8 GiB) with preserved Q80 MLA + Indexer attention.",
-    "source": "file:README.md@sha256:79c3137fba970cc1a9675480f3409c11d9bc4c45123891c988fc83630642977b"
+    "value": "GGUF quantisations of zai-org/GLM-5.3-Flash with half of its routed experts removed by REAP saliency pruning (144 of 288 kept in every MoE layer). Five quant levels from 67.2 to 92.5 GiB, plus the vision projector, for people running the model in llama.cpp on a single 128 GB unified-memory machine.",
+    "source": "file:README.md@sha256:08d76488e99a74366a171dfde1e5ecdbaaa5974acd253ddb81b22cdeeb2ebca6"
   },
   "glance": {
     "task": {
-      "value": "Text generation",
+      "value": "Vision language",
       "source": "api:pipeline_tag"
     },
     "input": {
       "value": [
+        "image",
         "text"
       ],
       "source": "derived:pipeline_tag"
@@ -63,13 +64,6 @@
       },
       "source": "api:cardData.license"
     },
-    "languages": {
-      "value": [
-        "en",
-        "zh"
-      ],
-      "source": "api:cardData.language"
-    },
     "base": {
       "value": {
         "relation": "Quantized from",
@@ -84,7 +78,7 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-11-05",
+      "value": "2026-11-07",
       "source": "api:lastModified"
     },
     "likes": {
@@ -92,7 +86,7 @@
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 68808,
+      "value": 69600,
       "source": "api:downloadsAllTime"
     }
   },

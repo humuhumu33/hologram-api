@@ -1,0 +1,142 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kakaocorp/kanana-2-v-decide-3b-2611",
+  "revision": "1489062def4145ae3a0a9261fbac4f4d88a8c6d1",
+  "manifest": "blake3:de8835a8f9492edc36e64c977ce66202dc9655f40969cc5dd3848ff9673a142b",
+  "addressed": true,
+  "generated": "2026-11-07",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kakaocorp/kanana-2-v-decide-3b-2611",
+    "readme": "file:README.md@sha256:380a2d4e6430a2208b27170c9149c372c2ce1d56bf35c050ba7016bb9afab21b",
+    "config": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b"
+  },
+  "summary": {
+    "value": "Kanana-2-v-decide-3b-2611 is Kakao's decision model. Given an input, it answers typed questions — selecting one of several options (choice), answering yes or no (noul), or rating on an ordered scale (score) — and returns a probability for each possible answer.",
+    "source": "file:README.md@sha256:380a2d4e6430a2208b27170c9149c372c2ce1d56bf35c050ba7016bb9afab21b"
+  },
+  "glance": {
+    "task": {
+      "value": "Zero shot classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3665430640,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Kanana V Decide",
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#model_type"
+    },
+    "architecture_id": {
+      "value": "kanana_v_decide",
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-26",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 20,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 193,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128256,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "kanana_v_decide_vision",
+      "source": "file:config.json@sha256:64f4a103accb8946bb7ded7dc5d200f9d6041df3eaa891c04124bb41fa06a69b#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/kanana-2-v-decide-3b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

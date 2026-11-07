@@ -1,0 +1,166 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "hindsight-ai/hs-decide-1-flash",
+  "revision": "b9a782058dbc81ad59d9397bf2a9fed946778cb3",
+  "manifest": "blake3:882805c0adf99be1420130be8be41d915b71139a398b31a7a01c817fa628730c",
+  "addressed": true,
+  "generated": "2026-11-07",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/hindsight-ai/hs-decide-1-flash",
+    "readme": "file:README.md@sha256:9437aafc1a2f90b874006836340bd09feee5e330db577dad31e0c216471fb0f7",
+    "config": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2"
+  },
+  "summary": {
+    "value": "hs-decide-1-flash is a 0.8B decision model for Hindsight. You give it a state and one or more typed questions about it, and it returns a probability for every answer option in a single forward pass, with no generated text.",
+    "source": "file:README.md@sha256:9437aafc1a2f90b874006836340bd09feee5e330db577dad31e0c216471fb0f7"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 752393024,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "pt",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-04",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 455,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:354aef624e220d66c0328932347147674cb45ad1739f13967ae6b8621e3f4ac2#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

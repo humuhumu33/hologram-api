@@ -1,0 +1,158 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "NousResearch/Arete-27B",
+  "revision": "108f0afbdcfaa1ceeda4a635004304dfff6d4da2",
+  "manifest": "blake3:10bf75572ebcabde0fd9540c9dcef590cfe7f8bf7297bdcd0d92575d928b2dca",
+  "addressed": true,
+  "generated": "2026-11-07",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/NousResearch/Arete-27B",
+    "readme": "file:README.md@sha256:c22421177d0e1f47bc0d9428b672c78b0635778025350ef694f113b2bfb7fef1",
+    "config": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d"
+  },
+  "summary": {
+    "value": "We post-trained over Alibaba's Qwen3.8-27B to reinforce western values on a Chinese-trained model. We call this new model Arete-27B.",
+    "source": "file:README.md@sha256:c22421177d0e1f47bc0d9428b672c78b0635778025350ef694f113b2bfb7fef1"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 27356728560,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 129,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 989,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:267485096b77d972cfe4601781fe66e9046c7b95f66fe747d02fa8b49788673d#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 11,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 11,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "NousResearch/arete-data-pairs"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

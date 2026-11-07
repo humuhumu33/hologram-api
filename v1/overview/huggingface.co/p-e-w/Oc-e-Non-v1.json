@@ -1,0 +1,172 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "p-e-w/Oc-e-Non-v1",
+  "revision": "dbf4e269a44be55a1807cf2b362ec7199ef73d33",
+  "manifest": "blake3:7ba42d6c0be8644064c4a8dc70995bd47cbf66d3cd5914ee567d7491545e9401",
+  "addressed": true,
+  "generated": "2026-11-07",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/p-e-w/Oc-e-Non-v1",
+    "readme": "file:README.md@sha256:b76221be777753a2824bfc50879972088e4c08d5e6490470899e08a1c3f369c9",
+    "config": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510"
+  },
+  "summary": {
+    "value": "Oc-e-Non-v1 is a tersified version of Qwen/Qwen3-4B-Instruct-2507, made using Heretic v2.1.0.dev0. It reduces Qwen's mean response length by 50%.",
+    "source": "file:README.md@sha256:b76221be777753a2824bfc50879972088e4c08d5e6490470899e08a1c3f369c9"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 4022468096,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-4B-Instruct-2507"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-06",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 760,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:f25ca79f09cd6124d8a86aab69980aa6675c789e660e31a6568c34eb7dbc5510#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2505.09388",
+        "title": "Qwen3 Technical Report",
+        "first_author": "An Yang",
+        "authors": 60,
+        "year": "2025"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
