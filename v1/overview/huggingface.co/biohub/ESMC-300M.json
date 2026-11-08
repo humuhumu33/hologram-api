@@ -1,0 +1,165 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "biohub/ESMC-300M",
+  "revision": "96a2d8d61654ac0c08881be44da6c867686449b9",
+  "manifest": "blake3:d2b05d01527e60ac1f252ee7940db636991701821e4574d57760d622b46ac59d",
+  "addressed": true,
+  "generated": "2026-11-08",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/biohub/ESMC-300M",
+    "readme": "file:README.md@sha256:13f0c270e26ca74cb6cbe2a5af18617ada9f55f7f7e055340091052ab0efb4bf",
+    "config": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65"
+  },
+  "summary": {
+    "value": "ESMC is a state-of-the-art protein language model that has learned the rules of protein biology from training on billions of protein sequences. ESMC provides representations of proteins enabling novel AI applications from therapeutic protein engineering to unlocking basic insights into protein biology across life.",
+    "source": "file:README.md@sha256:13f0c270e26ca74cb6cbe2a5af18617ada9f55f7f7e055340091052ab0efb4bf"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 332997184,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Esmc",
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#model_type"
+    },
+    "architecture_id": {
+      "value": "esmc",
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": [
+          "mit",
+          "other"
+        ],
+        "name": [
+          "mit",
+          "other"
+        ]
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-05-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 617203,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 960,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#hidden_size"
+    },
+    "heads": {
+      "value": 15,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 15,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 64,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:c8487869f71707ba55baf82470861ef12d35a5b679dd73033df33cbbe3375b65#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Adapter": 2,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "adapter": 2,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "thaidaev/zsp",
+        "khairi/KCNG-Explorer",
+        "Corollary-Labs/esmc-300m-online"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

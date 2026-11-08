@@ -1,0 +1,136 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "hindsight-ai/hs-rerank-1",
+  "revision": "927f5be31280298a51cf29af8a29cb111ed812c5",
+  "manifest": "blake3:04b5bd4ffcd25c6082b8a425568764170548ac8a167610abb3576de03749d14b",
+  "addressed": true,
+  "generated": "2026-11-08",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/hindsight-ai/hs-rerank-1",
+    "readme": "file:README.md@sha256:06596a79994ea9e8c16e0d37f265eda6e807b992d57c6271d431e43acac52ddd",
+    "config": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747"
+  },
+  "summary": {
+    "value": "hs-rerank-1 is a multilingual cross-encoder reranker built for Hindsight. It reads a query and a document together and returns a relevance score.",
+    "source": "file:README.md@sha256:06596a79994ea9e8c16e0d37f265eda6e807b992d57c6271d431e43acac52ddd"
+  },
+  "glance": {
+    "task": {
+      "value": "text-ranking",
+      "source": "api:pipeline_tag"
+    },
+    "parameters": {
+      "value": 113794177,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#model_type"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "pt",
+        "ja",
+        "ko",
+        "zh"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "jhu-clsp/mmBERT-small"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-28",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-03",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 4,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 472460,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 8,
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 384,
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#hidden_size"
+    },
+    "heads": {
+      "value": 6,
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#num_attention_heads"
+    },
+    "vocab": {
+      "value": 256000,
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#vocab_size"
+    },
+    "context": {
+      "value": 8192,
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:e251098b9dd6498b2086bb1c21934a755cb41459001b80ffc19b9a6d9c030747#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "text-ranking"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  }
+}

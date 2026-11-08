@@ -1,0 +1,130 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nlpai-lab/KURE-Sparse-nano",
+  "revision": "41a5790497674efdcdf7c87a4392087cb9851a0f",
+  "manifest": "blake3:2f8b37ecad33ef1a4b5f7f0b419136b42c72218ee9dac56fe50f8e9fe55c8e50",
+  "addressed": true,
+  "generated": "2026-11-08",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nlpai-lab/KURE-Sparse-nano",
+    "readme": "file:README.md@sha256:49c3f1dc09194541ad09ce13de6bd594f05ebae91760007e1a0fc653b0ce8bb1",
+    "config": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74"
+  },
+  "summary": {
+    "value": "KURE-Sparse-nano is a compact (0.1B) Korean-English learned sparse retrieval model. It shows state-of-the-art performance among < 0.5B sparse models supporting Korean, averaging 0.7716 nDCG@10 on MTEB(kor, v2) Retrieval.",
+    "source": "file:README.md@sha256:49c3f1dc09194541ad09ce13de6bd594f05ebae91760007e1a0fc653b0ce8bb1"
+  },
+  "glance": {
+    "task": {
+      "value": "Embeddings",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "vector"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 149373778,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "sentence-transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nlpai-lab/KURE-v2-unsupervised"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-01",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 18,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 913,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 22,
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#hidden_size"
+    },
+    "heads": {
+      "value": 12,
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50002,
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:a837a628d8b482b6ba56af52efc20590d67cccffdf1e7a5618030a88dfda2a74#tie_word_embeddings"
+    }
+  }
+}
