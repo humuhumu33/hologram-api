@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "autotrust/Qwen3.8-Flash-Next-E384-FP4-V2",
-  "revision": "00769d87c5e33798139fd52f6396fdc68f196dd3",
-  "manifest": "blake3:347ff9f90d99de355745e0a84da680f20a05c0619463d09d30f6c106be09476e",
+  "revision": "17a920e58033e325152783f633aad87209da8a45",
+  "manifest": "blake3:749c4574c91dc0a57022370c461409feec7d49e61f82456734f4e3f16632efbb",
   "addressed": true,
-  "generated": "2026-11-05",
+  "generated": "2026-11-09",
   "provenance": {
     "api": "https://huggingface.co/api/models/autotrust/Qwen3.8-Flash-Next-E384-FP4-V2",
-    "readme": "file:README.md@sha256:30e7552b2d650ec04e8ce2c6ac3de6c23922d015cdb50ae5c62b1bf8e70d3f73",
+    "readme": "file:README.md@sha256:050ddad4799e08ca75f07da0aae3dbdaebb192727dfbd7490fe4f8aec4db24a8",
     "config": "file:config.json@sha256:d633dd7ef3aee9cd403843f23575a8a23f3e21675d8cc824b2dc397b8ff6c366"
   },
   "summary": {
-    "value": "Full merged checkpoint of the E384 FP4 model after GRPO-style reinforcement learning with a LoRA adapter. This is a complete model, not an adapter: all 21 weight shards, the tokenizer, configs and MTP files are included.",
-    "source": "file:README.md@sha256:30e7552b2d650ec04e8ce2c6ac3de6c23922d015cdb50ae5c62b1bf8e70d3f73"
+    "value": "A compact build of nvidia/Qwen3.8-Flash-Next-FP4-Local found by Neural Architecture Search (NAS) over the routed-expert configuration: it keeps 384 of the 512 routed experts in every decoder MoE layer and in the MTP layer.",
+    "source": "file:README.md@sha256:050ddad4799e08ca75f07da0aae3dbdaebb192727dfbd7490fe4f8aec4db24a8"
   },
   "glance": {
     "task": {
@@ -33,7 +33,7 @@
       "source": "derived:pipeline_tag"
     },
     "parameters": {
-      "value": 80083170934,
+      "value": 155104917163,
       "source": "api:safetensors.total"
     },
     "experts": {
@@ -57,7 +57,7 @@
       "source": "file:config.json@sha256:d633dd7ef3aee9cd403843f23575a8a23f3e21675d8cc824b2dc397b8ff6c366#max_position_embeddings"
     },
     "precision": {
-      "value": "UINT8 94%, BF16 5%, FP8 1%",
+      "value": "UINT8 97%, BF16 3%, FP8 1%",
       "source": "api:safetensors.parameters"
     },
     "format": {
@@ -96,15 +96,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-26",
+      "value": "2026-11-08",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 1060,
+      "value": 2371,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 30713,
+      "value": 46017,
       "source": "api:downloadsAllTime"
     }
   },
@@ -156,10 +156,11 @@
   },
   "spaces": {
     "value": {
-      "count": 2,
+      "count": 5,
       "top": [
         "fastgpu/vram-and-gpu-cost-calculator",
-        "Jhoni08/vram-and-gpu-cost-calculator"
+        "Jhoni08/vram-and-gpu-cost-calculator",
+        "JUDY1024618/vram-and-gpu-cost-calculator"
       ]
     },
     "source": "api:spaces"

@@ -1,0 +1,150 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "BananaMind/BananaMind-2.5-Pro",
+  "revision": "8fc93761410c6746c2e347283fd1bc2dac695f61",
+  "manifest": "blake3:51f21342beba1cc4d93e2405ded06bb5be60989931d1aa6d97f59be2f7a5a483",
+  "addressed": true,
+  "generated": "2026-11-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/BananaMind/BananaMind-2.5-Pro",
+    "readme": "file:README.md@sha256:c24ba5badf369552640047a5596c46c856228bffe7547986beb7623dfa75f544",
+    "config": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50"
+  },
+  "summary": {
+    "value": "BananaMind-2.5-Pro is a 138,971,520-parameter decoder-only language model derived from BananaMind-2-Pro through distillation from SmolLM2-360M, combined with supervised training labels. It achieves as 28.98 INT Index",
+    "source": "file:README.md@sha256:c24ba5badf369552640047a5596c46c856228bffe7547986beb7623dfa75f544"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 138971520,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Bananamind2 Pro",
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#model_type"
+    },
+    "architecture_id": {
+      "value": "bananamind2_pro",
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#model_type"
+    },
+    "context": {
+      "value": 3072,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "BananaMind/BananaMind-2-Pro"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-08",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 620,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 640,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32768,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#vocab_size"
+    },
+    "context": {
+      "value": 3072,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 100000.0,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:e6c5df5b7440566bd8e776d6f59b0179d4cd3770f38ce6fbd1064e031d9b0f50#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "datasets": {
+    "value": [
+      "HuggingFaceFW/fineweb-edu",
+      "mlfoundations/dclm-baseline-1.0",
+      "HuggingFaceTB/smollm-corpus",
+      "HuggingFaceTB/finemath"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

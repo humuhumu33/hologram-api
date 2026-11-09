@@ -1,0 +1,173 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "oliverguhr/fullstop-punctuation-multilang-large",
+  "revision": "345e80adc07e761d3a35feafd20f2f44a151f453",
+  "manifest": "blake3:f9621d8d99e90b253387518586bd71ca3427abaa5302469499e9a1c264e24fe7",
+  "addressed": true,
+  "generated": "2026-11-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/oliverguhr/fullstop-punctuation-multilang-large",
+    "readme": "file:README.md@sha256:9a8709563ac8a7c959cac45d4f78ab4f2f1e28151b97088f8e43b1055249e05c",
+    "config": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08"
+  },
+  "summary": {
+    "value": "This model predicts the punctuation of English, Italian, French and German texts. We developed it to restore the punctuation of transcribed spoken language.",
+    "source": "file:README.md@sha256:9a8709563ac8a7c959cac45d4f78ab4f2f1e28151b97088f8e43b1055249e05c"
+  },
+  "glance": {
+    "task": {
+      "value": "Token classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 558847496,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "XLM RoBERTa",
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#model_type"
+    },
+    "architecture_id": {
+      "value": "xlm-roberta",
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#model_type"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "de",
+        "fr",
+        "it",
+        "multilingual"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2023-11-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 183,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 25749827,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#num_attention_heads"
+    },
+    "vocab": {
+      "value": 250002,
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#vocab_size"
+    },
+    "context": {
+      "value": 514,
+      "source": "file:config.json@sha256:d2c62254d34bd83a7eebbf513259a871cb15b5ecc12562359ef2834b2d505a08#max_position_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForTokenClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    },
+    "providers": {
+      "value": [
+        {
+          "provider": "hf-inference",
+          "status": "live",
+          "task": "token-classification"
+        }
+      ],
+      "source": "api:inferenceProviderMapping"
+    }
+  },
+  "datasets": {
+    "value": [
+      "wmt/europarl"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 14,
+      "top": [
+        "IanRonk/sponsoredbye",
+        "ceckenrode/PunctuationTokenClassification",
+        "keneonyeachonam/punctuation-Token-Classification"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

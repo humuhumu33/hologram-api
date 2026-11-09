@@ -1,0 +1,131 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "AJ-Gonzalez/coder-lfm3-1.7b",
+  "revision": "995189b6bf8e847dfb03b494d589ffa9d76cebd5",
+  "manifest": "blake3:db265d158a6b1e88f2028deb295f9366e620419d71e7d7982626538c5533e571",
+  "addressed": true,
+  "generated": "2026-11-09",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/AJ-Gonzalez/coder-lfm3-1.7b",
+    "readme": "file:README.md@sha256:911043d1617ba4c06cec92a40097fe6dd9c797141985ea21ef2b830951fdad90",
+    "config": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f"
+  },
+  "summary": {
+    "value": "LoRA SFT of LiquidAI/LFM3-1.7B on 70 reasoning traces, merged to bfloat16 and dequantized from the official 4-bit MLX checkpoint. One of three planned subsets (Coder / IndieDev / GenAgent) of a 250-row distill set.",
+    "source": "file:README.md@sha256:911043d1617ba4c06cec92a40097fe6dd9c797141985ea21ef2b830951fdad90"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1728801536,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm3",
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm3",
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mlx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "LiquidAI/LFM3-1.7B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-08",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 15,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1175,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:aeaee4c8ef68d33d042fea466a827288ebcc2de257821e3009a9cff5e694947f#tie_word_embeddings"
+    }
+  }
+}
