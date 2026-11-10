@@ -1,10 +1,10 @@
 {
   "format": "hologram.overview/v1",
   "name": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
-  "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
-  "manifest": "blake3:ef55afb4faaa216f11dfcd6f7419d225790fb5ad47986784867c54c17e516600",
+  "revision": "08c8657f02291e11b6f6b63e0e16014f8e748518",
+  "manifest": "blake3:9103abccd40b96473ac9b89c8174b6dab00ab04010d88d9f41d16af665af5ed7",
   "addressed": true,
-  "generated": "2026-11-02",
+  "generated": "2026-11-10",
   "provenance": {
     "api": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash-1017",
     "readme": "file:README.md@sha256:b72b796e4f4c739eca5d0ad360a7679b39118ca7eb64891f7151a527b292c42a",
@@ -82,15 +82,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-17",
+      "value": "2026-11-10",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 4539,
+      "value": 5456,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 177009,
+      "value": 329529,
       "source": "api:downloadsAllTime"
     }
   },
@@ -146,6 +146,24 @@
   },
   "benchmarks": {
     "value": [
+      {
+        "dataset": "VCLab-PolyU/OmniCompass",
+        "task": "OmniCompass-VL",
+        "value": 28,
+        "date": "2026-11-05",
+        "verified": false,
+        "source": "https://omnicompass.netlify.app/#leaderboard",
+        "notes": "OmniCompass-VL; Overall Cross-Specification Consistency Score on a 0-100 scale, higher is better. 64 video frames with per-frame timestamps; paired Text and Text+Image; temporal grounding, spatial grounding and question answering. API15 evaluation of DeepSeek-V4.1-Flash-1017 on 820 videos and 4,920 requests, completed on November 5, 2026. 4,892 successful responses are scored; 28 terminal content-policy exclusions follow the benchmark protocol. 47 successful unparseable responses score zero, including 16 output-budget truncations. CS: TG 14.9, SG 12.5, QA 56.7, Avg 28.0. API15 returned dated and generic Flash model labels; the mapping to the requested 1017 model follows the benchmark user's confirmation. The backend checkpoint was not independently authenticated. Imported from the benchmark authors' published API results, rounded to one decimal; this is not an evaluation of downloaded weights. This submission does not claim HF verified status."
+      },
+      {
+        "dataset": "collinear-ai/cwe-bench",
+        "task": "resolve_rate",
+        "value": 57,
+        "date": "2026-10-30",
+        "verified": false,
+        "source": "https://huggingface.co/spaces/collinear-ai/cwe-bench-leaderboard",
+        "notes": "OpenCode harness, 4 rollouts per task, 1-hour agent limit"
+      },
       {
         "dataset": "harborframework/terminal-bench-science",
         "task": "terminalbenchscience_0_1",
@@ -206,19 +224,19 @@
   "family": {
     "children": {
       "value": {
-        "Adapter": 8,
-        "Merged": 3,
-        "Quantized": 171,
-        "Fine tuned": 63
+        "Adapter": 10,
+        "Merged": 4,
+        "Quantized": 197,
+        "Fine tuned": 80
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "adapter": 8,
-        "merge": 3,
-        "quantized": 171,
-        "finetune": 63
+        "adapter": 10,
+        "merge": 4,
+        "quantized": 197,
+        "finetune": 80
       },
       "source": "api:childrenModelCount"
     }
@@ -256,11 +274,11 @@
   },
   "spaces": {
     "value": {
-      "count": 41,
+      "count": 55,
       "top": [
         "fastgpu/vram-and-gpu-cost-calculator",
-        "BIGJUTT/model-pulse",
-        "quantid/huggingface-official-benchmark-leaderboards"
+        "kivilaid/deepseek-v41-uncensored-demo",
+        "hsinjululu/huggingface-official-benchmark-leaderboards"
       ]
     },
     "source": "api:spaces"

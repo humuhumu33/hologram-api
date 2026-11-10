@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "RedHatAI/Qwen3.5-9B-FP8-dynamic",
+  "revision": "790f0576d2d77dd5322aa0603a470bd9e3a3d1f6",
+  "manifest": "blake3:58a0894e16c054e8c6e6b7d9dc8f6548f48eaee63a085577d5638c7a45cfa2ec",
+  "addressed": true,
+  "generated": "2026-11-10",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/RedHatAI/Qwen3.5-9B-FP8-dynamic",
+    "readme": "file:README.md@sha256:147e60f0018ca1279b7c3f5c768acc0a55ed87c2ef9ca0741b3c285df8536736",
+    "config": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19"
+  },
+  "summary": {
+    "value": "This model is a quantized version of Qwen/Qwen3.5-9B. Evaluation results and reproduction steps are provided below.",
+    "source": "file:README.md@sha256:147e60f0018ca1279b7c3f5c768acc0a55ed87c2ef9ca0741b3c285df8536736"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9410845936,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 56%, BF16 44%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-05-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-05-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1197788,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:d0e02c2d648f75aa6bd7affb2e9db415ce2ca0c64b2ae8c2526f4df33c334e19#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "fastino/GLiDE-9B",
+  "revision": "ab54df5acba0eebf7df45560ffdaacd64e32df3b",
+  "manifest": "blake3:1c6036e2c82a53656f97e9a8d08bfb2dd2600e093a4ebdf84cbff64496395a10",
+  "addressed": true,
+  "generated": "2026-11-10",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/fastino/GLiDE-9B",
+    "readme": "file:README.md@sha256:dd89e31addc290cd12b054792527ae4b18f983d88ab014a28a2f76eee56dfcf9",
+    "config": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83"
+  },
+  "summary": {
+    "value": "Inference provider: Fastino — use GLiDE through Fastino's hosted API (POST https://api.fastino.ai/v1/systemone, model fastino/GLiDE). Get an API key · API documentation",
+    "source": "file:README.md@sha256:dd89e31addc290cd12b054792527ae4b18f983d88ab014a28a2f76eee56dfcf9"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7936684544,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 Text",
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_text",
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-11-01",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 445,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:4a9248516d271480884c80271eb8023757bd313932b07facd4cd6a820737ae83#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "hugging-apps/glide-9b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
