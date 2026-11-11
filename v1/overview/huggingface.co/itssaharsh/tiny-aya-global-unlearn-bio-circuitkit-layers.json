@@ -1,0 +1,144 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "itssaharsh/tiny-aya-global-unlearn-bio-circuitkit-layers",
+  "revision": "0ab2913c61038f71a822e521689456c0a5e794ae",
+  "manifest": "blake3:283f7977b10997971ebf24d846b104f9a215b18c2f70f25ca553d0f581736119",
+  "addressed": true,
+  "generated": "2026-11-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/itssaharsh/tiny-aya-global-unlearn-bio-circuitkit-layers",
+    "readme": "file:README.md@sha256:72d182e0a3b4c2f5f7deef6e55ac0a6dfc99e1811299c9a8de858fe7adf91a41",
+    "config": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09"
+  },
+  "summary": {
+    "value": "SafeTune RMU at the layers CircuitKIT found (7 to 9). Part of Relapse: forget the hazard, keep the rest, and check it in the 4-bit file people download.",
+    "source": "file:README.md@sha256:72d182e0a3b4c2f5f7deef6e55ac0a6dfc99e1811299c9a8de858fe7adf91a41"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3349227520,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Cohere2",
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#model_type"
+    },
+    "architecture_id": {
+      "value": "cohere2",
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#model_type"
+    },
+    "context": {
+      "value": 500000,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-4.0",
+        "name": "CC BY NC 4.0",
+        "commercial": "no",
+        "note": "Non commercial only"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "CohereLabs/tiny-aya-global"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 735,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#vocab_size"
+    },
+    "context": {
+      "value": 500000,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 50000,
+      "source": "file:config.json@sha256:f0ead24e0a17a53ffc3f25ac329823aa8b9517609dac19d55c2a84d8e2a50f09#rope_theta"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "cais/wmdp",
+      "cais/mmlu"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

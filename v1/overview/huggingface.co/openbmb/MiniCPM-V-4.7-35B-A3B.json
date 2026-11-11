@@ -4,7 +4,7 @@
   "revision": "98e79ba972b586ac6146d3505771ce1467e199ba",
   "manifest": "blake3:6a008517969cfe459a6742b0233ad14a0ed8e0cc7ecb6253a33ff7457b0ffbbc",
   "addressed": true,
-  "generated": "2026-11-03",
+  "generated": "2026-11-11",
   "provenance": {
     "api": "https://huggingface.co/api/models/openbmb/MiniCPM-V-4.7-35B-A3B",
     "readme": "file:README.md@sha256:85c95f1782003035481e037250e864fa05ad03c0c9986b6a5e6b567e7e090bed",
@@ -86,11 +86,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 1109,
+      "value": 1118,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 490075,
+      "value": 704553,
       "source": "api:downloadsAllTime"
     }
   },
@@ -153,6 +153,15 @@
         "date": "2026-11-03T06:16:58.000Z",
         "verified": false,
         "source": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+      },
+      {
+        "dataset": "VCLab-PolyU/OmniCompass",
+        "task": "OmniCompass-VL",
+        "value": 26.3,
+        "date": "2026-11-06",
+        "verified": false,
+        "source": "https://omnicompass.netlify.app/#leaderboard",
+        "notes": "MiniCPM-V 4.7 35B-A3B on OmniCompass-VL. Overall Cross-Specification Consistency Score on a 0-100 scale, higher is better. Local inference uses the official openbmb/MiniCPM-V-4.7-35B-A3B BF16 weights through Transformers, with greedy decoding, temperature 0, one beam, and an 8192-token output budget. Each request uses 32 uniformly sampled video frames with visible original per-frame timestamps; the image reference, when present, follows the video frames. Both Text and Text+Image target specifications cover temporal grounding, spatial grounding, and question answering across 820 videos and 4920 successful requests. Six successful unparseable responses score zero. No truncations or policy exclusions. CS: TG 17.1, SG 9.1, QA 52.8, Avg 26.3. Completed on November 6, 2026. This is sparse-frame evaluation, distinct from native-video input. Model documentation: https://openbmb.cn/model/minicpm-v-4-7 Imported from the benchmark authors' published results and rounded to one decimal. This submission does not claim HF verified status."
       }
     ],
     "source": "api:evalResults"
@@ -160,15 +169,15 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 74,
-        "Fine tuned": 10
+        "Quantized": 76,
+        "Fine tuned": 11
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 74,
-        "finetune": 10
+        "quantized": 76,
+        "finetune": 11
       },
       "source": "api:childrenModelCount"
     }

@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "fastino/GLiDE-0.4B",
+  "revision": "6bda7ab91aeb36dcad6d27828a8871e548c7fc71",
+  "manifest": "blake3:f876369cfdba32a4b8fb42628f8cf696219c51fec77e15d1f4da2930047d4e37",
+  "addressed": true,
+  "generated": "2026-11-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/fastino/GLiDE-0.4B",
+    "readme": "file:README.md@sha256:44acf7ca770fa9f2028dc43ccce20f377d44d2c7795842ae68cf8cfb0f316147",
+    "config": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38"
+  },
+  "summary": {
+    "value": "Inference provider: Fastino — use GLiDE through Fastino's hosted API (POST https://api.fastino.ai/v1/systemone, model fastino/GLiDE). Get an API key · API documentation",
+    "source": "file:README.md@sha256:44acf7ca770fa9f2028dc43ccce20f377d44d2c7795842ae68cf8cfb0f316147"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 394781696,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Modernbert",
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#model_type"
+    },
+    "architecture_id": {
+      "value": "modernbert",
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#model_type"
+    },
+    "context": {
+      "value": 7999,
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-11-04",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-05",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 433,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#num_attention_heads"
+    },
+    "vocab": {
+      "value": 50368,
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#vocab_size"
+    },
+    "context": {
+      "value": 7999,
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:778102ed6dca61fe4258ca87cd302927cc991c239d218e57f33ae272d7324b38#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "hugging-apps/glide-decision-model"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

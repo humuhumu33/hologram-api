@@ -1,0 +1,142 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sigma6196/e4b-ko-en-novel-translator-sft3",
+  "revision": "68e7f856abbd9ee2d347f8b106f109fd9f4c5887",
+  "manifest": "blake3:e4b6c9a3c792f6e84bb215b159ea0f6c02ac925a04ef67a5db50ad251d34d77e",
+  "addressed": true,
+  "generated": "2026-11-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sigma6196/e4b-ko-en-novel-translator-sft3",
+    "readme": "file:README.md@sha256:282b101f9d8bf736f2e9efd60bf585065665d85ed67b22455dc264ac968d2f35",
+    "config": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78"
+  },
+  "summary": {
+    "value": "Translates one Korean web-novel chapter (XHTML) into English XHTML in one request. It keeps the HTML structure in most chapters, uses the glossary you pass in (names, terms and character genders), and is instructed to write narration in the past tense.",
+    "source": "file:README.md@sha256:282b101f9d8bf736f2e9efd60bf585065665d85ed67b22455dc264ac968d2f35"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7463013376,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 4 Text",
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4_text",
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 0,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 0,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 42,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:4f0c3014c8ed0eff14591c723ffc09b97e4c8140395c01a3f998d39c4597aa78#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

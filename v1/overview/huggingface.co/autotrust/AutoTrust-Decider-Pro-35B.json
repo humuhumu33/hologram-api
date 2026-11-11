@@ -1,0 +1,236 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "autotrust/AutoTrust-Decider-Pro-35B",
+  "revision": "a5d0d580bb9324f0f4c07dcba5c5ca91e813e7c9",
+  "manifest": "blake3:c51a497db0d29cf4968d33638ea8f90aaaf7a25a6f7380650fb212d87fc559d6",
+  "addressed": true,
+  "generated": "2026-11-11",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/autotrust/AutoTrust-Decider-Pro-35B",
+    "readme": "file:README.md@sha256:405750efad6a56a7f8686e4302f33e78409955bbfcea7ed8a9ef22d5bcd5f2f7",
+    "config": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944"
+  },
+  "summary": {
+    "value": "Decision Index 0.3, public suite: 59.73 (our scoring with the kit), against 53.64 for autotrust/JEV-27B-VL on the board. Approximate public vision score 71.94 (our rebuild of the vision benchmarks; JEV-27B-VL 71.67 on the same rebuild, a tie within noise).",
+    "source": "file:README.md@sha256:405750efad6a56a7f8686e4302f33e78409955bbfcea7ed8a9ef22d5bcd5f2f7"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 35951822704,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 MoE",
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-35B-A3B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-10-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2968,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1666824,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:5e4d7f74fec2f360eb9cfbfcd6ec0c4c76e684d3a11caaed259d9fd9bfbc7944#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "accuracy",
+        "value": 0.7,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "kl_from_gold",
+        "value": 0.5257,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "brier",
+        "value": 0.169,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      },
+      {
+        "dataset": "LocalLLaMA/typed-decisions",
+        "task": "ece",
+        "value": 0.0617,
+        "date": "2026-10-16",
+        "verified": false,
+        "source": "https://huggingface.co/buckets/SaylorTwift/typed-decisions-evals"
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 6
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2609.14973",
+        "title": "PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models",
+        "first_author": "DeepCybo Team",
+        "authors": 54,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "tardellirs/typed-decisions-explorer"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

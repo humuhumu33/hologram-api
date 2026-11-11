@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "turintech/Qwen3.5-4B-Artemis-GGUF",
-  "revision": "ae130c914b6d3eea3653b16d14dea5f0a4508518",
-  "manifest": "blake3:e5e32ff39d53ab6b7bf2de8fa930561f01f07aa22aa44abbdda9f7d87be4413f",
+  "revision": "c72ea73534cf71d6f00a78290923fcea96d272f9",
+  "manifest": "blake3:b4312c61f26b407cd114fdca936bb555e65b5f98305a417e05e9b64a05a81662",
   "addressed": true,
-  "generated": "2026-11-07",
+  "generated": "2026-11-11",
   "provenance": {
     "api": "https://huggingface.co/api/models/turintech/Qwen3.5-4B-Artemis-GGUF",
-    "readme": "file:README.md@sha256:d2f3d097e613124208c58b8b6cfe74ce9606ffc6513e9f1f9e3842e52667b6cd"
+    "readme": "file:README.md@sha256:0b77bacf48f0269dda6cc69f224932196ad36b84aad4a65a8c35eff63e159920"
   },
   "summary": {
-    "value": "Qwen3.5 4B for local chat and tool calls, with all layers on a small GPU.",
-    "source": "file:README.md@sha256:d2f3d097e613124208c58b8b6cfe74ce9606ffc6513e9f1f9e3842e52667b6cd"
+    "value": "Needs llama.cpp with Qwen3.5 support and HTTPS for -hf (the Results table and the memory figures were measured with b11617; the projector was converted and checked with b11889). Without --no-mmproj, -hf also downloads the 672 MB vision projector and loads it (images, below); -np 1 keeps one slot.",
+    "source": "file:README.md@sha256:0b77bacf48f0269dda6cc69f224932196ad36b84aad4a65a8c35eff63e159920"
   },
   "glance": {
     "task": {
@@ -78,7 +78,7 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-10-26",
+      "value": "2026-11-10",
       "source": "api:lastModified"
     },
     "likes": {
@@ -86,19 +86,12 @@
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 166170,
+      "value": 331914,
       "source": "api:downloadsAllTime"
     }
   },
   "benchmarks": {
     "value": [
-      {
-        "dataset": "WikiText-2 test",
-        "task": "Same top p (%)",
-        "value": 93.5,
-        "verified": false,
-        "source": "model card"
-      },
       {
         "dataset": "BFCL live",
         "task": "Tool calls (of 258)",
@@ -107,9 +100,23 @@
         "source": "model card"
       },
       {
+        "dataset": "GSM8K, last 250",
+        "task": "Correct (of 250)",
+        "value": 231,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MMLU-Pro sample",
+        "task": "Correct (of 280)",
+        "value": 125,
+        "verified": false,
+        "source": "model card"
+      },
+      {
         "dataset": "IFEval",
-        "task": "Followed (of 541)",
-        "value": 431,
+        "task": "Followed (of 539)",
+        "value": 430,
         "verified": false,
         "source": "model card"
       }
