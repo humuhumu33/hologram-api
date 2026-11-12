@@ -1,0 +1,126 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "turintech/Qwen3.5-9B-Artemis-GGUF",
+  "revision": "2b6be27ffef113143d544dced5228aebfb1cff6a",
+  "manifest": "blake3:455800df34c88d6584d4ea1b04ff07dd01a56fd30596aae38e495287cf7358a4",
+  "addressed": true,
+  "generated": "2026-11-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/turintech/Qwen3.5-9B-Artemis-GGUF",
+    "readme": "file:README.md@sha256:4e140293b516715b01a602f0f6491e98d63be9cbcc215f1db8480cbceeea2399"
+  },
+  "summary": {
+    "value": "Needs llama.cpp with Qwen3.5 support and HTTPS for -hf (the Results table and the memory figures were measured with b11617; the projector was converted and checked with b11889). Without --no-mmproj, -hf also downloads the 918 MB vision projector and loads it (images, below); -np 1 keeps one slot.",
+    "source": "file:README.md@sha256:4e140293b516715b01a602f0f6491e98d63be9cbcc215f1db8480cbceeea2399"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8953803264,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "Qwen 35",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "qwen35",
+      "source": "api:config.model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "api:gguf.context_length"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "gguf",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.5-9B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-15",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 8,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 372266,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "BFCL live",
+        "task": "Tool calls (of 258)",
+        "value": 221,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "GSM8K, last 250",
+        "task": "Correct (of 250)",
+        "value": 238,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MMLU-Pro sample",
+        "task": "Correct (of 280)",
+        "value": 147,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "IFEval",
+        "task": "Followed (of 539)",
+        "value": 454,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "KRAFTON/Raon-1-nano",
+  "revision": "fcf2d1d55e84e2f9fbe7b5d724dcfc4d861cfcee",
+  "manifest": "blake3:4b834e056698deaa5845b4acf6b0e471857c80d146a82ab99d74e432782a2457",
+  "addressed": true,
+  "generated": "2026-11-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/KRAFTON/Raon-1-nano",
+    "readme": "file:README.md@sha256:5e089e3a9ec1dbd2f0be1924271c34353994aa617d75b1803e0a6cba9af581d4",
+    "config": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3"
+  },
+  "summary": {
+    "value": "Raon-1 nano is a dense language model with 1.5B effective parameters (3.1B total, including a 1.5B per-layer embedding table), developed by KRAFTON AI. It is designed to follow instructions, maintain conversational context, and call the right tools in both Korean and English.",
+    "source": "file:README.md@sha256:5e089e3a9ec1dbd2f0be1924271c34353994aa617d75b1803e0a6cba9af581d4"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3529911376,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Raon1 Nano",
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#model_type"
+    },
+    "architecture_id": {
+      "value": "raon1_nano",
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 64,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 446,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1536,
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#num_attention_heads"
+    },
+    "vocab": {
+      "value": 259840,
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:3bc1d0a58c87685af2f4f5b584f64313c920add155712718c5826cb3a6a9a6f3#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2605.28207",
+        "title": "Pruning and Distilling Mixture-of-Experts into Dense Language Models",
+        "first_author": "Junhyuck Kim",
+        "authors": 6,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

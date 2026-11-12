@@ -1,0 +1,143 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "rayline-ai/ARC-1.0",
+  "revision": "9dd93e765b09440804908b2af302d3db9677fb39",
+  "manifest": "blake3:5953ec97c4d39dccd743a42dabb51722a3531ca1f7cca38be5ebdf2fb377fec2",
+  "addressed": true,
+  "generated": "2026-11-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/rayline-ai/ARC-1.0",
+    "readme": "file:README.md@sha256:5fea8c128fe9f247841a83c39d3f345a6a52cac31d76ee6f43d2e304aa267d31",
+    "config": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd"
+  },
+  "summary": {
+    "value": "ARC—the Adaptive Routing Controller—reads an agent’s conversation and produces signals for choosing a model and its reasoning effort. Applications combine those signals with their available models, prices, and policies to decide how to handle the next request.",
+    "source": "file:README.md@sha256:5fea8c128fe9f247841a83c39d3f345a6a52cac31d76ee6f43d2e304aa267d31"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 615054751,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 98%, FP64 2%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "vllm",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-0.8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 16,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 37,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 12,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:7c7b7e9ebf9ae653091d85d3df3b6fe0c3c20b633a3d789b0431d01c372c17cd#vision_config"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Nemotron-PII"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

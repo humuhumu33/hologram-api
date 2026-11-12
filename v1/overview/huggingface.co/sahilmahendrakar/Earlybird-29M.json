@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "sahilmahendrakar/Earlybird-29M",
+  "revision": "b24d6bd6b92ab2a0ef31e438b775662d495c0860",
+  "manifest": "blake3:7eabdb4d1ed6adb9023a3153043c787eec9717143cf38f323666755438a55a8c",
+  "addressed": true,
+  "generated": "2026-11-12",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/sahilmahendrakar/Earlybird-29M",
+    "readme": "file:README.md@sha256:c7e321c6849f28a181b66f6374e6f7930f4d8c77c755e5fa5f76894ae21ef33b",
+    "config": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754"
+  },
+  "summary": {
+    "value": "Earlybird is a 16.8 MB on-device speech-to-text model that predicts each word before the speaker finishes saying it, along with a confidence score. On audiobook speech, a typical word is predicted correctly 90 ms before it ends.",
+    "source": "file:README.md@sha256:c7e321c6849f28a181b66f6374e6f7930f4d8c77c755e5fa5f76894ae21ef33b"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Moonshine Streaming",
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#model_type"
+    },
+    "architecture_id": {
+      "value": "moonshine_streaming",
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#model_type"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#max_position_embeddings"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "moonshine-ai/moonshine-streaming-tiny"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-07",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 89,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 6,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 320,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 19007,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#vocab_size"
+    },
+    "context": {
+      "value": 4096,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:60a8c3595143aee9253aa679bc3369cdc582a2b48d362a5775dd0c1eaf0bb754#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSpeechSeq2Seq",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2611.14421",
+        "title": "Earlybird: Predictive Streaming Speech Recognition in 29M Parameters",
+        "first_author": "Sahil Mahendrakar",
+        "authors": 1,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "sahilmahendrakar/earlybird"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
