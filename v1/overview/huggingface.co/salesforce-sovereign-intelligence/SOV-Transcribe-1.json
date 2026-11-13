@@ -1,0 +1,190 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "salesforce-sovereign-intelligence/SOV-Transcribe-1",
+  "revision": "505d8fae243924c0d8acdc622f7f0abab344eba3",
+  "manifest": "blake3:fe443f714b47ddeb998f6194859125a796243f1384a4290fa1eed384f669faef",
+  "addressed": true,
+  "generated": "2026-11-13",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/salesforce-sovereign-intelligence/SOV-Transcribe-1",
+    "readme": "file:README.md@sha256:70312c595518ffcf97bc44acb649e0d9f47c7a5637298585ee930e37be35c91a",
+    "config": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b"
+  },
+  "summary": {
+    "value": "SOV-Transcribe-1 is Salesforce's open-weight speech-augmented language model built for non-streaming automatic speech recognition (ASR). It combines leading English transcription accuracy with multilingual support and natural-language control over how speech is transcribed.",
+    "source": "file:README.md@sha256:70312c595518ffcf97bc44acb649e0d9f47c7a5637298585ee930e37be35c91a"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 26630656030,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#top_k_experts"
+    },
+    "architecture": {
+      "value": "Sovereignai Transcribe",
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#model_type"
+    },
+    "architecture_id": {
+      "value": "sovereignai_transcribe",
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "nl"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-4-26B-A4B-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-11",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 38,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 184,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 30,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2816,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#max_position_embeddings"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#top_k_experts"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#tie_word_embeddings"
+    },
+    "audio_encoder": {
+      "value": "whisper",
+      "source": "file:config.json@sha256:9fbba9e824a3f985896ab2ef6484e7201b68c157a72af88427e6d834d64d103b#audio_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "mrfakename/sov-transcribe-1"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

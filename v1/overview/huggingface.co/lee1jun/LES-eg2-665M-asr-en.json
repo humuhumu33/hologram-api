@@ -1,0 +1,144 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "lee1jun/LES-eg2-665M-asr-en",
+  "revision": "8abacb112ea76303e24eb62dfd1170b5536347e0",
+  "manifest": "blake3:d89f48a4921bf77534aea7b3863087635ea985614c621f8627f4cc2669f95db1",
+  "addressed": true,
+  "generated": "2026-11-13",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/lee1jun/LES-eg2-665M-asr-en",
+    "readme": "file:README.md@sha256:ce6c024612ba799bc141b383c3e030dc3137e8c05716b7b08dfeccac7170ec14",
+    "config": "file:config.json@sha256:798965c485ca30d7de0d2002a805a4a05d5af15dc70a2da6a4c538cb6d515d89"
+  },
+  "summary": {
+    "value": "English speech recognition from a frozen EmbeddingGemma 2: an 88M reader reads its audio as words of its own text-embedding space (LibriSpeech test-clean WER 1.74 greedy, 1.58 with the n-gram LM and reranker; Results).",
+    "source": "file:README.md@sha256:ce6c024612ba799bc141b383c3e030dc3137e8c05716b7b08dfeccac7170ec14"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 88021287,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Eg2 Word Ctc",
+      "source": "file:config.json@sha256:798965c485ca30d7de0d2002a805a4a05d5af15dc70a2da6a4c538cb6d515d89#model_type"
+    },
+    "architecture_id": {
+      "value": "eg2_word_ctc",
+      "source": "file:config.json@sha256:798965c485ca30d7de0d2002a805a4a05d5af15dc70a2da6a4c538cb6d515d89#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/embeddinggemma-2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-10",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-10",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 68,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "vocab": {
+      "value": 407736,
+      "source": "file:config.json@sha256:798965c485ca30d7de0d2002a805a4a05d5af15dc70a2da6a4c538cb6d515d89#vocab_size"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.37364",
+        "title": "EmbeddingGemma 2: Unified and Efficient Multimodal Representations",
+        "first_author": "Henrique Schechter Vera",
+        "authors": 73,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "datasets": {
+    "value": [
+      "openslr/librispeech_asr",
+      "MLCommons/peoples_speech",
+      "facebook/voxpopuli",
+      "edinburghcstr/ami",
+      "mozilla-foundation/common_voice_17_0",
+      "parler-tts/mls_eng",
+      "nvidia/Granary"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/les-eg2-665m-asr-en"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

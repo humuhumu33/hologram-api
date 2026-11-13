@@ -1,17 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "ccore/Qwen3-1.7B-GLB-3D-Coder",
-  "revision": "ceffea3d1debd86abf92a243d84ab2fee860ff7c",
-  "manifest": "blake3:087115830d57866bf31fd0e1b597999ba88766f9807a7bb764aaea636cd6ad0c",
+  "revision": "8b1f81e0195b0daae93288f8fc9d717b60ce5fc3",
+  "manifest": "blake3:9558bbdb4a66d4923b1612c2f8dfc7699446bc100bf5c84819250a36502bc868",
   "addressed": true,
-  "generated": "2026-11-12",
+  "generated": "2026-11-13",
   "provenance": {
     "api": "https://huggingface.co/api/models/ccore/Qwen3-1.7B-GLB-3D-Coder",
-    "readme": "file:README.md@sha256:9ceed6164ef3e40dcd3e6071e1efe7e2a510b6f50ed3d76ecaadcd5798d2f454"
+    "readme": "file:README.md@sha256:588f8ecc60382735f3c5690912aa13b59c7239b14021137d90d2ef08df0d8e27",
+    "config": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7"
   },
   "summary": {
     "value": "Generate Three.js game assets and export them as GLB on modest hardware.",
-    "source": "file:README.md@sha256:9ceed6164ef3e40dcd3e6071e1efe7e2a510b6f50ed3d76ecaadcd5798d2f454"
+    "source": "file:README.md@sha256:588f8ecc60382735f3c5690912aa13b59c7239b14021137d90d2ef08df0d8e27"
   },
   "glance": {
     "task": {
@@ -32,19 +33,23 @@
     },
     "parameters": {
       "value": 1720574976,
-      "source": "api:gguf.total"
+      "source": "api:safetensors.total"
     },
     "architecture": {
       "value": "Qwen 3",
-      "source": "api:config.model_type"
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#model_type"
     },
     "architecture_id": {
       "value": "qwen3",
-      "source": "api:config.model_type"
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#model_type"
     },
     "context": {
       "value": 40960,
-      "source": "api:gguf.context_length"
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP16",
+      "source": "api:safetensors.parameters"
     },
     "format": {
       "value": "GGUF",
@@ -77,16 +82,64 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-11-11",
+      "value": "2026-11-13",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 12,
+      "value": 15,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 421,
+      "value": 1101,
       "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 1000000,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:ea6e416123feb50890a8275f4a83d130ba749253f4457ee2de661fefad320dd7#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
     }
   },
   "datasets": {
