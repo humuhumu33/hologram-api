@@ -1,0 +1,158 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "ceia-research/lumi-4b",
+  "revision": "27b30f40b930fd05cee5e1c1f8790f70fa5b816d",
+  "manifest": "blake3:67cc5703e45d7e3631d204a781fc2990cb708ff62076499115cdbde47eacb721",
+  "addressed": true,
+  "generated": "2026-11-14",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/ceia-research/lumi-4b",
+    "readme": "file:README.md@sha256:ddfdd9ee2fd9113836fd4b42b74ddd669415a855bdaf0c32ea9bd2bbd64e3e5d",
+    "config": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb"
+  },
+  "summary": {
+    "value": "Lumi is a small language model developed by the NLP team at CEIA/UFG, available as a 4B instruct model.",
+    "source": "file:README.md@sha256:ddfdd9ee2fd9113836fd4b42b74ddd669415a855bdaf0c32ea9bd2bbd64e3e5d"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 3973556832,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron H",
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron_h",
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "languages": {
+      "value": [
+        "pt"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-27",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-06",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 68,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3619,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 42,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3136,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#hidden_size"
+    },
+    "heads": {
+      "value": 40,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 131072,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:26c4aed636abbad09ea2e48e9792a012264f7358f574f365e4589a434d0f93fb#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "datasets": {
+    "value": [
+      "HuggingFaceFW/finepdfs-edu",
+      "HuggingFaceFW/fineweb-2",
+      "Polygl0t/gigaverbo-v2",
+      "nvidia/Nemotron-CC-v2.1",
+      "nvidia/Nemotron-Pretraining-Specialized-v1.1",
+      "nvidia/Nemotron-Pretraining-SFT-v1"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 6,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "Jhoni08/vram-and-gpu-cost-calculator",
+        "JUDY1024618/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

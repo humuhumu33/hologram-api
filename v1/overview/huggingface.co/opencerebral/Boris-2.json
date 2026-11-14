@@ -1,0 +1,172 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "opencerebral/Boris-2",
+  "revision": "b4522c7cd3996cb23ba521f3385ba5d2d8182475",
+  "manifest": "blake3:56dd8888d9d3ba0202ad5f512116d31d8ed559972c9a99b0fc60808c1d2ec1c1",
+  "addressed": true,
+  "generated": "2026-11-14",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/opencerebral/Boris-2",
+    "readme": "file:README.md@sha256:3f052aed507ec39995b7f1e4bb63ceb71b008c407168585daebd6a9aa17f6f04",
+    "config": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211"
+  },
+  "summary": {
+    "value": "Boris-2 is a 144M-parameter base language model from OpenCerebral, trained from scratch on a single NVIDIA V100. It was trained for 200B tokens, followed by two short final stages (40M tokens in total).",
+    "source": "file:README.md@sha256:3f052aed507ec39995b7f1e4bb63ceb71b008c407168585daebd6a9aa17f6f04"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 144192782,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Boris2",
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#model_type"
+    },
+    "architecture_id": {
+      "value": "boris2",
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#model_type"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-10-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 288,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 31,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 32768,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#vocab_size"
+    },
+    "context": {
+      "value": 2048,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 10000.0,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#rope_theta"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:2f5a564dfc962d84e0eba44e2cd39858d5723d1037406df0be7ed09f4b626211#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Fine tuned": 3
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "finetune": 3
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "datasets": {
+    "value": [
+      "karpathy/climbmix-400b-shuffle",
+      "HuggingFaceTB/finemath",
+      "openbmb/UltraData-Math",
+      "microsoft/orca-math-word-problems-200k",
+      "meta-math/MetaMathQA",
+      "MU-NLPC/Calc-ape210k",
+      "MU-NLPC/Calc-mawps",
+      "HuggingFaceTB/cosmopedia",
+      "HuggingFaceTB/smollm-corpus",
+      "mlfoundations/dclm-baseline-1.0"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "Glint-Research/Tiny-ML-Leaderboard"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
