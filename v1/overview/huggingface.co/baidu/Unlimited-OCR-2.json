@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "baidu/Unlimited-OCR-2",
-  "revision": "0480966938291445591f69f08a13b041c073a96a",
-  "manifest": "blake3:edb9c768433c23b3046f2c265bd5a66fe7399882e72fcba48ee518d53acd97f0",
+  "revision": "cb16b920ec2249c4b280f3aa67942e00b5099122",
+  "manifest": "blake3:990d08e71007249575d85821336c12fcd7cc1f48b1fed42b8e9cc11bed75df33",
   "addressed": true,
-  "generated": "2026-11-10",
+  "generated": "2026-11-16",
   "provenance": {
     "api": "https://huggingface.co/api/models/baidu/Unlimited-OCR-2",
-    "readme": "file:README.md@sha256:2944554a0649f4a2c0c99dac1cd1b129609042d1f1c9f17fdf9781215c7b9a6c",
+    "readme": "file:README.md@sha256:bd572502d7690af60364b2804f1cfd9177085868c490f2f561266e74cb0a563d",
     "config": "file:config.json@sha256:607d130a70d5af5a35329aa237acd68651f45504c62cc7ced981066f4e781126"
   },
   "summary": {
     "value": "Tested with Python 3.10, torch==2.13.0, transformers==4.52.1, huggingface-hub==0.36.0, tokenizers==0.21.4, on an NVIDIA A800-80GB:",
-    "source": "file:README.md@sha256:2944554a0649f4a2c0c99dac1cd1b129609042d1f1c9f17fdf9781215c7b9a6c"
+    "source": "file:README.md@sha256:bd572502d7690af60364b2804f1cfd9177085868c490f2f561266e74cb0a563d"
   },
   "glance": {
     "task": {
@@ -88,15 +88,15 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-11-02",
+      "value": "2026-11-16",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 670,
+      "value": 702,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 467937,
+      "value": 559340,
       "source": "api:downloadsAllTime"
     }
   },
@@ -146,17 +146,85 @@
       "source": "file:config.json@sha256:607d130a70d5af5a35329aa237acd68651f45504c62cc7ced981066f4e781126#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "llamaindex/ParseBench-2",
+        "task": "overall",
+        "value": 64.39,
+        "date": "2026-11-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench-2",
+        "notes": "Pipeline name: unlimitedocr2. Scores from public CI replay."
+      },
+      {
+        "dataset": "llamaindex/ParseBench-2",
+        "task": "text",
+        "value": 78.81,
+        "date": "2026-11-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench-2",
+        "notes": "Pipeline name: unlimitedocr2. Scores from public CI replay."
+      },
+      {
+        "dataset": "llamaindex/ParseBench-2",
+        "task": "formatting",
+        "value": 79.28,
+        "date": "2026-11-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench-2",
+        "notes": "Pipeline name: unlimitedocr2. Scores from public CI replay."
+      },
+      {
+        "dataset": "llamaindex/ParseBench-2",
+        "task": "tables",
+        "value": 75.13,
+        "date": "2026-11-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench-2",
+        "notes": "Pipeline name: unlimitedocr2. Scores from public CI replay."
+      },
+      {
+        "dataset": "llamaindex/ParseBench-2",
+        "task": "charts",
+        "value": 1.24,
+        "date": "2026-11-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench-2",
+        "notes": "Pipeline name: unlimitedocr2. Scores from public CI replay."
+      },
+      {
+        "dataset": "llamaindex/ParseBench-2",
+        "task": "layout",
+        "value": 81.34,
+        "date": "2026-11-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench-2",
+        "notes": "Pipeline name: unlimitedocr2. Scores from public CI replay."
+      },
+      {
+        "dataset": "llamaindex/ParseBench-2",
+        "task": "forms",
+        "value": 70.54,
+        "date": "2026-11-15",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/llamaindex/ParseBench-2",
+        "notes": "Pipeline name: unlimitedocr2. Scores from public CI replay."
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
-        "Quantized": 16,
+        "Quantized": 17,
         "Fine tuned": 5
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 16,
+        "quantized": 17,
         "finetune": 5
       },
       "source": "api:childrenModelCount"
@@ -189,11 +257,11 @@
   },
   "spaces": {
     "value": {
-      "count": 16,
+      "count": 11,
       "top": [
+        "uv-scripts/run-on-jobs",
         "fastgpu/vram-and-gpu-cost-calculator",
-        "baidu/Unlimited-OCR-2",
-        "nielsr/MiniCPM-OCR-vs-Unlimited-OCR-2"
+        "baidu/Unlimited-OCR-2"
       ]
     },
     "source": "api:spaces"
