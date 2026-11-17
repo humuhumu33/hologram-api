@@ -1,0 +1,173 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "KORMo-VL/KORMo-Web-4B",
+  "revision": "46b1abad653b970f014b962e9cccc710ca94b4c7",
+  "manifest": "blake3:31dfd54f06c6152e87174dd49efd42ed982e82ad3271b90ff15793eafe20c34d",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/KORMo-VL/KORMo-Web-4B",
+    "readme": "file:README.md@sha256:4f5452ba96ad9f772bc2766834a51bdae94a19459fad71f13e8b0972d8fdbff2",
+    "config": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd"
+  },
+  "summary": {
+    "value": "KORMo-Web-4B is a 4B vision-language agent that completes real browser tasks from screenshots alone. Give it a request in Korean or English; it plans, clicks, types and moves between sites and tabs until the task is done.",
+    "source": "file:README.md@sha256:4f5452ba96ad9f772bc2766834a51bdae94a19459fad71f13e8b0972d8fdbff2"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 5174964736,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.5-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 42,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 43,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "hugging-apps/kormo-web-4b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "nicosuter/Qwen3.8-27B-AWQ",
+  "revision": "6918041e51da39125154efd3d987607c5d2bd287",
+  "manifest": "blake3:e646c345ed494e4c354fca5c03cd85a58c0a11cc611673fed2c25201027e4b90",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/nicosuter/Qwen3.8-27B-AWQ",
+    "readme": "file:README.md@sha256:2a09546ca01ab6ab1f1a5608d9c994f6219ac64a1d3b6ee305d2bcc424b5f558",
+    "config": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3"
+  },
+  "summary": {
+    "value": "A mixed-precision quantization of the language path in Qwen/Qwen3.8-27B: W4A16 asymmetric AWQ on the MLP and attention projections, int8 group quantization on the Gated DeltaNet input projections. The vision tower is left in source precision, so this is still a multimodal checkpoint.",
+    "source": "file:README.md@sha256:2a09546ca01ab6ab1f1a5608d9c994f6219ac64a1d3b6ee305d2bcc424b5f558"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 7208531472,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "INT32 337%, BF16 48%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "Qwen/Qwen3.8-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-08-24",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 9,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 442967,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "compressed-tensors",
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:25bf436930d4fa6d0bf35053da3e4adbc0d71ba666ffd4d35f19cc4e770565b3#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Idavidrein/gpqa",
+        "task": "diamond",
+        "value": 88.64,
+        "date": "2026-08-23",
+        "verified": false,
+        "source": "https://github.com/nicosuter/Qwen3.8-27B-AWQ/blob/master/results/2026-08-23-eval-suite-v2-clean/README.md",
+        "notes": "full 198-item Diamond set, config gpqa_diamond, split train, choices shuffled per item, two passes over the whole set pooled into one figure: 396 observations over 198 items. Thinking enabled at reasoning_effort=xhigh with our own answer extraction rather than the inspect-ai multiple_choice solver. No tools. The same harness scored the FP8 baseline at 89.90 against Qwen's published 89.2. This result is for the weights published here, whose shards hash identical to the scored checkpoint."
+      }
+    ],
+    "source": "api:evalResults"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "nvidia/Open-SWE-Traces",
+      "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "lambda/hermes-agent-reasoning-traces",
+      "HuggingFaceM4/the_cauldron",
+      "HuggingFaceFW/fineweb-edu"
+    ],
+    "source": "api:cardData.datasets"
+  }
+}

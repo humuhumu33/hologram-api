@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "maxwell-model/Maxwell-V1-Flash",
+  "revision": "ca536c4380e0600d6aebdb808d2ce65ec724161b",
+  "manifest": "blake3:a7ae3325007be808eb23d8a0dbcbac2078e4b96a9e50ed1c8060c362743ed921",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/maxwell-model/Maxwell-V1-Flash",
+    "readme": "file:README.md@sha256:0b32544c6c8aaa550aa39e567fea05b1f0817134370b183ed4ee4dd7c37c15f8",
+    "config": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03"
+  },
+  "summary": {
+    "value": "Maxwell-V1.0-Flash is a next-generation, high-performance Mixture-of-Experts (MoE) language model developed by the Maxwell Team, with 35B total parameters and 3B active parameters per token (both excluding embeddings) and support for context lengths up to 256K tokens.",
+    "source": "file:README.md@sha256:0b32544c6c8aaa550aa39e567fea05b1f0817134370b183ed4ee4dd7c37c15f8"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 36810559422,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#num_experts"
+    },
+    "experts_active": {
+      "value": 12,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Maxwell MoE",
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#model_type"
+    },
+    "architecture_id": {
+      "value": "maxwell_moe",
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#model_type"
+    },
+    "context": {
+      "value": 524288,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-14",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 107,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 287,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 45,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 200704,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#vocab_size"
+    },
+    "context": {
+      "value": 524288,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#num_experts"
+    },
+    "experts_active": {
+      "value": 12,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 20000000,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:85fbcacea3fad938480da93eb85ca79f3067c23d0bedd0a55a437b42fe373a03#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

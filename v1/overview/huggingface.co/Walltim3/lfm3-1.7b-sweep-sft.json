@@ -1,0 +1,135 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "Walltim3/lfm3-1.7b-sweep-sft",
+  "revision": "5ae9f196b29fd88c010b36e5f94d87993053408a",
+  "manifest": "blake3:a5dff8ece1f6c7c3a1014929ca83879aca46e67053b346f24bf9a203b4ef6031",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/Walltim3/lfm3-1.7b-sweep-sft",
+    "readme": "file:README.md@sha256:5ac8f443b71f2677c4e34b17d37801f0ac8ecb401b51c4dc2b43b99a35eb801a",
+    "config": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca"
+  },
+  "summary": {
+    "value": "Experimental fine-tunes of LiquidAI/LFM3-1.7B-Base for code completion and Zed-style next-edit prediction. This is a modified version of LFM3-1.7B-Base: all model weights in this repository were changed by fine-tuning.",
+    "source": "file:README.md@sha256:5ac8f443b71f2677c4e34b17d37801f0ac8ecb401b51c4dc2b43b99a35eb801a"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 1728801536,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Lfm3",
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#model_type"
+    },
+    "architecture_id": {
+      "value": "lfm3",
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "LiquidAI/LFM3-1.7B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 2,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1338,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 128000,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:143ee6f111f484c74d24d7df9559625baf1cd9d9326e82f543bb17fe5c7a06ca#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

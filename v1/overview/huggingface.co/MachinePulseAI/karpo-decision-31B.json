@@ -1,0 +1,185 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "MachinePulseAI/karpo-decision-31B",
+  "revision": "b8e6fd7463cea8662c556d6257955d7ef9c10d19",
+  "manifest": "blake3:818ab79bcc27c6cb281e2c56816e7935533b7e1e69854d7dd2e0fbbf86a91188",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/MachinePulseAI/karpo-decision-31B",
+    "readme": "file:README.md@sha256:34c34d3a352cf21d76f7be521bb000f3ec71d8880f3adaa8ddf8e37a474db344",
+    "config": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd"
+  },
+  "summary": {
+    "value": "Ranked #1 on the Decision Index, with the highest Full score, 73.9, on the maintainers' private tests (edition 0.4.1, board of 12 November 2026, 300 entries).",
+    "source": "file:README.md@sha256:34c34d3a352cf21d76f7be521bb000f3ec71d8880f3adaa8ddf8e37a474db344"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 31273088876,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Gemma 4",
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#model_type"
+    },
+    "architecture_id": {
+      "value": "gemma4",
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "google/gemma-4-31B-it"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 41,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 683,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 60,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5376,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 262144,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "gemma4_vision",
+      "source": "file:config.json@sha256:df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "Decision Index 0.4.1, private tests (60% same skills, 40% new domains)",
+        "task": "Decision Index 0.4.1, Full score (leaderboard, 12 November 2026; rank #1, the highest score)",
+        "value": 73.86,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Decision Index 0.3 public suite (140,178 scored requests; the index averages 37 benchmarks)",
+        "task": "Decision Index 0.3, public index (chance-corrected; own run of the official kit, same value on the leaderboard)",
+        "value": 75.05,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 3,
+      "top": [
+        "multimodalart/jev-decision-index",
+        "hugging-apps/karpo-decision-31b",
+        "MachinePulseAI/karpo-decision-31B"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "KORMo-VL/KORMo-Web-11B",
+  "revision": "2614b600b2b62dd8e28540df9d686265e1fe10e1",
+  "manifest": "blake3:8e41224fff99dbb652221d47d4e625cf5c1e494748c2d500c5122657cfab6c00",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/KORMo-VL/KORMo-Web-11B",
+    "readme": "file:README.md@sha256:535b485c6069acfd28866048d4cd4b426567a12abe9cb61061642ddee7f366b6",
+    "config": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a"
+  },
+  "summary": {
+    "value": "KORMo-Web-11B는 KAIST MLP 연구실이 처음부터 구축한 KORMo 파운데이션 모델을 기반으로, LLM·VLM·GUI Agent 능력을 모두 갖춘 범용 멀티모달 AI 모델입니다.",
+    "source": "file:README.md@sha256:535b485c6069acfd28866048d4cd4b426567a12abe9cb61061642ddee7f366b6"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 11191119728,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "LLaVA Onevision",
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#model_type"
+    },
+    "architecture_id": {
+      "value": "llava_onevision",
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "ko",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "KORMo-VL/KORMo-VL"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-14",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 65,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 26,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 125184,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#max_position_embeddings"
+    },
+    "rope_theta": {
+      "value": 8000000.0,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "siglip_vision_model",
+      "source": "file:config.json@sha256:64b23be466f6d431d681e4081e37b7987b3f28c8a3787efa6973de289fffac5a#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator",
+        "hugging-apps/kormo-web-11b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

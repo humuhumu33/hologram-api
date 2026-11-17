@@ -1,0 +1,157 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "erwanf/gpt2-mini",
+  "revision": "f12cc7ee54aa4d3e6366597f72ff7acb39b0ab3a",
+  "manifest": "blake3:f635fe7a5a4659fbcf070d798dc576d7e655c21ff82f46f5a5679b741166c012",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/erwanf/gpt2-mini",
+    "readme": "file:README.md@sha256:9803d0dfbe1206d08eed80a2adb81c0ff5b7f8ca1cfd3c0c57b6948e2038aaac",
+    "config": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9"
+  },
+  "summary": {
+    "value": "A smaller GPT-2 model with (only) 39M parameters. It was pretrained on a subset of OpenWebText, the open-source version of the pretraining dataset used by OpenAI for the original GPT-2 models.",
+    "source": "file:README.md@sha256:9803d0dfbe1206d08eed80a2adb81c0ff5b7f8ca1cfd3c0c57b6948e2038aaac"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 38604288,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "GPT 2",
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#model_type"
+    },
+    "architecture_id": {
+      "value": "gpt2",
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#model_type"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#n_positions"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2024-06-23",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-06-23",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 7,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 2012376,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 4,
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#n_layer"
+    },
+    "hidden": {
+      "value": 512,
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#n_embd"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#n_head"
+    },
+    "vocab": {
+      "value": 50257,
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#vocab_size"
+    },
+    "context": {
+      "value": 512,
+      "source": "file:config.json@sha256:38215ddc65b7b7087c31f2df2c36964c2355a04f6b1517b15ca5a7c570d52cd9#n_positions"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "datasets": {
+    "value": [
+      "Skylion007/openwebtext"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fromziro/SLM_Regression_Line"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

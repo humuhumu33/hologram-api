@@ -1,0 +1,255 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "kkt94/Llama-V-JEPA-LM-Qwen3-8B",
+  "revision": "d059602a9cdb2d198301f103aa0c7362ff943cb7",
+  "manifest": "blake3:6b6f088b4e1cd0f5d791904b73d4bf7a9f5902f9e596318c112a0ea66606769b",
+  "addressed": true,
+  "generated": "2026-11-17",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/kkt94/Llama-V-JEPA-LM-Qwen3-8B",
+    "readme": "file:README.md@sha256:626d13799b32c3a8158958a1454279a7dbde3ff0685902db5e98edb3e5670589",
+    "config": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe"
+  },
+  "summary": {
+    "value": "Paper: arXiv:2611.17831 Code and technical report: github.com/kkt94/Llama-V-JEPA-LM Live demo: Llama-V-JEPA-LM-Llama3.1-8B in your browser (ZeroGPU)",
+    "source": "file:README.md@sha256:626d13799b32c3a8158958a1454279a7dbde3ff0685902db5e98edb3e5670589"
+  },
+  "glance": {
+    "task": {
+      "value": "Video language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "video",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 9228761088,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Jepa Llm",
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#model_type"
+    },
+    "architecture_id": {
+      "value": "jepa_llm",
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#model_type"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-8B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 222,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#vocab_size"
+    },
+    "context": {
+      "value": 40960,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "present",
+      "source": "file:config.json@sha256:aabf2ed94423fed6d1d9286e8fd04851718c7847a630b43c15184782390ccdfe#vision_config"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MVBench",
+        "task": "accuracy",
+        "value": 72.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "PerceptionTest",
+        "task": "accuracy",
+        "value": 77.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TVBench",
+        "task": "accuracy",
+        "value": 75.3,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TempCompass",
+        "task": "accuracy",
+        "value": 79.4,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TOMATO",
+        "task": "accuracy",
+        "value": 56.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MotionBench",
+        "task": "accuracy",
+        "value": 59.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "NExT-QA",
+        "task": "accuracy",
+        "value": 81.2,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MVP",
+        "task": "pair accuracy",
+        "value": 58.1,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "TemporalBench (binary)",
+        "task": "accuracy",
+        "value": 73.5,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "SSv2 (multiple choice)",
+        "task": "accuracy",
+        "value": 93.8,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Vinoground text",
+        "task": "text pair accuracy",
+        "value": 75.2,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "Vinoground video",
+        "task": "video pair accuracy",
+        "value": 38.6,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModel",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2611.17831",
+        "title": "V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations",
+        "first_author": "Keuntae Kim",
+        "authors": 3,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "hugging-apps/llama-v-jepa-lm-qwen3-8b",
+        "vk381/llama-v-jepa-lm-qwen3-8b"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
