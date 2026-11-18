@@ -1,0 +1,130 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/trocr-base-printed",
+  "revision": "93450be3f1ed40a930690d951ef3932687cc1892",
+  "manifest": "blake3:529a8c1271e2fe69474ab5f946e995fcf157efd51dacb5639959123973519516",
+  "addressed": true,
+  "generated": "2026-11-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/trocr-base-printed",
+    "readme": "file:README.md@sha256:f9976f9bc32cc85bae12346aad6dd60fee70f5df5b9f587bd9cbd0e17ca9647d",
+    "config": "file:config.json@sha256:5bda1deab455661feb3d91906656e5600e2ca520d5c00a2a03836614b850c93e"
+  },
+  "summary": {
+    "value": "TrOCR model fine-tuned on the SROIE dataset. It was introduced in the paper TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models by Li et al. and first released in this repository.",
+    "source": "file:README.md@sha256:f9976f9bc32cc85bae12346aad6dd60fee70f5df5b9f587bd9cbd0e17ca9647d"
+  },
+  "glance": {
+    "task": {
+      "value": "Image to text",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 333331200,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Vision Encoder Decoder",
+      "source": "file:config.json@sha256:5bda1deab455661feb3d91906656e5600e2ca520d5c00a2a03836614b850c93e#model_type"
+    },
+    "architecture_id": {
+      "value": "vision-encoder-decoder",
+      "source": "file:config.json@sha256:5bda1deab455661feb3d91906656e5600e2ca520d5c00a2a03836614b850c93e#model_type"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "released": {
+      "value": "2022-03-02",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2024-05-27",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 238,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 10163436,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:5bda1deab455661feb3d91906656e5600e2ca520d5c00a2a03836614b850c93e#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 5,
+        "Fine tuned": 28
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 5,
+        "finetune": 28
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2109.10282",
+        "title": "TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models",
+        "first_author": "Minghao Li",
+        "authors": 9,
+        "year": "2021"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 100,
+      "top": [
+        "microsoft/HuggingGPT",
+        "taesiri/HuggingGPT-Lite",
+        "liminghao1630/TrOCR-printed"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tencent/Hy4-flash-FP8",
+  "revision": "003107fa248f5892064ab1c43af0a7003dd68c9b",
+  "manifest": "blake3:9825736511590ac183e6809c0d7eb36b5d738c55631cced5926e98200af8eef1",
+  "addressed": true,
+  "generated": "2026-11-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tencent/Hy4-flash-FP8",
+    "readme": "file:README.md@sha256:29cf0a818f8dbbb9ce44023da2855028ae9ea2e4c16fe47235b0413105bbedfc",
+    "config": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7"
+  },
+  "summary": {
+    "value": "Hy4 flash is our most cost-effective Hy model to date, featuring 220B total parameters (including 64B Engram parameters) with just 12B active parameters per token. It natively accepts text and image inputs, generates text, and supports a context window of up to 1M tokens.",
+    "source": "file:README.md@sha256:29cf0a818f8dbbb9ce44023da2855028ae9ea2e4c16fe47235b0413105bbedfc"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 220260270502,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Hy V4 Flash",
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#model_type"
+    },
+    "architecture_id": {
+      "value": "hy_v4_flash",
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP8 70%, BF16 30%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-11-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 121,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 42,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 3072,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 120832,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#max_position_embeddings"
+    },
+    "experts": {
+      "value": 512,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 16,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "fp8",
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "hy_v4_flash",
+      "source": "file:config.json@sha256:25c33298be04f349f3220fbd73b5024c7943cb5a8b17747951d3d2a1cd69d2e7#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

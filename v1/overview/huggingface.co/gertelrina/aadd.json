@@ -1,0 +1,104 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "gertelrina/aadd",
+  "revision": "30a8ebfb1aa5e4bb8a9bb4362bfe3b77eb27fe80",
+  "manifest": "blake3:7a42374d7a077c7e89de1de2e8e071a153946e156b1023d4ec5e2f4948bfd1e1",
+  "addressed": true,
+  "generated": "2026-11-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/gertelrina/aadd",
+    "readme": "file:README.md@sha256:81340fd573b1e43ef1906e82c208aac84f92ad5bf9404a6d33f6b2c93bbe20ae",
+    "config": "file:config.json@sha256:1d352f45bc91df07b2a17fb53c66842b229d181d162a0f0321b02489d5a719a5"
+  },
+  "summary": {
+    "value": "AADD (Automatic Audio Degradation Detection) finds 12 kinds of degradation in speech recordings every 20 ms: background noise, music, reverberation, clipping, low-pass / narrow band, high-pass, codec artefacts, packet loss, mains hum, clicks, pitch shift and time stretch. Several can be present at once.",
+    "source": "file:README.md@sha256:81340fd573b1e43ef1906e82c208aac84f92ad5bf9404a6d33f6b2c93bbe20ae"
+  },
+  "glance": {
+    "task": {
+      "value": "Audio classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Aadd",
+      "source": "file:config.json@sha256:1d352f45bc91df07b2a17fb53c66842b229d181d162a0f0321b02489d5a719a5#model_type"
+    },
+    "architecture_id": {
+      "value": "aadd",
+      "source": "file:config.json@sha256:1d352f45bc91df07b2a17fb53c66842b229d181d162a0f0321b02489d5a719a5#model_type"
+    },
+    "library": {
+      "value": "pytorch",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ru"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "openai/whisper-small"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-09",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 19,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 124,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "datasets": {
+    "value": [
+      "openslr/librispeech_asr",
+      "istupakov/russian_librispeech"
+    ],
+    "source": "api:cardData.datasets"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/aadd-audio-degradation-detection"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

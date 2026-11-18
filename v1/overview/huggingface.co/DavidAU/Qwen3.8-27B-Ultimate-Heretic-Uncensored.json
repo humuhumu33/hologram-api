@@ -4,15 +4,13 @@
   "revision": "3b92eb992261fdbb11986cf84e0df3712eba8228",
   "manifest": "blake3:bb9688f7fc549dcdc116312eadd13c38f70253825f02bdedcd2985e18c8b963b",
   "addressed": true,
-  "generated": "2026-11-10",
+  "generated": "2026-11-18",
   "provenance": {
-    "api": "https://huggingface.co/api/models/DavidAU/Qwen3.8-27B-Ultimate-Heretic-Uncensored",
-    "readme": "file:README.md@sha256:90e7d412d2fe3790a7a17b4064c9571deeb733d4b087a3d881b87080cc3ef18b",
-    "config": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d"
+    "api": "https://huggingface.co/api/models/DavidAU/Qwen3.8-27B-Ultimate-Heretic-Uncensored"
   },
   "summary": {
-    "value": "The new tech from DavidAU to change and improve all models see the collection (3B to 120B; and growing fast):",
-    "source": "file:README.md@sha256:90e7d412d2fe3790a7a17b4064c9571deeb733d4b087a3d881b87080cc3ef18b"
+    "value": "Qwen3.8-27B-Ultimate-Heretic-Uncensored is a 27.8B Qwen 3.5 model for vision language by DavidAU, released Sep 2026, under Apache 2.0.",
+    "source": "derived:template"
   },
   "glance": {
     "task": {
@@ -38,15 +36,11 @@
     },
     "architecture": {
       "value": "Qwen 3.5",
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#model_type"
+      "source": "api:config.model_type"
     },
     "architecture_id": {
       "value": "qwen3_5",
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#model_type"
-    },
-    "context": {
-      "value": 262144,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#max_position_embeddings"
+      "source": "api:config.model_type"
     },
     "precision": {
       "value": "BF16",
@@ -71,7 +65,22 @@
     },
     "languages": {
       "value": [
-        "en"
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "de",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "ko",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "th",
+        "vi"
       ],
       "source": "api:cardData.language"
     },
@@ -89,62 +98,30 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-11-10",
+      "value": "2026-11-16",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 107,
+      "value": 114,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 1286,
+      "value": 3272,
       "source": "api:downloadsAllTime"
-    }
-  },
-  "architecture": {
-    "layers": {
-      "value": 64,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#num_hidden_layers"
-    },
-    "hidden": {
-      "value": 5120,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#hidden_size"
-    },
-    "heads": {
-      "value": 24,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#num_attention_heads"
-    },
-    "kv_heads": {
-      "value": 4,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#num_key_value_heads"
-    },
-    "vocab": {
-      "value": 248320,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#vocab_size"
-    },
-    "context": {
-      "value": 262144,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#max_position_embeddings"
-    },
-    "tied": {
-      "value": false,
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#tie_word_embeddings"
-    },
-    "vision_encoder": {
-      "value": "qwen3_5_vision",
-      "source": "file:config.json@sha256:5a1911420c23cca59e18efe1685e66f73fa6daee946ee43f4afc9a92f4bfc43d#vision_config"
     }
   },
   "family": {
     "children": {
       "value": {
-        "Quantized": 13
+        "Merged": 1,
+        "Quantized": 20
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 13
+        "merge": 1,
+        "quantized": 20
       },
       "source": "api:childrenModelCount"
     }
@@ -168,9 +145,10 @@
   },
   "spaces": {
     "value": {
-      "count": 1,
+      "count": 2,
       "top": [
-        "chiruno99/qwen3-8-27b-ultimate-heretic-demo"
+        "chiruno99/qwen3-8-27b-ultimate-heretic-demo",
+        "Markbygolly/heretic-qwen-lab"
       ]
     },
     "source": "api:spaces"

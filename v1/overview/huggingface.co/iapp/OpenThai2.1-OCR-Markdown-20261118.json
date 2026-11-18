@@ -1,0 +1,155 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "iapp/OpenThai2.1-OCR-Markdown-20261118",
+  "revision": "c974dc7d18a4511a21988f4a1d12fad07ac16625",
+  "manifest": "blake3:19153949abf474b9c8ac7c78d9b731b1f08349cc9a5ddda5859b3f1f9a1a1e0d",
+  "addressed": true,
+  "generated": "2026-11-18",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/iapp/OpenThai2.1-OCR-Markdown-20261118",
+    "readme": "file:README.md@sha256:0b0004097c531c64b97225cbd3ed4dc908784a1fcc92ea97deaee4ef1127e520",
+    "config": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5"
+  },
+  "summary": {
+    "value": "Thai and English document pages to Markdown, with tables as HTML. It is a Thai fine-tune of NVIDIA Nemotron 3.5 Parse (0.63B) from OpenThai (formerly OpenThaiGPT).",
+    "source": "file:README.md@sha256:0b0004097c531c64b97225cbd3ed4dc908784a1fcc92ea97deaee4ef1127e520"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 630800504,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nemotron Parse",
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#model_type"
+    },
+    "architecture_id": {
+      "value": "nemotron_parse",
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#max_position_embeddings"
+    },
+    "precision": {
+      "value": "FP32 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "th",
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "nvidia/Nemotron-3.5-Parse"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-09",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 53,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 12496,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 10,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 72512,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:bff3460ae530573ad2e276627be86cab1b6859754b76e8b196410f17e7f0b7d5#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 2,
+      "top": [
+        "hugging-apps/openthai-ocr-markdown",
+        "hugging-apps/openthai-ocr-markdown-openthai2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
