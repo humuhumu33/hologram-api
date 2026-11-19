@@ -1,0 +1,159 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "hynt/MOSS-Transcribe-Diarize-Vietnamese-6000h",
+  "revision": "d930a0b2d78f47abed5943d240c859c320454828",
+  "manifest": "blake3:74d53c24aee7b7ec2458a39dc1abdc54419467e5f286d6abde64786497909b2f",
+  "addressed": true,
+  "generated": "2026-11-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/hynt/MOSS-Transcribe-Diarize-Vietnamese-6000h",
+    "readme": "file:README.md@sha256:bcd0b1275722bfc219f7f607e7278da40a4fd3612511aae856067ea943aad783",
+    "config": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee"
+  },
+  "summary": {
+    "value": "This model excels at multi-speaker conversational speech, achieving 11.07% WER on Vietnamese podcast content — a 34.5% improvement over the base pretrained model.",
+    "source": "file:README.md@sha256:bcd0b1275722bfc219f7f607e7278da40a4fd3612511aae856067ea943aad783"
+  },
+  "glance": {
+    "task": {
+      "value": "Speech recognition",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "audio"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 908513280,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Moss Transcribe Diarize",
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#model_type"
+    },
+    "architecture_id": {
+      "value": "moss_transcribe_diarize",
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#model_type"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "cc-by-nc-sa-4.0",
+        "name": "CC BY NC SA 4.0",
+        "commercial": "no",
+        "note": "Non commercial, share alike"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "vi"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-11-13",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-13",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 11,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 140,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#vocab_size"
+    },
+    "context": {
+      "value": 131072,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#tie_word_embeddings"
+    },
+    "audio_encoder": {
+      "value": "whisper",
+      "source": "file:config.json@sha256:e6d87d45bec85323f2d7e5885ae3967afa8c29cdb503cdb17dd91a0b6d9123ee#audio_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2601.01554",
+        "title": "MOSS Transcribe Diarize: Accurate Transcription with Speaker Diarization",
+        "first_author": "MOSI. AI",
+        "authors": 22,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/moss-transcribe-diarize-vietnamese"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

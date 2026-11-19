@@ -1,0 +1,152 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "VoightKampffLabs/voi-slop-detect-380M",
+  "revision": "a109d591b8b62541f362d873765900380b2bd0ea",
+  "manifest": "blake3:4873ededb613dea3434478fe0fcedc123633d221020576eab4bab09bbef4fac2",
+  "addressed": true,
+  "generated": "2026-11-19",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/VoightKampffLabs/voi-slop-detect-380M",
+    "readme": "file:README.md@sha256:d0cb730d80fca23e69223a900a846ef98bbfadf03e79c77c5c1b13e9618470e4",
+    "config": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073"
+  },
+  "summary": {
+    "value": "Scores how much of an English text was written by an LLM. The output is one number from 0 to 1, trained to match the fraction of words a model changed: 0 for untouched human writing, around 0.3 for a human draft a chatbot polished, 1 for text a model wrote from scratch.",
+    "source": "file:README.md@sha256:d0cb730d80fca23e69223a900a846ef98bbfadf03e79c77c5c1b13e9618470e4"
+  },
+  "glance": {
+    "task": {
+      "value": "Text classification",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "label"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 377538561,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Ultrabert",
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#model_type"
+    },
+    "architecture_id": {
+      "value": "ultrabert",
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "dmis-lab/UltraBERT-380M"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-11",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-17",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 182,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1024,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#hidden_size"
+    },
+    "heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 49152,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:fefa6111e844328b1868f3db216e461ba0ce05bc7f045c8f07972e3532728073#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSequenceClassification",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/voi-slop-detect-380m"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}
