@@ -1,0 +1,192 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "PhaiModelLab/Phai-A1-35B-1M",
+  "revision": "cd4471a297d418c3786f214191979f28d1332b24",
+  "manifest": "blake3:0aa2bceec4ee186a6fff4c1dea0ecf864d023d3ea790f0f3a6e55073a3c21b7e",
+  "addressed": true,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/PhaiModelLab/Phai-A1-35B-1M",
+    "readme": "file:README.md@sha256:22b5280ba87f9aef28d1229f38cb0d6a6b2decd77f662f83b40b40520cc108ee",
+    "config": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32"
+  },
+  "summary": {
+    "value": "Phai-A1-35B-1M is a model built upon Qwen3.6-35B-A3B, extensively post-trained and optimized for Coding & Agent workloads. The entire post-training pipeline, including Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL), was conducted on Huawei Ascend NPUs.",
+    "source": "file:README.md@sha256:22b5280ba87f9aef28d1229f38cb0d6a6b2decd77f662f83b40b40520cc108ee"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 35107181936,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Qwen 3.5 MoE",
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5_moe",
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "zh",
+        "en",
+        "ja",
+        "ar",
+        "ru",
+        "de"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3.6-35B-A3B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-12",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 33,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 190,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 40,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#num_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_moe_vision",
+      "source": "file:config.json@sha256:22c2dd8b92313f4e7c0ed5a7bdf17c09298ddf2e3b84c484be8e579463edbc32#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 4
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

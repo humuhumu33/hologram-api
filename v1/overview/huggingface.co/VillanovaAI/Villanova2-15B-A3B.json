@@ -1,0 +1,153 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "VillanovaAI/Villanova2-15B-A3B",
+  "revision": "c7311aa203a6468ca329085bbceecb2eee59c618",
+  "addressed": false,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/VillanovaAI/Villanova2-15B-A3B",
+    "readme": "file:README.md@sha256:bb73733ee93abd7fc017651e7db0dfcd9de861bfa884e3b15462fced6506807c"
+  },
+  "summary": {
+    "value": "On NVIDIA Blackwell GPUs (B200, GB200), add --moe-backend triton, or pass moebackend=\"triton\" to vllm.LLM(...). vLLM's default FlashInfer MoE kernels on Blackwell need the expert width to be a multiple of 128, and ours is 960, so without the flag vLLM stops at start-up with intermediatesize % 128 == 0.",
+    "source": "file:README.md@sha256:bb73733ee93abd7fc017651e7db0dfcd9de861bfa884e3b15462fced6506807c"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 15496409024,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3 Next",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_next",
+      "source": "api:config.model_type"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "it",
+        "de",
+        "es",
+        "fr"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "VillanovaAI/Villanova2-15B-A3B-Base"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-05",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-15",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 96,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoTokenizer",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2610.22086",
+        "title": "Multi-SFT: Permissively-Licensed Multilingual Instruction-Following",
+        "first_author": "Daniela Baiamonte",
+        "authors": 5,
+        "year": "2026"
+      },
+      {
+        "id": "2610.37058",
+        "title": "Exploring the Limits of the Delta Learning Hypothesis: Single-Pair Generator Biases in Direct Preference Optimization",
+        "first_author": "Giuseppe Curci",
+        "authors": 4,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

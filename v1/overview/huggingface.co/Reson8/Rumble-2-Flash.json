@@ -1,18 +1,18 @@
 {
   "format": "hologram.overview/v1",
   "name": "Reson8/Rumble-2-Flash",
-  "revision": "a0c34287229103b706c670d70791683e34379732",
-  "manifest": "blake3:9f586f84fbfa43f710eeb02679ec679b60906771c7c27f98dca17a9b8ea526fe",
+  "revision": "95bd5f9133a2398e5e48a98c089fe48e122bde97",
+  "manifest": "blake3:2b2ca3d84d55719abf739678914237aae35fcbf3ac4e391bf85ac479ba50deb4",
   "addressed": true,
-  "generated": "2026-11-19",
+  "generated": "2026-11-20",
   "provenance": {
     "api": "https://huggingface.co/api/models/Reson8/Rumble-2-Flash",
-    "readme": "file:README.md@sha256:1a9ed9aaa164665ef3d0e42a581ee2873fd99769e5cff67479164d385c036007",
+    "readme": "file:README.md@sha256:6b45bc87784802588cd1768ba6d3b127749bfef3c34d8b057330728fd44534c0",
     "config": "file:config.json@sha256:d26bf65930f3a74b44a781ddb007cd206cacb080b618f9ec96ce05392cb7f166"
   },
   "summary": {
     "value": "audio accepts a local path, a URL, a NumPy array, or a list of these.",
-    "source": "file:README.md@sha256:1a9ed9aaa164665ef3d0e42a581ee2873fd99769e5cff67479164d385c036007"
+    "source": "file:README.md@sha256:6b45bc87784802588cd1768ba6d3b127749bfef3c34d8b057330728fd44534c0"
   },
   "glance": {
     "task": {
@@ -118,20 +118,29 @@
       ],
       "source": "api:cardData.language"
     },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "Qwen/Qwen3-ASR-0.6B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
     "released": {
       "value": "2026-10-14",
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-11-18",
+      "value": "2026-11-19",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 129,
+      "value": 183,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 978,
+      "value": 1859,
       "source": "api:downloadsAllTime"
     }
   },
@@ -172,13 +181,15 @@
   "family": {
     "children": {
       "value": {
-        "Quantized": 6
+        "Quantized": 10,
+        "Fine tuned": 1
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
-        "quantized": 6
+        "quantized": 10,
+        "finetune": 1
       },
       "source": "api:childrenModelCount"
     }
@@ -195,7 +206,7 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 4,
       "top": [
         "hf-audio/open_asr_leaderboard",
         "uv-scripts/run-on-jobs",

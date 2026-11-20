@@ -1,17 +1,17 @@
 {
   "format": "hologram.overview/v1",
   "name": "FINAL-Bench/POCKET-Darwin-180B-GGUF",
-  "revision": "44cbbe0e7303f242cb99d21e4475bbf653bcc742",
-  "manifest": "blake3:76696306da94836df9f082b9dd1921bef77164175a7d615f456853520b58795a",
+  "revision": "0a6fbf3e420801c827095c665996850137f9497e",
+  "manifest": "blake3:2452768e465a4b22f6031015346694de7b5ce8107bee55bb25b08f243184307e",
   "addressed": true,
-  "generated": "2026-11-15",
+  "generated": "2026-11-20",
   "provenance": {
     "api": "https://huggingface.co/api/models/FINAL-Bench/POCKET-Darwin-180B-GGUF",
-    "readme": "file:README.md@sha256:90c9560075cf2eb807b4fbd633fffd48848a2e6b1fff2b1d855f51a76cebfb1a"
+    "readme": "file:README.md@sha256:02e8ff165e181b55fbf2a8ce62c954ce22eef9b5997b5433c8a9a173c5610f25"
   },
   "summary": {
     "value": "This GGUF is the on-device build of Darwin-180B-RSI-R3, the model that SuperCLUE, China's most widely cited LLM benchmark, scored 73.68 in mathematical and scientific reasoning on its private November 2026 test set: #1 among open-weight models and #2 overall among 19 models, right behind OpenAI's GPT-6.1-Sol…",
-    "source": "file:README.md@sha256:90c9560075cf2eb807b4fbd633fffd48848a2e6b1fff2b1d855f51a76cebfb1a"
+    "source": "file:README.md@sha256:02e8ff165e181b55fbf2a8ce62c954ce22eef9b5997b5433c8a9a173c5610f25"
   },
   "glance": {
     "task": {
@@ -85,17 +85,58 @@
       "source": "api:createdAt"
     },
     "updated": {
-      "value": "2026-11-15",
+      "value": "2026-11-20",
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 71,
+      "value": 72,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 650466,
+      "value": 715709,
       "source": "api:downloadsAllTime"
     }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "allenai/IFBench_test",
+        "task": "prompt_level_loose",
+        "value": 81.33,
+        "date": "2026-11-20",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/allenai/IFBench_test",
+        "notes": "244/300. This GGUF (UD-Q4_K_XL) served by llama.cpp, thinking on, temperature 1.0, top_p 0.95, top_k 20 (model card sampling), one sample per prompt. First pass: max_tokens 30000, score 80.0 with 10 responses cut off at the token limit. Only those 10 cut-off prompts were then regenerated with max_tokens 60000 (same model and sampling); 9 completed, 1 was cut off again, and all 300 were rescored: 81.33 (strict 78.0, instruction-level loose 83.4). No prompt that had completed was regenerated. Earlier runs on a DGX Spark with a 12K context: thinking off 45.0; thinking on stopped at 177 prompts at 74.0."
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "category_macro_f1",
+        "value": 0.599,
+        "date": "2026-11-19",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench",
+        "notes": "category track, official CATEGORY_SYSTEM prompt and JSON schema, temperature 0, max_tokens 256; llama.cpp llama-server, UD-Q4_K_XL GGUF, thinking off. Category accuracy 0.862."
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "balanced_accuracy",
+        "value": 0.9,
+        "date": "2026-11-19",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench",
+        "notes": "binary track, safeagents' own Judge (JUDGE_SYSTEM prompt, JSON schema, temperature 0, max_tokens 256); llama.cpp llama-server, UD-Q4_K_XL GGUF, thinking off. Recall 0.976, trajectories caught 77/82, no-verdict rate 0."
+      },
+      {
+        "dataset": "harness-hub/safeagents-judge-bench",
+        "task": "false_block_rate",
+        "value": 0.176,
+        "date": "2026-11-19",
+        "verified": false,
+        "source": "https://huggingface.co/datasets/harness-hub/safeagents-judge-bench",
+        "notes": "binary track, same run as balanced_accuracy."
+      }
+    ],
+    "source": "api:evalResults"
   },
   "papers": {
     "value": [
@@ -118,11 +159,11 @@
   },
   "spaces": {
     "value": {
-      "count": 3,
+      "count": 4,
       "top": [
         "ginigen-ai/edge-ai-news",
-        "VIDraft/AI",
-        "VIDraft/ai-media"
+        "quantid/huggingface-official-benchmark-leaderboards",
+        "VIDraft/AI"
       ]
     },
     "source": "api:spaces"

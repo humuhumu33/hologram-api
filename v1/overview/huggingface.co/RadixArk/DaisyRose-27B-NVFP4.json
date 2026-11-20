@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "RadixArk/DaisyRose-27B-NVFP4",
+  "revision": "d7a485994f1cc0c756efb9f157a9842b2df703fc",
+  "manifest": "blake3:477ab7911c1fe8505f525a500ff54d95e29ae563c906c3492817eb6ccc382cba",
+  "addressed": true,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/RadixArk/DaisyRose-27B-NVFP4",
+    "readme": "file:README.md@sha256:99982116042911f05dde0cd181285b062fddd5dd11d9bc4764bd4993b4b03404",
+    "config": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865"
+  },
+  "summary": {
+    "value": "DaisyRose-27B is RadixArk's first model: a multimodal reasoning model built on Qwen3.8-27B with reinforcement learning only, without any supervised fine-tuning or distillation. It was trained on about 1,200 curated long-horizon agent tasks, with sessions of up to 1M tokens, for 18 days on 144 H200 GPUs.",
+    "source": "file:README.md@sha256:99982116042911f05dde0cd181285b062fddd5dd11d9bc4764bd4993b4b03404"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 18164649200,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#max_position_embeddings"
+    },
+    "precision": {
+      "value": "UINT8 101%, FP8 40%, BF16 12%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "RadixArk/DaisyRose-27B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 10,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 338,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 64,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 5120,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#tie_word_embeddings"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:36f53bd9dad0963c2800c934f920998357f467f3e6795f7d03146faf221ee865#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

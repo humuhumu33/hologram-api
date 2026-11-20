@@ -1,0 +1,149 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "prithivMLmods/KORMo-Web-4B-MTP-Repacked",
+  "revision": "1ba10d7bdb1101b1939dd90f94b4f8e03643c42e",
+  "manifest": "blake3:6512a428fcf5c45bb9409d5f1e9e538a51154e66ef56cf4dd796d66b18cd7e69",
+  "addressed": true,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/prithivMLmods/KORMo-Web-4B-MTP-Repacked",
+    "readme": "file:README.md@sha256:2810d0fc916eef0e9aa11bd01b6e271c4b911af01a7b15ec78693d836b24bf5c",
+    "config": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd"
+  },
+  "summary": {
+    "value": "KORMo-Web-4B-MTP-Repacked is a 5.3B Qwen 3.5 model for vision language by prithivMLmods, released Nov 2026, under Apache 2.0.",
+    "source": "derived:template"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 5295564288,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3.5",
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_5",
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "ko"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "KORMo-VL/KORMo-Web-4B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-20",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 1,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 3,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 32,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2560,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#hidden_size"
+    },
+    "heads": {
+      "value": 16,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 4,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 248320,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_5_vision",
+      "source": "file:config.json@sha256:987abca6782d2422ac5f6bb790ec5adc899e198b97876dfe19adb65a976f56dd#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  }
+}

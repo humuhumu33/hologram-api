@@ -1,0 +1,220 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "OVHaiLLM/Olala-v1.0-mini-7A1B",
+  "revision": "b40f8165ee2254c18601220e19842600c6d91794",
+  "manifest": "blake3:df8eb4507525f2788076f07b176f1be0447deacbce9109360a1c342a151dd29b",
+  "addressed": true,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/OVHaiLLM/Olala-v1.0-mini-7A1B",
+    "readme": "file:README.md@sha256:e881cc8044909906cca894a0cc058d1fcec5aea6b9f003c95e4b8aeb3a706222",
+    "config": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3"
+  },
+  "summary": {
+    "value": "Olala-v1.0-mini-7A1B is a small reasoning model for chat, instruction following and tool use, built on our hybrid Mamba-3 / attention mixture-of-experts architecture.",
+    "source": "file:README.md@sha256:e881cc8044909906cca894a0cc058d1fcec5aea6b9f003c95e4b8aeb3a706222"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 6773124144,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#num_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Olala",
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#model_type"
+    },
+    "architecture_id": {
+      "value": "olala",
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#model_type"
+    },
+    "context": {
+      "value": 100000,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "zh",
+        "fr",
+        "de",
+        "it",
+        "ja",
+        "ru",
+        "es",
+        "pl",
+        "pt",
+        "nl",
+        "el",
+        "tr",
+        "cs",
+        "uk",
+        "hu",
+        "ro",
+        "ko",
+        "ar",
+        "fi",
+        "sv",
+        "no",
+        "da",
+        "bg",
+        "sk",
+        "hr",
+        "lt",
+        "sl",
+        "bs",
+        "he",
+        "et",
+        "ca",
+        "lv",
+        "ka",
+        "sr",
+        "sq",
+        "is"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Fine tuned from",
+        "models": [
+          "OVHaiLLM/Olala-v1.0-mini-7A1B-SFT"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-10-30",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 72,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 1021,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 1536,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#hidden_size"
+    },
+    "heads": {
+      "value": 48,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 0,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#vocab_size"
+    },
+    "context": {
+      "value": 100000,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#num_experts"
+    },
+    "experts_active": {
+      "value": 6,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#num_experts_per_tok"
+    },
+    "rope_theta": {
+      "value": 0.0,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#rope_theta"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:f2668c0a369eeb2285e21edb46dd6307c32d55aaaefa985a1abf0eeb73dbd8e3#tie_word_embeddings"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 3,
+        "Fine tuned": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 3,
+        "finetune": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForCausalLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

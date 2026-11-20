@@ -1,0 +1,169 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "voyager-so/shot-reader-8b",
+  "revision": "5632e6b2de74b33d4b83c53e9c543702ea236f39",
+  "manifest": "blake3:0e4963f1b5dacec13ac4fb4e2bef6ddd003831f7813c9241c0087dcc6abc1b2a",
+  "addressed": true,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/voyager-so/shot-reader-8b",
+    "readme": "file:README.md@sha256:ec8e342b267d0c6c5f61306d240d11f36739014dbca90ba3120209af76626ca0",
+    "config": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585"
+  },
+  "summary": {
+    "value": "Shot Reader reads a video shot and works out how it was made: the camera's height, angle, lens and move, who is in frame, where they stand, how they move, and the set around them. It writes all of that as one JSON shot sheet that a 3D tool or a coding agent can rebuild directly in Blender.",
+    "source": "file:README.md@sha256:ec8e342b267d0c6c5f61306d240d11f36739014dbca90ba3120209af76626ca0"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 8767123696,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Qwen 3 VL",
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3_vl",
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#model_type"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Adapter for",
+        "models": [
+          "Qwen/Qwen3-VL-8B-Instruct"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-19",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-19",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 22,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 61,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 36,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 4096,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#hidden_size"
+    },
+    "heads": {
+      "value": 32,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 151936,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#vocab_size"
+    },
+    "context": {
+      "value": 262144,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "qwen3_vl_vision",
+      "source": "file:config.json@sha256:6945bf89133f61e4985ff41b256ebb41377bcca68f4a53c060cc1c0f7b961585#vision_config"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2611.15789",
+        "title": "VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender",
+        "first_author": "Yuzhe Chen",
+        "authors": 22,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "hugging-apps/shot-reader-8b-2"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

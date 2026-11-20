@@ -1,0 +1,189 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "tencent/Hy4",
+  "revision": "c10c0de5b6f850703fb0a90e65d1c32b558b9167",
+  "manifest": "blake3:fee4247eb57610f2c617cab56912d45e12fe968f85f58fca9fd4eaf7521aa47e",
+  "addressed": true,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/tencent/Hy4",
+    "readme": "file:README.md@sha256:d6c27b4943d03ec38e2ff0f0451d00419bb8cf8ea9403cb27db49ddeff854850",
+    "config": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714"
+  },
+  "summary": {
+    "value": "Hy4 is a new-generation Mixture-of-Experts (MoE) flagship model developed by the Tencent Hy Team, supporting text, image, and video understanding. The language backbone comprises 770B total parameters, of which 49B are activated per token.",
+    "source": "file:README.md@sha256:d6c27b4943d03ec38e2ff0f0451d00419bb8cf8ea9403cb27db49ddeff854850"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 774434002142,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Hy V4 VL",
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#model_type"
+    },
+    "architecture_id": {
+      "value": "hy_v4_vl",
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16 100%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "other",
+        "name": "other"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-10-29",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 87,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 89,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 78,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 6144,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#hidden_size"
+    },
+    "heads": {
+      "value": 64,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 120832,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#vocab_size"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#max_position_embeddings"
+    },
+    "experts": {
+      "value": 256,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#num_experts_per_tok"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#tie_word_embeddings"
+    },
+    "vision_encoder": {
+      "value": "hy_v4_vl",
+      "source": "file:config.json@sha256:dab00b0f4c9265f650eabccc1033bd6aa29080cf1459856a9f2a06ae074d7714#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 1
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMultimodalLM",
+      "source": "api:transformersInfo.auto_model"
+    },
+    "processor": {
+      "value": "AutoProcessor",
+      "source": "api:transformersInfo.processor"
+    }
+  },
+  "papers": {
+    "value": [
+      {
+        "id": "2512.02556",
+        "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+        "first_author": "DeepSeek-AI",
+        "authors": 264,
+        "year": "2025"
+      },
+      {
+        "id": "2603.12201",
+        "title": "IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse",
+        "first_author": "Yushi Bai",
+        "authors": 8,
+        "year": "2026"
+      }
+    ],
+    "source": "api:tags(arxiv)+api:papers"
+  },
+  "spaces": {
+    "value": {
+      "count": 1,
+      "top": [
+        "fastgpu/vram-and-gpu-cost-calculator"
+      ]
+    },
+    "source": "api:spaces"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "turintech/GLM-5.2-MaxMin108-GGUF",
+  "revision": "51e8f85e7969e14d7e432d8236ab461510fe6f1e",
+  "manifest": "blake3:52ca11d58812bdb1d88de63671db3a0b99d52638a0a038d3b40ae927b8da0b14",
+  "addressed": true,
+  "generated": "2026-11-20",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/turintech/GLM-5.2-MaxMin108-GGUF",
+    "readme": "file:README.md@sha256:ec4c67fea05dbbb1ded60ac41edc338e12e95b701bf81f0f96c9984c5c647f87"
+  },
+  "summary": {
+    "value": "Needs llama.cpp with GLM-DSA support (build b10005, commit 7f575c39d, or newer) and a 128 GB machine: on one NVIDIA GB10 (DGX Spark) the default file used 104 of 121 GB at this 64K context.",
+    "source": "file:README.md@sha256:ec4c67fea05dbbb1ded60ac41edc338e12e95b701bf81f0f96c9984c5c647f87"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 324832039332,
+      "source": "api:gguf.total"
+    },
+    "architecture": {
+      "value": "GLM Dsa",
+      "source": "api:config.model_type"
+    },
+    "architecture_id": {
+      "value": "glm-dsa",
+      "source": "api:config.model_type"
+    },
+    "context": {
+      "value": 1048576,
+      "source": "api:gguf.context_length"
+    },
+    "format": {
+      "value": "GGUF",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "gguf",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "zai-org/GLM-5.2"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-08-17",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-16",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 13,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 4712,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "MMLU",
+        "task": "MMLU, 5-shot",
+        "value": 61.84,
+        "verified": false,
+        "source": "model card"
+      },
+      {
+        "dataset": "MBPP",
+        "task": "pass@1, 3-shot",
+        "value": 0.592,
+        "verified": false,
+        "source": "model card"
+      }
+    ],
+    "source": "api:cardData.model-index"
+  }
+}

@@ -4,7 +4,7 @@
   "revision": "d5822b068da8ddb301665b48c58718e6e18a2c3a",
   "manifest": "blake3:91a634b792e5a761508c31c77edaa8bf981cdf4807d9f758ddee33ff9e61a4e5",
   "addressed": true,
-  "generated": "2026-11-12",
+  "generated": "2026-11-20",
   "provenance": {
     "api": "https://huggingface.co/api/models/dealignai/GLM-5.3-Flash-UNCENSORED-FP8",
     "readme": "file:README.md@sha256:65fbe525d0f63f288fca7f4d62f94c3ccc0064e4d4750abe8ad18cef05266a6f",
@@ -80,11 +80,11 @@
       "source": "api:lastModified"
     },
     "likes": {
-      "value": 185,
+      "value": 190,
       "source": "api:likes"
     },
     "downloads_all_time": {
-      "value": 69598,
+      "value": 71017,
       "source": "api:downloadsAllTime"
     }
   },
@@ -134,18 +134,50 @@
       "source": "file:config.json@sha256:bb8f01c42cb92a52ca72e65afb4d5bd8d11aef083cd210e8de25dfb904f23e9f#vision_config"
     }
   },
+  "benchmarks": {
+    "value": [
+      {
+        "dataset": "OpenUncensored/uncensored-agent-eval",
+        "task": "answer_rate",
+        "value": 98.3,
+        "date": "2026-11-17",
+        "verified": false,
+        "source": "https://openuncensored.com/benchmarks/uncensored-agent-eval#dealignai-glm-5-3-flash-uncensored-fp8",
+        "notes": "inspect-ai, grader openai/gpt-oss-120b, served by heabsy, max_tokens 4096, 60 items, accuracy in percent"
+      },
+      {
+        "dataset": "OpenUncensored/uncensored-agent-eval",
+        "task": "agent_next_step",
+        "value": 90,
+        "date": "2026-11-17",
+        "verified": false,
+        "source": "https://openuncensored.com/benchmarks/uncensored-agent-eval#dealignai-glm-5-3-flash-uncensored-fp8",
+        "notes": "inspect-ai, grader openai/gpt-oss-120b, served by heabsy, max_tokens 4096, 30 items, accuracy in percent"
+      },
+      {
+        "dataset": "OpenUncensored/uncensored-agent-eval",
+        "task": "loop_recovery",
+        "value": 90,
+        "date": "2026-11-17",
+        "verified": false,
+        "source": "https://openuncensored.com/benchmarks/uncensored-agent-eval#dealignai-glm-5-3-flash-uncensored-fp8",
+        "notes": "inspect-ai, grader openai/gpt-oss-120b, served by heabsy, max_tokens 4096, 20 items, accuracy in percent"
+      }
+    ],
+    "source": "api:evalResults"
+  },
   "family": {
     "children": {
       "value": {
         "Merged": 1,
-        "Quantized": 8
+        "Quantized": 9
       },
       "source": "api:childrenModelCount"
     },
     "children_raw": {
       "value": {
         "merge": 1,
-        "quantized": 8
+        "quantized": 9
       },
       "source": "api:childrenModelCount"
     }
