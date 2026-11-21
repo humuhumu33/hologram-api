@@ -1,0 +1,146 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "FrontiersMind/NandiBERT-150M",
+  "revision": "8a6273a242e82330cb6c4c0259b53649f020c0d0",
+  "manifest": "blake3:1d3a901339556e23e558c0311b0ffcb8215cc4e67f26c1f29812fc7bb088fc56",
+  "addressed": true,
+  "generated": "2026-11-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/FrontiersMind/NandiBERT-150M",
+    "readme": "file:README.md@sha256:1b0ff20dcaf16bac7c65c37b5bb0011a06bec5e3d45c995dd5ec698cd771965b",
+    "config": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7"
+  },
+  "summary": {
+    "value": "For NandiBERT-150M, the parameter count is the encoder that you fine-tune (146M). The checkpoint also stores the untied MLM output layer (77M), so the model file holds 224M parameters.",
+    "source": "file:README.md@sha256:1b0ff20dcaf16bac7c65c37b5bb0011a06bec5e3d45c995dd5ec698cd771965b"
+  },
+  "glance": {
+    "task": {
+      "value": "Fill mask",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 223742464,
+      "source": "api:safetensors.total"
+    },
+    "architecture": {
+      "value": "Nandi Encoder",
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#model_type"
+    },
+    "architecture_id": {
+      "value": "nandi_encoder",
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#model_type"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#max_position_embeddings"
+    },
+    "precision": {
+      "value": "BF16",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "hi",
+        "mr",
+        "pa",
+        "ta",
+        "te",
+        "kn",
+        "ml",
+        "bn",
+        "gu",
+        "as",
+        "or",
+        "ur",
+        "ne",
+        "ar",
+        "id",
+        "ms"
+      ],
+      "source": "api:cardData.language"
+    },
+    "released": {
+      "value": "2026-11-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 28,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 173,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 768,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#hidden_size"
+    },
+    "heads": {
+      "value": 6,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 2,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 100352,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#vocab_size"
+    },
+    "context": {
+      "value": 16384,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#max_position_embeddings"
+    },
+    "tied": {
+      "value": false,
+      "source": "file:config.json@sha256:60608dd15b25b7f309e8142ff97c6df5beb4f55112fc75261571083db04a9ed7#tie_word_embeddings"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForMaskedLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

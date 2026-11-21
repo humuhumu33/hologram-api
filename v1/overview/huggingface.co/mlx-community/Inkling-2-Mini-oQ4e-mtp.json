@@ -1,0 +1,140 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "mlx-community/Inkling-2-Mini-oQ4e-mtp",
+  "revision": "3eea042751cd296b7266628a8342c1749242e1fe",
+  "manifest": "blake3:0ed6cad160002c1f2481ce9661defd3beed37ce45fe7cdd97eefe2f71d34cd9e",
+  "addressed": true,
+  "generated": "2026-11-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/mlx-community/Inkling-2-Mini-oQ4e-mtp",
+    "readme": "file:README.md@sha256:0169fca4308aea7d0a972b65d654e0859276a6ed84c30cb60127395728169163",
+    "config": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4"
+  },
+  "summary": {
+    "value": "A mixed-precision MLX checkpoint of thinkingmachines/Inkling-2-Mini, a looped multimodal mixture-of-experts model with 26.4B total and 3.4B active parameters. Its middle 12 layers run three times for each token.",
+    "source": "file:README.md@sha256:0169fca4308aea7d0a972b65d654e0859276a6ed84c30cb60127395728169163"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 26388646400,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Inkling2 Loop",
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#model_type"
+    },
+    "architecture_id": {
+      "value": "inkling2_loop",
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#model_type"
+    },
+    "precision": {
+      "value": "UINT32 99%, BF16 1%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "mlx",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "thinkingmachines/Inkling-2-Mini"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-21",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-21",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 14,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 923,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2304,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 201024,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#vocab_size"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#num_experts_per_tok"
+    },
+    "quantization": {
+      "value": "4 bit",
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "inkling2_vision",
+      "source": "file:config.json@sha256:748bb4b83536f53a6088efa7c227a0ff33a0177214b306d46e6659d0ffa058a4#vision_config"
+    }
+  }
+}

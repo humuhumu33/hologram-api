@@ -1,0 +1,151 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "thinkingmachines/TML-d24-varloop-research",
+  "revision": "657b53ba5da7baefe9ff15dca5cd25f5bd3dbaa2",
+  "manifest": "blake3:54c0a98ba40e6126f4aa564103781c40b18475bd117fd9732e2a44c5e54fb056",
+  "addressed": true,
+  "generated": "2026-11-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/thinkingmachines/TML-d24-varloop-research",
+    "readme": "file:README.md@sha256:6c4e358881c12279c17c0d485d90075bfcd6689c98949d4cbaded9ad1e664501",
+    "config": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7"
+  },
+  "summary": {
+    "value": "TML-d24-varloop-research is a multimodal research model that accepts text and image inputs and generates text outputs. It is a variable-looped counterpart to Inkling 2 Mini: whereas Inkling 2 Mini always runs its looped layers a fixed number of times, the number of loops in this model can be chosen at inference time.",
+    "source": "file:README.md@sha256:6c4e358881c12279c17c0d485d90075bfcd6689c98949d4cbaded9ad1e664501"
+  },
+  "glance": {
+    "task": {
+      "value": "Vision language",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "image",
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "parameters": {
+      "value": 26388646440,
+      "source": "api:safetensors.total"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#num_experts_per_tok"
+    },
+    "architecture": {
+      "value": "Inkling2 Loop",
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#model_type"
+    },
+    "architecture_id": {
+      "value": "inkling2_loop",
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#model_type"
+    },
+    "precision": {
+      "value": "UINT8 77%, FP8 15%, BF16 7%",
+      "source": "api:safetensors.parameters"
+    },
+    "format": {
+      "value": "Safetensors",
+      "source": "api:safetensors|gguf"
+    },
+    "library": {
+      "value": "transformers",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "apache-2.0",
+        "name": "Apache 2.0",
+        "commercial": "yes",
+        "note": "Permissive, with patent grant"
+      },
+      "source": "api:cardData.license"
+    },
+    "released": {
+      "value": "2026-11-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-20",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 20,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 382,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 24,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2304,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 201024,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#vocab_size"
+    },
+    "experts": {
+      "value": 128,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#n_routed_experts"
+    },
+    "experts_active": {
+      "value": 8,
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#num_experts_per_tok"
+    },
+    "quantization": {
+      "value": "modelopt",
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#quantization_config"
+    },
+    "vision_encoder": {
+      "value": "inkling2_vision",
+      "source": "file:config.json@sha256:89650f69a824ff354a3d70476c6eb6e09162ed0f5515d9f6e5f5953a44e87ed7#vision_config"
+    }
+  },
+  "family": {
+    "children": {
+      "value": {
+        "Quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    },
+    "children_raw": {
+      "value": {
+        "quantized": 2
+      },
+      "source": "api:childrenModelCount"
+    }
+  },
+  "run": {
+    "auto_model": {
+      "value": "AutoModelForSeq2SeqLM",
+      "source": "api:transformersInfo.auto_model"
+    }
+  }
+}

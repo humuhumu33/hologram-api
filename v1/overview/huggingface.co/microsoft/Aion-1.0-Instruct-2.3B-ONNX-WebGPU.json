@@ -1,0 +1,128 @@
+{
+  "format": "hologram.overview/v1",
+  "name": "microsoft/Aion-1.0-Instruct-2.3B-ONNX-WebGPU",
+  "revision": "1677687f0a7ff7d635dbaf2d00e82f5fa5d42c7b",
+  "manifest": "blake3:868cce86a69afa2e4d860e4a3eeeeaf50e2629e9f81884742c2c0ecc5b130e8b",
+  "addressed": true,
+  "generated": "2026-11-21",
+  "provenance": {
+    "api": "https://huggingface.co/api/models/microsoft/Aion-1.0-Instruct-2.3B-ONNX-WebGPU",
+    "readme": "file:README.md@sha256:eb08ec5b4f405b72c86f8fe721e7f2a208717ee427da4f6c13f57f1689da5f0d",
+    "config": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435"
+  },
+  "summary": {
+    "value": "The model is a single ONNX decoder graph (opset 21 + com.microsoft contrib ops) with an FP16 KV cache, so it runs on any ONNX Runtime build that provides the WebGPU execution provider, including ONNX Runtime Web in the browser.",
+    "source": "file:README.md@sha256:eb08ec5b4f405b72c86f8fe721e7f2a208717ee427da4f6c13f57f1689da5f0d"
+  },
+  "glance": {
+    "task": {
+      "value": "Text generation",
+      "source": "api:pipeline_tag"
+    },
+    "input": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "output": {
+      "value": [
+        "text"
+      ],
+      "source": "derived:pipeline_tag"
+    },
+    "architecture": {
+      "value": "Qwen 3",
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#model_type"
+    },
+    "architecture_id": {
+      "value": "qwen3",
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#model_type"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#max_position_embeddings"
+    },
+    "library": {
+      "value": "onnxruntime-genai",
+      "source": "api:library_name"
+    },
+    "license": {
+      "value": {
+        "id": "mit",
+        "name": "MIT",
+        "commercial": "yes",
+        "note": "Permissive"
+      },
+      "source": "api:cardData.license"
+    },
+    "languages": {
+      "value": [
+        "en",
+        "de",
+        "es",
+        "pt",
+        "it",
+        "fr",
+        "zh",
+        "ja"
+      ],
+      "source": "api:cardData.language"
+    },
+    "base": {
+      "value": {
+        "relation": "Quantized from",
+        "models": [
+          "microsoft/Aion-1.0-Instruct-2.3B"
+        ]
+      },
+      "source": "api:baseModels"
+    },
+    "released": {
+      "value": "2026-11-18",
+      "source": "api:createdAt"
+    },
+    "updated": {
+      "value": "2026-11-18",
+      "source": "api:lastModified"
+    },
+    "likes": {
+      "value": 12,
+      "source": "api:likes"
+    },
+    "downloads_all_time": {
+      "value": 127,
+      "source": "api:downloadsAllTime"
+    }
+  },
+  "architecture": {
+    "layers": {
+      "value": 28,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#num_hidden_layers"
+    },
+    "hidden": {
+      "value": 2048,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#hidden_size"
+    },
+    "heads": {
+      "value": 24,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#num_attention_heads"
+    },
+    "kv_heads": {
+      "value": 8,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#num_key_value_heads"
+    },
+    "vocab": {
+      "value": 200029,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#vocab_size"
+    },
+    "context": {
+      "value": 32768,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#max_position_embeddings"
+    },
+    "tied": {
+      "value": true,
+      "source": "file:config.json@sha256:7bca3022656fdee3c69e720588a3c5f1ded623e432f5408f14541bdefb393435#tie_word_embeddings"
+    }
+  }
+}
